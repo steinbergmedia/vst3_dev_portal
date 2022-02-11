@@ -10,6 +10,11 @@ build-dir = "book"
 create-missing = true
 use-default-preprocessors = true
 
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
 [output.html]
 no-section-label = true
 default-theme = "steinberg"
@@ -18,12 +23,7 @@ additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.fold]
 enable = true
-level = 1
+level = 0
 
 [output.html.redirect]
 "display/VST/Main+benefits+of+VST+3/index.html" = "../../../pages/Main+benefits+of+VST+3/index.html"
-
-[preprocessor]
-
-[preprocessor.mermaid]
-command = "mdbook-mermaid"
