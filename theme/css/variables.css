@@ -248,6 +248,9 @@
     --searchresults-border-color: #888;
     --searchresults-li-bg: #dec2a2;
     --search-mark-bg: #e69f67;
+
+	--mermaid-bg: #fafafa;
+	--mermaid-border: #000000;
 }
 
 .steinberg-dark {
@@ -288,6 +291,9 @@
     --searchresults-border-color: #888;
     --searchresults-li-bg: #dec2a2;
     --search-mark-bg: #e69f67;
+
+	--mermaid-bg: #454555;
+	--mermaid-border: #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
