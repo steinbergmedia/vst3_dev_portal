@@ -14,6 +14,7 @@ use-default-preprocessors = true
 no-section-label = true
 default-theme = "steinberg"
 preferred-dark-theme = "steinberg"
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.fold]
 enable = true
@@ -21,3 +22,8 @@ level = 1
 
 [output.html.redirect]
 "display/VST/Main+benefits+of+VST+3/index.html" = "../../../pages/Main+benefits+of+VST+3/index.html"
+
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
