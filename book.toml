@@ -3,7 +3,7 @@ authors = ["ascheffler"]
 language = "en"
 multilingual = false
 src = "src"
-title = "VST3 Developer Portal"
+title = "VST 3 Developer Portal"
 
 [build]
 build-dir = "book"
