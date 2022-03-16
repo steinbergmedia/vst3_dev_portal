@@ -1,6 +1,6 @@
 # Summary
 
-[Welcome to the world of VST 3](pages/README.md)
+[VST](pages/README.md)
 
 - [What is VST?](pages/What+is+VST/Index.md)
 	- [Use cases](pages/What+is+VST/Use+cases.md)

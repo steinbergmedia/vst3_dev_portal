@@ -1,1 +1,63 @@
-# Use cases
+/ [VST Home](../Index.md) / [What is VST?](../What+is+VST/Index.md)
+
+<font size="5">**Use cases**</font>
+
+### Why use VST 3 SDK ?
+
+There are different use cases you can realize by using the **VST 3 SDK**:
+
+1. You are a ***plug-in developer*** and you want to create audio FX or instrument plug-ins which can be included and used in a **VST 3** host application.
+    - an audio FX plug-in is an audio processor effect taking audio as input and creating audio as output: such as Delay, Phaser, Compressor, Reverb, …
+    - an instrument plug-in is a sound/audio generator, taking as input note events and creating audio as output: such as emulations of well-known hardware synths. There are 2 kinds of instrument plug-ins: virtual sample-based (using audio samples as the basis for sound generation) and virtual synth (using different types of synthesis: physical modelling, additive, subtractive, FM, sample-based, …)
+2. You are a ***host developer*** and you want to load in your application **VST 3** plug-ins:
+    - audio FX and/or
+    - instruments plug-ins.
+
+### Advantages of using VST 3 SDK
+
+By using VST 3 SDK directly:
+- you are sure to be compliant with the VST 3 format.
+- developing your plug-in based on the VST 3 format allows you to support easily new VST 3 features that improve the integration of these plug-ins inside a DAW. Some 3rd party SDKs use only a common layer between all plug-in formats, limiting in this way the possibility for a better integration, for example exclusive VST 3 features:
+    - [context menu](https://developer.steinberg.help/display/VST/%5B3.5.0%5D+Context+Menu+Support)
+    - [dirty state](https://developer.steinberg.help/display/VST/%5B3.1.0%5D+Dirty+State%2C+Open+Editor+Request+and+UI+Group+Editing+Support)
+    - loading differentially a preset or a project
+    - [note expression](https://developer.steinberg.help/display/VST/%5B3.5.0%5D+Note+Expression+Support)
+    - see [others benefits of VST 3](pages/Main+benefits+of+VST+3/Index.md)
+- you get optimal integration of the VSTGUI tool with VST 3
+- it includes the major plug-in format wrappers:  AAX, AUv3, AU, VST2 (deprecated)
+- the included Validator allows you to check your plug-in's conformity to the VST 3 standard
+
+### Examples of VST 3 host applications
+
+| **Name** | **Companies** | **Link** |
+| -------- | ------------- | -------- |
+| Cubase | Steinberg Media Technologies | [https://new.steinberg.net/cubase](https://new.steinberg.net/cubase) |
+| Nuendo | Steinberg Media Technologies	| [https://new.steinberg.net/nuendo](https://new.steinberg.net/nuendo) |
+| Wavelab | Steinberg Media Technologies | [https://new.steinberg.net/wavelab](https://new.steinberg.net/wavelab) |
+| Dorico | Steinberg Media Technologies | [https://new.steinberg.net/dorico](https://new.steinberg.net/dorico) |
+| SpectraLayers	| Steinberg Media Technologies | [https://www.steinberg.net/spectralayers](https://www.steinberg.net/spectralayers) |
+| Live | Ableton AG | [https://www.ableton.com/en/live](https://www.ableton.com/en/live) |
+| Audition	| Adobe	| [https://www.adobe.com](https://www.adobe.com) |
+| Sonar	| Bandlab/Cakewalk | [https://www.bandlab.com/products/cakewalk](https://www.bandlab.com/products/cakewalk) |
+| Bitwig | Bitwig GmbH | [https://www.bitwig.com](https://www.bitwig.com) |
+| Max | Cycling 74 | [https://cycling74.com]() |
+| FL Studio	| ImageLine | [https://www.image-line.com](https://www.image-line.com) |
+| ACID Pro | MAGIX Software GmbH | [https://www.magix.com](https://www.magix.com) |
+| Music Maker Plus	| MAGIX Software GmbH | [https://www.magix.com](https://www.magix.com) |
+| Samplitude | MAGIX Software GmbH | [https://www.magix.com](https://www.magix.com) |
+| SOUND FORGE Audio Studio	| MAGIX Software GmbH | [https://www.magix.com](https://www.magix.com) |
+| Digital Performer	| MOTU | [https://motu.com/en-us/products/software/dp](https://motu.com/en-us/products/software/dp) |
+| Bidule | Plogue Art et Technologie, Inc. | [https://www.plogue.com](https://www.plogue.com) |
+| Studio One | PreSonus Software Ltd | [https://www.presonus.com/products/Studio-One](https://www.presonus.com/products/Studio-One) |
+| Reaper | Reaper | [https://www.reaper.fm](https://www.reaper.fm) |
+| Waveform | Tracktion Software Corporation	| [https://www.tracktion.com](https://www.tracktion.com) |
+| Gig Performer	| Deskew Technologies | [https://gigperformer.com](https://gigperformer.com) |
+| Camelot | Audio Modeling | [https://audiomodeling.com](https://audiomodeling.com) |
+| deCoda | zplane | [https://products.zplane.de/products/decoda](https://products.zplane.de/products/decoda) |
+| Acoustica	| Acon Digital | [https://acondigital.com](https://acondigital.com) |
+| Mixcraft | Acoustica | [https://acoustica.com](https://acoustica.com) |
+| Overture | Sonic Scores | [https://sonicscores.com](https://sonicscores.com) |
+| Soundop | Ivosight Software Inc. | [https://ivosight.com](https://ivosight.com) |
+| TS2 | Ircam Lab | [https://www.ircamlab.com](https://www.ircamlab.com) |
+| Cross DJ | MixVibes | [https://www.mixvibes.com](https://www.mixvibes.com) |
+| VST Rack Pro | Yamaha Corporation | |
