@@ -12,6 +12,10 @@ use-default-preprocessors = true
 
 [preprocessor]
 
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 

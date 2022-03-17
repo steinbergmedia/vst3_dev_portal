@@ -1,16 +1,12 @@
 <!---![The Steinberg Logo](../resources/Steinberg_logo.png)--->
 
-<font size="5">**VST Home**</font>
+## VST Home
+
+---
 
 ### Welcome to the world of VST 3
 
-<img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 30%;"
-    src="../resources/VST_logo.png">
-</img>
+![VST Logo](../resources/VST_logo.png)
 
 This part of the [Steinberg Developer Resource](https://developer.steinberg.help/display/SDH/Steinberg+Developer+Resource) is a portal dedicated to
 developers of **VST 3** plug-ins and **VST 3** hosts. Almost everything you need

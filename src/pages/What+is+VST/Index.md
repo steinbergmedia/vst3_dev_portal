@@ -1,6 +1,20 @@
 / [VST Home](../Index.md)
 
-<font size="5">**What is VST?**</font>
+## What is VST?
+
+---
+
+#### On this page:
+
+- [VST 3: New Standard for Virtual Studio Technology](#vst-3-new-standard-for-virtual-studio-technology)
+- [About the VST standard](#about-the-vst-standard)
+- [From the technical point of view](#from-the-technical-point-of-view)
+
+#### Related pages:
+
+- [Use cases](../What+is+VST/Use+cases.md)
+- [Main benefits of VST 3](../Main+benefits+of+VST+3/index.md)
+- [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/index.md)
 
 ### VST 3: New Standard for Virtual Studio Technology
 
