@@ -1,22 +1,20 @@
-/ [VST Home](../Index.md)
+>/ [VST Home](../Index.md)
+>
+># What is VST?
 
-## What is VST?
+**On this page:**
 
----
+[[_TOC_]]
 
-#### On this page:
-
-- [VST 3: New Standard for Virtual Studio Technology](#vst-3-new-standard-for-virtual-studio-technology)
-- [About the VST standard](#about-the-vst-standard)
-- [From the technical point of view](#from-the-technical-point-of-view)
-
-#### Related pages:
+**Related pages:**
 
 - [Use cases](../What+is+VST/Use+cases.md)
 - [Main benefits of VST 3](../Main+benefits+of+VST+3/index.md)
 - [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/index.md)
 
-### VST 3: New Standard for Virtual Studio Technology
+---
+
+## VST 3: New Standard for Virtual Studio Technology
 
 With **VST** (Virtual Studio
 Technology), [Steinberg](https://www.steinberg.net/) established the
@@ -36,7 +34,7 @@ new world of creative possibilities for instrument and effect plug-in
 users. The **VST 3 SDK** is available as a free technology, open in use
 for any developer.
 
-### About the VST standard
+## About the VST standard
 
 The Virtual Studio Technology (**VST**) interface is nothing short of a
 revolution in digital audio. Developed by Steinberg and first launched
@@ -53,7 +51,7 @@ steadily been growing over the past decade. New virtual effect
 processors and virtual instruments are constantly being developed by
 Steinberg and of course dozens of other companies.
 
-### From the technical point of view
+## From the technical point of view
 
 A **VST** plug-in is an audio processing component that is utilized
 within a host application. This host application provides the audio

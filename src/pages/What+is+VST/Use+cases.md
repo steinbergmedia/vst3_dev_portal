@@ -1,21 +1,18 @@
-[VST Home](../Index.md) / [What is VST?](../What+is+VST/Index.md)
+>[VST Home](../Index.md) / [What is VST?](../What+is+VST/Index.md)
+>
+># Use cases
 
-## Use cases
+**On this page:**
 
----
+[[_TOC_]]
 
-#### On this page:
-
-- [Why use VST 3 SDK ?](#why-use-vst-3-sdk-)
-- [Advantages of using VST 3 SDK](#advantages-of-using-vst-3-sdk)
-- [Examples of VST 3 host applications](#examples-of-vst-3-host-applications)
-
-#### Related pages:
+**Related pages:**
 
 - [Main benefits of VST 3](../Main+benefits+of+VST+3/index.md)
 
+---
 
-### Why use VST 3 SDK ?
+## Why use VST 3 SDK?
 
 There are different use cases you can realize by using the **VST 3 SDK**:
 
@@ -26,7 +23,7 @@ There are different use cases you can realize by using the **VST 3 SDK**:
     - audio FX and/or
     - instruments plug-ins.
 
-### Advantages of using VST 3 SDK
+## Advantages of using VST 3 SDK
 
 By using VST 3 SDK directly:
 - you are sure to be compliant with the VST 3 format.
@@ -40,7 +37,7 @@ By using VST 3 SDK directly:
 - it includes the major plug-in format wrappers:  AAX, AUv3, AU, VST2 (deprecated)
 - the included Validator allows you to check your plug-in's conformity to the VST 3 standard
 
-### Examples of VST 3 host applications
+## Examples of VST 3 host applications
 
 
 | **Name** | **Companies** | **Link** |
