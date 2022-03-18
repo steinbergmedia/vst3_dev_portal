@@ -16,15 +16,15 @@ Here, you can find a non-exhaustive list of **VST 3** benefits.
 
 **VST 3** is a general rework of the long-serving **VST** plug-in interface (VST 1 & VST 2) . It is not compatible with the older VST (1 & 2) versions, but it includes some new features and possibilities. We have redesigned the API to make it not only far easier and more reliable for developers to work with, but have also provided completely new possibilities for plug-ins. These include:
 
-## 1. Improved Performance with the [Silence Flag](https://developer.steinberg.help/display/VST/%5B3.0.0%5D+Silence+flags+Support)
+## 1. Improved Performance with the [Silence Flag](../Technical+Documentation/Change+History/3.0.0/Silence+flags.md)
 
 Managing large plug-in sets and multiple virtual instruments on typical studio computer systems can often be difficult because of CPU performance limits. **VST 3** helps to improve overall performance by applying processing to plug-ins only when audio signals are present on their respective inputs. Instead of always processing input signals, **VST 3** plug-ins can apply their processing economically and only when it is needed.
 
-## 2. [Multiple Dynamic I/Os](https://developer.steinberg.help/pages/viewpage.action?pageId=49906849)
+## 2. [Multiple Dynamic I/Os](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 **VST 3** plug-ins are no longer limited to a fixed number of inputs and outputs, and their I/O configuration can dynamically adapt to the channel configuration. Side-chains are also very easily realizable. This includes the possibility to deactivate unused busses after loading and even reactivate those when needed. This cleans up the mixer and further helps to reduce CPU load.
 
-## 3. [Sample-accurate Automation](https://developer.steinberg.help/display/VST/Parameters+and+Automation)
+## 3. [Sample-accurate Automation](../Technical+Documentation/Parameters+Automation/Index.md)
 
 **VST 3** also features vastly improved parameter automation with sample accuracy and support for ramped automation data, allowing completely accurate and rapid parameter automation changes.
 
@@ -40,17 +40,17 @@ The **VST 3** plug-in parameters are displayed in a tree structure. Parameters a
 
 The host can ask the plug-in which parameter is under the mouse.
 
-## 7. [Context Menu Support](https://developer.steinberg.help/display/VST/%5B3.5.0%5D+Context+Menu+Support)
+## 7. [Context Menu Support](../Technical+Documentation/Change+History/3.5.0/IComponentHandler3.md)
 
 **VST 3** defines a way to allow the host to add its own entries in the plug-in context menu of a specific parameter.
 
-## 8. [Channel Context Information](https://developer.steinberg.help/display/VST/%5B3.6.5%5D+Channel+Context+Info+Support)
+## 8. [Channel Context Information](../Technical+Documentation/Change+History/3.6.5/IInfoListener.md)
 
 A **VST 3** plug-in can access channel information where it is instantiated: name, color,...
 
-## 9. [Note Expression](https://developer.steinberg.help/display/VST/%5B3.5.0%5D+Note+Expression+Support)
+## 9. [Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
 
-**VST 3** defines with [Note Expression](https://developer.steinberg.help/display/VST/%5B3.5.0%5D+Note+Expression+Support) a new way of event controller editing. The plug-in is able to break free from the limitations of MIDI controller events by providing access to new **VST 3** controller events that circumvent the laws of MIDI and provide articulation information for each individual note (event) in a polyphonic arrangement according to its noteId.
+**VST 3** defines with [Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) a new way of event controller editing. The plug-in is able to break free from the limitations of MIDI controller events by providing access to new **VST 3** controller events that circumvent the laws of MIDI and provide articulation information for each individual note (event) in a polyphonic arrangement according to its noteId.
 
 ## 10. 3D Audio Support
 
@@ -60,7 +60,7 @@ A **VST 3** plug-in can access channel information where it is instantiated: nam
 
 **VST 3** plug-in library could export multiple plug-ins and in this way replaces the shell concept of **VST 2** (kPlugCategShell).
 
-## 12. [Support Remote control Representation](https://developer.steinberg.help/display/VST/%5B3.5.0%5D+Remote+Representation+of+Parameters+Support)
+## 12. [Support Remote control Representation](../Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.md)
 
 Remote controllers for audio and MIDI software applications have become increasingly popular. **VST 3** offers far more flexible control of VST plug-ins by remote controllers. Using the knobs and faders on the control surface, parameters can be recorded, renamed and edited in many ways. Parameters that cannot be edited can be routed for display purposes to the control surface, for example, to show Gain Reduction on a compressor.
 
