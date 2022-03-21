@@ -1,6 +1,6 @@
 >/ [VST Home](../Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 >
-># VSTGUI VST 3 Project Generator
+># VSTGUI
 
 **On this page:**
 

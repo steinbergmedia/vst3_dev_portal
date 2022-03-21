@@ -52,3 +52,68 @@ It is not sufficient to include the **VST Compatible logo** only in the imprint 
 ## 5. Use on package
 
 The **VST Compatible logo** must be printed on the package of any product using or created using the SDK or showing **VST**.
+
+## 6. Use in product name or logo
+
+Provided that the **VST Compatible logo** is always displayed in the context of such a product name, “**VST**” may be added to the basic product name, e.g. like “mycoolEngine for **VST**”, if set in regular type and not graphically illustrated or integrated into the product name, and if the **VST Compatible logo** is always shown in direct context to such a product name. It is not allowed to merge the basic product name and **VST** in any graphical way into one integrated visual. E.g., it is allowed to use like this:
+
+![licensing_1](/resources/licensing_1.png)
+
+---
+
+while it is unacceptable to use it like this:
+
+![licensing_2](/resources/licensing_2.png)
+
+## 7. Use in company name
+
+It is not allowed to include **VST** in the company name.
+
+## 8. Use in social media
+
+It is allowed to use **VST** in channels and their names/URLs and the like, if a junction is used to denote the compatibility, e.g. in “MycoolEngineForVST”, and if the channels etc. always show the **VST Compatible logo**.
+
+## 9. Use in domain
+
+It is allowed to use **VST** in domains, e.g. second level domains, if a junction is used to denote the compatibility, e.g. in “[MycoolEngineForVST.com](mycoolengineforvst.com) **<- Link?**”, and if any page under such domain shows the **VST Compatible logo** and the domain only shows products using or created using the SDK.
+
+## 10. Use in logo
+
+It is not permitted to include **VST** in a company logo but it is allowed to include **VST** in a product logo provided that is in conformity with No. 6 (Use in product name or logo).
+
+## 11. Use in video
+
+It is allowed to use “**VST**” in the title of a video or in a video, e.g. a tutorial, in a way as named above, e.g. as an addition to a product name or to show the compatibility, if the **VST Compatible logo** is shown in the video and, if **VST** is included in the title of the video, on any page that shows the video and/or the title. Provided that a frame of the video is shown as still (e.g. when presenting the video while not playing it) and such frame includes **VST**, the frame or the direct context of the video needs to show the **VST Compatible logo**.
+
+## 12. Use in category
+
+It is allowed to use **VST** in a category or in a related URL outside of the domain, e.g. in [www.myreviews.com/VSTplugins/](http://www.myreviews.com/VSTplugins/), if such category is of generic meaning, and if under such category only forms of use and/or products in line with the SDK agreement are listed.
+
+## 13. Use in combination or composition
+
+It is not allowed to create combinations or compositions like “**VSTi**” or similar.
+
+## 14. VST Compatible logo
+
+The current **VST Compatible logos** are the following:
+
+>![licensing_3](/resources/licensing_3.png)
+>![licensing_4](/resources/licensing_4.png)
+
+Minimum printing size = 20 x 18,7 mm
+
+>![licensing_5](/resources/licensing_5.png)
+>![licensing_6](/resources/licensing_6.png)
+
+Minimum printing size = 15 x 10 mm
+
+## 15. General guidelines for using VST trademark
+
+On product documentation and promotional materials, use the registered trademark symbol (®) the first time the VST trademark appears in the text. Also include an attribution of Steinberg's ownership within the credit notice.
+Attribution:
+
+>**"VST® is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries."**
+
+## 16. Questions and suggestions
+
+Questions and suggestions regarding this guide can be sent to <reception@steinberg.de>

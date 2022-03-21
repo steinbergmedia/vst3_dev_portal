@@ -42,15 +42,15 @@ If you use [**VSTGUI4**](../What+is+the+VST+3+SDK/VSTGUI.md) with the VST3Editor
 
 ### Add files to the project
 
-all the sources from your **VST 3 plug-in** project
-all files from public.sdk/source/vst/interappaudio/
-all files from public.sdk/source/vst/hosting
-all files from base/source/ (if not already done previously)
-public.sdk/source/vst/auwrapper/[NSDataIBStream.mm](http://nsdataibstream.mm/) **<- Link?** (if not already done previously)
+- all the sources from your **VST 3 plug-in** project
+- all files from public.sdk/source/vst/interappaudio/
+- all files from public.sdk/source/vst/hosting
+- all files from base/source/ (if not already done previously)
+- public.sdk/source/vst/auwrapper/[NSDataIBStream.mm](http://nsdataibstream.mm/) **<- Link?** (if not already done previously)
 
 ### If using VSTGUI
-- add vstgui_ios.mm
-- add vstgui_uidescription_ios.mm
+- add [vstgui_ios.mm](vstgui_ios.mm) **<- Link?**
+- add [vstgui_uidescription_ios.mm](vstgui_uidescription_ios.mm) **<- Link?**
 
 ## Code changes
 
