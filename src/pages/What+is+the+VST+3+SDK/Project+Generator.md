@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](/Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 >
 ># VST 3 Project Generator
 
@@ -76,19 +76,17 @@ The information included in this subsection will be used for generating Factory 
 - **URL**: the URL of your Company: e.g. *"<https://www.steinberg.net>"*
 - **C++ Namespace**: this allows you to predefine a namespace which will be used to surround your plug-in source code: e.g. *"`MyWantedNamespace`"*:
 
----
-
-    //...
-    namespace MyWantedNamespace {
-    
-    //------------------------------------------------------------------------
-    MyPluginController::MyPluginController ()
-    {
-    //...
-    }
-    } // end namespace
-    //...
-    namespace MyWantedNamespace {
+        //...
+        namespace MyWantedNamespace {
+        
+        //------------------------------------------------------------------------
+        MyPluginController::MyPluginController ()
+        {
+        //...
+        }
+        } // end namespace
+        //...
+        namespace MyWantedNamespace {
 
 ### Path Preferences
 
@@ -111,17 +109,15 @@ In this tab you are defining some information for the creation of a new plug-in:
 - **macOS Deployment Target**: enter here the minimum requested macOS version targeted</p>
 - **C++ Class Name**: this specifies the basename of your plug-in classes: e.g. *"AGain"*
 
----
-
-    class AGainProcessor : public AudioEffect
-    {
-        //...
-    };
-    
-    class AGainController : public EditControllerEx1
-    {
-        //...
-    };
+        class AGainProcessor : public AudioEffect
+        {
+            //...
+        };
+        
+        class AGainController : public EditControllerEx1
+        {
+            //...
+        };
 
 - **Bundle ID**: this is the ID needed for example for the Info.plist of macOS: e.g. *"com.steinberg.again"*
 - **Filename Prefix**: (optional) this will be added as file prefix to the created files: e.g. *"AGain"* => AGainProcessor.cpp / AGainController.h / ...

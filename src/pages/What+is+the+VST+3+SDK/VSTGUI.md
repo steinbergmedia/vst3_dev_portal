@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](/Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 >
 ># VSTGUI
 
@@ -38,7 +38,7 @@ Visit Steinberg's **VST Developer Forum** in order to get help with development,
 
 ![what_if_37](/resources/what_is_37.png)
 
-<https://github.com/steinbergmedia/vstgui>
+**<https://github.com/steinbergmedia/vstgui>**
 
 ## VSTGUI License
 

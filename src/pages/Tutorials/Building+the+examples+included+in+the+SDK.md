@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md) / [Getting Started](../Tutorials.md)
+>/ [VST Home](/Index.md) / [Tutorials](../Tutorials.md)
 >
 ># Building the examples included in the SDK
 
@@ -26,17 +26,17 @@ Download cmake from: <https://cmake.org/download/> or use a package manager for 
 
 ### Building the examples on Windows
 
-• Create a folder for the build and move to this folder (using cd):
+- Create a folder for the build and move to this folder (using cd):
 
-    mkdir build
-    cd build
+        mkdir build
+        cd build
 
-• Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
+- Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
 
 
-    cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk
-    or without symbolic links
-    cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk -DSMTG_CREATE_PLUGIN_LINK=0
+        cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk
+        or without symbolic links
+        cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk -DSMTG_CREATE_PLUGIN_LINK=0
 
 >**Preparation on Windows**
 >
@@ -54,55 +54,68 @@ Download cmake from: <https://cmake.org/download/> or use a package manager for 
 
 Note: you can find the string definition for different Visual Studio Generators in the cmake online documentation (<https://cmake.org/documentation/>)
 
-• Build the plug-in (you can use Visual Studio too):
+- Build the plug-in (you can use Visual Studio too):
 
-
-    msbuild.exe vstsdk.sln
-    (or alternatively for example for release)
-    
-    cmake --build . --config Release
+        msbuild.exe vstsdk.sln
+        (or alternatively for example for release)
+        
+        cmake --build . --config Release
 
 ### Building the examples on macOS
 
-• Create a folder for the build and move to this folder (using cd):
+- Create a folder for the build and move to this folder (using cd):
 
+        mkdir build
+        cd build
 
-    mkdir build
-    cd build
-
-• Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
+- Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
 For XCode:
 
+        cmake -GXcode ../vst3sdk
 
-    cmake -GXcode ../vst3sdk
-
-Without XCode (here debug variant):
+    Without XCode (here debug variant):
 
 
-     cmake -DCMAKE_BUILD_TYPE=Debug ../
+        cmake -DCMAKE_BUILD_TYPE=Debug ../
 
-• Build the plug-in (you can use XCode too):
+- Build the plug-in (you can use XCode too):
 
-    xcodebuild
-    (or alternatively for example for release)
-    
-    cmake --build . --config Release
+        xcodebuild
+        (or alternatively for example for release)
+        
+        cmake --build . --config Release
 
 ### Building the examples on Linux
 
-• Install the required packages: Required packages
-• Create a folder for the build and move to this folder (using cd):
+- Install the required packages: Required packages
+- Create a folder for the build and move to this folder (using cd):
 
-    mkdir build
-    cd build
+        mkdir build
+        cd build
 
-• Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
+- Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
 
-    cmake ../vst3sdk
+        cmake ../vst3sdk
 
-• Build the plug-in:
+- Build the plug-in:
 
-    make
-    (or alternatively for example for release)
-    
-    cmake --build . --config Release
+        make
+        (or alternatively for example for release)
+        
+        cmake --build . --config Release
+
+### Building using cmake-gui
+
+- Start the cmake-gui application which is part of the cmake installation (<https://cmake.org/download/>)
+
+![tutorials_1](/resources/tutorials_1.png)
+
+- "***Browse Source...***": select the folder VST3_SDK
+- "***Browse Build...***": select a folder where the outputs (projects/...) will be created. Typically a folder named "build"
+- You can check the ***SMTG** Options*
+- Press "***Configure***" and choose the generator in the window that opens: for example "**Visual Studio 16 2019**"
+
+![tutorials_2](/resources/tutorials_2.png)
+
+- Press "***Generate***" to create the project
+- Open your targeted IDE, and compile the solution/project.

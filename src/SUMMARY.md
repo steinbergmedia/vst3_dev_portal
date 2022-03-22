@@ -38,7 +38,7 @@
 	- [VST 3 API Documentation](pages/Technical+Documentation/API+Documentation/Index.md)
 	- [VST Module Architecture](pages/Technical+Documentation/VST+Module+Architecture/Index.md)
 		- [How the host will load a VST-MA based Plug-in](pages/Technical+Documentation/VST+Module+Architecture/Loading.md)
-		- [Hot to derive a class from an interface](pages/Technical+Documentation/VST+Module+Architecture/Derive+From+Interface.md)
+		- [How to derive a class from an interface](pages/Technical+Documentation/VST+Module+Architecture/Derive+From+Interface.md)
 		- [Interface Versions and Inheritance](pages/Technical+Documentation/VST+Module+Architecture/Interface+Versions+and+Inheritance.md)
 	- [Parameters and Automation](pages/Technical+Documentation/Parameters+Automation/Index.md)
 	- [VST 3 Units](pages/Technical+Documentation/VST+3+Units/Index.md)

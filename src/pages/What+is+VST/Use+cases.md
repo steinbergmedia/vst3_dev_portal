@@ -1,4 +1,4 @@
->[VST Home](../Index.md) / [What is VST?](../What+is+VST/Index.md)
+>[VST Home](/Index.md) / [What is VST?](../What+is+VST/Index.md)
 >
 ># Use cases
 
