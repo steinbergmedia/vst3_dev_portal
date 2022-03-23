@@ -24,7 +24,7 @@ The wrapper is a small dynamic library which loads the **VST 3 plug-in**. As Aud
 ## How does it work?
 
 - You first need to build the SDK ([check here](/pages/Tutorials/Building+the+examples+included+in+the+SDK.md)) and then you should - have the xcode project.
-- You may need to download the CoreAudio SDK from Apple and point cmake to it when building the SDK with it (See here).
+- You may need to download the CoreAudio SDK from Apple and point cmake to it when building the SDK with it ([see here](/pages/Tutorials/Using+cmake+for+building+plug-ins.md)).
 - create a copy of the again AU wrapper example project directory (public.sdk/source/vst/auwrapper/again/)
 - rename the copy to your needs
 - edit the target settings of the project and change

@@ -18,15 +18,14 @@ Whenever **VST**® is used or the SDK has been used to create a product or the S
 
 This logo exists in different forms: with and without the trademark text, black on white and white on black. If you choose the logo without the trademark text, you have to include the following statement somewhere:
 
->*"VST is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries."*
+>**"VST is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries."**
 
 ## 1. Required use of VST Compatible logo
 
 Whenever “**VST**” is used, or the SDK is used to create a product, or when the SDK is included, it is required to add the reference to Steinberg by using the “**VST Compatible logo**” as supplied by Steinberg on each of the following:
 
 1. on package
-2. on website:
-
+2. on website:</p>
 The **VST Compatible logo** must be shown on every webpage that relates to such a product or shows **VST**. Using e.g. only within the imprint is NOT sufficient.
 
 3. all documentation, regardless of the media used, such as PDF manuals, website, printed manuals etc.

@@ -30,7 +30,7 @@ The following use cases support you to choose the right license.
 ## 3. I would like to sell my VST 3 plug-in/host in binary form only.
 
 If you work for-profit and distribute your VST 3 plug-in/host in binary form, you need to choose the "Proprietary Steinberg VST 3" license.
-Download the license agreement (it is part of the SDK too), sign it and return it to Steinberg.
+Download the [license agreement](../VST+3+Licensing/What+are+the+licensing+options.md) (it is part of the [SDK](../Getting+Started/Links.md) too), sign it and return it to Steinberg.
 
 ## 4. I would like to adapt the VST 3 SDK's sources to my VST 3 plug-in/host's needs.
 
@@ -63,10 +63,10 @@ Yes, but you have to make sure that your VST 3 plug-in/host sources are under [G
 
 - No, the license agreement has its own versioning, you just have to be sure that you have already signed the correct version of it.
 - As of SDK version **3.6.8**, the license has the version **2.0** (only some minor change/formatting of the text of the license agreement were done in the last SDK versions [3.6.9 up to 3.7.1])
-    - *If* you use a *VST 3 SDK version >= 3.6.8*, you have to be sure that you sent Steinberg a signed license agreement (*version 2.x*) from one of the last VST 3 SDKs (>= 3.6.8).
-    - *If* you use a **VST 3 SDK version < 3.6.8**, you have to be sure that you sent Steinberg a signed license agreement (**version 1**) included in the VST 3 SDK that you use.
-    - *If* you do not know if you already sent it, it is recommended to send it again and in this case it is possible to use the license agreement of the **last VST 3 SDK**, too!
-    - *If* you have signed a license agreement (**version 2.x**) and a new released **VST 3 SDK** uses a new license agreement (**version 3.x**), then you have to signed it again.
+    - **If** you use a **VST 3 SDK version >= 3.6.8**, you have to be sure that you sent Steinberg a signed license agreement (*version 2.x*) from one of the last VST 3 SDKs (>= 3.6.8).
+    - **If** you use a **VST 3 SDK version < 3.6.8**, you have to be sure that you sent Steinberg a signed license agreement (**version 1**) included in the VST 3 SDK that you use.
+    - **If** you do not know if you already sent it, it is recommended to send it again and in this case it is possible to use the license agreement of the **last VST 3 SDK**, too!
+    - **If** you have signed a license agreement (**version 2.x**) and a new released **VST 3 SDK** uses a new license agreement (**version 3.x**), then you have to signed it again.
 - The previous explanation also applies to used 3rd parties SDK like JUCE/iPlug/SynthEdit... just check which VST 3 SDK version is used by the 3rd party SDK you work with and sign the correct license agreement or the last available one.
 
 ## 10. I would like to share the source code of my VST 2 plug-in/host on GitHub or other web-based exchange platform.

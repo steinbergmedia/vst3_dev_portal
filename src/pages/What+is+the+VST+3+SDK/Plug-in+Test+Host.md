@@ -38,7 +38,7 @@ Check the folder *"bin"* of the SDK!
 
 ### Audio Input
 
-In this section you can select the audio source of your plug-in for the Main Input Audio Bus and for the Aux Input Audio Bus ([Side-chain](../FAQ/Index.md) **<- Unfertig**: if available) between:
+In this section you can select the audio source of your plug-in for the Main Input Audio Bus and for the Aux Input Audio Bus ([Side-chain](../FAQ/Index.md) **<- link to be competed later**: if available) between:
 - A sine wave
 - Noise
 - Silence
@@ -63,7 +63,7 @@ This section allows you to load serialized multiple plug-ins. Each plug-in will 
 For each loaded plug-in in a slot you can:
 - Enable/disable the plug-in with the **On** button.
 - Bypass/process the plug-in with the **Byp** button (if available as parameter).
-- Enable/disable the [Side-chain](../FAQ/Index.md) **<- Unfertig** bus with the **Aux** button (available only if the plug-in has input Side-chain).
+- Enable/disable the [Side-chain](../FAQ/Index.md) **<- link to be competed later** bus with the **Aux** button (available only if the plug-in has input [Side-chain](../FAQ/Index.md) **<- link to be competed later**).
 - Open its editor with the **Edit** button.
 - Save a Preset with the **Store** button.
 - Load a Preset with the **Load** button.
@@ -75,11 +75,11 @@ For each loaded plug-in in a slot you can:
 
 ![what_if_17](/resources/what_is_17.jpg)
 
-- Information window of NoteExpressionSynth plug-in showing the [Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) panel:
+- Information window of NoteExpressionSynth plug-in showing the **[Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)** panel:
 
 ![what_if_18](/resources/what_is_18.jpg)
 
-- Information window of AGain plug-in showing the Properties panel:
+- Information window of AGain plug-in showing the **Properties** panel:
 
 ![what_if_19](/resources/what_is_19.jpg)
 
@@ -95,11 +95,9 @@ Right click on the opened plug-in opens a context menu which allows to trigger s
 ### Transport
 
 In this section you can:
-- set the gain of the output audio
-- control the transport state (Loop/Start/Stop/Rewind)
-- change the tempo and signature
 
-![what_if_21](/resources/what_is_21.jpg)
+|• set the gain of the output audio<br> • control the transport state (Loop/Start/Stop/Rewind)<br> • change the tempo and signature | ![what_if_21](/resources/what_is_21.jpg) |
+| :- | - |
 
 ## VST 3 Plug-ins Tests Window
 

@@ -6,11 +6,15 @@ Generated VST3 Microsoft Visual Studio Projects using the [cmake](https://cmake.
 
 If you do not want to create this link, call cmake with this parameter:
 
-    -DSMTG_CREATE_PLUGIN_LINK=0
+```
+-DSMTG_CREATE_PLUGIN_LINK=0
+```
 
 You could choose the new user location for VST3 plug-ins, call cmake with this parameter:
 
-    -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
+```
+-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
+```
 
 **Note for Windows:** In order to be able to create a symbolic link, you have to set the correct group policy. Proceed as follows:
 

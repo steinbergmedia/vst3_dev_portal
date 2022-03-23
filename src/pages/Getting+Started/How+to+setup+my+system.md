@@ -50,10 +50,13 @@ We used and tested on Ubuntu 20.04 LTS.
 Building the SDK examples requires installation of several packages:
 
 Required:
+```
+sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-devlibxcb-util-dev libxcb-cursor-dev libxcb-xkb-devlibxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-devlibcairo2-dev libgtkmm-3.0-dev libsqlite3-devlibxcb-keysyms1-dev
+```
 
-    sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-dev libxcb-util-dev libxcb-cursor-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-dev libcairo2-dev libgtkmm-3.0-dev libsqlite3-dev libxcb-keysyms1-dev
-
->On Raspbian/Debian, replace *"libxcb-util-dev"* with *"libxcb-util0-dev"*
+```admonish info
+On Raspbian/Debian, replace *"libxcb-util-dev"* with *"libxcb-util0-dev"*
+```
 
 Optional:
 
@@ -63,12 +66,15 @@ A recommended IDE (optional): **QTCreator**
 
     sudo apt-get install qtcreator
 
+```admonish info
+You can also use the bash file *"setup_linux_packages_for_vst3sdk.sh"* included in the *VST3_SDK/tools* folder!
+```
 
->You can also use the bash file *"setup_linux_packages_for_vst3sdk.sh"* included in the *VST3_SDK/tools* folder!
-
->- [Instead of](http://www.gtkmm.org/en/) [**gcc**](https://gcc.gnu.org/install/) compiler, a recent version of [**clang**](https://clang.llvm.org/) [compiler will also work!](http://www.gtkmm.org/en/)
->- [libgtkmm3](http://www.gtkmm.org/en/) is required for [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) **<- not the [original Link](https://developer.steinberg.help/display/VST/How+to+set+up+my+system+for+VST+3#HowtosetupmysystemforVST3-VSTGUI)** and the [editorhost](../What+is+the+VST+3+SDK/Index.md#editorhost) **<- not the [original Link](https://developer.steinberg.help/display/VST/How+to+set+up+my+system+for+VST+3#HowtosetupmysystemforVST3-editorhost)** example!
->- [Jack Audio](http://www.jackaudio.org) is required for [audiohost](../What+is+the+VST+3+SDK/Index.md#audiohost) **<- not the [original Link](https://developer.steinberg.help/display/VST/How+to+set+up+my+system+for+VST+3#HowtosetupmysystemforVST3-audiohost)** example!
+```admonish info
+- [Instead of](http://www.gtkmm.org/en/) [**gcc**](https://gcc.gnu.org/install/) compiler, a recent version of [**clang**](https://clang.llvm.org/) [compiler will also work!](http://www.gtkmm.org/en/)
+- [libgtkmm3](http://www.gtkmm.org/en/) is required for [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) **<- not the [original Link](https://developer.steinberg.help/display/VST/How+to+set+up+my+system+for+VST+3#HowtosetupmysystemforVST3-VSTGUI)** and the [editorhost](../What+is+the+VST+3+SDK/Index.md#editorhost) **<- not the [original Link](https://developer.steinberg.help/display/VST/How+to+set+up+my+system+for+VST+3#HowtosetupmysystemforVST3-editorhost)** example!
+- [Jack Audio](http://www.jackaudio.org) is required for [audiohost](../What+is+the+VST+3+SDK/Index.md#audiohost) **<- not the [original Link](https://developer.steinberg.help/display/VST/How+to+set+up+my+system+for+VST+3#HowtosetupmysystemforVST3-audiohost)** example!
+```
 
 ## Get cmake
 In order to control the compilation process and create an IDE project, **VST 3 SDK** uses the open-source and cross-platform tool [cmake](https://cmake.org/).
@@ -87,11 +93,15 @@ You can use it as a command line tool or use the cmake executable with GUI. cmak
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >
->`-DSMTG_CREATE_PLUGIN_LINK=0`
+>```
+>-DSMTG_CREATE_PLUGIN_LINK=0
+>```
 >
 >You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for VST3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
 >
->`-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
+>```
+>-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
+>```
 
 ## Get a VST 3 host application
 

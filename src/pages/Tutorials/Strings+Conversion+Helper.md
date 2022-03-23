@@ -14,26 +14,30 @@ Here some code examples:
 
 ## Convert a String128 string to an UTF-8 string
 
-    #include "public.sdk/source/vst/utility/stringconvert.h"
-    
-    //...
-    FUnknownPtr<IHostApplication> hostApp (hostContext);
-    if (hostApp)
+```
+#include "public.sdk/source/vst/utility/stringconvert.h"
+
+//...
+FUnknownPtr<IHostApplication> hostApp (hostContext);
+if (hostApp)
+{
+    Vst::String128 name;
+    if (hostApp->getName (name) == kResultTrue)
     {
-        Vst::String128 name;
-        if (hostApp->getName (name) == kResultTrue)
-        {
-            // Here we convert a Vst::String128 to a std::string (UTF8)
-            std::string str = VST3::StringConvert::convert (name);
-            //...
-        }
+        // Here we convert a Vst::String128 to a std::string (UTF8)
+        std::string str = VST3::StringConvert::convert (name);
+        //...
     }
+}
+```
 
 ## Convert an UTF-8 string to a String128 string
 
-    #include "public.sdk/source/vst/utility/stringconvert.h"
-    
-    //...
-    std::string str ("My Title");
-    Vst::String128 vstStr;
-    VST3::StringConvert::convert (str, vstStr);
+```
+#include "public.sdk/source/vst/utility/stringconvert.h"
+
+//...
+std::string str ("My Title");
+Vst::String128 vstStr;
+VST3::StringConvert::convert (str, vstStr);
+```

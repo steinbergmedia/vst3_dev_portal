@@ -56,12 +56,13 @@ If you use [**VSTGUI4**](../What+is+the+VST+3+SDK/VSTGUI.md) with the VST3Editor
 
 **Xcode** created some files for you when you created the project. One of it is the App Delegate. You need to change the base class from **NSResponder<UIApplicationDelegate>** to **VSTInterAppAudioAppDelegateBase** (you need to import its header file which is here:<br>
 *public.sdk/source/vst/interappaudio/VSTInterAppAudioAppDelegateBase.h)* and then remove all methods from it. If you want to add some custom behavior to your app, you should do it in your App Delegate class implementation. For example, if you want to only allow landscape mode, you have to add this method:
-
-    //  ------------------------------------------------------------------    ------
-    - (NSUInteger)application:(UIApplication *)application  supportedInterfaceOrientationsForWindow:(UIWindow *)window
-    {
-    return UIInterfaceOrientationMaskLandscapeLeft| UIInterfaceOrientationMaskLandscapeRight;
-    }
+```
+// -----------------------------------------------------------------    ------
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+return UIInterfaceOrientationMaskLandscapeLeft|UIInterfaceOrientationMaskLandscapeRight;
+}
+```
 
 Make sure to call the super method if you override one of themethods implemented by **VSTInterAppAudioAppDelegateBase** (theheader shows which methods are implemented).
 
@@ -69,26 +70,27 @@ Make sure to call the super method if you override one of themethods implemented
 
 ### Creating a different UI when running on iOS
 
-To create a different view for iOS, you can check the host context for the *IInterAppAudioWrapper* interface:
-
-    //  ------------------------------------------------------------------    -----------
-    IPlugView* PLUGIN_API MyEditController::createView (FIDString   _name)
+To create a different view for iOS, you can check the host context for the **IInterAppAudioWrapper** interface:
+```
+// -----------------------------------------------------------------    -----------
+IPlugView* PLUGIN_API MyEditController::createView(FIDString   _name)
+{
+    ConstString name (_name);
+    if (name == ViewType::kEditor)
     {
-        ConstString name (_name);
-        if (name == ViewType::kEditor)
+        FUnknownPtr<IInterAppAudioHost> interAudioApp   (getHostContext ());
+        if (interAudioApp)
         {
-            FUnknownPtr<IInterAppAudioHost> interAudioApp   (getHostContext ());
-            if (interAudioApp)
-            {
-                // create and return the view for iOS
-            }
-            else
-            {
-                // create and return the view for Windows/macOSX
-            }
+            // create and return the view for iOS
         }
-        return 0;
+        else
+        {
+            // create and return the view for Windows/macOSX
+        }
     }
+    return 0;
+}
+```
 
 ### Using [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md)
 
@@ -96,7 +98,7 @@ To create a different view for iOS, you can check the host context for the *IInt
 
 ### Using a native UIView
 
-If you want to create a native UIView as your plug-in editor, you have to create your own IPlugView derivate and attach the UIView in the IPlugView::attached method. An example of this can be seen in *"public.sdk/samples/vst/adelay/interappaudio/iosEditor.mm"*
+If you want to create a native UIView as your plug-in editor, you have to create your own IPlugView derivate and attach the UIView in the IPlugView::attached method. An example of this can be seen in *"public.sdk/samples/vst/adelay/interappaudio/[iosEditor.mm](http://ioseditor.mm/)"* **<- Link?**
 
 ### Host UI Integration
 

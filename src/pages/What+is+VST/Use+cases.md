@@ -25,17 +25,18 @@ There are different use cases you can realize by using the **VST 3 SDK**:
 
 ## Advantages of using VST 3 SDK
 
-By using VST 3 SDK directly:
-- you are sure to be compliant with the VST 3 format.
-- developing your plug-in based on the VST 3 format allows you to support easily new VST 3 features that improve the integration of these plug-ins inside a DAW. Some 3rd party SDKs use only a common layer between all plug-in formats, limiting in this way the possibility for a better integration, for example exclusive VST 3 features:
+By using **VST 3 SDK** directly:
+
+- you are sure to be compliant with the **VST 3** format.
+- developing your plug-in based on the **VST 3** format allows you to support easily new **VST 3** features that improve the integration of these plug-ins inside a DAW. Some 3rd party SDKs use only a common layer between all plug-in formats, limiting in this way the possibility for a better integration, for example exclusive **VST 3** features:
     - [context menu](https://developer.steinberg.help/display/VST/%5B3.5.0%5D+Context+Menu+Support)
     - [dirty state](https://developer.steinberg.help/display/VST/%5B3.1.0%5D+Dirty+State%2C+Open+Editor+Request+and+UI+Group+Editing+Support)
     - loading differentially a preset or a project
     - [note expression](https://developer.steinberg.help/display/VST/%5B3.5.0%5D+Note+Expression+Support)
     - see [others benefits of VST 3](pages/Main+benefits+of+VST+3/Index.md)
-- you get optimal integration of the VSTGUI tool with VST 3
+- you get optimal integration of the **[VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md)** tool with **VST 3**
 - it includes the major plug-in format wrappers:  AAX, AUv3, AU, VST2 (deprecated)
-- the included Validator allows you to check your plug-in's conformity to the VST 3 standard
+- the included [Validator]()**<- Link?** allows you to check your plug-in's conformity to the VST 3 standard
 
 ## Examples of VST 3 host applications
 

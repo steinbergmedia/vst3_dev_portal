@@ -27,16 +27,18 @@ Download cmake from: <https://cmake.org/download/> or use a package manager for 
 ### Building the examples on Windows
 
 - Create a folder for the build and move to this folder (using cd):
-
-        mkdir build
-        cd build
+```
+mkdir build
+cd build
+```
 
 - Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
 
-
-        cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk
-        or without symbolic links
-        cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk -DSMTG_CREATE_PLUGIN_LINK=0
+```
+cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk
+or without symbolic links
+cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=0
+```
 
 >**Preparation on Windows**
 >
@@ -46,63 +48,81 @@ Download cmake from: <https://cmake.org/download/> or use a package manager for 
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >
->`-DSMTG_CREATE_PLUGIN_LINK=0`
+>```
+>-DSMTG_CREATE_PLUGIN_LINK=0
+>```
 >
 >You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for VST3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
 >
->`-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
+>```
+>-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
+>```
 
 Note: you can find the string definition for different Visual Studio Generators in the cmake online documentation (<https://cmake.org/documentation/>)
 
 - Build the plug-in (you can use Visual Studio too):
+```
+msbuild.exe vstsdk.sln
+(or alternatively for example for release)
 
-        msbuild.exe vstsdk.sln
-        (or alternatively for example for release)
-        
-        cmake --build . --config Release
+cmake --build . --config Release
+```
 
 ### Building the examples on macOS
 
 - Create a folder for the build and move to this folder (using cd):
 
-        mkdir build
-        cd build
+```
+mkdir build
+cd build
+```
 
-- Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
+- Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:<br>
 For XCode:
 
-        cmake -GXcode ../vst3sdk
+```
+cmake -GXcode ../vst3sdk
+```
 
-    Without XCode (here debug variant):
+Without XCode (here debug variant):
 
-
-        cmake -DCMAKE_BUILD_TYPE=Debug ../
+```
+cmake -DCMAKE_BUILD_TYPE=Debug ../
+```
 
 - Build the plug-in (you can use XCode too):
 
-        xcodebuild
-        (or alternatively for example for release)
-        
-        cmake --build . --config Release
+```
+xcodebuild
+(or alternatively for example for release)
+
+cmake --build . --config Release
+```
 
 ### Building the examples on Linux
 
 - Install the required packages: Required packages
 - Create a folder for the build and move to this folder (using cd):
 
-        mkdir build
-        cd build
+```
+mkdir build
+cd build
+```
 
 - Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
 
-        cmake ../vst3sdk
+```
+cmake ../vst3sdk
+```
 
 - Build the plug-in:
 
-        make
-        (or alternatively for example for release)
-        
-        cmake --build . --config Release
+```
+make
+(or alternatively for example for release)
+
+cmake --build . --config Release
+```
 
 ### Building using cmake-gui
 

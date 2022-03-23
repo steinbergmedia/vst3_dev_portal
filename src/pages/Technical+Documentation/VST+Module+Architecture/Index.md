@@ -22,7 +22,7 @@
 It is object-oriented, cross-platform and (almost) compiler-independent.<br>
 The basics are very much like [Microsoft® COM](https://en.wikipedia.org/wiki/Component_Object_Model), so if you are familiar with this technology, understanding *VST-MA* should be quite easy.
 
-*VST-MA* is provided in C++ only. Interfaces in C++ are expressed as pure virtual class (which is a class with nothing but abstract methods). Unlike COM there is no support for C or other languages yet - simply because there has been no need for this so far. But all **VST-MA** interfaces can be transformed into different representations in case this should be inevitable some day.<br>
+**VST-MA** is provided in C++ only. Interfaces in C++ are expressed as pure virtual class (which is a class with nothing but abstract methods). Unlike COM there is no support for C or other languages yet - simply because there has been no need for this so far. But all **VST-MA** interfaces can be transformed into different representations in case this should be inevitable some day.<br>
 It is currently available for Windows, Mac OS X and Linux.
 
 The C++ files belonging to **VST-MA** are located in the following folders:
@@ -31,7 +31,7 @@ The C++ files belonging to **VST-MA** are located in the following folders:
 - *pluginterfaces/gui*
 
 **Note**: The name '**VST Module Architecture**' has only little relation to the 'Virtual Studio Technology' itself.<br>
-It describes the basic layer for any plug-in category supported in [Steinberg](https://www.steinberg.net/) hosts. **VST-MA** existed long before it was used as a base for *VST 3* itself.
+It describes the basic layer for any plug-in category supported in [Steinberg](https://www.steinberg.net/) hosts. **VST-MA** existed long before it was used as a base for **VST 3** itself.
 
 ## Interfaces
 
@@ -65,7 +65,7 @@ You can find some example code here: [Interface Versions and Inheritance](../VST
 
 ### COM Compatibility
 
-The first layer of **VST-MA** is binary-compatible to **COM**. The [Vtable](https://en.wikipedia.org/wiki/Virtual_method_table) and interface identifier of [Steinberg::FUnknown](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUnknown.html) match with the corresponding COM interface [IUnknown](https://en.wikipedia.org/wiki/IUnknown). The main difference is the organization and creation of components/plug-ins by a host application. VST-MA does not require any Microsoft® COM source file. You can find information about COM on pages like:
+The first layer of **VST-MA** is binary-compatible to **COM**. The [Vtable](https://en.wikipedia.org/wiki/Virtual_method_table) and interface identifier of [Steinberg::FUnknown](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUnknown.html) match with the corresponding COM interface [IUnknown](https://en.wikipedia.org/wiki/IUnknown). The main difference is the organization and creation of components/plug-ins by a host application. VST-MA does not require any Microsoft® COM source file. You can find information about **COM** on pages like:
 
 - <https://docs.microsoft.com/en-us/windows/win32/learnwin32/what-is-a-com-interface->
 
@@ -90,7 +90,9 @@ A module (Windows: Dynamic Link Library, MAC: Mach-O Bundle, Linux: package) con
 The host has access to this factory through the [Steinberg::IPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory.html) interface. This is the anchor point for the module and it is realized as a C-style export function named [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330). You can find an export definition file in the SDK - *public.sdk/source/main/winexport.def*  (*public.sdk/source/main/macexport.exp*) which can be used to export this function or you could use the macro SMTG_EXPORT_SYMBOL directly in cpp file (check *public.sdk/source/main/dllmain.cpp* for example).<br>
 [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330) is declared as follows:
 
-    SMTG_EXPORT_SYMBOL IPluginFactory* PLUGIN_API GetPluginFactory ();
+```
+SMTG_EXPORT_SYMBOL IPluginFactory* PLUGIN_APIGetPluginFactory ();
+```
 
 In addition to the **GetPluginFactory** function the plug-in may has to export additional **entry/exit** functions depending on the platform:
 
@@ -127,28 +129,29 @@ Here a example when using def/exp files instead of SMTG_EXPORT_SYMBOL:
 
 **winexport.def file on Windows**
 
-    EXPORTS
-    GetPluginFactory
-    InitDll
-    ExitDll
+```
+EXPORTS
+GetPluginFactory
+InitDll
+ExitDll
+```
 
 **macexport.exp file on mac**
 
-    _GetPluginFactory
-    _bundleEntry
-    _bundleExit
+```
+_GetPluginFactory
+_bundleEntry
+_bundleExit
+```
 
 ### Locations
 
 Component modules do not require registration like **DirectX**. The host application expects component modules to be located in predefined folders of the file system. These folders and their subfolders are scanned for **VST-MA** modules during application startup. Each folder serves a special purpose:
 
 - The application's *Components* subfolder (e.g. *"C:\Program Files\Steinberg\Cubase 10\Components"*) is used for components tightly bound to the application. No other application should use it.
-
 - Components that are shared between all [Steinberg](https://www.steinberg.net/) hosts are located at:
-
     - Win: *"/Program Files/Common Files/Steinberg/Shared Components"*
     - Mac: *"/Library/Application Support/Steinberg/Components/"*
-
 - For special purpose plug-in types, additional locations are defined. Please refer to the corresponding documentation to find out if additional folders are used and where to find them. For **VST 3**, see [VST 3 Locations/Format](../Locations+Format/Index.md).
 
 ### Categories
@@ -177,20 +180,24 @@ Beginning with version 5 of Cubase and Nuendo, the internal structure of the hos
 
 #### Plug-ins for Unicode hosts
 
-Writing plug-ins that are supposed to work only with Unicode hosts is easy. Use a current version of this SDK and develop a plug-in as usual. Make sure that you only ever pass Unicode UTF-16 strings to interfaces that have strings as call parameters and also be prepared that strings returned by these interfaces are always [UTF-16](https://en.wikipedia.org/wiki/UTF-16). Therefore, to make things easier, it is recommended that Unicode strings are used throughout the plug-in's implementation, in order to avoid back and forth conversions. Also, use the Steinberg::String and Steinberg::ConstString classes from the Base module, as they have been designed to work universally on both Mac and Win.
+Writing plug-ins that are supposed to work only with Unicode hosts is easy. Use a current version of this SDK and develop a plug-in as usual. Make sure that you only ever pass Unicode [UTF-16](https://en.wikipedia.org/wiki/UTF-16) strings to interfaces that have strings as call parameters and also be prepared that strings returned by these interfaces are always [UTF-16](https://en.wikipedia.org/wiki/UTF-16). Therefore, to make things easier, it is recommended that Unicode strings are used throughout the plug-in's implementation, in order to avoid back and forth conversions. Also, use the Steinberg::String and Steinberg::ConstString classes from the Base module, as they have been designed to work universally on both Mac and Win.
 
 #### Migrating from non-Unicode to Unicode
 
 In [Steinberg](https://www.steinberg.net/) SDKs released before Cubase 5, the interface functions were using pointers of type *char* for passing strings to and from the host. These have been changed now to using Steinberg's defined type *tchar* which is equivalent to *char16*, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard [Unicode](https://en.wikipedia.org/wiki/Unicode), so strings are expected to be encoded in [UTF-16](https://en.wikipedia.org/wiki/UTF-16).<br>
 Accordingly, also the implementation of a plug-in needs to be adapted to deal correctly with Unicode-encoded strings, as well as only ever passing Unicode strings to the host.
 
->**Technical note**<br>
->Changing a function from using 8 bit to 16 bit character pointers may seem as only a minor modification, but in interface design this is a major intrusion, because an interface is a contract to the outside world that is never to be changed. Therefore, classes that are changed to use Unicode strings are distinguished and also receive a new unique class ID.
+```admonish info
+**Technical note**<br>
+Changing a function from using 8 bit to 16 bit character pointers may seem as only a minor modification, but in interface design this is a major intrusion, because an interface is a contract to the outside world that is never to be changed. Therefore, classes that are changed to use Unicode strings are distinguished and also receive a new unique class ID.
+```
 
 ## SDK backward compatibility
 
 Even with the current SDK it is still possible to develop non-Unicode plug-ins. In the file *pluginterfaces/base/ftypes.h*, the line *"#define UNICODE_OFF"* is commented out, but by uncommenting it you can revert all interfaces to using single byte ASCII strings. Alternatively, you can also specify UNICODE_OFF as a preprocessor definition in your project file.<br>
 Also, the plug-in's factory info now does not define the Unicode flag anymore, so a Unicode host sees the compiled plug-in as non-Unicode. Also, when reverting to single byte strings the plug-in's implementation also has to be changed to behave correctly.
 
->**Technical Note**<br>
->When undefining Unicode, the class IDs also revert to the old ones.
+```admonish info
+**Technical Note**<br>
+When undefining Unicode, the class IDs also revert to the old ones.
+```

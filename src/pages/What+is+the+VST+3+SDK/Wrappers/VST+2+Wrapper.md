@@ -17,12 +17,13 @@ The VST 3 SDK comes with a helper class which wraps one VST 3 audio processor an
 ## How does it work?
 
 You just need to add public.sdk/source/vst/vst2wrapper/vst2wrapper.sdk.cpp to your project and add the following code somewhere in your sources:
+```
+// -----------------------------------------------------------------    ------
+#include "public.sdk/source/vst/vst2wrapper/vst2wrapper.h"
 
-    //  ------------------------------------------------------------------    ------
-    #include "public.sdk/source/vst/vst2wrapper/vst2wrapper.h"
-    
-    //  ------------------------------------------------------------------    ------
-    ::AudioEffect* createEffectInstance (audioMasterCallback    audioMaster)
-    {
-    return Steinberg::Vst::Vst2Wrapper::create (GetPluginFactory (),    kAudioProcessorCID, kVst2UniqueID, audioMaster);
-    }
+// -----------------------------------------------------------------    ------
+::AudioEffect* createEffectInstance (audioMasterCallback   audioMaster)
+{
+return Steinberg::Vst::Vst2Wrapper::create (GetPluginFactory(),    kAudioProcessorCID, kVst2UniqueID, audioMaster);
+}
+```

@@ -21,7 +21,9 @@ Otherwise the inline UI editor won't work properly.
 
 Next you have to add vstgui to your project. For *cmake* users, you can just add the vstgui_support library to your target:
 
-    target_link_libraries(${target} PRIVATE vstgui_support)
+```
+target_link_libraries(${target} PRIVATE vstgui_support)
+```
 
 If you are not using cmake, you have to manually include the following source files to your project:
 
@@ -35,20 +37,24 @@ After that you have to alter your project settings to add a preprocessor definit
 
 With *cmake*, this would look like this:
 
-    target_compile_definitions(${target} PUBLIC $<$<CONFIG:Debug>:VSTGUI_LIVE_EDITING=1>)
+```
+target_compile_definitions(${target} PUBLIC$<$<CONFIG:Debug>:VSTGUI_LIVE_EDITING=1>)
+```
 
 Finally, you have to modify your edit controller class to overwrite the **createView()** method:
 
-    #include "vstgui/plugin-bindings/vst3editor.h"
-    
-    IPlugView* PLUGIN_API MyEditController::createView (FIDString name)
+```
+#include "vstgui/plugin-bindings/vst3editor.h"
+
+IPlugView* PLUGIN_API MyEditController::createView (FIDStringname)
+{
+    if (strcmp (name, ViewType::kEditor) == 0)
     {
-        if (strcmp (name, ViewType::kEditor) == 0)
-        {
-            return new VSTGUI::VST3Editor (this, "view", "myEditor.uidesc");
-        }
-        return 0;
+        return new VSTGUI::VST3Editor (this, "view", "myEditor.uidesc");
     }
+    return 0;
+}
+```
 
 Also make sure to include the vst3editor.h header.
 

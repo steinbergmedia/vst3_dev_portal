@@ -13,7 +13,7 @@
 
 ---
 
-This tutorial explains how to use cmake with **VST 3 SDK**.
+This tutorial explains how to use *cmake* with **VST 3 SDK**.
 
 ## CMake for building VST 3 plug-ins
 
@@ -27,42 +27,50 @@ The SDK provides a set of cmake files allowing you to compile the included sampl
 
 Example for building "**Microsoft Studio 16 2019**" solution:
 
-    // go in to the folder where you extracted the VST 3 SDK
-    mkdir build
-    cd build
-    cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk"
-    //  or without symbolic links
-    cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk" -DSMTG_CREATE_PLUGIN_LINK=0
-    
-    //  or with symbolic links but using the user location (does not request admin right)
-    cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
-    
-    // note: you can find the string definition for different Visual Studio Generators in the cmake online documentation
+```
+// go in to the folder where you extracted the VST 3 SDK
+mkdir build
+cd build
+cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk"
+//  or without symbolic links
+cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk"-DSMTG_CREATE_PLUGIN_LINK=0
+
+//  or with symbolic links but using the user location (doesnot request admin right)
+cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk"-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
+
+// note: you can find the string definition for differentVisual Studio Generators in the cmake online documentation
+```
 
 ## Command line for macOS
 
  Example for building **Xcode** project:
 
-    // go in to the folder where you extracted the VST 3 SDK
-    mkdir build
-    cd build
-    /Applications/CMake.app/Content/bin/cmake -G"Xcode" "../vst3sdk"
+```
+// go in to the folder where you extracted the VST 3 SDK
+mkdir build
+cd build
+/Applications/CMake.app/Content/bin/cmake -G"Xcode" "..vst3sdk"
+```
 
 ## On Linux with QtCreator
 
 You can use **QtCreator** 2.3.1 (or higher)
 
-    start QtCreator 2.3.2
-    open the CMakeLists.txt located at the top of the VST 3 SDK folder
-    click on the menu Build->Run CMake
+```
+start QtCreator 2.3.2
+open the CMakeLists.txt located at the top of the VST 3 SDKfolder
+click on the menu Build->Run CMake
+```
 
 ## Use of cmake-gui
 
-    start the CMake (cmake-gui) application
-    set "Where is the source code" to the location of the "VST3_SDK" folder
-    set "Where to build the binaries" to a build folder of your choice
-    click on "Configure"
-    click on "Generate" for creating project/solution
+```
+start the CMake (cmake-gui) application
+set "Where is the source code" to the location of the"VST3_SDK" folder
+set "Where to build the binaries" to a build folder of yourchoice
+click on "Configure"
+click on "Generate" for creating project/solution
+```
 
 ![tutorials_3](/resources/tutorials_3.jpg)
 
@@ -70,16 +78,20 @@ Example of cmakegui application on Windows
 
 - Compile with cmake command line
 
-        cd build
-        cmake --build
+```
+cd build
+cmake --build
+```
 
 - Choose a specific compiler with cmake (command line on Linux)
 
-        cmake -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++
-        
-        or
-        
-        cmake -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++
+```
+cmake -DCMAKE_C_COMPILER=/usr/bin/clang-DCMAKE_CXX_COMPILER=/usr/bin/clang++
+
+or
+
+cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
+```
 
 ## Available SMTG cmake options
 
@@ -114,14 +126,18 @@ Example of cmakegui application on Windows
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >
->`-DSMTG_CREATE_PLUGIN_LINK=0`
+>```
+>-DSMTG_CREATE_PLUGIN_LINK=0
+>```
 >
 >You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for VST3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
 >
->`-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
+>```
+>-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
+>```
 
 ## Using your IDE for compiling the examples
 
-- Solution/project (vstsdk.sln/vstsdk.xcodeproj) is generated in the "build" folder.
-- The created plug-ins are located in the "build" folder, in sub-folders ***/VST3/Release*** or ***/VST3/Debug***.
+- Solution/project (vstsdk.sln/vstsdk.xcodeproj) is generated in the *"build"* folder.
+- The created plug-ins are located in the *"build"* folder, in sub-folders ***/VST3/Release*** or ***/VST3/Debug***.
 - In order to allow a DAW to find these plug-ins you have to create links from the official VST3 Locations to them.

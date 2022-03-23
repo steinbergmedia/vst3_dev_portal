@@ -16,41 +16,43 @@ and
 
 Here below you could found a basic implementation on Windows showing how to load the library and get pointer to the wanted exported functions:
 
-    HMODULE hModule = LoadLibrary ("SomePlugin.dll");
-    if (hModule)
+```
+HMODULE hModule = LoadLibrary ("SomePlugin.dll");
+if (hModule)
+{
+    InitModuleProc initProc = (InitModuleProc)GetProcAddress (hModule, "InitDll");
+    if (initProc) // this entry function is optional on Windows, not on MacOS and Linux!
     {
-        InitModuleProc initProc = (InitModuleProc)GetProcAddress (hModule, "InitDll");
-        if (initProc) // this entry function is optional on Windows, not on MacOS and Linux!
+        if (initProc () == false)
         {
-            if (initProc () == false)
-            {
-                FreeLibrary (module);
-                return false;
-            }
+            FreeLibrary (module);
+            return false;
         }
-    
-        GetFactoryProc proc = (GetFactoryProc)GetProcAddress (hModule, "GetPluginFactory");
-    
-        IPluginFactory* factory = proc ? proc () : 0;
-        if (factory)
-        {
-            for (int32 i = 0; i < factory->countClasses (); i++)
-            {
-                PClassInfo ci;
-                factory->getClassInfo (i, &ci);
-    
-                FUnknown* obj;
-                factory->createInstance (ci.cid, FUnknown::iid, (void**)&obj);
-                ...
-                obj->release ();
-            }
-    
-            factory->release ();
-        }
-    
-        ExitModuleProc exitProc = (ExitModuleProc)GetProcAddress (hModule, "ExitDll");
-        if (exitProc)  // This exit function is optional on Windows, not on MacOS and Linux!  
-            exitProc ();
-    
-        FreeLibrary (hModule);
     }
+
+    GetFactoryProc proc = (GetFactoryProc)GetProcAddress (hModule, "GetPluginFactory");
+
+    IPluginFactory* factory = proc ? proc () : 0;
+    if (factory)
+    {
+        for (int32 i = 0; i < factory->countClasses (); i++)
+        {
+            PClassInfo ci;
+            factory->getClassInfo (i, &ci);
+
+            FUnknown* obj;
+            factory->createInstance (ci.cid, FUnknown::iid, (void**)&obj);
+            ...
+            obj->release ();
+        }
+
+        factory->release ();
+    }
+
+    ExitModuleProc exitProc = (ExitModuleProc)GetProcAddress (hModule, "ExitDll");
+    if (exitProc)  // This exit function is optional on Windows, not on MacOS and Linux!  
+        exitProc ();
+
+    FreeLibrary (hModule);
+}
+```

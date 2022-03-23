@@ -9,7 +9,7 @@
 **Related pages:**
 
 - [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
-- [AAX, AUv3, AU and VST 2 wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md)
+- [AAX, AUv3, AU and VST 2 Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md)
 
 ---
 
@@ -27,8 +27,10 @@ The SDK includes some Plug-ins implementation examples. The Legendary **AGain** 
 
 Check the folder *"public.sdk/samples/vst"* of the SDK!
 
->Note: They use cmake as project generator: [How to use cmake for Building VST 3 Plug-ins](https://developer.steinberg.help/vstinterfaces/cmakeUse.html) **<- Link broken**<br>
->In order to add your own Plug-ins check: [How to add/create your own VST 3 Plug-ins](https://developer.steinberg.help/vstinterfaces/addownplugs.html) **<- Link broken**
+```admonish info
+Note: They use cmake as project generator: [How to use cmake for Building VST 3 Plug-ins](https://developer.steinberg.help/vstinterfaces/cmakeUse.html) **<- Link broken**<br>
+In order to add your own Plug-ins check: [How to add/create your own VST 3 Plug-ins](https://developer.steinberg.help/vstinterfaces/addownplugs.html) **<- Link broken**
+```
 
 ## ADelay
 
@@ -43,7 +45,7 @@ Classes:
 
 ## AGain
 
-The SDK includes a AGain Plug-in which is a very simple **VST 3 Plug-in**. This Plug-in:
+The SDK includes an AGain Plug-in which is a very simple **VST 3 Plug-in**. This Plug-in:
 - is multichannel compatible
 - supports bypass processing
 - has an automated gain parameter
@@ -142,7 +144,7 @@ Classes:
     - JX10 : The Plug-in is designed for high quality (lower aliasing than most soft synths) and low processor usage
     - Piano : Not designed to be the best sounding piano in the world, but boasts extremely low CPU and memory usage.
 
-Based on the OpenSource mda Plug-ins (<http://mda.smartelectronix.com/>), this set of Plug-ins demonstrates how wrap DS- code in a VST 3 Plug-in.
+Based on the OpenSource mda Plug-ins (<http://mda.smartelectronix.com/>), this set of Plug-ins demonstrates how wrap DS- code in a **VST 3** Plug-in.
 
 Check the folder *"public.sdk/samples/vst/mda-vst3"* of the SDK!
 
@@ -153,7 +155,7 @@ Classes:
 
 ## Note Expression Synth
 
-- Instrument Plug-in supporting note [expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) events
+- Instrument Plug-in supporting [note expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) events
 - It shows how easy it is to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md)
 - a **AUv3** version is available
 

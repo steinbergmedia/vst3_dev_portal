@@ -22,13 +22,13 @@ Managing large plug-in sets and multiple virtual instruments on typical studio c
 
 ## 2. [Multiple Dynamic I/Os](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
-**VST 3** plug-ins are no longer limited to a fixed number of inputs and outputs, and their I/O configuration can dynamically adapt to the channel configuration. Side-chains are also very easily realizable. This includes the possibility to deactivate unused busses after loading and even reactivate those when needed. This cleans up the mixer and further helps to reduce CPU load.
+**VST 3** plug-ins are no longer limited to a fixed number of inputs and outputs, and their I/O configuration can dynamically adapt to the channel configuration. [Side-chains]() **<- Link?** are also very easily realizable. This includes the possibility to deactivate unused busses after loading and even reactivate those when needed. This cleans up the mixer and further helps to reduce CPU load.
 
 ## 3. [Sample-accurate Automation](../Technical+Documentation/Parameters+Automation/Index.md)
 
 **VST 3** also features vastly improved parameter automation with sample accuracy and support for ramped automation data, allowing completely accurate and rapid parameter automation changes.
 
-## 4. Logical Parameter Organization
+## 4. [Logical Parameter Organization](../Technical+Documentation/VST+3+Units/Index.md)
 
 The **VST 3** plug-in parameters are displayed in a tree structure. Parameters are grouped into sections which represent the structure of the plug-in. Plug-ins can communicate their internal structure for the purpose of overview, but also for some associated functionality (e.g. program lists). Parameters like *“Cutoff”* and *“Resonance”* could be grouped into a section called *“Filter”*. This makes searching for a certain parameters easier, such as on an automation track. This also allows for assigning a group of parameters to a specific *MIDI* Channel input and audio output bus.
 
@@ -67,6 +67,7 @@ Remote controllers for audio and MIDI software applications have become increasi
 ## 13. Others
 
 While designing **VST 3**, we performed a careful analysis of the existing functionality of **VST** and rewrote the interfaces from scratch. In doing so, we focused a lot on providing clear interfaces and their documentation in order to avoid usage errors from the deepest possible layer. Some more features implemented specifically for developers include:
+
 - More stable technical host/plug-in environment
 - Advanced technical definition of the standard
 - Modular approach

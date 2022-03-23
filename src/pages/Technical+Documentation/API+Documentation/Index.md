@@ -29,14 +29,15 @@ The corresponding interfaces are:
 ![tech_doc_2](/resources/tech_doc_2.png)
 
 The design of **VST 3** suggests a complete separation of processor and edit controller by implementing two components. Splitting up an effect into these two parts requires some extra implementation efforts.
-However, this separation enables the host to run each component in a different context, even on different computers. Another benefit is that parameter changes can be separated when it comes to automation. While for processing these changes need to be transmitted in a sample-accurate way, the GUI part can be updated with a much lower frequency and it can be shifted by the amount that results from any delay compensation or other processing offset.
-
+However, this separation enables the host to run each component in a different context, even on different computers. Another benefit is that parameter changes can be separated when it comes to automation. While for processing these changes need to be transmitted in a sample-accurate way, the GUI part can be updated with a much lower frequency and it can be shifted by the amount that results from any delay compensation or other processing offset.</p><br>
 A plug-in that supports this separation has to set the [Steinberg::Vst::kDistributable](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a626a070dcd2e025250f41b9c3f9817cda3185111648c1599241528f1a7f523396) flag in the class info of the processor component ([Steinberg::PClassInfo2::classFlags](https://steinbergmedia.github.io/vst3_doc/base/structSteinberg_1_1PClassInfo2.html#ab5ab9135185421caad5ad8ae1d758409)). Of course not every plug-in can support this, for example if it depends deeply on resources that cannot be moved easily to another computer. So when this flag is not set, the host must not try to separate the components in any way.
 Although it is not recommended, it is possible to implement both the processing part and the controller part in one component class. The host tries to query the  [Steinberg::Vst::IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html) interface after creating an [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html) and on success uses it as the controller.
 
->A host does not need to instantiate the controller part of a plug-in for processing it.
->
->The plug-in should be prepared for processing without having the controller part instantiated.
+```admonish info
+A host does not need to instantiate the controller part of a plug-in for processing it.
+
+The plug-in should be prepared for processing without having the controller part instantiated.
+```
 
 ### Initialize
 
@@ -47,65 +48,71 @@ The context parameter passed to [Steinberg::IPluginBase::initialize](https://ste
 
 **How the plug-in can access IHostApplication?**
 
-    //------------------------------------------------------------------------
-    tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown* context)
+```
+/-----------------------------------------------------------------------
+tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
+{
+    FUnknownPtr<IHostApplication> hostApp (hostContext);
+    if (hostApp)
     {
-        FUnknownPtr<IHostApplication> hostApp (hostContext);
-        if (hostApp)
+        String128 name;
+        if (hostApp->getName (name) == kResultTrue)
         {
-            String128 name;
-            if (hostApp->getName (name) == kResultTrue)
-            {
-                //...
-            }
+            //...
         }
-        //...
     }
-    //------------------------------------------------------------------------
+    //...
+}
+/-----------------------------------------------------------------------
+```
 
 ### Creation and Initialize from Host point of view
 
 Here an example of a host implementation creating the component and its associated controller of a plug-in with a given classID:
 
-    //------------------------------------------------------------------------
-    Vst::IComponent* processorComponent;
-    Vst::IEditController* editController;
-    IPluginFactory* factory;
-    // ...
-    // factory already initialized (after the library is loaded, see validator for example)
-    // ...
-    // create its component part
-    tresult result = factory->createInstance (classID, Vst::IComponent::iid, (void**)&processorComponent);
-    if (processorComponent && (result == kResultOk))
+```
+/-----------------------------------------------------------------------
+Vst::IComponent* processorComponent;
+Vst::IEditController* editController;
+IPluginFactory* factory;
+// ...
+// factory already initialized (after the library is loaded,see validator for example)
+// ...
+// create its component part
+tresult result = factory->createInstance (classID,Vst::IComponent::iid, (void**)&processorComponent);
+if (processorComponent && (result == kResultOk))
+{
+    // initialize the component with our host context (note: initialize called just after creatInstance)
+    res = (processorComponent->initialize (gStandardPluginContext) == kResultOk);
+
+    // try to create the controller part from the component
+    // for Plug-ins which did not succeed to separate component from controller :-(
+    if (processorComponent->queryInterface (Vst::IEditController::iid, (void**)&editController) != kResultTrue)
     {
-        // initialize the component with our host context (note: initialize called just after creatInstance)
-        res = (processorComponent->initialize (gStandardPluginContext) == kResultOk);
-    
-        // try to create the controller part from the component
-        // for Plug-ins which did not succeed to separate component from controller :-(
-        if (processorComponent->queryInterface (Vst::IEditController::iid, (void**)&editController) != kResultTrue)
+        // editController is now created, we have the ownership, which means that we have
+        // to release it when not used anymore FUID controllerCID;
+
+        // ask for the associated controller class ID (could be called before processorComponent->initialize ())
+        if (processorComponent->getControllerClassId (controllerCID) == kResultTrue && controllerCID.isValid ())
         {
-            // editController is now created, we have the ownership, which means that we have
-            // to release it when not used anymore FUID controllerCID;
-    
-            // ask for the associated controller class ID (could be called before processorComponent->initialize ())
-            if (processorComponent->getControllerClassId (controllerCID) == kResultTrue && controllerCID.isValid ())
+            // create its controller part created from the factory
+            result = factory->createInstance (controllerCID, Vst::IEditController::iid, (void**)&editController);
+            if (editController && (result == kResultOk))
             {
-                // create its controller part created from the factory
-                result = factory->createInstance (controllerCID, Vst::IEditController::iid, (void**)&editController);
-                if (editController && (result == kResultOk))
-                {
-                    // initialize the component with our context
-                    res = (editController->initialize (gStandardPluginContext) == kResultOk);
-    
-                    // now processorComponent and editController are initialized... :-)
-                }
+                // initialize the component with our context
+                res = (editController->initialize (gStandardPluginContext) == kResultOk);
+
+                // now processorComponent and editController are initialized... :-)
             }
         }
     }
-    //------------------------------------------------------------------------
+}
+/-----------------------------------------------------------------------
+```
 
->Please be aware that IPluginBase::initialize and IPluginBase::terminate must only be called once per object instance. So if an object implements both IAudioProcessor and IEditController take care to only call them once as in the example above.
+```admonish info
+Please be aware that IPluginBase::initialize and IPluginBase::terminate must only be called once per object instance. So if an object implements both IAudioProcessor and IEditController take care to only call them once as in the example above.
+```
 
 ### Extensions
 
@@ -172,6 +179,7 @@ The [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/
     - **Process setup**: The processor is informed about the parameters that cannot be changed while processing is active. ([Steinberg::Vst::ProcessSetup](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html)).
 
     - **Dynamic Speaker Arrangements**: The host can try to change the number of channels of an audio bus. By default the speaker arrangement is defined by the plug-in. In order to adjust the plug-in to a context where a different speaker arrangement is used, the host can try to change it using [Steinberg::Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42)
+
 2. When the processor is configured, it has to be activated ([Steinberg::Vst::IComponent::setActive](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517)). The activation call signals that all configurations have been finished.
 3. In addition to that, the processor has a 'processing state'. Before a host begins to perform processing calls, it has to signal this by calling [IAudioProcessor::setProcessing](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af252fd721b195b793f3a5dfffc069401) (true). When the host stops processing, it must call [IAudioProcessor::setProcessing](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af252fd721b195b793f3a5dfffc069401) (false) after the last processing call. Please see also: [VST 3 Workflow Diagrams](../Workflow+Diagrams/Index.md)
 4. **Process**: [Steinberg::Vst::IAudioProcessor::process](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13) is the method that implements the actual processing. Any data needed for processing is passed to it as a parameter [Steinberg::Vst::ProcessData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a100f97803b72565daedee80e34bbb7f0). This is necessary because processing is often performed in a separate thread and this is a simple way to avoid thread synchronization problems.
@@ -199,7 +207,7 @@ The edit controller is responsible for the GUI aspects ofthe plug-in. Its standa
 - **GUI**: Optionally, the controller can define an editor view. The method [Steinberg::Vst::IEditController::createView](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a1fa4ed10cc0979e5559045104c998b1a) allows the host to specify the type of the view by passing an id-string. Currently the only type defined is "editor" ([Steinberg::Vst::ViewType::kEditor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst_1_1ViewType.html#aaa62c4c32f0270a908eb20c7c7124dfc)), but there might be variations in future versions (e.g. "setup").
 See also [Steinberg::IPlugView](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html).
 
-- *Parameters*: The controller is responsible for the management of parameters. Any change to a parameter that is caused by user interaction in the plug-in GUI must be properly reported to the [Steinberg::Vst::IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html). The host is responsible for transmitting the change to the processor. In order to make recording of automation work, it is necessary to call [beginEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223), [performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93) and [endEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#ae380206486b11f000cad7c0d9b6e877c) in the expected order! And from the **UI-Thread**!
+- **Parameters**: The controller is responsible for the management of parameters. Any change to a parameter that is caused by user interaction in the plug-in GUI must be properly reported to the [Steinberg::Vst::IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html). The host is responsible for transmitting the change to the processor. In order to make recording of automation work, it is necessary to call [beginEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223), [performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93) and [endEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#ae380206486b11f000cad7c0d9b6e877c) in the expected order! And from the **UI-Thread**!
 With the new interface [IComponentHandler2](https://developer.steinberg.help/classSteinberg_1_1Vst_1_1IComponentHandler2.html) **<- Link Broken** (since VST 3.1), the plug-in (from UI) can group parameters which should use the same time-stamp in host when writing automation, by wrapping a set of [beginEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223)/[performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93)/[endEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#ae380206486b11f000cad7c0d9b6e877c) functions (see [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html)) with [startGroupEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler2.html#aba339113df404a6b3c557774d4aa9102) and [finishGroupEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler2.html#adbdc10ff7ecd96fa365ad4f98d57b55e).
 More details can be found on the page about [Parameters](../Parameters+Automation/Index.md).
 
@@ -216,6 +224,7 @@ The threading model used by **VST 3** is quite simple and requires that:
     - IAudioProcessor→process: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!
     - IAudioProcessor→setProcessing: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!
 - all function exported by the host are called by the plug-in in the UI Thread
+
 Check the [Audio Processor Call Sequence](../Workflow+Diagrams/Audio+Processor+Call+Sequence.md) and the [Edit Controller Call Sequence](../Workflow+Diagrams/Edit+Controller+Call+Sequence.md)
 
 ## Communication between the components
@@ -249,38 +258,42 @@ Please note that messages from the processor to the controller must not be sent 
 
 Here an example of host implementation where the component and controller parts are connected and synchronized:
 
-    //------------------------------------------------------------------------
-    // the component and the controller parts are previously be created and initialized (see above)
-    // ...
-    if (editController)
+```
+/-----------------------------------------------------------------------
+// the component and the controller parts are previously becreated and initialized (see above)
+// ...
+if (editController)
+{
+    // set the host handler
+    // the host set its handler to the controller
+    editController->setComponentHandler (myHostComponentHandler);
+
+    // connect the 2 components
+    Vst::IConnectionPoint* iConnectionPointComponent = nullPtr;
+    Vst::IConnectionPoint* iConnectionPointController = nullPtr;
+
+    processorComponent->queryInterface (Vst::IConnectionPoint::iid, (void**)&iConnectionPointComponent);
+    editController->queryInterface (Vst::IConnectionPoint::iid, (void**)&iConnectionPointController);
+
+    if (iConnectionPointComponent && iConnectionPointController)
     {
-        // set the host handler
-        // the host set its handler to the controller
-        editController->setComponentHandler (myHostComponentHandler);
-    
-        // connect the 2 components
-        Vst::IConnectionPoint* iConnectionPointComponent = nullPtr;
-        Vst::IConnectionPoint* iConnectionPointController = nullPtr;
-    
-        processorComponent->queryInterface (Vst::IConnectionPoint::iid, (void**)&iConnectionPointComponent);
-        editController->queryInterface (Vst::IConnectionPoint::iid, (void**)&iConnectionPointController);
-    
-        if (iConnectionPointComponent && iConnectionPointController)
-        {
-            iConnectionPointComponent->connect (iConnectionPointController);
-            iConnectionPointController->connect (iConnectionPointComponent);
-        }
-    
-        // synchronize controller to component by using setComponentState
-        MemoryStream stream; // defined in "public.sdk/source/common/memorystream.h"
-        stream.setByteOrder (kLittleEndian);
-        if (processorComponent->getState (&stream) == kResultTrue)
-        {
-            stream.rewind ();
-            editController->setComponentState (&stream);
-        }
-    
-        // now processorComponent and editController parts are connected and synchronized...:-)
+        iConnectionPointComponent->connect (iConnectionPointController);
+        iConnectionPointController->connect (iConnectionPointComponent);
     }
 
->Please note that you CANNOT rely on the implementation detail that the connection is done directly between the processor component and the edit controller!
+    // synchronize controller to component by using setComponentState
+    MemoryStream stream; // defined in "public.sdk/source/common/memorystream.h"
+    stream.setByteOrder (kLittleEndian);
+    if (processorComponent->getState (&stream) == kResultTrue)
+    {
+        stream.rewind ();
+        editController->setComponentState (&stream);
+    }
+
+    // now processorComponent and editController parts are connected and synchronized...:-)
+}
+```
+
+```admonish info
+Please note that you CANNOT rely on the implementation detail that the connection is done directly between the processor component and the edit controller!
+```

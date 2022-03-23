@@ -21,7 +21,9 @@
 
 The tutorials explain common techniques and best practices for building your plug-ins. By following the instructions step by step you will learn how to develop **VST 3** plug-ins.
 
-    This section is under construction and will be extended in the future with new tutorials.
+```admonish info
+This section is under construction and will be extended inthe future with new tutorials.
+```
 
 ## [Building the examples included in the SDK](../Tutorials/Building+the+examples+included+in+the+SDK.md)
 
@@ -29,11 +31,11 @@ This tutorial explains how to set up your computer and create an environment for
 
 ## [Using cmake for building VST 3 plug-ins](../Tutorials/Using+cmake+for+building+plug-ins.md)
 
-This tutorial explains how to use cmake with **VST 3 SDK**.
+This tutorial explains how to use *cmake* with **VST 3 SDK**.
 
 ## [Generate a new plug-in with the Project Generator App](../Tutorials/Generate+new+plug-in+with+Project+Generator.md)
 
-This tutorial explains how to create a new audio plug-in by using the [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) included in the **VST 3 SDK** and how to add some basic features.
+This tutorial explains how to create a new audio plug-in by using the ***[VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)*** included in the **VST 3 SDK** and how to add some basic features.
 
 ## [Use VSTGUI to design a User Interface](../Tutorials/Use+VSTGUI+to+design+a+UI.md)
 

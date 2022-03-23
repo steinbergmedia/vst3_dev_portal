@@ -10,11 +10,11 @@
 
 ## VST 3 SDK explained
 
-The **VST 3** SDK (Virtual Studio Technology Software Development Kit) is a collection of software development tools included in one package. This allows plug-in developers to create plug-ins in **VST 3** format and host developers to load **VST 3** plug-ins into a DAW or audio editor.
+The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a collection of software development tools included in one package. This allows plug-in developers to create plug-ins in **VST 3** format and host developers to load **VST 3** plug-ins into a DAW or audio editor.
 
 ## What is included
 
-The **VST 3** SDK package contains:
+The **VST 3 SDK** package contains:
 
 
 >**The VST 3 API**<br>
@@ -33,8 +33,8 @@ The **VST 3** SDK package contains:
 ## [AAX, AUv3, AU and VST 2 wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md)
 
 These wrappers allows you to create versions of your **VST 3** plug-in in other plug-in formats with minimum effort:
-- [AAX](http://apps.avid.com/aax-portal/) format used by Pro Tools®
-- [AUv3](https://developer.apple.com/documentation/audiotoolbox) and **AU** (Audio Unit) on Apple platform
+- **[AAX](http://apps.avid.com/aax-portal/)** format used by Pro Tools®
+- **[AUv3](https://developer.apple.com/documentation/audiotoolbox)** and **AU** (Audio Unit) on Apple platform
 - **VST 2** ([deprecated](https://www.steinberg.net/en/newsandevents/news/newsdetail/article/vst-2-coming-to-an-end-4727.html)) **<- Link broken**
 
 Check the folder *"public.sdk/source/vst/aaxwrapper"* of the SDK!
@@ -55,10 +55,10 @@ The SDK includes some Plug-ins implementation examples. The Legendary **AGain** 
 Check the folder *"public.sdk/samples/vst"* of the SDK!
 
 
-## VST 3 Plug-in Test Host
+## [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
 
 The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).<br>
-This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.>br>
+This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.<br>
 Included in this application is a test module which allows you to check your plug-in in regard to the **VST 3** standard.
 
 ![what_if_6](/resources/what_is_6.jpg)
@@ -95,9 +95,11 @@ Check the folder *"bin"* of the SDK!
 
 ## VST3 Inspector
 
->**as Cross-platform source code**<br>
->Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST3 Folder, collects > information from the factory about each VST3 plug-in and display it in its UI.
->
+``` admonish info
+**as Cross-platform source code**<br>
+Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST3 Folder, collects > information from the factory about each VST3 plug-in and display it in its UI.
+```
+
 >![what_if_7](/resources/what_is_7.jpg)
 >
 >Check the folder *"public.sdk/samples/vst-hosting/inspectorapp"* of the SDK!
@@ -141,10 +143,10 @@ iOS InterApp-Audio application out of your **VST 3 plug-in**
 | Windows 10 | x86, x86_64 | MSVC 2019, MSVC 2017 | |
 | Windows 8.1| x86, x86_64 | MSVC 2019, MSVC 2017 | |
 | macOS 10.13, 10.14, 10.15, 11.0 | x86, x86_64, Apple Silicon | Xcode 7, 8, 9, 10, 11, 12.2 | |
-| Linux - Ubuntu 20.04 LTS | x86, x86_64 | GCC 8.3 and higher | Visual Studio Code, Qt Creator |
-| Linux - Ubuntu 18.04 LTS | x86, x86_64 | GCC 8.3 and higher | Visual Studio Code, Qt Creator |
-| Linux - Raspberry Pi OS (Buster) | arm32 | GCC 8.3 and higher| Visual Studio Code |
 | iOS 13, iOS 14 | arm64 | Xcode 11, 12.2 | |
+| Linux - Raspberry Pi OS (Buster) | arm32 | GCC 8.3 and higher| Visual Studio Code |
+| Linux - Ubuntu 18.04 LTS | x86, x86_64 | GCC 8.3 and higher | Visual Studio Code, Qt Creator |
+| Linux - Ubuntu 20.04 LTS | x86, x86_64 | GCC 8.3 and higher | Visual Studio Code, Qt Creator |
 
 ## [Download link](../Getting+Started/Links.md)
 
@@ -152,4 +154,4 @@ Important links you will need for working with **VST 3**
 
 ## [Change history](../Technical+Documentation/Change+History/Index.md)
 
-All released versions of the VST 3 SDK with changes and dates.
+All released versions of the **VST 3 SDK** with changes and dates.
