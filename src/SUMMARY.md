@@ -81,7 +81,7 @@
 	- [[3.6.6] PlugView Content Scaling](pages/Technical+Documentation/Change+History/3.6.6/IPlugViewContentScaleSupport.md)
 	- [[3.6.8] Request Bus Activation](pages/Technical+Documentation/Change+History/3.6.8/IComponentHandlerBusActivation.md)
 	- [[3.6.10] UI Snapshots](pages/Technical+Documentation/Change+History/3.6.10/UI+Snapshots.md)
-	- [[3.6.11] NoteExpression Physical UI Mapping](pages/Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping)
+	- [[3.6.11] NoteExpression Physical UI Mapping](pages/Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md)
 	- [[3.6.12] Legacy MIDI CC Out Event](pages/Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.md)
 	- [[3.6.12] MIDI Learn](pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.md)
 	- [[3.6.12] Host Query Interface support](pages/Technical+Documentation/Change+History/3.6.12/IPlugInterfaceSupport.md)
