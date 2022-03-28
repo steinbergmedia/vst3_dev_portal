@@ -88,7 +88,7 @@
 	- [[3.0.1] Parameter MIDI Mapping](pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.md)
 	- [[3.0.2] Parameter Finder](pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.md)
 	- [[3.1.0] Audio Presentation Latency](pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.md)
-	- [[3.1.0] UI Group Editing, Dirty State & Open Editor Request](pages/Technical+Documentation/Change+History/3.1.0/IComponentHandler2.md)
+	- [[3.1.0] Dirty State, Open Editor Request and UI Group Editing Support](pages/Technical+Documentation/Change+History/3.1.0/IComponentHandler2.md)
 	- [[3.1.0] KnobMode, Open Help & Open Aboutbox](pages/Technical+Documentation/Change+History/3.1.0/IEditController2.md)
 	- [[3.5.0] Note Expression](pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
 	- [[3.5.0] Key Switch](pages/Technical+Documentation/Change+History/3.5.0/IKeyswitchController.md)

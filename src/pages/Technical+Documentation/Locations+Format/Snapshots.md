@@ -26,7 +26,7 @@ The file name must start with the unique ID of the audio processor printed in th
 
 ## Examples
 
-### Again
+### AGain
 
 > ![tech_doc_22](/resources/tech_doc_22.png)<br>
 > **84E8DE5F92554F5396FAE4133C935A18_snapshot.png**

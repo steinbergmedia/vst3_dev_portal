@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
 >
 ># [3.0.0] Interfaces supported by the plug-in
 
