@@ -22,7 +22,7 @@ Managing large plug-in sets and multiple virtual instruments on typical studio c
 
 ## 2. [Multiple Dynamic I/Os](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
-**VST 3** plug-ins are no longer limited to a fixed number of inputs and outputs, and their I/O configuration can dynamically adapt to the channel configuration. [Side-chains](../FAQ/Index.md#q-what-is-a-side-chain) are also very easily realizable. This includes the possibility to deactivate unused busses after loading and even reactivate those when needed. This cleans up the mixer and further helps to reduce CPU load.
+**VST 3** plug-ins are no longer limited to a fixed number of inputs and outputs, and their I/O configuration can dynamically adapt to the channel configuration. [Side-chains](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) are also very easily realizable. This includes the possibility to deactivate unused busses after loading and even reactivate those when needed. This cleans up the mixer and further helps to reduce CPU load.
 
 ## 3. [Sample-accurate Automation](../Technical+Documentation/Parameters+Automation/Index.md)
 

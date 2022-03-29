@@ -5,7 +5,7 @@
 ## Version 3.1.0 (2010/06/25)
 
 - Restructuring of the SDK :
-    - new [Base Module]() **<- Link?** (many useful classes, such as templates and containers)
+    - new Base Module (many useful classes, such as templates and containers)
     - Renamed the file public.sdk/source/main/pluginfactory.cpp to public.sdk/source/main/pluginfactoryvst3.cpp
     - Renamed the file public.sdk/source/main/pluginfactory.h to public.sdk/source/main/pluginfactoryvst3.h
     - Renaming Microsoft Visual Projects
@@ -16,7 +16,7 @@
 - New Event Structure:
     - Steinberg::Vst::PolyPressureEvent : Polypressure event support
 - New Flags/Enums:
-    - New Plug-in Types used for subCategories : PlugType::kMono, PlugType::kStereo, PlugType::kSurround ([FAQ]() **<- Link?**)
+    - New Plug-in Types used for subCategories : PlugType::kMono, PlugType::kStereo, PlugType::kSurround
     - New parameter flag ParameterInfo::kIsList : flags the parameter as a list of discrete string values
     - New IoModes enum : Steinberg::Vst::IoModes::kOfflineProcessing used with setIoMode when the Plug-in is used in an offline processing context
 - Plug-ins Wrappers:

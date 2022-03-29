@@ -8,7 +8,7 @@
     - Note Expression supports a new event type: NoteExpressionTextEvent
 - Samples:
     - Fix Visual Studio 2010 projects (filters added)
-    - Adaptation for XCode4 (The again sample project uses **[VSTGUI](/pages/What+is+the+VST+3+SDK/VSTGUI.md)** **<- Link?** 3.6 which needs the 10.6 SDK for the 32 bit build, in later Xcode tools this SDK is not available. If you use VSTGUI 3.6 you need to use a Xcode version which has the 10.6 SDK or earlier included.)
+    - Adaptation for XCode4 (The again sample project uses **[VSTGUI](/pages/What+is+the+VST+3+SDK/VSTGUI.md)** 3.6 which needs the 10.6 SDK for the 32 bit build, in later Xcode tools this SDK is not available. If you use VSTGUI 3.6 you need to use a Xcode version which has the 10.6 SDK or earlier included.)
 - Plug-in Wrappers:
     - VST 3 - Audio Unit Wrapper :
         - fix noteOn and noteOff offset
@@ -27,5 +27,5 @@
         - Helper Steinberg::HexBinary : HexBinary encoding and decoding
 - Some documentation changes
     - [Steinberg::Vst::IParameterFinder](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterFinder.html) : To enable important functionalities (like AI Knob) a recommendation to implement this interface was added.
-    - The [VST3]() **<- Link?** Plug-in locations priority has been changed: Application level should be scanned from host after Global level.
+    - The VST3 Plug-in locations priority has been changed: Application level should be scanned from host after Global level.
 - Licensing change for example source code files

@@ -12,7 +12,7 @@
     - standalone library support for Windows 7
     - new ImageStitcher tool
     - the GDI+ draw backend was removed, the Direct2D backend is the replacement
-- New icon for [VST3]() **<- Link?** bundles: VST_Logo_Steinberg.ico and VST_Logo_Steinberg.icns (located in VST_SDK/VST3_SDK/doc/artwork folder)
+- New icon for VST3 bundles: VST_Logo_Steinberg.ico and VST_Logo_Steinberg.icns (located in VST_SDK/VST3_SDK/doc/artwork folder)
 - Interface changes:
     - VST2 interface not available anymore!
     - New [Steinberg::Vst::INoteExpressionPhysicalUIMapping](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md) (plug-in): allowing the host to retrieve the preferred physical mapping associated to note expression supported by the plug-in.

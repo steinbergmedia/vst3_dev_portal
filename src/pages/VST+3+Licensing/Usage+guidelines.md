@@ -74,7 +74,7 @@ It is allowed to use **VST** in channels and their names/URLs and the like, if a
 
 ## 9. Use in domain
 
-It is allowed to use **VST** in domains, e.g. second level domains, if a junction is used to denote the compatibility, e.g. in “[MycoolEngineForVST.com](mycoolengineforvst.com) **<- Link?**”, and if any page under such domain shows the **VST Compatible logo** and the domain only shows products using or created using the SDK.
+It is allowed to use **VST** in domains, e.g. second level domains, if a junction is used to denote the compatibility, e.g. in *“MycoolEngineForVST.com”*, and if any page under such domain shows the **VST Compatible logo** and the domain only shows products using or created using the SDK.
 
 ## 10. Use in logo
 

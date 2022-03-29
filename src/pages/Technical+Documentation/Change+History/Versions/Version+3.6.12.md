@@ -31,7 +31,7 @@
         - out of the box MPE support. As MPE is a limited subset of the Note Expression feature, the three expressions are simply mapped to the note expressions returned via the [INoteExpressionPhysicalUIMapping](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md) interface.
         - note that you must have certificates to sign on macOS/iOS for AUv3
         - complete folder restructuring for easy adaption
-    - AAX Wrapper ([VST 3 - AAX Wrapper](/pages/What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md) **<- Link?**):
+    - AAX Wrapper ([VST 3 - AAX Wrapper](/pages/What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)):
         - fix automation update after loading a preset
     - VST2 Wrapper:
     - fix double release of editor

@@ -20,7 +20,7 @@ If you need to communicate the changes of parameters to the user interface, such
 
 If you should need to exchange more data than just parameter changes, such as tempo, sample rate, FFT, Pitch Analysis, or any other data resulting from your processing, you can use the [IMessage](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMessage.html) interface (see AGain example). However, you need to be careful and send the data from a 'timer' thread and not directly from the process function, for example, when sending from a 'process' call.
 
-See [Communication between the components](../Technical+Documentation/API+Documentation/Index.md#communication-between-the-components) **<- changed Link**.
+See [Communication between the components](../Technical+Documentation/API+Documentation/Index.md#communication-between-the-components).
 
 ### Q: I want to implement an audio meter in my user interface. How do I do this?
 
@@ -38,7 +38,7 @@ IAudioProcessor::process (processData)
 }
 ```
 
-Automation data is transmitted as a list of parameter changes. This list always contains enough information to transmit the original automation curve from the host in a sample accurate way. Check the [AGain](../What+is+the+VST+3+SDK/Plug-in+Examples.md#again) **<- changed Link** example to see how it can be implemented.
+Automation data is transmitted as a list of parameter changes. This list always contains enough information to transmit the original automation curve from the host in a sample accurate way. Check the [AGain](../What+is+the+VST+3+SDK/Plug-in+Examples.md#again) example to see how it can be implemented.
 
 See also [Parameters and Automation](../Technical+Documentation/Parameters+Automation/Index.md)
 

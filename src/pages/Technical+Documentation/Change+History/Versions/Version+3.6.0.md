@@ -24,6 +24,6 @@
 - VSTGUI 4.2
     - Update to the final 4.2 release including iOS support
 - VST3PluginTestHost: VST 3 Plug-in Test Host
-    - New feature: Overwrite Plug-in Name in [VST3]() **<- Link?** Presets
+    - New feature: Overwrite Plug-in Name in VST3 Presets
 - Licensing has changed! Please read the new license agreement [VST 3 Licensing Issues](/pages/VST+3+Licensing/Index.md).
 - Xcode 5 note: To successfully build the examples for Mac OS X you need to change the SDKROOT variable in base/mac/config/settings/sdk_deployment_10_6.xcconfig to macosx10.8.

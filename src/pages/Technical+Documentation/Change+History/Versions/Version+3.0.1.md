@@ -13,7 +13,7 @@
     - Restructured helper classes by adding new files vstbus.cpp and vstparameters.cpp
     - Change the default refcount implementation of Steinberg::FUnknown (IMPLEMENT_REFCOUNT) to use atomic operations
     - Change InitModule/ExitModule to be called from host and not in DllMain (Cubase 4.2 needed)
-    - Rename Steinberg::Vst::IUnitData to Steinberg::Vst::IProgramListData and introduce new interface [Steinberg::Vst::IUnitData]() **<- Link?**
+    - Rename Steinberg::Vst::IUnitData to Steinberg::Vst::IProgramListData and introduce new interface Steinberg::Vst::IUnitData
 - Helpers Classes:
     - Add new helper class EditControllerEx1 : extend of EditController with Unit support
     - Add new helper class Steinberg::Vst::SingleComponentEffect for single component effects

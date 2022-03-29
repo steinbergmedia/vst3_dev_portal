@@ -33,7 +33,7 @@
         - support of kIsHidden flag
         - support of [IProgress](../Change+History/3.7.0/IProgress.md) (implemented by host)
         - support of [IParameterFunctionName](../Change+History/3.7.0/IParameterFunctionName.md)
-        - check if Silent flag for Main and [Side-chain](/pages/FAQ/Index.md) **<- Link to be completed later** Inputs are used
+        - check if Silent flag for Main and [Side-chain](/pages/FAQ/Index.md#q-what-is-a-side-chain) Inputs are used
 - [Plug-in Wrappers](/pages/What+is+the+VST+3+SDK/Wrappers/Index.md):
     - Fix for AAX/VST2 BaseWrapper setChunk attribute Vst::StateType::kProject was not set for component.
 - Helpers classes:

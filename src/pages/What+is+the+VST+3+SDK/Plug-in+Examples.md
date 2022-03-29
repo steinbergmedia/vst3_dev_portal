@@ -27,21 +27,19 @@ The SDK includes some Plug-ins implementation examples. The Legendary **AGain** 
 
 Check the folder *"public.sdk/samples/vst"* of the SDK!
 
-```admonish info
-Note: They use cmake as project generator: [How to use cmake for Building VST 3 Plug-ins](https://developer.steinberg.help/vstinterfaces/cmakeUse.html) **<- Link broken**<br>
-In order to add your own Plug-ins check: [How to add/create your own VST 3 Plug-ins](https://developer.steinberg.help/vstinterfaces/addownplugs.html) **<- Link broken**
-```
+>- They use cmake as project generator: [Using cmake for building VST 3 plug-ins](../Tutorials/Using+cmake+for+building+plug-ins.md)<br>
+>- In order to add your own Plug-ins check: [Generate a new plug-in with the Project Generator App](../Tutorials/Generate+new+plug-in+with+Project+Generator.md)
 
 ## ADelay
 
 Very simple delay Plug-in:
 - only one parameter (a delay)
 
-Check the folder [public.sdk/samples/vst/adelay](https://developer.steinberg.help/public.sdk/samples/vst/adelay) **<- Link broken** of the SDK!
+Check the folder *"public.sdk/samples/vst/adelay"* of the SDK!
 
 Classes:
-- [ADelayProcessor](https://developer.steinberg.help/classSteinberg_1_1Vst_1_1ADelayProcessor.html) **<- Link broken**
-- [ADelayController](https://developer.steinberg.help/classSteinberg_1_1Vst_1_1ADelayController.html) **<- Link broken**
+- ADelayProcessor
+- ADelayController
 
 ## AGain
 

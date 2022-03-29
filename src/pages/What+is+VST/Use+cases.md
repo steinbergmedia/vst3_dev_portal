@@ -36,7 +36,7 @@ By using **VST 3 SDK** directly:
     - see [others benefits of VST 3](pages/Main+benefits+of+VST+3/Index.md)
 - you get optimal integration of the **[VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md)** tool with **VST 3**
 - it includes the major plug-in format wrappers:  AAX, AUv3, AU, VST2 (deprecated)
-- the included [Validator]()**<- Link?** allows you to check your plug-in's conformity to the VST 3 standard
+- the included [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line) allows you to check your plug-in's conformity to the VST 3 standard
 
 ## Examples of VST 3 host applications
 
