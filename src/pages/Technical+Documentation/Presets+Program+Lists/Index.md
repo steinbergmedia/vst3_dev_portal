@@ -15,7 +15,7 @@
 
 How presets and program lists are handled in **VST 3**
 
-See [VST 3 Locations / Format](../Locations+Format/Index.md) **<- Link to be completed later** for preset format definition.
+See [VST 3 Locations / Format](../Locations+Format/Index.md#preset-format) for preset format definition.
 
 ## Simple Plug-ins
 
@@ -28,9 +28,9 @@ For a simple plug-in, the data of a preset is nothing more than its state. In th
 
 - The plug-in itself does not need to provide any means in its GUI for loading presets at all and it does not need to define any program lists.
 
-- Factory presets must be installed as files at the required location (See [Preset Locations](../Locations+Format/Index.md)) **<- link to be completed later**.
+- Factory presets must be installed as files at the required location (See [Preset Locations](../Locations+Format/Index.md#preset-locations)).
 
-The host has to provide the GUI for loading and saving preset files. These files contain data that the plug-in has filled into the stream in [Steinberg::Vst::IComponent::getState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a10db03106be8ba89d23859fa6be5d9f6). **VST 3** defines dedicated locations in the OS file system (see [Preset Locations](../Locations+Format/Index.md)) **<- link to be completed later**), so the host does not need to display a file selector dialog. It knows where to search for preset files of a specific plug-in and where to create them. So it can create a pop-up list for selecting a preset or any other GUI of its choice. After loading a preset, the host is responsible to rescan the parameters values (from the controller part). Therefore, the controller must be sure that it gets the correct parameter states when loading a preset (which is done with [Steinberg::Vst::IEditController::setComponentState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f)).
+The host has to provide the GUI for loading and saving preset files. These files contain data that the plug-in has filled into the stream in [Steinberg::Vst::IComponent::getState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a10db03106be8ba89d23859fa6be5d9f6). **VST 3** defines dedicated locations in the OS file system (see [Preset Locations](../Locations+Format/Index.md#preset-locations)), so the host does not need to display a file selector dialog. It knows where to search for preset files of a specific plug-in and where to create them. So it can create a pop-up list for selecting a preset or any other GUI of its choice. After loading a preset, the host is responsible to rescan the parameters values (from the controller part). Therefore, the controller must be sure that it gets the correct parameter states when loading a preset (which is done with [Steinberg::Vst::IEditController::setComponentState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f)).
 
 See also [Communication between the components](../API+Documentation/Index.md#communication-between-the-components) and [Persistence](../API+Documentation/Index.html#persistence).
 
@@ -57,5 +57,5 @@ All programs are always transmitted as a flat list to the host. But the plug-in 
 
 Pitch names are intended to be used with drum kit programs where the different drum sounds are addressed by note pitches. In order to display the name of the drum instrument assigned to a pitch in a drum editor, for example, the host calls [Steinberg::Vst::IUnitInfo::hasProgramPitchNames](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a63c02601259d4e8690f26eefaad53195) to determine if pitch names are supported and [Steinberg::Vst::IUnitInfo::getProgramPitchName](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a6126c4506f7981b5e800c6b4daa1e66b) to query the pitch name of a single note.
 
-See also [VST 3 Units Multi-timbral Program Lists](../Complex+Structures/Index.md) **<- link to be completed later** and check out the [pitchnames VST 3 Plug-in example](/pages/What+is+the+VST+3+SDK/Plug-in+Examples.md).
+See also [VST 3 Units Multi-timbral Program Lists](../Complex+Structures/Index.md#multi-timbral-program-lists) and check out the [pitchnames VST 3 Plug-in example](/pages/What+is+the+VST+3+SDK/Plug-in+Examples.md).
 

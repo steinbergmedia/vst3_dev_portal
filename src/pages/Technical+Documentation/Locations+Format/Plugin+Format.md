@@ -24,7 +24,7 @@ On the macOS platform, **VST 3 Plug-in** is a standard macOS bundle, its file ex
 | MyPlugin.vst3/Contents/Info.plist | the plug-in’s property list
 | MyPlugin.vst3/Contents/PkgInfo | specifies the type and creator codes of the bundle (optional) |
 
-### For the Windows platform
+## For the Windows platform
 
 On the Windows platform, a VST 3 Plug-in is organized as a bundle like package format (simple folder), its file extension is ".vst3" and has the following folder structure:
 
@@ -58,7 +58,7 @@ attrib +s +r +h desktop.ini
 attrib +r +h Plugin.ico
 ```
 
-### For the Linux platform
+## For the Linux platform
 
 On Linux, a **VST 3 Plug-in** is organized as a bundle like package format, its file extension is "**.vst3**", it follows this folder structure:
 
@@ -69,7 +69,7 @@ On Linux, a **VST 3 Plug-in** is organized as a bundle like package format, its 
 | MyPlugin.vst3/Contents/x86_64-linux | folder contains the plug-in binary (64 bit shared library .so for Kernel Architecture x86_64) |
 | MyPlugin.vst3/Contents/XXX-linux | with XXX the architecture name based on the output of command-line "uname -m" (machine hardware) + "-linux"</p> for example:</p> • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux |
 
-### Merged Bundle
+## Merged Bundle
 
 Note that all the bundles can be merged to one, which allows to have a cross-platform bundle/folder.
 

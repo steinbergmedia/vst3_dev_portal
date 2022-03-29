@@ -13,7 +13,7 @@
 
 ---
 
-The following use cases support you to choose the right license.
+The following use cases should help you choose the right license.
 
 ## 1. I would like to share the source code of my VST 3 plug-in/host on GitHub or other such platform.
 
@@ -25,7 +25,7 @@ The following use cases support you to choose the right license.
 
 - You can distribute your VST 3 plug-in/host in a binary form. This always requires that you to choose the "Proprietary Steinberg VST 3" license.
 - Even though you distribute your VST 3 plug-in/host as freeware/shareware you need to adhere to the requirements of the "Proprietary Steinberg VST 3" license. 
-- Download the [license agreement](../VST+3+Licensing/What+are+the+licensing+options.md) (it is part of the [SDK](/Getting+Started/Links.md) too), sign it and return it to Steinberg.
+- Download the [license agreement](../VST+3+Licensing/What+are+the+licensing+options.md) (it is part of the [SDK](../Getting+Started/Links.md) too), sign it and return it to Steinberg.
 
 ## 3. I would like to sell my VST 3 plug-in/host in binary form only.
 
@@ -51,7 +51,7 @@ Yes, but you have to make sure that your VST 3 plug-in/host sources are under [G
 ## 7. I would like to sell my VST 3 plug-in/host in binary form which is based on a 3rd party SDK like JUCE.
 
 - If you work for-profit and distribute your plug-in/host in binary form, you need to choose the "Proprietary Steinberg VST3" license.
-- Download the [license agreement](../VST+3+Licensing/What+are+the+licensing+options.md) (it is part of the [SDK](/Getting+Started/Links.md) too), sign it and return it to Steinberg.
+- Download the [license agreement](../VST+3+Licensing/What+are+the+licensing+options.md) (it is part of the [SDK](../Getting+Started/Links.md) too), sign it and return it to Steinberg.
 - Note that you have to follow the [Steinberg VST usage guidelines](../VST+3+Licensing/What+are+the+licensing+options.md).
 
 ## 8. I would like to distribute my VST 3 plug-in/host in binary form which is based on a 3rd party SDK like JUCE and used its [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.

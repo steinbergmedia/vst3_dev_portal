@@ -33,7 +33,7 @@ Links, Symbolic links or Shortcuts could be used from these predefined folders.
 The host should scan at first higher level of priority, first found Plug-in (for a given Processor UID) has to be used.
 ```
 
-#### On macOS platform
+### On macOS platform
 
 On the macOS platform, the host application expects **VST 3 Plug-ins** to be located in:
 

@@ -2,6 +2,12 @@
 >
 ># Edit Controller Call Sequence
 
+**Related pages:**
+
+- [Audio Processor Call Sequence](../Workflow+Diagrams/Audio+Processor+Call+Sequence.md)
+
+---
+
 ```mermaid
 stateDiagram
 
