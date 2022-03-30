@@ -23,6 +23,5 @@ The host asks for this information once between initialize and setActive. It can
 
 This gives the host the opportunity to better optimize the audio process graph when it knows which plug-ins need which information.
 
-```admonish warning
-Plug-Ins built with an earlier SDK version (< 3.7) will still get the old information, but the information may not be as accurate as when using this interface.
-```
+>***Warning***<br>
+>Plug-Ins built with an earlier SDK version (< 3.7) will still get the old information, but the information may not be as accurate as when using this interface.

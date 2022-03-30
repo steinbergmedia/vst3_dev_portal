@@ -7,15 +7,15 @@
 - Interface changes:
     - Add support of _M_ARM64EC on Windows
     - New defines: SMTG_CPU_ARM_64EC, SMTG_CPP14 and SMTG_CPP17
-    - New [VST3 plug-in location](../Locations+Format/Plugin+Locations.md) user local on Windows: %LOCALAPPDATA%/Programs/Common/VST3/
+    - New [VST3 plug-in location](/pages/Technical+Documentation/Locations+Format/Plugin+Locations.md) user local on Windows: %LOCALAPPDATA%/Programs/Common/VST3/
     - Use SMTG_CONSTEXPR where needed
 - [VSTGUI](/pages/What+is+the+VST+3+SDK/VSTGUI.md) 4.10.§
     - different fixes
 - Licensing has changed to version 2.2.2! Please read the new license agreement [VST 3 Licensing Issues](/pages/VST+3+Licensing/Index.md). (if you have already signed the version 2.0 of the license agreement you do not have to sign it again).
 - cmake:
-    - Refactoring: rename function/macro by adding target when target   is used: i.e. smtg_run_vst_validator =>   smtg_target_run_vst_validator
-    - ⚠️Breaking Change: change smtg_add_vst3_resource to   smtg_target_add_plugin_resources allowing to add multiple     resources in a call
-    - ⚠️Breaking Change: change smtg_add_vst3_snapshot to   smtg_target_add_plugin_snapshots allowing to add multiple     resources in a call
+    - **Refactoring**: rename function/macro by adding target when target   is used: i.e. smtg_run_vst_validator =>   smtg_target_run_vst_validator
+    - **Breaking Change**: change smtg_add_vst3_resource to   smtg_target_add_plugin_resources allowing to add multiple     resources in a call
+    - **Breaking Change**: change smtg_add_vst3_snapshot to   smtg_target_add_plugin_snapshots allowing to add multiple     resources in a call
     - make Universal Binary on Mac default ON when Xcode12
     - Add support of new VST3 Location on Windows: new option SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON
     - Fix some code Signing issue with XCode

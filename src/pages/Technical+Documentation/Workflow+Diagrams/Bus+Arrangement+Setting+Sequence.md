@@ -64,4 +64,4 @@ sequenceDiagram
     P-->>-H:    return
 ```
 
-## [Check FAQ for some use case!](/pages/FAQ/Index.md#q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins)
+## [Check FAQ for some use case!](/pages/FAQ/Processing.md#q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins)

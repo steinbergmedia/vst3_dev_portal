@@ -38,7 +38,7 @@ Check the folder *"bin"* of the SDK!
 
 ### Audio Input
 
-In this section you can select the audio source of your plug-in for the Main Input Audio Bus and for the Aux Input Audio Bus ([Side-chain](../FAQ/Index.md#q-what-is-a-side-chain): if available) between:
+In this section you can select the audio source of your plug-in for the Main Input Audio Bus and for the Aux Input Audio Bus ([Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain): if available) between:
 - A sine wave
 - Noise
 - Silence
@@ -63,7 +63,7 @@ This section allows you to load serialized multiple plug-ins. Each plug-in will 
 For each loaded plug-in in a slot you can:
 - Enable/disable the plug-in with the **On** button.
 - Bypass/process the plug-in with the **Byp** button (if available as parameter).
-- Enable/disable the [Side-chain](../FAQ/Index.md#q-what-is-a-side-chain) bus with the **Aux** button (available only if the plug-in has input [Side-chain](../FAQ/Index.md#q-what-is-a-side-chain)).
+- Enable/disable the [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) bus with the **Aux** button (available only if the plug-in has input [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain)).
 - Open its editor with the **Edit** button.
 - Save a Preset with the **Store** button.
 - Load a Preset with the **Load** button.

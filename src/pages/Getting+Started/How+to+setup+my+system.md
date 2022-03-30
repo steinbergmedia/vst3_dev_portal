@@ -50,30 +50,34 @@ We used and tested on Ubuntu 20.04 LTS.
 Building the SDK examples requires installation of several packages:
 
 Required:
+
 ```
 sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-devlibxcb-util-dev libxcb-cursor-dev libxcb-xkb-devlibxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-devlibcairo2-dev libgtkmm-3.0-dev libsqlite3-devlibxcb-keysyms1-dev
 ```
 
-```admonish info
-On Raspbian/Debian, replace *"libxcb-util-dev"* with *"libxcb-util0-dev"*
-```
+>***Note***<br>
+>On Raspbian/Debian, replace *"libxcb-util-dev"* with *"libxcb-util0-dev"*
+
 
 Optional:
 
-    sudo apt-get install subversion git ninja-build
+```
+sudo apt-get install subversion git ninja-build
+```
 
 A recommended IDE (optional): **QTCreator**
 
-    sudo apt-get install qtcreator
-
-```admonish info
-You can also use the bash file *"setup_linux_packages_for_vst3sdk.sh"* included in the *VST3_SDK/tools* folder!
 ```
+sudo apt-get install qtcreator
+```
+
+>***Note***<br>
+>You can also use the bash file *"setup_linux_packages_for_vst3sdk.sh"* included in the *VST3_SDK/tools* folder!
 
 
 >- [Instead of](http://www.gtkmm.org/en/) [**gcc**](https://gcc.gnu.org/install/) compiler, a recent version of [**clang**](https://clang.llvm.org/) [compiler will also work!](http://www.gtkmm.org/en/)
->- [libgtkmm3](http://www.gtkmm.org/en/) is required for [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) **<- not the [original Link](https://developer.steinberg.help/display/VST/How+to+set+up+my+system+for+VST+3#HowtosetupmysystemforVST3-VSTGUI)** and the [editorhost](../What+is+the+VST+3+SDK/Index.md#editorhost) **<- not the [original Link](https://developer.steinberg.help/display/VST/How+to+set+up+my+system+for+VST+3#HowtosetupmysystemforVST3-editorhost)** example!
->- [Jack Audio](http://www.jackaudio.org) is required for [audiohost](../What+is+the+VST+3+SDK/Index.md#audiohost) **<- not the [original Link](https://developer.steinberg.help/display/VST/How+to+set+up+my+system+for+VST+3#HowtosetupmysystemforVST3-audiohost)** example!
+>- [libgtkmm3](http://www.gtkmm.org/en/) is required for [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md)  and the [editorhost](../What+is+the+VST+3+SDK/Index.md#editorhost) example!
+>- [Jack Audio](http://www.jackaudio.org) is required for [audiohost](../What+is+the+VST+3+SDK/Index.md#audiohost) example!
 
 
 ## Get cmake

@@ -142,7 +142,7 @@ Explanation:
 
 ### For Mac platform
 
-| Priority | Type | Scope | Writable | Path | Comment |
+| Prio | Type | Scope | Write | Path | Comment |
 | :- | :- | :- | :- | :- | :- |
 | 1 | User | User | X | Users/$USERNAME/Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | |
 | 2 | User | User | X | Users/$USERNAME/Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME | |
@@ -155,7 +155,7 @@ Explanation:
 
 ### For Windows Vista/7/8/10/11 platform
 
-| Priority | Type | Scope | Writable | Path | Comment |
+| Prio | Type | Scope | Write | Path | Comment |
 | :- | :- | :- | :- | :- | :- |
 | 1 | User | User | X | [Users/$USERNAME/Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | FOLDERID_Documents |
 | 2 | User | User | X | [Users/$USERNAME/Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME | FOLDERID_Documents |
@@ -170,7 +170,7 @@ Explanation:
 
 ## For Windows XP/2000 platform
 
-| Priority | Type | Scope | Writable | Path | Comment |
+| Prio | Type | Scope | Write | Path | Comment |
 | :- | :- | :- | :- | :- | :- |
 | 1 | User | User | X | [My Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | CSIDL_PERSONAL |
 | 2 | User | User | X | [My Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME | CSIDL_PERSONAL |

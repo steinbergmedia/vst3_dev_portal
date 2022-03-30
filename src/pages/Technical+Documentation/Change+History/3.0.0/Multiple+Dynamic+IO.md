@@ -160,7 +160,7 @@ For example, if your plug-in works on one input and one output bus, both stereo,
 addAudioInput (USTRING ("Stereo In"), SpeakerArr::kStereo);
 addAudioOutput (USTRING ("Stereo Out"), SpeakerArr::kStereo);
  
-// In addition, adding a stereo side chain bus would look like this:
+// In addition, adding a stereo side-chain bus would look like this:
 addAudioInput (USTRING ("Aux In"), SpeakerArr::kStereo, kAux, 0); // 0 here means not activated by default wanted
 ```
 
@@ -197,11 +197,10 @@ addAudioOutput (USTRING ("Surround Out"), SpeakerArr::k51);
 
 But when the host calls [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) the host is informing your plug-in of the current speaker arrangement of the track it was selected in. You should return **kResultOk**, in the case you accept this arrangement, or **kResultFalse**, in case you do not.
 
-```admonish info
-If you reject a [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) by returning **kResultFalse**, the host calls [Vst::IAudioProcessor::getBusArrangement](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94) where you have the chance to give the parameter 'arrangement' the value of the speaker arrangement your plug-in does accept for this given bus.
-
-Afterward the host can recall [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) with the plug-in wanted Arrangements then the plug-in should return **kResultOk**.
-```
+>***Note***<br>
+>If you reject a [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) by returning **kResultFalse**, the host calls [Vst::IAudioProcessor::getBusArrangement](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94) where you have the chance to give the parameter 'arrangement' the value of the speaker arrangement your plug-in does accept for this given bus.
+>
+>Afterward the host can recall [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) with the plug-in wanted Arrangements then the plug-in should return **kResultOk**.
 
 ### How are speaker arrangement settings handled for FX plug-ins?
 
@@ -299,44 +298,44 @@ There are two ways to instantiate a plug-in like this.
 
 - Way 1 </p> In AudioEffect::initialize (FUnknown* context) you add one mono and one stereo bus.
 
-```
-//------------------------------------------------------------------------
-tresult PLUGIN_API AGain::initialize (FUnknown* context)
-{
-    //---always initialize the parent-------
-    tresult result = AudioEffect::initialize (context);
-    // if everything Ok, continue
-    if (result != kResultOk)
+    ```
+    //------------------------------------------------------------------------
+    tresult PLUGIN_API AGain::initialize (FUnknown* context)
     {
-        return result;
-    }
- 
-    addAudioInput (USTRING ("Mono In"), SpeakerArr::kMono);
-    addAudioOutput (USTRING ("Stereo Out"), SpeakerArr::kStereo);
- 
-    //...
-```
+        //---always initialize the parent-------
+        tresult result = AudioEffect::initialize (context);
+        // if everything Ok, continue
+        if (result != kResultOk)
+        {
+            return result;
+        }
+    
+        addAudioInput (USTRING ("Mono In"), SpeakerArr::kMono);
+        addAudioOutput (USTRING ("Stereo Out"), SpeakerArr::kStereo);
+    
+        //...
+    ```
 
-In case of **Cubase/Nuendo** being the host, the plug-in, afterbeing inserted into a stereo track, gets the left channel ofthe stereo input signal as its mono input. From this signalyou can create a stereo output signal.
+    In case of **Cubase/Nuendo** being the host, the plug-in, afterbeing inserted into a stereo track, gets the     left channel ofthe stereo input signal as its mono input. From this signalyou can create a stereo output    signal.
 
 - Way 2</p> In [AudioEffect](https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1AudioEffect.html)::initialize (FUnknown* context) you add one stereo input and one stereo output bus.
 
-```
-//------------------------------------------------------------------------
-tresult PLUGIN_API AGain::initialize (FUnknown* context)
-{
-    //---always initialize the parent-------
-    tresult result = AudioEffect::initialize (context);
-    // if everything Ok, continue
-    if (result != kResultOk)
+    ```
+    //------------------------------------------------------------------------
+    tresult PLUGIN_API AGain::initialize (FUnknown* context)
     {
-        return result;
-    }
- 
-    addAudioInput (USTRING ("Stereo In"), SpeakerArr::kStereo);
-    addAudioOutput (USTRING ("Stereo Out"), SpeakerArr::kStereo);
- 
-    //...
-```
-
-For processing, the algorithm of your plug-in takes the left channel only, or creates a new mono input signal, by adding the samples of the left and right channels.
+        //---always initialize the parent-------
+        tresult result = AudioEffect::initialize (context);
+        // if everything Ok, continue
+        if (result != kResultOk)
+        {
+            return result;
+        }
+    
+        addAudioInput (USTRING ("Stereo In"), SpeakerArr::kStereo);
+        addAudioOutput (USTRING ("Stereo Out"), SpeakerArr::kStereo);
+    
+        //...
+    ```
+    
+    For processing, the algorithm of your plug-in takes the left channel only, or creates a new mono input  signal, by adding the samples of the left and right channels.

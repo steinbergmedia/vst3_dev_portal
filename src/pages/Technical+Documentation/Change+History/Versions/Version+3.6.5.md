@@ -5,7 +5,7 @@
 ## Version 3.6.5 (2015/08/28)
 
 - Interfaces changes:
-    - New [Steinberg::Vst::ChannelContext::IInfoListener](../Change+History/3.6.5/IInfoListener.md) interface: informing the plug-in about the channel in which it is instanciated (name, color...)
+    - New [Steinberg::Vst::ChannelContext::IInfoListener](../3.6.5/IInfoListener.md) interface: informing the plug-in about the channel in which it is instanciated (name, color...)
     - New Steinberg::Vst::IPrefetchableSupport interface: allowing a plug-in to inform the host that it does not support prefetch/ASIO Guard (could be dynamically)
     - New Steinberg::Vst::IUnitHandler2 interface: allowing a plug-in to inform the host that an assignment Unit-Bus defined by IUnitInfo::getUnitByBus has changed
     - New Steinberg::Vst::IAutomationState interface: informing the plug-in about its current automation state

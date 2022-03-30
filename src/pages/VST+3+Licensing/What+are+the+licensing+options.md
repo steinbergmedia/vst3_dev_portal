@@ -29,14 +29,13 @@ For more details please read the "***Proprietary Steinberg VST 3***" license agr
 
 The open-source license lets you share the source code of your VST 3 plug-in/host ***including the VST 3 SDK's sources which are subject to the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).***
 
-``` admonish info
-Note that VST 2 sources are NOT part of the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)!
-```
+>***Note***<br>
+>Note that VST 2 sources are NOT part of the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)!
 
 For more information about [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) check [this link](https://www.gnu.org/licenses/gpl-3.0.en.html). It also permits you to change and modify the VST 3 SDK's sources as long as you share your changes and make them available for everyone (e.g. on an Internet hosting service like GitHub). Note that you have to follow the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md).
 
 ## Steinberg Dual-License file
-``` admonish info
+```
 /----------------------------------------------------------------------------
 // LICENSE
 // (c) 2021, Steinberg Media Technologies GmbH, All RightsReserved

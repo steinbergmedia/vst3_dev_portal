@@ -38,9 +38,8 @@ On the Windows platform, a VST 3 Plug-in is organized as a bundle like package f
 | MyPlugin.vst3/desktop.ini | used to set custom icon in Windows Explorer |
 | MyPlugin.vst3/Plugin.ico | customized plug-in icon
 
-```admonish info
-In previous SDKs, the VST 3 Plug-in was defined as a single dll file with the .vst3 extension. This is deprecated since VST 3.6.10.
-```
+>***Note***<br>
+>In previous SDKs, the VST 3 Plug-in was defined as a single dll file with the .vst3 extension. This is deprecated since VST 3.6.10.
 
 The file desktop.ini should contain:
 

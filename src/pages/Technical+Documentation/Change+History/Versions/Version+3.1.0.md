@@ -25,7 +25,7 @@
 - Samples:
     - New **VST 3 Plug-ins** examples: ADelay Plug-in, mda **VST 3 Plug-ins** (thanks Paul Kellet and Arne Scheffler)
     - Remove Visual Studio 2003 projects
-    - Clean up AGain and add separate version supporting side-chain
+    - Clean up AGain and add separate version supporting [side-chain](../3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain)
 - New features of the VST 3 Plug-in Test Host :
     - MIDI Input support
     - better ASIO support

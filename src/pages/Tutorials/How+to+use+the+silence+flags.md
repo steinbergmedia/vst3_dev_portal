@@ -53,9 +53,8 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
     }
 ```
         
-```admonish info
-The host has the responsibility to clear the input buffers (set to zero) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)).
-```
+>***Note***<br>
+>The host has the responsibility to clear the input buffers (set to zero) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)).
 
 ## Plug-in generates silent output
 
@@ -89,9 +88,8 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
     }
 ```
 
-```admonish info
-The plug-in, if it produces silence output, has the responsibility to clear (set to zero) its output buffers and to correctly set the output silence flags.
-```
+>***Note***<br>
+>The plug-in, if it produces silence output, has the responsibility to clear (set to zero) its output buffers and to correctly set the output silence flags.
 
 ## In bypass
 

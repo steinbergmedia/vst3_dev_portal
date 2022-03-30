@@ -95,10 +95,8 @@ Check the folder *"bin"* of the SDK!
 
 ## VST3 Inspector
 
-``` admonish info
-**as Cross-platform source code**<br>
-Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST3 Folder, collects > information from the factory about each VST3 plug-in and display it in its UI.
-```
+>**as Cross-platform source code**<br>
+>Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST3 Folder, collects > information from the factory about each VST3 plug-in and display it in its UI.
 
 >![what_if_7](/resources/what_is_7.jpg)
 >

@@ -18,7 +18,7 @@
     - Add new helper class EditControllerEx1 : extend of EditController with Unit support
     - Add new helper class Steinberg::Vst::SingleComponentEffect for single component effects
 - Samples:
-    - AGain example has been extended : supports IMidiMapping, Side-chain and Unit
+    - AGain example has been extended : supports IMidiMapping, [Side-chain](../3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) and Unit
     - Add Visual Studio 2008 solution
 - Documentation
     - Rework

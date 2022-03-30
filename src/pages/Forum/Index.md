@@ -6,4 +6,4 @@ Visit Steinberg's **VST Developer Forum** in order to get help with development,
 
 [![getting_started_vid_2](/resources/what_is_36.jpg)](https://forums.steinberg.net/c/developer/103/none)
 
-## <https://sdk.steinberg.net> (<https://forums.steinberg.net/c/developer>)
+**<https://sdk.steinberg.net> (<https://forums.steinberg.net/c/developer>)**

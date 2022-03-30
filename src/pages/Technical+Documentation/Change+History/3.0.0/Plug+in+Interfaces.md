@@ -123,9 +123,8 @@ Usually, the size of a plug-in view is fixed. But both the host and the plug-in 
 - **Plug-in**: The plug-in can call IPlugFrame::resizeView () and cause the host to resize the window.
 Afterwards, in the same callstack, the host has to call IPlugView::onSize () if a resize is needed (size was changed).
 
-```admonish info
-Note that if the host calls IPlugView::getSize () before calling IPlugView::onSize () (if needed), it will get the old size, not the current one!
-```
+>***Note***<br>
+>Note that if the host calls IPlugView::getSize () before calling IPlugView::onSize () (if needed), it will get the old size, not the current one!
 
 Here the calling sequence:
 
@@ -134,9 +133,8 @@ Here the calling sequence:
 - host->plug-in: if newSize is different from the current size: IPlugView::onSize (newSize)
 - host->plug-in (optional): IPlugView::getSize () returns the newSize
 
-```admonish info
-Please only resize the platform representation of the view when IPlugView::onSize () is called.
-```
+>***Note***<br>
+>Please only resize the platform representation of the view when IPlugView::onSize () is called.
 
 ### Keyboard handling
 

@@ -108,9 +108,8 @@ State4 --> State5: setProcessing(true)
 State5 --> State4: setProcessing(false)
 ```
 
-```admonish warning
-Note about IAudioProcessor->setProcessing
-- transition between Activated and Processing state
-- may be called from real-time Processing Thread (must be lock-free and without memory allocation!)
-- plug-in has to reset its inner processing state (for example to clean its delay buffers in order to have a defined state when the processing starts again).
-```
+>***Warning***<br>
+>Note about IAudioProcessor->setProcessing
+>- transition between Activated and Processing state
+>- may be called from real-time Processing Thread (must be lock-free and without memory allocation!)
+>- plug-in has to reset its inner processing state (for example to clean its delay buffers in order to have a defined state when the processing starts again).

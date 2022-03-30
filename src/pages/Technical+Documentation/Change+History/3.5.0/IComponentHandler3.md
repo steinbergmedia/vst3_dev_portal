@@ -24,9 +24,8 @@ The plug-in can use the context menu in two ways :
 - add its own items to the menu via the [IContextMenu](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html) interface and call [IContextMenu::popup(..)](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html#a8d6e113be32dfccabcacca0c81ee6f10) to create the pop-up. See below for an example of how to use it.
 - extract the host menu items and add them to a context menu created by the plug-in.
 
-```admonish info
-It is recommended to use this context menu interface, even if you do not add your own items to the menu as this is considered to be a big user value.
-```
+>***Note***<br>
+>It is recommended to use this context menu interface, even if you do not add your own items to the menu as this is considered to be a big user value.
 
 See also [IContextMenu](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html), [IContextMenuTarget](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenuTarget.html)
 
@@ -36,9 +35,8 @@ See also [IContextMenu](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/
 
 For example, **Cubase** adds its owned entries in the context menu opened with right-click on an exported parameter when the plug-in uses [createContextMenu](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler3.html#a0c91e0b43003a34a7f43d0c4b33aa604). The plug-in itself, in this example, only adds the "Open UIDescription Editor" entry.
 
-```admonish info
-Plug-ins using VSTGUI automatically have this context menu feature.
-```
+>***Note***<br>
+>Plug-ins using VSTGUI automatically have this context menu feature.
 
 ![tech_doc_33](/resources/tech_doc_33.png)
 

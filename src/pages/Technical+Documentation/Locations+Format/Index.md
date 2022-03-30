@@ -35,4 +35,4 @@ TODO
 TODO
 
 ## [Remote Presentation of Parameters](../Change+History/3.5.0/IXmlRepresentationController.md)
-See [Remote Representation Locations](../Change+History/3.5.0/IXmlRepresentationController.md#location-table-for-vst-xmls-representation)
+See **[Remote Representation Locations](../Change+History/3.5.0/IXmlRepresentationController.md#location-table-for-vst-xmls-representation)**

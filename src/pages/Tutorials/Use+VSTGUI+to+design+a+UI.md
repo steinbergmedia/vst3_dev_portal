@@ -27,13 +27,13 @@ target_link_libraries(${target} PRIVATE vstgui_support)
 
 If you are not using cmake, you have to manually include the following source files to your project:
 
-- vstgui/vstgui_[ios/mac/linux/win32].[cpp/mm]
-- vstgui/vstgui_uidescription.cpp
-- vstgui/plugin-bindings/vst3editor.cpp
+- *vstgui/vstgui_[ios/mac/linux/win32].[cpp/mm]*
+- *vstgui/vstgui_uidescription.cpp*
+- *vstgui/plugin-bindings/vst3editor.cpp*
 
 After that you have to alter your project settings to add a preprocessor definition to your debug build:
 
-- **VSTGUI_LIVE_EDITING=1**
+- *VSTGUI_LIVE_EDITING=1*
 
 With *cmake*, this would look like this:
 

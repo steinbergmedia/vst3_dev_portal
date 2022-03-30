@@ -58,8 +58,6 @@ Provided that the **VST Compatible logo** is always displayed in the context of 
 
 ![licensing_1](/resources/licensing_1.png)
 
----
-
 while it is unacceptable to use it like this:
 
 ![licensing_2](/resources/licensing_2.png)

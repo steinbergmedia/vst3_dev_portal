@@ -107,12 +107,9 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 }
 ```
 
-```admonish info
-**Note**
-
-- We add the flag [*kCanAutomate*](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31) which informs the DAW/host that this parameter can be automated.
-- A **VST 3** parameter is always normalized (its value is a floating point value between [0, 1]), here its default value is set to 0.5.
-```
+>***Note***<br>
+>- We add the flag [*kCanAutomate*](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31) which informs the DAW/host that this parameter can be automated.
+>- A **VST 3** parameter is always normalized (its value is a floating point value between [0, 1]), here its default value is set to 0.5.
 
 3. Now adapt the processor part for this new parameter. Open the file plugprocessor.h and add a gain value **Vst::ParamValue mGain**. This value is used for the processing to apply the gain.
 
@@ -171,9 +168,8 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 }
 ```
 
-```admonish info
-**data.inputParameterChanges** can include more than **1** change for the same parameter inside a processing audio block. Here we take only the last change in the list and apply it our **mGain**.
-```
+>***Note***<br>
+>**data.inputParameterChanges** can include more than **1** change for the same parameter inside a processing audio block. Here we take only the last change in the list and apply it our **mGain**.
 
 2. The real processing part:
 
@@ -218,7 +214,7 @@ for (int32 i = 0; i < numChannels; i++)
 //...
 ```
 
-3. **VST 3** includes a way for the host to inform the plug-in that its inputs are silent (using the **VST 3** [silence flags](../FAQ/Index.md)):
+3. **VST 3** includes a way for the host to inform the plug-in that its inputs are silent (using the **VST 3** [silence flags](../Technical+Documentation/Change+History/3.0.0/Silence+flags.md)):
 
 **plugprocessor.cpp**
 
@@ -320,11 +316,10 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 }
 ```
 
-``` admonish info
-In this example we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:
-
-addEventInput (STR16 ("Event In"), 4); // here 4 channels
-```
+>***Note***<br>
+>In this example we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:
+>
+>addEventInput (STR16 ("Event In"), 4); // here 4 channels
 
 2. We create a new internal value mGainReduction (not exported to the host) which is changed by the velocity of a played noteOn, so that the harder you hit the note, the higher is the gain reduction (this is what we want here):
 
@@ -418,9 +413,9 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 }
 ```
 
-### Add a mono audio [Side-chain](../FAQ/Index.md#q-what-is-a-side-chain)
+### Add a mono audio [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain)
 
-In our example we want to modulate our main audio input with a [Side-chain](../FAQ/Index.md#q-what-is-a-side-chain) audio input.
+In our example we want to modulate our main audio input with a [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) audio input.
 
 1. First add a new side-chain audio input (busType: ***kAux***) in the initialize call of our processor:
 

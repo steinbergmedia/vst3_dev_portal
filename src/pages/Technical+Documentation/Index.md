@@ -4,9 +4,9 @@
 
 Browse the **VST 3 SDK**'s technical documentation. The full **VST 3 API** reference is only available in the [VST 3 Package](../Getting+Started/Links.md#getting-vst-3-sdk) that you can download or find online here:
 
-``` admonish info
-**<https://steinbergmedia.github.io/vst3_doc>**
-```
+>[![getting_started_vid_2](/resources/steinberg_media_git_screenshot.png)](https://steinbergmedia.github.io/vst3_doc)
+>
+>**<https://steinbergmedia.github.io/vst3_doc>**
 
 ---
 

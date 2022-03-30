@@ -33,11 +33,11 @@ However, this separation enables the host to run each component in a different c
 A plug-in that supports this separation has to set the [Steinberg::Vst::kDistributable](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a626a070dcd2e025250f41b9c3f9817cda3185111648c1599241528f1a7f523396) flag in the class info of the processor component ([Steinberg::PClassInfo2::classFlags](https://steinbergmedia.github.io/vst3_doc/base/structSteinberg_1_1PClassInfo2.html#ab5ab9135185421caad5ad8ae1d758409)). Of course not every plug-in can support this, for example if it depends deeply on resources that cannot be moved easily to another computer. So when this flag is not set, the host must not try to separate the components in any way.
 Although it is not recommended, it is possible to implement both the processing part and the controller part in one component class. The host tries to query the  [Steinberg::Vst::IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html) interface after creating an [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html) and on success uses it as the controller.
 
-```admonish info
-A host does not need to instantiate the controller part of a plug-in for processing it.
+>***Note***<br>
+>A host does not need to instantiate the controller part of a plug-in for processing it.
+>
+>The plug-in should be prepared for processing without having the controller part instantiated.
 
-The plug-in should be prepared for processing without having the controller part instantiated.
-```
 
 ### Initialize
 
@@ -110,9 +110,9 @@ if (processorComponent && (result == kResultOk))
 /-----------------------------------------------------------------------
 ```
 
-```admonish info
-Please be aware that IPluginBase::initialize and IPluginBase::terminate must only be called once per object instance. So if an object implements both IAudioProcessor and IEditController take care to only call them once as in the example above.
-```
+>***Note***<br>
+>Please be aware that IPluginBase::initialize and IPluginBase::terminate must only be called once per object instance. So if an object implements both IAudioProcessor and IEditController take care to only call them once as in the example above.
+
 
 ### Extensions
 
@@ -164,7 +164,7 @@ The [Steinberg::Vst::IComponent](https://steinbergmedia.github.io/vst3_doc/vstin
 
 3. The host can ask for routing information ([Steinberg::Vst::RoutingInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1RoutingInfo.html)).
 
-4. The host can activate or deactivate a specific bus like [side-chain](/pages/FAQ/Index.md#q-what-is-a-side-chain). A deactivated bus should be not processed by the plug-in. See [Steinberg::Vst::IComponent::activateBus](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a3ab7d06aaefe03da1fcd1819f1261050)
+4. The host can activate or deactivate a specific bus like [side-chain](../Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain). A deactivated bus should be not processed by the plug-in. See [Steinberg::Vst::IComponent::activateBus](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a3ab7d06aaefe03da1fcd1819f1261050)
 
 5. The host can activate or deactivate the plug-in (On/Off button). See [Steinberg::Vst::IComponent::setActive](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517)
 
@@ -294,6 +294,5 @@ if (editController)
 }
 ```
 
-```admonish info
-Please note that you CANNOT rely on the implementation detail that the connection is done directly between the processor component and the edit controller!
-```
+>***Note***<br>
+>Please note that you CANNOT rely on the implementation detail that the connection is done directly between the processor component and the edit controller!

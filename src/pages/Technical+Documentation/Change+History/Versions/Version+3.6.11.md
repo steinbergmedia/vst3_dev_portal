@@ -15,7 +15,7 @@
 - New icon for VST3 bundles: VST_Logo_Steinberg.ico and VST_Logo_Steinberg.icns (located in VST_SDK/VST3_SDK/doc/artwork folder)
 - Interface changes:
     - VST2 interface not available anymore!
-    - New [Steinberg::Vst::INoteExpressionPhysicalUIMapping](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md) (plug-in): allowing the host to retrieve the preferred physical mapping associated to note expression supported by the plug-in.
+    - New [Steinberg::Vst::INoteExpressionPhysicalUIMapping](../3.6.11/INoteExpressionPhysicalUIMapping.md) (plug-in): allowing the host to retrieve the preferred physical mapping associated to note expression supported by the plug-in.
 - cmake:
     - further improvement for users projects
 - [Plug-in Wrappers](/pages/What+is+the+VST+3+SDK/Wrappers/Index.md):
