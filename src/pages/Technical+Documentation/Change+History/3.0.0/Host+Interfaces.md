@@ -80,7 +80,7 @@ Private plug-in message.
 
 Messages are sent from a VST controller component to a VST editor component and vice versa.
 
-See also [IAttributeList](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html), [IConnectionPoint](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html), [Communication between the components](https://developer.steinberg.help/display/VST/VST+3+API+Documentation#VST3APIDocumentation-Communicationbetweenthecomponents)
+See also [IAttributeList](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html), [IConnectionPoint](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html), [Communication between the components](../Technical+Documentation/API+Documentation/Index.md#communication-between-the-components)
 
 ## [IParamValueQueue](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html)
 

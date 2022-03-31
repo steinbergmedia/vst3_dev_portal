@@ -33,7 +33,7 @@ Browse the **VST 3 SDK**'s technical documentation. The full **VST 3 API** refer
 - [[3.5.0] Key Switch](../Technical+Documentation/Change+History/3.5.0/IKeyswitchController.md)
 - [[3.5.0] Remote Presentation of Parameters](../Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.md)
 - [[3.5.0] Context Menu](../Technical+Documentation/Change+History/3.5.0/IComponentHandler3.md)
-- [[3.5.0] Enhanced Linked Parameters](pages/Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.md)
+- [[3.5.0] Enhanced Linked Parameters](../Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.md)
 - [[3.6.0] iOS Inter-App Audio](../Technical+Documentation/Change+History/3.6.0/IAA.md)
 - [[3.6.0] Preset Meta-Information](../Technical+Documentation/Change+History/3.6.0/IStreamAttributes.md)
 - [[3.6.5] Channel Context Info](../Technical+Documentation/Change+History/3.6.5/IInfoListener.md)
@@ -135,7 +135,7 @@ How to better support remote (UI and hardware) for parameters.
 
 A plug-in can ask the host to create a context menu for a given exported parameter ID or a generic context menu.
 
-## [[3.5.0] Enhanced Linked Parameters](pages/Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.md)
+## [[3.5.0] Enhanced Linked Parameters](../Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.md)
 
 This allows the host to start a parameter editing action which can generate other parameter changes (like linked parameters) and this in one session (between a beginEdit and endEdit).
 

@@ -34,9 +34,9 @@ developers to load **VST 3** plug-ins into a DAW or audio editor.
 - [Developer use cases (FAQs)](../pages/VST+3+Licensing/Developer+use+cases.md)
 
 ## [Getting Started](../pages/Getting+Started/Index.md)
-- [VST 3 Links](pages/Getting+Started/Links.md) — Important links you will need for working with VST 3
-- [How to setup up my system for VST 3](pages/Getting+Started/How+to+setup+my+system.md) — In order to build VST 3 plug-ins, you need the source code of the VST 3 (interface definition), an IDE/compiler, cmake and a VST 3 host application.
-- [Preparation on Windows](pages/Getting+Started/Preparation+on+Windows.md) — Generated VST3 Microsoft Visual Studio Projects using the cmake https://cmake.org/ included in the SDK will create by default symbolic links for each built plug-in in the official VST3 folder, in order to allow this on Windows you have to adapt the Group Policy of Windows. See Here!
+- [VST 3 Links](../pages/Getting+Started/Links.md) — Important links you will need for working with VST 3
+- [How to setup up my system for VST 3](../pages/Getting+Started/How+to+setup+my+system.md) — In order to build VST 3 plug-ins, you need the source code of the VST 3 (interface definition), an IDE/compiler, cmake and a VST 3 host application.
+- [Preparation on Windows](../pages/Getting+Started/Preparation+on+Windows.md) — Generated VST3 Microsoft Visual Studio Projects using the cmake <https://cmake.org/> included in the SDK will create by default symbolic links for each built plug-in in the official VST3 folder, in order to allow this on Windows you have to adapt the Group Policy of Windows. See Here!
 
 ## [Tutorials](../pages/Tutorials/Index.md)
 - [Building the examples included in the SDK](../pages/Tutorials/Building+the+examples+included+in+the+SDK.md)
@@ -52,7 +52,7 @@ developers to load **VST 3** plug-ins into a DAW or audio editor.
 Visit Steinberg's **VST Developer Forum** in order to get help with development, to submit bug reports, to request new features and to connect to other **VST 3** developers:
 
 ## [Technical Documentation](../pages/Technical+Documentation/Index.md)
-Browse the **VST 3 SDK**'s technical documentation. The full **VST 3 API** reference is only available in the [VST 3 Package]((pages/Getting+Started/Links.md)) that you can download or find online here.
+Browse the **VST 3 SDK**'s technical documentation. The full **VST 3 API** reference is only available in the [VST 3 Package](../pages/Getting+Started/Links.md) that you can download or find online here.
 
 ## [Miscellaneous](../pages/Miscellaneous/Index.md)
 Copyrights and Glossary

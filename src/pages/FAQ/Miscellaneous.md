@@ -62,7 +62,7 @@ Computation of Folder Name (SubCategories => folder in menu)
       "Fx|Mastering|Mono"         => "Mastering\Mono"
 ```
 
-This string should only be a hint what type of plug-in it is. It's not possible to define all types. If you have wishes for new categories, please discuss them in the VST [Developer Forum](https://developer.steinberg.help/display/VST/VST+3+Forum) (<https://sdk.steinberg.net>) and we can add them to future versions of the SDK.
+This string should only be a hint what type of plug-in it is. It's not possible to define all types. If you have wishes for new categories, please discuss them in the VST [Developer Forum](../Forum/Index.html) (<https://sdk.steinberg.net>) and we can add them to future versions of the SDK.
 
 ## Q: Is it possible to define a plug-in as Fx and Instrument?
 
