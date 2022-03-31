@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># Advanced VST 3 techniques
 

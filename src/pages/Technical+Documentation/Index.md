@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md)
+>/ [VST Home](../index.md)
 >
 ># Technical Documentation
 

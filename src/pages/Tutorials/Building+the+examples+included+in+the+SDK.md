@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># Building the examples included in the SDK
 

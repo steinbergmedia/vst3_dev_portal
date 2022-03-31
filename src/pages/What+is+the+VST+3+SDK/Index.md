@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md)
+>/ [VST Home](../index.md)
 >
 ># What is the VST 3 SDK?
 

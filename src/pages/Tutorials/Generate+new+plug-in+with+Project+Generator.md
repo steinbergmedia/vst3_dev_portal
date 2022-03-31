@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># Generate a new plug-in with the Project Generator App
 

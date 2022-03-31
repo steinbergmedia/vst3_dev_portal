@@ -1,4 +1,4 @@
->/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.0] Multiple Dynamic I/O Support
 

@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># How to use the silence flags
 

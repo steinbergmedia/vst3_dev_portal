@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md) / [Getting Started](../Getting+Started/Index.md)
+>/ [VST Home](../index.md) / [Getting Started](../Getting+Started/Index.md)
 >
 ># VST 3 Links
 

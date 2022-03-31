@@ -1,4 +1,4 @@
->/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.1] Parameter MIDI Mapping
 

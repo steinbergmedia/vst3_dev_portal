@@ -1,4 +1,4 @@
->/ [VST Home](../Index.md)
+>/ [VST Home](../index.md)
 >
 ># VST 3 Licensing
 
