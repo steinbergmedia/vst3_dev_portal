@@ -6,31 +6,21 @@ on:
       - deploy
   pull_request:
 
+
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup mdbook and plug-ins
-        uses: jontze/action-mdbook@v1
-        with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          mdbook-version: "~0.3.0"
-          mermaid-version: "~0.8.0"
-          toc-version: "~0.7.0"
-          use-linkcheck: false
-          use-mermaid: true
-          use-toc: true
-          use-opengh: false
-      - name: Build mdbook
-        run: mdbook build
   deploy:
-    if: github.ref == 'refs/heads/deploy'
     runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+
       - name: Setup mdBook
-        uses: jontze/action-mdbook@v1
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
+
+      - uses: jontze/action-mdbook@v1
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           mdbook-version: "~0.3.0"
@@ -40,12 +30,14 @@ jobs:
           use-mermaid: true
           use-toc: true
           use-opengh: false
-      -name: Build mdbook
-        run: mdbook build
+
+      - run: mdbook-mermaid install
+      - run: mdbook build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          github_token: ${{secrets.GITHUB_TOKEN}}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./book
- 
+
