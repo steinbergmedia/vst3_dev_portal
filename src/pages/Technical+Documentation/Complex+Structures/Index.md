@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../Index.md) / [Technical Documentation](../Index.md)
 >
 ># Complex Plug-in Structures / Multi-timbral Instruments
 
@@ -62,7 +62,7 @@ Similar to the simple case, the host may want to save and load preset files. The
 
 A plug-in can support unit presets and program list presets.
 
-![tech_doc_19](/resources/tech_doc_19.jpg)
+![tech_doc_19](../../../resources/tech_doc_19.jpg)
 
 See also [Presets & Program Lists](../Presets+Program+Lists/Index.md), [Steinberg::Vst::IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html), [Steinberg::Vst::IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html)
 
@@ -87,4 +87,4 @@ In general, the host needs to know about any input to output routing of the plug
 
 - [Steinberg::Vst::IComponent::getRoutingInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#aa0ffeccad3c44364a199ce56365a4c12): find out the output of a given input
 
-![tech_doc_20](/resources/tech_doc_20.jpg)
+![tech_doc_20](../../../resources/tech_doc_20.jpg)

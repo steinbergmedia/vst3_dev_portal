@@ -4,7 +4,7 @@
 
 ## Version 3.6.12 (2018/12/03)
 
-- [VSTGUI](/pages/What+is+the+VST+3+SDK/VSTGUI.md) 4.7
+- [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.7
     - redesigned drag and drop (drags with bitmaps are now supported on Windows)
     - standalone library support for Windows 7
     - new ImageStitcher tool
@@ -22,16 +22,16 @@
     - fix WIN_ARCHITECTURE_NAME for Windows 32bits
     - fix SMTG_PACKAGE_ICON_PATH selection
     - split WIN_PDB into WIN_PDB32 and WIN_PDB64
-- [Samples](/pages/What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Samples](../../../What+is+the+VST+3+SDK/Plug-in+Examples.md):
     - New LegacyMIDICCOut VST3 plug-in showing the use of LegacyMIDICCOutEvent
     - Add IMidiLearn support for NoteExpressionSynth
     - Add Audio Unit v3 NoteExpressionSynth example with MPE support
-- [Plug-in Wrappers](/pages/What+is+the+VST+3+SDK/Wrappers/Index.md):
+- [Plug-in Wrappers](../../../What+is+the+VST+3+SDK/Wrappers/Index.md):
     - Audio Unit v3 (AUv3) Wrapper (VST 3 - Audio Unit v3 Wrapper):
         - out of the box MPE support. As MPE is a limited subset of the Note Expression feature, the three expressions are simply mapped to the note expressions returned via the [INoteExpressionPhysicalUIMapping](../3.6.11/INoteExpressionPhysicalUIMapping.md) interface.
         - note that you must have certificates to sign on macOS/iOS for AUv3
         - complete folder restructuring for easy adaption
-    - AAX Wrapper ([VST 3 - AAX Wrapper](/pages/What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)):
+    - AAX Wrapper ([VST 3 - AAX Wrapper](../../../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)):
         - fix automation update after loading a preset
     - VST2 Wrapper:
     - fix double release of editor

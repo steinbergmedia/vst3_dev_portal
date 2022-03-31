@@ -27,11 +27,11 @@
     - **App_Factory**: presets installed by an audio application installer, only visible for this specific audio application
 
 
->***Caution***<br>
+>⚠️ **Warning**<br>
 >**$COMPANY** and **$PLUGIN-NAME** folder names contain only allowed characters for file naming (replace characters "**\\*?/:<>|\**"by "_").
 
 
->***Note***<br>
+>ⓘ **Note**<br>
 >Each path defined below should be scanned in the given priority, presets extracted and added to the preset list.
 
 ### For Mac platform

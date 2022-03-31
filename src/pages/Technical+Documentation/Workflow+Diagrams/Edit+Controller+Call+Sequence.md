@@ -49,5 +49,5 @@ State2 --> State1: terminate
 State2 --> State3: IConnectionPoint->connect
 State3 --> State1: terminate
 ```
->***Note***<br>
+>ⓘ **Note**<br>
 >All Edit Controller methods must be called from the UI Thread

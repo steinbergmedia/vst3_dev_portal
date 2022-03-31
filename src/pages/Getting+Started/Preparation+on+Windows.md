@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Getting Started](../Getting+Started/Index.md)
+>/ [VST Home](../Index.md) / [Getting Started](../Getting+Started/Index.md)
 >
 ># Preparation on Windows
 
@@ -20,7 +20,7 @@ You could choose the new user location for VST3 plug-ins, call cmake with this p
 
 - Enter ***Edit group policy*** in the Windows search field:
 
-![getting_started_2](/resources/getting_started_2.jpg)
+![getting_started_2](../../resources/getting_started_2.jpg)
 
 - Navigate to:
 
@@ -28,4 +28,4 @@ You could choose the new user location for VST3 plug-ins, call cmake with this p
 
 Here you can set which users can create symbolic links.
 
-![getting_started_3](/resources/getting_started_3.jpg)
+![getting_started_3](../../resources/getting_started_3.jpg)

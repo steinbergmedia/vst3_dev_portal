@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../Index.md) / [Technical Documentation](../Index.md)
 >
 ># Parameters and Automation
 
@@ -29,7 +29,7 @@ Usually, the host is unaware of a parameter's semantics. However, there are a fe
 
 - **kCanAutomate**: This means that this parameter can be automated by the host using its automation track. **[SDK 3.0.0]**
 
-- **kIsBypass**: If the plug-in performs bypass processing itself, it must export the corresponding parameter and flag it with kIsBypass. It is highly recommended that this bypass parameter is provided by the effect plug-in. If the plug-in does not export a bypass parameter, the host can perform bypass processing and the plug-in process call will be discontinued. Only one bypass parameter is allowed. The plug-in should save the state of this bypass parameter like other parameters (when getState and setState are used). If the plug-in does not need a bypass (like Instrument) this flag should be not used. Check this [FAQ](/pages/FAQ/Index.md) in order to understand how bypass processing works. **[SDK 3.0.0]**
+- **kIsBypass**: If the plug-in performs bypass processing itself, it must export the corresponding parameter and flag it with kIsBypass. It is highly recommended that this bypass parameter is provided by the effect plug-in. If the plug-in does not export a bypass parameter, the host can perform bypass processing and the plug-in process call will be discontinued. Only one bypass parameter is allowed. The plug-in should save the state of this bypass parameter like other parameters (when getState and setState are used). If the plug-in does not need a bypass (like Instrument) this flag should be not used. Check this [FAQ](../../FAQ/Index.md) in order to understand how bypass processing works. **[SDK 3.0.0]**
 
 - **kIsReadOnly**: This means that this parameter cannot be changed from outside the plug-in, this requires that kCanAutomate is NOT set. **[SDK 3.0.0]**
 
@@ -43,7 +43,7 @@ Usually, the host is unaware of a parameter's semantics. However, there are a fe
 
 The controller must support the conversion to a string for any exported parameter. The conversion method [Steinberg::Vst::IEditController::getParamStringByValue](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#aab2f0b853e75361d331b667e7893962e) must provide a result for any possible normalized parameter value.
 
->***Warning***<br>
+>⚠️ **Warning**<br>
 >Parameter values are always transmitted in a normalized floating point (64bit double) representation **[0.0, 1.0]**.
 
 ### Representation of parameter values
@@ -87,7 +87,7 @@ The controller and the processor have to work with normalized parameter values.
 
 **Example**: Step Count 3
 
-![tech_doc_11](/resources/tech_doc_11.jpg)
+![tech_doc_11](../../../resources/tech_doc_11.jpg)
 
 ## Automation
 
@@ -148,13 +148,13 @@ In **VST 3**, automation playback is the task of the plug-in and it is the host'
 
 The need to perform all transformations, from the normalized GUI representation to the DSP representation, produces some overhead. Performing sample accurate automation requires even more overhead, because the DSP value must be calculated for each single sample. While this cannot be avoided entirely, it is the choice of the plug-in implementation how much processing time to spend on automation accuracy. The host always transmits value changes in a way that allows a sample accurate reconstruction of the underlying automation curve. The plug-in is responsible for the realization.
 
-![tech_doc_12](/resources/tech_doc_12.jpg)
+![tech_doc_12](../../../resources/tech_doc_12.jpg)
 
 The processor gets the automation data in the processing call by using queue of parameter changes for each parameter having automation data:
 
 a [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) has some [IParamValueQueues](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html) (for a specific parameter ID) which has some Automation Points.
 
->***Warning***<br>
+>⚠️ **Warning**<br>
 >- A parameter (ID) is present only one time in the [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) list!
 >- Automation Points inside a [IParamValueQueues](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html) are sorted per offset (position inside the audio block)!
 
@@ -188,6 +188,6 @@ to inform the host about this change (in the **UI Thread**). The host invalidate
 
 If only some values have changed (less than 10)  the plug-in should use the [Steinberg::Vst::IComponentHandler::performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93) interface (Show the right use when automation are used: [Automation Recording](../Parameters+Automation/Index.md#automation-recording))
 
->***Note***<br>
+>ⓘ **Note**<br>
 >If the plug-in needs to inform the host about changes containing parameter title, default or flags and values (of multiple parameters), it could combine the restartComponent flags:
 `IComponentHandler::restartComponent (kParamValuesChanged|kParamTitlesChanged);`

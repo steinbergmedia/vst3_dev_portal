@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.1] Parameter MIDI Mapping
 
@@ -8,8 +8,8 @@
 
 **Related pages**
 
-- [About MIDI in VST 3](/pages/Technical+Documentation/About+MIDI/Index.md)
-- [[3.6.12] MIDI Learn](/pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.md)
+- [About MIDI in VST 3](../../About+MIDI/Index.md)
+- [[3.6.12] MIDI Learn](../../Change+History/3.6.12/IMidiLearn.md)
 
 ---
 

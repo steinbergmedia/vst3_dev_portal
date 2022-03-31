@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.11] NoteExpression Physical UI Mapping
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [[3.5.0] Note Expression](/pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
+- [[3.5.0] Note Expression](../../Change+History/3.5.0/INoteExpressionController.md)
 
 ---
 

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md)
+>/ [VST Home](../../Index.md)
 >
 ># Frequently Asked Questions
 

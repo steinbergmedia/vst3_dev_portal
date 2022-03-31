@@ -4,7 +4,7 @@
 
 ## Version 3.6.10 (2018/06/11)
 
-- New definition of plug-in format for Windows including icon support (VST3 Bundle: [VST 3 Locations / Format](/pages/Technical+Documentation/Locations+Format/Plugin+Locations.md))
+- New definition of plug-in format for Windows including icon support (VST3 Bundle: [VST 3 Locations / Format](../../Locations+Format/Plugin+Locations.md))
 - Support of Snapshots inside the VST3 Bundle
 - cmake:
     - adapt cmake files for better integration of users projects

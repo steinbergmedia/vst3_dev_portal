@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.0] Interfaces supported by the host
 
@@ -56,7 +56,7 @@ Host callback for unit support.
 
 Host callback interface, used with [IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html). Retrieve via queryInterface from [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html).
 
-See also [VST 3 Units](/pages/Technical+Documentation/VST+3+Units/Index.md), [IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html)
+See also [VST 3 Units](../../VST+3+Units/Index.md), [IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html)
 
 ## [IHostApplication](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html)
 
@@ -80,7 +80,7 @@ Private plug-in message.
 
 Messages are sent from a VST controller component to a VST editor component and vice versa.
 
-See also [IAttributeList](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html), [IConnectionPoint](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html), [Communication between the components](../Technical+Documentation/API+Documentation/Index.md#communication-between-the-components)
+See also [IAttributeList](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html), [IConnectionPoint](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html), [Communication between the components](../../API+Documentation/Index.md#communication-between-the-components)
 
 ## [IParamValueQueue](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html)
 
@@ -118,7 +118,7 @@ double curveValue = (slope * bufferTime) + offset; // bufferTime is any position
 **Jumps**:
 A jump in the automation curve has to be transmitted as two points: one with the old value and one with the new value at the next sample position.
 
-![tech_doc_29](/resources/tech_doc_29.jpg)
+![tech_doc_29](../../../../resources/tech_doc_29.jpg)
 
 See also [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html), [ProcessData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html)
 

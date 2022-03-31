@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md)
+>/ [VST Home](../Index.md)
 >
 ># What is the VST 3 SDK?
 
@@ -26,7 +26,7 @@ The **VST 3 SDK** package contains:
 >**VST 3 Implementation Helper Classes**<br>
 >Some helper classes are provided, implementing some **VST 3** interfaces for hosting and for creating **VST 3** plug-ins. Simply derived your plug-in C++ classes from these helper classes.
 >
->![what_if_1](/resources/what_is_1.png)
+>![what_if_1](../../resources/what_is_1.png)
 >
 >Check the folder *"public.sdk"* of the SDK!
 
@@ -44,13 +44,13 @@ Check the folder *"public.sdk/source/vst/aaxwrapper"* of the SDK!
 The SDK includes some Plug-ins implementation examples. The Legendary **AGain** and **ADelay**, thanks Paul Kellet the Open-source **mda** Plug-ins, a basic "Note Expression Synth" supporting "**Note Expression Event**", an example of **pitchnames** support Plug-in, a **VST3 Host Checker** which checks if a host is VST3 compliant and more...
 
 
->![what_if_2](/resources/what_is_2.jpg)
+>![what_if_2](../../resources/what_is_2.jpg)
 >
->![what_if_3](/resources/what_is_3.jpg)
+>![what_if_3](../../resources/what_is_3.jpg)
 >
->![what_if_4](/resources/what_is_4.jpg)
+>![what_if_4](../../resources/what_is_4.jpg)
 >
->![what_if_5](/resources/what_is_5.jpg)
+>![what_if_5](../../resources/what_is_5.jpg)
 
 Check the folder *"public.sdk/samples/vst"* of the SDK!
 
@@ -61,7 +61,7 @@ The SDK provides a test application called **VST3PluginTestHost** for Apple Mac 
 This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.<br>
 Included in this application is a test module which allows you to check your plug-in in regard to the **VST 3** standard.
 
-![what_if_6](/resources/what_is_6.jpg)
+![what_if_6](../../resources/what_is_6.jpg)
 
 Check the folder *"bin"* of the SDK!
 
@@ -98,7 +98,7 @@ Check the folder *"bin"* of the SDK!
 >**as Cross-platform source code**<br>
 >Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST3 Folder, collects > information from the factory about each VST3 plug-in and display it in its UI.
 
->![what_if_7](/resources/what_is_7.jpg)
+>![what_if_7](../../resources/what_is_7.jpg)
 >
 >Check the folder *"public.sdk/samples/vst-hosting/inspectorapp"* of the SDK!
 
@@ -110,7 +110,7 @@ First developed in-house by Steinberg Media Technologies (around 1998) for their
 
 The last official release version of **VSTGUI** is always included in the **VST 3 SDK**.
 
-![what_if_8](/resources/what_is_8.png)
+![what_if_8](../../resources/what_is_8.png)
 
 Example of the **VSTGUI** UIDescription Editor (embedded editing WYSIWYG)
 
@@ -120,7 +120,7 @@ Check the folder *"vstgui4"* of the SDK!
 
 This open source application (Win/macOS) allows you to generate easily a new **VST 3** plug-in project by just entering in a GUI some parameters.
 
-![what_if_9](/resources/what_is_9.jpg)
+![what_if_9](../../resources/what_is_9.jpg)
 
 Check the folder "VST3_Project_Generator" of the SDK!
 

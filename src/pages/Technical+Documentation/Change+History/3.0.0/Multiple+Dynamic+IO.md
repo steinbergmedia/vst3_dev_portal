@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.0] Multiple Dynamic I/O Support
 
@@ -8,9 +8,9 @@
 
 **Related pages**
 
-- [Audio Processor Call Sequence](/pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.md)
-- [Bus Arrangement Setting Sequence](/pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.md)
-- [Complex Plug-in Structures / Multi-timbral Instruments](/pages/Technical+Documentation/Complex+Structures/Index.md)
+- [Audio Processor Call Sequence](../../Workflow+Diagrams/Audio+Processor+Call+Sequence.md)
+- [Bus Arrangement Setting Sequence](../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.md)
+- [Complex Plug-in Structures / Multi-timbral Instruments](../../Complex+Structures/Index.md)
 
 ---
 
@@ -124,8 +124,8 @@ Not activated busses does need to be processed by the plug-in, which allows to r
 
 Check the workflow diagrams in order to understand when this is called: 
 
-- [Audio Processor Call Sequence](/pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.md)
-- [Bus Arrangement Setting Sequence](/pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.md)
+- [Audio Processor Call Sequence](../../Workflow+Diagrams/Audio+Processor+Call+Sequence.md)
+- [Bus Arrangement Setting Sequence](../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.md)
 
 ## What is a Side-Chain?
 
@@ -182,7 +182,7 @@ For example:
 const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR;
 => representing in hexadecimal 0x03 and in binary 0011.
 
-![tech_doc_28](/resources/tech_doc_28.jpg)
+![tech_doc_28](../../../../resources/tech_doc_28.jpg)
 
 ### My plug-in is capable of processing all possible channel configurations
 
@@ -197,7 +197,7 @@ addAudioOutput (USTRING ("Surround Out"), SpeakerArr::k51);
 
 But when the host calls [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) the host is informing your plug-in of the current speaker arrangement of the track it was selected in. You should return **kResultOk**, in the case you accept this arrangement, or **kResultFalse**, in case you do not.
 
->***Note***<br>
+>ⓘ **Note**<br>
 >If you reject a [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) by returning **kResultFalse**, the host calls [Vst::IAudioProcessor::getBusArrangement](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94) where you have the chance to give the parameter 'arrangement' the value of the speaker arrangement your plug-in does accept for this given bus.
 >
 >Afterward the host can recall [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) with the plug-in wanted Arrangements then the plug-in should return **kResultOk**.
@@ -205,7 +205,7 @@ But when the host calls [Vst::IAudioProcessor::setBusArrangements](https://stein
 ### How are speaker arrangement settings handled for FX plug-ins?
 
 After instantiation of the plug-in, the host calls [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) with a default configuration (depending on the current channel configuration), if the plug-in accepts it (by returning **kResultOK**), it will continue with this configuration.
-If not (by returning **kResultFalse**), the host asks the plug-in for its wanted configuration by calling [Vst::IAudioProcessor::getBusArrangement](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94) (for Input and Output) and then recall [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) with the final wanted configuration. Check [Bus Arrangement Setting Sequences](/pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.md) workflow.
+If not (by returning **kResultFalse**), the host asks the plug-in for its wanted configuration by calling [Vst::IAudioProcessor::getBusArrangement](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94) (for Input and Output) and then recall [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) with the final wanted configuration. Check [Bus Arrangement Setting Sequences](../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.md) workflow.
 
 ```
 **Example of a Plug-in supporting only symmetric Input-Output Arrangements**:

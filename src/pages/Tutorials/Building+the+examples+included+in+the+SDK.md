@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Tutorials](../Tutorials.md)
+>/ [VST Home](../Index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># Building the examples included in the SDK
 
@@ -44,7 +44,7 @@ cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=
 >
 >---
 >
->Generated VST3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](/Getting+Started/Preparation+on+Windows.md)!
+>Generated VST3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](../Getting+Started/Preparation+on+Windows.md)!
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >
@@ -128,14 +128,14 @@ cmake --build . --config Release
 
 - Start the cmake-gui application which is part of the cmake installation (<https://cmake.org/download/>)
 
-![tutorials_1](/resources/tutorials_1.png)
+![tutorials_1](../../resources/tutorials_1.png)
 
 - "***Browse Source...***": select the folder VST3_SDK
 - "***Browse Build...***": select a folder where the outputs (projects/...) will be created. Typically a folder named "build"
 - You can check the ***SMTG** Options*
 - Press "***Configure***" and choose the generator in the window that opens: for example "**Visual Studio 16 2019**"
 
-![tutorials_2](/resources/tutorials_2.png)
+![tutorials_2](../../resources/tutorials_2.png)
 
 - Press "***Generate***" to create the project
 - Open your targeted IDE, and compile the solution/project.

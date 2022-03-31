@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
+>/ [VST Home](../Index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
 >
 ># Steinberg VST usage guidelines
 
@@ -56,11 +56,11 @@ The **VST Compatible logo** must be printed on the package of any product using 
 
 Provided that the **VST Compatible logo** is always displayed in the context of such a product name, “**VST**” may be added to the basic product name, e.g. like “mycoolEngine for **VST**”, if set in regular type and not graphically illustrated or integrated into the product name, and if the **VST Compatible logo** is always shown in direct context to such a product name. It is not allowed to merge the basic product name and **VST** in any graphical way into one integrated visual. E.g., it is allowed to use like this:
 
-![licensing_1](/resources/licensing_1.png)
+![licensing_1](../../resources/licensing_1.png)
 
 while it is unacceptable to use it like this:
 
-![licensing_2](/resources/licensing_2.png)
+![licensing_2](../../resources/licensing_2.png)
 
 ## 7. Use in company name
 
@@ -94,13 +94,13 @@ It is not allowed to create combinations or compositions like “**VSTi**” or 
 
 The current **VST Compatible logos** are the following:
 
->![licensing_3](/resources/licensing_3.png)
->![licensing_4](/resources/licensing_4.png)
+>![licensing_3](../../resources/licensing_3.png)
+>![licensing_4](../../resources/licensing_4.png)
 
 Minimum printing size = 20 x 18,7 mm
 
->![licensing_5](/resources/licensing_5.png)
->![licensing_6](/resources/licensing_6.png)
+>![licensing_5](../../resources/licensing_5.png)
+>![licensing_6](../../resources/licensing_6.png)
 
 Minimum printing size = 15 x 10 mm
 

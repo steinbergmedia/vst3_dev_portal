@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.0] Interfaces supported by the plug-in
 
@@ -60,7 +60,7 @@ Connect a component with another one.
 
 This interface is used for the communication of separate components. Note that some hosts will place a proxy object between the components so that they are not directly connected.
 
-See also [Communication between the components](/pages/Technical+Documentation/API+Documentation/Index.html#communication-between-the-components)
+See also [Communication between the components](../../API+Documentation/Index.html#communication-between-the-components)
 
 ## [IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html)
 
@@ -77,7 +77,7 @@ The root unit is the component itself, so getUnitCount must return 1 at least.
 The root unit id has to be 0 (kRootUnitId).
 Each unit can reference one program list - this reference must not change.
 Each unit that uses a program list references one program of the list.
-See also [VST 3 Units](/pages/Technical+Documentation/VST+3+Units/Index.md), [IUnitHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html)
+See also [VST 3 Units](../../VST+3+Units/Index.md), [IUnitHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html)
 
 ## [IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html)
 
@@ -90,7 +90,7 @@ Component extension to access program list data.
 
 A component can support program list data via this interface or/and unit preset data ([IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html)).
 
-See also [IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html), [Complex Plug-in Structures / Multi-timbral Instruments](/pages/Technical+Documentation/Complex+Structures/Index.md)
+See also [IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html), [Complex Plug-in Structures / Multi-timbral Instruments](../../Complex+Structures/Index.md)
 
 ## [IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html)
 
@@ -103,7 +103,7 @@ Component extension to access unit data.
 
 A component can support unit preset data via this interface or program list data ([IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html)).
 
-See also [Presets & Program Lists](/pages/Technical+Documentation/Presets+Program+Lists/Index.md)
+See also [Presets & Program Lists](../../Presets+Program+Lists/Index.md)
 
 ## [IPlugView](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html)
 
@@ -123,7 +123,7 @@ Usually, the size of a plug-in view is fixed. But both the host and the plug-in 
 - **Plug-in**: The plug-in can call IPlugFrame::resizeView () and cause the host to resize the window.
 Afterwards, in the same callstack, the host has to call IPlugView::onSize () if a resize is needed (size was changed).
 
->***Note***<br>
+>ⓘ **Note**<br>
 >Note that if the host calls IPlugView::getSize () before calling IPlugView::onSize () (if needed), it will get the old size, not the current one!
 
 Here the calling sequence:
@@ -133,7 +133,7 @@ Here the calling sequence:
 - host->plug-in: if newSize is different from the current size: IPlugView::onSize (newSize)
 - host->plug-in (optional): IPlugView::getSize () returns the newSize
 
->***Note***<br>
+>ⓘ **Note**<br>
 >Please only resize the platform representation of the view when IPlugView::onSize () is called.
 
 ### Keyboard handling

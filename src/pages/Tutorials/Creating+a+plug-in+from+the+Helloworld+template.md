@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Tutorials](../Tutorials.md)
+>/ [VST Home](../Index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># Creating a plug-in from the Helloworld template
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [Generate a new plug-in with Project Generator](/Tutorials/Generate+new+plug-in+with+Project+Generator.md)
+- [Generate a new plug-in with Project Generator](../Tutorials/Generate+new+plug-in+with+Project+Generator.md)
 
 ---
 

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 >
 ># VST 3 Plug-in Test Host
 
@@ -18,13 +18,13 @@ The SDK provides a test application called **VST3PluginTestHost** for Apple Mac 
 This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.<br>
 Included in this application is a test module which allows you to check your plug-in in regard to the **VST 3** standard.
 
-![what_if_15](/resources/what_is_15.jpg)
+![what_if_15](../../resources/what_is_15.jpg)
 
 Check the folder *"bin"* of the SDK!
 
 ## How to use it?
 
-![what_if_15](/resources/what_is_15.jpg)
+![what_if_15](../../resources/what_is_15.jpg)
 
 - **View -> Open Plug-in Information Window**: opens a window showing all registered component and controller **VST 3 plug-ins**
 - **View -> Open Plug-in Unit Tests Window**: opens a window where you can test your plug-in with a series of unit tests.
@@ -32,7 +32,7 @@ Check the folder *"bin"* of the SDK!
 - **File -> Convert VST3 Preset to VST2 preset (fxp or fxb)**: allow to convert **VST 3** Presets to compatible **VST 2** Presets.
 - **File -> Overwrite Plug-in Name in VST3 Presets**: allow to rename the plug-in name in a set of **VST 3** Presets.
 
-![what_if_16](/resources/what_is_16.jpg)
+![what_if_16](../../resources/what_is_16.jpg)
 
 ## VST Player Window
 
@@ -73,21 +73,21 @@ For each loaded plug-in in a slot you can:
 
 - Information window of AGain plug-in showing the **Parameters** panel:
 
-![what_if_17](/resources/what_is_17.jpg)
+![what_if_17](../../resources/what_is_17.jpg)
 
 - Information window of NoteExpressionSynth plug-in showing the **[Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)** panel:
 
-![what_if_18](/resources/what_is_18.jpg)
+![what_if_18](../../resources/what_is_18.jpg)
 
 - Information window of AGain plug-in showing the **Properties** panel:
 
-![what_if_19](/resources/what_is_19.jpg)
+![what_if_19](../../resources/what_is_19.jpg)
 
 ### Context Menu
 
 Right click on the opened plug-in opens a context menu which allows to trigger some actions:
 
-![what_if_20](/resources/what_is_20.jpg)
+![what_if_20](../../resources/what_is_20.jpg)
 
 - **Switch to Generic Editor**: open the generic editor instead of the one provided by the plug-in.
 - **Export Presets Parameters as XML**:  load automatically all available VST 3 Presets for this plug-in and create a readable XML file for each preset including the parameter states.
@@ -96,12 +96,12 @@ Right click on the opened plug-in opens a context menu which allows to trigger s
 
 In this section you can:
 
-|• set the gain of the output audio<br> • control the transport state (Loop/Start/Stop/Rewind)<br> • change the tempo and signature | ![what_if_21](/resources/what_is_21.jpg) |
+|• set the gain of the output audio<br> • control the transport state (Loop/Start/Stop/Rewind)<br> • change the tempo and signature | ![what_if_21](../../resources/what_is_21.jpg) |
 | :- | - |
 
 ## VST 3 Plug-ins Tests Window
 
-![what_if_22](/resources/what_is_22.jpg)
+![what_if_22](../../resources/what_is_22.jpg)
 
 In this window you can select a specific test branch for a specific plug-in. You can navigate in the test tree (left part), then click on the button **Run Selected** to process only the selected tests.
 
@@ -121,6 +121,6 @@ In this version of this Plug-in Test Host, the tests are limited to the main **V
 
 ## Preset Editor
 
-![what_if_23](/resources/what_is_23.jpg)
+![what_if_23]../..rces/what_is_23.jpg)
 
 With this editor you can load and modify VST 3 presets created with the **Store** button of the VST Rack by adding some meta-attributes.

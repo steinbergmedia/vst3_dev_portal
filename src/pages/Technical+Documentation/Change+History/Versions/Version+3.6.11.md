@@ -4,7 +4,7 @@
 
 ## Version 3.6.11 (2018/10/22)
 
-- [VSTGUI](/pages/What+is+the+VST+3+SDK/VSTGUI.md) 4.7
+- [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.7
     - update to VSTGUI 4.7
     - move from GTK++ to XCB for Linux support
     - redesigned drag'n drop
@@ -18,7 +18,7 @@
     - New [Steinberg::Vst::INoteExpressionPhysicalUIMapping](../3.6.11/INoteExpressionPhysicalUIMapping.md) (plug-in): allowing the host to retrieve the preferred physical mapping associated to note expression supported by the plug-in.
 - cmake:
     - further improvement for users projects
-- [Plug-in Wrappers](/pages/What+is+the+VST+3+SDK/Wrappers/Index.md):
+- [Plug-in Wrappers](../../../What+is+the+VST+3+SDK/Wrappers/Index.md):
     - AAX Wrapper (VST 3 - AAX Wrapper):
         - fix UI resizing
         - fix issue for default blocksize

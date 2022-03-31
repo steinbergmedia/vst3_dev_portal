@@ -28,24 +28,24 @@ The file name must start with the unique ID of the audio processor printed in th
 
 ### AGain
 
-> ![tech_doc_22](/resources/tech_doc_22.png)<br>
+> ![tech_doc_22](../../../resources/tech_doc_22.png)<br>
 > **84E8DE5F92554F5396FAE4133C935A18_snapshot.png**
 >
 > ---
 >
-> ![tech_doc_23](/resources/tech_doc_23.png)<br>
+> ![tech_doc_23](../../../resources/tech_doc_23.png)<br>
 > **84E8DE5F92554F5396FAE4133C935A18_snapshot_2.0x.png**
 
 ### Note Expression Synth
 
-> ![tech_doc_24](/resources/tech_doc_24.png)<br>
+> ![tech_doc_24](../../../resources/tech_doc_24.png)<br>
 > **6EE65CD1B83A4AF480AA7929AEA6B8A0_snapshot.png**
 >
 > ---
 >
-> ![tech_doc_25](/resources/tech_doc_25.png)<br>
+> ![tech_doc_25](../../../resources/tech_doc_25.png)<br>
 > **6EE65CD1B83A4AF480AA7929AEA6B8A0_snapshot_2.0x.png**
 
 ### How Cubase uses Snapshots
 
-![tech_doc_26](/resources/tech_doc_26.png)
+![tech_doc_26](../../../resources/tech_doc_26.png)

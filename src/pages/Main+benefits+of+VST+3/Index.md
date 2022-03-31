@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md)
+>/ [VST Home](../Index.md)
 >
 ># Main benefits of VST 3
 

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.5.0] Remote Presentation of Parameters
 
@@ -118,7 +118,7 @@ This representation is implemented as XML text following the Document Type Defin
 
 ## Graphical overview
 
-![tech_doc_32](/resources/tech_doc_32.jpg)
+![tech_doc_32](../../../../resources/tech_doc_32.jpg)
 
 ## Example of implementation using helper class
 

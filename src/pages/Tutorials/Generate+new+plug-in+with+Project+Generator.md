@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Tutorials](../Tutorials.md)
+>/ [VST Home](../Index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># Generate a new plug-in with the Project Generator App
 
@@ -35,7 +35,7 @@ Check that the **Preferences** tab has the required information: see [Setting th
 
 In the **Create Plug-in Project** tab you have to enter information about the plug-in that you want create:
 
-![tutorials_4](/resources/tutorials_4.png)
+![tutorials_4](../../resources/tutorials_4.png)
 
 Check the [Create Plug-in Project](../What+is+the+VST+3+SDK/Project+Generator.md#setting-and-creating-a-plug-in-project) tab of the [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) dialog for more detailed documentation.
 
@@ -107,7 +107,7 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 }
 ```
 
->***Note***<br>
+>ⓘ **Note**<br>
 >- We add the flag [*kCanAutomate*](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31) which informs the DAW/host that this parameter can be automated.
 >- A **VST 3** parameter is always normalized (its value is a floating point value between [0, 1]), here its default value is set to 0.5.
 
@@ -168,7 +168,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 }
 ```
 
->***Note***<br>
+>ⓘ **Note**<br>
 >**data.inputParameterChanges** can include more than **1** change for the same parameter inside a processing audio block. Here we take only the last change in the list and apply it our **mGain**.
 
 2. The real processing part:
@@ -316,7 +316,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 }
 ```
 
->***Note***<br>
+>ⓘ **Note**<br>
 >In this example we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:
 >
 >addEventInput (STR16 ("Event In"), 4); // here 4 channels

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 >
 ># VST 3 Project Generator
 
@@ -16,7 +16,7 @@
 
 This open source application (Win/macOS) allows you to generate easily a new **VST 3** plug-in project by just entering in a GUI some parameters.
 
-![what_if_24](/resources/what_is_24.jpg)
+![what_if_24](../../resources/what_is_24.jpg)
 
 Check the folder *"VST3_Project_Generator"* of the SDK!
 
@@ -24,7 +24,7 @@ The source code is available at [GitHub - steinbergmedia/vst3projectgenerator: V
 
 ## Start the VST 3 Project Generator Application
 
-![what_if_25](/resources/what_is_25.png)
+![what_if_25](../../resources/what_is_25.png)
 
 The first time you start the application, you will ask to define 2 folders where are located the **VST SDK** and the **CMake** tool. It still possible to change these folders afterward in the *Preferences* Tab, see [Setting the Preferences](#setting-the-preferences).
 
@@ -34,21 +34,21 @@ The ***Visit us***: menu includes some useful links.
 
 If you have already downloaded the **CMake** tool, you just have to indicate the *Project Generator* where it is located, for this click on **Locate CMake** and choose with the file selector the *cmake.exe* file:
 
-![what_if_26](/resources/what_is_26.png)
+![what_if_26](../../resources/what_is_26.png)
 
 If you do not have previously installed the **CMake** tool, you could download it, just click on ***Download CMake***, an internet browser will open the dedicated **CMake** webpage, check the Download section and install **CMake**.
 
-![what_if_27](/resources/what_is_27.png)
+![what_if_27](../../resources/what_is_27.png)
 
 ### Locate VST SDK
 
 If you have already downloaded the **VST SDK**, you just have to indicate the *Project Generator* where it is located, for this click on ***Locate VST SDK*** and choose with the folder selector the *VST3_SDK* folder:
 
-![what_if_28](/resources/what_is_28.png)
+![what_if_28](../../resources/what_is_28.png)
 
 If you do not have previously installed the **VST SDK**, you could download it, just click on ***Download VST SDK***, a dialog appears:
 
-![what_if_29](/resources/what_is_29.png)
+![what_if_29](../../resources/what_is_29.png)
 
 You have 2 possibilities to download the **VST 3 SDK**:
 
@@ -59,7 +59,7 @@ You have 2 possibilities to download the **VST 3 SDK**:
 
 As soon as the requested 2 locations are founded, the user interface of the application should like this:
 
-![what_if_30](/resources/what_is_30.png)
+![what_if_30](../../resources/what_is_30.png)
 
 The next time you start the *Project Generator* application you will not asked to relocate them!
 
@@ -100,7 +100,7 @@ Like mentioned above in the subsection Path Preferences you could change several
 
 In this tab you are defining some information for the creation of a new plug-in:
 
-![what_if_31](/resources/what_is_31.png)
+![what_if_31](../../resources/what_is_31.png)
 
 - **Name**: the name of the plug-in which is displayed in a host: e.g. *"AGain"*</p>
 - **Type**: this specifies the main **VST 3** Sub-Category ([PlugType](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html)) of your plug-in:

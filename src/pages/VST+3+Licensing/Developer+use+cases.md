@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
+>/ [VST Home](../Index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
 >
 ># Developer use cases (FAQs)
 
@@ -9,4 +9,4 @@
 
 ---
 
-See **[Frequently Asked Questions: Licensing](/pages/FAQ/Licensing.md)**
+See **[Frequently Asked Questions: Licensing](../FAQ/Licensing.md)**

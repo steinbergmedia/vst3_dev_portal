@@ -3,8 +3,8 @@
 ># Version 3.6.8 (2017/11/08)
 
 ## Version 3.6.8 (2017/11/08)
-- Changes in the Licensing Agreement! Please check it ([VST 3 Licensing Issues](/pages/VST+3+Licensing/Index.md)).
-- [New Steinberg VST usage guidelines](/pages/VST+3+Licensing/Usage+guidelines.md) PDF
+- Changes in the Licensing Agreement! Please check it ([VST 3 Licensing Issues](../../../VST+3+Licensing/Index.md)).
+- [New Steinberg VST usage guidelines](../../../VST+3+Licensing/Usage+guidelines.md) PDF
 - This SDK version required compilers supporting C++11. It requires on Windows Visual Studio 2015 minimum!
 - Linux support in Beta
 - Interfaces changes:

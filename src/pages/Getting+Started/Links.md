@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Getting Started](../Getting+Started/Index.md)
+>/ [VST Home](../Index.md) / [Getting Started](../Getting+Started/Index.md)
 >
 ># VST 3 Links
 
@@ -36,7 +36,7 @@ You have 2 possibilities for getting the **VST 3 SDK:**
 
 ### Download the full VST 3 package as zip file
 
-Download a full **VST 3 SDK** package which includes everything you need to build a **VST 3** plug-in or host. Test your **VST 3** plug-in in real-time with the included [VST 3 Plug-in Test Host](/What+is+the+VST+3+SDK/Plug-in+Test+Host.md) and execute automated tests (See [What is the VST 3 SDK?](/What+is+the+VST+3+SDK/Index.md)):
+Download a full **VST 3 SDK** package which includes everything you need to build a **VST 3** plug-in or host. Test your **VST 3** plug-in in real-time with the included [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) and execute automated tests (See [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)):
 
 ><https://www.steinberg.net/vst3sdk> (direct link to zip file, ~100 MB)
 
@@ -46,7 +46,7 @@ Clone the **VST 3 SDK** repository from **GitHub** for easy integration into you
 
 >**<https://github.com/steinbergmedia/vst3sdk>**
 
->***Note***<br>
+>ⓘ **Note**<br>
 >Independently of the download source of the **VST 3 SDK** be sure that you follow the license agreement (check [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md))
 
 ## Online Documentation
@@ -55,7 +55,7 @@ Browse the **VST 3 SDK**'s online documentation including **API** reference and 
 
 >**<https://steinbergmedia.github.io/vst3_doc>**
 
-Browse the [VST portal](/pages/Index.md) for the whole documentation and tutorials:
+Browse the [VST portal](../..//pages/Index.md) for the whole documentation and tutorials:
 
 >**<https://developer.steinberg.help/display/VST>** **<-Link?**
 
@@ -66,7 +66,7 @@ Visit Steinberg's **[VST Developer Forum](https://forums.steinberg.net/c/develop
 
 ## VSTGUI
 
-When you download the **VST 3 SDK**, the last official release version of **[VSTGUI](/What+is+the+VST+3+SDK/VSTGUI.md)** is included, but you can get it (the release and the development branches) from github:
+When you download the **VST 3 SDK**, the last official release version of **[VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md)** is included, but you can get it (the release and the development branches) from github:
 
 >**<https://github.com/steinbergmedia/vstgui>**
 

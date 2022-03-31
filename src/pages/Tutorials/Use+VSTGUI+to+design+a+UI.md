@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Tutorials](../Tutorials.md)
+>/ [VST Home](../Index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># Use VSTGUI to design a User Interface
 
@@ -66,7 +66,7 @@ Now you can build your plug-in and start your preferred **VST 3** host to start 
 
 If you now open your plug-in editor, you will see a blank editor. To enter the UI editor, right-click on it and choose "**Open UIDescription Editor**".
 
-After your first edits, you have to add the *uidesc* file you have saved to your project (already done if you have used [VST 3 Project Generator](/What+is+the+VST+3+SDK/Project+Generator.md)) . You also have to make sure to always build your project after changes to the *uidesc* file.
+After your first edits, you have to add the *uidesc* file you have saved to your project (already done if you have used [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)) . You also have to make sure to always build your project after changes to the *uidesc* file.
 
 ---
 
@@ -92,7 +92,7 @@ Another way to use your own views is to register them at runtime with the UIView
 
 Here's an example video recorded while creating the new user interface for the famous Grungelizer plug-in of Cubase after it was ported from **VST 2.4** to **VST 3**.
 
-![tutorials_5](/resources/tutorials_5.png)
+![tutorials_5](../../resources/tutorials_5.png)
 
 **Create the VST 3 Grungelizer UI in 15 minutes with the UIDescriptionEditor of VSTGUI**
 

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../Index.md) / [Technical Documentation](../Index.md)
 >
 ># About MIDI in VST 3
 
@@ -21,7 +21,7 @@ Unlike in **VST 2, MIDI** is not included in **VST 3**.
 
 But **VST 3** offers suitable concepts that can be translated to and from MIDI using [Event](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Event.html):
 
-![tech_doc_27](/resources/tech_doc_27.png)
+![tech_doc_27](../../../resources/tech_doc_27.png)
 
 ## Related Concepts in MIDI and VST 3
 

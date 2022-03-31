@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.5.0] Note Expression
 
@@ -10,7 +10,7 @@
 
 - [[3.5.0] Key Switch](../3.5.0/IKeyswitchController.md)
 - [[3.6.11] NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
-- [About MIDI in VST 3](/pages/Technical+Documentation/About+MIDI/Index.md)
+- [About MIDI in VST 3](../../About+MIDI/Index.md)
 
 ---
 

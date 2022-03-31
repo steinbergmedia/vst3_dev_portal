@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Frequently Asked Questions](../FAQ/Index.md)
+>/ [VST Home](../../Index.md) / [Frequently Asked Questions](../FAQ/Index.md)
 >
 ># Communication
 
@@ -46,7 +46,7 @@ componentHandler->restartComponent (kParamTitlesChanged);
 
 The host will rescan the parameter list and update the titles.
 
->***Note***<br>
+>ⓘ **Note**<br>
 >With the flag **kParamValuesChanged** only the parameters values will be updated.
 
 

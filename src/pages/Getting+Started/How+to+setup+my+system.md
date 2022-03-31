@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Getting Started](../Getting+Started/Index.md)
+>/ [VST Home](../Index.md) / [Getting Started](../Getting+Started/Index.md)
 >
 ># How to setup up my system for VST 3
 
@@ -55,7 +55,7 @@ Required:
 sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-devlibxcb-util-dev libxcb-cursor-dev libxcb-xkb-devlibxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-devlibcairo2-dev libgtkmm-3.0-dev libsqlite3-devlibxcb-keysyms1-dev
 ```
 
->***Note***<br>
+>ⓘ **Note**<br>
 >On Raspbian/Debian, replace *"libxcb-util-dev"* with *"libxcb-util0-dev"*
 
 
@@ -71,7 +71,7 @@ A recommended IDE (optional): **QTCreator**
 sudo apt-get install qtcreator
 ```
 
->***Note***<br>
+>ⓘ **Note**<br>
 >You can also use the bash file *"setup_linux_packages_for_vst3sdk.sh"* included in the *VST3_SDK/tools* folder!
 
 
@@ -87,13 +87,13 @@ You can download cmake here: <https://cmake.org/download/> or use a package mana
 
 You can use it as a command line tool or use the cmake executable with GUI. cmake-gui is included in the cmake package:
 
-![getting_started_1](/resources/getting_started_1.jpg)
+![getting_started_1](../../resources/getting_started_1.jpg)
 
 >**Preparation on Windows**
 >
 >---
 >
->Generated VST3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](/Getting+Started/Preparation+on+Windows.md)!
+>Generated VST3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](../Getting+Started/Preparation+on+Windows.md)!
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >
@@ -109,4 +109,4 @@ You can use it as a command line tool or use the cmake executable with GUI. cmak
 
 ## Get a VST 3 host application
 
-You can use your favorite **VST 3** host application, see [here](/What+is+VST/Use+cases.md) for some examples, or you can use the [VST 3 Plug-in Test Host](/What+is+the+VST+3+SDK/Plug-in+Test+Host.md) application included in the **VST 3 SDK**.
+You can use your favorite **VST 3** host application, see [here](../What+is+VST/Use+cases.md) for some examples, or you can use the [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) application included in the **VST 3 SDK**.

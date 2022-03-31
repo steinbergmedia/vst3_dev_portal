@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md)
+>/ [VST Home](../Index.md)
 >
 ># Tutorials
 
@@ -21,7 +21,7 @@
 
 The tutorials explain common techniques and best practices for building your plug-ins. By following the instructions step by step you will learn how to develop **VST 3** plug-ins.
 
->***Note***<br>
+>ⓘ **Note**<br>
 >This section is under construction and will be extended inthe future with new tutorials.
 
 ## [Building the examples included in the SDK](../Tutorials/Building+the+examples+included+in+the+SDK.md)

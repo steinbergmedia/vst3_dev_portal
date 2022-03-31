@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Tutorials](../Tutorials.md)
+>/ [VST Home](../Index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># Using cmake for building VST 3 plug-ins
 
@@ -72,7 +72,7 @@ click on "Configure"
 click on "Generate" for creating project/solution
 ```
 
-![tutorials_3](/resources/tutorials_3.jpg)
+![tutorials_3](../../resources/tutorials_3.jpg)
 
 Example of cmakegui application on Windows
 
@@ -122,7 +122,7 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 >
 >---
 >
->Generated VST3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](/Getting+Started/Preparation+on+Windows.md)!
+>Generated VST3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](../Getting+Started/Preparation+on+Windows.md)!
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >

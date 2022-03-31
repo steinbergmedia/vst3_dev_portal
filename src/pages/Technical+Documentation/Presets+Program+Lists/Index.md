@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../Index.md) / [Technical Documentation](../Index.md)
 >
 ># Presets & Program Lists
 
@@ -19,7 +19,7 @@ See [VST 3 Locations / Format](../Locations+Format/Index.md#preset-format) for p
 
 ## Simple Plug-ins
 
-![tech_doc_17](/resources/tech_doc_17.png)
+![tech_doc_17](../../../resources/tech_doc_17.png)
 
 For a simple plug-in, the data of a preset is nothing more than its state. In this case:
 
@@ -42,7 +42,7 @@ If a plug-in uses a large pool of programs that require some kind of caching or 
 
 - If the plug-in defines a program list to be used as a pool of user presets that are initially in an 'empty' state, modifications can be applied to the list items directly. This way of using program lists should only be chosen if programs do require a lot of resources that need to be cached in order to achieve fast program changes (good examples for this are sample-based plug-ins).
 
-![tech_doc_18](/resources/tech_doc_18.jpg)
+![tech_doc_18](../../../resources/tech_doc_18.jpg)
 
 - The plug-in can provide GUI for the selection of programs, but it must enable the host to display the list and the selected program as well. The index of the selected program in the list must be exported as program selection parameter. ([Steinberg::Vst::ParameterInfo::kIsProgramChange](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645a517665185bca1f4f3d77ce0a6468b8e3))
 
@@ -57,5 +57,5 @@ All programs are always transmitted as a flat list to the host. But the plug-in 
 
 Pitch names are intended to be used with drum kit programs where the different drum sounds are addressed by note pitches. In order to display the name of the drum instrument assigned to a pitch in a drum editor, for example, the host calls [Steinberg::Vst::IUnitInfo::hasProgramPitchNames](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a63c02601259d4e8690f26eefaad53195) to determine if pitch names are supported and [Steinberg::Vst::IUnitInfo::getProgramPitchName](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a6126c4506f7981b5e800c6b4daa1e66b) to query the pitch name of a single note.
 
-See also [VST 3 Units Multi-timbral Program Lists](../Complex+Structures/Index.md#multi-timbral-program-lists) and check out the [pitchnames VST 3 Plug-in example](/pages/What+is+the+VST+3+SDK/Plug-in+Examples.md).
+See also [VST 3 Units Multi-timbral Program Lists](../Complex+Structures/Index.md#multi-timbral-program-lists) and check out the [pitchnames VST 3 Plug-in example](../../What+is+the+VST+3+SDK/Plug-in+Examples.md#pitchnames).
 

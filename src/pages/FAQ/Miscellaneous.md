@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Frequently Asked Questions](../FAQ/Index.md)
+>/ [VST Home](../../Index.md) / [Frequently Asked Questions](../FAQ/Index.md)
 >
 ># Miscellaneous
 
@@ -41,7 +41,7 @@ In order to load **VST 3 plug-ins** you need at least :
 - For VST 3.0.0 **Cubase**/**Nuendo** 4.1.2 is needed.
 - For VST 3.0.1 features **Cubase** 4.2 is needed.
 - For VST 3.5.0 features **Cubase** 6.0 is needed.
-- see [other VST 3 Hosts](/What+is+VST/Use+cases.md#examples-of-vst-3-host-applications)
+- see [other VST 3 Hosts](../What+is+VST/Use+cases.md#examples-of-vst-3-host-applications)
 
 Q: Why do plug-ins need subcategories?
 When you export your plug-in in the factory instance (check *againentry.cpp*: DEF_CLASS2), you have to define a subcategory string (can be a combination of more than one string: like "**Fx|Dynamics|EQ**" for example).
@@ -120,4 +120,4 @@ Navigate to<br>
 
 Here you can set which users can create symbolic links:
 
-![faq_1](/resources/faq_1.png)
+![faq_1](../../resources/faq_1.png)

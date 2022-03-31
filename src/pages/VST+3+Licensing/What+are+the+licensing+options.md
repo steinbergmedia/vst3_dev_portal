@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
+>/ [VST Home](../Index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
 >
 ># What are the licensing options
 
@@ -23,13 +23,13 @@ The "***Proprietary Steinberg VST 3***" license allows you to distribute your VS
 
 For more details please read the "***Proprietary Steinberg VST 3***" license agreement. If you accept it, please enter all required information, sign it and send it back to us, either via land mail (to the [Steinberg address](https://o.steinberg.net/en/extras/about.html) mentioned in the license), or via e-mail (<reception@steinberg.de>) or via fax (+49 (0)40 210 35-300). We will countersign the license agreement and send it back to you.
 
-- as PDF: [The License agreement](/resources/VST3_License_Agreement.pdf) is part of the VST SDK package, too.
+- as PDF: [The License agreement](../../resources/VST3_License_Agreement.pdf) is part of the VST SDK package, too.
 
 ## "Open-source [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)" license
 
 The open-source license lets you share the source code of your VST 3 plug-in/host ***including the VST 3 SDK's sources which are subject to the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).***
 
->***Note***<br>
+>ⓘ **Note**<br>
 >Note that VST 2 sources are NOT part of the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)!
 
 For more information about [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) check [this link](https://www.gnu.org/licenses/gpl-3.0.en.html). It also permits you to change and modify the VST 3 SDK's sources as long as you share your changes and make them available for everyone (e.g. on an Internet hosting service like GitHub). Note that you have to follow the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md).

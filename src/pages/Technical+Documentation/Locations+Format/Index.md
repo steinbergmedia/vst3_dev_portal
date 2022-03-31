@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../Index.md) / [Technical Documentation](../Index.md)
 >
 ># VST 3 Locations / Format
 

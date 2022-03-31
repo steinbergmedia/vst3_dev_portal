@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../Index.md) / [Technical Documentation](../Index.md)
 >
 ># VST 3 Units
 
@@ -45,7 +45,7 @@ The purposes of units are:
 
 - A unit can be associated with specific busses. There can be any kind of combination, but the VST 3 interfaces only define queries for special situations. (See [Units and Tracks]() **<- Link?**)
 
-![tech_doc_13](/resources/tech_doc_13.png)
+![tech_doc_13](../../../resources/tech_doc_13.png)
 
 Most things of interest in regard to units are GUI related, so the access interface [Steinberg::Vst::IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html) needs to be implemented as extension of the edit controller.
 
@@ -55,12 +55,12 @@ See also [Steinberg::Vst::IUnitInfo](https://steinbergmedia.github.io/vst3_doc/v
 
 - Example of a plug-in (MultibandCompressor from **Cubase** pluginset) with structured parameters list that can be used by the host, here in **Cubase** for selecting a parameter to automate:
 
-    ![tech_doc_14](/resources/tech_doc_14.jpg)
+    ![tech_doc_14](../../../resources/tech_doc_14.jpg)
 
-- Example of a plug-in (VST Amp Rack from **Cubase** pluginset) with structured parameters list visualized in the Parameters tab of the [**PluginTestHost**](/pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.md) application:
+- Example of a plug-in (VST Amp Rack from **Cubase** pluginset) with structured parameters list visualized in the Parameters tab of the [**PluginTestHost**](../../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) application:
 
-    ![tech_doc_15](/resources/tech_doc_15.jpg)
+    ![tech_doc_15](../../../resources/tech_doc_15.jpg)
 
 - Example of using the unit structure of **HALion Sonic SE** inside **Cakewalk** for automation selection:
 
-    ![tech_doc_16](/resources/tech_doc_16.png)
+    ![tech_doc_16](../../../resources/tech_doc_16.png)

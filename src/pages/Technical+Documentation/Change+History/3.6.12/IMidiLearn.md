@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../Index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.12] MIDI Learn
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [[3.0.1] Parameter MIDI Mapping](/pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.md)
+- [[3.0.1] Parameter MIDI Mapping](../../Change+History/3.0.1/IMidiMapping.md)
 
 ---
 

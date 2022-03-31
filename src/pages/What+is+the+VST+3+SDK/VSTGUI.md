@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 >
 ># VSTGUI
 
@@ -20,7 +20,7 @@ First developed in-house by Steinberg Media Technologies (around 1998) for their
 
 The last official release version of **VSTGUI** is always included in the **VST 3 SDK**.
 
-![what_if_35](/resources/what_is_35.png)
+![what_if_35](../../resources/what_is_35.png)
 
 Example of the **VSTGUI** UIDescription Editor (embedded editing WYSIWYG)
 
@@ -30,13 +30,13 @@ Check the folder "*vstgui4"* of the SDK!
 
 Visit Steinberg's **VST Developer Forum** in order to get help with development, submit bug reports, request new features and connect to other VSTGUI developers:
 
-![what_if_36](/resources/what_is_36.jpg)
+![what_if_36](../../resources/what_is_36.jpg)
 
 **<https://sdk.steinberg.net>**
 
 ## VSTGUI on GitHub
 
-![what_if_37](/resources/what_is_37.png)
+![what_if_37](../../resources/what_is_37.png)
 
 **<https://github.com/steinbergmedia/vstgui>**
 
