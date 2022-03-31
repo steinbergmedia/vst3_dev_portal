@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="/Index.html">VST Home</a> / <a href="../Tutorials.html">Tutorials</a></p>
+<p>/ <a href="../Index.html">VST Home</a> / <a href="../Tutorials/Index.html">Tutorials</a></p>
 <h1><a class="header" href="#generate-a-new-plug-in-with-the-project-generator-app" id="generate-a-new-plug-in-with-the-project-generator-app">Generate a new plug-in with the Project Generator App</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -188,7 +188,7 @@
 <p>Start the application located in the <em>VST3_Project_Generator</em> folder of the <strong>VST SDK</strong>.</p>
 <p>Check that the <strong>Preferences</strong> tab has the required information: see <a href="../What+is+the+VST+3+SDK/Project+Generator.html#setting-the-preferences">Setting the Preferences</a>.</p>
 <p>In the <strong>Create Plug-in Project</strong> tab you have to enter information about the plug-in that you want create:</p>
-<p><img src="/resources/tutorials_4.png" alt="tutorials_4" /></p>
+<p><img src="../../resources/tutorials_4.png" alt="tutorials_4" /></p>
 <p>Check the <a href="../What+is+the+VST+3+SDK/Project+Generator.html#setting-and-creating-a-plug-in-project">Create Plug-in Project</a> tab of the <a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a> dialog for more detailed documentation.</p>
 <p>Once you have entered all information, click <strong>Create</strong>. A script is started which creates a project with updated files in the Output directory. After this step, the IDE (<a href="https://visualstudio.microsoft.com/de/">Visual Studio</a> or <a href="https://developer.apple.com/xcode/">XCode</a>) is launched.</p>
 <p>Compile the project and test your new plug-in. The plug-in is created in the <em>Output Directory</em>, in order to make it visible to a <strong>VST 3</strong> host you may have to copy or symbolic-link it to the official VST 3 <a href="../Technical+Documentation/Locations+Format/Index.html">Locations / Format</a>.</p>
@@ -241,7 +241,7 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 }
 </code></pre>
 <blockquote>
-<p><em><strong>Note</strong></em><br></p>
+<p>ⓘ <strong>Note</strong><br></p>
 </blockquote>
 <blockquote>
 <ul>
@@ -300,7 +300,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&amp;data)
 }
 </code></pre>
 <blockquote>
-<p><em><strong>Note</strong></em><br></p>
+<p>ⓘ <strong>Note</strong><br></p>
 </blockquote>
 <blockquote>
 <p><strong>data.inputParameterChanges</strong> can include more than <strong>1</strong> change for the same parameter inside a processing audio block. Here we take only the last change in the list and apply it our <strong>mGain</strong>.</p>
@@ -433,7 +433,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 }
 </code></pre>
 <blockquote>
-<p><em><strong>Note</strong></em><br></p>
+<p>ⓘ <strong>Note</strong><br></p>
 </blockquote>
 <blockquote>
 <p>In this example we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:</p>

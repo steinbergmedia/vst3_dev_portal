@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="/Index.html">VST Home</a> / <a href="/pages/Technical+Documentation/Index.html">Technical Documentation</a></p>
+<p>/ <a href="../../../Index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
 <h1><a class="header" href="#300-interfaces-supported-by-the-host" id="300-interfaces-supported-by-the-host">[3.0.0] Interfaces supported by the host</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -205,7 +205,7 @@ An attribute list associates values with a key (id: some predefined keys can be 
 <li>[optional]</li>
 </ul>
 <p>Host callback interface, used with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a>. Retrieve via queryInterface from <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>.</p>
-<p>See also <a href="/pages/Technical+Documentation/VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a></p>
+<p>See also <a href="../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a></p>
 <h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1ihostapplicationhtmlihostapplicationa" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1ihostapplicationhtmlihostapplicationa"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html">IHostApplication</a></a></h2>
 <p>Basic host callback interface.</p>
 <ul>
@@ -224,7 +224,7 @@ An attribute list associates values with a key (id: some predefined keys can be 
 <li>[mandatory]</li>
 </ul>
 <p>Messages are sent from a VST controller component to a VST editor component and vice versa.</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html">IAttributeList</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a>, <a href="../Technical+Documentation/API+Documentation/Index.html#communication-between-the-components">Communication between the components</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html">IAttributeList</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a>, <a href="../../API+Documentation/Index.html#communication-between-the-components">Communication between the components</a></p>
 <h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iparamvaluequeuehtmliparamvaluequeuea" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iparamvaluequeuehtmliparamvaluequeuea"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueue</a></a></h2>
 <p>Queue of changes for a specific parameter.</p>
 <ul>
@@ -256,7 +256,7 @@ double curveValue = (slope * bufferTime) + offset; // bufferTime is any position
 </code></pre>
 <p><strong>Jumps</strong>:
 A jump in the automation curve has to be transmitted as two points: one with the old value and one with the new value at the next sample position.</p>
-<p><img src="/resources/tech_doc_29.jpg" alt="tech_doc_29" /></p>
+<p><img src="../../../../resources/tech_doc_29.jpg" alt="tech_doc_29" /></p>
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a></p>
 <h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iparameterchangeshtmliparameterchangesa" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iparameterchangeshtmliparameterchangesa"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a></a></h2>
 <p>All parameter changes of a processing block.</p>

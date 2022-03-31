@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="/Index.html">VST Home</a> / <a href="/pages/Technical+Documentation/Index.html">Technical Documentation</a></p>
+<p>/ <a href="../../../Index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
 <h1><a class="header" href="#300-multiple-dynamic-io-support" id="300-multiple-dynamic-io-support">[3.0.0] Multiple Dynamic I/O Support</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -173,9 +173,9 @@
 </ul>
 <p><strong>Related pages</strong></p>
 <ul>
-<li><a href="/pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li>
-<li><a href="/pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li>
-<li><a href="/pages/Technical+Documentation/Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></li>
+<li><a href="../../Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li>
+<li><a href="../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li>
+<li><a href="../../Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></li>
 </ul>
 <hr />
 <h2><a class="header" href="#introduction" id="introduction">Introduction</a></h2>
@@ -280,8 +280,8 @@ tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int
 <p>Not activated busses does need to be processed by the plug-in, which allows to reduce the CPU load.</p>
 <p>Check the workflow diagrams in order to understand when this is called: </p>
 <ul>
-<li><a href="/pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li>
-<li><a href="/pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li>
+<li><a href="../../Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li>
+<li><a href="../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li>
 </ul>
 <h2><a class="header" href="#what-is-a-side-chain" id="what-is-a-side-chain">What is a Side-Chain?</a></h2>
 <p>In audio applications, some plug-ins allow for a secondary signal to be made available to the plug-in and act as a controller of one or more parameters in the processing. Such a signal is commonly called a Side-chain Signal or Side-chain Input.</p>
@@ -314,7 +314,7 @@ addAudioInput (USTRING (&quot;Aux In&quot;), SpeakerArr::kStereo, kAux, 0); // 0
 <p>For example:
 const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR;
 =&gt; representing in hexadecimal 0x03 and in binary 0011.</p>
-<p><img src="/resources/tech_doc_28.jpg" alt="tech_doc_28" /></p>
+<p><img src="../../../../resources/tech_doc_28.jpg" alt="tech_doc_28" /></p>
 <h3><a class="header" href="#my-plug-in-is-capable-of-processing-all-possible-channel-configurations" id="my-plug-in-is-capable-of-processing-all-possible-channel-configurations">My plug-in is capable of processing all possible channel configurations</a></h3>
 <p>What type of speaker arrangement should I select when adding busses?</p>
 <p>Take the configuration your plug-in is most likely to be used with. For a 5.1-surround setup that would be the following:</p>
@@ -323,7 +323,7 @@ addAudioOutput (USTRING (&quot;Surround Out&quot;), SpeakerArr::k51);
 </code></pre>
 <p>But when the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> the host is informing your plug-in of the current speaker arrangement of the track it was selected in. You should return <strong>kResultOk</strong>, in the case you accept this arrangement, or <strong>kResultFalse</strong>, in case you do not.</p>
 <blockquote>
-<p><em><strong>Note</strong></em><br></p>
+<p>ⓘ <strong>Note</strong><br></p>
 </blockquote>
 <blockquote>
 <p>If you reject a <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> by returning <strong>kResultFalse</strong>, the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> where you have the chance to give the parameter 'arrangement' the value of the speaker arrangement your plug-in does accept for this given bus.</p>
@@ -331,7 +331,7 @@ addAudioOutput (USTRING (&quot;Surround Out&quot;), SpeakerArr::k51);
 </blockquote>
 <h3><a class="header" href="#how-are-speaker-arrangement-settings-handled-for-fx-plug-ins" id="how-are-speaker-arrangement-settings-handled-for-fx-plug-ins">How are speaker arrangement settings handled for FX plug-ins?</a></h3>
 <p>After instantiation of the plug-in, the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> with a default configuration (depending on the current channel configuration), if the plug-in accepts it (by returning <strong>kResultOK</strong>), it will continue with this configuration.
-If not (by returning <strong>kResultFalse</strong>), the host asks the plug-in for its wanted configuration by calling <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> (for Input and Output) and then recall <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> with the final wanted configuration. Check <a href="/pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequences</a> workflow.</p>
+If not (by returning <strong>kResultFalse</strong>), the host asks the plug-in for its wanted configuration by calling <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> (for Input and Output) and then recall <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> with the final wanted configuration. Check <a href="../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequences</a> workflow.</p>
 <pre><code>**Example of a Plug-in supporting only symmetric Input-Output Arrangements**:
 
 host -&gt; plug-in : setBusArrangements (monoIN, stereoOUT)

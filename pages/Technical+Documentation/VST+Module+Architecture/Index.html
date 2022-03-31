@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="/Index.html">VST Home</a> / <a href="../Index.html">Technical Documentation</a></p>
+<p>/ <a href="../../Index.html">VST Home</a> / <a href="../Index.html">Technical Documentation</a></p>
 <h1><a class="header" href="#vst-module-architecture" id="vst-module-architecture">VST Module Architecture</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -327,7 +327,7 @@ _bundleExit
 <p>In <a href="https://www.steinberg.net/">Steinberg</a> SDKs released before Cubase 5, the interface functions were using pointers of type <em>char</em> for passing strings to and from the host. These have been changed now to using Steinberg's defined type <em>tchar</em> which is equivalent to <em>char16</em>, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>, so strings are expected to be encoded in <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>.<br></p>
 <p>Accordingly, also the implementation of a plug-in needs to be adapted to deal correctly with Unicode-encoded strings, as well as only ever passing Unicode strings to the host.</p>
 <blockquote>
-<p><em><strong>Note</strong></em><br></p>
+<p>ⓘ <strong>Note</strong><br></p>
 </blockquote>
 <blockquote>
 <p>Changing a function from using 8 bit to 16 bit character pointers may seem as only a minor modification, but in interface design this is a major intrusion, because an interface is a contract to the outside world that is never to be changed. Therefore, classes that are changed to use Unicode strings are distinguished and also receive a new unique class ID.</p>
@@ -336,7 +336,7 @@ _bundleExit
 <p>Even with the current SDK it is still possible to develop non-Unicode plug-ins. In the file <em>pluginterfaces/base/ftypes.h</em>, the line <em>&quot;#define UNICODE_OFF&quot;</em> is commented out, but by uncommenting it you can revert all interfaces to using single byte ASCII strings. Alternatively, you can also specify UNICODE_OFF as a preprocessor definition in your project file.<br></p>
 <p>Also, the plug-in's factory info now does not define the Unicode flag anymore, so a Unicode host sees the compiled plug-in as non-Unicode. Also, when reverting to single byte strings the plug-in's implementation also has to be changed to behave correctly.</p>
 <blockquote>
-<p><em><strong>Note</strong></em><br></p>
+<p>ⓘ <strong>Note</strong><br></p>
 </blockquote>
 <blockquote>
 <p>When undefining Unicode, the class IDs also revert to the old ones.</p>
