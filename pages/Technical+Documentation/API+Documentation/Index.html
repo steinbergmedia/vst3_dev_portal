@@ -1,0 +1,467 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js steinberg">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>VST 3 API Documentation - VST 3 Developer Portal</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "steinberg" : "steinberg";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('steinberg')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../pages/index.html">VST</a></li><li class="chapter-item "><a href="../../../pages/What+is+VST/Index.html">What is VST?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/What+is+VST/Use+cases.html">Use cases</a></li></ol></li><li class="chapter-item "><a href="../../../pages/Main+benefits+of+VST+3/Index.html">Main benefits of VST 3</a></li><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/Index.html">What is the VST 3 SDK?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/Plug-in+Examples.html">VST 3 Plug-in Examples</a></li><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a></li><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a></li><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/Wrappers/Index.html">AAX, AUv3, AU and VST 2 Wrappers</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/Wrappers/VST+2+Wrapper.html">VST 2.x Wrapper</a></li><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.html">AAX Wrapper</a></li><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/Wrappers/AUv3+Wrapper.html">AudioUnit v3 Wrapper</a></li><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/Wrappers/AUv2+Wrapper.html">AudioUnit v2 Wrapper</a></li></ol></li><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.html">iOS Inter-App Audio Support</a></li><li class="chapter-item "><a href="../../../pages/What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a></li></ol></li><li class="chapter-item "><a href="../../../pages/VST+3+Licensing/Index.html">VST 3 Licensing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/VST+3+Licensing/Usage+guidelines.html">Steinberg VST usage guidelines</a></li><li class="chapter-item "><a href="../../../pages/VST+3+Licensing/What+are+the+licensing+options.html">What are the licensing options</a></li><li class="chapter-item "><a href="../../../pages/VST+3+Licensing/Which+files+fall+under+which+license.html">Which files fall under which license?</a></li><li class="chapter-item "><a href="../../../pages/VST+3+Licensing/Developer+use+cases.html">Developer use cases (FAQs)</a></li></ol></li><li class="chapter-item "><a href="../../../pages/Getting+Started/Index.html">Getting Started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/Getting+Started/Links.html">VST 3 Links</a></li><li class="chapter-item "><a href="../../../pages/Getting+Started/How+to+setup+my+system.html">How to setup up my system for VST 3</a></li><li class="chapter-item "><a href="../../../pages/Getting+Started/Preparation+on+Windows.html">Preparation on Windows</a></li></ol></li><li class="chapter-item "><a href="../../../pages/Tutorials/Index.html">Tutorials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/Tutorials/Building+the+examples+included+in+the+SDK.html">Building the examples included in the SDK</a></li><li class="chapter-item "><a href="../../../pages/Tutorials/Using+cmake+for+building+plug-ins.html">Using cmake for building VST 3 plug-ins</a></li><li class="chapter-item "><a href="../../../pages/Tutorials/Generate+new+plug-in+with+Project+Generator.html">Generate a new plug-in with the Project Generator App</a></li><li class="chapter-item "><a href="../../../pages/Tutorials/Use+VSTGUI+to+design+a+UI.html">Use VSTGUI to design a User Interface</a></li><li class="chapter-item "><a href="../../../pages/Tutorials/Advanced+VST+3+techniques.html">Advanced VST 3 techniques</a></li><li class="chapter-item "><a href="../../../pages/Tutorials/How+to+use+the+silence+flags.html">How to use the silence flags</a></li><li class="chapter-item "><a href="../../../pages/Tutorials/Strings+Conversion+Helper.html">Strings Conversion Helper</a></li><li class="chapter-item "><a href="../../../pages/Tutorials/Creating+a+plug-in+from+the+Helloworld+template.html">Creating a plug-in from the Helloworld template</a></li></ol></li><li class="chapter-item expanded "><a href="../../../pages/Technical+Documentation/Index.html">Technical Documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../pages/Technical+Documentation/API+Documentation/Index.html" class="active">VST 3 API Documentation</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/VST+Module+Architecture/Index.html">VST Module Architecture</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/Technical+Documentation/VST+Module+Architecture/Loading.html">How the host will load a VST-MA based Plug-in</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/VST+Module+Architecture/Derive+From+Interface.html">How to derive a class from an interface</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/VST+Module+Architecture/Interface+Versions+and+Inheritance.html">Interface Versions and Inheritance</a></li></ol></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/VST+3+Units/Index.html">VST 3 Units</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Workflow+Diagrams/Index.html">VST 3 Workflow Diagrams</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Workflow+Diagrams/Edit+Controller+Call+Sequence.html">Edit Controller Call Sequence</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Workflow+Diagrams/Get+Latency+Call+Sequence.html">Get Latency Call Sequence</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Workflow+Diagrams/Resize+View+Call+Sequence.html">Resize View Call Sequence</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li></ol></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Locations+Format/Index.html">VST 3 Locations / Format</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Locations+Format/Plugin+Format.html">Plug-in Format Structure</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Locations+Format/Plugin+Locations.html">Plug-in Locations</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Locations+Format/Preset+Format.html">Preset Format</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Locations+Format/Preset+Locations.html">Preset Locations</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Locations+Format/Snapshots.html">Snapshots</a></li></ol></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/About+MIDI/Index.html">About MIDI in VST 3</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Index.html">Change History</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.4.html">Version 3.7.4 (2021/12/14)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.3.html">Version 3.7.3 (2021/08/10)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.2.html">Version 3.7.2 (2021/03/30)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.1.html">Version 3.7.1 (2020/11/17)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.0.html">Version 3.7.0 (2020/07/29)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.14.html">Version 3.6.14 (2019/11/29)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.13.html">Version 3.6.13 (2019/04/08)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.12.html">Version 3.6.12 (2018/12/03)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.11.html">Version 3.6.11 (2018/10/22)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.10.html">Version 3.6.10 (2018/06/11)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.9.html">Version 3.6.9 (2018/03/01)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.8.html">Version 3.6.8 (2017/11/08)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.7.html">Version 3.6.7 (2017/03/03)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.6.html">Version 3.6.6 (2016/06/17)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.5.html">Version 3.6.5 (2015/08/28)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.0.html">Version 3.6.0 (2013/11/22)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.5.2.html">Version 3.5.2 (2012/09/25)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.5.1.html">Version 3.5.1 (2011/11/11)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.5.0.html">Version 3.5.0 (2011/02/04)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.1.0.html">Version 3.1.0 (2010/06/25)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.0.2.html">Version 3.0.2 (2009/01/15)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.0.1.html">Version 3.0.1 (2008/03/19)</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/Versions/Version+3.0.0.html">Version 3.0.0 (2008/01/17)</a></li></ol></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.html">[3.0.0] Interfaces supported by the plug-in</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.html">[3.0.0] Silence flags</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.0.0/Host+Interfaces.html">[3.0.0] Interfaces supported by the host</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html">[3.0.2] Parameter Finder</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.html">[3.1.0] Audio Presentation Latency</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.1.0/IComponentHandler2.html">[3.1.0] Dirty State, Open Editor Request and UI Group Editing Support</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.1.0/IEditController2.html">[3.1.0] KnobMode, Open Help &amp; Open Aboutbox</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.html">[3.5.0] Note Expression</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.5.0/IKeyswitchController.html">[3.5.0] Key Switch</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.html">[3.5.0] Remote Presentation of Parameters</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.5.0/IComponentHandler3.html">[3.5.0] Context Menu</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.html">[3.5.0] Enhanced Linked Parameters</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.0/IAA.html">[3.6.0] iOS Inter-App Audio</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.0/IStreamAttributes.html">[3.6.0] Preset Meta-Information</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.5/IInfoListener.html">[3.6.5] Channel Context Info</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.5/IUnitHandler2.html">[3.6.5] Unit-Bus Assignment Change</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.5/IPrefetchableSupport.html">[3.6.5] Prefetchable</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.5/IAutomationState.html">[3.6.5] Automation State</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.6/IPlugViewContentScaleSupport.html">[3.6.6] PlugView Content Scaling</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.8/IComponentHandlerBusActivation.html">[3.6.8] Request Bus Activation</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.10/UI+Snapshots.html">[3.6.10] UI Snapshots</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping.html">[3.6.11] NoteExpression Physical UI Mapping</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.html">[3.6.12] Legacy MIDI CC Out Event</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.12/IPlugInterfaceSupport.html">[3.6.12] Host Query Interface support</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.6.12/IVst3WrapperMPESupport.html">[3.6.12] MPE support for Wrappers</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html">[3.7.0] Parameter Function Name</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.7.0/IProgress.html">[3.7.0] Progress display</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.html">[3.7.0] Process Context Requirements</a></li><li class="chapter-item "><a href="../../../pages/Technical+Documentation/Change+History/3.7.0/Control+Voltage.html">[3.7.0] Control Voltage Bus Flag</a></li></ol></li><li class="chapter-item "><a href="../../../pages/FAQ/Index.html">Frequently Asked Questions</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pages/FAQ/Communication.html">Communication</a></li><li class="chapter-item "><a href="../../../pages/FAQ/Processing.html">Processing</a></li><li class="chapter-item "><a href="../../../pages/FAQ/GUI+Editor.html">GUI-Editor</a></li><li class="chapter-item "><a href="../../../pages/FAQ/Compatibility+with+VST+2.x+or+VST+1.html">Compatibility with VST 2.x or VST 1</a></li><li class="chapter-item "><a href="../../../pages/FAQ/Persistence.html">Persistence</a></li><li class="chapter-item "><a href="../../../pages/FAQ/Miscellaneous.html">Miscellaneous</a></li><li class="chapter-item "><a href="../../../pages/FAQ/Licensing.html">Licensing</a></li></ol></li><li class="chapter-item "><a href="../../../pages/Forum/Index.html">VST 3 Forum</a></li><li class="chapter-item "><a href="../../../pages/Miscellaneous/Index.html">Miscellaneous</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">VST 3 Developer Portal</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <blockquote>
+<p>/ <a href="/Index.html">VST Home</a> / <a href="../Index.html">Technical Documentation</a></p>
+<h1 id="vst-3-api-documentation"><a class="header" href="#vst-3-api-documentation">VST 3 API Documentation</a></h1>
+</blockquote>
+<p><strong>On this page:</strong></p>
+<p>[[<em>TOC</em>]]</p>
+<p><strong>Related pages:</strong></p>
+<ul>
+<li><a href="../VST+Module+Architecture/Index.html">VST Module Architecture</a></li>
+</ul>
+<hr />
+<p>The <strong>VST 3 API</strong> is an interface collection designed for realtime audio processing components. Such a component can be an audio effect or an audio instrument.
+<strong>VST 3</strong> is based on a technology called <a href="../VST+Module+Architecture/Index.html">VST Module Architecture</a> (<strong>VST-MA</strong>). Please read the <a href="../VST+Module+Architecture/Index.html">VST-MA documentation</a> to find out more about how the plug-in system works in general.
+The API files belonging to <strong>VST 3</strong> are located in the folder <em>&quot;pluginterfaces/vst&quot;</em>.</p>
+<h2 id="basic-conception"><a class="header" href="#basic-conception">Basic Conception</a></h2>
+<p>A <strong>VST 3</strong> audio effect or instrument basically consists of two parts: a processing part and an edit controller part.
+The corresponding interfaces are:</p>
+<ul>
+<li>Processor : <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">Steinberg::Vst::IAudioProcessor</a> + <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">Steinberg::Vst::IComponent</a></li>
+<li>Controller : <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Steinberg::Vst::IEditController</a></li>
+</ul>
+<p><img src="/resources/tech_doc_1.jpg" alt="tech_doc_1" /></p>
+<p><img src="/resources/tech_doc_2.png" alt="tech_doc_2" /></p>
+<p>The design of <strong>VST 3</strong> suggests a complete separation of processor and edit controller by implementing two components. Splitting up an effect into these two parts requires some extra implementation efforts.
+However, this separation enables the host to run each component in a different context, even on different computers. Another benefit is that parameter changes can be separated when it comes to automation. While for processing these changes need to be transmitted in a sample-accurate way, the GUI part can be updated with a much lower frequency and it can be shifted by the amount that results from any delay compensation or other processing offset.</p><br>
+A plug-in that supports this separation has to set the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a626a070dcd2e025250f41b9c3f9817cda3185111648c1599241528f1a7f523396">Steinberg::Vst::kDistributable</a> flag in the class info of the processor component (<a href="https://steinbergmedia.github.io/vst3_doc/base/structSteinberg_1_1PClassInfo2.html#ab5ab9135185421caad5ad8ae1d758409">Steinberg::PClassInfo2::classFlags</a>). Of course not every plug-in can support this, for example if it depends deeply on resources that cannot be moved easily to another computer. So when this flag is not set, the host must not try to separate the components in any way.
+Although it is not recommended, it is possible to implement both the processing part and the controller part in one component class. The host tries to query the  <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Steinberg::Vst::IEditController</a> interface after creating an <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">Steinberg::Vst::IAudioProcessor</a> and on success uses it as the controller.</p>
+<blockquote>
+<p><em><strong>Note</strong></em><br>
+A host does not need to instantiate the controller part of a plug-in for processing it.</p>
+<p>The plug-in should be prepared for processing without having the controller part instantiated.</p>
+</blockquote>
+<h3 id="initialize"><a class="header" href="#initialize">Initialize</a></h3>
+<p>Both <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">Steinberg::Vst::IComponent</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Steinberg::Vst::IEditController</a> derive from <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html">Steinberg::IPluginBase</a>. The purpose of this basic interface is to initialize the component and to terminate it before it is destroyed.</p>
+<p>The context parameter passed to <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html#a3c81be4ff2e7bbb541d3527264f26eed">Steinberg::IPluginBase::initialize</a> should implement the interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html">Steinberg::Vst::IHostApplication</a>. Hosts should not call other functions before initialize is called, with the sole exception of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Steinberg::Vst::IComponent::setIoMode</a> which must be called before initialize. <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a8aa65685068ad033af57b1497926b689">Steinberg::Vst::IComponent::getControllerClassId</a> can also be called before (<a href="../Workflow+Diagrams/Index.html">See VST 3 Workflow Diagrams</a>).</p>
+<p><strong>How the plug-in can access IHostApplication?</strong></p>
+<pre><code>/-----------------------------------------------------------------------
+tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
+{
+    FUnknownPtr&lt;IHostApplication&gt; hostApp (hostContext);
+    if (hostApp)
+    {
+        String128 name;
+        if (hostApp-&gt;getName (name) == kResultTrue)
+        {
+            //...
+        }
+    }
+    //...
+}
+/-----------------------------------------------------------------------
+</code></pre>
+<h3 id="creation-and-initialize-from-host-point-of-view"><a class="header" href="#creation-and-initialize-from-host-point-of-view">Creation and Initialize from Host point of view</a></h3>
+<p>Here an example of a host implementation creating the component and its associated controller of a plug-in with a given classID:</p>
+<pre><code>/-----------------------------------------------------------------------
+Vst::IComponent* processorComponent;
+Vst::IEditController* editController;
+IPluginFactory* factory;
+// ...
+// factory already initialized (after the library is loaded,see validator for example)
+// ...
+// create its component part
+tresult result = factory-&gt;createInstance (classID,Vst::IComponent::iid, (void**)&amp;processorComponent);
+if (processorComponent &amp;&amp; (result == kResultOk))
+{
+    // initialize the component with our host context (note: initialize called just after creatInstance)
+    res = (processorComponent-&gt;initialize (gStandardPluginContext) == kResultOk);
+
+    // try to create the controller part from the component
+    // for Plug-ins which did not succeed to separate component from controller :-(
+    if (processorComponent-&gt;queryInterface (Vst::IEditController::iid, (void**)&amp;editController) != kResultTrue)
+    {
+        // editController is now created, we have the ownership, which means that we have
+        // to release it when not used anymore FUID controllerCID;
+
+        // ask for the associated controller class ID (could be called before processorComponent-&gt;initialize ())
+        if (processorComponent-&gt;getControllerClassId (controllerCID) == kResultTrue &amp;&amp; controllerCID.isValid ())
+        {
+            // create its controller part created from the factory
+            result = factory-&gt;createInstance (controllerCID, Vst::IEditController::iid, (void**)&amp;editController);
+            if (editController &amp;&amp; (result == kResultOk))
+            {
+                // initialize the component with our context
+                res = (editController-&gt;initialize (gStandardPluginContext) == kResultOk);
+
+                // now processorComponent and editController are initialized... :-)
+            }
+        }
+    }
+}
+/-----------------------------------------------------------------------
+</code></pre>
+<blockquote>
+<p><em><strong>Note</strong></em><br>
+Please be aware that IPluginBase::initialize and IPluginBase::terminate must only be called once per object instance. So if an object implements both IAudioProcessor and IEditController take care to only call them once as in the example above.</p>
+</blockquote>
+<h3 id="extensions"><a class="header" href="#extensions">Extensions</a></h3>
+<p>The functionality of the components implementing these basic interfaces can be extended by a number of optional interfaces that only need to be implemented if this extension is required.</p>
+<ul>
+<li>Processor Extensions:
+<ul>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">Steinberg::Vst::IConnectionPoint</a></li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IUnitData</a></li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html">Steinberg::Vst::IProgramListData</a></li>
+</ul>
+</li>
+<li>Edit Controller Extensions:
+<ul>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">Steinberg::Vst::IConnectionPoint</a></li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiMapping.html">Steinberg::Vst::IMidiMapping</a></li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">Steinberg::Vst::IUnitInfo</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="persistence"><a class="header" href="#persistence">Persistence</a></h3>
+<p>The host stores and restores the complete state of the processor and of the controller in project files and in preset files:</p>
+<ul>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a10db03106be8ba89d23859fa6be5d9f6">Steinberg::Vst::IComponent::getState</a> + <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805">Steinberg::Vst::IComponent::setState</a>
+store and restore the DSP model.</li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a10db03106be8ba89d23859fa6be5d9f6">Steinberg::Vst::IEditController::getState</a> + <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a77ac39bcc5c4b15818b1a87de2573805">Steinberg::Vst::IEditController::setState</a>
+store and restore any GUI settings that are not related to the processor (like scroll positions etc).</li>
+<li><strong>Restore</strong>: When the states are restored, the host passes the processor state to both the processor and the controller (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f">Steinberg::Vst::IEditController::setComponentState</a>). A host must always pass that state to the processor first. The controller then has to synchronize its parameters to this state (but must not perform any <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a> callbacks).
+After restoring a state, the host rescans the parameters (asking the controller) in order to update its internal representation.</li>
+</ul>
+<p><img src="/resources/tech_doc_3.png" alt="tech_doc_3" /></p>
+<p><img src="/resources/tech_doc_4.png" alt="tech_doc_4" /></p>
+<p>See also</p>
+<ul>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IBStream.html">Steinberg::IBStream</a></li>
+<li><a href="../Change+History/3.0.0/Plug+in+Interfaces.html">VST 3 Interfaces to be implemented by the Plug-in</a></li>
+<li><a href="../Change+History/3.0.0/Host+Interfaces.html">VST 3 Interfaces to be implemented by the Host</a></li>
+</ul>
+<h2 id="the-processing-part"><a class="header" href="#the-processing-part">The Processing Part</a></h2>
+<p><img src="/resources/tech_doc_5.png" alt="tech_doc_5" /></p>
+<p>The processing part consists of two related interfaces: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">Steinberg::Vst::IComponent</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">Steinberg::Vst::IAudioProcessor</a>. The reason for splitting the two is to use the basic interfaces <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">Steinberg::Vst::IComponent</a> not only for audio plug-ins but also for other kinds of media (e.g. video processing in the future). Hence the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">Steinberg::Vst::IAudioProcessor</a> interface represents the audio-specific part of a processing component. Let's have a closer look at the concepts.</p>
+<h3 id="icomponent"><a class="header" href="#icomponent">IComponent</a></h3>
+<p>The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">Steinberg::Vst::IComponent</a> interface allows the host to get information about the plug-in:</p>
+<ol>
+<li>
+<p><strong>Edit controller association</strong>: In order to enable the host to create the associated edit controller part, the processing component has to provide the matching class-ID. The host uses the module's class factory to create the controller component. See <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a8aa65685068ad033af57b1497926b689">Steinberg::Vst::IComponent::getControllerClassId</a></p>
+</li>
+<li>
+<p>The host can ask for bus configurations (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1BusInfo.html">Steinberg::Vst::BusInfo</a>). See <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a41b0e971a0ff153a4eb34274750b0c91">Steinberg::Vst::IComponent::getBusInfo</a></p>
+</li>
+<li>
+<p>The host can ask for routing information (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1RoutingInfo.html">Steinberg::Vst::RoutingInfo</a>).</p>
+</li>
+<li>
+<p>The host can activate or deactivate a specific bus like <a href="../Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain">side-chain</a>. A deactivated bus should be not processed by the plug-in. See <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a3ab7d06aaefe03da1fcd1819f1261050">Steinberg::Vst::IComponent::activateBus</a></p>
+</li>
+<li>
+<p>The host can activate or deactivate the plug-in (On/Off button). See <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">Steinberg::Vst::IComponent::setActive</a></p>
+</li>
+<li>
+<p>The host can store and restore the state of the plug-in (preset and project persistence). See <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1Component.html#aee393393dc4dccf6e0b30a43380859b4">Steinberg::Vst::IComponent::getState</a>,  <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1Component.html#a9228db732b48ece8b5b734e69b979d10">Steinberg::Vst::IComponent::setState</a></p>
+</li>
+</ol>
+<h3 id="iaudioprocessor"><a class="header" href="#iaudioprocessor">IAudioProcessor</a></h3>
+<p>The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">Steinberg::Vst::IAudioProcessor</a> interface extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">Steinberg::Vst::IComponent</a> by providing a state machine for processing and the process method:</p>
+<ol>
+<li>
+<p><strong>Setup</strong>: The processor must be configured before processing can start. Configurations are only allowed when the processor is inactive (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">Steinberg::Vst::IComponent::setActive</a>).</p>
+<ul>
+<li>
+<p><strong>Process setup</strong>: The processor is informed about the parameters that cannot be changed while processing is active. (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html">Steinberg::Vst::ProcessSetup</a>).</p>
+</li>
+<li>
+<p><strong>Dynamic Speaker Arrangements</strong>: The host can try to change the number of channels of an audio bus. By default the speaker arrangement is defined by the plug-in. In order to adjust the plug-in to a context where a different speaker arrangement is used, the host can try to change it using <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Steinberg::Vst::IAudioProcessor::setBusArrangements</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the processor is configured, it has to be activated (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">Steinberg::Vst::IComponent::setActive</a>). The activation call signals that all configurations have been finished.</p>
+</li>
+<li>
+<p>In addition to that, the processor has a 'processing state'. Before a host begins to perform processing calls, it has to signal this by calling <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af252fd721b195b793f3a5dfffc069401">IAudioProcessor::setProcessing</a> (true). When the host stops processing, it must call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af252fd721b195b793f3a5dfffc069401">IAudioProcessor::setProcessing</a> (false) after the last processing call. Please see also: <a href="../Workflow+Diagrams/Index.html">VST 3 Workflow Diagrams</a></p>
+</li>
+<li>
+<p><strong>Process</strong>: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">Steinberg::Vst::IAudioProcessor::process</a> is the method that implements the actual processing. Any data needed for processing is passed to it as a parameter <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a100f97803b72565daedee80e34bbb7f0">Steinberg::Vst::ProcessData</a>. This is necessary because processing is often performed in a separate thread and this is a simple way to avoid thread synchronization problems.</p>
+<ul>
+<li>
+<p><strong>Block Size</strong>: Processing is done in blocks. The maximum number of samples to be processed in one block is set in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#aefb5731b94dbc899a4a7e9cd1c96e6a2">Steinberg::Vst::IAudioProcessor::setupProcessing</a>. The actual number of samples in a processing block is transmitted in the process call and can be different from call to call, but it must be a value between 1 and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html#a41cd06a0c942a1b3f283092b893d0de3">maxSamplesPerBlock</a>.</p>
+</li>
+<li>
+<p><strong>Audio Buffers</strong>: For any audio bus defined by the plug-in, the host must provide buffer data - even for inactive busses. Busses are addressed by index, so leaving out inactive busses will mix up these indices. The actual data buffer can be null though (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">Steinberg::Vst::AudioBusBuffers</a>).</p>
+<strong>Note</strong>: The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#abac2239417d88a091cad5b4f917dc49a">channelBuffers32</a> (or <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#a0bbcd9a3e75d01b547097c91f9f659cf">channelBuffers64</a>) buffer pointers can be the same or different for input and output: this has to be taken into account in the process function (for example not resetting the output before processing if input and output buffers are the same!). It can be the same for multiple inputs or multiple outputs (in the case of instrument plug-ins) all outputs (or inputs) can share the same buffer!</p>
+<strong>Important</strong>: The host can call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">Steinberg::Vst::IAudioProcessor::process</a> without buffers (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a852a74fc4e461ef086bac048313d2de9">numInputs</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a1338255f88bad5cf4fb714c71f92b61a">numOutputs</a> of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">Steinberg::Vst::AudioBusBuffers</a> are zeroed, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#aeb42971a4bd34d7baa27cff8d7e3cf26">numSamples</a> too), in order to flush parameters (from host to plug-in). Parameters can only be flushed when the host needs to send parameter changes and no processing is called.</p>
+</li>
+<li>
+<p><strong>Parameters &amp; Automation</strong>: Any parameter changes are transmitted in the process call through the interfaces <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">Steinberg::Vst::IParameterChanges</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">Steinberg::Vst::IParamValueQueue</a>. Simple parameter changes as a result of GUI interaction are transmitted exactly in the same way as automation. (see <a href="../Parameters+Automation/Index.html">Parameters and Automation</a>).</p>
+</li>
+<li>
+<p><strong>Context</strong>: For each processing block the host should provide information about its state. See <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html">Steinberg::Vst::ProcessContext</a></p>
+</li>
+<li>
+<p><strong>Events</strong>: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEventList.html">Steinberg::Vst::IEventList</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="/resources/tech_doc_6.png" alt="tech_doc_6" /></p>
+<h2 id="the-editing-part"><a class="header" href="#the-editing-part">The Editing Part</a></h2>
+<p><img src="/resources/tech_doc_7.jpg" alt="tech_doc_7" /></p>
+<p>The edit controller is responsible for the GUI aspects ofthe plug-in. Its standard interface is <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Steinberg::Vst::IEditController</a>. The host has to provide acallback interface for the edit controller named <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">Steinberg::Vst::IComponentHandler</a>. The handler is essentialfor the communication with both the host and the processor.</p>
+<ul>
+<li>
+<p><strong>GUI</strong>: Optionally, the controller can define an editor view. The method <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a1fa4ed10cc0979e5559045104c998b1a">Steinberg::Vst::IEditController::createView</a> allows the host to specify the type of the view by passing an id-string. Currently the only type defined is &quot;editor&quot; (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst_1_1ViewType.html#aaa62c4c32f0270a908eb20c7c7124dfc">Steinberg::Vst::ViewType::kEditor</a>), but there might be variations in future versions (e.g. &quot;setup&quot;).
+See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">Steinberg::IPlugView</a>.</p>
+</li>
+<li>
+<p><strong>Parameters</strong>: The controller is responsible for the management of parameters. Any change to a parameter that is caused by user interaction in the plug-in GUI must be properly reported to the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">Steinberg::Vst::IComponentHandler</a>. The host is responsible for transmitting the change to the processor. In order to make recording of automation work, it is necessary to call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223">beginEdit</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93">performEdit</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#ae380206486b11f000cad7c0d9b6e877c">endEdit</a> in the expected order! And from the <strong>UI-Thread</strong>!
+With the new interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler2.html">IComponentHandler2</a> (since VST 3.1), the plug-in (from UI) can group parameters which should use the same time-stamp in host when writing automation, by wrapping a set of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223">beginEdit</a>/<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93">performEdit</a>/<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#ae380206486b11f000cad7c0d9b6e877c">endEdit</a> functions (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>) with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler2.html#aba339113df404a6b3c557774d4aa9102">startGroupEdit</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler2.html#adbdc10ff7ecd96fa365ad4f98d57b55e">finishGroupEdit</a>.
+More details can be found on the page about <a href="../Parameters+Automation/Index.html">Parameters</a>.</p>
+</li>
+<li>
+<p><strong>Plug-in structure</strong>: If the plug-in is composed of discrete functional parts, the edit controller should publish this structure and the parameters belonging to each part by implementing the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">Steinberg::Vst::IUnitInfo</a> interface. More details can be found on the page about <a href="../VST+3+Units/Index.html">VST 3 Units</a>.</p>
+</li>
+</ul>
+<p><img src="/resources/tech_doc_8.png" alt="tech_doc_8" /></p>
+<h2 id="vst-3-threading-model"><a class="header" href="#vst-3-threading-model">VST 3 threading model</a></h2>
+<p>The threading model used by <strong>VST 3</strong> is quite simple and requires that:</p>
+<ul>
+<li>all initialisation/de-initialisation are done in the UI Thread</li>
+<li>all function exported by the plugin-in are called by the host in the UI Thread with the exception of:
+<ul>
+<li>IAudioProcessor→process: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!</li>
+<li>IAudioProcessor→setProcessing: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!</li>
+</ul>
+</li>
+<li>all function exported by the host are called by the plug-in in the UI Thread</li>
+</ul>
+<p>Check the <a href="../Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a> and the <a href="../Workflow+Diagrams/Edit+Controller+Call+Sequence.html">Edit Controller Call Sequence</a></p>
+<h2 id="communication-between-the-components"><a class="header" href="#communication-between-the-components">Communication between the components</a></h2>
+<p>The two <strong>VST 3</strong> components (processor and controller) need a way to communicate. It is the task of the host to handle this.</p>
+<h3 id="standard-communication"><a class="header" href="#standard-communication">Standard communication</a></h3>
+<p>All standard data (like parameter changes) are transmitted between processor and controller using the basic interfaces listed above.</p>
+<ul>
+<li>After creation of processor and controller, the host sets the controller component state from the processors state. This is a change from the previous SDK, where it was assumed that after creation the controller and the processor are in sync.</li>
+<li>When the host sets a new processor state (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805">Steinberg::Vst::IComponent::setState</a>), this state is always transmitted to the controller as well (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f">Steinberg::Vst::IEditController::setComponentState</a>). The controller then has to synchronize to this state and adjust its parameters.</li>
+<li>When the controller transmits a parameter change to the host, the host synchronizes the processor by passing the new values as <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">Steinberg::Vst::IParameterChanges</a> to the process call.</li>
+<li>The processor can transmit outgoing parameter changes to the host as well. (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#af08c4f7dfd9e456cc98ba0eb325993ae">Steinberg::Vst::ProcessData::outputParameterChanges</a>). These are transmitted to the edit controller by the call of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#aded549c5b0f342a23dee18cc41ece6b8">Steinberg::Vst::IEditController::setParamNormalized</a>.</li>
+</ul>
+<p><img src="/resources/tech_doc_9.jpg" alt="tech_doc_9" /></p>
+<h3 id="private-communication"><a class="header" href="#private-communication">Private communication</a></h3>
+<p>Data that is unknown to the host can be transmitted by means of messages. The communication interfaces are</p>
+<ul>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">Steinberg::Vst::IConnectionPoint</a>: The host establishes a connection between processor and controller.</li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMessage.html">Steinberg::Vst::IMessage</a>: Represents a message to send to the counterpart.</li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html">Steinberg::Vst::IAttributeList</a>: A list of attributes belonging to a message.</li>
+</ul>
+<p>Please note that messages from the processor to the controller must not be sent during the process call, as this would not be fast enough and would break the real time processing. Such tasks should be handled in a separate timer thread.</p>
+<p><img src="/resources/tech_doc_10.png" alt="tech_doc_10" /></p>
+<h3 id="initialization-of-communication-from-host-point-of-view"><a class="header" href="#initialization-of-communication-from-host-point-of-view">Initialization of communication from Host point of view</a></h3>
+<p>Here an example of host implementation where the component and controller parts are connected and synchronized:</p>
+<pre><code>/-----------------------------------------------------------------------
+// the component and the controller parts are previously becreated and initialized (see above)
+// ...
+if (editController)
+{
+    // set the host handler
+    // the host set its handler to the controller
+    editController-&gt;setComponentHandler (myHostComponentHandler);
+
+    // connect the 2 components
+    Vst::IConnectionPoint* iConnectionPointComponent = nullPtr;
+    Vst::IConnectionPoint* iConnectionPointController = nullPtr;
+
+    processorComponent-&gt;queryInterface (Vst::IConnectionPoint::iid, (void**)&amp;iConnectionPointComponent);
+    editController-&gt;queryInterface (Vst::IConnectionPoint::iid, (void**)&amp;iConnectionPointController);
+
+    if (iConnectionPointComponent &amp;&amp; iConnectionPointController)
+    {
+        iConnectionPointComponent-&gt;connect (iConnectionPointController);
+        iConnectionPointController-&gt;connect (iConnectionPointComponent);
+    }
+
+    // synchronize controller to component by using setComponentState
+    MemoryStream stream; // defined in &quot;public.sdk/source/common/memorystream.h&quot;
+    stream.setByteOrder (kLittleEndian);
+    if (processorComponent-&gt;getState (&amp;stream) == kResultTrue)
+    {
+        stream.rewind ();
+        editController-&gt;setComponentState (&amp;stream);
+    }
+
+    // now processorComponent and editController parts are connected and synchronized...:-)
+}
+</code></pre>
+<blockquote>
+<p><em><strong>Note</strong></em><br>
+Please note that you CANNOT rely on the implementation detail that the connection is done directly between the processor component and the edit controller!</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../pages/Technical+Documentation/Index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../pages/Technical+Documentation/VST+Module+Architecture/Index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../pages/Technical+Documentation/Index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../pages/Technical+Documentation/VST+Module+Architecture/Index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../mermaid.min.js"></script>
+        <script type="text/javascript" src="../../../mermaid-init.js"></script>
+    </body>
+</html>

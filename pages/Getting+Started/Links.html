@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js steinberg">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>VST 3 Links - VST 3 Developer Portal</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "steinberg" : "steinberg";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('steinberg')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../pages/index.html">VST</a></li><li class="chapter-item "><a href="../../pages/What+is+VST/Index.html">What is VST?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/What+is+VST/Use+cases.html">Use cases</a></li></ol></li><li class="chapter-item "><a href="../../pages/Main+benefits+of+VST+3/Index.html">Main benefits of VST 3</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Index.html">What is the VST 3 SDK?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Plug-in+Examples.html">VST 3 Plug-in Examples</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/Index.html">AAX, AUv3, AU and VST 2 Wrappers</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/VST+2+Wrapper.html">VST 2.x Wrapper</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.html">AAX Wrapper</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/AUv3+Wrapper.html">AudioUnit v3 Wrapper</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/AUv2+Wrapper.html">AudioUnit v2 Wrapper</a></li></ol></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.html">iOS Inter-App Audio Support</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a></li></ol></li><li class="chapter-item "><a href="../../pages/VST+3+Licensing/Index.html">VST 3 Licensing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/VST+3+Licensing/Usage+guidelines.html">Steinberg VST usage guidelines</a></li><li class="chapter-item "><a href="../../pages/VST+3+Licensing/What+are+the+licensing+options.html">What are the licensing options</a></li><li class="chapter-item "><a href="../../pages/VST+3+Licensing/Which+files+fall+under+which+license.html">Which files fall under which license?</a></li><li class="chapter-item "><a href="../../pages/VST+3+Licensing/Developer+use+cases.html">Developer use cases (FAQs)</a></li></ol></li><li class="chapter-item expanded "><a href="../../pages/Getting+Started/Index.html">Getting Started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../pages/Getting+Started/Links.html" class="active">VST 3 Links</a></li><li class="chapter-item "><a href="../../pages/Getting+Started/How+to+setup+my+system.html">How to setup up my system for VST 3</a></li><li class="chapter-item "><a href="../../pages/Getting+Started/Preparation+on+Windows.html">Preparation on Windows</a></li></ol></li><li class="chapter-item "><a href="../../pages/Tutorials/Index.html">Tutorials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Tutorials/Building+the+examples+included+in+the+SDK.html">Building the examples included in the SDK</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Using+cmake+for+building+plug-ins.html">Using cmake for building VST 3 plug-ins</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Generate+new+plug-in+with+Project+Generator.html">Generate a new plug-in with the Project Generator App</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Use+VSTGUI+to+design+a+UI.html">Use VSTGUI to design a User Interface</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Advanced+VST+3+techniques.html">Advanced VST 3 techniques</a></li><li class="chapter-item "><a href="../../pages/Tutorials/How+to+use+the+silence+flags.html">How to use the silence flags</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Strings+Conversion+Helper.html">Strings Conversion Helper</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Creating+a+plug-in+from+the+Helloworld+template.html">Creating a plug-in from the Helloworld template</a></li></ol></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Index.html">Technical Documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Technical+Documentation/API+Documentation/Index.html">VST 3 API Documentation</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+Module+Architecture/Index.html">VST Module Architecture</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+Module+Architecture/Loading.html">How the host will load a VST-MA based Plug-in</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+Module+Architecture/Derive+From+Interface.html">How to derive a class from an interface</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+Module+Architecture/Interface+Versions+and+Inheritance.html">Interface Versions and Inheritance</a></li></ol></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+3+Units/Index.html">VST 3 Units</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Index.html">VST 3 Workflow Diagrams</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Edit+Controller+Call+Sequence.html">Edit Controller Call Sequence</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Get+Latency+Call+Sequence.html">Get Latency Call Sequence</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Resize+View+Call+Sequence.html">Resize View Call Sequence</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li></ol></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Index.html">VST 3 Locations / Format</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Plugin+Format.html">Plug-in Format Structure</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Plugin+Locations.html">Plug-in Locations</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Preset+Format.html">Preset Format</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Preset+Locations.html">Preset Locations</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Snapshots.html">Snapshots</a></li></ol></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/About+MIDI/Index.html">About MIDI in VST 3</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Index.html">Change History</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.4.html">Version 3.7.4 (2021/12/14)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.3.html">Version 3.7.3 (2021/08/10)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.2.html">Version 3.7.2 (2021/03/30)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.1.html">Version 3.7.1 (2020/11/17)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.7.0.html">Version 3.7.0 (2020/07/29)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.14.html">Version 3.6.14 (2019/11/29)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.13.html">Version 3.6.13 (2019/04/08)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.12.html">Version 3.6.12 (2018/12/03)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.11.html">Version 3.6.11 (2018/10/22)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.10.html">Version 3.6.10 (2018/06/11)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.9.html">Version 3.6.9 (2018/03/01)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.8.html">Version 3.6.8 (2017/11/08)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.7.html">Version 3.6.7 (2017/03/03)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.6.html">Version 3.6.6 (2016/06/17)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.5.html">Version 3.6.5 (2015/08/28)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.6.0.html">Version 3.6.0 (2013/11/22)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.5.2.html">Version 3.5.2 (2012/09/25)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.5.1.html">Version 3.5.1 (2011/11/11)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.5.0.html">Version 3.5.0 (2011/02/04)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.1.0.html">Version 3.1.0 (2010/06/25)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.0.2.html">Version 3.0.2 (2009/01/15)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.0.1.html">Version 3.0.1 (2008/03/19)</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/Versions/Version+3.0.0.html">Version 3.0.0 (2008/01/17)</a></li></ol></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.html">[3.0.0] Interfaces supported by the plug-in</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.html">[3.0.0] Silence flags</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.0/Host+Interfaces.html">[3.0.0] Interfaces supported by the host</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html">[3.0.2] Parameter Finder</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.html">[3.1.0] Audio Presentation Latency</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.1.0/IComponentHandler2.html">[3.1.0] Dirty State, Open Editor Request and UI Group Editing Support</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.1.0/IEditController2.html">[3.1.0] KnobMode, Open Help &amp; Open Aboutbox</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.html">[3.5.0] Note Expression</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/IKeyswitchController.html">[3.5.0] Key Switch</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.html">[3.5.0] Remote Presentation of Parameters</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/IComponentHandler3.html">[3.5.0] Context Menu</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.html">[3.5.0] Enhanced Linked Parameters</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.0/IAA.html">[3.6.0] iOS Inter-App Audio</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.0/IStreamAttributes.html">[3.6.0] Preset Meta-Information</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.5/IInfoListener.html">[3.6.5] Channel Context Info</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.5/IUnitHandler2.html">[3.6.5] Unit-Bus Assignment Change</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.5/IPrefetchableSupport.html">[3.6.5] Prefetchable</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.5/IAutomationState.html">[3.6.5] Automation State</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.6/IPlugViewContentScaleSupport.html">[3.6.6] PlugView Content Scaling</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.8/IComponentHandlerBusActivation.html">[3.6.8] Request Bus Activation</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.10/UI+Snapshots.html">[3.6.10] UI Snapshots</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping.html">[3.6.11] NoteExpression Physical UI Mapping</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.html">[3.6.12] Legacy MIDI CC Out Event</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.12/IPlugInterfaceSupport.html">[3.6.12] Host Query Interface support</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.12/IVst3WrapperMPESupport.html">[3.6.12] MPE support for Wrappers</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html">[3.7.0] Parameter Function Name</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.7.0/IProgress.html">[3.7.0] Progress display</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.html">[3.7.0] Process Context Requirements</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.7.0/Control+Voltage.html">[3.7.0] Control Voltage Bus Flag</a></li></ol></li><li class="chapter-item "><a href="../../pages/FAQ/Index.html">Frequently Asked Questions</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/FAQ/Communication.html">Communication</a></li><li class="chapter-item "><a href="../../pages/FAQ/Processing.html">Processing</a></li><li class="chapter-item "><a href="../../pages/FAQ/GUI+Editor.html">GUI-Editor</a></li><li class="chapter-item "><a href="../../pages/FAQ/Compatibility+with+VST+2.x+or+VST+1.html">Compatibility with VST 2.x or VST 1</a></li><li class="chapter-item "><a href="../../pages/FAQ/Persistence.html">Persistence</a></li><li class="chapter-item "><a href="../../pages/FAQ/Miscellaneous.html">Miscellaneous</a></li><li class="chapter-item "><a href="../../pages/FAQ/Licensing.html">Licensing</a></li></ol></li><li class="chapter-item "><a href="../../pages/Forum/Index.html">VST 3 Forum</a></li><li class="chapter-item "><a href="../../pages/Miscellaneous/Index.html">Miscellaneous</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">VST 3 Developer Portal</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <blockquote>
+<p>/ <a href="/Index.html">VST Home</a> / <a href="../Getting+Started/Index.html">Getting Started</a></p>
+<h1 id="vst-3-links"><a class="header" href="#vst-3-links">VST 3 Links</a></h1>
+</blockquote>
+<p><strong>On this page:</strong></p>
+<p>[[<em>TOC</em>]]</p>
+<p><strong>Related pages:</strong></p>
+<ul>
+<li><a href="../Getting+Started/How+to+setup+my+system.html">How to set up my system for VST 3</a></li>
+</ul>
+<hr />
+<p>Important links you will need for working with <strong>VST 3</strong></p>
+<h2 id="getting-vst-3-sdk"><a class="header" href="#getting-vst-3-sdk">Getting VST 3 SDK</a></h2>
+<p>You have 2 possibilities for getting the <strong>VST 3 SDK:</strong></p>
+<table><thead><tr><th>Component</th><th><a href="">as zip package</a></th><th><a href="">as GitHub repository</a></th></tr></thead><tbody>
+<tr><td><a href="../Technical+Documentation/API+Documentation/Index.html">VST 3 API</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/Index.html">Helpers classes</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/Wrappers/Index.html">AAX, AUv3, AU and VST 2 wrappers</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.html">iOS Inter-App Audio support</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/Plug-in+Examples.html">VST 3 Plug-ins Examples</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/Index.html#validator-command-line">Validator command line</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/Index.html#audiohost">AudioAudioHost</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/Index.html#editorhost">EditorHost</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/Index.html#vst3-inspector">VST3 Inspector</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a></td><td>✔️</td><td>✔️</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a></td><td>✔️ (as exe only)</td><td>✔️ (as source code)</td></tr>
+<tr><td><a href="../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host (exe only)</a></td><td>✔️</td><td>❌</td></tr>
+<tr><td><a href="../VST+3+Licensing/Index.html">VST 3 Licensing</a></td><td>✔️ Proprietary + <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a></td><td>❌ only <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a></td></tr>
+</tbody></table>
+<h3 id="download-the-full-vst-3-package-as-zip-file"><a class="header" href="#download-the-full-vst-3-package-as-zip-file">Download the full VST 3 package as zip file</a></h3>
+<p>Download a full <strong>VST 3 SDK</strong> package which includes everything you need to build a <strong>VST 3</strong> plug-in or host. Test your <strong>VST 3</strong> plug-in in real-time with the included <a href="/What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a> and execute automated tests (See <a href="/What+is+the+VST+3+SDK/Index.html">What is the VST 3 SDK?</a>):</p>
+<blockquote>
+<p><a href="https://www.steinberg.net/vst3sdk">https://www.steinberg.net/vst3sdk</a> (direct link to zip file, ~100 MB)</p>
+</blockquote>
+<h3 id="clone-vst-3-repository-from-github"><a class="header" href="#clone-vst-3-repository-from-github">Clone VST 3 repository from GitHub</a></h3>
+<p>Clone the <strong>VST 3 SDK</strong> repository from <strong>GitHub</strong> for easy integration into your workspace:</p>
+<blockquote>
+<p><strong><a href="https://github.com/steinbergmedia/vst3sdk">https://github.com/steinbergmedia/vst3sdk</a></strong></p>
+</blockquote>
+<blockquote>
+<p><em><strong>Note</strong></em><br>
+Independently of the download source of the <strong>VST 3 SDK</strong> be sure that you follow the license agreement (check <a href="../VST+3+Licensing/What+are+the+licensing+options.html">What are the licensing options for VST 3?</a>)</p>
+</blockquote>
+<h2 id="online-documentation"><a class="header" href="#online-documentation">Online Documentation</a></h2>
+<p>Browse the <strong>VST 3 SDK</strong>'s online documentation including <strong>API</strong> reference and sample code:</p>
+<blockquote>
+<p><strong><a href="https://steinbergmedia.github.io/vst3_doc">https://steinbergmedia.github.io/vst3_doc</a></strong></p>
+</blockquote>
+<p>Browse the <a href="/pages/Index.html">VST portal</a> for the whole documentation and tutorials:</p>
+<blockquote>
+<p><strong><a href="https://developer.steinberg.help/display/VST">https://developer.steinberg.help/display/VST</a></strong> <strong>&lt;-Link?</strong></p>
+</blockquote>
+<h2 id="vst-3-forum"><a class="header" href="#vst-3-forum"><a href="https://forums.steinberg.net/c/developer/103">VST 3 Forum</a></a></h2>
+<p>Visit Steinberg's <strong><a href="https://forums.steinberg.net/c/developer/103/none">VST Developer Forum</a></strong> in order to get help with development, submit bug reports, request new features and connect to other <strong>VST 3</strong> developers:</p>
+<blockquote>
+<p><strong><a href="https://sdk.steinberg.net">https://sdk.steinberg.net</a></strong></p>
+</blockquote>
+<h2 id="vstgui"><a class="header" href="#vstgui">VSTGUI</a></h2>
+<p>When you download the <strong>VST 3 SDK</strong>, the last official release version of <strong><a href="/What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a></strong> is included, but you can get it (the release and the development branches) from github:</p>
+<blockquote>
+<p><strong><a href="https://github.com/steinbergmedia/vstgui">https://github.com/steinbergmedia/vstgui</a></strong></p>
+</blockquote>
+<h2 id="external-links-to-vst-3-dsp-conferences-and-plug-ins-development"><a class="header" href="#external-links-to-vst-3-dsp-conferences-and-plug-ins-development">External Links to VST 3, DSP, Conferences and Plug-ins development</a></h2>
+<p>Here you can find some links to external resource about <strong>VST 3</strong>, DSP and Plug-ins development:</p>
+<table><thead><tr><th style="text-align: left">Category</th><th style="text-align: left">Links</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>YouTube</strong></td><td style="text-align: left">• <a href="https://www.youtube.com/watch?v=zXnHaoN2Cig">ADC 2020</a>: Support of MIDI2 and MIDI-CI in <strong>VST 3</strong> instruments, Arne Scheffler and Janne Roeper</p> <a href="https://www.youtube.com/watch?v=zXnHaoN2Cig"><img src="https://i.ytimg.com/vi/zXnHaoN2Cig/maxresdefault.jpg" alt="getting_started_vid_1" /></a></p> • <a href="https://www.youtube.com/watch?v=0QBWXC8KNz0">ADC 2017</a>: VST 3 history, advantages and best practice, Yvan Grabit</p> <a href="https://www.youtube.com/watch?v=0QBWXC8KNz0"><img src="https://i.ytimg.com/vi/0QBWXC8KNz0/maxresdefault.jpg" alt="getting_started_vid_2" /></a></p> • <a href="https://www.youtube.com/watch?v=SJXGSJ6Zoro">ADC 2016</a>: The Golden Rules of Audio Programming, Pete Goodliffe<br> • <a href="https://www.youtube.com/watch?v=004zcWwgi1A">How to setup the VST3 SDK's Sample Plugin Projects</a></td></tr>
+<tr><td style="text-align: left"><strong>Forums / Mailing List</strong></td><td style="text-align: left">• <a href="https://www.kvraudio.com/forum/viewforum.php?f=33">KVRAudio Forum</a>: DSP and Plug-in Development<br> • music-dsp mailing list at <a href="https://www.columbia.edu/">columbia.edu</a><br> • <a href="https://www.musicdsp.org/en/latest/">music-dsp</a> Web<br> • <a href="https://mail.music.vt.edu/mailman/listinfo/sursound">Sursound</a> mailing list at Virginia Tech<br> • <a href="https://dsp.stackexchange.com/">DSP Stack Overflow</a>: DSP Developer community<br> • <a href="https://stackoverflow.com/">Stack Overflow</a>: Developer community</td></tr>
+<tr><td style="text-align: left"><strong>Tools / Libraries</strong></td><td style="text-align: left">• <a href="https://www.mathworks.com/help/audio/digital-audio-workstation-daw-plug-in-creation.html">MATLAB®</a>: Audio Plugin Creation and Hosting<br> • <a href="https://www.blender.org/">Blender</a>: A free and open source 3D creation suite<br> • <a href="http://arma.sourceforge.net/">Armadillo</a>: C++ library for linear algebra &amp; scientific computing<br> • <a href="https://math.nist.gov/lapack++/">lapack++</a>: Linear Algebra PACKage in C++<br> • <a href="http://dlib.net/">dlib</a>: Dlib is a modern C++ toolkit<br> • <a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html">Intel MKL</a>: Intel® Math Kernel Library</td></tr>
+<tr><td style="text-align: left"><strong>Books</strong></td><td style="text-align: left">• <a href="https://www.dsprelated.com/">DSP related.com</a>: Articles, news, and blogs about basic and modern DSP topics<br> • <a href="#download-the-full-vst-3-package-as-zip-file">Introduction to Signal Processing</a> by Sophocles J. Orfanidis<br> • <a href="http://www.dspguide.com/whatdsp.htm">DSP Guide</a> by Steven W. Smithn (The Scientist and Engineer's Guide to Digital Signal Processing)<br> • <a href="https://ccrma.stanford.edu/%7Ejos/">Online Books</a> by Julius O. Smith III (Mathematics of the Discrete Fourier Transform (DFT), Introduction to Digital Filters, Physical/Spectral Audio Signal Processing)<br> • <a href="https://jackschaedler.github.io/circles-sines-signals/">Seeing Circles, Sines, and Signals</a>: A visual and interactive introduction to DSP<br> • <a href="https://www.native-instruments.com/fileadmin/ni_media/downloads/pdf/VAFilterDesign_2.1.0.pdf">The ART of VA Filter Design</a> by Vadim Zavalishin (theoretical and practical aspects of the virtual analog ﬁlter design in the music DSP context)<br> • <a href="https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list">Stackoverflow - The Definitive C++ Book Guide and List</a>: Nice list of C++ books (for beginner to advanced levels)</td></tr>
+<tr><td style="text-align: left"><strong>Conferences</strong></td><td style="text-align: left">• <a href="https://audio.dev/">ADC</a>: Audio Developer Conference by Roli<br> • <a href="http://www.dafx.de/">DAFx</a>: Digital Audio Effects<br> • <a href="https://www.ieee.org/conferences/index.html">ICASSP</a>: International Conference on Acoustics, Speech, and Signal Processing<br> • <a href="https://www.ismir.net/">ISMIR</a>: International Society for Music Information Retrieval</td></tr>
+<tr><td style="text-align: left"><strong>Other</strong><br></td><td style="text-align: left">• <a href="https://en.wikipedia.org/wiki/Virtual_Studio_Technology">VST</a> in wikipedia<br> • <a href="https://www.steinberg.net/de/stories/">VST Story</a> Interview<br> • <a href="https://www.steinberg.net/de/">Steinberg Media Technologies</a></p> <a href="https://www.youtube.com/watch?v=nc8I36RI4Y4&amp;feature=emb_title"><img src="https://i.ytimg.com/vi/nc8I36RI4Y4/maxresdefault.jpg" alt="getting_started_vid_3" /></a></td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../pages/Getting+Started/Index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../pages/Getting+Started/How+to+setup+my+system.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../pages/Getting+Started/Index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../pages/Getting+Started/How+to+setup+my+system.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../mermaid.min.js"></script>
+        <script type="text/javascript" src="../../mermaid-init.js"></script>
+    </body>
+</html>
