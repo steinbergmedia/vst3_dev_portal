@@ -24,7 +24,7 @@
         - [MIDI 2.0 Per-Note Controllers](../About+MIDI/Index.md)
 - cmake:
     - New cmake files
-    - Fix on Windows creation of VST3 folder using powershell with admin rights
+    - Fix on Windows creation of VST 3 folder using powershell with admin rights
 - [Samples](../../../What+is+the+VST+3+SDK/Plug-in+Examples.md):
     - New VST 3 plug-ins examples:
         - SyncDelay using [Steinberg::Vst::IProcessContextRequirements](../3.7.0/IProcessContextRequirements.md)
@@ -35,7 +35,7 @@
         - support of [IParameterFunctionName](../3.7.0/IParameterFunctionName.md)
         - check if Silent flag for Main and [Side-chain](../3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) Inputs are used
 - [Plug-in Wrappers](../../../What+is+the+VST+3+SDK/Wrappers/Index.md):
-    - Fix for AAX/VST2 BaseWrapper setChunk attribute Vst::StateType::kProject was not set for component.
+    - Fix for AAX/VST 2 BaseWrapper setChunk attribute Vst::StateType::kProject was not set for component.
 - Helpers classes:
     - Added functions to load FXB/FXP states and to write FXB states for compatibility with VST2.x (see public.sdk/source/vst/utility/vst2persistence.h)
     - Fix compilation with MinGW-w64 GCC compiler

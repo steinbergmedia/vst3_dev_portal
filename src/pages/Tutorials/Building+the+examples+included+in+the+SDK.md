@@ -14,7 +14,7 @@ They can be loaded into **VST 3** hosts like Cubase, WaveLab, ...
 
 ---
 
-## Part 1: Getting and installing the VST3 SDK
+## Part 1: Getting and installing the VST 3 SDK
 
 For downloading the SDK, see this section "[How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)".
 
@@ -44,7 +44,7 @@ cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=
 >
 >---
 >
->Generated VST3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](../Getting+Started/Preparation+on+Windows.md)!
+>Generated VST 3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST 3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](../Getting+Started/Preparation+on+Windows.md)!
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >
@@ -52,7 +52,7 @@ cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=
 >-DSMTG_CREATE_PLUGIN_LINK=0
 >```
 >
->You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for VST3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
+>You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for VST 3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
 >
 >```
 >-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`

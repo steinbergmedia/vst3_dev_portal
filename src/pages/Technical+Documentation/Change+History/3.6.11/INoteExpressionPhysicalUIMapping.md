@@ -28,7 +28,7 @@ With this plug-in interface, the host can retrieve the preferred physical mappin
 
 ```
 //------------------------------------------------------------------------
-// here an example of how a VST3 Plug-in could support this INoteExpressionPhysicalUIMapping interface.
+// here an example of how a VST 3 Plug-in could support this INoteExpressionPhysicalUIMapping interface.
 // we need to define somewhere the iids:
   
 //in MyController class declaration

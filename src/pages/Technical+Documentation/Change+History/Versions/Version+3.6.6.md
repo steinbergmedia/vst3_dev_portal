@@ -16,7 +16,7 @@
     - VST 3 - Audio Unit Wrapper :
         - update to last Audio Core update
     - VST 3 - VST 2.x Wrapper :
-        - add support of version (VST3 -> VST2)
+        - add support of version (VST 3 -> VST 2)
 - Helpers classes:
     - add support for bypass including delay compensation (vstbypassprocessor.h)
     - add helpers for events/parameters iterator (vstaudioprocessoralgo.h)

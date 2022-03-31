@@ -10,7 +10,7 @@
 
 ---
 
-This section provides general information about where to find the VST3 SDK and how to get it.
+This section provides general information about where to find the VST 3 SDK and how to get it.
 
 ## [VST 3 Links](../Getting+Started/Links.md)
 

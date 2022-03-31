@@ -29,8 +29,8 @@ Check the folder *"bin"* of the SDK!
 - **View -> Open Plug-in Information Window**: opens a window showing all registered component and controller **VST 3 plug-ins**
 - **View -> Open Plug-in Unit Tests Window**: opens a window where you can test your plug-in with a series of unit tests.
 - **View -> Open Preset Editor**: allows you to open, check and modify **VST 3** presets (adding meta attributes like in Instrument/- Style/Character)
-- **File -> Convert VST3 Preset to VST2 preset (fxp or fxb)**: allow to convert **VST 3** Presets to compatible **VST 2** Presets.
-- **File -> Overwrite Plug-in Name in VST3 Presets**: allow to rename the plug-in name in a set of **VST 3** Presets.
+- **File -> Convert VST 3 Preset to VST 2 preset (fxp or fxb)**: allow to convert **VST 3** Presets to compatible **VST 2** Presets.
+- **File -> Overwrite Plug-in Name in VST 3 Presets**: allow to rename the plug-in name in a set of **VST 3** Presets.
 
 ![what_if_16](../../resources/what_is_16.jpg)
 

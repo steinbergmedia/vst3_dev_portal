@@ -20,7 +20,7 @@
 - Samples:
     - fix Validator State test
     - NoteExpressionSynth uses the new KeyboardView
-    - New HelloWorld VST3 plug-ins (template): [Creating a plug-in from the Helloworld template](../../../Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
+    - New HelloWorld VST 3 plug-ins (template): [Creating a plug-in from the Helloworld template](../../../Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
 - Plug-in wrappers:
     - VST 3 - Audio Unit Wrapper : fix and adaptation for newer XCode versions
     - Audio Unit v3 (AUv3) Wrapper (VST 3 - Audio Unit v3 Wrapper): some fixes, add cmake

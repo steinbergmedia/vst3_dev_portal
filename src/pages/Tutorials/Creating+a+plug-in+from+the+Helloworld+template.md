@@ -23,7 +23,7 @@ For downloading the SDK, see the section "[How to set up my system for VST 3](..
 You have the following possibilities to start a new project:
 
 - You can use the [**helloworld** template](../Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md) included in the **VST SDK** and duplicate the folder into a new folder. Adapt each file where the comment mentions it.
-- Or, which is **easier** and **recommended**, you can use the [**VST3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST SDK**. The following steps show how to use it.
+- Or, which is **easier** and **recommended**, you can use the [**VST 3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST SDK**. The following steps show how to use it.
 
 ---
 
@@ -34,7 +34,7 @@ The SDK provides a HelloWorld example which you can use to create a new **VST 3 
 - Just copy the folder **VST_SDK/my_plugins** containing the HelloWorld example into your development folder.
     - For example: copy **VST_SDK/my_plugins** to *D:/Users/Me/Desktop/development/my_plugins* <br>
 - Now you have to indicate to **cmake** to add this new location to the projects. There are 3 possibilities:
-    - Search in *VST3_SDK/CMakeLists.txt* for the comment "# Here you can add your VST3 Plug-ins folder" and specify the path to the folder, for example:
+    - Search in *VST3_SDK/CMakeLists.txt* for the comment "# Here you can add your VST 3 Plug-ins folder" and specify the path to the folder, for example:
         - ***set(SMTG_MYPLUGINS_SRC_PATH "D:/Users/Me/Desktop/development/my_plugins"***)
 - Or when using the **CMake GUI App**, you can specify the new location by using the browser for the variable **SMTG_MYPLUGINS_SRC_PATH**.
 - Or call **cmake** with the option

@@ -25,7 +25,7 @@ This interface allows the host to get a parameter associated to a specific meani
 
 ```
 //------------------------------------------------------------------------
-// here an example of how a VST3 Plug-in could support this IParameterFunctionName interface.
+// here an example of how a VST 3 Plug-in could support this IParameterFunctionName interface.
 // we need to define somewhere the iids:
   
 //in MyController class declaration

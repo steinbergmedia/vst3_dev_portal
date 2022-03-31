@@ -54,7 +54,7 @@ If you use [**VSTGUI4**](../What+is+the+VST+3+SDK/VSTGUI.md) with the VST3Editor
 
 ## Code changes
 
-**Xcode** created some files for you when you created the project. One of it is the App Delegate. You need to change the base class from **NSResponder<UIApplicationDelegate>** to **VSTInterAppAudioAppDelegateBase** (you need to import its header file which is here:<br>
+**Xcode** created some files for you when you created the project. One of it is the App Delegate. You need to change the base class from **NSResponder<UIApplicationDelegate>** to **VSTInterAppAudioAppDelegateBase** (you need to import its header file which is here:\
 *public.sdk/source/vst/interappaudio/VSTInterAppAudioAppDelegateBase.h)* and then remove all methods from it. If you want to add some custom behavior to your app, you should do it in your App Delegate class implementation. For example, if you want to only allow landscape mode, you have to add this method:
 ```
 // -----------------------------------------------------------------    ------

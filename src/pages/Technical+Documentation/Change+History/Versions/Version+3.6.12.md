@@ -23,7 +23,7 @@
     - fix SMTG_PACKAGE_ICON_PATH selection
     - split WIN_PDB into WIN_PDB32 and WIN_PDB64
 - [Samples](../../../What+is+the+VST+3+SDK/Plug-in+Examples.md):
-    - New LegacyMIDICCOut VST3 plug-in showing the use of LegacyMIDICCOutEvent
+    - New LegacyMIDICCOut VST 3 plug-in showing the use of LegacyMIDICCOutEvent
     - Add IMidiLearn support for NoteExpressionSynth
     - Add Audio Unit v3 NoteExpressionSynth example with MPE support
 - [Plug-in Wrappers](../../../What+is+the+VST+3+SDK/Wrappers/Index.md):
@@ -33,7 +33,7 @@
         - complete folder restructuring for easy adaption
     - AAX Wrapper ([VST 3 - AAX Wrapper](../../../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)):
         - fix automation update after loading a preset
-    - VST2 Wrapper:
+    - VST 2 Wrapper:
     - fix double release of editor
 - Helpers classes:
     - New file with some helpers for event: vsteventshelper.h

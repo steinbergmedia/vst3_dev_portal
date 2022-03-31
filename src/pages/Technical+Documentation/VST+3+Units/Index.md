@@ -43,7 +43,7 @@ The purposes of units are:
 
 - Each unit can be associated with a program list. (See [Complex Plug-in Structures / Multi-timbral Instruments](../Complex+Structures/Index.md))
 
-- A unit can be associated with specific busses. There can be any kind of combination, but the VST 3 interfaces only define queries for special situations. (See [Units and Tracks]() **<- Link?**)
+- A unit can be associated with specific busses. There can be any kind of combination, but the VST 3 interfaces only define queries for special situations. (See [Units and Tracks](../Complex+Structures/Index.html#units-and-tracks))
 
 ![tech_doc_13](../../../resources/tech_doc_13.png)
 

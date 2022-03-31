@@ -20,7 +20,7 @@ This open source application (Win/macOS) allows you to generate easily a new **V
 
 Check the folder *"VST3_Project_Generator"* of the SDK!
 
-The source code is available at [GitHub - steinbergmedia/vst3projectgenerator: VST3 Project Generator](https://github.com/steinbergmedia/vst3projectgenerator).
+The source code is available at [GitHub - steinbergmedia/vst3projectgenerator: VST 3 Project Generator](https://github.com/steinbergmedia/vst3projectgenerator).
 
 ## Start the VST 3 Project Generator Application
 
@@ -93,7 +93,7 @@ namespace MyWantedNamespace {
 
 Like mentioned above in the subsection Path Preferences you could change several locations:
 
-- **VST3 SDK Path**: the current used **VST 3 SDK** you have previously downloaded.
+- **VST 3 SDK Path**: the current used **VST 3 SDK** you have previously downloaded.
 - **CMake Executable Path**: the current used **CMake** tool
 
 ## Setting and creating a plug-in project
@@ -146,7 +146,7 @@ C:\Program Files\CMake\bin\CMake.exe   C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3
 ==================================================
 
  Steinberg Media Technologies GmbH
- VST3 Project Generator
+ VST 3 Project Generator
 
 ==================================================
 
@@ -206,7 +206,7 @@ C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 162019" -S  "C:/Users/YGr
 -- [SMTG] SMTG_PLUGIN_TARGET_PATH is set to: C:/ProgramFiles/  Common Files/VST3
 -- [SMTG] CMAKE_SOURCE_DIR is set to: C:/Users/YGrabitDesktop/SDKs/    VST3_SDKs/3.7.2/VST_SDK/AGain
 -- [SMTG] CMAKE_CURRENT_LIST_DIR is set to: C:/UsersYGrabit/   Desktop/SDKs/VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
--- [SMTG] Disable all VST3 samples
+-- [SMTG] Disable all VST 3 samples
 -- Could NOT find EXPAT (missing: EXPAT_LIBRARYEXPAT_INCLUDE_DIR)
 -- VSTGUI will use the embedded Expat package!
 -- [SMTG] SMTG_VSTGUI_ROOT is set to: C:/Users/YGrabitDesktop/SDKs/    VST3_SDKs/3.7.2/VST_SDK/VST3_SDK

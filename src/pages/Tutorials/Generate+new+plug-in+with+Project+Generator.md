@@ -10,7 +10,7 @@
 
 This tutorial explains how to create a new audio plug-in by using the ***[VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)*** included in the **VST 3 SDK** and how to add some basic features.
 
-The artifact will be an audio plug-in that can compute a gain to an audio signal and can be loaded into VST3 hosts like **Cubase**, **WaveLab**, ...
+The artifact will be an audio plug-in that can compute a gain to an audio signal and can be loaded into VST 3 hosts like **Cubase**, **WaveLab**, ...
 
 ---
 
@@ -21,7 +21,7 @@ For downloading the SDK, see the section "[How to set up my system for VST 3](..
 You have the following possibilities to start a new project:
 
 - You can use the [**helloworld** template](../Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md) included in the **VST SDK** and duplicate the folder into a new folder. Adapt each file where the comment mentions it.
-- Or, which is **easier** and **recommended**, you can use the [**VST3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST SDK**. The following steps show how to use it.
+- Or, which is **easier** and **recommended**, you can use the [**VST 3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST SDK**. The following steps show how to use it.
 
 ---
 
@@ -107,7 +107,7 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 }
 ```
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 >- We add the flag [*kCanAutomate*](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31) which informs the DAW/host that this parameter can be automated.
 >- A **VST 3** parameter is always normalized (its value is a floating point value between [0, 1]), here its default value is set to 0.5.
 
@@ -168,7 +168,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 }
 ```
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 >**data.inputParameterChanges** can include more than **1** change for the same parameter inside a processing audio block. Here we take only the last change in the list and apply it our **mGain**.
 
 2. The real processing part:
@@ -316,7 +316,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 }
 ```
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 >In this example we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:
 >
 >addEventInput (STR16 ("Event In"), 4); // here 4 channels

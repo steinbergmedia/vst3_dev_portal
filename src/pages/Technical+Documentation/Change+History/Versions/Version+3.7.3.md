@@ -22,7 +22,7 @@
     - AAX Wrapper:
         - Refactoring of initModule/DeInitModule
         - GetParameterIndex wrong index when read-only parameters used
-    - VST2 Wrapper:
+    - VST 2 Wrapper:
         - Fix issue calling too many InitModule
         - Refactoring of initModule/DeInitModule
     - Audio Unit v3:
@@ -39,7 +39,7 @@
     - New VST 3 plug-ins example:
         - New "AGain Sample Accurate" showing sample accurate parameter changes processing
     - Fix editorHost when launch without arguments
-    - Fix crash in VST3Inspector when no VST3 plugins available
+    - Fix crash in VST3Inspector when no VST 3 plugins available
     - Fix warnings for mda plug-ins
     - Fix the build with gcc 11
 - Helpers classes:

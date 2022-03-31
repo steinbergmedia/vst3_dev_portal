@@ -43,7 +43,7 @@ Usually, the host is unaware of a parameter's semantics. However, there are a fe
 
 The controller must support the conversion to a string for any exported parameter. The conversion method [Steinberg::Vst::IEditController::getParamStringByValue](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#aab2f0b853e75361d331b667e7893962e) must provide a result for any possible normalized parameter value.
 
->⚠️ **Warning**<br>
+>⚠️ **Warning**\
 >Parameter values are always transmitted in a normalized floating point (64bit double) representation **[0.0, 1.0]**.
 
 ### Representation of parameter values
@@ -154,7 +154,7 @@ The processor gets the automation data in the processing call by using queue of 
 
 a [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) has some [IParamValueQueues](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html) (for a specific parameter ID) which has some Automation Points.
 
->⚠️ **Warning**<br>
+>⚠️ **Warning**\
 >- A parameter (ID) is present only one time in the [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) list!
 >- Automation Points inside a [IParamValueQueues](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html) are sorted per offset (position inside the audio block)!
 
@@ -188,6 +188,6 @@ to inform the host about this change (in the **UI Thread**). The host invalidate
 
 If only some values have changed (less than 10)  the plug-in should use the [Steinberg::Vst::IComponentHandler::performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93) interface (Show the right use when automation are used: [Automation Recording](../Parameters+Automation/Index.md#automation-recording))
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 >If the plug-in needs to inform the host about changes containing parameter title, default or flags and values (of multiple parameters), it could combine the restartComponent flags:
 `IComponentHandler::restartComponent (kParamValuesChanged|kParamTitlesChanged);`

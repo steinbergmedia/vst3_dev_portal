@@ -187,7 +187,7 @@ Writing plug-ins that are supposed to work only with Unicode hosts is easy. Use 
 In [Steinberg](https://www.steinberg.net/) SDKs released before Cubase 5, the interface functions were using pointers of type *char* for passing strings to and from the host. These have been changed now to using Steinberg's defined type *tchar* which is equivalent to *char16*, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard [Unicode](https://en.wikipedia.org/wiki/Unicode), so strings are expected to be encoded in [UTF-16](https://en.wikipedia.org/wiki/UTF-16).<br>
 Accordingly, also the implementation of a plug-in needs to be adapted to deal correctly with Unicode-encoded strings, as well as only ever passing Unicode strings to the host.
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 >Changing a function from using 8 bit to 16 bit character pointers may seem as only a minor modification, but in interface design this is a major intrusion, because an interface is a contract to the outside world that is never to be changed. Therefore, classes that are changed to use Unicode strings are distinguished and also receive a new unique class ID.
 
 ## SDK backward compatibility
@@ -195,5 +195,5 @@ Accordingly, also the implementation of a plug-in needs to be adapted to deal co
 Even with the current SDK it is still possible to develop non-Unicode plug-ins. In the file *pluginterfaces/base/ftypes.h*, the line *"#define UNICODE_OFF"* is commented out, but by uncommenting it you can revert all interfaces to using single byte ASCII strings. Alternatively, you can also specify UNICODE_OFF as a preprocessor definition in your project file.<br>
 Also, the plug-in's factory info now does not define the Unicode flag anymore, so a Unicode host sees the compiled plug-in as non-Unicode. Also, when reverting to single byte strings the plug-in's implementation also has to be changed to behave correctly.
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 When undefining Unicode, the class IDs also revert to the old ones.

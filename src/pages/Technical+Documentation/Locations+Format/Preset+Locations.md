@@ -26,10 +26,10 @@
   - **Shared_Factory**: factory presets installed by the plug-in  installer
   - **App_Factory**: presets installed by an audio application installer, only visible for this specific audio application
 
->⚠️ **Warning**<br>
+>⚠️ **Warning**\
 >**$COMPANY** and **$PLUGIN-NAME** folder names contain only allowed characters for file naming (replace characters "**\\*?/:<>|\**"by "_").
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 >Each path defined below should be scanned in the given priority, presets extracted and added to the preset list.
 
 ### For Mac platform

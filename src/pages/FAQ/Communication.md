@@ -46,8 +46,8 @@ componentHandler->restartComponent (kParamTitlesChanged);
 
 The host will rescan the parameter list and update the titles.
 
->ⓘ **Note**<br>
-With the flag **kParamValuesChanged** only the parameters values will be updated.
+>ⓘ **Note**\
+>With the flag **kParamValuesChanged** only the parameters values will be updated.
 
 ## Q: How receive MIDI Controllers from the host?
 

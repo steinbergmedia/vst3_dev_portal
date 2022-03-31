@@ -29,11 +29,11 @@ The corresponding interfaces are:
 ![tech_doc_2](../../../resources/tech_doc_2.png)
 
 The design of **VST 3** suggests a complete separation of processor and edit controller by implementing two components. Splitting up an effect into these two parts requires some extra implementation efforts.
-However, this separation enables the host to run each component in a different context, even on different computers. Another benefit is that parameter changes can be separated when it comes to automation. While for processing these changes need to be transmitted in a sample-accurate way, the GUI part can be updated with a much lower frequency and it can be shifted by the amount that results from any delay compensation or other processing offset.</p><br>
+However, this separation enables the host to run each component in a different context, even on different computers. Another benefit is that parameter changes can be separated when it comes to automation. While for processing these changes need to be transmitted in a sample-accurate way, the GUI part can be updated with a much lower frequency and it can be shifted by the amount that results from any delay compensation or other processing offset.</p>
 A plug-in that supports this separation has to set the [Steinberg::Vst::kDistributable](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a626a070dcd2e025250f41b9c3f9817cda3185111648c1599241528f1a7f523396) flag in the class info of the processor component ([Steinberg::PClassInfo2::classFlags](https://steinbergmedia.github.io/vst3_doc/base/structSteinberg_1_1PClassInfo2.html#ab5ab9135185421caad5ad8ae1d758409)). Of course not every plug-in can support this, for example if it depends deeply on resources that cannot be moved easily to another computer. So when this flag is not set, the host must not try to separate the components in any way.
 Although it is not recommended, it is possible to implement both the processing part and the controller part in one component class. The host tries to query the  [Steinberg::Vst::IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html) interface after creating an [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html) and on success uses it as the controller.
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 >A host does not need to instantiate the controller part of a plug-in for processing it.
 >
 >The plug-in should be prepared for processing without having the controller part instantiated.
@@ -110,7 +110,7 @@ if (processorComponent && (result == kResultOk))
 /-----------------------------------------------------------------------
 ```
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 >Please be aware that IPluginBase::initialize and IPluginBase::terminate must only be called once per object instance. So if an object implements both IAudioProcessor and IEditController take care to only call them once as in the example above.
 
 
@@ -294,5 +294,5 @@ if (editController)
 }
 ```
 
->ⓘ **Note**<br>
+>ⓘ **Note**\
 >Please note that you CANNOT rely on the implementation detail that the connection is done directly between the processor component and the edit controller!

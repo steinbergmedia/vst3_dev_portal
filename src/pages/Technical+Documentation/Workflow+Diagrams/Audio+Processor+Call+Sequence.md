@@ -108,7 +108,7 @@ State4 --> State5: setProcessing(true)
 State5 --> State4: setProcessing(false)
 ```
 
->⚠️ **Warning**<br>
+>⚠️ **Warning**\
 >Note about IAudioProcessor->setProcessing
 >- transition between Activated and Processing state
 >- may be called from real-time Processing Thread (must be lock-free and without memory allocation!)

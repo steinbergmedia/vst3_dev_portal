@@ -115,9 +115,8 @@ You have the Validator command line which can be automatically called after you 
 In order to be able to create Symbolic Link on Windows you have to set the correct group policy, this will allow you to build the **VST 3** plug-ins and create a symbolic link (cmake option SMTG_CREATE_PLUGIN_LINK) for each plug-in into the folder C:\Program Files\Common Files\VST3. For this you have to start the "Edit group policy" from the Windows Search (Windows icon):
 >gpedit.msc
 
-Navigate to:
-
->*Computer configuration => Windows Settings => Security Settings => Local Policies => User Rights Assignment => Create symbolic links*
+Navigate to\
+*Computer configuration => Windows Settings => Security Settings => Local Policies => User Rights Assignment => Create symbolic links*
 
 Here you can set which users can create symbolic links:
 

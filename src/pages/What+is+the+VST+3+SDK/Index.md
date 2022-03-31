@@ -39,7 +39,7 @@ Check the folder *"public.sdk/source/vst/aaxwrapper"* of the SDK!
 
 ## [VST 3 Plug-ins Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md)
 
-The SDK includes some Plug-ins implementation examples. The Legendary **AGain** and **ADelay**, thanks Paul Kellet the Open-source **mda** Plug-ins, a basic "Note Expression Synth" supporting "**Note Expression Event**", an example of **pitchnames** support Plug-in, a **VST3 Host Checker** which checks if a host is VST3 compliant and more...
+The SDK includes some Plug-ins implementation examples. The Legendary **AGain** and **ADelay**, thanks Paul Kellet the Open-source **mda** Plug-ins, a basic "Note Expression Synth" supporting "**Note Expression Event**", an example of **pitchnames** support Plug-in, a **VST 3 Host Checker** which checks if a host is VST 3 compliant and more...
 
 >![what_if_2](../../resources/what_is_2.jpg)
 >
@@ -83,16 +83,16 @@ Check the folder *"bin"* of the SDK!
 ## EditorHost
 
 >**as Cross-platform source code**<br>
->Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a VST3 plug-in (with HiDPI > support on Windows/macOS). Call it from the command line: Windows: editorhost.exe "C:\PATH_TO_PLUGIN" macOS/Linux: > editorhost PATH_TO_PLUGIN
+>Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a VST 3 plug-in (with HiDPI > support on Windows/macOS). Call it from the command line: Windows: editorhost.exe "C:\PATH_TO_PLUGIN" macOS/Linux: > editorhost PATH_TO_PLUGIN
 >
 >On Windows and macOS you can also drag and drop a **VST 3 plug-in** on the executable via Explorer/Finder.
 >
 >Check the folder *"public.sdk/samples/vst-hosting/editorhost"* of the SDK!
 
-## VST3 Inspector
+## VST 3 Inspector
 
 >**as Cross-platform source code**<br>
->Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST3 Folder, collects > information from the factory about each VST3 plug-in and display it in its UI.
+>Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST 3 Folder, collects > information from the factory about each VST 3 plug-in and display it in its UI.
 
 >![what_if_7](../../resources/what_is_7.jpg)
 >
@@ -120,7 +120,7 @@ This open source application (Win/macOS) allows you to generate easily a new **V
 
 Check the folder "VST3_Project_Generator" of the SDK!
 
-The source code is available at [GitHub - steinbergmedia/vst3projectgenerator: VST3 Project Generator](https://github.com/steinbergmedia/vst3projectgenerator).
+The source code is available at [GitHub - steinbergmedia/vst3projectgenerator: VST 3 Project Generator](https://github.com/steinbergmedia/vst3projectgenerator).
 
 ## [iOS Inter-App Audio support](../What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.md)
 

@@ -12,9 +12,9 @@
     - standalone library support for Windows 7
     - new ImageStitcher tool
     - the GDI+ draw backend was removed, the Direct2D backend is the replacement
-- New icon for VST3 bundles: VST_Logo_Steinberg.ico and VST_Logo_Steinberg.icns (located in VST_SDK/VST3_SDK/doc/artwork folder)
+- New icon for VST 3 bundles: VST_Logo_Steinberg.ico and VST_Logo_Steinberg.icns (located in VST_SDK/VST3_SDK/doc/artwork folder)
 - Interface changes:
-    - VST2 interface not available anymore!
+    - VST 2 interface not available anymore!
     - New [Steinberg::Vst::INoteExpressionPhysicalUIMapping](../3.6.11/INoteExpressionPhysicalUIMapping.md) (plug-in): allowing the host to retrieve the preferred physical mapping associated to note expression supported by the plug-in.
 - cmake:
     - further improvement for users projects
@@ -22,7 +22,7 @@
     - AAX Wrapper (VST 3 - AAX Wrapper):
         - fix UI resizing
         - fix issue for default blocksize
-    - VST2 Wrapper:
+    - VST 2 Wrapper:
         - fix for instruments which were not visible as instrument
 - Helpers classes:
     -  make virtual some functions of class parameter (set/getUnitID, getInfo, set/getPrecision)

@@ -28,7 +28,7 @@ You have 2 possibilities for getting the **VST 3 SDK:**
 | [Validator command line](../What+is+the+VST+3+SDK/Index.md#validator-command-line) | ✔️ | ✔️ |
 | [AudioAudioHost](../What+is+the+VST+3+SDK/Index.md#audiohost) | ✔️ | ✔️ |
 | [EditorHost](../What+is+the+VST+3+SDK/Index.md#editorhost) | ✔️ | ✔️ |
-| [VST3 Inspector](../What+is+the+VST+3+SDK/Index.md#vst3-inspector) | ✔️ | ✔️ |
+| [VST 3 Inspector](../What+is+the+VST+3+SDK/Index.md#vst3-inspector) | ✔️ | ✔️ |
 | [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) | ✔️ | ✔️ |
 | [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) | ✔️ (as exe only) | ✔️ (as source code) |
 | [VST 3 Plug-in Test Host (exe only)](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) | ✔️ | ❌ |
@@ -46,8 +46,8 @@ Clone the **VST 3 SDK** repository from **GitHub** for easy integration into you
 
 >**<https://github.com/steinbergmedia/vst3sdk>**
 
->ⓘ **Note**<br>
-Independently of the download source of the **VST 3 SDK** be sure that you follow the license agreement (check [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md))
+>ⓘ **Note**\
+>Independently of the download source of the **VST 3 SDK** be sure that you follow the license agreement (check [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md))
 
 ## Online Documentation
 
@@ -57,7 +57,7 @@ Browse the **VST 3 SDK**'s online documentation including **API** reference and 
 
 Browse the [VST portal](../..//pages/Index.md) for the whole documentation and tutorials:
 
->**<https://developer.steinberg.help/display/VST>** **<-Link?**
+>**<https://developer.steinberg.help/display/VST>** **<- Needs to be replaces with new link**
 
 ## [VST 3 Forum](https://forums.steinberg.net/c/developer/103)
 Visit Steinberg's **[VST Developer Forum](https://forums.steinberg.net/c/developer/103/none)** in order to get help with development, submit bug reports, request new features and connect to other **VST 3** developers:

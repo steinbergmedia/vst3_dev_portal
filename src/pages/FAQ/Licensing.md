@@ -41,7 +41,7 @@ Yes, but you have to make sure that your VST 3 plug-in/host sources are under [G
 
 ## Q: I would like to sell my VST 3 plug-in/host in binary form which is based on a 3rd party SDK like JUCE.
 
-- If you work for-profit and distribute your plug-in/host in binary form, you need to choose the "Proprietary Steinberg VST3" license.
+- If you work for-profit and distribute your plug-in/host in binary form, you need to choose the "Proprietary Steinberg VST 3" license.
 - Download the [license agreement](../VST+3+Licensing/What+are+the+licensing+options.md) (it is part of the [SDK](../Getting+Started/Links.md) too), sign it and return it to Steinberg.
 - Note that you have to follow the [Steinberg VST usage guidelines](../VST+3+Licensing/What+are+the+licensing+options.md).
 
