@@ -4,27 +4,38 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>[3.0.0] Interfaces supported by the host - VST 3 Developer Portal</title>
+        
+        
+
+
         <!-- Custom HTML head -->
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../../../../favicon.svg">
-        <link rel="shortcut icon" href="../../../../favicon.png">
+        
+        
         <link rel="stylesheet" href="../../../../css/variables.css">
         <link rel="stylesheet" href="../../../../css/general.css">
         <link rel="stylesheet" href="../../../../css/chrome.css">
-        <link rel="stylesheet" href="../../../../css/print.css" media="print">
+        
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../../../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../../../../fonts/fonts.css">
+        
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../../../highlight.css">
         <link rel="stylesheet" href="../../../../tomorrow-night.css">
         <link rel="stylesheet" href="../../../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        
+
+        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -83,6 +94,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
+                
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
@@ -96,20 +108,24 @@
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
                         </ul>
+                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
+                        
                     </div>
 
                     <h1 class="menu-title">VST 3 Developer Portal</h1>
 
                     <div class="right-buttons">
-                        <a href="../../../../print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
+                        
+                        
+                        
+
                     </div>
                 </div>
 
+                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -120,6 +136,8 @@
                         </ul>
                     </div>
                 </div>
+                
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -133,17 +151,27 @@
                     <main>
                         <blockquote>
 <p>/ <a href="/Index.html">VST Home</a> / <a href="/pages/Technical+Documentation/Index.html">Technical Documentation</a></p>
-<h1 id="300-interfaces-supported-by-the-host"><a class="header" href="#300-interfaces-supported-by-the-host">[3.0.0] Interfaces supported by the host</a></h1>
+<h1><a class="header" href="#300-interfaces-supported-by-the-host" id="300-interfaces-supported-by-the-host">[3.0.0] Interfaces supported by the host</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#iattributelist">IAttributeList</a></li>
+<li><a href="#icomponenthandler">IComponentHandler</a></li>
+<li><a href="#ieventlist">IEventList</a></li>
+<li><a href="#iunithandler">IUnitHandler</a></li>
+<li><a href="#ihostapplication">IHostApplication</a></li>
+<li><a href="#imessage">IMessage</a></li>
+<li><a href="#iparamvaluequeue">IParamValueQueue</a></li>
+<li><a href="#iparameterchanges">IParameterChanges</a></li>
+<li><a href="#iplugframe">IPlugFrame</a></li>
+</ul>
 <p><strong>Related pages</strong></p>
 <ul>
-<li><a href="../3.0.0/Plug+in+Interfaces.html">[3.0.0] Interfaces supported by the plug-in</a></li>
+<li>[[3.0.0] Interfaces supported by the plug-in](../3.0.0/Plug+in+Interfaces.md)</li>
 </ul>
 <hr />
 <p>List of interfaces supported/implemented by the host in VST 3.0.0</p>
-<h2 id="iattributelist"><a class="header" href="#iattributelist"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html">IAttributeList</a></a></h2>
+<h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iattributelisthtmliattributelista" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iattributelisthtmliattributelista"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html">IAttributeList</a></a></h2>
 <p>Attribute list used in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMessage.html">IMessage</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IStreamAttributes.html">IStreamAttributes</a>.</p>
 <ul>
 <li>[host imp]</li>
@@ -151,7 +179,7 @@
 <li>[mandatory]
 An attribute list associates values with a key (id: some predefined keys can be found in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__presetAttributes.html">Predefined Preset Attributes</a>).</li>
 </ul>
-<h2 id="icomponenthandler"><a class="header" href="#icomponenthandler">IComponentHandler</a></h2>
+<h2><a class="header" href="#icomponenthandler" id="icomponenthandler">IComponentHandler</a></h2>
 <p>Host callback interface for an edit controller.</p>
 <ul>
 <li>[host imp]</li>
@@ -160,7 +188,7 @@ An attribute list associates values with a key (id: some predefined keys can be 
 </ul>
 <p>Allow transfer of parameter editing to component (processor) via host and support automation. Cause the host to react on configuration changes (restartComponent).</p>
 <p>See also <em><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a></em></p>
-<h2 id="ieventlist"><a class="header" href="#ieventlist"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEventList.html">IEventList</a></a></h2>
+<h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1ieventlisthtmlieventlista" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1ieventlisthtmlieventlista"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEventList.html">IEventList</a></a></h2>
 <p>List of events to process.</p>
 <ul>
 <li>[host imp]</li>
@@ -168,7 +196,7 @@ An attribute list associates values with a key (id: some predefined keys can be 
 <li>[mandatory]</li>
 </ul>
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a>, Event</p>
-<h2 id="iunithandler"><a class="header" href="#iunithandler"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a></a></h2>
+<h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iunithandlerhtmliunithandlera" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iunithandlerhtmliunithandlera"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a></a></h2>
 <p>Host callback for unit support.</p>
 <ul>
 <li>[host imp]</li>
@@ -178,7 +206,7 @@ An attribute list associates values with a key (id: some predefined keys can be 
 </ul>
 <p>Host callback interface, used with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a>. Retrieve via queryInterface from <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>.</p>
 <p>See also <a href="/pages/Technical+Documentation/VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a></p>
-<h2 id="ihostapplication"><a class="header" href="#ihostapplication"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html">IHostApplication</a></a></h2>
+<h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1ihostapplicationhtmlihostapplicationa" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1ihostapplicationhtmlihostapplicationa"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html">IHostApplication</a></a></h2>
 <p>Basic host callback interface.</p>
 <ul>
 <li>[host imp]</li>
@@ -187,7 +215,7 @@ An attribute list associates values with a key (id: some predefined keys can be 
 <li>[mandatory]</li>
 </ul>
 <p>Basic VST host application interface.</p>
-<h2 id="imessage"><a class="header" href="#imessage"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMessage.html">IMessage</a></a></h2>
+<h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1imessagehtmlimessagea" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1imessagehtmlimessagea"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMessage.html">IMessage</a></a></h2>
 <p>Private plug-in message.</p>
 <ul>
 <li>[host imp]</li>
@@ -197,7 +225,7 @@ An attribute list associates values with a key (id: some predefined keys can be 
 </ul>
 <p>Messages are sent from a VST controller component to a VST editor component and vice versa.</p>
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html">IAttributeList</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a>, <a href="../Technical+Documentation/API+Documentation/Index.html#communication-between-the-components">Communication between the components</a></p>
-<h2 id="iparamvaluequeue"><a class="header" href="#iparamvaluequeue"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueue</a></a></h2>
+<h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iparamvaluequeuehtmliparamvaluequeuea" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iparamvaluequeuehtmliparamvaluequeuea"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueue</a></a></h2>
 <p>Queue of changes for a specific parameter.</p>
 <ul>
 <li>[host imp]</li>
@@ -230,7 +258,7 @@ double curveValue = (slope * bufferTime) + offset; // bufferTime is any position
 A jump in the automation curve has to be transmitted as two points: one with the old value and one with the new value at the next sample position.</p>
 <p><img src="/resources/tech_doc_29.jpg" alt="tech_doc_29" /></p>
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a></p>
-<h2 id="iparameterchanges"><a class="header" href="#iparameterchanges"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a></a></h2>
+<h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iparameterchangeshtmliparameterchangesa" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iparameterchangeshtmliparameterchangesa"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a></a></h2>
 <p>All parameter changes of a processing block.</p>
 <ul>
 <li>[host imp]</li>
@@ -239,7 +267,7 @@ A jump in the automation curve has to be transmitted as two points: one with the
 </ul>
 <p>This interface is used to transmit any changes to be applied to parameters in the current processing block. A change can be caused by GUI interaction as well as automation. They are transmitted as a list of queues (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueue</a>) containing only queues for parameters that actually did change.</p>
 <p>See <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueue</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a></p>
-<h2 id="iplugframe"><a class="header" href="#iplugframe"><a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html">IPlugFrame</a></a></h2>
+<h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docbaseclasssteinberg_1_1iplugframehtmliplugframea" id="a-hrefhttpssteinbergmediagithubiovst3_docbaseclasssteinberg_1_1iplugframehtmliplugframea"><a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html">IPlugFrame</a></a></h2>
 <p>Callback interface passed to IPlugView.</p>
 <ul>
 <li>[host imp]</li>
@@ -252,40 +280,67 @@ A jump in the automation curve has to be transmitted as two points: one with the
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                        
                             <a rel="prev" href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
+                        
                             <a rel="next" href="../../../../pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+                        
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
                     <a rel="prev" href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+                
+
+                
                     <a rel="next" href="../../../../pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
+                
             </nav>
 
         </div>
 
-        <script type="text/javascript">
-            window.playground_copyable = true;
-        </script>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
         <script src="../../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
         <script src="../../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../../highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        
         <script type="text/javascript" src="../../../../mermaid.min.js"></script>
+        
         <script type="text/javascript" src="../../../../mermaid-init.js"></script>
+        
+
+        
+
     </body>
 </html>

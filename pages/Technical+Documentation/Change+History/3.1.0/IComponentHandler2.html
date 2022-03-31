@@ -4,27 +4,38 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>[3.1.0] Dirty State, Open Editor Request and UI Group Editing Support - VST 3 Developer Portal</title>
+        
+        
+
+
         <!-- Custom HTML head -->
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../../../../favicon.svg">
-        <link rel="shortcut icon" href="../../../../favicon.png">
+        
+        
         <link rel="stylesheet" href="../../../../css/variables.css">
         <link rel="stylesheet" href="../../../../css/general.css">
         <link rel="stylesheet" href="../../../../css/chrome.css">
-        <link rel="stylesheet" href="../../../../css/print.css" media="print">
+        
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../../../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../../../../fonts/fonts.css">
+        
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../../../highlight.css">
         <link rel="stylesheet" href="../../../../tomorrow-night.css">
         <link rel="stylesheet" href="../../../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        
+
+        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -83,6 +94,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
+                
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
@@ -96,20 +108,24 @@
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
                         </ul>
+                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
+                        
                     </div>
 
                     <h1 class="menu-title">VST 3 Developer Portal</h1>
 
                     <div class="right-buttons">
-                        <a href="../../../../print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
+                        
+                        
+                        
+
                     </div>
                 </div>
 
+                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -120,6 +136,8 @@
                         </ul>
                     </div>
                 </div>
+                
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -133,13 +151,22 @@
                     <main>
                         <blockquote>
 <p>/ <a href="/Index.html">VST Home</a> / <a href="/pages/Technical+Documentation/Index.html">Technical Documentation</a></p>
-<h1 id="310-dirty-state-open-editor-request-and-ui-group-editing-support"><a class="header" href="#310-dirty-state-open-editor-request-and-ui-group-editing-support">[3.1.0] Dirty State, Open Editor Request and UI Group Editing Support</a></h1>
+<h1><a class="header" href="#310-dirty-state-open-editor-request-and-ui-group-editing-support" id="310-dirty-state-open-editor-request-and-ui-group-editing-support">[3.1.0] Dirty State, Open Editor Request and UI Group Editing Support</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#dirty-state-support">Dirty State Support</a></li>
+<li><a href="#open-editor-request-support">Open Editor Request Support</a></li>
+<li><a href="#ui-group-editing">UI Group Editing</a>
+<ul>
+<li><a href="#examples-of-different-use-cases">Examples of different use cases</a></li>
+</ul>
+</li>
+</ul>
 <hr />
 <p>Improvement of the plug-in's integration in the host (dirty state, request Open Editor, group editing)</p>
-<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<h2><a class="header" href="#introduction" id="introduction">Introduction</a></h2>
 <p>Extended host callback interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler2.html">Vst::IComponentHandler2</a> for an edit controller.</p>
 <ul>
 <li>[host imp]</li>
@@ -147,7 +174,7 @@
 <li>[released: 3.1.0]</li>
 <li>[optional]</li>
 </ul>
-<h2 id="dirty-state-support"><a class="header" href="#dirty-state-support">Dirty State Support</a></h2>
+<h2><a class="header" href="#dirty-state-support" id="dirty-state-support">Dirty State Support</a></h2>
 <p>This allows the plug-in to tell the host that its internal state is dirty or not, if set to true it means that something besides parameters has changed since last save, then the host should apply a save before quitting.</p>
 <pre><code>void MyPluginController::informHostAboutMyDirtyState (bool dirty)
 {
@@ -156,7 +183,7 @@
         componentHandler2-&gt;setDirty (dirty);
 }
 </code></pre>
-<h2 id="open-editor-request-support"><a class="header" href="#open-editor-request-support">Open Editor Request Support</a></h2>
+<h2><a class="header" href="#open-editor-request-support" id="open-editor-request-support">Open Editor Request Support</a></h2>
 <p>Requesting the host to open the plug-in´s editor the next time it's possible. You should use this instead of showing an alert and blocking the program flow (especially on loading projects).</p>
 <pre><code>void MyPluginController::requestHostToOpenEditor()
 {
@@ -165,9 +192,9 @@
         componentHandler2-&gt;requestOpenEditor ();
 }
 </code></pre>
-<h2 id="ui-group-editing"><a class="header" href="#ui-group-editing">UI Group Editing</a></h2>
+<h2><a class="header" href="#ui-group-editing" id="ui-group-editing">UI Group Editing</a></h2>
 <p>This part handles parameter group editing from the plug-in UI. It wraps a set of IComponentHandler::beginEdit / Steinberg::Vst::IComponentHandler::performEdit / Steinberg::Vst::IComponentHandler::endEdit functions (see IComponentHandler) which should use the same timestamp in the host when writing automation. This allows for better synchronizing of multiple parameter changes at once.</p>
-<h3 id="examples-of-different-use-cases"><a class="header" href="#examples-of-different-use-cases">Examples of different use cases</a></h3>
+<h3><a class="header" href="#examples-of-different-use-cases" id="examples-of-different-use-cases">Examples of different use cases</a></h3>
 <pre><code>//--------------------------------------
 // we are in the editcontroller...
 // in case of multiple switch buttons (with associated ParamID 1 and 3)
@@ -210,40 +237,67 @@ hostHandler2-&gt;finishGroupEdit ();
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                        
                             <a rel="prev" href="../../../../pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
+                        
                             <a rel="next" href="../../../../pages/Technical+Documentation/Change+History/3.1.0/IEditController2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+                        
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
                     <a rel="prev" href="../../../../pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+                
+
+                
                     <a rel="next" href="../../../../pages/Technical+Documentation/Change+History/3.1.0/IEditController2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
+                
             </nav>
 
         </div>
 
-        <script type="text/javascript">
-            window.playground_copyable = true;
-        </script>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
         <script src="../../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
         <script src="../../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../../highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        
         <script type="text/javascript" src="../../../../mermaid.min.js"></script>
+        
         <script type="text/javascript" src="../../../../mermaid-init.js"></script>
+        
+
+        
+
     </body>
 </html>

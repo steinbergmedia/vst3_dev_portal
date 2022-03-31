@@ -4,27 +4,38 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Plug-in Locations - VST 3 Developer Portal</title>
+        
+        
+
+
         <!-- Custom HTML head -->
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../../../favicon.svg">
-        <link rel="shortcut icon" href="../../../favicon.png">
+        
+        
         <link rel="stylesheet" href="../../../css/variables.css">
         <link rel="stylesheet" href="../../../css/general.css">
         <link rel="stylesheet" href="../../../css/chrome.css">
-        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../../highlight.css">
         <link rel="stylesheet" href="../../../tomorrow-night.css">
         <link rel="stylesheet" href="../../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        
+
+        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -83,6 +94,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
+                
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
@@ -96,20 +108,24 @@
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
                         </ul>
+                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
+                        
                     </div>
 
                     <h1 class="menu-title">VST 3 Developer Portal</h1>
 
                     <div class="right-buttons">
-                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
+                        
+                        
+                        
+
                     </div>
                 </div>
 
+                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -120,6 +136,8 @@
                         </ul>
                     </div>
                 </div>
+                
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -133,25 +151,37 @@
                     <main>
                         <blockquote>
 <p>/ ... / <a href="../Locations+Format/Index.html">VST 3 Locations / Format</a></p>
-<h1 id="plug-in-locations"><a class="header" href="#plug-in-locations">Plug-in Locations</a></h1>
+<h1><a class="header" href="#plug-in-locations" id="plug-in-locations">Plug-in Locations</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#on-macos-platform">On macOS platform</a></li>
+<li><a href="#on-windows-platform">On Windows platform</a></li>
+<li><a href="#on-linux-platform">On Linux platform</a></li>
+</ul>
+</li>
+</ul>
 <p><strong>Related pages:</strong></p>
 <ul>
 <li><a href="../Locations+Format/Index.html">VST 3 Locations / Format</a></li>
 <li><a href="../Locations+Format/Plugin+Format.html">Plug-in Format Structure</a></li>
 </ul>
 <hr />
-<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<h2><a class="header" href="#introduction" id="introduction">Introduction</a></h2>
 <p>A <strong>VST 3</strong> Plug-in should be installed at specific folder location, the following tables specify these predefined locations for different operating system.</p>
 <blockquote>
-<p><em><strong>Note</strong></em><br>
-VST 3 doesn't require a Plug-in registration like it is used with DirectX.</p>
+<p><em><strong>Note</strong></em><br></p>
 </blockquote>
 <blockquote>
-<p><em><strong>Warning</strong></em><br>
-Links, Symbolic links or Shortcuts could be used from these predefined folders.</p>
+<p>VST 3 doesn't require a Plug-in registration like it is used with DirectX.</p>
+</blockquote>
+<blockquote>
+<p><em><strong>Warning</strong></em><br></p>
+</blockquote>
+<blockquote>
+<p>Links, Symbolic links or Shortcuts could be used from these predefined folders.</p>
 </blockquote>
 <p>3 levels of folder location are defined:</p>
 <ul>
@@ -160,84 +190,119 @@ Links, Symbolic links or Shortcuts could be used from these predefined folders.<
 <li><strong>Application</strong>: available only inside an specific Audio Application (local Plug-ins)</li>
 </ul>
 <blockquote>
-<p><em><strong>Note</strong></em><br>
-The host should scan at first higher level of priority, first found Plug-in (for a given Processor UID) has to be used.</p>
+<p><em><strong>Note</strong></em><br></p>
 </blockquote>
-<h3 id="on-macos-platform"><a class="header" href="#on-macos-platform">On macOS platform</a></h3>
+<blockquote>
+<p>The host should scan at first higher level of priority, first found Plug-in (for a given Processor UID) has to be used.</p>
+</blockquote>
+<h3><a class="header" href="#on-macos-platform" id="on-macos-platform">On macOS platform</a></h3>
 <p>On the macOS platform, the host application expects <strong>VST 3 Plug-ins</strong> to be located in:</p>
-<table><thead><tr><th style="text-align: left">Prio</th><th style="text-align: left">Location</th><th style="text-align: left">Path</th><th style="text-align: left">Comment</th></tr></thead><tbody>
-<tr><td style="text-align: left">1</td><td style="text-align: left">User</td><td style="text-align: left">/Users/$USERNAME/Library/Audio/Plug-ins/VST3/</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left">2</td><td style="text-align: left">Global</td><td style="text-align: left">/Library/Audio/Plug-ins/VST3/</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left">3</td><td style="text-align: left">Global</td><td style="text-align: left">/Network/Library/Audio/Plug-ins/VST3/</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left">4</td><td style="text-align: left">Application</td><td style="text-align: left">$APPFOLDER/Contents/VST3/</td><td style="text-align: left"></td></tr>
+<table><thead><tr><th align="left">Prio</th><th align="left">Location</th><th align="left">Path</th><th align="left">Comment</th></tr></thead><tbody>
+<tr><td align="left">1</td><td align="left">User</td><td align="left">/Users/$USERNAME/Library/Audio/Plug-ins/VST3/</td><td align="left"></td></tr>
+<tr><td align="left">2</td><td align="left">Global</td><td align="left">/Library/Audio/Plug-ins/VST3/</td><td align="left"></td></tr>
+<tr><td align="left">3</td><td align="left">Global</td><td align="left">/Network/Library/Audio/Plug-ins/VST3/</td><td align="left"></td></tr>
+<tr><td align="left">4</td><td align="left">Application</td><td align="left">$APPFOLDER/Contents/VST3/</td><td align="left"></td></tr>
 </tbody></table>
 <blockquote>
-<p><em><strong>Note</strong></em><br>
-The host recursively scans these folders at startup in this order (Global/Application).</p>
+<p><em><strong>Note</strong></em><br></p>
 </blockquote>
-<h3 id="on-windows-platform"><a class="header" href="#on-windows-platform">On Windows platform</a></h3>
+<blockquote>
+<p>The host recursively scans these folders at startup in this order (Global/Application).</p>
+</blockquote>
+<h3><a class="header" href="#on-windows-platform" id="on-windows-platform">On Windows platform</a></h3>
 <p>On the Windows platform, the host application expects VST 3 Plug-ins to be located in:</p>
-<table><thead><tr><th style="text-align: left">Prio</th><th style="text-align: left">Location</th><th style="text-align: left">Path</th><th style="text-align: left">Comment</th></tr></thead><tbody>
-<tr><td style="text-align: left">1</td><td style="text-align: left">User</td><td style="text-align: left">%LOCALAPPDATA%/Programs/Common/VST3/</td><td style="text-align: left">FOLDERID_UserProgramFilesCommon</p> native bitdepth:</p> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS<br> Mainly used for development use case.</td></tr>
-<tr><td style="text-align: left">2</td><td style="text-align: left">Global</td><td style="text-align: left">/Program Files/Common Files/VST3/</td><td style="text-align: left">FOLDERID_ProgramFilesCommon</p> native bitdepth:</p> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS</td></tr>
-<tr><td style="text-align: left">2</td><td style="text-align: left">Global</td><td style="text-align: left">/Program Files (x86)/Common Files/VST3/</td><td style="text-align: left">32bit Plug-ins on 64bit Windows</td></tr>
-<tr><td style="text-align: left">3</td><td style="text-align: left">Application</td><td style="text-align: left">$APPFOLDER/VST3/</td><td style="text-align: left"></td></tr>
+<table><thead><tr><th align="left">Prio</th><th align="left">Location</th><th align="left">Path</th><th align="left">Comment</th></tr></thead><tbody>
+<tr><td align="left">1</td><td align="left">User</td><td align="left">%LOCALAPPDATA%/Programs/Common/VST3/</td><td align="left">FOLDERID_UserProgramFilesCommon</p> native bitdepth:</p> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS<br> Mainly used for development use case.</td></tr>
+<tr><td align="left">2</td><td align="left">Global</td><td align="left">/Program Files/Common Files/VST3/</td><td align="left">FOLDERID_ProgramFilesCommon</p> native bitdepth:</p> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS</td></tr>
+<tr><td align="left">2</td><td align="left">Global</td><td align="left">/Program Files (x86)/Common Files/VST3/</td><td align="left">32bit Plug-ins on 64bit Windows</td></tr>
+<tr><td align="left">3</td><td align="left">Application</td><td align="left">$APPFOLDER/VST3/</td><td align="left"></td></tr>
 </tbody></table>
 <blockquote>
-<p><em><strong>Note</strong></em><br>
-The host recursively scans these folders at startup in this order (Global/Application).</p>
+<p><em><strong>Note</strong></em><br></p>
 </blockquote>
-<h3 id="on-linux-platform"><a class="header" href="#on-linux-platform">On Linux platform</a></h3>
+<blockquote>
+<p>The host recursively scans these folders at startup in this order (Global/Application).</p>
+</blockquote>
+<h3><a class="header" href="#on-linux-platform" id="on-linux-platform">On Linux platform</a></h3>
 <p>On the Linux platform, the host application expects <strong>VST 3 Plug-ins</strong> to be located in:</p>
-<table><thead><tr><th style="text-align: left">Prio</th><th style="text-align: left">Location</th><th style="text-align: left">Path</th><th style="text-align: left">Comment</th></tr></thead><tbody>
-<tr><td style="text-align: left">1</td><td style="text-align: left">User</td><td style="text-align: left">$HOME/.vst3/</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left">2</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/lib/vst3/</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left">3</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/local/lib/vst3/</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left">4</td><td style="text-align: left">Application</td><td style="text-align: left">$APPFOLDER/vst3/</td><td style="text-align: left"></td></tr>
+<table><thead><tr><th align="left">Prio</th><th align="left">Location</th><th align="left">Path</th><th align="left">Comment</th></tr></thead><tbody>
+<tr><td align="left">1</td><td align="left">User</td><td align="left">$HOME/.vst3/</td><td align="left"></td></tr>
+<tr><td align="left">2</td><td align="left">Global</td><td align="left">/usr/lib/vst3/</td><td align="left"></td></tr>
+<tr><td align="left">3</td><td align="left">Global</td><td align="left">/usr/local/lib/vst3/</td><td align="left"></td></tr>
+<tr><td align="left">4</td><td align="left">Application</td><td align="left">$APPFOLDER/vst3/</td><td align="left"></td></tr>
 </tbody></table>
 <blockquote>
-<p><em><strong>Note</strong></em><br>
-The host recursively scans these folders at startup in this order (User/Global/Application).</p>
+<p><em><strong>Note</strong></em><br></p>
+</blockquote>
+<blockquote>
+<p>The host recursively scans these folders at startup in this order (User/Global/Application).</p>
 </blockquote>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                        
                             <a rel="prev" href="../../../pages/Technical+Documentation/Locations+Format/Plugin+Format.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
+                        
                             <a rel="next" href="../../../pages/Technical+Documentation/Locations+Format/Preset+Format.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+                        
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
                     <a rel="prev" href="../../../pages/Technical+Documentation/Locations+Format/Plugin+Format.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+                
+
+                
                     <a rel="next" href="../../../pages/Technical+Documentation/Locations+Format/Preset+Format.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
+                
             </nav>
 
         </div>
 
-        <script type="text/javascript">
-            window.playground_copyable = true;
-        </script>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
         <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
         <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        
         <script type="text/javascript" src="../../../mermaid.min.js"></script>
+        
         <script type="text/javascript" src="../../../mermaid-init.js"></script>
+        
+
+        
+
     </body>
 </html>

@@ -4,27 +4,38 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>How to use the silence flags - VST 3 Developer Portal</title>
+        
+        
+
+
         <!-- Custom HTML head -->
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
+        
+        
         <link rel="stylesheet" href="../../css/variables.css">
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../highlight.css">
         <link rel="stylesheet" href="../../tomorrow-night.css">
         <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        
+
+        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -83,6 +94,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
+                
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
@@ -96,20 +108,24 @@
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
                         </ul>
+                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
+                        
                     </div>
 
                     <h1 class="menu-title">VST 3 Developer Portal</h1>
 
                     <div class="right-buttons">
-                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
+                        
+                        
+                        
+
                     </div>
                 </div>
 
+                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -120,6 +136,8 @@
                         </ul>
                     </div>
                 </div>
+                
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -133,17 +151,23 @@
                     <main>
                         <blockquote>
 <p>/ <a href="/Index.html">VST Home</a> / <a href="../Tutorials.html">Tutorials</a></p>
-<h1 id="how-to-use-the-silence-flags"><a class="header" href="#how-to-use-the-silence-flags">How to use the silence flags</a></h1>
+<h1><a class="header" href="#how-to-use-the-silence-flags" id="how-to-use-the-silence-flags">How to use the silence flags</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#what-about-silence-flags">What about Silence flags?</a></li>
+<li><a href="#plug-in-receives-a-silent-audio-input">Plug-in receives a silent audio input</a></li>
+<li><a href="#plug-in-generates-silent-output">Plug-in generates silent output</a></li>
+<li><a href="#in-bypass">In bypass</a></li>
+<li><a href="#plug-in-generates-audio-output">Plug-in generates audio output</a></li>
+</ul>
 <hr />
 <p>This tutorial explains how to use silence flags.</p>
-<h2 id="what-about-silence-flags"><a class="header" href="#what-about-silence-flags">What about Silence flags?</a></h2>
+<h2><a class="header" href="#what-about-silence-flags" id="what-about-silence-flags">What about Silence flags?</a></h2>
 <p>It is sometime useful for plug-ins processing to know if the audio inputs really contain audio or only silence (buffer filled with 0!), it is useful too for the host to know if the plug-in will produce silence audio outputs, for example in case of an instrument plug-in which has nothing to play (no input events are coming), then the host will be able to inform following plug-ins in the processing chain this information. This helps to reduce the amount of computing and improve overall performance.</p>
 <p>But how does it works? The following part will show you how to get this information in the process call and how to propagate it to the audio outputs of the plug-in.</p>
 <p>The silence flags is part of the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">AudioBusBuffers</a> (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#a2c73b926e22ddb05193b6edd16a008f8">silenceFlags</a>) passed from the host to the plug-in and back to the host in the process call.</p>
-<h2 id="plug-in-receives-a-silent-audio-input"><a class="header" href="#plug-in-receives-a-silent-audio-input">Plug-in receives a silent audio input</a></h2>
+<h2><a class="header" href="#plug-in-receives-a-silent-audio-input" id="plug-in-receives-a-silent-audio-input">Plug-in receives a silent audio input</a></h2>
 <pre><code>/-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 {
@@ -176,10 +200,12 @@ tresult PLUGIN_API AGain::process (ProcessData&amp; data)
     }
 </code></pre>
 <blockquote>
-<p><em><strong>Note</strong></em><br>
-The host has the responsibility to clear the input buffers (set to zero) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)).</p>
+<p><em><strong>Note</strong></em><br></p>
 </blockquote>
-<h2 id="plug-in-generates-silent-output"><a class="header" href="#plug-in-generates-silent-output">Plug-in generates silent output</a></h2>
+<blockquote>
+<p>The host has the responsibility to clear the input buffers (set to zero) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)).</p>
+</blockquote>
+<h2><a class="header" href="#plug-in-generates-silent-output" id="plug-in-generates-silent-output">Plug-in generates silent output</a></h2>
 <pre><code>/-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 {
@@ -209,10 +235,12 @@ tresult PLUGIN_API AGain::process (ProcessData&amp; data)
     }
 </code></pre>
 <blockquote>
-<p><em><strong>Note</strong></em><br>
-The plug-in, if it produces silence output, has the responsibility to clear (set to zero) its output buffers and to correctly set the output silence flags.</p>
+<p><em><strong>Note</strong></em><br></p>
 </blockquote>
-<h2 id="in-bypass"><a class="header" href="#in-bypass">In bypass</a></h2>
+<blockquote>
+<p>The plug-in, if it produces silence output, has the responsibility to clear (set to zero) its output buffers and to correctly set the output silence flags.</p>
+</blockquote>
+<h2><a class="header" href="#in-bypass" id="in-bypass">In bypass</a></h2>
 <p>In Bypass mode the plug-in has to be sure that its outputs have the same stand than its inputs:</p>
 <pre><code>/-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData&amp; data)
@@ -243,7 +271,7 @@ tresult PLUGIN_API AGain::process (ProcessData&amp; data)
         //...
     }
 </code></pre>
-<h2 id="plug-in-generates-audio-output"><a class="header" href="#plug-in-generates-audio-output">Plug-in generates audio output</a></h2>
+<h2><a class="header" href="#plug-in-generates-audio-output" id="plug-in-generates-audio-output">Plug-in generates audio output</a></h2>
 <pre><code>/-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 {
@@ -276,40 +304,67 @@ tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                        
                             <a rel="prev" href="../../pages/Tutorials/Advanced+VST+3+techniques.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
+                        
                             <a rel="next" href="../../pages/Tutorials/Strings+Conversion+Helper.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+                        
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
                     <a rel="prev" href="../../pages/Tutorials/Advanced+VST+3+techniques.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+                
+
+                
                     <a rel="next" href="../../pages/Tutorials/Strings+Conversion+Helper.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
+                
             </nav>
 
         </div>
 
-        <script type="text/javascript">
-            window.playground_copyable = true;
-        </script>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
         <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
         <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        
         <script type="text/javascript" src="../../mermaid.min.js"></script>
+        
         <script type="text/javascript" src="../../mermaid-init.js"></script>
+        
+
+        
+
     </body>
 </html>

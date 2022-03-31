@@ -4,27 +4,38 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Processing - VST 3 Developer Portal</title>
+        
+        
+
+
         <!-- Custom HTML head -->
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
+        
+        
         <link rel="stylesheet" href="../../css/variables.css">
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../highlight.css">
         <link rel="stylesheet" href="../../tomorrow-night.css">
         <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        
+
+        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -83,6 +94,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
+                
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
@@ -96,20 +108,24 @@
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
                         </ul>
+                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
+                        
                     </div>
 
                     <h1 class="menu-title">VST 3 Developer Portal</h1>
 
                     <div class="right-buttons">
-                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
+                        
+                        
+                        
+
                     </div>
                 </div>
 
+                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -120,6 +136,8 @@
                         </ul>
                     </div>
                 </div>
+                
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -133,24 +151,44 @@
                     <main>
                         <blockquote>
 <p>/ <a href="/Index.html">VST Home</a> / <a href="../FAQ/Index.html">Frequently Asked Questions</a></p>
-<h1 id="processing"><a class="header" href="#processing">Processing</a></h1>
+<h1><a class="header" href="#processing" id="processing">Processing</a></h1>
 </blockquote>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#q-how-does-audio-processing-bypass-work">Q: How does Audio Processing Bypass work?</a></li>
+<li><a href="#q-can-the-maximum-sample-block-size-change-while-the-plug-in-is-processing">Q: Can the maximum sample block size change while the plug-in is processing?</a></li>
+<li><a href="#q-can-the-sample-rate-change-while-the-plug-in-is-processing">Q: Can the sample rate change while the plug-in is processing?</a></li>
+<li><a href="#q-can-the-host-call-the-process-function-without-audio-buffers">Q: Can the host call the process function without Audio buffers?</a></li>
+<li><a href="#q-what-is-a-side-chain">Q: What is a Side-Chain?</a></li>
+<li><a href="#q-how-can-i-implement-a-side-chain-path-into-my-plug-in">Q: How can I implement a Side-chain path into my plug-in?</a></li>
+<li><a href="#q-my-plug-in-is-capable-of-processing-all-possible-channel-configurations">Q: My plug-in is capable of processing all possible channel configurations.</a></li>
+<li><a href="#q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins">Q: How are speaker arrangement settings handled for FX plug-ins?</a></li>
+<li><a href="#q-my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">Q: My plug-in has mono input and stereo output. How does VST 3 handle this?</a></li>
+<li><a href="#q-how-does-it-work-with-silence-flags">Q: How does it work with silence flags?</a></li>
+<li><a href="#q-how-report-to-the-host-that-the-plug-in-latency-has-changed">Q: How report to the host that the plug-in latency has changed?</a></li>
+<li><a href="#q-how-report-to-the-host-that-the-plug-in-arrangement-has-changed">Q: How report to the host that the plug-in arrangement has changed?</a></li>
+<li><a href="#q-can-iaudioprocessorsetprocessing-be-called-without-any-iaudioprocessorprocess-call">Q: Can IAudioProcessor::setProcessing be called without any IAudioProcessor::process call?</a></li>
+<li><a href="#q-how-to-make-sure-that-a-plug-in-is-always-processed">Q: How to make sure that a plug-in is always processed?</a></li>
+<li><a href="#q-can-icomponentgetstatesetstate-be-called-during-processing">Q: Can IComponent::getState()/setState() be called during processing?</a></li>
+<li><a href="#q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing">Q: How can a plug-in be informed that it is currently processed in offline processing?</a></li>
+<li><a href="#q-what-should-i-not-call-in-the-realtime-process-function">Q: What should I NOT call in the realtime process function?</a></li>
+</ul>
 <hr />
-<h2 id="q-how-does-audio-processing-bypass-work"><a class="header" href="#q-how-does-audio-processing-bypass-work">Q: How does Audio Processing Bypass work?</a></h2>
+<h2><a class="header" href="#q-how-does-audio-processing-bypass-work" id="q-how-does-audio-processing-bypass-work">Q: How does Audio Processing Bypass work?</a></h2>
 <p>In order to implement audio process bypassing, the plug-in can export a parameter which is additionally and exclusively flagged as having the attribute kIsBypass. When the user activates the plug-in bypass in the host, like all parameter changes, this is sent as part of the parameter data passed to the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IAudioProcessor::process</a> method.</p>
 <p>The implementation of the bypass feature is entirely the responsibility of the plug-in:</p>
 <p>The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IIAudioProcessor::process</a> method will continue to be called. The plug-in must take care of artifact-free switching (ramping/fade-in/fade-out, parallel processing or algorithm changes) and must also provide a delayed action if the plug-in has a latency and be sure that the output buffers are providing a copy of the input buffers (eventually delayed). No need to copy the input buffers to the output buffers when the pointers are the same and the plug-in has no latency!</p>
 <p>This is the choice of the plug-in to handle/process the bypass (like any other parameters) sample accurate (by using the sampleOffset of the parameter change) or audio block based (not recommended when the audio block length is too large &gt; 1024).</p>
 <p>During bypass the process is still called, but if not, for some reason, the host may call a flush (using process call with null audio buffer).</p>
 <blockquote>
-<p><em><strong>Note:</strong></em><br>
-The plug-in needs to save in its state the bypass parameter like any other parameters.</p>
+<p><em><strong>Note:</strong></em><br></p>
+</blockquote>
+<blockquote>
+<p>The plug-in needs to save in its state the bypass parameter like any other parameters.</p>
 </blockquote>
 <p>Q: Must the host deliver valid initialized Audio buffers if the associated bus is deactivated?</p>
 <p>In a correctly implemented host, if an input or output bus exists in the host, and it has become disconnected from the plug-in, the plug-in will receive disconnection information (bus activation).</p>
 <p>Additionally, a plug-in with a disconnected input bus will continue to receive default silence buffers, just as a plug-in with a disconnected output bus will continue to receive default nirvana buffers. When these deactivated busses are the last busses (for input or output), the host could not provide associated <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">AudioBusBuffers</a>, in this case the plug-in should check <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a852a74fc4e461ef086bac048313d2de9">numInputs</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a1338255f88bad5cf4fb714c71f92b61a">numOutputs</a> and doesn't process these busses.</p>
-<h2 id="q-can-the-maximum-sample-block-size-change-while-the-plug-in-is-processing"><a class="header" href="#q-can-the-maximum-sample-block-size-change-while-the-plug-in-is-processing">Q: Can the maximum sample block size change while the plug-in is processing?</a></h2>
+<h2><a class="header" href="#q-can-the-maximum-sample-block-size-change-while-the-plug-in-is-processing" id="q-can-the-maximum-sample-block-size-change-while-the-plug-in-is-processing">Q: Can the maximum sample block size change while the plug-in is processing?</a></h2>
 <p>The max. sample block size (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html#a41cd06a0c942a1b3f283092b893d0de3">maxSamplesPerBlock</a>) can change during the lifetime of a plug-in, but NOT while the audio component is active. Therefore max. sample block size (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html#a41cd06a0c942a1b3f283092b893d0de3">maxSamplesPerBlock</a>) can never change during or between processing calls while the plug-in is active.</p>
 <p>If the host changes the maximum sample block size it specifically calls the following:</p>
 <pre><code>Steinberg::Vst::IAudioProcessor::process (...);
@@ -164,30 +202,30 @@ Steinberg::Vst::IAudioProcessor::setProcessing (true);
 Steinberg::Vst::IAudioProcessor::process (...);
 </code></pre>
 <p>Note that the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a>-&gt;<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#aeb42971a4bd34d7baa27cff8d7e3cf26">numSamples</a> which indicates how many samples are used in a process call can change from call to call, but never bigger than the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html#a41cd06a0c942a1b3f283092b893d0de3">maxSamplesPerBlock</a>.</p>
-<h2 id="q-can-the-sample-rate-change-while-the-plug-in-is-processing"><a class="header" href="#q-can-the-sample-rate-change-while-the-plug-in-is-processing">Q: Can the sample rate change while the plug-in is processing?</a></h2>
+<h2><a class="header" href="#q-can-the-sample-rate-change-while-the-plug-in-is-processing" id="q-can-the-sample-rate-change-while-the-plug-in-is-processing">Q: Can the sample rate change while the plug-in is processing?</a></h2>
 <p>No. Same as <a href="#q-can-the-maximum-sample-block-size-change-while-the-plug-in-is-processing">Q: Can the maximum sample block size change while the plug-in is processing?</a></p>
-<h2 id="q-can-the-host-call-the-process-function-without-audio-buffers"><a class="header" href="#q-can-the-host-call-the-process-function-without-audio-buffers">Q: Can the host call the process function without Audio buffers?</a></h2>
+<h2><a class="header" href="#q-can-the-host-call-the-process-function-without-audio-buffers" id="q-can-the-host-call-the-process-function-without-audio-buffers">Q: Can the host call the process function without Audio buffers?</a></h2>
 <p>Yes, the host can call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IAudioProcessor::process</a> without buffers (numInputs and numOutputs are zeroed), in order to flush parameters (from host to plug-in).</p>
-<h2 id="q-what-is-a-side-chain"><a class="header" href="#q-what-is-a-side-chain">Q: What is a Side-Chain?</a></h2>
-<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></p>
-<h2 id="q-how-can-i-implement-a-side-chain-path-into-my-plug-in"><a class="header" href="#q-how-can-i-implement-a-side-chain-path-into-my-plug-in">Q: How can I implement a Side-chain path into my plug-in?</a></h2>
-<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></p>
-<h2 id="q-my-plug-in-is-capable-of-processing-all-possible-channel-configurations"><a class="header" href="#q-my-plug-in-is-capable-of-processing-all-possible-channel-configurations">Q: My plug-in is capable of processing all possible channel configurations.</a></h2>
-<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></p>
-<h2 id="q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins"><a class="header" href="#q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins">Q: How are speaker arrangement settings handled for FX plug-ins?</a></h2>
-<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></p>
-<h2 id="q-my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this"><a class="header" href="#q-my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">Q: My plug-in has mono input and stereo output. How does VST 3 handle this?</a></h2>
-<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></p>
-<h2 id="q-how-does-it-work-with-silence-flags"><a class="header" href="#q-how-does-it-work-with-silence-flags">Q: How does it work with silence flags?</a></h2>
-<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Silence+flags.html">[3.0.0] Silence flags Support</a> and tutorial about <a href="../Tutorials/How+to+use+the+silence+flags.html">how to use Silence flags</a>.</p>
-<h2 id="q-how-report-to-the-host-that-the-plug-in-latency-has-changed"><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-latency-has-changed">Q: How report to the host that the plug-in latency has changed?</a></h2>
+<h2><a class="header" href="#q-what-is-a-side-chain" id="q-what-is-a-side-chain">Q: What is a Side-Chain?</a></h2>
+<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<h2><a class="header" href="#q-how-can-i-implement-a-side-chain-path-into-my-plug-in" id="q-how-can-i-implement-a-side-chain-path-into-my-plug-in">Q: How can I implement a Side-chain path into my plug-in?</a></h2>
+<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<h2><a class="header" href="#q-my-plug-in-is-capable-of-processing-all-possible-channel-configurations" id="q-my-plug-in-is-capable-of-processing-all-possible-channel-configurations">Q: My plug-in is capable of processing all possible channel configurations.</a></h2>
+<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<h2><a class="header" href="#q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins" id="q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins">Q: How are speaker arrangement settings handled for FX plug-ins?</a></h2>
+<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<h2><a class="header" href="#q-my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this" id="q-my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">Q: My plug-in has mono input and stereo output. How does VST 3 handle this?</a></h2>
+<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<h2><a class="header" href="#q-how-does-it-work-with-silence-flags" id="q-how-does-it-work-with-silence-flags">Q: How does it work with silence flags?</a></h2>
+<p>See [[3.0.0] Silence flags Support](../Technical+Documentation/Change+History/3.0.0/Silence+flags.md) and tutorial about <a href="../Tutorials/How+to+use+the+silence+flags.html">how to use Silence flags</a>.</p>
+<h2><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-latency-has-changed" id="q-how-report-to-the-host-that-the-plug-in-latency-has-changed">Q: How report to the host that the plug-in latency has changed?</a></h2>
 <p>The plug-in should call from the editController its component handler <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">restartComponent</a> function with flag kLatencyChanged:</p>
 <pre><code>componentHandler-&gt;restartComponent (kLatencyChanged);
 </code></pre>
 <p>The host will call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af8884671ccefe68e0a86e72413a0fcf8">Vst::IAudioProcessor-&gt;getLatencySamples()</a> in order to check the new latency and adapt its latency compensation if supported.</p>
-<h2 id="q-how-report-to-the-host-that-the-plug-in-arrangement-has-changed"><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-arrangement-has-changed">Q: How report to the host that the plug-in arrangement has changed?</a></h2>
-<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></p>
-<h2 id="q-can-iaudioprocessorsetprocessing-be-called-without-any-iaudioprocessorprocess-call"><a class="header" href="#q-can-iaudioprocessorsetprocessing-be-called-without-any-iaudioprocessorprocess-call">Q: Can IAudioProcessor::setProcessing be called without any IAudioProcessor::process call?</a></h2>
+<h2><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-arrangement-has-changed" id="q-how-report-to-the-host-that-the-plug-in-arrangement-has-changed">Q: How report to the host that the plug-in arrangement has changed?</a></h2>
+<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<h2><a class="header" href="#q-can-iaudioprocessorsetprocessing-be-called-without-any-iaudioprocessorprocess-call" id="q-can-iaudioprocessorsetprocessing-be-called-without-any-iaudioprocessorprocess-call">Q: Can IAudioProcessor::setProcessing be called without any IAudioProcessor::process call?</a></h2>
 <p>Yes, it depends how the DAW is supporting its processing, the following call sequence is legal:</p>
 <pre><code>Vst::IAudioProcessor::process (...);
 Vst::IAudioProcessor::setProcessing (false);
@@ -197,61 +235,92 @@ Vst::IAudioProcessor::setProcessing (false);
 Vst::IAudioProcessor::setProcessing (true);
 Vst::IAudioProcessor::process (...);
 </code></pre>
-<h2 id="q-how-to-make-sure-that-a-plug-in-is-always-processed"><a class="header" href="#q-how-to-make-sure-that-a-plug-in-is-always-processed">Q: How to make sure that a plug-in is always processed?</a></h2>
+<h2><a class="header" href="#q-how-to-make-sure-that-a-plug-in-is-always-processed" id="q-how-to-make-sure-that-a-plug-in-is-always-processed">Q: How to make sure that a plug-in is always processed?</a></h2>
 <p>If your plug-in always generates sound without need of any audio input, you can add the category &quot;Generator&quot; as subCategories (for example use <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga09060af560cf34b87e14d5dbd839ad52">kFxGenerator</a>) or you can return kInfiniteTail in the function <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#abb6b16a66b2356a4038a778b815dbbf3">IAudioProcessor::getTailSamples</a></p>
-<h2 id="q-can-icomponentgetstatesetstate-be-called-during-processing"><a class="header" href="#q-can-icomponentgetstatesetstate-be-called-during-processing">Q: Can IComponent::getState()/setState() be called during processing?</a></h2>
+<h2><a class="header" href="#q-can-icomponentgetstatesetstate-be-called-during-processing" id="q-can-icomponentgetstatesetstate-be-called-during-processing">Q: Can IComponent::getState()/setState() be called during processing?</a></h2>
 <p>Yes, setState and getState are called normally from the UI Thread when the plug-in is used in a realtime context, in an offline context set/getState can be called in the same thread as the process call. Check the workflow diagram Audio Processor Call Sequence for more info about in which state which interfaces are called.</p>
-<h2 id="q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing"><a class="header" href="#q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing">Q: How can a plug-in be informed that it is currently processed in offline processing?</a></h2>
+<h2><a class="header" href="#q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing" id="q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing">Q: How can a plug-in be informed that it is currently processed in offline processing?</a></h2>
 <p>When a plug-in is used in an offline processing context (which is the case with Cubase 9.5/Nuendo 8 feature: Direct Offline Processing), its component will be initialized with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">IComponent::setIoMode</a> (Vst::kOfflineProcessing) (see The Simple Mode).
 The offline processing mode (passed in the process call) is used when:</p>
 <ul>
-<li>the user exports audio (downmix)</li>
-<li>direct offline processing feature <br>
-With <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">IComponent::setIoMode</a> (Vst::kOfflineProcessing) you are able to differentiate between export and DOP (Direct Offline Processing).</li>
+<li>
+<p>the user exports audio (downmix)</p>
+</li>
+<li>
+<p>direct offline processing feature <br></p>
+<p>With <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">IComponent::setIoMode</a> (Vst::kOfflineProcessing) you are able to differentiate between export and DOP (Direct Offline Processing).</p>
+</li>
 </ul>
 <p><a href="https://www.youtube.com/watch?v=62yMkHRfd2I"><img src="https://i.ytimg.com/vi/62yMkHRfd2I/maxresdefault.jpg" alt="getting_started_vid_1" /></a></p>
 <p>Direct Offline Processing since Cubase 9.5</p>
-<h2 id="q-what-should-i-not-call-in-the-realtime-process-function"><a class="header" href="#q-what-should-i-not-call-in-the-realtime-process-function">Q: What should I NOT call in the realtime process function?</a></h2>
+<h2><a class="header" href="#q-what-should-i-not-call-in-the-realtime-process-function" id="q-what-should-i-not-call-in-the-realtime-process-function">Q: What should I NOT call in the realtime process function?</a></h2>
 <p>A good practice is to avoid any library calls from this critical realtime process. If you have to use them, check if they are designed for realtime operation and do not contain any locking mechanism. Avoid any filesystem access, networks and UI calls, memory allocation and deallocation, be careful when using STL containers which can allocate memory behind the scene, prefer patterns like non-blocking memory pools, and delegate tasks to UI/Timer thread for doing memory/file-network access jobs. Check <a href="../Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a> too.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                        
                             <a rel="prev" href="../../pages/FAQ/Communication.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
+                        
                             <a rel="next" href="../../pages/FAQ/GUI+Editor.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+                        
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
                     <a rel="prev" href="../../pages/FAQ/Communication.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+                
+
+                
                     <a rel="next" href="../../pages/FAQ/GUI+Editor.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
+                
             </nav>
 
         </div>
 
-        <script type="text/javascript">
-            window.playground_copyable = true;
-        </script>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
         <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
         <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        
         <script type="text/javascript" src="../../mermaid.min.js"></script>
+        
         <script type="text/javascript" src="../../mermaid-init.js"></script>
+        
+
+        
+
     </body>
 </html>

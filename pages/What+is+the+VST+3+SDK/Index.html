@@ -4,27 +4,38 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>What is the VST 3 SDK? - VST 3 Developer Portal</title>
+        
+        
+
+
         <!-- Custom HTML head -->
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
+        
+        
         <link rel="stylesheet" href="../../css/variables.css">
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../highlight.css">
         <link rel="stylesheet" href="../../tomorrow-night.css">
         <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        
+
+        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -83,6 +94,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
+                
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
@@ -96,20 +108,24 @@
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
                         </ul>
+                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
+                        
                     </div>
 
                     <h1 class="menu-title">VST 3 Developer Portal</h1>
 
                     <div class="right-buttons">
-                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
+                        
+                        
+                        
+
                     </div>
                 </div>
 
+                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -120,6 +136,8 @@
                         </ul>
                     </div>
                 </div>
+                
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -133,27 +151,48 @@
                     <main>
                         <blockquote>
 <p>/ <a href="/Index.html">VST Home</a></p>
-<h1 id="what-is-the-vst-3-sdk"><a class="header" href="#what-is-the-vst-3-sdk">What is the VST 3 SDK?</a></h1>
+<h1><a class="header" href="#what-is-the-vst-3-sdk" id="what-is-the-vst-3-sdk">What is the VST 3 SDK?</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#vst-3-sdk-explained">VST 3 SDK explained</a></li>
+<li><a href="#what-is-included">What is included</a></li>
+<li><a href="#aax-auv3-au-and-vst-2-wrappers">AAX, AUv3, AU and VST 2 wrappers</a></li>
+<li><a href="#vst-3-plug-ins-examples">VST 3 Plug-ins Examples</a></li>
+<li><a href="#vst-3-plug-in-test-host">VST 3 Plug-in Test Host</a></li>
+<li><a href="#validator-command-line">Validator command line</a></li>
+<li><a href="#audiohost">AudioHost</a></li>
+<li><a href="#editorhost">EditorHost</a></li>
+<li><a href="#vst3-inspector">VST3 Inspector</a></li>
+<li><a href="#vstgui">VSTGUI</a></li>
+<li><a href="#vst-3-project-generator">VST 3 Project Generator</a></li>
+<li><a href="#ios-inter-app-audio-support">iOS Inter-App Audio support</a></li>
+<li><a href="#vst-3-licensing">VST 3 Licensing</a></li>
+<li><a href="#system-requirements">System requirements</a></li>
+<li><a href="#download-link">Download link</a></li>
+<li><a href="#change-history">Change history</a></li>
+</ul>
 <hr />
-<h2 id="vst-3-sdk-explained"><a class="header" href="#vst-3-sdk-explained">VST 3 SDK explained</a></h2>
+<h2><a class="header" href="#vst-3-sdk-explained" id="vst-3-sdk-explained">VST 3 SDK explained</a></h2>
 <p>The <strong>VST 3 SDK</strong> (Virtual Studio Technology Software Development Kit) is a collection of software development tools included in one package. This allows plug-in developers to create plug-ins in <strong>VST 3</strong> format and host developers to load <strong>VST 3</strong> plug-ins into a DAW or audio editor.</p>
-<h2 id="what-is-included"><a class="header" href="#what-is-included">What is included</a></h2>
+<h2><a class="header" href="#what-is-included" id="what-is-included">What is included</a></h2>
 <p>The <strong>VST 3 SDK</strong> package contains:</p>
 <blockquote>
-<p><strong>The VST 3 API</strong><br>
-This is a <strong>C++ interface</strong> defining how a <strong>VST 3</strong> plug-in communicates with a host and vice versa. The heart of <strong>VST 3</strong>.</p>
+<p><strong>The VST 3 API</strong><br></p>
+</blockquote>
+<blockquote>
+<p>This is a <strong>C++ interface</strong> defining how a <strong>VST 3</strong> plug-in communicates with a host and vice versa. The heart of <strong>VST 3</strong>.</p>
 <p>Check the folder <em>&quot;pluginterfaces/vst&quot;</em> of the SDK!</p>
 </blockquote>
 <blockquote>
-<p><strong>VST 3 Implementation Helper Classes</strong><br>
-Some helper classes are provided, implementing some <strong>VST 3</strong> interfaces for hosting and for creating <strong>VST 3</strong> plug-ins. Simply derived your plug-in C++ classes from these helper classes.</p>
+<p><strong>VST 3 Implementation Helper Classes</strong><br></p>
+</blockquote>
+<blockquote>
+<p>Some helper classes are provided, implementing some <strong>VST 3</strong> interfaces for hosting and for creating <strong>VST 3</strong> plug-ins. Simply derived your plug-in C++ classes from these helper classes.</p>
 <p><img src="/resources/what_is_1.png" alt="what_if_1" /></p>
 <p>Check the folder <em>&quot;public.sdk&quot;</em> of the SDK!</p>
 </blockquote>
-<h2 id="aax-auv3-au-and-vst-2-wrappers"><a class="header" href="#aax-auv3-au-and-vst-2-wrappers"><a href="../What+is+the+VST+3+SDK/Wrappers/Index.html">AAX, AUv3, AU and VST 2 wrappers</a></a></h2>
+<h2><a class="header" href="#a-hrefwhatisthevst3sdkwrappersindexhtmlaax-auv3-au-and-vst-2-wrappersa" id="a-hrefwhatisthevst3sdkwrappersindexhtmlaax-auv3-au-and-vst-2-wrappersa"><a href="../What+is+the+VST+3+SDK/Wrappers/Index.html">AAX, AUv3, AU and VST 2 wrappers</a></a></h2>
 <p>These wrappers allows you to create versions of your <strong>VST 3</strong> plug-in in other plug-in formats with minimum effort:</p>
 <ul>
 <li><strong><a href="http://apps.avid.com/aax-portal/">AAX</a></strong> format used by Pro Tools®</li>
@@ -161,7 +200,7 @@ Some helper classes are provided, implementing some <strong>VST 3</strong> inter
 <li><strong>VST 2</strong> (deprecated)</li>
 </ul>
 <p>Check the folder <em>&quot;public.sdk/source/vst/aaxwrapper&quot;</em> of the SDK!</p>
-<h2 id="vst-3-plug-ins-examples"><a class="header" href="#vst-3-plug-ins-examples"><a href="../What+is+the+VST+3+SDK/Plug-in+Examples.html">VST 3 Plug-ins Examples</a></a></h2>
+<h2><a class="header" href="#a-hrefwhatisthevst3sdkplug-inexampleshtmlvst-3-plug-ins-examplesa" id="a-hrefwhatisthevst3sdkplug-inexampleshtmlvst-3-plug-ins-examplesa"><a href="../What+is+the+VST+3+SDK/Plug-in+Examples.html">VST 3 Plug-ins Examples</a></a></h2>
 <p>The SDK includes some Plug-ins implementation examples. The Legendary <strong>AGain</strong> and <strong>ADelay</strong>, thanks Paul Kellet the Open-source <strong>mda</strong> Plug-ins, a basic &quot;Note Expression Synth&quot; supporting &quot;<strong>Note Expression Event</strong>&quot;, an example of <strong>pitchnames</strong> support Plug-in, a <strong>VST3 Host Checker</strong> which checks if a host is VST3 compliant and more...</p>
 <blockquote>
 <p><img src="/resources/what_is_2.jpg" alt="what_if_2" /></p>
@@ -170,22 +209,28 @@ Some helper classes are provided, implementing some <strong>VST 3</strong> inter
 <p><img src="/resources/what_is_5.jpg" alt="what_if_5" /></p>
 </blockquote>
 <p>Check the folder <em>&quot;public.sdk/samples/vst&quot;</em> of the SDK!</p>
-<h2 id="vst-3-plug-in-test-host"><a class="header" href="#vst-3-plug-in-test-host"><a href="../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a></a></h2>
-<p>The SDK provides a test application called <strong>VST3PluginTestHost</strong> for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).<br>
-This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small <strong>VST 3</strong> host application based on an <strong>ASIO</strong> driver.<br>
-Included in this application is a test module which allows you to check your plug-in in regard to the <strong>VST 3</strong> standard.</p>
+<h2><a class="header" href="#a-hrefwhatisthevst3sdkplug-intesthosthtmlvst-3-plug-in-test-hosta" id="a-hrefwhatisthevst3sdkplug-intesthosthtmlvst-3-plug-in-test-hosta"><a href="../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a></a></h2>
+<p>The SDK provides a test application called <strong>VST3PluginTestHost</strong> for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).<br></p>
+<p>This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small <strong>VST 3</strong> host application based on an <strong>ASIO</strong> driver.<br></p>
+<p>Included in this application is a test module which allows you to check your plug-in in regard to the <strong>VST 3</strong> standard.</p>
 <p><img src="/resources/what_is_6.jpg" alt="what_if_6" /></p>
 <p>Check the folder <em>&quot;bin&quot;</em> of the SDK!</p>
-<h2 id="validator-command-line"><a class="header" href="#validator-command-line">Validator command line</a></h2>
+<h2><a class="header" href="#validator-command-line" id="validator-command-line">Validator command line</a></h2>
 <blockquote>
-<p><strong>as Cross-platform source code</strong><br>
-The <em><strong>validator</strong></em> is a small command line host application (source code included) which can be used to check your &gt; plug-in for VST 3 conformity. You can also write your own test code and let the <strong>validator</strong> execute it. Very nice for &gt; automatic build server integration.</p>
+<p><strong>as Cross-platform source code</strong><br></p>
+</blockquote>
+<blockquote>
+<p>The <em><strong>validator</strong></em> is a small command line host application (source code included) which can be used to check your &gt; plug-in for VST 3 conformity. You can also write your own test code and let the <strong>validator</strong> execute it. Very nice for &gt; automatic build server integration.</p>
 <p>Check the folder <em>&quot;public.sdk/samples/vst-hosting/validator&quot;</em> of the SDK!</p>
 </blockquote>
-<h2 id="audiohost"><a class="header" href="#audiohost">AudioHost</a></h2>
+<h2><a class="header" href="#audiohost" id="audiohost">AudioHost</a></h2>
 <blockquote>
-<p><strong>as Cross-platform source code</strong><br>
-Simple cross-platform (only tested on Linux) host application allowing you to register a VST 3 plug-in with Jack Server. First, you have to download the Jack Audio SDK and application server (<a href="http://www.jackaudio.org">http://www.jackaudio.org</a>).<br></p>
+<p><strong>as Cross-platform source code</strong><br></p>
+</blockquote>
+<blockquote>
+<p>Simple cross-platform (only tested on Linux) host application allowing you to register a VST 3 plug-in with Jack Server. First, you have to download the Jack Audio SDK and application server (<a href="http://www.jackaudio.org">http://www.jackaudio.org</a>).<br></p>
+</blockquote>
+<blockquote>
 <ul>
 <li>Windows (not tested): audiohost.exe &quot;C:\PATH_TO_PLUGIN&quot;</li>
 <li>macOS (not tested)</li>
@@ -194,42 +239,48 @@ Simple cross-platform (only tested on Linux) host application allowing you to re
 <p>On Windows and macOS, you can also drag and drop a <strong>VST 3 plug-in</strong> on the executable via Explorer/Finder.</p>
 <p>Check the folder <em>&quot;public.sdk/samples/vst-hosting/audiohost&quot;</em> of the SDK!</p>
 </blockquote>
-<h2 id="editorhost"><a class="header" href="#editorhost">EditorHost</a></h2>
+<h2><a class="header" href="#editorhost" id="editorhost">EditorHost</a></h2>
 <blockquote>
-<p><strong>as Cross-platform source code</strong><br>
-Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a VST3 plug-in (with HiDPI &gt; support on Windows/macOS). Call it from the command line: Windows: editorhost.exe &quot;C:\PATH_TO_PLUGIN&quot; macOS/Linux: &gt; editorhost PATH_TO_PLUGIN</p>
+<p><strong>as Cross-platform source code</strong><br></p>
+</blockquote>
+<blockquote>
+<p>Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a VST3 plug-in (with HiDPI &gt; support on Windows/macOS). Call it from the command line: Windows: editorhost.exe &quot;C:\PATH_TO_PLUGIN&quot; macOS/Linux: &gt; editorhost PATH_TO_PLUGIN</p>
 <p>On Windows and macOS you can also drag and drop a <strong>VST 3 plug-in</strong> on the executable via Explorer/Finder.</p>
 <p>Check the folder <em>&quot;public.sdk/samples/vst-hosting/editorhost&quot;</em> of the SDK!</p>
 </blockquote>
-<h2 id="vst3-inspector"><a class="header" href="#vst3-inspector">VST3 Inspector</a></h2>
+<h2><a class="header" href="#vst3-inspector" id="vst3-inspector">VST3 Inspector</a></h2>
 <blockquote>
-<p><strong>as Cross-platform source code</strong><br>
-Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST3 Folder, collects &gt; information from the factory about each VST3 plug-in and display it in its UI.</p>
+<p><strong>as Cross-platform source code</strong><br></p>
+</blockquote>
+<blockquote>
+<p>Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST3 Folder, collects &gt; information from the factory about each VST3 plug-in and display it in its UI.</p>
 </blockquote>
 <blockquote>
 <p><img src="/resources/what_is_7.jpg" alt="what_if_7" /></p>
 <p>Check the folder <em>&quot;public.sdk/samples/vst-hosting/inspectorapp&quot;</em> of the SDK!</p>
 </blockquote>
-<h2 id="vstgui"><a class="header" href="#vstgui"><a href="../What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a></a></h2>
+<h2><a class="header" href="#a-hrefwhatisthevst3sdkvstguihtmlvstguia" id="a-hrefwhatisthevst3sdkvstguihtmlvstguia"><a href="../What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a></a></h2>
 <p>This is a user interface toolkit mainly for audio plug-ins (VST, AudioUnit, etc). Based on the XML definition of the plug-in UI, <strong>VSTGUI</strong> includes an embedded editor (UIDescription Editor) which allows the developer to create a plug-in UI just by drag &amp; drop of the UI element.</p>
 <p>First developed in-house by Steinberg Media Technologies (around 1998) for their first VST plug-ins. Later added as binary libraries to the official <strong>VST SDK</strong>. Since May 2003, <strong>VSTGUI</strong> is open source, and is hosted now at GitHub <a href="https://github.com/steinbergmedia/vstgui">https://github.com/steinbergmedia/vstgui</a>.</p>
 <p>The last official release version of <strong>VSTGUI</strong> is always included in the <strong>VST 3 SDK</strong>.</p>
 <p><img src="/resources/what_is_8.png" alt="what_if_8" /></p>
 <p>Example of the <strong>VSTGUI</strong> UIDescription Editor (embedded editing WYSIWYG)</p>
 <p>Check the folder <em>&quot;vstgui4&quot;</em> of the SDK!</p>
-<h2 id="vst-3-project-generator"><a class="header" href="#vst-3-project-generator"><a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a></a></h2>
+<h2><a class="header" href="#a-hrefwhatisthevst3sdkprojectgeneratorhtmlvst-3-project-generatora" id="a-hrefwhatisthevst3sdkprojectgeneratorhtmlvst-3-project-generatora"><a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a></a></h2>
 <p>This open source application (Win/macOS) allows you to generate easily a new <strong>VST 3</strong> plug-in project by just entering in a GUI some parameters.</p>
 <p><img src="/resources/what_is_9.jpg" alt="what_if_9" /></p>
 <p>Check the folder &quot;VST3_Project_Generator&quot; of the SDK!</p>
 <p>The source code is available at <a href="https://github.com/steinbergmedia/vst3projectgenerator">GitHub - steinbergmedia/vst3projectgenerator: VST3 Project Generator</a>.</p>
-<h2 id="ios-inter-app-audio-support"><a class="header" href="#ios-inter-app-audio-support"><a href="../What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.html">iOS Inter-App Audio support</a></a></h2>
+<h2><a class="header" href="#a-hrefwhatisthevst3sdkiosinter-appaudiosupporthtmlios-inter-app-audio-supporta" id="a-hrefwhatisthevst3sdkiosinter-appaudiosupporthtmlios-inter-app-audio-supporta"><a href="../What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.html">iOS Inter-App Audio support</a></a></h2>
 <p>iOS InterApp-Audio application out of your <strong>VST 3 plug-in</strong></p>
-<h2 id="vst-3-licensing"><a class="header" href="#vst-3-licensing"><a href="../VST+3+Licensing/Index.html">VST 3 Licensing</a></a></h2>
+<h2><a class="header" href="#a-hrefvst3licensingindexhtmlvst-3-licensinga" id="a-hrefvst3licensingindexhtmlvst-3-licensinga"><a href="../VST+3+Licensing/Index.html">VST 3 Licensing</a></a></h2>
 <blockquote>
-<p><strong>Steinberg VST 3 Plug-In SDK Licensing Agreement</strong><br>
-Please sign this <strong>License Agreement</strong> if you want to develop, release or host <strong>VST 3</strong> plug-Ins.</p>
+<p><strong>Steinberg VST 3 Plug-In SDK Licensing Agreement</strong><br></p>
 </blockquote>
-<h2 id="system-requirements"><a class="header" href="#system-requirements">System requirements</a></h2>
+<blockquote>
+<p>Please sign this <strong>License Agreement</strong> if you want to develop, release or host <strong>VST 3</strong> plug-Ins.</p>
+</blockquote>
+<h2><a class="header" href="#system-requirements" id="system-requirements">System requirements</a></h2>
 <table><thead><tr><th>Operating System</th><th>Architecture</th><th>Compiler</th><th>Notes</th></tr></thead><tbody>
 <tr><td>Windows 10</td><td>x86, x86_64</td><td>MSVC 2019, MSVC 2017</td><td></td></tr>
 <tr><td>Windows 8.1</td><td>x86, x86_64</td><td>MSVC 2019, MSVC 2017</td><td></td></tr>
@@ -239,49 +290,76 @@ Please sign this <strong>License Agreement</strong> if you want to develop, rele
 <tr><td>Linux - Ubuntu 18.04 LTS</td><td>x86, x86_64</td><td>GCC 8.3 and higher</td><td>Visual Studio Code, Qt Creator</td></tr>
 <tr><td>Linux - Ubuntu 20.04 LTS</td><td>x86, x86_64</td><td>GCC 8.3 and higher</td><td>Visual Studio Code, Qt Creator</td></tr>
 </tbody></table>
-<h2 id="download-link"><a class="header" href="#download-link"><a href="../Getting+Started/Links.html">Download link</a></a></h2>
+<h2><a class="header" href="#a-hrefgettingstartedlinkshtmldownload-linka" id="a-hrefgettingstartedlinkshtmldownload-linka"><a href="../Getting+Started/Links.html">Download link</a></a></h2>
 <p>Important links you will need for working with <strong>VST 3</strong></p>
-<h2 id="change-history"><a class="header" href="#change-history"><a href="../Technical+Documentation/Change+History/Index.html">Change history</a></a></h2>
+<h2><a class="header" href="#a-hreftechnicaldocumentationchangehistoryindexhtmlchange-historya" id="a-hreftechnicaldocumentationchangehistoryindexhtmlchange-historya"><a href="../Technical+Documentation/Change+History/Index.html">Change history</a></a></h2>
 <p>All released versions of the <strong>VST 3 SDK</strong> with changes and dates.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                        
                             <a rel="prev" href="../../pages/Main+benefits+of+VST+3/Index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
+                        
                             <a rel="next" href="../../pages/What+is+the+VST+3+SDK/Plug-in+Examples.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+                        
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
                     <a rel="prev" href="../../pages/Main+benefits+of+VST+3/Index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+                
+
+                
                     <a rel="next" href="../../pages/What+is+the+VST+3+SDK/Plug-in+Examples.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
+                
             </nav>
 
         </div>
 
-        <script type="text/javascript">
-            window.playground_copyable = true;
-        </script>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
         <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
         <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        
         <script type="text/javascript" src="../../mermaid.min.js"></script>
+        
         <script type="text/javascript" src="../../mermaid-init.js"></script>
+        
+
+        
+
     </body>
 </html>

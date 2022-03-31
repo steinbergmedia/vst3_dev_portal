@@ -4,27 +4,38 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Miscellaneous - VST 3 Developer Portal</title>
+        
+        
+
+
         <!-- Custom HTML head -->
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
+        
+        
         <link rel="stylesheet" href="../../css/variables.css">
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../highlight.css">
         <link rel="stylesheet" href="../../tomorrow-night.css">
         <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        
+
+        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -83,6 +94,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
+                
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
@@ -96,20 +108,24 @@
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
                         </ul>
+                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
+                        
                     </div>
 
                     <h1 class="menu-title">VST 3 Developer Portal</h1>
 
                     <div class="right-buttons">
-                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
+                        
+                        
+                        
+
                     </div>
                 </div>
 
+                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -120,6 +136,8 @@
                         </ul>
                     </div>
                 </div>
+                
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -133,12 +151,15 @@
                     <main>
                         <blockquote>
 <p>/ <a href="/Index.html">VST Home</a> / <a href="../Getting+Started/Index.html">Getting Started</a></p>
-<h1 id="miscellaneous"><a class="header" href="#miscellaneous">Miscellaneous</a></h1>
+<h1><a class="header" href="#miscellaneous" id="miscellaneous">Miscellaneous</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#some-copyrightstrademarks-referred-to-in-the-vst-3-sdk">Some Copyrights/Trademarks referred to in the VST 3 SDK</a></li>
+<li><a href="#glossary">Glossary</a></li>
+</ul>
 <hr />
-<h2 id="some-copyrightstrademarks-referred-to-in-the-vst-3-sdk"><a class="header" href="#some-copyrightstrademarks-referred-to-in-the-vst-3-sdk">Some Copyrights/Trademarks referred to in the VST 3 SDK</a></h2>
+<h2><a class="header" href="#some-copyrightstrademarks-referred-to-in-the-vst-3-sdk" id="some-copyrightstrademarks-referred-to-in-the-vst-3-sdk">Some Copyrights/Trademarks referred to in the VST 3 SDK</a></h2>
 <ul>
 <li><strong>AAX</strong> by Avid Technology, Inc.</li>
 <li><strong>Apple</strong> and <strong>macOS</strong> are either registered trademarks or trademarks of Apple Computer, Inc. registered in the U.S. and other countries.</li>
@@ -152,72 +173,97 @@
 <li><strong>VST</strong>, <strong>Cubase</strong>, <strong>Nuendo</strong> and <strong>WaveLab</strong> are trademarks of <a href="https://www.steinberg.net/de/">Steinberg Media Technologies GmbH</a>, registered in Europe and other countries.</li>
 <li>Other company names, product names and logos are the trademarks or registered trademarks of their respective owners.</li>
 </ul>
-<h2 id="glossary"><a class="header" href="#glossary">Glossary</a></h2>
+<h2><a class="header" href="#glossary" id="glossary">Glossary</a></h2>
 <p>External Glossary: <a href="https://www.aes.org/par/">AES - PAR - Pro Audio Reference:</a> <a href="http://www.aes.org/par/">http://www.aes.org/par/</a></p>
-<table><thead><tr><th style="text-align: left">Abbr.</th><th style="text-align: left">Meaning</th><th style="text-align: left">Comment</th></tr></thead><tbody>
-<tr><td style="text-align: left">AAX</td><td style="text-align: left">Avid Audio Extension</td><td style="text-align: left"><a href="https://www.avid.com/alliance-partner-program/aax-connectivity-toolkit">https://www.avid.com/alliance-partner-program/aax-connectivity-toolkit</a></td></tr>
-<tr><td style="text-align: left">ADC</td><td style="text-align: left">Audio Developer Conference</td><td style="text-align: left"><a href="https://juce.com/adc">https://juce.com/adc</a></td></tr>
-<tr><td style="text-align: left">AES</td><td style="text-align: left">Audio Engineering Society</td><td style="text-align: left"><a href="https://www.aes.org">https://www.aes.org</a></td></tr>
-<tr><td style="text-align: left">AMBI</td><td style="text-align: left">Ambisonics</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Ambisonics">https://en.wikipedia.org/wiki/Ambisonics</a></td></tr>
-<tr><td style="text-align: left">ASIO</td><td style="text-align: left">Audio Stream Input/Output</td><td style="text-align: left">ASIO™ is a protocol for communication between a software application and a computer's sound card (trademark of <a href="https://www.steinberg.net/de/">Steinberg</a>)</td></tr>
-<tr><td style="text-align: left">AU</td><td style="text-align: left">Audio Unit</td><td style="text-align: left"><a href="https://developer.apple.com/documentation/audiounit">https://developer.apple.com/documentation/audiounit</a></td></tr>
-<tr><td style="text-align: left">COM</td><td style="text-align: left">Component Object Model</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Component_Object_Model">https://en.wikipedia.org/wiki/Component_Object_Model</a></td></tr>
-<tr><td style="text-align: left">DAFX</td><td style="text-align: left">Digital Audio Effects</td><td style="text-align: left"><a href="https://dafx.org">https://dafx.org</a></td></tr>
-<tr><td style="text-align: left">DAW</td><td style="text-align: left">Digital Audio Workstation</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Digital_audio_workstation">https://en.wikipedia.org/wiki/Digital_audio_workstation</a></td></tr>
-<tr><td style="text-align: left">DLL</td><td style="text-align: left">Dynamic-Link Library</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Dynamic-link_library">https://en.wikipedia.org/wiki/Dynamic-link_library</a></td></tr>
-<tr><td style="text-align: left">DSP</td><td style="text-align: left">Digital Signal Processing</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Digital_signal_processing">https://en.wikipedia.org/wiki/Digital_signal_processing</a></td></tr>
-<tr><td style="text-align: left">e.g.</td><td style="text-align: left">exempli gratia</td><td style="text-align: left">for example</td></tr>
-<tr><td style="text-align: left">FAQ</td><td style="text-align: left">Frequently Asked Questions</td><td style="text-align: left">VST 3 <a href="../FAQ/Index.html">Frequently Asked Questions</a></td></tr>
-<tr><td style="text-align: left">FFT</td><td style="text-align: left">Fast Fourier Transformation</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">https://en.wikipedia.org/wiki/Fast_Fourier_transform</a></td></tr>
-<tr><td style="text-align: left">GPL</td><td style="text-align: left">General Public License</td><td style="text-align: left"><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">https://www.gnu.org/licenses/gpl-3.0.en.html</a></td></tr>
-<tr><td style="text-align: left">ICASSP</td><td style="text-align: left">International Conference on Acoustics, Speech and Signal Processing</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/International_Conference_on_Acoustics,_Speech,_and_Signal_Processing">https://en.wikipedia.org/wiki/International_Conference_on_Acoustics,_Speech,_and_Signal_Processing</a></td></tr>
-<tr><td style="text-align: left">ISMIR</td><td style="text-align: left">International Society for Music Information Retrieval</td><td style="text-align: left"><a href="https://ismir.net">https://ismir.net</a></td></tr>
-<tr><td style="text-align: left">LFE</td><td style="text-align: left">Low Frequency Effects</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Low-frequency_effects">https://en.wikipedia.org/wiki/Low-frequency_effects</a></td></tr>
-<tr><td style="text-align: left">MIDI</td><td style="text-align: left">Musical Instrument Digital Interface</td><td style="text-align: left"><a href="https://www.midi.org">https://www.midi.org</a></td></tr>
-<tr><td style="text-align: left">MPE</td><td style="text-align: left">MIDI Polyphonic Expression</td><td style="text-align: left"><a href="https://www.midi.org">https://www.midi.org</a></td></tr>
-<tr><td style="text-align: left">SDK</td><td style="text-align: left">Software Development Kit</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Software_development_kit">https://en.wikipedia.org/wiki/Software_development_kit</a></td></tr>
-<tr><td style="text-align: left">STL</td><td style="text-align: left">Standard Library Containers</td><td style="text-align: left"><a href="https://www.cplusplus.com/reference/stl/">https://www.cplusplus.com/reference/stl/</a></td></tr>
-<tr><td style="text-align: left">URL</td><td style="text-align: left">Uniform Resource Locator</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/URL">https://en.wikipedia.org/wiki/URL</a></td></tr>
-<tr><td style="text-align: left">UTF-16</td><td style="text-align: left">Unicode Transformation Format 16bit</td><td style="text-align: left">String representation used by VST 3 for exchanging with the host.</p> <a href="https://en.wikipedia.org/wiki/UTF-16">https://en.wikipedia.org/wiki/UTF-16</a></td></tr>
-<tr><td style="text-align: left">VST</td><td style="text-align: left">Virtual Studio Technology™</td><td style="text-align: left">A trademark of <a href="https://www.steinberg.net/">Steinberg</a> for their interface standard for integrating software plug-ins with DAWs.</td></tr>
-<tr><td style="text-align: left">VST-MA</td><td style="text-align: left">Virtual Studio Technology - Module Architecture</td><td style="text-align: left">This is the base architecture for VST 3</td></tr>
-<tr><td style="text-align: left">VSTGUI</td><td style="text-align: left">Virtual Studio Technology - Graphical User Interface</td><td style="text-align: left"><a href="https://github.com/steinbergmedia/vstgui">https://github.com/steinbergmedia/vstgui</a></td></tr>
-<tr><td style="text-align: left">Vtable</td><td style="text-align: left">Virtual method table</td><td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Virtual_method_table">https://en.wikipedia.org/wiki/Virtual_method_table</a></td></tr>
-<tr><td style="text-align: left">WYSIWYG</td><td style="text-align: left">What You See Is What You Get</td><td style="text-align: left"></td></tr>
+<table><thead><tr><th align="left">Abbr.</th><th align="left">Meaning</th><th align="left">Comment</th></tr></thead><tbody>
+<tr><td align="left">AAX</td><td align="left">Avid Audio Extension</td><td align="left"><a href="https://www.avid.com/alliance-partner-program/aax-connectivity-toolkit">https://www.avid.com/alliance-partner-program/aax-connectivity-toolkit</a></td></tr>
+<tr><td align="left">ADC</td><td align="left">Audio Developer Conference</td><td align="left"><a href="https://juce.com/adc">https://juce.com/adc</a></td></tr>
+<tr><td align="left">AES</td><td align="left">Audio Engineering Society</td><td align="left"><a href="https://www.aes.org">https://www.aes.org</a></td></tr>
+<tr><td align="left">AMBI</td><td align="left">Ambisonics</td><td align="left"><a href="https://en.wikipedia.org/wiki/Ambisonics">https://en.wikipedia.org/wiki/Ambisonics</a></td></tr>
+<tr><td align="left">ASIO</td><td align="left">Audio Stream Input/Output</td><td align="left">ASIO™ is a protocol for communication between a software application and a computer's sound card (trademark of <a href="https://www.steinberg.net/de/">Steinberg</a>)</td></tr>
+<tr><td align="left">AU</td><td align="left">Audio Unit</td><td align="left"><a href="https://developer.apple.com/documentation/audiounit">https://developer.apple.com/documentation/audiounit</a></td></tr>
+<tr><td align="left">COM</td><td align="left">Component Object Model</td><td align="left"><a href="https://en.wikipedia.org/wiki/Component_Object_Model">https://en.wikipedia.org/wiki/Component_Object_Model</a></td></tr>
+<tr><td align="left">DAFX</td><td align="left">Digital Audio Effects</td><td align="left"><a href="https://dafx.org">https://dafx.org</a></td></tr>
+<tr><td align="left">DAW</td><td align="left">Digital Audio Workstation</td><td align="left"><a href="https://en.wikipedia.org/wiki/Digital_audio_workstation">https://en.wikipedia.org/wiki/Digital_audio_workstation</a></td></tr>
+<tr><td align="left">DLL</td><td align="left">Dynamic-Link Library</td><td align="left"><a href="https://en.wikipedia.org/wiki/Dynamic-link_library">https://en.wikipedia.org/wiki/Dynamic-link_library</a></td></tr>
+<tr><td align="left">DSP</td><td align="left">Digital Signal Processing</td><td align="left"><a href="https://en.wikipedia.org/wiki/Digital_signal_processing">https://en.wikipedia.org/wiki/Digital_signal_processing</a></td></tr>
+<tr><td align="left">e.g.</td><td align="left">exempli gratia</td><td align="left">for example</td></tr>
+<tr><td align="left">FAQ</td><td align="left">Frequently Asked Questions</td><td align="left">VST 3 <a href="../FAQ/Index.html">Frequently Asked Questions</a></td></tr>
+<tr><td align="left">FFT</td><td align="left">Fast Fourier Transformation</td><td align="left"><a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">https://en.wikipedia.org/wiki/Fast_Fourier_transform</a></td></tr>
+<tr><td align="left">GPL</td><td align="left">General Public License</td><td align="left"><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">https://www.gnu.org/licenses/gpl-3.0.en.html</a></td></tr>
+<tr><td align="left">ICASSP</td><td align="left">International Conference on Acoustics, Speech and Signal Processing</td><td align="left"><a href="https://en.wikipedia.org/wiki/International_Conference_on_Acoustics,_Speech,_and_Signal_Processing">https://en.wikipedia.org/wiki/International_Conference_on_Acoustics,_Speech,_and_Signal_Processing</a></td></tr>
+<tr><td align="left">ISMIR</td><td align="left">International Society for Music Information Retrieval</td><td align="left"><a href="https://ismir.net">https://ismir.net</a></td></tr>
+<tr><td align="left">LFE</td><td align="left">Low Frequency Effects</td><td align="left"><a href="https://en.wikipedia.org/wiki/Low-frequency_effects">https://en.wikipedia.org/wiki/Low-frequency_effects</a></td></tr>
+<tr><td align="left">MIDI</td><td align="left">Musical Instrument Digital Interface</td><td align="left"><a href="https://www.midi.org">https://www.midi.org</a></td></tr>
+<tr><td align="left">MPE</td><td align="left">MIDI Polyphonic Expression</td><td align="left"><a href="https://www.midi.org">https://www.midi.org</a></td></tr>
+<tr><td align="left">SDK</td><td align="left">Software Development Kit</td><td align="left"><a href="https://en.wikipedia.org/wiki/Software_development_kit">https://en.wikipedia.org/wiki/Software_development_kit</a></td></tr>
+<tr><td align="left">STL</td><td align="left">Standard Library Containers</td><td align="left"><a href="https://www.cplusplus.com/reference/stl/">https://www.cplusplus.com/reference/stl/</a></td></tr>
+<tr><td align="left">URL</td><td align="left">Uniform Resource Locator</td><td align="left"><a href="https://en.wikipedia.org/wiki/URL">https://en.wikipedia.org/wiki/URL</a></td></tr>
+<tr><td align="left">UTF-16</td><td align="left">Unicode Transformation Format 16bit</td><td align="left">String representation used by VST 3 for exchanging with the host.</p> <a href="https://en.wikipedia.org/wiki/UTF-16">https://en.wikipedia.org/wiki/UTF-16</a></td></tr>
+<tr><td align="left">VST</td><td align="left">Virtual Studio Technology™</td><td align="left">A trademark of <a href="https://www.steinberg.net/">Steinberg</a> for their interface standard for integrating software plug-ins with DAWs.</td></tr>
+<tr><td align="left">VST-MA</td><td align="left">Virtual Studio Technology - Module Architecture</td><td align="left">This is the base architecture for VST 3</td></tr>
+<tr><td align="left">VSTGUI</td><td align="left">Virtual Studio Technology - Graphical User Interface</td><td align="left"><a href="https://github.com/steinbergmedia/vstgui">https://github.com/steinbergmedia/vstgui</a></td></tr>
+<tr><td align="left">Vtable</td><td align="left">Virtual method table</td><td align="left"><a href="https://en.wikipedia.org/wiki/Virtual_method_table">https://en.wikipedia.org/wiki/Virtual_method_table</a></td></tr>
+<tr><td align="left">WYSIWYG</td><td align="left">What You See Is What You Get</td><td align="left"></td></tr>
 </tbody></table>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                        
                             <a rel="prev" href="../../pages/Forum/Index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
+                        
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
                     <a rel="prev" href="../../pages/Forum/Index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+                
+
+                
             </nav>
 
         </div>
 
-        <script type="text/javascript">
-            window.playground_copyable = true;
-        </script>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
         <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
         <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        
         <script type="text/javascript" src="../../mermaid.min.js"></script>
+        
         <script type="text/javascript" src="../../mermaid-init.js"></script>
+        
+
+        
+
     </body>
 </html>
