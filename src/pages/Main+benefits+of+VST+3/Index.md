@@ -76,9 +76,9 @@ While designing **VST 3**, we performed a careful analysis of the existing funct
 - Advanced preset system
 - Multiple plug-ins per library
 - [VST 3 SDK package](../What+is+the+VST+3+SDK/Index.md):
-    - [Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) included
-    - Automated testing environment
-    - Validator (small command line Test Host)
-    - [Plug-in and host examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md) code included
-    - [Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)
-    - ...
+  - [Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) included
+  - Automated testing environment
+  - Validator (small command line Test Host)
+  - [Plug-in and host examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md) code included
+  - [Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)
+  - ...

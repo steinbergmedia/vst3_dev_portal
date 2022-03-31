@@ -166,7 +166,6 @@ Classes:
 - NoteExpressionSynth::Controller
 - NoteExpressionSynth::Voice
 
-
 ## Note Expression Text
 
 - Plug-in visualizing the NoteExpression as Text

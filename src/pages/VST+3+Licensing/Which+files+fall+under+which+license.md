@@ -28,10 +28,10 @@ Each of these files includes this text:
 ```
 
 - for all other files of the VST 3 SDK, the respective embedded license text is applicable, for example:
-    - all **VSTGUI** files fall under a **BSD style** license
-    - all **Helper files** (included in base and public.sdk folders) except VST 2 files fall under a **BSD style** license
-    - all **VST 2 files** (included in pluginterfaces and public.sdk folders) fall under the "**Proprietary Steinberg VST 2**" license
-    - all **mda-vst3 examples** (*public.sdk/samples/mda-vst3 folder*) fall under a **BSD style** license: Copyright (c) 2008 Paul Kellett
+  - all **VSTGUI** files fall under a **BSD style** license
+  - all **Helper files** (included in base and public.sdk folders) except VST 2 files fall under a **BSD style** license
+  - all **VST 2 files** (included in pluginterfaces and public.sdk folders) fall under the "**Proprietary Steinberg VST 2**" license
+  - all **mda-vst3 examples** (*public.sdk/samples/mda-vst3 folder*) fall under a **BSD style** license: Copyright (c) 2008 Paul Kellett
 
 ## What´s about VST 2?
 

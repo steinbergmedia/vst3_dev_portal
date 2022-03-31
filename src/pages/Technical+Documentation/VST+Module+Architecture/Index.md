@@ -125,7 +125,7 @@ In addition to the **GetPluginFactory** function the plug-in may has to export a
 >
 >Plug-in developers should use these functions instead of using platform functions to get the instance handle.
 
-Here a example when using def/exp files instead of SMTG_EXPORT_SYMBOL:
+Here an example when using def/exp files instead of SMTG_EXPORT_SYMBOL:
 
 **winexport.def file on Windows**
 
@@ -150,8 +150,8 @@ Component modules do not require registration like **DirectX**. The host applica
 
 - The application's *Components* subfolder (e.g. *"C:\Program Files\Steinberg\Cubase 10\Components"*) is used for components tightly bound to the application. No other application should use it.
 - Components that are shared between all [Steinberg](https://www.steinberg.net/) hosts are located at:
-    - Win: *"/Program Files/Common Files/Steinberg/Shared Components"*
-    - Mac: *"/Library/Application Support/Steinberg/Components/"*
+  - Win: *"/Program Files/Common Files/Steinberg/Shared Components"*
+  - Mac: *"/Library/Application Support/Steinberg/Components/"*
 - For special purpose plug-in types, additional locations are defined. Please refer to the corresponding documentation to find out if additional folders are used and where to find them. For **VST 3**, see [VST 3 Locations/Format](../Locations+Format/Index.md).
 
 ### Categories

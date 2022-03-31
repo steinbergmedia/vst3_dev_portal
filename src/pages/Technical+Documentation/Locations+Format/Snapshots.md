@@ -19,10 +19,10 @@ Since VST 3.6.10, a **VST 3** bundle can contain pre-rendered snapshot images fo
 - The image format must be PNG
 - The image needs to be located inside the bundle directory in the folder **Resources/Snapshots/**
 The file name must start with the unique ID of the audio processor printed in the form **84E8DE5F92554F5396FAE4133C935A18** followed by the string **_snapshot** and optionally followed by the HiDPI scale factor **_2.0x** and ending with the file extension **.png**.
-    - For example, again's snapshot must be named:
-        - **84E8DE5F92554F5396FAE4133C935A18_snapshot.png**
-        - **84E8DE5F92554F5396FAE4133C935A18_snapshot_2.0x.png** for the 2x scaled HiDPI variant.
-    - If the HiDPI scale factor is omitted, a scale factor of 1 is used.
+  - For example, again's snapshot must be named:
+    - **84E8DE5F92554F5396FAE4133C935A18_snapshot.png**
+    - **84E8DE5F92554F5396FAE4133C935A18_snapshot_2.0x.png** for the 2x scaled HiDPI variant.
+  - If the HiDPI scale factor is omitted, a scale factor of 1 is used.
 
 ## Examples
 

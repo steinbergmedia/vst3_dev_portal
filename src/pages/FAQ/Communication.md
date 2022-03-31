@@ -47,8 +47,7 @@ componentHandler->restartComponent (kParamTitlesChanged);
 The host will rescan the parameter list and update the titles.
 
 >ⓘ **Note**<br>
->With the flag **kParamValuesChanged** only the parameters values will be updated.
-
+With the flag **kParamValuesChanged** only the parameters values will be updated.
 
 ## Q: How receive MIDI Controllers from the host?
 
@@ -59,6 +58,6 @@ So any functionality that is to be controlled by **MIDI** controllers must be ex
 To inform the host about this **MIDI CC**s to plug-in parameters mapping, the plug-in should implement the [IMidiMapping](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiMapping.html) interface.
 If the mapping has changed, the plug-in should call [IComponentHandler::restartComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6) (kMidiCCAssignmentChanged) to inform the host about this change.
 
-## Q: How my parameter changes (from UI interaction) are send to the processor if the host does not process?
+## Q: How my parameter changes (from UI interaction) are sent to the processor if the host does not process?
 
 When a parameter is changed in the plug-in UI by user action, the plug sends this change to the host with [performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93) (do not forget to call [beginEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223) and [endEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#ae380206486b11f000cad7c0d9b6e877c)), then the host has the responsibility to transfer this parameter change to the processor part: => if the audio engine is running (playing) this will be done in the next available process call => if the audio engine is not running, the host has to flush parameter changes from time to time by sending them to processor by calling process (with audio buffer set to null), in this case the plug-in should only update the parameters changes without processing any audio. This is very important that the host supports this flush mechanism else by saving plug-ins state (project/preset) the host will not get the correct updated one.

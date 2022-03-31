@@ -97,4 +97,3 @@ Here's an example video recorded while creating the new user interface for the f
 **Create the VST 3 Grungelizer UI in 15 minutes with the UIDescriptionEditor of VSTGUI**
 
 [![tutorial_vid_1](https://i.ytimg.com/vi/0zFT6bo2Dig/maxresdefault.jpg)](https://www.youtube.com/watch?v=0zFT6bo2Dig)
-

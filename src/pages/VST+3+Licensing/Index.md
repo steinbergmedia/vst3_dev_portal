@@ -27,4 +27,3 @@ All files describing the VST 3 interface, except VST 2 files, located in the fol
 
 # [Developer use cases (FAQs)](../VST+3+Licensing/Developer+use+cases.md)
 The following use cases support you to choose the right license.
-

@@ -143,4 +143,3 @@ Callback interface passed to IPlugView.
 - [mandatory]
 
 Enables a plug-in to resize the view and cause the host to resize the window.
-

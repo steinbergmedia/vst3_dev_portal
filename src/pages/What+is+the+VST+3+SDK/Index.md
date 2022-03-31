@@ -16,12 +16,10 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 
 The **VST 3 SDK** package contains:
 
-
 >**The VST 3 API**<br>
 >This is a **C++ interface** defining how a **VST 3** plug-in communicates with a host and vice versa. The heart of **VST 3**.
 >
 >Check the folder *"pluginterfaces/vst"* of the SDK!
-
 
 >**VST 3 Implementation Helper Classes**<br>
 >Some helper classes are provided, implementing some **VST 3** interfaces for hosting and for creating **VST 3** plug-ins. Simply derived your plug-in C++ classes from these helper classes.
@@ -43,7 +41,6 @@ Check the folder *"public.sdk/source/vst/aaxwrapper"* of the SDK!
 
 The SDK includes some Plug-ins implementation examples. The Legendary **AGain** and **ADelay**, thanks Paul Kellet the Open-source **mda** Plug-ins, a basic "Note Expression Synth" supporting "**Note Expression Event**", an example of **pitchnames** support Plug-in, a **VST3 Host Checker** which checks if a host is VST3 compliant and more...
 
-
 >![what_if_2](../../resources/what_is_2.jpg)
 >
 >![what_if_3](../../resources/what_is_3.jpg)
@@ -53,7 +50,6 @@ The SDK includes some Plug-ins implementation examples. The Legendary **AGain** 
 >![what_if_5](../../resources/what_is_5.jpg)
 
 Check the folder *"public.sdk/samples/vst"* of the SDK!
-
 
 ## [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
 

@@ -94,13 +94,16 @@ tresult PLUGIN_API MyVST3Effect::setState (IBStream* state)
 }
 ```
 
-For complete example source code you could check the function: tresult *PLUGIN_API Processor::setState (IBStream* state)* in the file *public.sdk/samples/vst/mda-vst3/source/mdaBaseProcessor.cpp*
+For complete example source code you could check the function:
+
+tresult *PLUGIN_API Processor::setState (IBStream* state)* in the file *public.sdk/samples/vst/mda-vst3/source/mdaBaseProcessor.cpp*
 
 For Automation compatibility, you have to ensure that **VST 3** parameter IDs have the same value than the indexes of their associated parameters in **VST 2**. Only with this condition the host can play back the automation. The parameter value has the same meaning in **VST 2** and **VST 3**.
 
 ## Q: In VST 2 the editor was able to access the processing part, named effect, directly. How can I do this in VST 3?
 
-You cannot and more importantly must not do this. The processing part and user interface part communicate via a messaging system.<br>
+You cannot and more importantly must not do this. The processing part and user interface part communicate via a messaging system.
+
 See [Q: How should I communicate between the 'Processing' and the 'User Interface'?](#q-how-should-i-communicate-between-the-processing-and-the-user-interface) for details.
 
 ## Q: Does VST 3 implement methods like beginEdit and endEdit known from VST 2?

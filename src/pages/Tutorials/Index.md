@@ -19,7 +19,7 @@
 
 ---
 
-The tutorials explain common techniques and best practices for building your plug-ins. By following the instructions step by step you will learn how to develop **VST 3** plug-ins.
+The tutorials explain common techniques and best practices for building your plug-ins. By following the instruction step by step you will learn how to develop **VST 3** plug-ins.
 
 >ⓘ **Note**<br>
 >This section is under construction and will be extended inthe future with new tutorials.

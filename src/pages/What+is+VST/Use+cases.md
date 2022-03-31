@@ -73,4 +73,3 @@ By using **VST 3 SDK** directly:
 | TS2 | Ircam Lab | <https://www.ircamlab.com> |
 | Cross DJ | MixVibes | <https://www.mixvibes.com> |
 | VST Rack Pro | Yamaha Corporation | |
-

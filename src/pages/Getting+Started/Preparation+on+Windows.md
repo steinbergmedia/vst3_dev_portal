@@ -24,7 +24,7 @@ You could choose the new user location for VST3 plug-ins, call cmake with this p
 
 - Navigate to:
 
-*Computer Configuration => Windows Settings => Security Settings =>Local Policies => User Rights Assignment => Create symbolic links*
+>*Computer Configuration => Windows Settings => Security Settings =>Local Policies => User Rights Assignment => Create symbolic links*
 
 Here you can set which users can create symbolic links.
 

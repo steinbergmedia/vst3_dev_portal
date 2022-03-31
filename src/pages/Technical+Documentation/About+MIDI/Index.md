@@ -41,7 +41,7 @@ Relationship of concepts in **MIDI 1.0** to **VST 3**
 | MPE (MIDI Polyphonic Expression) | [NoteExpression](../Change+History/3.5.0/INoteExpressionController.md), [PhysicalUI](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md) | *ivstnoteexpression.h*, *ivstphysicalui.h* |
 | System Exclusive | [Steinberg::Vst::DataEvent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1DataEvent.html) of Type [Steinberg::Vst::DataEvent::kMidiSysEx](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1DataEvent.html#afb6eb4f28419b652027fad41104a6d22ab06d86440be6a85eccce4df100ce8e79) | *ivstevents.h* |
 
-<br>Additional relationships of concepts introduced in MIDI 2.0 (<https://www.midi.org/>) to **VST 3**
+Additional relationships of concepts introduced in MIDI 2.0 (<https://www.midi.org/>) to **VST 3**
 
 | MIDI 2.0 | VST 3 | Defined in/Comments |
 | :- | :- | :- |

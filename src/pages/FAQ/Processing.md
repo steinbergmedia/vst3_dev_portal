@@ -19,7 +19,7 @@ This is the choice of the plug-in to handle/process the bypass (like any other p
 During bypass the process is still called, but if not, for some reason, the host may call a flush (using process call with null audio buffer).
 
 >***Note:***<br>
->The plug-in needs to save in its state the bypass parameter like any other parameters.
+The plug-in needs to save in its state the bypass parameter like any other parameters.
 
 Q: Must the host deliver valid initialized Audio buffers if the associated bus is deactivated?
 
@@ -125,7 +125,6 @@ The offline processing mode (passed in the process call) is used when:
 With [IComponent::setIoMode](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137) (Vst::kOfflineProcessing) you are able to differentiate between export and DOP (Direct Offline Processing).
 
 [![getting_started_vid_1](https://i.ytimg.com/vi/62yMkHRfd2I/maxresdefault.jpg)](https://www.youtube.com/watch?v=62yMkHRfd2I)
-
 
 Direct Offline Processing since Cubase 9.5
 

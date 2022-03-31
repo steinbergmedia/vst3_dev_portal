@@ -102,12 +102,12 @@ In this tab you are defining some information for the creation of a new plug-in:
 
 ![what_if_31](../../resources/what_is_31.png)
 
-- **Name**: the name of the plug-in which is displayed in a host: e.g. *"AGain"*</p>
+- **Name**: the name of the plug-in which is displayed in a host: e.g. *"AGain"*
 - **Type**: this specifies the main **VST 3** Sub-Category ([PlugType](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html)) of your plug-in:
     - **Audio Effect**: ([kFx](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga0411b97bcc13d604e738a28aee43bb61)) a simple audio effect Stereo→Stereo
     - **Instrument**: ([kInstrument](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga93cb7a7100ac96cfafceb6216770c42dl#gabe030351fd22d14dad35c817e1849f59)) a simple instrument with 1 Event input and 1 stereo Audio output
 - **Use VSTGUI**: check this if you want to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) as UI framework
-- **macOS Deployment Target**: enter here the minimum requested macOS version targeted</p>
+- **macOS Deployment Target**: enter here the minimum requested macOS version targeted
 - **C++ Class Name**: this specifies the basename of your plug-in classes: e.g. *"AGain"*
 ```
 class AGainProcessor : public AudioEffect

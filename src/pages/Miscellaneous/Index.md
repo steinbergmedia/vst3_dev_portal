@@ -51,7 +51,7 @@ External Glossary: [AES - PAR - Pro Audio Reference:](https://www.aes.org/par/) 
 | SDK | Software Development Kit | <https://en.wikipedia.org/wiki/Software_development_kit> |
 | STL | Standard Library Containers | <https://www.cplusplus.com/reference/stl/> |
 | URL | Uniform Resource Locator | <https://en.wikipedia.org/wiki/URL> |
-| UTF-16 | Unicode Transformation Format 16bit | String representation used by VST 3 for exchanging with the host.</p> <https://en.wikipedia.org/wiki/UTF-16> |
+| UTF-16 | Unicode Transformation Format 16bit | String representation used by VST 3 for exchanging with the host. <https://en.wikipedia.org/wiki/UTF-16> |
 | VST | Virtual Studio Technology™ | A trademark of [Steinberg](https://www.steinberg.net/) for their interface standard for integrating software plug-ins with DAWs. |
 | VST-MA | Virtual Studio Technology - Module Architecture | This is the base architecture for VST 3 |
 | VSTGUI | Virtual Studio Technology - Graphical User Interface | <https://github.com/steinbergmedia/vstgui> |

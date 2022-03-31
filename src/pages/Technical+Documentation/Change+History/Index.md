@@ -29,4 +29,3 @@ All released versions of the VST 3 SDK with changes and dates:
 - [Version 3.0.2 (2009/01/15)](../Change+History/Versions/Version+3.0.2.md)
 - [Version 3.0.1 (2008/03/19)](../Change+History/Versions/Version+3.0.1.md)
 - [Version 3.0.0 (2008/01/17)](../Change+History/Versions/Version+3.0.0.md)
-

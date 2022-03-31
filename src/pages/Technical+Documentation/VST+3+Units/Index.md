@@ -24,10 +24,10 @@ The purposes of units are:
 - Organize parameters by associating them with units
 - Support program lists
 - Support handling of [Complex Plug-in Structures / Multi-timbral Instruments](../Complex+Structures/Index.md)
-    - Multiple program lists (associated with a unit)
-    - Access to program list data
-    - Associations of MIDI tracks and units
-    - Synchronization of plug-in GUI and host GUI
+  - Multiple program lists (associated with a unit)
+  - Access to program list data
+  - Associations of MIDI tracks and units
+  - Synchronization of plug-in GUI and host GUI
 
 ## Unit details
 
