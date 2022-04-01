@@ -17,7 +17,7 @@
 
 A **VST 3** Plug-in should be installed at specific folder location, the following tables specify these predefined locations for different operating system.
 
->ⓘ **Note**\
+>ⓘ **Note**
 >VST 3 doesn't require a Plug-in registration like it is used with DirectX.
 
 >⚠️ **Warning**\
@@ -29,8 +29,8 @@ A **VST 3** Plug-in should be installed at specific folder location, the followi
 - **Global**: available for all users of the system
 - **Application**: available only inside an specific Audio Application (local Plug-ins)
 
->ⓘ **Note**\
->The host should scan at first higher level of priority, first found Plug-in (for a given Processor UID) has to be used.
+>ⓘ **Note**
+The host should scan at first higher level of priority, first found Plug-in (for a given Processor UID) has to be used.
 
 ### On macOS platform
 
@@ -43,8 +43,7 @@ On the macOS platform, the host application expects **VST 3 Plug-ins** to be loc
 | 3 |  Global | /Network/Library/Audio/Plug-ins/VST3/ |
 | 4 |  Application | $APPFOLDER/Contents/VST3/ |
 
->ⓘ **Note**\
->The host recursively scans these folders at startup in this order (Global/Application).
+>ⓘ **Note**<br> The host recursively scans these folders at startup in this order (Global/Application).
 
 ### On Windows platform
 
@@ -57,8 +56,7 @@ On the Windows platform, the host application expects VST 3 Plug-ins to be locat
 | 2 | Global | /Program Files (x86)/Common Files/VST3/ | 32bit Plug-ins on 64bit Windows |
 | 3 | Application | $APPFOLDER/VST3/ | |
 
->ⓘ **Note**\
->The host recursively scans these folders at startup in this order (Global/Application).
+>ⓘ **Note**<br>The host recursively scans these folders at startup in this order (Global/Application).
 
 ### On Linux platform
 

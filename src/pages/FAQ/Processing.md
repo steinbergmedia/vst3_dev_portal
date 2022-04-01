@@ -18,7 +18,7 @@ This is the choice of the plug-in to handle/process the bypass (like any other p
 
 During bypass the process is still called, but if not, for some reason, the host may call a flush (using process call with null audio buffer).
 
->***Note:***<br>
+>ⓘ **Note**\
 The plug-in needs to save in its state the bypass parameter like any other parameters.
 
 Q: Must the host deliver valid initialized Audio buffers if the associated bus is deactivated?

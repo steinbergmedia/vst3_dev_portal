@@ -18,7 +18,7 @@ Important links you will need for working with **VST 3**
 
 You have 2 possibilities for getting the **VST 3 SDK:**
 
-| Component | [as zip package]() | [as GitHub repository]() |
+| Component | [as zip package](#download-the-full-vst-3-package-as-zip-file) | [as GitHub repository](#clone-vst-3-repository-from-github) |
 | - | - | - |
 | [VST 3 API](../Technical+Documentation/API+Documentation/Index.md) | ✔️ | ✔️ |
 | [Helpers classes](../What+is+the+VST+3+SDK/Index.md) | ✔️ | ✔️ |

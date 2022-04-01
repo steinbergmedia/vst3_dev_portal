@@ -58,9 +58,11 @@ cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=
 >-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
 >```
 
-Note: you can find the string definition for different Visual Studio Generators in the cmake online documentation (<https://cmake.org/documentation/>)
+>ⓘ **Note**\
+>You can find the string definition for different Visual Studio Generators in the cmake online documentation (<https://cmake.org/documentation/>)
 
 - Build the plug-in (you can use Visual Studio too):
+
 ```
 msbuild.exe vstsdk.sln
 (or alternatively for example for release)
