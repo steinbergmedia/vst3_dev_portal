@@ -167,7 +167,7 @@
 </ul>
 <p><strong>Related pages</strong></p>
 <ul>
-<li>[[3.0.0] Interfaces supported by the plug-in](../3.0.0/Plug+in+Interfaces.md)</li>
+<li><a href="../3.0.0/Plug+in+Interfaces.html">(3.0.0) Interfaces supported by the plug-in</a></li>
 </ul>
 <hr />
 <p>List of interfaces supported/implemented by the host in VST 3.0.0</p>
@@ -176,9 +176,9 @@
 <ul>
 <li>[host imp]</li>
 <li>[released: 3.0.0]</li>
-<li>[mandatory]
-An attribute list associates values with a key (id: some predefined keys can be found in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__presetAttributes.html">Predefined Preset Attributes</a>).</li>
+<li>[mandatory]</li>
 </ul>
+<p>An attribute list associates values with a key (id: some predefined keys can be found in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__presetAttributes.html">Predefined Preset Attributes</a>).</p>
 <h2><a class="header" href="#icomponenthandler" id="icomponenthandler">IComponentHandler</a></h2>
 <p>Host callback interface for an edit controller.</p>
 <ul>
@@ -210,7 +210,7 @@ An attribute list associates values with a key (id: some predefined keys can be 
 <p>Basic host callback interface.</p>
 <ul>
 <li>[host imp]</li>
-<li>[passed as 'context' in to IPluginBase::initialize () ]</li>
+<li>[passed as 'context' in to IPluginBase::initialize() ]</li>
 <li>[released: 3.0.0]</li>
 <li>[mandatory]</li>
 </ul>
@@ -233,28 +233,32 @@ An attribute list associates values with a key (id: some predefined keys can be 
 <li>[mandatory]</li>
 </ul>
 <p>The change queue can be interpreted as segment of an automation curve. For each processing block, a segment with the size of the block is transmitted to the processor. The curve is expressed as sampling points of a linear approximation of the original automation curve. If the original already is a linear curve, it can be transmitted precisely. A non-linear curve has to be converted to a linear approximation by the host. Every point of the value queue defines a linear section of the curve as a straight line from the previous point of a block to the new one. So the plug-in can calculate the value of the curve for any sample position in the block.</p>
-<p><strong>Implicit Points</strong>:
+<p><strong>Implicit Points</strong>:<br />
 In each processing block, the section of the curve for each parameter is transmitted. In order to reduce the amount of points, the point at block position 0 can be omitted.</p>
 <ul>
-<li>If the curve has a slope of 0 over a period of multiple blocks, only one point is transmitted for the block where the constant curve section starts. The queue for the following blocks will be empty as long as the curve slope is 0.</li>
-<li>If the curve has a constant slope other than 0 over the period of several blocks, only the value for the last sample of the block is transmitted. In this case, the last valid point is at block position -1. The processor can calculate the value for each sample in the block by using a linear interpolation:</li>
-</ul>
+<li>
+<p>If the curve has a slope of 0 over a period of multiple blocks, only one point is transmitted for the block where the constant curve section starts. The queue for the following blocks will be empty as long as the curve slope is 0.</p>
+</li>
+<li>
+<p>If the curve has a constant slope other than 0 over the period of several blocks, only the value for the last sample of the block is transmitted. In this case, the last valid point is at block position -1. The processor can calculate the value for each sample in the block by using a linear interpolation:</p>
 <pre><code>double x1 = -1; // position of last point related to current buffer
 double y1 = currentParameterValue; // last transmitted value
- 
+
 int32 pointTime = 0;
 ParamValue pointValue = 0;
 IParamValueQueue::getPoint (0, pointTime, pointValue);
- 
+
 double x2 = pointTime;
 double y2 = pointValue;
- 
+
 double slope = (y2 - y1) / (x2 - x1);
 double offset = y1 - (slope * x1);
- 
+
 double curveValue = (slope * bufferTime) + offset; // bufferTime is any position in buffer
 </code></pre>
-<p><strong>Jumps</strong>:
+</li>
+</ul>
+<p><strong>Jumps</strong>:<br />
 A jump in the automation curve has to be transmitted as two points: one with the old value and one with the new value at the next sample position.</p>
 <p><img src="../../../../resources/tech_doc_29.jpg" alt="tech_doc_29" /></p>
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a></p>

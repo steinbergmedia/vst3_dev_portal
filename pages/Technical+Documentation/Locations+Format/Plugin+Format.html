@@ -175,7 +175,7 @@
 <tr><td align="left">MyPlugin.vst3/Contents/PkgInfo</td><td align="left">specifies the type and creator codes of the bundle (optional)</td></tr>
 </tbody></table>
 <h2><a class="header" href="#for-the-windows-platform" id="for-the-windows-platform">For the Windows platform</a></h2>
-<p>On the Windows platform, a VST 3 Plug-in is organized as a bundle like package format (simple folder), its file extension is &quot;.vst3&quot; and has the following folder structure:</p>
+<p>On the Windows platform, a <strong>VST 3 Plug-in</strong> is organized as a bundle like package format (simple folder), its file extension is &quot;<strong>.vst3</strong>&quot; and has the following folder structure:</p>
 <table><thead><tr><th align="left">Folder</th><th align="left">Description</th></tr></thead><tbody>
 <tr><td align="left">MyPlugin.vst3/Contents/Resources/</td><td align="left">folder contains all additional resource files useful for the plug-in</td></tr>
 <tr><td align="left">MyPlugin.vst3/Contents/x86-win/MyPlugin.vst3</td><td align="left">folder contains the plug-in binary (32 bit dll for the i386 architecture)</td></tr>
@@ -187,9 +187,9 @@
 </tbody></table>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
-In previous SDKs, the VST 3 Plug-in was defined as a single dll file with the .vst3 extension. This is deprecated since VST 3.6.10.</p>
+In previous SDKs, the <strong>VST 3 Plug-in</strong> was defined as a single dll file with the <strong>.vst3</strong> extension. This is deprecated since VST 3.6.10.</p>
 </blockquote>
-<p>The file desktop.ini should contain:</p>
+<p>The file <strong>desktop.ini</strong> should contain:</p>
 <p><strong>desktop.ini</strong></p>
 <pre><code>[.ShellClassInfo]
 IconResource=Plugin.ico,0
@@ -208,7 +208,7 @@ attrib +r +h Plugin.ico
 </tbody></table>
 <h2><a class="header" href="#merged-bundle" id="merged-bundle">Merged Bundle</a></h2>
 <p>Note that all the bundles can be merged to one, which allows to have a cross-platform bundle/folder.</p>
-<p>For example:</p>
+<p><strong>For example:</strong></p>
 <pre><code>MyPlugin.vst3/
     |_ Contents/
     |   |__ Resources/

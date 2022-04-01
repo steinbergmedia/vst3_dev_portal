@@ -215,8 +215,7 @@
 <li>add <em>vstgui_uidescription_ios.mm</em></li>
 </ul>
 <h2><a class="header" href="#code-changes" id="code-changes">Code changes</a></h2>
-<p><strong>Xcode</strong> created some files for you when you created the project. One of it is the App Delegate. You need to change the base class from **NSResponder<UIApplicationDelegate></p>
-<p>** to <strong>VSTInterAppAudioAppDelegateBase</strong> (you need to import its header file which is here:<br />
+<p><strong>Xcode</strong> created some files for you when you created the project. One of it is the App Delegate. You need to change the base class from <code>NSResponder&lt;UIApplicationDelegate&gt;</code> to <code>VSTInterAppAudioAppDelegateBase</code> (you need to import its header file which is here:<br />
 <em>public.sdk/source/vst/interappaudio/VSTInterAppAudioAppDelegateBase.h)</em> and then remove all methods from it. If you want to add some custom behavior to your app, you should do it in your App Delegate class implementation. For example, if you want to only allow landscape mode, you have to add this method:</p>
 <pre><code>// -----------------------------------------------------------------    ------
 - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
@@ -248,7 +247,7 @@ IPlugView* PLUGIN_API MyEditController::createView(FIDString   _name)
 }
 </code></pre>
 <h3><a class="header" href="#using-a-hrefwhatisthevst3sdkvstguihtmlvstguia" id="using-a-hrefwhatisthevst3sdkvstguihtmlvstguia">Using <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a></a></h3>
-<p><strong>VSTGUI</strong> 4.3 or higher includes support for iOS. You can use it the same like you use it for Windows or Mac OS X. See the <strong>VSTGUI</strong> documentation for some limitations.</p>
+<p><a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> 4.3 or higher includes support for iOS. You can use it the same like you use it for Windows or Mac OS X. See the <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> documentation for some limitations.</p>
 <h3><a class="header" href="#using-a-native-uiview" id="using-a-native-uiview">Using a native UIView</a></h3>
 <p>If you want to create a native UIView as your plug-in editor, you have to create your own IPlugView derivate and attach the UIView in the IPlugView::attached method. An example of this can be seen in <em>&quot;public.sdk/samples/vst/adelay/interappaudio/iosEditor.mm&quot;</em></p>
 <h3><a class="header" href="#host-ui-integration" id="host-ui-integration">Host UI Integration</a></h3>

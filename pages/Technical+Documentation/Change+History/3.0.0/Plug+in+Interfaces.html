@@ -171,7 +171,7 @@
 </ul>
 <p><strong>Related pages</strong></p>
 <ul>
-<li>[[3.0.0] Interfaces supported by the host](../Change+History/3.0.0/Host+Interfaces.md)</li>
+<li><a href="../Change+History/3.0.0/Host+Interfaces.html">(3.0.0) Interfaces supported by the host</a></li>
 </ul>
 <hr />
 <p>List of interfaces supported/implemented by the plug-in in VST 3.0.0</p>
@@ -188,7 +188,7 @@
 <p>Audio processing interface.</p>
 <ul>
 <li>[plug imp]</li>
-<li>[extends IComponent]</li>
+<li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">IComponent</a>]</li>
 <li>[released: 3.0.0]</li>
 <li>[mandatory]</li>
 </ul>
@@ -221,11 +221,13 @@
 <li>[optional]</li>
 </ul>
 <p><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a> describes the internal structure of the plug-in.</p>
-<p>The root unit is the component itself, so getUnitCount must return 1 at least.
-The root unit id has to be 0 (kRootUnitId).
-Each unit can reference one program list - this reference must not change.
-Each unit that uses a program list references one program of the list.
-See also <a href="../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a></p>
+<ul>
+<li>The root unit is the component itself, so getUnitCount must return 1 at least.</li>
+<li>The root unit id has to be 0 (kRootUnitId).</li>
+<li>Each unit can reference one program list - this reference must not change.</li>
+<li>Each unit that uses a program list references one program of the list.</li>
+</ul>
+<p>See also <a href="../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a></p>
 <h2><a class="header" href="#a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iprogramlistdatahtmliprogramlistdataa" id="a-hrefhttpssteinbergmediagithubiovst3_docvstinterfacesclasssteinberg_1_1vst_1_1iprogramlistdatahtmliprogramlistdataa"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html">IProgramListData</a></a></h2>
 <p>Component extension to access program list data.</p>
 <ul>
@@ -240,7 +242,7 @@ See also <a href="../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https:
 <p>Component extension to access unit data.</p>
 <ul>
 <li>[plug imp]</li>
-<li>[extends IComponent]</li>
+<li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">IComponent</a>]</li>
 <li>[released: 3.0.0]</li>
 <li>[optional]</li>
 </ul>
@@ -277,7 +279,7 @@ Note that if the host calls IPlugView::getSize () before calling IPlugView::onSi
 </ul>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
-Please only resize the platform representation of the view when IPlugView::onSize () is called.</p>
+Please only resize the platform representation of the view when <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#a3e741e55c2c047a4cc10f102661f5654">IPlugView::onSize()</a> is called.</p>
 </blockquote>
 <h3><a class="header" href="#keyboard-handling" id="keyboard-handling">Keyboard handling</a></h3>
 <p>The plug-in view receives keyboard events from the host. A view implementation must not handle keyboard events by the means of platform callbacks, but let the host pass them to the view. The host depends on a proper return value when <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#a759b576f046e699c84dc07d579600b1b">IPlugView::onKeyDown</a> is called, otherwise the plug-in view may cause a malfunction of the host's key command handling.</p>

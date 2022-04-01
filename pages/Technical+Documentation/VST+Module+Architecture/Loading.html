@@ -160,13 +160,9 @@
 <hr />
 <p>Check the included cpp files showing how to load such Component/plug-in:</p>
 <ul>
-<li>
-<p><em>public.sdk/source/vst/hosting/module.h</em><br></p>
-<p>and</p>
-</li>
-<li>
-<p><em>for each platform public.sdk/source/vst/hosting/module_win32.cpp,.....</em></p>
-</li>
+<li><em>public.sdk/source/vst/hosting/module.h</em><br />
+and</li>
+<li><em>for each platform public.sdk/source/vst/hosting/module_win32.cpp,.....</em></li>
 </ul>
 <p>Here below you could found a basic implementation on Windows showing how to load the library and get pointer to the wanted exported functions:</p>
 <pre><code>HMODULE hModule = LoadLibrary (&quot;SomePlugin.dll&quot;);

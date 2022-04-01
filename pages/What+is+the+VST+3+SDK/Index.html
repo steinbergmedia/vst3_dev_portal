@@ -178,17 +178,13 @@
 <h2><a class="header" href="#what-is-included" id="what-is-included">What is included</a></h2>
 <p>The <strong>VST 3 SDK</strong> package contains:</p>
 <blockquote>
-<p><strong>The VST 3 API</strong><br></p>
-</blockquote>
-<blockquote>
-<p>This is a <strong>C++ interface</strong> defining how a <strong>VST 3</strong> plug-in communicates with a host and vice versa. The heart of <strong>VST 3</strong>.</p>
+<p><strong>The VST 3 API</strong><br />
+This is a <strong>C++ interface</strong> defining how a <strong>VST 3</strong> plug-in communicates with a host and vice versa. The heart of <strong>VST 3</strong>.</p>
 <p>Check the folder <em>&quot;pluginterfaces/vst&quot;</em> of the SDK!</p>
 </blockquote>
 <blockquote>
-<p><strong>VST 3 Implementation Helper Classes</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Some helper classes are provided, implementing some <strong>VST 3</strong> interfaces for hosting and for creating <strong>VST 3</strong> plug-ins. Simply derived your plug-in C++ classes from these helper classes.</p>
+<p><strong>VST 3 Implementation Helper Classes</strong><br />
+Some helper classes are provided, implementing some <strong>VST 3</strong> interfaces for hosting and for creating <strong>VST 3</strong> plug-ins. Simply derived your plug-in C++ classes from these helper classes.</p>
 <p><img src="../../resources/what_is_1.png" alt="what_if_1" /></p>
 <p>Check the folder <em>&quot;public.sdk&quot;</em> of the SDK!</p>
 </blockquote>
@@ -210,27 +206,21 @@
 </blockquote>
 <p>Check the folder <em>&quot;public.sdk/samples/vst&quot;</em> of the SDK!</p>
 <h2><a class="header" href="#a-hrefwhatisthevst3sdkplug-intesthosthtmlvst-3-plug-in-test-hosta" id="a-hrefwhatisthevst3sdkplug-intesthosthtmlvst-3-plug-in-test-hosta"><a href="../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a></a></h2>
-<p>The SDK provides a test application called <strong>VST3PluginTestHost</strong> for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).<br></p>
-<p>This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small <strong>VST 3</strong> host application based on an <strong>ASIO</strong> driver.<br></p>
-<p>Included in this application is a test module which allows you to check your plug-in in regard to the <strong>VST 3</strong> standard.</p>
+<p>The SDK provides a test application called <strong>VST3PluginTestHost</strong> for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).<br />
+This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small <strong>VST 3</strong> host application based on an <strong>ASIO</strong> driver.<br />
+Included in this application is a test module which allows you to check your plug-in in regard to the <strong>VST 3</strong> standard.</p>
 <p><img src="../../resources/what_is_6.jpg" alt="what_if_6" /></p>
 <p>Check the folder <em>&quot;bin&quot;</em> of the SDK!</p>
 <h2><a class="header" href="#validator-command-line" id="validator-command-line">Validator command line</a></h2>
 <blockquote>
-<p><strong>as Cross-platform source code</strong><br></p>
-</blockquote>
-<blockquote>
-<p>The <em><strong>validator</strong></em> is a small command line host application (source code included) which can be used to check your &gt; plug-in for VST 3 conformity. You can also write your own test code and let the <strong>validator</strong> execute it. Very nice for &gt; automatic build server integration.</p>
+<p><strong>as Cross-platform source code</strong><br />
+The <em><strong>validator</strong></em> is a small command line host application (source code included) which can be used to check your &gt; plug-in for VST 3 conformity. You can also write your own test code and let the <strong>validator</strong> execute it. Very nice for &gt; automatic build server integration.</p>
 <p>Check the folder <em>&quot;public.sdk/samples/vst-hosting/validator&quot;</em> of the SDK!</p>
 </blockquote>
 <h2><a class="header" href="#audiohost" id="audiohost">AudioHost</a></h2>
 <blockquote>
-<p><strong>as Cross-platform source code</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Simple cross-platform (only tested on Linux) host application allowing you to register a VST 3 plug-in with Jack Server. First, you have to download the Jack Audio SDK and application server (<a href="http://www.jackaudio.org">http://www.jackaudio.org</a>).<br></p>
-</blockquote>
-<blockquote>
+<p><strong>as Cross-platform source code</strong><br />
+Simple cross-platform (only tested on Linux) host application allowing you to register a VST 3 plug-in with Jack Server. First, you have to download the Jack Audio SDK and application server (<a href="http://www.jackaudio.org">http://www.jackaudio.org</a>).</p>
 <ul>
 <li>Windows (not tested): audiohost.exe &quot;C:\PATH_TO_PLUGIN&quot;</li>
 <li>macOS (not tested)</li>
@@ -241,19 +231,15 @@
 </blockquote>
 <h2><a class="header" href="#editorhost" id="editorhost">EditorHost</a></h2>
 <blockquote>
-<p><strong>as Cross-platform source code</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a VST 3 plug-in (with HiDPI &gt; support on Windows/macOS). Call it from the command line: Windows: editorhost.exe &quot;C:\PATH_TO_PLUGIN&quot; macOS/Linux: &gt; editorhost PATH_TO_PLUGIN</p>
+<p><strong>as Cross-platform source code</strong><br />
+Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a VST 3 plug-in (with HiDPI &gt; support on Windows/macOS). Call it from the command line: Windows: editorhost.exe &quot;C:\PATH_TO_PLUGIN&quot; macOS/Linux: &gt; editorhost PATH_TO_PLUGIN</p>
 <p>On Windows and macOS you can also drag and drop a <strong>VST 3 plug-in</strong> on the executable via Explorer/Finder.</p>
 <p>Check the folder <em>&quot;public.sdk/samples/vst-hosting/editorhost&quot;</em> of the SDK!</p>
 </blockquote>
 <h2><a class="header" href="#vst-3-inspector" id="vst-3-inspector">VST 3 Inspector</a></h2>
 <blockquote>
-<p><strong>as Cross-platform source code</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST 3 Folder, collects &gt; information from the factory about each VST 3 plug-in and display it in its UI.</p>
+<p><strong>as Cross-platform source code</strong><br />
+Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST 3 Folder, collects &gt; information from the factory about each VST 3 plug-in and display it in its UI.</p>
 </blockquote>
 <blockquote>
 <p><img src="../../resources/what_is_7.jpg" alt="what_if_7" /></p>
@@ -275,10 +261,8 @@
 <p>iOS InterApp-Audio application out of your <strong>VST 3 plug-in</strong></p>
 <h2><a class="header" href="#a-hrefvst3licensingindexhtmlvst-3-licensinga" id="a-hrefvst3licensingindexhtmlvst-3-licensinga"><a href="../VST+3+Licensing/Index.html">VST 3 Licensing</a></a></h2>
 <blockquote>
-<p><strong>Steinberg VST 3 Plug-In SDK Licensing Agreement</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Please sign this <strong>License Agreement</strong> if you want to develop, release or host <strong>VST 3</strong> plug-Ins.</p>
+<p><strong>Steinberg VST 3 Plug-In SDK Licensing Agreement</strong><br />
+Please sign this <strong>License Agreement</strong> if you want to develop, release or host <strong>VST 3</strong> plug-Ins.</p>
 </blockquote>
 <h2><a class="header" href="#system-requirements" id="system-requirements">System requirements</a></h2>
 <table><thead><tr><th>Operating System</th><th>Architecture</th><th>Compiler</th><th>Notes</th></tr></thead><tbody>

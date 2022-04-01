@@ -160,10 +160,12 @@
 <hr />
 <h2><a class="header" href="#introduction" id="introduction">Introduction</a></h2>
 <p>Host callback for extended unit support: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler2.html">Vst::IUnitHandler2</a></p>
-<p>[host imp]
-[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a>]
-[released: 3.6.5]
-[optional]</p>
+<ul>
+<li>[host imp]</li>
+<li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a>]</li>
+<li>[released: 3.6.5]</li>
+<li>[optional]</li>
+</ul>
 <p>Host callback interface, used with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a>. Retrieve via queryInterface from <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>. The plug-in has the possibility to inform the host with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler2.html#ad1f48213839cc5b28a612a2baaba6584">notifyUnitByBusChange</a> that something has changed in the bus - unit assignment,the host then has to recall <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a718fa905d04d7d559bc89c7ca761413b">IUnitInfo::getUnitByBus</a> in order to get the new relations between busses and unit.</p>
 <p>See also <a href="../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a></p>
 

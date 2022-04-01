@@ -238,12 +238,12 @@ tresult PLUGIN_API MyVST3Effect::setState (IBStream* state)
     return kResultFalse;
 }
 </code></pre>
-<p>For complete example source code you could check the function:</p>
-<p>tresult <em>PLUGIN_API Processor::setState (IBStream</em> state)* in the file <em>public.sdk/samples/vst/mda-vst3/source/mdaBaseProcessor.cpp</em></p>
+<p>For complete example source code you could check the function:<br />
+tresult <em>PLUGIN_API Processor::setState (IBStream</em> state)* in the file <em>public.sdk/samples/vst/mda-vst3/source/mdaBaseProcessor.cpp</em></p>
 <p>For Automation compatibility, you have to ensure that <strong>VST 3</strong> parameter IDs have the same value than the indexes of their associated parameters in <strong>VST 2</strong>. Only with this condition the host can play back the automation. The parameter value has the same meaning in <strong>VST 2</strong> and <strong>VST 3</strong>.</p>
 <h2><a class="header" href="#q-in-vst-2-the-editor-was-able-to-access-the-processing-part-named-effect-directly-how-can-i-do-this-in-vst-3" id="q-in-vst-2-the-editor-was-able-to-access-the-processing-part-named-effect-directly-how-can-i-do-this-in-vst-3">Q: In VST 2 the editor was able to access the processing part, named effect, directly. How can I do this in VST 3?</a></h2>
-<p>You cannot and more importantly must not do this. The processing part and user interface part communicate via a messaging system.</p>
-<p>See <a href="#q-how-should-i-communicate-between-the-processing-and-the-user-interface">Q: How should I communicate between the 'Processing' and the 'User Interface'?</a> for details.</p>
+<p>You cannot and more importantly must not do this. The processing part and user interface part communicate via a messaging system.<br />
+See <a href="#q-how-should-i-communicate-between-the-processing-and-the-user-interface">Q: How should I communicate between the 'Processing' and the 'User Interface'?</a> for details.</p>
 <h2><a class="header" href="#q-does-vst-3-implement-methods-like-beginedit-and-endedit-known-from-vst-2" id="q-does-vst-3-implement-methods-like-beginedit-and-endedit-known-from-vst-2">Q: Does VST 3 implement methods like beginEdit and endEdit known from VST 2?</a></h2>
 <p>Yes and it is essential to support this for automation. For details, please see <a href="../Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></p>
 <h2><a class="header" href="#q-does-vst-3-include-variable-inputoutput-processing-like-processvariableio-of-vst-2" id="q-does-vst-3-include-variable-inputoutput-processing-like-processvariableio-of-vst-2">Q: Does VST 3 include variable Input/Output processing like processVariableIo of VST 2?</a></h2>

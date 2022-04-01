@@ -241,13 +241,9 @@ Vst::IAudioProcessor::process (...);
 <p>When a plug-in is used in an offline processing context (which is the case with Cubase 9.5/Nuendo 8 feature: Direct Offline Processing), its component will be initialized with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">IComponent::setIoMode</a> (Vst::kOfflineProcessing) (see The Simple Mode).
 The offline processing mode (passed in the process call) is used when:</p>
 <ul>
-<li>
-<p>the user exports audio (downmix)</p>
-</li>
-<li>
-<p>direct offline processing feature <br></p>
-<p>With <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">IComponent::setIoMode</a> (Vst::kOfflineProcessing) you are able to differentiate between export and DOP (Direct Offline Processing).</p>
-</li>
+<li>the user exports audio (downmix)</li>
+<li>direct offline processing feature<br />
+With <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">IComponent::setIoMode</a> (Vst::kOfflineProcessing) you are able to differentiate between export and DOP (Direct Offline Processing).</li>
 </ul>
 <p><a href="https://www.youtube.com/watch?v=62yMkHRfd2I"><img src="https://i.ytimg.com/vi/62yMkHRfd2I/maxresdefault.jpg" alt="getting_started_vid_1" /></a></p>
 <p>Direct Offline Processing since Cubase 9.5</p>

@@ -248,7 +248,7 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 </ul>
 </blockquote>
 <ol start="3">
-<li>Now adapt the processor part for this new parameter. Open the file plugprocessor.h and add a gain value <strong>Vst::ParamValue mGain</strong>. This value is used for the processing to apply the gain.</li>
+<li>Now adapt the processor part for this new parameter. Open the file <em>plugprocessor.h</em> and add a gain value <strong>Vst::ParamValue mGain</strong>. This value is used for the processing to apply the gain.</li>
 </ol>
 <p><strong>plugprocessor.h</strong></p>
 <pre><code>// ... 
@@ -261,7 +261,10 @@ protected:
 // ...
 </code></pre>
 <h3><a class="header" href="#add-the-process-applying-the-gain" id="add-the-process-applying-the-gain">Add the process applying the gain</a></h3>
-<p>We need to set our internal <strong>mGain</strong> with its required value from the host. This is the first step of the process method. Parse the parameter change coming from the host in the structure <em>data.inputParameterChanges</em> for the current audio block to process. Be sure to add <strong>#include &quot;public.sdk/source/vst/vstaudioprocessoralgo.h</strong> at top of the file plugprocessor.cpp!<br> This includes some helpers to access audio buffer.</p>
+<ol>
+<li>We need to set our internal <strong>mGain</strong> with its required value from the host. This is the first step of the process method. Parse the parameter change coming from the host in the structure <em>data.inputParameterChanges</em> for the current audio block to process. Be sure to add <strong>#include &quot;public.sdk/source/vst/vstaudioprocessoralgo.h</strong> at top of the file plugprocessor.cpp!<br />
+This includes some helpers to access audio buffer.</li>
+</ol>
 <p><strong>plugprocessor.cpp</strong></p>
 <pre><code>#include &quot;pluginterfaces/vst/ivstparameterchanges.h&quot;
 #include &quot;public.sdk/source/vst/vstaudioprocessoralgo.h&quot;

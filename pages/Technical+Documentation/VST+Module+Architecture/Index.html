@@ -192,24 +192,24 @@
 <hr />
 <h3><a class="header" href="#introduction" id="introduction">Introduction</a></h3>
 <p><strong>VST-MA</strong> is a component model system which is used in all <a href="https://www.steinberg.net/">Steinberg</a> host applications as the basic layer for plug-in support.</p>
-<p>It is object-oriented, cross-platform and (almost) compiler-independent.<br></p>
-<p>The basics are very much like <a href="https://en.wikipedia.org/wiki/Component_Object_Model">Microsoft® COM</a>, so if you are familiar with this technology, understanding <em>VST-MA</em> should be quite easy.</p>
-<p><strong>VST-MA</strong> is provided in C++ only. Interfaces in C++ are expressed as pure virtual class (which is a class with nothing but abstract methods). Unlike COM there is no support for C or other languages yet - simply because there has been no need for this so far. But all <strong>VST-MA</strong> interfaces can be transformed into different representations in case this should be inevitable some day.<br></p>
-<p>It is currently available for Windows, Mac OS X and Linux.</p>
+<p>It is object-oriented, cross-platform and (almost) compiler-independent.<br />
+The basics are very much like <a href="https://en.wikipedia.org/wiki/Component_Object_Model">Microsoft® COM</a>, so if you are familiar with this technology, understanding <em>VST-MA</em> should be quite easy.</p>
+<p><strong>VST-MA</strong> is provided in C++ only. Interfaces in C++ are expressed as pure virtual class (which is a class with nothing but abstract methods). Unlike COM there is no support for C or other languages yet - simply because there has been no need for this so far. But all <strong>VST-MA</strong> interfaces can be transformed into different representations in case this should be inevitable some day.<br />
+It is currently available for Windows, Mac OS X and Linux.</p>
 <p>The C++ files belonging to <strong>VST-MA</strong> are located in the following folders:</p>
 <ul>
 <li><em>pluginterfaces/base</em></li>
 <li><em>pluginterfaces/gui</em></li>
 </ul>
-<p><strong>Note</strong>: The name '<strong>VST Module Architecture</strong>' has only little relation to the 'Virtual Studio Technology' itself.<br></p>
-<p>It describes the basic layer for any plug-in category supported in <a href="https://www.steinberg.net/">Steinberg</a> hosts. <strong>VST-MA</strong> existed long before it was used as a base for <strong>VST 3</strong> itself.</p>
+<p><strong>Note</strong>: The name '<strong>VST Module Architecture</strong>' has only little relation to the 'Virtual Studio Technology' itself.<br />
+It describes the basic layer for any plug-in category supported in <a href="https://www.steinberg.net/">Steinberg</a> hosts. <strong>VST-MA</strong> existed long before it was used as a base for <strong>VST 3</strong> itself.</p>
 <h2><a class="header" href="#interfaces" id="interfaces">Interfaces</a></h2>
 <h3><a class="header" href="#funknown" id="funknown">FUnknown</a></h3>
 <p><a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUnknown.html">Steinberg::FUnknown</a> is the basic interface of <strong>VST-MA</strong>. All other interfaces are directly or indirectly derived from it.</p>
 <h3><a class="header" href="#iidcid" id="iidcid">IID/CID</a></h3>
-<p>Each interface has a unique identifier (IID) of type <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUID.html">Steinberg::FUID</a>. It is used to retrieve a new interface from another one (<a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUnknown.html#a4199134d0669bfa92b7419dac14c01a7">Steinberg::FUnknown::queryInterface</a>). It is important to understand the difference between interface identifier and component identifier.<br></p>
-<p>A component-ID or class-ID (CID) is used to identify a concrete implementation class and is usually passed to a class factory in order to create the corresponding component.<br></p>
-<p>So a lot of different classes (with different class identifiers) can implement the same interfaces.</p>
+<p>Each interface has a unique identifier (IID) of type <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUID.html">Steinberg::FUID</a>. It is used to retrieve a new interface from another one (<a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUnknown.html#a4199134d0669bfa92b7419dac14c01a7">Steinberg::FUnknown::queryInterface</a>). It is important to understand the difference between interface identifier and component identifier.<br />
+A component-ID or class-ID (CID) is used to identify a concrete implementation class and is usually passed to a class factory in order to create the corresponding component.<br />
+So a lot of different classes (with different class identifiers) can implement the same interfaces.</p>
 <h3><a class="header" href="#direction" id="direction">Direction</a></h3>
 <p>An interface may have a <strong>direction</strong>, meaning that the interface is expected to be implemented either in the plug-in or in the host. The nature of an interface is documented like this:</p>
 <ul>
@@ -218,8 +218,8 @@
 </ul>
 <p>When neither of these is specified, the interface can be used in both ways.</p>
 <h3><a class="header" href="#versioning-and-inheritance" id="versioning-and-inheritance">Versioning and inheritance</a></h3>
-<p>Unlike C++ classes, interfaces do not use inheritance to express specializations of objects. Inheritance is used for versioning only. One of the strict rules is that once an interface has been released, it must never change again. Adding new functionality to an interface requires a new version (usually an ordinal number is added to its name in this case, for example <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory3.html">IPluginFactory3</a> adds new features to <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory2.html">IPluginFactory2</a>).<br></p>
-<p>A new version inherits the old version(s) of the interface, so the old and the new methods are combined in one interface. This is why specializations need to be modeled as separate interfaces! If a specialized interface were to inherit from the basic interface as well, an implementation class that needs to implement all of these interfaces would inherit the base interface twice, causing the compiler to run into ambiguities. So the specialization relation to a basic interface can only be expressed in the documentation.</p>
+<p>Unlike C++ classes, interfaces do not use inheritance to express specializations of objects. Inheritance is used for versioning only. One of the strict rules is that once an interface has been released, it must never change again. Adding new functionality to an interface requires a new version (usually an ordinal number is added to its name in this case, for example <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory3.html">IPluginFactory3</a> adds new features to <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory2.html">IPluginFactory2</a>).<br />
+A new version inherits the old version(s) of the interface, so the old and the new methods are combined in one interface. This is why specializations need to be modeled as separate interfaces! If a specialized interface were to inherit from the basic interface as well, an implementation class that needs to implement all of these interfaces would inherit the base interface twice, causing the compiler to run into ambiguities. So the specialization relation to a basic interface can only be expressed in the documentation.</p>
 <blockquote>
 <ul>
 <li>ISpecialInterface [<strong>extends</strong> IBaseInterface] =&gt; means IBaseInterface::queryInterface (ISpecialInterface::iid, ...) can be used to retrieve the derived interface.</li>
@@ -245,34 +245,28 @@
 <p>See also &quot;<a href="../VST+Module+Architecture/Derive+From+Interface.html">How to derive a class from an interface</a>&quot;.</p>
 <h2><a class="header" href="#plug-ins" id="plug-ins">Plug-ins</a></h2>
 <h3><a class="header" href="#module-factory" id="module-factory">Module Factory</a></h3>
-<p>A module (Windows: Dynamic Link Library, MAC: Mach-O Bundle, Linux: package) contains the implementation of one or more components (e.g. VST 3 effects). A <strong>VST-MA</strong> module must contain a class factory where meta-data and create-methods for the components are registered.<br></p>
-<p>The host has access to this factory through the <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory.html">Steinberg::IPluginFactory</a> interface. This is the anchor point for the module and it is realized as a C-style export function named <a href="https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330">GetPluginFactory</a>. You can find an export definition file in the SDK - <em>public.sdk/source/main/winexport.def</em>  (<em>public.sdk/source/main/macexport.exp</em>) which can be used to export this function or you could use the macro SMTG_EXPORT_SYMBOL directly in cpp file (check <em>public.sdk/source/main/dllmain.cpp</em> for example).<br></p>
-<p><a href="https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330">GetPluginFactory</a> is declared as follows:</p>
+<p>A module (Windows: Dynamic Link Library, MAC: Mach-O Bundle, Linux: package) contains the implementation of one or more components (e.g. VST 3 effects). A <strong>VST-MA</strong> module must contain a class factory where meta-data and create-methods for the components are registered.<br />
+The host has access to this factory through the <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory.html">Steinberg::IPluginFactory</a> interface. This is the anchor point for the module and it is realized as a C-style export function named <a href="https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330">GetPluginFactory</a>. You can find an export definition file in the SDK - <em>public.sdk/source/main/winexport.def</em>  (<em>public.sdk/source/main/macexport.exp</em>) which can be used to export this function or you could use the macro SMTG_EXPORT_SYMBOL directly in cpp file (check <em>public.sdk/source/main/dllmain.cpp</em> for example).<br />
+<a href="https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330">GetPluginFactory</a> is declared as follows:</p>
 <pre><code>SMTG_EXPORT_SYMBOL IPluginFactory* PLUGIN_APIGetPluginFactory ();
 </code></pre>
 <p>In addition to the <strong>GetPluginFactory</strong> function the plug-in may has to export additional <strong>entry/exit</strong> functions depending on the platform:</p>
 <blockquote>
-<p><strong>On Windows</strong><br></p>
-</blockquote>
-<blockquote>
-<p>On <em>Windows</em> the entry/exit functions are named <strong>InitDll</strong> / <strong>ExitDll</strong> and are <em><strong>optional!</strong></em></p>
+<p><strong>On Windows</strong><br />
+On <em>Windows</em> the entry/exit functions are named <strong>InitDll</strong> / <strong>ExitDll</strong> and are <em><strong>optional!</strong></em></p>
 <p>A Plug-In can export these functions and a host has to call the <strong>InitDll</strong> function directly after loading the plug-in via LoadLibrary and before calling <strong>GetPluginFactory</strong>. The <strong>ExitDll</strong> function must be called before the plug-in is unloaded via <em>FreeLibrary</em> or on program termination without <em>FreeLibrary</em>.</p>
 <p>As <em>Windows</em> already has this feature (see <a href="https://docs.microsoft.com/en-us/cpp/build/run-time-library-behavior?view=msvc-170">DllMain</a> in Microsofts documentation) the above functions are optional.</p>
 </blockquote>
 <blockquote>
-<p><strong>On macOS</strong><br></p>
-</blockquote>
-<blockquote>
-<p>On <em>macOS</em> the entry/exit functions are named <strong>BundleEntry</strong> / <strong>BundleExit</strong> and are <em><strong>required!</strong></em></p>
+<p><strong>On macOS</strong><br />
+On <em>macOS</em> the entry/exit functions are named <strong>BundleEntry</strong> / <strong>BundleExit</strong> and are <em><strong>required!</strong></em></p>
 <p>A plug-in must export these functions and a host has to call the <strong>BundleEntry</strong> function directly after loading the plug-in via <em>CFBundleLoadExecutable</em> and before calling <strong>GetPluginFactory</strong>.</p>
 <p>The <strong>BundleExit</strong> function must be called before the plug-in is unloaded or on program termination.</p>
 <p>As <em>macOS</em> does not have a standard entry function when loading a bundle the above functions are required and a host has to reject plug-ins not exporting these functions.</p>
 </blockquote>
 <blockquote>
-<p><strong>On Linux</strong><br></p>
-</blockquote>
-<blockquote>
-<p>On <em>Linux</em> the entry/exit functions are named <strong>ModuleEntry</strong> / <strong>ModuleExit</strong> and are <em><strong>required!</strong></em></p>
+<p><strong>On Linux</strong><br />
+On <em>Linux</em> the entry/exit functions are named <strong>ModuleEntry</strong> / <strong>ModuleExit</strong> and are <em><strong>required!</strong></em></p>
 <p>A plug-in must export these functions and a host has to call the <strong>ModuleEntry</strong> function directly after loading the plug-In via dlopen and before calling <strong>GetPluginFactory</strong>.</p>
 <p>The <strong>ModuleExit</strong> function must be called before the plug-in is unloaded via dlclose or on program termination.</p>
 <p>As <em>Linux</em> does not have a standard entry function when loading a dynamic library, the above functions are required and a host has to reject plug-ins not exporting these functions.</p>
@@ -304,8 +298,8 @@ _bundleExit
 <li>For special purpose plug-in types, additional locations are defined. Please refer to the corresponding documentation to find out if additional folders are used and where to find them. For <strong>VST 3</strong>, see <a href="../Locations+Format/Index.html">VST 3 Locations/Format</a>.</li>
 </ul>
 <h3><a class="header" href="#categories" id="categories">Categories</a></h3>
-<p>Any class that the factory can create is assigned to a category. It is this category that tells the host the purpose of the class (and gives a hint of which interfaces it might implement).<br></p>
-<p>A class is also described with a name and it has a unique id.</p>
+<p>Any class that the factory can create is assigned to a category. It is this category that tells the host the purpose of the class (and gives a hint of which interfaces it might implement).<br />
+A class is also described with a name and it has a unique id.</p>
 <ul>
 <li>For example, the category for import/export filters is &quot;<strong>Project Filter</strong>&quot; and for <strong>VST 3</strong> audio plug-ins it is &quot;<strong>Audio Module Class</strong>&quot;.</li>
 <li>&quot;Service&quot; is a special category. The purpose of a class of this category is completely unknown to the host. It is loaded automatically during program start (provided that the user did not deactivate it).</li>
@@ -324,15 +318,15 @@ _bundleExit
 <h4><a class="header" href="#plug-ins-for-unicode-hosts" id="plug-ins-for-unicode-hosts">Plug-ins for Unicode hosts</a></h4>
 <p>Writing plug-ins that are supposed to work only with Unicode hosts is easy. Use a current version of this SDK and develop a plug-in as usual. Make sure that you only ever pass Unicode <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a> strings to interfaces that have strings as call parameters and also be prepared that strings returned by these interfaces are always <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>. Therefore, to make things easier, it is recommended that Unicode strings are used throughout the plug-in's implementation, in order to avoid back and forth conversions. Also, use the Steinberg::String and Steinberg::ConstString classes from the Base module, as they have been designed to work universally on both Mac and Win.</p>
 <h4><a class="header" href="#migrating-from-non-unicode-to-unicode" id="migrating-from-non-unicode-to-unicode">Migrating from non-Unicode to Unicode</a></h4>
-<p>In <a href="https://www.steinberg.net/">Steinberg</a> SDKs released before Cubase 5, the interface functions were using pointers of type <em>char</em> for passing strings to and from the host. These have been changed now to using Steinberg's defined type <em>tchar</em> which is equivalent to <em>char16</em>, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>, so strings are expected to be encoded in <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>.<br></p>
-<p>Accordingly, also the implementation of a plug-in needs to be adapted to deal correctly with Unicode-encoded strings, as well as only ever passing Unicode strings to the host.</p>
+<p>In <a href="https://www.steinberg.net/">Steinberg</a> SDKs released before Cubase 5, the interface functions were using pointers of type <em>char</em> for passing strings to and from the host. These have been changed now to using Steinberg's defined type <em>tchar</em> which is equivalent to <em>char16</em>, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>, so strings are expected to be encoded in <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>.<br />
+Accordingly, also the implementation of a plug-in needs to be adapted to deal correctly with Unicode-encoded strings, as well as only ever passing Unicode strings to the host.</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
 Changing a function from using 8 bit to 16 bit character pointers may seem as only a minor modification, but in interface design this is a major intrusion, because an interface is a contract to the outside world that is never to be changed. Therefore, classes that are changed to use Unicode strings are distinguished and also receive a new unique class ID.</p>
 </blockquote>
 <h2><a class="header" href="#sdk-backward-compatibility" id="sdk-backward-compatibility">SDK backward compatibility</a></h2>
-<p>Even with the current SDK it is still possible to develop non-Unicode plug-ins. In the file <em>pluginterfaces/base/ftypes.h</em>, the line <em>&quot;#define UNICODE_OFF&quot;</em> is commented out, but by uncommenting it you can revert all interfaces to using single byte ASCII strings. Alternatively, you can also specify UNICODE_OFF as a preprocessor definition in your project file.<br></p>
-<p>Also, the plug-in's factory info now does not define the Unicode flag anymore, so a Unicode host sees the compiled plug-in as non-Unicode. Also, when reverting to single byte strings the plug-in's implementation also has to be changed to behave correctly.</p>
+<p>Even with the current SDK it is still possible to develop non-Unicode plug-ins. In the file <em>pluginterfaces/base/ftypes.h</em>, the line <em>&quot;#define UNICODE_OFF&quot;</em> is commented out, but by uncommenting it you can revert all interfaces to using single byte ASCII strings. Alternatively, you can also specify UNICODE_OFF as a preprocessor definition in your project file.<br />
+Also, the plug-in's factory info now does not define the Unicode flag anymore, so a Unicode host sees the compiled plug-in as non-Unicode. Also, when reverting to single byte strings the plug-in's implementation also has to be changed to behave correctly.</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
 When undefining Unicode, the class IDs also revert to the old ones.</p>

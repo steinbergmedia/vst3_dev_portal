@@ -160,8 +160,8 @@
 </ul>
 <p><strong>Related pages:</strong></p>
 <ul>
-<li>[[3.5.0] Key Switch](../3.5.0/IKeyswitchController.md)</li>
-<li>[[3.6.11] NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)</li>
+<li><a href="../3.5.0/IKeyswitchController.html">(3.5.0) Key Switch</a></li>
+<li><a href="../3.6.11/INoteExpressionPhysicalUIMapping.html">(3.6.11) NoteExpression Physical UI Mapping</a></li>
 <li><a href="../../About+MIDI/Index.html">About MIDI in VST 3</a></li>
 </ul>
 <hr />
@@ -174,7 +174,7 @@
 <li>[released: 3.5.0]</li>
 <li>[optional]</li>
 </ul>
-<p>Note Expression is a new way of event controller editing in hosts supporting this VST 3.5 feature (in Cubase since version 6).</p>
+<p>Note Expression is a new way of event controller editing in hosts supporting this VST 3.5 feature (in <strong>Cubase</strong> since version 6).</p>
 <p><a href="https://www.youtube.com/watch?v=7sX8_VDS1AU"><img src="https://i.ytimg.com/vi/7sX8_VDS1AU/maxresdefault.jpg" alt="getting_started_vid_5" /></a></p>
 <p><a href="https://www.youtube.com/watch?v=VqfYm4MzfAU"><img src="https://i.ytimg.com/vi/VqfYm4MzfAU/maxresdefault.jpg" alt="getting_started_vid_6" /></a></p>
 <p>With <strong>VST 3</strong> Note Expression, the plug-in is able to break free from the limitations of MIDI controller events by providing access to new <strong>VST 3</strong> controller events that provide articulation information for each individual note (event) in a polyphonic arrangement according to its noteId.</p>
@@ -284,11 +284,9 @@ tresult PLUGIN_API MyExampleController::getNoteExpressionInfo   (int32 busIndex,
 </li>
 <li>
 <p>For displaying note expression values, we have to implement the conversion functions:</p>
-</li>
-</ol>
 <ul>
-<li>
-<p><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#a457f017fc3566d143914e44523425d23">Steinberg::Vst::INoteExpressionController::getNoteExpressionStringByValue</a>: normalized value -&gt; string</p>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#a457f017fc3566d143914e44523425d23">Steinberg::Vst::INoteExpressionController::getNoteExpressionStringByValue</a>: normalized value -&gt; string</li>
+</ul>
 <pre><code>//  ------------------------------------------------------------------    ------
 tresult PLUGIN_API  MyExampleController::getNoteExpressionStringByValue (int32   busIndex, int16 channel, NoteExpressionTypeID id,     NoteExpressionValue valueNormalized , String128 string)
 {
@@ -307,9 +305,9 @@ tresult PLUGIN_API  MyExampleController::getNoteExpressionStringByValue (int32  
     return kResultFalse;
 }
 </code></pre>
-</li>
-<li>
-<p><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#ab79e988315e33b4c30c8f2bd47a0cffc">Steinberg::Vst::INoteExpressionController::getNoteExpressionValueByString</a>: string -&gt; normalized value</p>
+<ul>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#ab79e988315e33b4c30c8f2bd47a0cffc">Steinberg::Vst::INoteExpressionController::getNoteExpressionValueByString</a>: string -&gt; normalized value</li>
+</ul>
 <pre><code>//  ------------------------------------------------------------------    -----------
 tresult PLUGIN_API  MyExampleController::getNoteExpressionValueByString (int32   busIndex, int16 channel, NoteExpressionTypeID id,
                             const TChar* string,    NoteExpressionValue&amp; valueNormalized);
@@ -331,8 +329,6 @@ tresult PLUGIN_API  MyExampleController::getNoteExpressionValueByString (int32  
 }
 </code></pre>
 </li>
-</ul>
-<ol start="6">
 <li>
 <p>Last step, in the processor component we have to adapt the process call to interpret the note expression event (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1NoteExpressionValueEvent.html">Steinberg::Vst::NoteExpressionValueEvent</a>) sent from the host to the plug-in:</p>
 <pre><code>//  ------------------------------------------------------------------    ------

@@ -236,16 +236,25 @@ namespace MyWantedNamespace {
 <p>In this tab you are defining some information for the creation of a new plug-in:</p>
 <p><img src="../../resources/what_is_31.png" alt="what_if_31" /></p>
 <ul>
-<li><strong>Name</strong>: the name of the plug-in which is displayed in a host: e.g. <em>&quot;AGain&quot;</em></li>
-<li><strong>Type</strong>: this specifies the main <strong>VST 3</strong> Sub-Category (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html">PlugType</a>) of your plug-in:
+<li>
+<p><strong>Name</strong>: the name of the plug-in which is displayed in a host: e.g. <em>&quot;AGain&quot;</em></p>
+</li>
+<li>
+<p><strong>Type</strong>: this specifies the main <strong>VST 3</strong> Sub-Category (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html">PlugType</a>) of your plug-in:</p>
 <ul>
 <li><strong>Audio Effect</strong>: (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga0411b97bcc13d604e738a28aee43bb61">kFx</a>) a simple audio effect Stereo→Stereo</li>
 <li><strong>Instrument</strong>: (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga93cb7a7100ac96cfafceb6216770c42dl#gabe030351fd22d14dad35c817e1849f59">kInstrument</a>) a simple instrument with 1 Event input and 1 stereo Audio output</li>
 </ul>
 </li>
-<li><strong>Use VSTGUI</strong>: check this if you want to use <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> as UI framework</li>
-<li><strong>macOS Deployment Target</strong>: enter here the minimum requested macOS version targeted</li>
-<li><strong>C++ Class Name</strong>: this specifies the basename of your plug-in classes: e.g. <em>&quot;AGain&quot;</em></li>
+<li>
+<p><strong>Use VSTGUI</strong>: check this if you want to use <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> as UI framework</p>
+</li>
+<li>
+<p><strong>macOS Deployment Target</strong>: enter here the minimum requested macOS version targeted</p></p>
+</li>
+<li>
+<p><strong>C++ Class Name</strong>: this specifies the basename of your plug-in classes: e.g. <em>&quot;AGain&quot;</em></p>
+</li>
 </ul>
 <pre><code>class AGainProcessor : public AudioEffect
 {
