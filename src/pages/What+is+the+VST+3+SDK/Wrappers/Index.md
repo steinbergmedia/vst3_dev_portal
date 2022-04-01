@@ -23,8 +23,8 @@ Check the folder *"public.sdk/source/vst/aaxwrapper"* of the SDK!
 >Helper Class wrapping a **VST 3 plug-in** to a **VST 2.4 plug-in**
 
 >## [VST 3 - AAX Wrapper](../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)
->Helper Class wrapping a **VST 3 plug-in** to an **AAX plug-in
-**
+>Helper Class wrapping a **VST 3 plug-in** to an **AAX plug-in**
+
 >## [VST 3 - Audio Unit v3 Wrapper](../What+is+the+VST+3+SDK/Wrappers/AUv3+Wrapper.md)
 >Helper Class wrapping a **VST 3 plug-in** to an **Audio Unit v3 plug-in**
 
