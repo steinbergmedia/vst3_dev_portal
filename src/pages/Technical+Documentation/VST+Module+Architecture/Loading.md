@@ -10,7 +10,7 @@
 
 Check the included cpp files showing how to load such Component/plug-in:
 
-- *public.sdk/source/vst/hosting/module.h*<br>
+- *public.sdk/source/vst/hosting/module.h*\
 and
 - *for each platform public.sdk/source/vst/hosting/module_win32.cpp,.....*
 

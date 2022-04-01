@@ -14,8 +14,8 @@
 
 ## Introduction
 
-The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).<br>
-This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.<br>
+The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).\
+This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.\
 Included in this application is a test module which allows you to check your plug-in in regard to the **VST 3** standard.
 
 ![what_if_15](../../resources/what_is_15.jpg)
@@ -33,6 +33,8 @@ Check the folder *"bin"* of the SDK!
 - **File -> Overwrite Plug-in Name in VST 3 Presets**: allow to rename the plug-in name in a set of **VST 3** Presets.
 
 ![what_if_16](../../resources/what_is_16.jpg)
+
+Dark Mode version
 
 ## VST Player Window
 
@@ -121,6 +123,6 @@ In this version of this Plug-in Test Host, the tests are limited to the main **V
 
 ## Preset Editor
 
-![what_if_23]../..rces/what_is_23.jpg)
+![what_if_23](../..resources/what_is_23.jpg)
 
 With this editor you can load and modify VST 3 presets created with the **Store** button of the VST Rack by adding some meta-attributes.

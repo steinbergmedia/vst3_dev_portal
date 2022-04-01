@@ -411,8 +411,8 @@ And that's it now. The complete source code can be found here:
 
 If you want to use the utility classes, you will find them here:
 
-*public.sdk/source/vst/utility/processdataslicer.h*<br>
-*public.sdk/source/vst/utility/sampleaccurate.h*<br>
+*public.sdk/source/vst/utility/processdataslicer.h*\
+*public.sdk/source/vst/utility/sampleaccurate.h*\
 *public.sdk/source/vst/utility/rttransfer.h*
 
 That´s it!

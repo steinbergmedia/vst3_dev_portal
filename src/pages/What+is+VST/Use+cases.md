@@ -17,7 +17,7 @@
 There are different use cases you can realize by using the **VST 3 SDK**:
 
 1. You are a ***plug-in developer*** and you want to create audio FX or instrument plug-ins which can be included and used in a **VST 3** host application.
-    - an audio FX plug-in is an audio processor effect taking audio as input and creating audio as output: such as Delay, Phaser, Compressor, Reverb, …
+    - an audio FX plug-in is an audio processor effect taking audio as input and creating audio as output: such as *Delay*, *Phaser*, *Compressor*, *Reverb*, …
     - an instrument plug-in is a sound/audio generator, taking as input note events and creating audio as output: such as emulations of well-known hardware synths. There are 2 kinds of instrument plug-ins: virtual sample-based (using audio samples as the basis for sound generation) and virtual synth (using different types of synthesis: physical modelling, additive, subtractive, FM, sample-based, …)
 2. You are a ***host developer*** and you want to load in your application **VST 3** plug-ins:
     - audio FX and/or

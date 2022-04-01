@@ -27,8 +27,9 @@ The SDK includes some Plug-ins implementation examples. The Legendary **AGain** 
 
 Check the folder *"public.sdk/samples/vst"* of the SDK!
 
->- They use cmake as project generator: [Using cmake for building VST 3 plug-ins](../Tutorials/Using+cmake+for+building+plug-ins.md)<br>
->- In order to add your own Plug-ins check: [Generate a new plug-in with the Project Generator App](../Tutorials/Generate+new+plug-in+with+Project+Generator.md)
+>ⓘ **Note**\
+>They use cmake as project generator: [Using cmake for building VST 3 plug-ins](../Tutorials/Using+cmake+for+building+plug-ins.md)\
+>In order to add your own Plug-ins check: [Generate a new plug-in with the Project Generator App](../Tutorials/Generate+new+plug-in+with+Project+Generator.md)
 
 ## ADelay
 
@@ -63,6 +64,7 @@ Classes:
 - AGain
 - AGainWithSideChain (used for side-chain version)
 - AGainController
+
 AGain Sample Accurate
 
 Simple Plug-in showing how to achieve sample accurate processing.

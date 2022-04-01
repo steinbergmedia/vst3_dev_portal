@@ -7,7 +7,7 @@
 [[_TOC_]]
 
 **Related pages:**
-- [[3.0.0] Multiple Dynamic I/O Support](../3.0.0/Multiple+Dynamic+IO.md)
+- [(3.0.0) Multiple Dynamic I/O Support](../3.0.0/Multiple+Dynamic+IO.md)
 
 ---
 

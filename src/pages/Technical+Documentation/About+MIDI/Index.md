@@ -8,12 +8,12 @@
 
 **Related pages:**
 
-- [[3.0.1] Parameter MIDI Mapping](../Change+History/3.0.1/IMidiMapping.md)
-- [[3.5.0] Note Expression](../Change+History/3.5.0/INoteExpressionController.md)
-- [[3.5.0] Key Switch](../Change+History/3.5.0/IKeyswitchController.md)
-- [[3.6.11] NoteExpression Physical UI Mapping](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md)
-- [[3.6.12] Legacy MIDI CC Out Event](../Change+History/3.6.12/LegacyMIDICCOutEvent.md)
-- [[3.6.12] MPE support for Wrappers](../Change+History/3.6.12/IVst3WrapperMPESupport.md)
+- [(3.0.1) Parameter MIDI Mapping](../Change+History/3.0.1/IMidiMapping.md)
+- [(3.5.0) Note Expression](../Change+History/3.5.0/INoteExpressionController.md)
+- [(3.5.0) Key Switch](../Change+History/3.5.0/IKeyswitchController.md)
+- [(3.6.11) NoteExpression Physical UI Mapping](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md)
+- [(3.6.12) Legacy MIDI CC Out Event](../Change+History/3.6.12/LegacyMIDICCOutEvent.md)
+- [(3.6.12) MPE support for Wrappers](../Change+History/3.6.12/IVst3WrapperMPESupport.md)
 
 ---
 

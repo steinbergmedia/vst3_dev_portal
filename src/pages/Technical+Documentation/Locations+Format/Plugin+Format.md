@@ -26,7 +26,7 @@ On the macOS platform, **VST 3 Plug-in** is a standard macOS bundle, its file ex
 
 ## For the Windows platform
 
-On the Windows platform, a VST 3 Plug-in is organized as a bundle like package format (simple folder), its file extension is ".vst3" and has the following folder structure:
+On the Windows platform, a **VST 3 Plug-in** is organized as a bundle like package format (simple folder), its file extension is "**.vst3**" and has the following folder structure:
 
 | Folder | Description |
 | :- | :- |
@@ -39,9 +39,9 @@ On the Windows platform, a VST 3 Plug-in is organized as a bundle like package f
 | MyPlugin.vst3/Plugin.ico | customized plug-in icon
 
 >ⓘ **Note**\
->In previous SDKs, the VST 3 Plug-in was defined as a single dll file with the .vst3 extension. This is deprecated since VST 3.6.10.
+>In previous SDKs, the **VST 3 Plug-in** was defined as a single dll file with the **.vst3** extension. This is deprecated since VST 3.6.10.
 
-The file desktop.ini should contain:
+The file **desktop.ini** should contain:
 
 **desktop.ini**
 
@@ -72,7 +72,7 @@ On Linux, a **VST 3 Plug-in** is organized as a bundle like package format, its 
 
 Note that all the bundles can be merged to one, which allows to have a cross-platform bundle/folder.
 
-For example:
+**For example:**
 
 ```
 MyPlugin.vst3/

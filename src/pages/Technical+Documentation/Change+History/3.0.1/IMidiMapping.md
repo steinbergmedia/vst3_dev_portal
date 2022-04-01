@@ -9,7 +9,7 @@
 **Related pages**
 
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
-- [[3.6.12] MIDI Learn](../../Change+History/3.6.12/IMidiLearn.md)
+- [(3.6.12) MIDI Learn](../../Change+History/3.6.12/IMidiLearn.md)
 
 ---
 

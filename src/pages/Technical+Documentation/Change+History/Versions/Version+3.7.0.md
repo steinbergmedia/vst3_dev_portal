@@ -19,7 +19,7 @@
         - k90_6, k91_6 (L R C Lfe Ls Rs Lc Rc Sl Sr Tfl Tfr Trl Trr Tsl Tsr)
     - New Bus flag: kIsControlVoltage for audio busses
 - Documentation:
-    - add documentation about VST 3 and MIDI 2.0:
+    - add documentation about **VST 3** and **MIDI 2.0**:
         - [MIDI 2.0 Increased Resolution, compared to MIDI 1.0](../About+MIDI/Index.md)
         - [MIDI 2.0 Per-Note Controllers](../About+MIDI/Index.md)
 - cmake:

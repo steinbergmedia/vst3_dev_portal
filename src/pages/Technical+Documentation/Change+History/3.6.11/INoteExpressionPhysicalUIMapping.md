@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [[3.5.0] Note Expression](../../Change+History/3.5.0/INoteExpressionController.md)
+- [(3.5.0) Note Expression](../../Change+History/3.5.0/INoteExpressionController.md)
 
 ---
 

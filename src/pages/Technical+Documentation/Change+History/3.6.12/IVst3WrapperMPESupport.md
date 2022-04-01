@@ -8,8 +8,8 @@
 
 **Related pages:**
 
-- [[3.5.0] Note Expression](../3.5.0/INoteExpressionController.md)
-- [[3.6.11] NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
+- [(3.5.0) Note Expression](../3.5.0/INoteExpressionController.md)
+- [(3.6.11) NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
 
 ---

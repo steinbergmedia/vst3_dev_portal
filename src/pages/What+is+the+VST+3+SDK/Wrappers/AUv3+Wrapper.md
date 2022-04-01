@@ -16,7 +16,7 @@ Helper Class wrapping a VST 3 plug-in to an Audio Unit v3 plug-in
 
 ## Introduction
 
-The VST 3 SDK comes with a helper class which wraps one VST 3 audio processor and edit controller to an AUv3 plug-in.
+The VST 3 SDK comes with a helper class which wraps one **VST 3** audio processor and edit controller to an AUv3 plug-in.
 
 The wrapped AudioUnit does support MPE when the **VST 3** plug-in has Note Expression support. You need to implement [Steinberg::Vst::INoteExpressionPhysicalUIMapping](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionPhysicalUIMapping.html) to map your Note Expression to the limited three expressions defined by MPE.
 

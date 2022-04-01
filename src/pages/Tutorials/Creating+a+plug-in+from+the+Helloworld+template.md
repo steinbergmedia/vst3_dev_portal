@@ -32,15 +32,15 @@ You have the following possibilities to start a new project:
 The SDK provides a HelloWorld example which you can use to create a new **VST 3 plug-in**:
 
 - Just copy the folder **VST_SDK/my_plugins** containing the HelloWorld example into your development folder.
-    - For example: copy **VST_SDK/my_plugins** to *D:/Users/Me/Desktop/development/my_plugins* <br>
+    - For example: copy **VST_SDK/my_plugins** to *D:/Users/Me/Desktop/development/my_plugins*</p>
 - Now you have to indicate to **cmake** to add this new location to the projects. There are 3 possibilities:
     - Search in *VST3_SDK/CMakeLists.txt* for the comment "# Here you can add your VST 3 Plug-ins folder" and specify the path to the folder, for example:
         - ***set(SMTG_MYPLUGINS_SRC_PATH "D:/Users/Me/Desktop/development/my_plugins"***)
-- Or when using the **CMake GUI App**, you can specify the new location by using the browser for the variable **SMTG_MYPLUGINS_SRC_PATH**.
+- Or when using the **CMake GUI App**, you can specify the new location by using the browser for the variable **SMTG_MYPLUGINS_SRC_PATH**.</p>
 - Or call **cmake** with the option
-    - ***-DSMTG_MYPLUGINS_SRC_PATH=D:/Users/Me/Desktop/development/my_plugins***<br>
+    - ***-DSMTG_MYPLUGINS_SRC_PATH=D:/Users/Me/Desktop/development/my_plugins***</p>
 - You can duplicate the helloworld folder for your plug-in, for example:
-    - copy ***D:/Users/Me/Desktop/development/my_plugins/helloworld*** to ***D:/Users/Me/Desktop/development/my_plugins/MyDelayPlugin***<br>
+    - copy ***D:/Users/Me/Desktop/development/my_plugins/helloworld*** to ***D:/Users/Me/Desktop/development/my_plugins/MyDelayPlugin***</p>
 - Adapt the **CMakeLists.txt** files:
     - Open the plug-in **CMakeLists.txt** file with a text editor: ***D:/Users/Me/Desktop/development/my_plugins/MyDelayPlugin/CMakeLists.txt***
     - Change the target name:
@@ -48,8 +48,8 @@ The SDK provides a HelloWorld example which you can use to create a new **VST 3 
     - Open the folder CMakeLists.txt file located in my_plugins with a text editor in order to add your plug-in to the project:
         - ***D:/Users/Me/Desktop/development/my_plugins/CMakeLists.txt***
     - Add this entry (your newly created folder):
-        - ***add_subdirectory(MyDelayPlugin)***<br>
-- Generate the project by using the command line or the cmake editor (cmake-gui) as described here: How to use cmake for building VST 3 plug-ins. Your new plug-in should appear in the project afterwards.<br>
+        - ***add_subdirectory(MyDelayPlugin)***</p>
+- Generate the project by using the command line or the cmake editor (cmake-gui) as described here: How to use cmake for building VST 3 plug-ins. Your new plug-in should appear in the project afterwards.</p>
 - Now you have to adapt some ***uids*** and naming to make your plug-in unique (and not a duplicate of helloworld!)
     1. Rename all strings for your plug-in from ***HelloWorld*** to ***MyDelay*** for example:
         - ***HelloWorldProcessor::HelloWorldProcessor*** to ***MyDelayProcessor::MyDelayProcessor***

@@ -121,7 +121,7 @@ When a plug-in is used in an offline processing context (which is the case with 
 The offline processing mode (passed in the process call) is used when:
 
 - the user exports audio (downmix)
-- direct offline processing feature <br>
+- direct offline processing feature\
 With [IComponent::setIoMode](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137) (Vst::kOfflineProcessing) you are able to differentiate between export and DOP (Direct Offline Processing).
 
 [![getting_started_vid_1](https://i.ytimg.com/vi/62yMkHRfd2I/maxresdefault.jpg)](https://www.youtube.com/watch?v=62yMkHRfd2I)

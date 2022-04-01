@@ -43,7 +43,7 @@ In order to load **VST 3 plug-ins** you need at least :
 - For VST 3.5.0 features **Cubase** 6.0 is needed.
 - see [other VST 3 Hosts](../What+is+VST/Use+cases.md#examples-of-vst-3-host-applications)
 
-Q: Why do plug-ins need subcategories?
+## Q: Why do plug-ins need subcategories?
 When you export your plug-in in the factory instance (check *againentry.cpp*: DEF_CLASS2), you have to define a subcategory string (can be a combination of more than one string: like "**Fx|Dynamics|EQ**" for example).
 
 Currently the subcategory string is used by **Cubase**/**Nuendo** to organize the plug-ins menu like this:
@@ -78,7 +78,7 @@ In order to use Note Expression with **VST 3 plug-ins** you need at least Cubase
 
 ## Q: When compiling for Mac AudioUnit, I have a compiler error in AUCarbonViewBase.cpp. What can I do?
 
-Due to an issue in the Mac CoreAudio SDK, not yet fixed by Apple, you have to apply a small patch to the file AUCarbonViewBase.cpp (located in CoreAudio/AudioUnits/AUPublic/AUCarbonViewBase):
+Due to an issue in the Mac CoreAudio SDK, not yet fixed by Apple, you have to apply a small patch to the file AUCarbonViewBase.cpp (located in CoreAudio/AudioUnits/AUPublic/AUCarbonViewBase):\
 => Change:
 
 ```

@@ -140,4 +140,4 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 
 - Solution/project (vstsdk.sln/vstsdk.xcodeproj) is generated in the *"build"* folder.
 - The created plug-ins are located in the *"build"* folder, in sub-folders ***/VST3/Release*** or ***/VST3/Debug***.
-- In order to allow a DAW to find these plug-ins you have to create links from the official VST 3 Locations to them.
+- In order to allow a DAW to find these plug-ins you have to create links from the official [VST 3 Locations](../Technical+Documentation/Locations+Format/Index.html) to them.

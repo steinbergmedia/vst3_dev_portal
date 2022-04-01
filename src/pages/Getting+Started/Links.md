@@ -19,7 +19,7 @@ Important links you will need for working with **VST 3**
 You have 2 possibilities for getting the **VST 3 SDK:**
 
 | Component | [as zip package](#download-the-full-vst-3-package-as-zip-file) | [as GitHub repository](#clone-vst-3-repository-from-github) |
-| - | - | - |
+| :- | :-: | :-: |
 | [VST 3 API](../Technical+Documentation/API+Documentation/Index.md) | ✔️ | ✔️ |
 | [Helpers classes](../What+is+the+VST+3+SDK/Index.md) | ✔️ | ✔️ |
 | [AAX, AUv3, AU and VST 2 wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md) | ✔️ | ✔️ |
@@ -30,9 +30,9 @@ You have 2 possibilities for getting the **VST 3 SDK:**
 | [EditorHost](../What+is+the+VST+3+SDK/Index.md#editorhost) | ✔️ | ✔️ |
 | [VST 3 Inspector](../What+is+the+VST+3+SDK/Index.md#vst3-inspector) | ✔️ | ✔️ |
 | [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) | ✔️ | ✔️ |
-| [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) | ✔️ (as exe only) | ✔️ (as source code) |
+| [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) | ✔️<br>(as exe only) | ✔️<br>(as source code) |
 | [VST 3 Plug-in Test Host (exe only)](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) | ✔️ | ❌ |
-| [VST 3 Licensing](../VST+3+Licensing/Index.md) | ✔️ Proprietary + [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) | ❌ only [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) |
+| [VST 3 Licensing](../VST+3+Licensing/Index.md) | ✔️<br>Proprietary<br>+ [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) | ❌<br>only [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) |
 
 ### Download the full VST 3 package as zip file
 
@@ -57,7 +57,7 @@ Browse the **VST 3 SDK**'s online documentation including **API** reference and 
 
 Browse the [VST portal](../..//pages/Index.md) for the whole documentation and tutorials:
 
->**<https://developer.steinberg.help/display/VST>** **<- Needs to be replaces with new link**
+>**<https://developer.steinberg.help/display/VST>** **<- Needs to be replaced with new link**
 
 ## [VST 3 Forum](https://forums.steinberg.net/c/developer/103)
 Visit Steinberg's **[VST Developer Forum](https://forums.steinberg.net/c/developer/103/none)** in order to get help with development, submit bug reports, request new features and connect to other **VST 3** developers:

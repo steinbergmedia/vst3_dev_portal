@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [[3.0.0] Multiple Dynamic I/O Support](../3.0.0/Multiple+Dynamic+IO.md)
+- [(3.0.0) Multiple Dynamic I/O Support](../3.0.0/Multiple+Dynamic+IO.md)
 
 ---
 
@@ -22,5 +22,5 @@
 
 This flag kIsControlVoltage for an audio bus allows the plug-in to inform the host that this bus does not contain ordinary audio data, but data used for control changes at sample rate. The data is in the same format as the audio data [-1..1].
 
-A host has to prevent unintended routing to speakers to prevent damage.<br>
+A host has to prevent unintended routing to speakers to prevent damage.\
 Only valid for audio media type busses.

@@ -79,7 +79,7 @@ mkdir build
 cd build
 ```
 
-- Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:<br>
+- Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:\
 For XCode:
 
 ```
@@ -103,7 +103,7 @@ cmake --build . --config Release
 
 ### Building the examples on Linux
 
-- Install the required packages: Required packages
+- Install the required packages: [Required packages](../Getting+Started/How+to+setup+my+system.html#package-requirements)
 - Create a folder for the build and move to this folder (using cd):
 
 ```

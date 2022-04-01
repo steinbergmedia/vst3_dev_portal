@@ -131,7 +131,7 @@ Check the workflow diagrams in order to understand when this is called:
 
 In audio applications, some plug-ins allow for a secondary signal to be made available to the plug-in and act as a controller of one or more parameters in the processing. Such a signal is commonly called a Side-chain Signal or Side-chain Input.
 
-Examples:
+**Examples**:
 
 If a recorded kick drum is considered well played, but the recording of the bass player's part shows that he regularly plays slightly ahead of the kick drum, a plug-in with a 'Gating' function on the bass part can use the kick drum signal as a side-chain to 'trim' the bass part precisely to that of the kick.
 
@@ -208,7 +208,7 @@ After instantiation of the plug-in, the host calls [Vst::IAudioProcessor::setBus
 If not (by returning **kResultFalse**), the host asks the plug-in for its wanted configuration by calling [Vst::IAudioProcessor::getBusArrangement](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94) (for Input and Output) and then recall [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) with the final wanted configuration. Check [Bus Arrangement Setting Sequences](../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.md) workflow.
 
 ```
-**Example of a Plug-in supporting only symmetric Input-Output Arrangements**:
+Example of a Plug-in supporting only symmetric Input-Output Arrangements:
 
 host -> plug-in : setBusArrangements (monoIN, stereoOUT)
 plug-in return : kResultFalse
@@ -219,7 +219,7 @@ plug-in return : kResultOk
 ```
 
 ```
-**Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono->stereo)**:
+Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono->stereo):
 
 host -> plug-in : setBusArrangements (stereoIN, stereoOUT)
 plug-in return : kResultFalse
@@ -230,7 +230,7 @@ plug-in return : kResultOk
 ```
 
 ```
-**Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono-> stereo to up 5.1)**:
+Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono-> stereo to up 5.1):
 
 host -> plug-in : setBusArrangements (5.1IN, 5.1OUT)
 plug-in return : kResultFalse
@@ -241,7 +241,7 @@ plug-in return : kResultOk
 ```
 
 ```
-**Host -> Plug-in : setBusArrangements (QuadroIN, QuadroOUT)**
+Host -> Plug-in : setBusArrangements (QuadroIN, QuadroOUT)
 
 plug-in return : kResultFalse
 host -> plug-in : getBusArrangement (IN) => return Mono;
@@ -251,7 +251,7 @@ plug-in return : kResultOk
 ```
 
 ```
-**Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input always mono**:
+Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input always mono:
 
 host -> plug-in : getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
 host -> plug-in : getBusArrangements (OUT) => Output: mono
@@ -270,7 +270,7 @@ plug-in return : kResultOk
 ```
 
 ```
-**Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input following the Main Input Arrangement**:
+Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input following the Main Input Arrangement:
 
 host -> plug-in : getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
 host -> plug-in : getBusArrangements (OUT) => Output: mono
@@ -296,9 +296,9 @@ The host will call [Vst::IAudioProcessor::getBusArrangement](https://steinbergme
 
 There are two ways to instantiate a plug-in like this.
 
-- Way 1
+- **Way 1**
 
- In AudioEffect::initialize (FUnknown* context) you add one mono and one stereo bus.
+In AudioEffect::initialize (FUnknown* context) you add one mono and one stereo bus.
 
 ```
 //---------------------------------------------------------------
@@ -319,7 +319,7 @@ tresult PLUGIN_API AGain::initialize (FUnknown* context)
 
  In case of **Cubase/Nuendo** being the host, the plug-in, afterbeing inserted into a stereo track, gets the left channel ofthe stereo input signal as its mono input. From this signalyou can create a stereo output signal.
 
-- Way 2
+- **Way 2**
 
  In [AudioEffect](https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1AudioEffect.html)::initialize (FUnknown* context) you add one stereo input and one stereo output bus.
 

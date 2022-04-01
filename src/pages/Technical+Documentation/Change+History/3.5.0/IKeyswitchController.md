@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [[3.5.0] Note Expression](../3.5.0/INoteExpressionController.md)
+- [(3.5.0) Note Expression](../3.5.0/INoteExpressionController.md)
 
 ---
 

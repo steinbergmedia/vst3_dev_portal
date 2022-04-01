@@ -23,4 +23,4 @@ It is highly recommended to implement this interface. A host can implement impor
 
 For example, all Steinberg hosts require this interface in order to support the "AI Knob".
 
-[![getting_started_vid_2](../../../../resources/tech_doc_30.png)](https://www.steinberg.net/de/cc121/)
+[![tech_doc_image_link_1](../../../../resources/tech_doc_30.png)](https://www.steinberg.net/de/cc121/)

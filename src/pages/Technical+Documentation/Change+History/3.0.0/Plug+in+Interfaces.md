@@ -8,7 +8,7 @@
 
 **Related pages**
 
-- [[3.0.0] Interfaces supported by the host](../Change+History/3.0.0/Host+Interfaces.md)
+- [(3.0.0) Interfaces supported by the host](../Change+History/3.0.0/Host+Interfaces.md)
 
 ---
 
@@ -31,7 +31,7 @@ See also [IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classStein
 Audio processing interface.
 
 - [plug imp]
-- [extends IComponent]
+- [extends [IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html)]
 - [released: 3.0.0]
 - [mandatory]
 
@@ -73,10 +73,11 @@ Edit controller extension to describe the plug-in structure.
 
 [IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html) describes the internal structure of the plug-in.
 
-The root unit is the component itself, so getUnitCount must return 1 at least.
-The root unit id has to be 0 (kRootUnitId).
-Each unit can reference one program list - this reference must not change.
-Each unit that uses a program list references one program of the list.
+- The root unit is the component itself, so getUnitCount must return 1 at least.
+- The root unit id has to be 0 (kRootUnitId).
+- Each unit can reference one program list - this reference must not change.
+- Each unit that uses a program list references one program of the list.
+
 See also [VST 3 Units](../../VST+3+Units/Index.md), [IUnitHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html)
 
 ## [IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html)
@@ -97,7 +98,7 @@ See also [IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/cla
 Component extension to access unit data.
 
 - [plug imp]
-- [extends IComponent]
+- [extends [IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html)]
 - [released: 3.0.0]
 - [optional]
 
@@ -134,7 +135,7 @@ Here the calling sequence:
 - host->plug-in (optional): IPlugView::getSize () returns the newSize
 
 >ⓘ **Note**\
->Please only resize the platform representation of the view when IPlugView::onSize () is called.
+>Please only resize the platform representation of the view when [IPlugView::onSize()](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#a3e741e55c2c047a4cc10f102661f5654) is called.
 
 ### Keyboard handling
 

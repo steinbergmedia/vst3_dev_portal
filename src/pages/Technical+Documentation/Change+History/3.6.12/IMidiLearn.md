@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [[3.0.1] Parameter MIDI Mapping](../../Change+History/3.0.1/IMidiMapping.md)
+- [(3.0.1) Parameter MIDI Mapping](../../Change+History/3.0.1/IMidiMapping.md)
 
 ---
 

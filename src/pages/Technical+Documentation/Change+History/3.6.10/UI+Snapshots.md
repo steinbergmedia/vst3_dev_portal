@@ -7,13 +7,13 @@
 [[_TOC_]]
 
 **Related pages:**
-- [[3.0.0] Multiple Dynamic I/O Support](../3.0.0/Multiple+Dynamic+IO.md)
+- [(3.0.0) Multiple Dynamic I/O Support](../3.0.0/Multiple+Dynamic+IO.md)
 
 ---
 
 ## Introduction
 
-Since VST 3.6.10, a **VST 3** bundle can contain pre-rendered snapshot images for a **VST 3** host as a visual representation of the plug-in UI.<br>
+Since VST 3.6.10, a **VST 3** bundle can contain pre-rendered snapshot images for a **VST 3** host as a visual representation of the plug-in UI.\
 - This snapshot must have a predefined format and file name so that a host can recognize it.
 - The image format must be PNG
 - The image needs to be located inside the bundle directory in the folder **Resources/Snapshots/**

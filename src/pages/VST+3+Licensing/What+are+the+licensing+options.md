@@ -25,7 +25,7 @@ For more details please read the "***Proprietary Steinberg VST 3***" license agr
 
 - as PDF: [The License agreement](../../resources/VST3_License_Agreement.pdf) is part of the VST SDK package, too.
 
-## "Open-source [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)" license
+## *"Open-source [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)"* license
 
 The open-source license lets you share the source code of your VST 3 plug-in/host ***including the VST 3 SDK's sources which are subject to the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).***
 

@@ -19,7 +19,7 @@
     - VST 3 - VST 2.x Wrapper :
         - fix getMidiProgramCategory
 - New Flags/Enums:
-    - New predefined Speaker Arrangements: 9.0/9.1/10.0/10.1/11.0/11.1/13.0/13.1 based on Auro 3D definition (<www.auro-technologies.com>).
+    - New predefined Speaker Arrangements: 9.0/9.1/10.0/10.1/11.0/11.1/13.0/13.1 based on Auro 3D definition (<https://www.auro-3d.com/>).
 - Helpers Classes:
     - New in Base:
         - class Steinberg::Region

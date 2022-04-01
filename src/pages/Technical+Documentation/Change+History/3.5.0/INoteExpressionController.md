@@ -8,8 +8,8 @@
 
 **Related pages:**
 
-- [[3.5.0] Key Switch](../3.5.0/IKeyswitchController.md)
-- [[3.6.11] NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
+- [(3.5.0) Key Switch](../3.5.0/IKeyswitchController.md)
+- [(3.6.11) NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
 
 ---
@@ -25,7 +25,7 @@ Edit controller component interface extension: [Vst::INoteExpressionController](
 - [released: 3.5.0]
 - [optional]
 
-Note Expression is a new way of event controller editing in hosts supporting this VST 3.5 feature (in Cubase since version 6).
+Note Expression is a new way of event controller editing in hosts supporting this VST 3.5 feature (in **Cubase** since version 6).
 
 [![getting_started_vid_5](https://i.ytimg.com/vi/7sX8_VDS1AU/maxresdefault.jpg)](https://www.youtube.com/watch?v=7sX8_VDS1AU)
 
@@ -146,7 +146,7 @@ We want a mono-timbral (1 channel) instrument plug-in with 1 event bus and suppo
     ```
 
 5. For displaying note expression values, we have to implement the conversion functions:
-- [Steinberg::Vst::INoteExpressionController::getNoteExpressionStringByValue](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#a457f017fc3566d143914e44523425d23): normalized value -> string
+    - [Steinberg::Vst::INoteExpressionController::getNoteExpressionStringByValue](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#a457f017fc3566d143914e44523425d23): normalized value -> string
 
     ```
     //  ------------------------------------------------------------------    ------
@@ -168,7 +168,7 @@ We want a mono-timbral (1 channel) instrument plug-in with 1 event bus and suppo
     }
     ```
 
-- [Steinberg::Vst::INoteExpressionController::getNoteExpressionValueByString](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#ab79e988315e33b4c30c8f2bd47a0cffc): string -> normalized value
+    - [Steinberg::Vst::INoteExpressionController::getNoteExpressionValueByString](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#ab79e988315e33b4c30c8f2bd47a0cffc): string -> normalized value
 
     ```
     //  ------------------------------------------------------------------    -----------

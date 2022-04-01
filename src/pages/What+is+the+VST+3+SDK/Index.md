@@ -16,12 +16,12 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 
 The **VST 3 SDK** package contains:
 
->**The VST 3 API**<br>
+>**The VST 3 API**\
 >This is a **C++ interface** defining how a **VST 3** plug-in communicates with a host and vice versa. The heart of **VST 3**.
 >
 >Check the folder *"pluginterfaces/vst"* of the SDK!
 
->**VST 3 Implementation Helper Classes**<br>
+>**VST 3 Implementation Helper Classes**\
 >Some helper classes are provided, implementing some **VST 3** interfaces for hosting and for creating **VST 3** plug-ins. Simply derived your plug-in C++ classes from these helper classes.
 >
 >![what_if_1](../../resources/what_is_1.png)
@@ -53,8 +53,8 @@ Check the folder *"public.sdk/samples/vst"* of the SDK!
 
 ## [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
 
-The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).<br>
-This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.<br>
+The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).\
+This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.\
 Included in this application is a test module which allows you to check your plug-in in regard to the **VST 3** standard.
 
 ![what_if_6](../../resources/what_is_6.jpg)
@@ -63,15 +63,15 @@ Check the folder *"bin"* of the SDK!
 
 ## Validator command line
 
->**as Cross-platform source code**<br>
+>**as Cross-platform source code**\
 >The ***validator*** is a small command line host application (source code included) which can be used to check your > plug-in for VST 3 conformity. You can also write your own test code and let the **validator** execute it. Very nice for > automatic build server integration.
 >
 >Check the folder *"public.sdk/samples/vst-hosting/validator"* of the SDK!
 
 ## AudioHost
 
->**as Cross-platform source code**<br>
->Simple cross-platform (only tested on Linux) host application allowing you to register a VST 3 plug-in with Jack Server. First, you have to download the Jack Audio SDK and application server (<http://www.jackaudio.org>).<br>
+>**as Cross-platform source code**\
+>Simple cross-platform (only tested on Linux) host application allowing you to register a VST 3 plug-in with Jack Server. First, you have to download the Jack Audio SDK and application server (<http://www.jackaudio.org>).\
 >- Windows (not tested): audiohost.exe "C:\PATH_TO_PLUGIN"
 >- macOS (not tested)
 >- Linux: audiohost PATH_TO_PLUGIN
@@ -82,7 +82,7 @@ Check the folder *"bin"* of the SDK!
 
 ## EditorHost
 
->**as Cross-platform source code**<br>
+>**as Cross-platform source code**\
 >Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a VST 3 plug-in (with HiDPI > support on Windows/macOS). Call it from the command line: Windows: editorhost.exe "C:\PATH_TO_PLUGIN" macOS/Linux: > editorhost PATH_TO_PLUGIN
 >
 >On Windows and macOS you can also drag and drop a **VST 3 plug-in** on the executable via Explorer/Finder.
@@ -91,7 +91,7 @@ Check the folder *"bin"* of the SDK!
 
 ## VST 3 Inspector
 
->**as Cross-platform source code**<br>
+>**as Cross-platform source code**\
 >Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST 3 Folder, collects > information from the factory about each VST 3 plug-in and display it in its UI.
 
 >![what_if_7](../../resources/what_is_7.jpg)
@@ -128,7 +128,7 @@ iOS InterApp-Audio application out of your **VST 3 plug-in**
 
 ## [VST 3 Licensing](../VST+3+Licensing/Index.md)
 
->**Steinberg VST 3 Plug-In SDK Licensing Agreement**<br>
+>**Steinberg VST 3 Plug-In SDK Licensing Agreement**\
 >Please sign this **License Agreement** if you want to develop, release or host **VST 3** plug-Ins.
 
 ## System requirements

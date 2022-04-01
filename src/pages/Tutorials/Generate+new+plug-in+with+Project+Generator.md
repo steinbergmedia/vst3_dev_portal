@@ -111,7 +111,7 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 >- We add the flag [*kCanAutomate*](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31) which informs the DAW/host that this parameter can be automated.
 >- A **VST 3** parameter is always normalized (its value is a floating point value between [0, 1]), here its default value is set to 0.5.
 
-3. Now adapt the processor part for this new parameter. Open the file plugprocessor.h and add a gain value **Vst::ParamValue mGain**. This value is used for the processing to apply the gain.
+3. Now adapt the processor part for this new parameter. Open the file *plugprocessor.h* and add a gain value **Vst::ParamValue mGain**. This value is used for the processing to apply the gain.
 
 **plugprocessor.h**
 
@@ -128,7 +128,8 @@ protected:
 
 ### Add the process applying the gain
 
-We need to set our internal **mGain** with its required value from the host. This is the first step of the process method. Parse the parameter change coming from the host in the structure *data.inputParameterChanges* for the current audio block to process. Be sure to add **#include "public.sdk/source/vst/vstaudioprocessoralgo.h** at top of the file plugprocessor.cpp!<br> This includes some helpers to access audio buffer.
+1. We need to set our internal **mGain** with its required value from the host. This is the first step of the process method. Parse the parameter change coming from the host in the structure *data.inputParameterChanges* for the current audio block to process. Be sure to add **#include "public.sdk/source/vst/vstaudioprocessoralgo.h** at top of the file plugprocessor.cpp!\
+This includes some helpers to access audio buffer.
 
 **plugprocessor.cpp**
 
