@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../../../Index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
+<p>/ <a href="../../../index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
 <h1><a class="header" href="#300-multiple-dynamic-io-support" id="300-multiple-dynamic-io-support">[3.0.0] Multiple Dynamic I/O Support</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -323,10 +323,8 @@ addAudioOutput (USTRING (&quot;Surround Out&quot;), SpeakerArr::k51);
 </code></pre>
 <p>But when the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> the host is informing your plug-in of the current speaker arrangement of the track it was selected in. You should return <strong>kResultOk</strong>, in the case you accept this arrangement, or <strong>kResultFalse</strong>, in case you do not.</p>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>If you reject a <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> by returning <strong>kResultFalse</strong>, the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> where you have the chance to give the parameter 'arrangement' the value of the speaker arrangement your plug-in does accept for this given bus.</p>
+<p>ⓘ <strong>Note</strong><br />
+If you reject a <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> by returning <strong>kResultFalse</strong>, the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> where you have the chance to give the parameter 'arrangement' the value of the speaker arrangement your plug-in does accept for this given bus.</p>
 <p>Afterward the host can recall <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> with the plug-in wanted Arrangements then the plug-in should return <strong>kResultOk</strong>.</p>
 </blockquote>
 <h3><a class="header" href="#how-are-speaker-arrangement-settings-handled-for-fx-plug-ins" id="how-are-speaker-arrangement-settings-handled-for-fx-plug-ins">How are speaker arrangement settings handled for FX plug-ins?</a></h3>
@@ -339,7 +337,7 @@ plug-in return : kResultFalse
 host -&gt; plug-in : getBusArrangement (IN) =&gt; return Stereo;
 host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Stereo;
 host -&gt; plug-in : setBusArrangements (stereoIN, stereoOUT)
-plug-in return : **kResultOk**
+plug-in return : kResultOk
 </code></pre>
 <pre><code>**Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono-&gt;stereo)**:
 
@@ -348,7 +346,7 @@ plug-in return : kResultFalse
 host -&gt; plug-in : getBusArrangement (IN) =&gt; return Mono;
 host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Stereo;
 host -&gt; plug-in : setBusArrangements (MonoIN, stereoOUT)
-plug-in return : **kResultOk**
+plug-in return : kResultOk
 </code></pre>
 <pre><code>**Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono-&gt; stereo to up 5.1)**:
 
@@ -357,7 +355,7 @@ plug-in return : kResultFalse
 host -&gt; plug-in : getBusArrangement (IN) =&gt; return Mono;
 host -&gt; plug-in : getBusArrangement (OUT) =&gt; return 5.1;
 host -&gt; plug-in : setBusArrangements (MonoIN, 5.1OUT)
-plug-in return : **kResultOk**
+plug-in return : kResultOk
 </code></pre>
 <pre><code>**Host -&gt; Plug-in : setBusArrangements (QuadroIN, QuadroOUT)**
 
@@ -365,14 +363,14 @@ plug-in return : kResultFalse
 host -&gt; plug-in : getBusArrangement (IN) =&gt; return Mono;
 host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Quadro;
 host -&gt; plug-in : setBusArrangements (MonoIN, QuadroOUT)
-plug-in return : **kResultOk**
+plug-in return : kResultOk
 </code></pre>
 <pre><code>**Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input always mono**:
 
 host -&gt; plug-in : getBusArrangements (IN) =&gt; Input Main:Mono / Input Side-chain:Mono
 host -&gt; plug-in : getBusArrangements (OUT) =&gt; Output: mono
 host -&gt; plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:Mono, Output: stereo)
-plug-in return : **kResultTrue**
+plug-in return : kResultTrue
 
 or
 host -&gt; plug-in : getBusArrangements (IN) =&gt; Input Main:Mono / Input Side-chain:Mono
@@ -382,7 +380,7 @@ plug-in return : kResultFalse // because we want mono for Side-chain
 host -&gt; plug-in : getBusArrangement (IN) =&gt; return Input Main:stereo / Input Side-chain:mono;
 host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Stereo;
 host -&gt; plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:mono, Output: stereo)
-plug-in return : **kResultOk**
+plug-in return : kResultOk
 </code></pre>
 <pre><code>**Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input following the Main Input Arrangement**:
 
@@ -393,7 +391,7 @@ plug-in return : kResultFalse // because we want the same arrangement for Input 
 host -&gt; plug-in : getBusArrangement (IN) =&gt; return Input Main:stereo / Input Side-chain:stereo;
 host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Stereo;
 host -&gt; plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:stereo, Output: stereo)
-plug-in return : **kResultOk**
+plug-in return : kResultOk
 </code></pre>
 <h3><a class="header" href="#how-report-to-the-host-that-the-plug-in-arrangement-has-changed" id="how-report-to-the-host-that-the-plug-in-arrangement-has-changed">How report to the host that the plug-in Arrangement has changed?</a></h3>
 <p>When loading a preset or with an user interaction, the plug-in wants to change its IO configuration. In this case the plug-in should call from the editController its component handler with flag kIoChanged:</p>
@@ -403,9 +401,10 @@ plug-in return : **kResultOk**
 <h3><a class="header" href="#my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this" id="my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">My plug-in has mono input and stereo output. How does VST 3 handle this?</a></h3>
 <p>There are two ways to instantiate a plug-in like this.</p>
 <ul>
-<li>
-<p>Way 1 </p> In AudioEffect::initialize (FUnknown* context) you add one mono and one stereo bus.</p>
-<pre><code>//------------------------------------------------------------------------
+<li>Way 1</li>
+</ul>
+<p>In AudioEffect::initialize (FUnknown* context) you add one mono and one stereo bus.</p>
+<pre><code>//---------------------------------------------------------------
 tresult PLUGIN_API AGain::initialize (FUnknown* context)
 {
     //---always initialize the parent-------
@@ -418,14 +417,14 @@ tresult PLUGIN_API AGain::initialize (FUnknown* context)
 
     addAudioInput (USTRING (&quot;Mono In&quot;), SpeakerArr::kMono);
     addAudioOutput (USTRING (&quot;Stereo Out&quot;), SpeakerArr::kStereo);
-
     //...
 </code></pre>
-<p>In case of <strong>Cubase/Nuendo</strong> being the host, the plug-in, afterbeing inserted into a stereo track, gets the     left channel ofthe stereo input signal as its mono input. From this signalyou can create a stereo output    signal.</p>
-</li>
-<li>
-<p>Way 2</p> In <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1AudioEffect.html">AudioEffect</a>::initialize (FUnknown* context) you add one stereo input and one stereo output bus.</p>
-<pre><code>//------------------------------------------------------------------------
+<p>In case of <strong>Cubase/Nuendo</strong> being the host, the plug-in, afterbeing inserted into a stereo track, gets the left channel ofthe stereo input signal as its mono input. From this signalyou can create a stereo output signal.</p>
+<ul>
+<li>Way 2</li>
+</ul>
+<p>In <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1AudioEffect.html">AudioEffect</a>::initialize (FUnknown* context) you add one stereo input and one stereo output bus.</p>
+<pre><code>//---------------------------------------------------------------
 tresult PLUGIN_API AGain::initialize (FUnknown* context)
 {
     //---always initialize the parent-------
@@ -438,12 +437,9 @@ tresult PLUGIN_API AGain::initialize (FUnknown* context)
 
     addAudioInput (USTRING (&quot;Stereo In&quot;), SpeakerArr::kStereo);
     addAudioOutput (USTRING (&quot;Stereo Out&quot;), SpeakerArr::kStereo);
-
     //...
 </code></pre>
 <p>For processing, the algorithm of your plug-in takes the left channel only, or creates a new mono input  signal, by adding the samples of the left and right channels.</p>
-</li>
-</ul>
 
                     </main>
 

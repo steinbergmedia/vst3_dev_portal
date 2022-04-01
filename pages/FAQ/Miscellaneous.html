@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../../Index.html">VST Home</a> / <a href="../FAQ/Index.html">Frequently Asked Questions</a></p>
+<p>/ <a href="../../index.html">VST Home</a> / <a href="../FAQ/Index.html">Frequently Asked Questions</a></p>
 <h1><a class="header" href="#miscellaneous" id="miscellaneous">Miscellaneous</a></h1>
 </blockquote>
 <ul>
@@ -160,10 +160,10 @@
 <li><a href="#q-is-it-possible-to-define-a-plug-in-as-fx-and-instrument">Q: Is it possible to define a plug-in as Fx and Instrument?</a></li>
 <li><a href="#q-is-it-possible-to-ask-a-plug-in-about-which-speaker-arrangements-are-supported">Q: Is it possible to ask a plug-in about which speaker arrangements are supported?</a></li>
 <li><a href="#q-which-version-of-steinberg-sequencers-support-vst-3-note-expression">Q: Which version of Steinberg Sequencers support VST 3 Note Expression?</a></li>
-<li><a href="#q-when-compiling-for-mac-audiounit-i-have-a-compiler-error-in-aucarbonviewbasecpp-what-can-i-do">Q: When compiling for Mac AudioUnit, I have a compiler error in AUCarbonViewBase.cpp. What can i do?</a></li>
-<li><a href="#q-how-can-i-develop-a-surroundpanner-plug-in-which-is-integrated-in-nuendo-as-panner">Q: How can i develop a SurroundPanner plug-in which is integrated in Nuendo as Panner?</a></li>
-<li><a href="#q-how-can-i-validate-my-plug-in">Q: How can i validate my plug-in?</a></li>
-<li><a href="#q-how-can-i-allow-to-create-symbolic-link-on-windows">Q: How can i allow to create Symbolic Link on Windows?</a></li>
+<li><a href="#q-when-compiling-for-mac-audiounit-i-have-a-compiler-error-in-aucarbonviewbasecpp-what-can-i-do">Q: When compiling for Mac AudioUnit, I have a compiler error in AUCarbonViewBase.cpp. What can I do?</a></li>
+<li><a href="#q-how-can-i-develop-a-surroundpanner-plug-in-which-is-integrated-in-nuendo-as-panner">Q: How can I develop a SurroundPanner plug-in which is integrated in Nuendo as Panner?</a></li>
+<li><a href="#q-how-can-i-validate-my-plug-in">Q: How can I validate my plug-in?</a></li>
+<li><a href="#q-how-can-i-allow-to-create-symbolic-link-on-windows">Q: How can I allow to create Symbolic Link on Windows?</a></li>
 </ul>
 <hr />
 <h2><a class="header" href="#q-how-is-a-normalized-value-converted-to-a-discrete-integer-value-in-vst-3" id="q-how-is-a-normalized-value-converted-to-a-discrete-integer-value-in-vst-3">Q: How is a normalized value converted to a discrete integer value in VST 3?</a></h2>
@@ -217,7 +217,7 @@ When you export your plug-in in the factory instance (check <em>againentry.cpp</
 <p>No, not before the plug-in is instantiated, there is no way to ask the factory about which arrangements are supported for a given plug-in. The host can instantiate the plug-in and before start processing then set some different speaker Arrangements and check if the plug-in supports them.</p>
 <h2><a class="header" href="#q-which-version-of-steinberg-sequencers-support-a-hreftechnicaldocumentationchangehistory350inoteexpressioncontrollerhtmlvst-3-note-expressiona" id="q-which-version-of-steinberg-sequencers-support-a-hreftechnicaldocumentationchangehistory350inoteexpressioncontrollerhtmlvst-3-note-expressiona">Q: Which version of Steinberg Sequencers support <a href="../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.html">VST 3 Note Expression</a>?</a></h2>
 <p>In order to use Note Expression with <strong>VST 3 plug-ins</strong> you need at least Cubase/Nuendo 6.0.</p>
-<h2><a class="header" href="#q-when-compiling-for-mac-audiounit-i-have-a-compiler-error-in-aucarbonviewbasecpp-what-can-i-do" id="q-when-compiling-for-mac-audiounit-i-have-a-compiler-error-in-aucarbonviewbasecpp-what-can-i-do">Q: When compiling for Mac AudioUnit, I have a compiler error in AUCarbonViewBase.cpp. What can i do?</a></h2>
+<h2><a class="header" href="#q-when-compiling-for-mac-audiounit-i-have-a-compiler-error-in-aucarbonviewbasecpp-what-can-i-do" id="q-when-compiling-for-mac-audiounit-i-have-a-compiler-error-in-aucarbonviewbasecpp-what-can-i-do">Q: When compiling for Mac AudioUnit, I have a compiler error in AUCarbonViewBase.cpp. What can I do?</a></h2>
 <p>Due to an issue in the Mac CoreAudio SDK, not yet fixed by Apple, you have to apply a small patch to the file AUCarbonViewBase.cpp (located in CoreAudio/AudioUnits/AUPublic/AUCarbonViewBase):
 =&gt; Change:</p>
 <pre><code>HISize originalSize = { mBottomRight.h, mBottomRight.v };
@@ -225,7 +225,7 @@ to
 HISize originalSize = { static_cast&lt;CGFloat&gt;(mBottomRight.h),
                         static_cast&lt;CGFloat&gt;(mBottomRight.v) };
 </code></pre>
-<h2><a class="header" href="#q-how-can-i-develop-a-surroundpanner-plug-in-which-is-integrated-in-nuendo-as-panner" id="q-how-can-i-develop-a-surroundpanner-plug-in-which-is-integrated-in-nuendo-as-panner">Q: How can i develop a SurroundPanner plug-in which is integrated in Nuendo as Panner?</a></h2>
+<h2><a class="header" href="#q-how-can-i-develop-a-surroundpanner-plug-in-which-is-integrated-in-nuendo-as-panner" id="q-how-can-i-develop-a-surroundpanner-plug-in-which-is-integrated-in-nuendo-as-panner">Q: How can I develop a SurroundPanner plug-in which is integrated in Nuendo as Panner?</a></h2>
 <p>In order to make a surroundPanner plug-in selectable as panner (Post-fader) in Nuendo, this plug-in should have as subCategories: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#gaa334568999d986b4e50627646e51a8b4">kSpatial</a> or <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga9439d03e5e14fb7a35976d2e37f34e31">kSpatialFx</a> (in order to use it as insert too). For example:</p>
 <pre><code>DEF_CLASS2 (INLINE_UID_FROM_FUID(Steinberg::Vst::SPannerProcessor::cid),
             PClassInfo::kManyInstances,
@@ -238,13 +238,13 @@ HISize originalSize = { static_cast&lt;CGFloat&gt;(mBottomRight.h),
             Steinberg::Vst::SPannerProcessor::createInstance)
 </code></pre>
 <p>Be sure that you overwrite the function &quot;tresult PLUGIN_API setBusArrangements ...&quot; which allows you to get the current bus arrangements.</p>
-<h2><a class="header" href="#q-how-can-i-validate-my-plug-in" id="q-how-can-i-validate-my-plug-in">Q: How can i validate my plug-in?</a></h2>
+<h2><a class="header" href="#q-how-can-i-validate-my-plug-in" id="q-how-can-i-validate-my-plug-in">Q: How can I validate my plug-in?</a></h2>
 <p>You have the Validator command line which can be automatically called after you compile your plug-in (when you use the cmake defined by the SDK). This will apply some standard validations. The 2cd validation tool is the <a href="../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 plug-in Test Host</a>: check its menu entry: View =&gt; Open plug-in Unit Tests Window</p>
-<h2><a class="header" href="#q-how-can-i-allow-to-create-symbolic-link-on-windows" id="q-how-can-i-allow-to-create-symbolic-link-on-windows">Q: How can i allow to create Symbolic Link on Windows?</a></h2>
+<h2><a class="header" href="#q-how-can-i-allow-to-create-symbolic-link-on-windows" id="q-how-can-i-allow-to-create-symbolic-link-on-windows">Q: How can I allow to create Symbolic Link on Windows?</a></h2>
 <p>In order to be able to create Symbolic Link on Windows you have to set the correct group policy, this will allow you to build the <strong>VST 3</strong> plug-ins and create a symbolic link (cmake option SMTG_CREATE_PLUGIN_LINK) for each plug-in into the folder C:\Program Files\Common Files\VST3. For this you have to start the &quot;Edit group policy&quot; from the Windows Search (Windows icon):
 &gt;gpedit.msc</p>
-<p>Navigate to<br></p>
-<p><em>Computer configuration =&gt; Windows Settings =&gt; Security Settings =&gt; Local Policies =&gt; User Rights Assignment =&gt; Create symbolic links</em></p>
+<p>Navigate to<br />
+<em>Computer configuration =&gt; Windows Settings =&gt; Security Settings =&gt; Local Policies =&gt; User Rights Assignment =&gt; Create symbolic links</em></p>
 <p>Here you can set which users can create symbolic links:</p>
 <p><img src="../../resources/faq_1.png" alt="faq_1" /></p>
 

@@ -150,12 +150,12 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../Index.html">VST Home</a> / <a href="../Tutorials/Index.html">Tutorials</a></p>
+<p>/ <a href="../index.html">VST Home</a> / <a href="../Tutorials/Index.html">Tutorials</a></p>
 <h1><a class="header" href="#building-the-examples-included-in-the-sdk" id="building-the-examples-included-in-the-sdk">Building the examples included in the SDK</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
 <ul>
-<li><a href="#part-1-getting-and-installing-the-vst3-sdk">Part 1: Getting and installing the VST3 SDK</a></li>
+<li><a href="#part-1-getting-and-installing-the-vst-3-sdk">Part 1: Getting and installing the VST 3 SDK</a></li>
 <li><a href="#part-2-building-the-examples">Part 2: Building the examples</a>
 <ul>
 <li><a href="#building-the-examples-on-windows">Building the examples on Windows</a></li>
@@ -169,7 +169,7 @@
 <p>This tutorial explains how to set up your computer and create an environment for compiling the <strong>VST 3</strong> audio plug-in examples provided with the <strong>VST 3 SDK</strong>.These include plug-ins like simple DSP effects (Gain, compressor, delay,...), synths instruments and some plug-ins showing how to handle some specific <strong>VST 3</strong> features (Note Expression, Program Change, channel info context,...).</p>
 <p>They can be loaded into <strong>VST 3</strong> hosts like Cubase, WaveLab, ...</p>
 <hr />
-<h2><a class="header" href="#part-1-getting-and-installing-the-vst3-sdk" id="part-1-getting-and-installing-the-vst3-sdk">Part 1: Getting and installing the VST3 SDK</a></h2>
+<h2><a class="header" href="#part-1-getting-and-installing-the-vst-3-sdk" id="part-1-getting-and-installing-the-vst-3-sdk">Part 1: Getting and installing the VST 3 SDK</a></h2>
 <p>For downloading the SDK, see this section &quot;<a href="../Getting+Started/How+to+setup+my+system.html">How to set up my system for VST 3</a>&quot;.</p>
 <p>Download cmake from: <a href="https://cmake.org/download/">https://cmake.org/download/</a> or use a package manager for your OS.</p>
 <hr />
@@ -191,15 +191,18 @@ cmake.exe -G &quot;Visual Studio 16 2019&quot; -A x64 ../vst3sdk-DSMTG_CREATE_PL
 <blockquote>
 <p><strong>Preparation on Windows</strong></p>
 <hr />
-<p>Generated VST3 Microsoft Visual Studio Projects using the <a href="https://cmake.org/">cmake</a> included in the SDK will create by default symbolic links for each built plug-in in the <a href="../Technical+Documentation/Locations+Format/Plugin+Locations.html">official VST3 folder</a>, in order to allow this on Windows you have to adapt the Group Policy of Windows. See <a href="../Getting+Started/Preparation+on+Windows.html">Here</a>!</p>
+<p>Generated VST 3 Microsoft Visual Studio Projects using the <a href="https://cmake.org/">cmake</a> included in the SDK will create by default symbolic links for each built plug-in in the <a href="../Technical+Documentation/Locations+Format/Plugin+Locations.html">official VST 3 folder</a>, in order to allow this on Windows you have to adapt the Group Policy of Windows. See <a href="../Getting+Started/Preparation+on+Windows.html">Here</a>!</p>
 <p>If you do not want to create this link, call <a href="https://cmake.org/">cmake</a> with this parameter:</p>
 <pre><code>-DSMTG_CREATE_PLUGIN_LINK=0
 </code></pre>
-<p>You could choose the <a href="../Technical+Documentation/Locations+Format/Plugin+Locations.html">new user location</a> for VST3 plug-ins, call <a href="https://cmake.org/">cmake</a> with this parameter:</p>
+<p>You could choose the <a href="../Technical+Documentation/Locations+Format/Plugin+Locations.html">new user location</a> for VST 3 plug-ins, call <a href="https://cmake.org/">cmake</a> with this parameter:</p>
 <pre><code>-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
 </code></pre>
 </blockquote>
-<p>Note: you can find the string definition for different Visual Studio Generators in the cmake online documentation (<a href="https://cmake.org/documentation/">https://cmake.org/documentation/</a>)</p>
+<blockquote>
+<p>ⓘ <strong>Note</strong><br />
+You can find the string definition for different Visual Studio Generators in the cmake online documentation (<a href="https://cmake.org/documentation/">https://cmake.org/documentation/</a>)</p>
+</blockquote>
 <ul>
 <li>Build the plug-in (you can use Visual Studio too):</li>
 </ul>

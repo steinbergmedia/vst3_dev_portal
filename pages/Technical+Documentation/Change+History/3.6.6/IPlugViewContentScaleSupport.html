@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../../../Index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
+<p>/ <a href="../../../index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
 <h1><a class="header" href="#366-plugview-content-scaling" id="366-plugview-content-scaling">[3.6.6] PlugView Content Scaling</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -171,10 +171,8 @@
 <p>The host can call <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html#af5b0fea85beba3cdcfeb8de66779f478">setContentScaleFactor</a> in a different context, for example: scaling the plug-in editor for better readability.</p>
 <p>When a plug-in handles this (by returning kResultTrue), it needs to scale the width and height of its view by the scale factor and inform the host via a <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html#a94f218315acd695606fff41166294d56">IPlugFrame::resizeView()</a>, the host will then call <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#a3e741e55c2c047a4cc10f102661f5654">IPlugView::onSize()</a>.</p>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Note that the host is allowed to call <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html#af5b0fea85beba3cdcfeb8de66779f478">setContentScaleFactor()</a> at any time the <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">IPlugView</a> is valid.</p>
+<p>ⓘ <strong>Note</strong><br />
+Note that the host is allowed to call <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html#af5b0fea85beba3cdcfeb8de66779f478">setContentScaleFactor()</a> at any time the <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">IPlugView</a> is valid.</p>
 </blockquote>
 
                     </main>

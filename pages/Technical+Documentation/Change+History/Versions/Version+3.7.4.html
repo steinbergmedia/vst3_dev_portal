@@ -159,7 +159,7 @@
 <ul>
 <li>Add support of _M_ARM64EC on Windows</li>
 <li>New defines: SMTG_CPU_ARM_64EC, SMTG_CPP14 and SMTG_CPP17</li>
-<li>New <a href="../../Locations+Format/Plugin+Locations.html">VST3 plug-in location</a> user local on Windows: %LOCALAPPDATA%/Programs/Common/VST3/</li>
+<li>New <a href="../../Locations+Format/Plugin+Locations.html">VST 3 plug-in location</a> user local on Windows: %LOCALAPPDATA%/Programs/Common/VST3/</li>
 <li>Use SMTG_CONSTEXPR where needed</li>
 </ul>
 </li>
@@ -175,13 +175,13 @@
 <li><strong>Breaking Change</strong>: change smtg_add_vst3_resource to   smtg_target_add_plugin_resources allowing to add multiple     resources in a call</li>
 <li><strong>Breaking Change</strong>: change smtg_add_vst3_snapshot to   smtg_target_add_plugin_snapshots allowing to add multiple     resources in a call</li>
 <li>make Universal Binary on Mac default ON when Xcode12</li>
-<li>Add support of new VST3 Location on Windows: new option SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON</li>
+<li>Add support of new VST 3 Location on Windows: new option SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON</li>
 <li>Fix some code Signing issue with XCode</li>
 </ul>
 </li>
 <li><a href="../../../What+is+the+VST+3+SDK/Wrappers/Index.html">Plug-in Wrappers</a>:
 <ul>
-<li>VST2 Wrapper:
+<li>VST 2 Wrapper:
 <ul>
 <li>Fix termination of objects might still need data destroyed in _DeinitModule()</li>
 </ul>
@@ -210,7 +210,7 @@
 </li>
 <li><a href="../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST3PluginTestHost</a> v3.2.20:
 <ul>
-<li>Adapted to scan the new VST3 plug-in location on Windows</li>
+<li>Adapted to scan the new VST 3 plug-in location on Windows</li>
 <li>This is the last version supporting 32bits plug-ins on Windows. The next update will support only 64bits plug-ins.</li>
 </ul>
 </li>

@@ -186,10 +186,8 @@
 <tr><td align="left">MyPlugin.vst3/Plugin.ico</td><td align="left">customized plug-in icon</td></tr>
 </tbody></table>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>In previous SDKs, the VST 3 Plug-in was defined as a single dll file with the .vst3 extension. This is deprecated since VST 3.6.10.</p>
+<p>ⓘ <strong>Note</strong><br />
+In previous SDKs, the VST 3 Plug-in was defined as a single dll file with the .vst3 extension. This is deprecated since VST 3.6.10.</p>
 </blockquote>
 <p>The file desktop.ini should contain:</p>
 <p><strong>desktop.ini</strong></p>
@@ -206,7 +204,7 @@ attrib +r +h Plugin.ico
 <tr><td align="left">MyPlugin.vst3/Contents/Resources/</td><td align="left">folder contains all additional resource files useful for the plug-in</td></tr>
 <tr><td align="left">MyPlugin.vst3/Contents/i386-linux</td><td align="left">folder contains the plug-in binary (32 bit shared library .so for Kernel Architecture i386)</td></tr>
 <tr><td align="left">MyPlugin.vst3/Contents/x86_64-linux</td><td align="left">folder contains the plug-in binary (64 bit shared library .so for Kernel Architecture x86_64)</td></tr>
-<tr><td align="left">MyPlugin.vst3/Contents/XXX-linux</td><td align="left">with XXX the architecture name based on the output of command-line &quot;uname -m&quot; (machine hardware) + &quot;-linux&quot;</p> for example:</p> • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux</td></tr>
+<tr><td align="left">MyPlugin.vst3/Contents/XXX-linux</td><td align="left">with XXX the architecture name based on the output of command-line &quot;uname -m&quot; (machine hardware) + &quot;-linux&quot; for example: • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux</td></tr>
 </tbody></table>
 <h2><a class="header" href="#merged-bundle" id="merged-bundle">Merged Bundle</a></h2>
 <p>Note that all the bundles can be merged to one, which allows to have a cross-platform bundle/folder.</p>

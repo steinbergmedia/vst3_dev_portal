@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../../Index.html">VST Home</a> / <a href="../Index.html">Technical Documentation</a></p>
+<p>/ <a href="../../index.html">VST Home</a> / <a href="../Index.html">Technical Documentation</a></p>
 <h1><a class="header" href="#parameters-and-automation" id="parameters-and-automation">Parameters and Automation</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -226,10 +226,8 @@ The plug-in must assign a unique 32-bit identifier (ID) to each exported paramet
 </ul>
 <p>The controller must support the conversion to a string for any exported parameter. The conversion method <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#aab2f0b853e75361d331b667e7893962e">Steinberg::Vst::IEditController::getParamStringByValue</a> must provide a result for any possible normalized parameter value.</p>
 <blockquote>
-<p>⚠️ <strong>Warning</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Parameter values are always transmitted in a normalized floating point (64bit double) representation <strong>[0.0, 1.0]</strong>.</p>
+<p>⚠️ <strong>Warning</strong><br />
+Parameter values are always transmitted in a normalized floating point (64bit double) representation <strong>[0.0, 1.0]</strong>.</p>
 </blockquote>
 <h3><a class="header" href="#representation-of-parameter-values" id="representation-of-parameter-values">Representation of parameter values</a></h3>
 <p>A plug-in parameter usually has more than one representation. The GUI of a plug-in can display something that appears to be a single parameter, but might control multiple processing parameters at the same time. Or the GUI representation displays a scale-transformed representation of a DSP-Parameter.</p>
@@ -306,21 +304,18 @@ The plug-in must assign a unique 32-bit identifier (ID) to each exported paramet
 <p>The plug-in must stick to the order of these callbacks. Otherwise, automation recording cannot work correctly. However, the implementation can bring up difficulties. Each type of GUI control and the way it is operated along with the nature of the controlled parameter requires specific considerations.
 To address the most common cases:</p>
 <h4><a class="header" href="#sliders--knobs" id="sliders--knobs">Sliders &amp; Knobs</a></h4>
-<p>These kind of controls usually control continuous parameters and they are usually operated with the mouse. This common case is the most simple to handle: On mouse-click-down call beginEdit (followed by performEdit when the control allows a jump), on mouse-drag call performEdit and on mouse-click-up call endEdit.</p>
+<p>This kind of controls usually control continuous parameters and they are usually operated with the mouse. This common case is the most simple to handle: On mouse-click-down call beginEdit (followed by performEdit when the control allows a jump), on mouse-drag call performEdit and on mouse-click-up call endEdit.</p>
 <p>Trouble starts with the <strong>mouse wheel</strong>: There simply is nothing like a defined start or end when the wheel is operated - each wheel event arrives 'out of the blue'. The only way to enable proper automation recording in this case is the usage of a timer.</p>
 <ul>
-<li>
-<p>A plug-in implementation should call beginEdit when the first wheel event is handled and start a timer (followed by the first call to performEdit). Further wheel events that arrive inside of the timeout interval are reported with performEdit and the timer is restarted. When the timeout period has passed without further events, endEdit should be called and the timer can be removed.</p></p>
-</li>
-<li>
-<p>But since it is the host's task to record automation data, one could argue that it should be the host's task to take care of the timer in this case. This is the reason for the following exception to the rule:</p>
+<li>A plug-in implementation should call beginEdit when the first wheel event is handled and start a timer (followed by the first call to performEdit). Further wheel events that arrive inside of the timeout interval are reported with performEdit and the timer is restarted. When the timeout period has passed without further events, endEdit should be called and the timer can be removed.</li>
+<li>But since it is the host's task to record automation data, one could argue that it should be the host's task to take care of the timer in this case. This is the reason for the following exception to the rule:
 <ul>
 <li>Mouse wheel events can be reported without beginEdit and endEdit to the host. The host must be prepared to receive a performEdit without a previous call of beginEdit for a parameter and handle the timeout itself.</li>
 </ul>
 </li>
 </ul>
 <h4><a class="header" href="#buttons--radio-groups--pop-up-menus" id="buttons--radio-groups--pop-up-menus">Buttons / Radio Groups / Pop-up Menus</a></h4>
-<p>These kind of controls usually control discrete parameters and simply switch the state of something. A proper handling is to call beginEdit, performEdit and endEdit in a row. The affected parameter has to be exported to the host with the correct step count because discrete parameters are handled differently than continuous parameters in regard to automation.</p>
+<p>This kind of controls usually control discrete parameters and simply switch the state of something. A proper handling is to call beginEdit, performEdit and endEdit in a row. The affected parameter has to be exported to the host with the correct step count because discrete parameters are handled differently than continuous parameters in regard to automation.</p>
 <p>Mouse wheel handling usually is not supported for buttons, but sometimes for pop-up menus. Discrete parameters do not require the usage of a timer in order to be recorded correctly.</p>
 <p>So the plug-in should call the 3 functions in a row for each wheel event - again, the other option is to omit beginEdit and endEdit, but in this case, be sure to report the discrete nature of the parameter to the host correctly.</p>
 <h4><a class="header" href="#text-input" id="text-input">Text Input</a></h4>
@@ -332,9 +327,7 @@ To address the most common cases:</p>
 <p>The processor gets the automation data in the processing call by using queue of parameter changes for each parameter having automation data:</p>
 <p>a <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a> has some <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueues</a> (for a specific parameter ID) which has some Automation Points.</p>
 <blockquote>
-<p>⚠️ <strong>Warning</strong><br></p>
-</blockquote>
-<blockquote>
+<p>⚠️ <strong>Warning</strong></p>
 <ul>
 <li>A parameter (ID) is present only one time in the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a> list!</li>
 <li>Automation Points inside a <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueues</a> are sorted per offset (position inside the audio block)!</li>
@@ -356,10 +349,8 @@ To address the most common cases:</p>
 <p>to inform the host about this change (in the <strong>UI Thread</strong>). The host invalidates all caches of parameter values and asks the edit controller for the current values.</p>
 <p>If only some values have changed (less than 10)  the plug-in should use the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93">Steinberg::Vst::IComponentHandler::performEdit</a> interface (Show the right use when automation are used: <a href="../Parameters+Automation/Index.html#automation-recording">Automation Recording</a>)</p>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>If the plug-in needs to inform the host about changes containing parameter title, default or flags and values (of multiple parameters), it could combine the restartComponent flags:
+<p>ⓘ <strong>Note</strong><br />
+If the plug-in needs to inform the host about changes containing parameter title, default or flags and values (of multiple parameters), it could combine the restartComponent flags:
 <code>IComponentHandler::restartComponent (kParamValuesChanged|kParamTitlesChanged);</code></p>
 </blockquote>
 

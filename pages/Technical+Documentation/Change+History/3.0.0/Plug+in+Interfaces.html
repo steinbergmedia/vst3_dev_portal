@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../../../Index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
+<p>/ <a href="../../../index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
 <h1><a class="header" href="#300-interfaces-supported-by-the-plug-in" id="300-interfaces-supported-by-the-plug-in">[3.0.0] Interfaces supported by the plug-in</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -265,10 +265,8 @@ Afterwards, in the same callstack, the host has to call IPlugView::onSize () if 
 </li>
 </ul>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Note that if the host calls IPlugView::getSize () before calling IPlugView::onSize () (if needed), it will get the old size, not the current one!</p>
+<p>ⓘ <strong>Note</strong><br />
+Note that if the host calls IPlugView::getSize () before calling IPlugView::onSize () (if needed), it will get the old size, not the current one!</p>
 </blockquote>
 <p>Here the calling sequence:</p>
 <ul>
@@ -278,10 +276,8 @@ Afterwards, in the same callstack, the host has to call IPlugView::onSize () if 
 <li>host-&gt;plug-in (optional): IPlugView::getSize () returns the newSize</li>
 </ul>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Please only resize the platform representation of the view when IPlugView::onSize () is called.</p>
+<p>ⓘ <strong>Note</strong><br />
+Please only resize the platform representation of the view when IPlugView::onSize () is called.</p>
 </blockquote>
 <h3><a class="header" href="#keyboard-handling" id="keyboard-handling">Keyboard handling</a></h3>
 <p>The plug-in view receives keyboard events from the host. A view implementation must not handle keyboard events by the means of platform callbacks, but let the host pass them to the view. The host depends on a proper return value when <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#a759b576f046e699c84dc07d579600b1b">IPlugView::onKeyDown</a> is called, otherwise the plug-in view may cause a malfunction of the host's key command handling.</p>

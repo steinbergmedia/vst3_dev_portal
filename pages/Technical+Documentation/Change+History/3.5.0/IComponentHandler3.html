@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../../../Index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
+<p>/ <a href="../../../index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
 <h1><a class="header" href="#350-context-menu" id="350-context-menu">[3.5.0] Context Menu</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -180,20 +180,16 @@ The plug-in can use the context menu in two ways :</p>
 <li>extract the host menu items and add them to a context menu created by the plug-in.</li>
 </ul>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>It is recommended to use this context menu interface, even if you do not add your own items to the menu as this is considered to be a big user value.</p>
+<p>ⓘ <strong>Note</strong><br />
+It is recommended to use this context menu interface, even if you do not add your own items to the menu as this is considered to be a big user value.</p>
 </blockquote>
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html">IContextMenu</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenuTarget.html">IContextMenuTarget</a></p>
 <h2><a class="header" href="#examples" id="examples">Examples</a></h2>
 <h3><a class="header" href="#from-the-host-perspective" id="from-the-host-perspective">From the host perspective</a></h3>
 <p>For example, <strong>Cubase</strong> adds its owned entries in the context menu opened with right-click on an exported parameter when the plug-in uses <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler3.html#a0c91e0b43003a34a7f43d0c4b33aa604">createContextMenu</a>. The plug-in itself, in this example, only adds the &quot;Open UIDescription Editor&quot; entry.</p>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>Plug-ins using VSTGUI automatically have this context menu feature.</p>
+<p>ⓘ <strong>Note</strong><br />
+Plug-ins using VSTGUI automatically have this context menu feature.</p>
 </blockquote>
 <p><img src="../../../../resources/tech_doc_33.png" alt="tech_doc_33" /></p>
 <p>Context menu with <strong>Cubase</strong></p>

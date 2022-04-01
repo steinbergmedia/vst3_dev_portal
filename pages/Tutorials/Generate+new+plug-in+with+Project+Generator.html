@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../Index.html">VST Home</a> / <a href="../Tutorials/Index.html">Tutorials</a></p>
+<p>/ <a href="../index.html">VST Home</a> / <a href="../Tutorials/Index.html">Tutorials</a></p>
 <h1><a class="header" href="#generate-a-new-plug-in-with-the-project-generator-app" id="generate-a-new-plug-in-with-the-project-generator-app">Generate a new plug-in with the Project Generator App</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -173,14 +173,14 @@
 </ul>
 <hr />
 <p>This tutorial explains how to create a new audio plug-in by using the <em><strong><a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a></strong></em> included in the <strong>VST 3 SDK</strong> and how to add some basic features.</p>
-<p>The artifact will be an audio plug-in that can compute a gain to an audio signal and can be loaded into VST3 hosts like <strong>Cubase</strong>, <strong>WaveLab</strong>, ...</p>
+<p>The artifact will be an audio plug-in that can compute a gain to an audio signal and can be loaded into VST 3 hosts like <strong>Cubase</strong>, <strong>WaveLab</strong>, ...</p>
 <hr />
 <h2><a class="header" href="#part-1-getting-and-installing-the-vst-3-sdk" id="part-1-getting-and-installing-the-vst-3-sdk">Part 1: Getting and installing the VST 3 SDK</a></h2>
 <p>For downloading the SDK, see the section &quot;<a href="../Getting+Started/How+to+setup+my+system.html">How to set up my system for VST 3</a>&quot;.</p>
 <p>You have the following possibilities to start a new project:</p>
 <ul>
 <li>You can use the <a href="../Tutorials/Creating+a+plug-in+from+the+Helloworld+template.html"><strong>helloworld</strong> template</a> included in the <strong>VST SDK</strong> and duplicate the folder into a new folder. Adapt each file where the comment mentions it.</li>
-<li>Or, which is <strong>easier</strong> and <strong>recommended</strong>, you can use the <a href="../What+is+the+VST+3+SDK/Project+Generator.html"><strong>VST3 Project Generator</strong></a> application included in the <strong>VST SDK</strong>. The following steps show how to use it.</li>
+<li>Or, which is <strong>easier</strong> and <strong>recommended</strong>, you can use the <a href="../What+is+the+VST+3+SDK/Project+Generator.html"><strong>VST 3 Project Generator</strong></a> application included in the <strong>VST SDK</strong>. The following steps show how to use it.</li>
 </ul>
 <hr />
 <h2><a class="header" href="#part-2-using-the-a-hrefwhatisthevst3sdkprojectgeneratorhtmlvst-3-plug-in-project-generator-applicationa" id="part-2-using-the-a-hrefwhatisthevst3sdkprojectgeneratorhtmlvst-3-plug-in-project-generator-applicationa">Part 2: Using the <a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 plug-in <strong>Project Generator</strong> application</a></a></h2>
@@ -241,9 +241,7 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 }
 </code></pre>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
+<p>ⓘ <strong>Note</strong></p>
 <ul>
 <li>We add the flag <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31"><em>kCanAutomate</em></a> which informs the DAW/host that this parameter can be automated.</li>
 <li>A <strong>VST 3</strong> parameter is always normalized (its value is a floating point value between [0, 1]), here its default value is set to 0.5.</li>
@@ -300,10 +298,8 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&amp;data)
 }
 </code></pre>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p><strong>data.inputParameterChanges</strong> can include more than <strong>1</strong> change for the same parameter inside a processing audio block. Here we take only the last change in the list and apply it our <strong>mGain</strong>.</p>
+<p>ⓘ <strong>Note</strong><br />
+<strong>data.inputParameterChanges</strong> can include more than <strong>1</strong> change for the same parameter inside a processing audio block. Here we take only the last change in the list and apply it our <strong>mGain</strong>.</p>
 </blockquote>
 <ol start="2">
 <li>The real processing part:</li>
@@ -433,10 +429,8 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 }
 </code></pre>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>In this example we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:</p>
+<p>ⓘ <strong>Note</strong><br />
+In this example we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:</p>
 <p>addEventInput (STR16 (&quot;Event In&quot;), 4); // here 4 channels</p>
 </blockquote>
 <ol start="2">

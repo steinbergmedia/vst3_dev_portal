@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../../Index.html">VST Home</a> / <a href="../FAQ/Index.html">Frequently Asked Questions</a></p>
+<p>/ <a href="../../index.html">VST Home</a> / <a href="../FAQ/Index.html">Frequently Asked Questions</a></p>
 <h1><a class="header" href="#processing" id="processing">Processing</a></h1>
 </blockquote>
 <ul>
@@ -180,10 +180,8 @@
 <p>This is the choice of the plug-in to handle/process the bypass (like any other parameters) sample accurate (by using the sampleOffset of the parameter change) or audio block based (not recommended when the audio block length is too large &gt; 1024).</p>
 <p>During bypass the process is still called, but if not, for some reason, the host may call a flush (using process call with null audio buffer).</p>
 <blockquote>
-<p><em><strong>Note:</strong></em><br></p>
-</blockquote>
-<blockquote>
-<p>The plug-in needs to save in its state the bypass parameter like any other parameters.</p>
+<p>ⓘ <strong>Note</strong><br />
+The plug-in needs to save in its state the bypass parameter like any other parameters.</p>
 </blockquote>
 <p>Q: Must the host deliver valid initialized Audio buffers if the associated bus is deactivated?</p>
 <p>In a correctly implemented host, if an input or output bus exists in the host, and it has become disconnected from the plug-in, the plug-in will receive disconnection information (bus activation).</p>
@@ -207,24 +205,24 @@ Steinberg::Vst::IAudioProcessor::process (...);
 <h2><a class="header" href="#q-can-the-host-call-the-process-function-without-audio-buffers" id="q-can-the-host-call-the-process-function-without-audio-buffers">Q: Can the host call the process function without Audio buffers?</a></h2>
 <p>Yes, the host can call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IAudioProcessor::process</a> without buffers (numInputs and numOutputs are zeroed), in order to flush parameters (from host to plug-in).</p>
 <h2><a class="header" href="#q-what-is-a-side-chain" id="q-what-is-a-side-chain">Q: What is a Side-Chain?</a></h2>
-<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">(3.0.0) Multiple Dynamic I/O Support</a></p>
 <h2><a class="header" href="#q-how-can-i-implement-a-side-chain-path-into-my-plug-in" id="q-how-can-i-implement-a-side-chain-path-into-my-plug-in">Q: How can I implement a Side-chain path into my plug-in?</a></h2>
-<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">(3.0.0) Multiple Dynamic I/O Support</a></p>
 <h2><a class="header" href="#q-my-plug-in-is-capable-of-processing-all-possible-channel-configurations" id="q-my-plug-in-is-capable-of-processing-all-possible-channel-configurations">Q: My plug-in is capable of processing all possible channel configurations.</a></h2>
-<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">(3.0.0) Multiple Dynamic I/O Support</a></p>
 <h2><a class="header" href="#q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins" id="q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins">Q: How are speaker arrangement settings handled for FX plug-ins?</a></h2>
-<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">(3.0.0) Multiple Dynamic I/O Support</a></p>
 <h2><a class="header" href="#q-my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this" id="q-my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">Q: My plug-in has mono input and stereo output. How does VST 3 handle this?</a></h2>
-<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">(3.0.0) Multiple Dynamic I/O Support</a></p>
 <h2><a class="header" href="#q-how-does-it-work-with-silence-flags" id="q-how-does-it-work-with-silence-flags">Q: How does it work with silence flags?</a></h2>
-<p>See [[3.0.0] Silence flags Support](../Technical+Documentation/Change+History/3.0.0/Silence+flags.md) and tutorial about <a href="../Tutorials/How+to+use+the+silence+flags.html">how to use Silence flags</a>.</p>
+<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Silence+flags.html">(3.0.0) Silence flags Support</a> and tutorial about <a href="../Tutorials/How+to+use+the+silence+flags.html">how to use Silence flags</a>.</p>
 <h2><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-latency-has-changed" id="q-how-report-to-the-host-that-the-plug-in-latency-has-changed">Q: How report to the host that the plug-in latency has changed?</a></h2>
 <p>The plug-in should call from the editController its component handler <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">restartComponent</a> function with flag kLatencyChanged:</p>
 <pre><code>componentHandler-&gt;restartComponent (kLatencyChanged);
 </code></pre>
 <p>The host will call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af8884671ccefe68e0a86e72413a0fcf8">Vst::IAudioProcessor-&gt;getLatencySamples()</a> in order to check the new latency and adapt its latency compensation if supported.</p>
 <h2><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-arrangement-has-changed" id="q-how-report-to-the-host-that-the-plug-in-arrangement-has-changed">Q: How report to the host that the plug-in arrangement has changed?</a></h2>
-<p>See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)</p>
+<p>See <a href="../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">(3.0.0) Multiple Dynamic I/O Support</a></p>
 <h2><a class="header" href="#q-can-iaudioprocessorsetprocessing-be-called-without-any-iaudioprocessorprocess-call" id="q-can-iaudioprocessorsetprocessing-be-called-without-any-iaudioprocessorprocess-call">Q: Can IAudioProcessor::setProcessing be called without any IAudioProcessor::process call?</a></h2>
 <p>Yes, it depends how the DAW is supporting its processing, the following call sequence is legal:</p>
 <pre><code>Vst::IAudioProcessor::process (...);

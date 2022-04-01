@@ -150,7 +150,7 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../../../Index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
+<p>/ <a href="../../../index.html">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
 <h1><a class="header" href="#300-silence-flags" id="300-silence-flags">[3.0.0] Silence flags</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
@@ -173,10 +173,8 @@
 </ul>
 <p>The silence flags are a bitmask where each bit corresponds to one channel of a bus (for example L and R for stereo bus).</p>
 <blockquote>
-<p>ⓘ <strong>Note</strong><br></p>
-</blockquote>
-<blockquote>
-<p>The host has the responsibility to clear the input buffers (set to zero) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)), on the other side the plug-in, if it produces silence output, has the responsibility to clear (set to zero) its output buffers and to correctly set the output silence flags.</p>
+<p>ⓘ <strong>Note</strong><br />
+The host has the responsibility to clear the input buffers (set to zero) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)), on the other side the plug-in, if it produces silence output, has the responsibility to clear (set to zero) its output buffers and to correctly set the output silence flags.</p>
 </blockquote>
 <p>Check tutorial about <a href="../../../Tutorials/How+to+use+the+silence+flags.html">How to use the silence flags</a>.</p>
 
