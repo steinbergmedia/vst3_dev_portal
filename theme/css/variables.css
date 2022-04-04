@@ -93,6 +93,7 @@
 .light {
     --bg: hsl(0, 0%, 100%);
     --fg: hsl(0, 0%, 0%);
+    --tc: #353535;
 
     --sidebar-bg: #fafafa;
     --sidebar-fg: hsl(0, 0%, 0%);
@@ -133,6 +134,7 @@
 .navy {
     --bg: hsl(226, 23%, 11%);
     --fg: #bcbdd0;
+    --tc: #353535;
 
     --sidebar-bg: #282d3f;
     --sidebar-fg: #c8c9db;
@@ -173,6 +175,7 @@
 .rust {
     --bg: hsl(60, 9%, 87%);
     --fg: #262625;
+    --tc: #353535;
 
     --sidebar-bg: #3b2e2a;
     --sidebar-fg: #c8c9db;
@@ -213,6 +216,7 @@
 .steinberg-light {
     --bg: rgb(255, 255, 255);
     --fg: rgb(0,0,0);
+    --tc: #353535;
 
     --sidebar-bg: rgb(244, 245, 247);
     --sidebar-fg: rgb(0,0,0);
@@ -227,18 +231,18 @@
 
     --links: #c90526;
 
-    --inline-code-color: #6e6b5e;
+    --inline-code-color: #575757;
 
-    --theme-popup-bg: #e1e1db;
-    --theme-popup-border: #b38f6b;
-    --theme-hover: #99908a;
+    --theme-popup-bg: #ededec;
+    --theme-popup-border: #8a8a8a;
+    --theme-hover: hsl(0, 0%, 81%);
 
-    --quote-bg: hsl(60, 5%, 75%);
-    --quote-border: hsl(60, 5%, 70%);
+    --quote-bg: hsl(0, 0%, 81%);
+    --quote-border: hsl(0, 0%, 81%);
 
-    --table-border-color: hsl(60, 9%, 82%);
-    --table-header-bg: #b3a497;
-    --table-alternate-bg: hsl(60, 9%, 84%);
+    --table-border-color: hsl(0, 0%, 77%);
+    --table-header-bg: #e4e4e4;
+    --table-alternate-bg: hsl(0, 0%, 99.5%);
 
     --searchbar-border-color: #aaa;
     --searchbar-bg: #fafafa;
@@ -254,13 +258,14 @@
 }
 
 .steinberg-dark {
-    --bg: #101020;
-    --fg: rgb(255,255,255);
+    --bg: #1f1f1f;
+    --fg: #e6e1da;
+    --tc: #e5e0d8;
 
-    --sidebar-bg: #050505;
-    --sidebar-fg: #c8c9db;
+    --sidebar-bg: #0d0d0d;
+    --sidebar-fg: #c9c5bf;
     --sidebar-non-existant: #505254;
-    --sidebar-active: #c90526;
+    --sidebar-active: #db304c;
     --sidebar-spacer: #45373a;
 
     --scrollbar: var(--sidebar-fg);
@@ -268,26 +273,26 @@
     --icons: #737480;
     --icons-hover: #262625;
 
-    --links: #c90526;
+    --links: #db304c;
 
-    --inline-code-color: #6e6b5e;
+    --inline-code-color: #575757;
 
-    --theme-popup-bg: #161923;
+    --theme-popup-bg: #131313;
     --theme-popup-border: #737480;
-    --theme-hover: #99908a;
+    --theme-hover: hsl(0, 0%, 36%);
 
-    --quote-bg: hsl(60, 5%, 75%);
-    --quote-border: hsl(60, 5%, 70%);
+    --quote-bg: hsl(0, 0%, 20%);
+    --quote-border: hsl(0, 0%, 36%);
 
     --table-border-color: hsl(60, 9%, 82%);
-    --table-header-bg: #b3a497;
-    --table-alternate-bg: hsl(60, 9%, 84%);
+    --table-header-bg: #3b3b3b;
+    --table-alternate-bg: hsl(0, 0%, 12%);
 
     --searchbar-border-color: #aaa;
     --searchbar-bg: #fafafa;
     --searchbar-fg: #000;
     --searchbar-shadow-color: #aaa;
-    --searchresults-header-fg: #666;
+    --searchresults-header-fg: rgb(171, 171, 171);
     --searchresults-border-color: #888;
     --searchresults-li-bg: #dec2a2;
     --search-mark-bg: #e69f67;
