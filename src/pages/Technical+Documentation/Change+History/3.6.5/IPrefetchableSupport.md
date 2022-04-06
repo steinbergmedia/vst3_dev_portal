@@ -21,7 +21,7 @@ The plug-in should implement this interface if it needs to dynamically change be
 
 ## Example
 
-```
+``` c++
 //------------------------------------------------------------------------
 tresult PLUGIN_API myPlug::getPrefetchableSupport (PrefetchableSupport& prefetchable)
 {

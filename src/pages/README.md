@@ -21,6 +21,7 @@ Here, you can find a non-exhaustive list of **VST 3** benefits.
 The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a collection of software development tools included in one package. This allows plug-in developers to create plug-ins in **VST 3** format and host developers to load **VST 3** plug-ins into a DAW or audio editor.
 
 ## [VST 3 licensing](../pages/VST+3+Licensing/Index.md)
+
 - [Steinberg VST usage guidelines](../pages/VST+3+Licensing/Usage+guidelines.md)
 - [What are the licensing options](../pages/VST+3+Licensing/What+are+the+licensing+options.md)
 - [Which files fall under which license?](../pages/VST+3+Licensing/Which+files+fall+under+which+license.md)
@@ -30,9 +31,10 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 
 - [VST 3 Links](../pages/Getting+Started/Links.md) — Important links you will need for working with VST 3
 - [How to setup up my system for VST 3](../pages/Getting+Started/How+to+setup+my+system.md) — In order to build VST 3 plug-ins, you need the source code of the VST 3 (interface definition), an IDE/compiler, cmake and a VST 3 host application.
-- [Preparation on Windows](../pages/Getting+Started/Preparation+on+Windows.md) — Generated VST 3 Microsoft Visual Studio Projects using the cmake <https://cmake.org/> included in the SDK will create by default symbolic links for each built plug-in in the official VST 3 folder, in order to allow this on Windows you have to adapt the Group Policy of Windows. See Here!
+- [Preparation on Windows](../pages/Getting+Started/Preparation+on+Windows.md) — Generated VST 3 Microsoft Visual Studio Projects using the cmake <https://cmake.org/> included in the SDK will create by default symbolic links for each built plug-in in the official VST 3 folder, in order to allow this on Windows you have to adapt the Group Policy of Windows. See Here! TODO LINK
 
 ## [Tutorials](../pages/Tutorials/Index.md)
+
 - [Building the examples included in the SDK](../pages/Tutorials/Building+the+examples+included+in+the+SDK.md)
 - [Using cmake for building VST 3 plug-ins](../pages/Tutorials/Using+cmake+for+building+plug-ins.md)
 - [Generate a new plug-in with the Project Generator App](../pages/Tutorials/Generate+new+plug-in+with+Project+Generator.md)
@@ -43,10 +45,13 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 - [Creating a plug-in from the Helloworld template](../pages/Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
 
 ## [VST 3 Forum](../pages/Forum/Index.md)
+
 Visit Steinberg's **VST Developer Forum** in order to get help with development, to submit bug reports, to request new features and to connect to other **VST 3** developers:
 
 ## [Technical Documentation](../pages/Technical+Documentation/Index.md)
+
 Browse the **VST 3 SDK**'s technical documentation. The full **VST 3 API** reference is only available in the [VST 3 Package](../pages/Getting+Started/Links.md) that you can download or find online here.
 
 ## [Miscellaneous](../pages/Miscellaneous/Index.md)
+
 Copyrights and Glossary

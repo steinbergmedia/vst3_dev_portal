@@ -46,7 +46,7 @@ The host can ask the plug-in which parameter is under the mouse.
 
 ## 8. [Channel Context Information](../Technical+Documentation/Change+History/3.6.5/IInfoListener.md)
 
-A **VST 3** plug-in can access channel information where it is instantiated: name, color,...
+A **VST 3** plug-in can access channel information where it is instantiated: name, color, ...
 
 ## 9. [Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
 

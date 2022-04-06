@@ -50,7 +50,7 @@ Here an example of what **Bitwig** is doing with context menus.
 
 Adding plug-in specific items to the context menu:
 
-```
+``` c++
 //------------------------------------------------------------------------
 class PluginContextMenuTarget : public IContextMenuTarget, public FObject
 {

@@ -27,7 +27,7 @@ If this interface is implemented by the edit controller, the host will call this
 
 **In mycontroller.h**
 
-```
+``` c++
 //------------------------------------------------------------------------
 // here an example of how a VST 3 Plug-in could support this IMidiLearn interface.
 // we need to define somewhere the iids:
@@ -52,7 +52,7 @@ class MyController : public Vst::EditController, public Vst::IMidiLearn
 
 **In mycontroller.cpp**
 
-```
+``` c++
 #include "pluginterfaces/vst/ivstmidilearn.h
  
 namespace Steinberg {

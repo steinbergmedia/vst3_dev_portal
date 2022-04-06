@@ -20,7 +20,7 @@ The silence flags is part of the [AudioBusBuffers](https://steinbergmedia.github
 
 ## Plug-in receives a silent audio input
 
-```
+``` c++
 /-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
@@ -58,7 +58,7 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
 
 ## Plug-in generates silent output
 
-```
+``` c++
 /-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
@@ -95,8 +95,8 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
 
 In Bypass mode the plug-in has to be sure that its outputs have the same stand than its inputs:
 
-```
-/-----------------------------------------------------------------------
+``` c++
+//-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
     //...
@@ -128,8 +128,8 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
 
 ## Plug-in generates audio output
 
-```
-/-----------------------------------------------------------------------
+``` c++
+//-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
     //...

@@ -16,7 +16,7 @@ Almost all **VST 3** interfaces return a *tresult* value. This integer value all
 
 The various possible values are defined in *funknown.h*. They are the same values as used in COM. Be careful when checking a *tresult* return value, because on success **kResultOk** is returned which has the integer value *0*:
 
-```
+``` c++
 // this is WRONG!!!!!
 if (component->setActive (true))
 {
@@ -48,7 +48,7 @@ When you export your plug-in in the factory instance (check *againentry.cpp*: DE
 
 Currently the subcategory string is used by **Cubase**/**Nuendo** to organize the plug-ins menu like this:
 
-```
+``` c++
 Computation of Folder Name (SubCategories => folder in menu)
       "Fx"                        => "Other"
       "Fx|Delay"                  => "Delay"
@@ -81,7 +81,7 @@ In order to use Note Expression with **VST 3 plug-ins** you need at least Cubase
 Due to an issue in the Mac CoreAudio SDK, not yet fixed by Apple, you have to apply a small patch to the file AUCarbonViewBase.cpp (located in CoreAudio/AudioUnits/AUPublic/AUCarbonViewBase):\
 => Change:
 
-```
+``` c++
 HISize originalSize = { mBottomRight.h, mBottomRight.v };
 to
 HISize originalSize = { static_cast<CGFloat>(mBottomRight.h),
@@ -92,7 +92,7 @@ HISize originalSize = { static_cast<CGFloat>(mBottomRight.h),
 
 In order to make a surroundPanner plug-in selectable as panner (Post-fader) in Nuendo, this plug-in should have as subCategories: [kSpatial](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#gaa334568999d986b4e50627646e51a8b4) or [kSpatialFx](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga9439d03e5e14fb7a35976d2e37f34e31) (in order to use it as insert too). For example:
 
-```
+``` c++
 DEF_CLASS2 (INLINE_UID_FROM_FUID(Steinberg::Vst::SPannerProcessor::cid),
             PClassInfo::kManyInstances,
             kVstAudioEffectClass,

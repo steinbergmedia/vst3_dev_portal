@@ -21,7 +21,7 @@ This allows the host to start a parameter editing action which can generate othe
 
 ## Example
 
-```
+``` c++
 //------------------------------------------------------------------------
 plugEditController->beginEditFromHost (id);
 plugEditController->setParamNormalized (id, value);

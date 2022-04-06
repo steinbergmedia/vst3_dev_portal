@@ -71,7 +71,7 @@ A unit is a logical section of the plug-in.
 
 ## [Presets & Program Lists](../Technical+Documentation/Presets+Program+Lists/Index.md)
 
-How presets and program lists are handled in **VST 3**
+How presets and program lists are handled in **VST 3**.
 
 ## [Complex Plug-in Structures / Multi-timbral Instruments](../Technical+Documentation/Complex+Structures/Index.md)
 
@@ -113,11 +113,11 @@ Inform the plug-in about how long from the moment of generation/acquiring (from 
 
 ## [(3.1.0) UI Group Editing, Dirty State & Open Editor Request](../Technical+Documentation/Change+History/3.1.0/IComponentHandler2.md)
 
-Improvement of the plug-in's integration in the host (dirty state, request Open Editor, group editing)
+Improvement of the plug-in's integration in the host (dirty state, request Open Editor, group editing).
 
 ## [(3.1.0) KnobMode, openHelp & openAboutBox](../Technical+Documentation/Change+History/3.1.0/IEditController2.md)
 
-Extension to allow the host to inform the plug-in about the host knob mode
+Extension to allow the host to inform the plug-in about the host knob mode.
 
 ## [(3.5.0) Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
 
@@ -141,23 +141,23 @@ This allows the host to start a parameter editing action which can generate othe
 
 ## [(3.6.0) iOS Inter-App Audio](../Technical+Documentation/Change+History/3.6.0/IAA.md)
 
-iOS InterApp-Audio application out of your **VST 3 plug-in**
+iOS InterApp-Audio application out of your **VST 3 plug-in**.
 
 ## [(3.6.0) Preset Meta-Information](../Technical+Documentation/Change+History/3.6.0/IStreamAttributes.md)
 
-Interface to access preset meta information from stream, used, for example, in [setState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805) in order to inform the plug-in about the current context in which the preset loading occurs
+Interface to access preset meta information from stream, used, for example, in [setState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805) in order to inform the plug-in about the current context in which the preset loading occurs.
 
 ## [(3.6.5) Channel Context Info](../Technical+Documentation/Change+History/3.6.5/IInfoListener.md)
 
-Allows the host to inform the plug-in about the context in which the plug-in is instantiated, mainly channel based info (color, name, index,...).
+Allows the host to inform the plug-in about the context in which the plug-in is instantiated, mainly channel based info (color, name, index, ...).
 
 ## [(3.6.5) Unit-Bus Assignment Change](../Technical+Documentation/Change+History/3.6.5/IUnitHandler2.md)
 
-The plug-in has the possibility to inform the host with [notifyUnitByBusChange](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler2.html#ad1f48213839cc5b28a612a2baaba6584) that something has changed in the bus - unit assignment,
+The plug-in has the possibility to inform the host with [notifyUnitByBusChange](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler2.html#ad1f48213839cc5b28a612a2baaba6584) that something has changed in the bus - unit assignment.
 
 ## [(3.6.5) Prefetchable](../Technical+Documentation/Change+History/3.6.5/IPrefetchableSupport.md)
 
-Indicates if the plug-in supports prefetch (dynamically)
+Indicates if the plug-in supports prefetch (dynamically).
 
 ## [(3.6.5) Automation State](../Technical+Documentation/Change+History/3.6.5/IAutomationState.md)
 
@@ -173,7 +173,7 @@ Allows the plug-in to request the host to activate or deactivate a specific bus.
 
 ## [(3.6.10) UI Snapshots](../Technical+Documentation/Change+History/3.6.10/UI+Snapshots.md)
 
-A **VST 3** bundle can contain pre-rendered snapshot images for a **VST 3** host as a visual representation of the plug-in UI
+A **VST 3** bundle can contain pre-rendered snapshot images for a **VST 3** host as a visual representation of the plug-in UI.
 
 ## [(3.6.11) NoteExpression Physical UI Mapping](../Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping)
 
@@ -189,7 +189,7 @@ If this interface is implemented by the edit controller, the host will call this
 
 ## [(3.6.12) Host Query Interface Support](../Technical+Documentation/Change+History/3.6.12/IPlugInterfaceSupport.md)
 
-Allows a plug-in to ask the host if a given plug-in interface is supported/used by the host
+Allows a plug-in to ask the host if a given plug-in interface is supported/used by the host.
 
 ## [(3.6.12) MPE support for Wrappers](../Technical+Documentation/Change+History/3.6.12/IVst3WrapperMPESupport.md)
 
@@ -205,4 +205,4 @@ Allows the plug-in to request the host to create a progress for some specific ta
 
 ## [(3.7.0) Process Context Requirements](../Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.md)
 
-To get accurate process context information ([Vst::ProcessContext](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html)), it is now required to implement this interface
+To get accurate process context information ([Vst::ProcessContext](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html)), it is now required to implement this interface.

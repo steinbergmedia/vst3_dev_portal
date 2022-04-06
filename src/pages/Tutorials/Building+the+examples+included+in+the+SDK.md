@@ -8,7 +8,7 @@
 
 ---
 
-This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.These include plug-ins like simple DSP effects (Gain, compressor, delay,...), synths instruments and some plug-ins showing how to handle some specific **VST 3** features (Note Expression, Program Change, channel info context,...).
+This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**. These include plug-ins like simple DSP effects (Gain, compressor, delay, ...), synths instruments and some plug-ins showing how to handle some specific **VST 3** features (Note Expression, Program Change, channel info context, ...).
 
 They can be loaded into **VST 3** hosts like Cubase, WaveLab, ...
 
@@ -27,14 +27,15 @@ Download cmake from: <https://cmake.org/download/> or use a package manager for 
 ### Building the examples on Windows
 
 - Create a folder for the build and move to this folder (using cd):
-```
+
+``` c++
 mkdir build
 cd build
 ```
 
 - Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
 
-```
+``` c++
 cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk
 or without symbolic links
 cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=0
@@ -48,14 +49,14 @@ cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >
->```
+>``` c++
 >-DSMTG_CREATE_PLUGIN_LINK=0
 >```
 >
 >You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for VST 3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
 >
->```
->-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
+>``` c++
+>-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
 >```
 
 >ⓘ **Note**\
@@ -63,7 +64,7 @@ cmake.exe -G "Visual Studio 16 2019" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=
 
 - Build the plug-in (you can use Visual Studio too):
 
-```
+``` c++
 msbuild.exe vstsdk.sln
 (or alternatively for example for release)
 
@@ -74,7 +75,7 @@ cmake --build . --config Release
 
 - Create a folder for the build and move to this folder (using cd):
 
-```
+``` c++
 mkdir build
 cd build
 ```
@@ -82,19 +83,19 @@ cd build
 - Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:\
 For XCode:
 
-```
+``` c++
 cmake -GXcode ../vst3sdk
 ```
 
 Without XCode (here debug variant):
 
-```
+``` c++
 cmake -DCMAKE_BUILD_TYPE=Debug ../
 ```
 
 - Build the plug-in (you can use XCode too):
 
-```
+``` c++
 xcodebuild
 (or alternatively for example for release)
 
@@ -106,20 +107,20 @@ cmake --build . --config Release
 - Install the required packages: [Required packages](../Getting+Started/How+to+setup+my+system.html#package-requirements)
 - Create a folder for the build and move to this folder (using cd):
 
-```
+``` c++
 mkdir build
 cd build
 ```
 
 - Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
 
-```
+``` c++
 cmake ../vst3sdk
 ```
 
 - Build the plug-in:
 
-```
+``` c++
 make
 (or alternatively for example for release)
 

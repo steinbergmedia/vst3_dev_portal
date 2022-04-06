@@ -23,13 +23,13 @@ The wrapped AudioUnit does support MPE when the **VST 3** plug-in has Note Expre
 ## How does it work?
 
 - Structure:
-    - App (container app which initializes the AU through small Playback Engine)
-    - Extension (extension which is loaded by hosts, also initializes the AU)
+  - App (container app which initializes the AU through small Playback Engine)
+  - Extension (extension which is loaded by hosts, also initializes the AU)
 - How to use the VST 3 → AU v3 Wrapper with the sample code:
-    - make sure you have correct code signing set up
-    - build & run targets
+  - make sure you have correct code signing set up
+  - build & run targets
 - How to use the VST 3 → AUv3 Wrapper with your own VST plug-in:
-    - duplicate either the folder again_auv3 or note_expression_synth_auv3 in public.sdk/samples/vst, rename it and edit CMakelist.txt to add your sources, resources and modified target names etc.
-    - open audiounitconfig.h and change the definitions in this file.
-    - also change the other files in that folder to your requirements. Code signing is required, but you can build and test with a developer only identity.
-    - build & run targets
+  - duplicate either the folder again_auv3 or note_expression_synth_auv3 in public.sdk/samples/vst, rename it and edit CMakelist.txt to add your sources, resources and modified target names etc.
+  - open audiounitconfig.h and change the definitions in this file.
+  - also change the other files in that folder to your requirements. Code signing is required, but you can build and test with a developer only identity.
+  - build & run targets

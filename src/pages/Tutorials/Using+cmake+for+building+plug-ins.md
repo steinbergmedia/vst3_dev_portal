@@ -22,8 +22,7 @@ The SDK provides a set of cmake files allowing you to compile the included sampl
 - Download cmake from: <https://cmake.org> or use a package manager for your OS (See [How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)).
 - You can use the command line or the cmake editor ([cmake-gui](https://cmake.org/download/)).
 
-
-## Command line for 
+## Command line for Windows
 
 Example for building "**Microsoft Studio 16 2019**" solution:
 
@@ -33,10 +32,10 @@ mkdir build
 cd build
 cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk"
 //  or without symbolic links
-cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk"-DSMTG_CREATE_PLUGIN_LINK=0
+cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk" -DSMTG_CREATE_PLUGIN_LINK=0
 
-//  or with symbolic links but using the user location (doesnot request admin right)
-cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk"-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
+//  or with symbolic links but using the user location (does not request admin right)
+cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
 
 // note: you can find the string definition for differentVisual Studio Generators in the cmake online documentation
 ```
@@ -78,14 +77,14 @@ Example of cmakegui application on Windows
 
 - Compile with cmake command line
 
-```
+``` c++
 cd build
 cmake --build
 ```
 
 - Choose a specific compiler with cmake (command line on Linux)
 
-```
+``` c++
 cmake -DCMAKE_C_COMPILER=/usr/bin/clang-DCMAKE_CXX_COMPILER=/usr/bin/clang++
 
 or
@@ -126,13 +125,13 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >
->```
+>``` c++
 >-DSMTG_CREATE_PLUGIN_LINK=0
 >```
 >
 >You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for VST 3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
 >
->```
+>``` c++
 >-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
 >```
 

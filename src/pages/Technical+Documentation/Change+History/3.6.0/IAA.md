@@ -49,6 +49,7 @@ If you use [**VSTGUI4**](../What+is+the+VST+3+SDK/VSTGUI.md) with the VST3Editor
 - *public.sdk/source/vst/auwrapper/NSDataIBStream.mm* (if not already done previously)
 
 ### If using VSTGUI
+
 - add *vstgui_ios.mm*
 - add *vstgui_uidescription_ios.mm*
 
@@ -56,11 +57,12 @@ If you use [**VSTGUI4**](../What+is+the+VST+3+SDK/VSTGUI.md) with the VST3Editor
 
 **Xcode** created some files for you when you created the project. One of it is the App Delegate. You need to change the base class from `NSResponder<UIApplicationDelegate>` to `VSTInterAppAudioAppDelegateBase` (you need to import its header file which is here:\
 *public.sdk/source/vst/interappaudio/VSTInterAppAudioAppDelegateBase.h)* and then remove all methods from it. If you want to add some custom behavior to your app, you should do it in your App Delegate class implementation. For example, if you want to only allow landscape mode, you have to add this method:
-```
-// -----------------------------------------------------------------    ------
+
+``` c++
+//-----------------------------------------------------------------
 - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
-return UIInterfaceOrientationMaskLandscapeLeft|UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskLandscapeLeft|UIInterfaceOrientationMaskLandscapeRight;
 }
 ```
 
@@ -71,14 +73,15 @@ Make sure to call the super method if you override one of themethods implemented
 ### Creating a different UI when running on iOS
 
 To create a different view for iOS, you can check the host context for the **IInterAppAudioWrapper** interface:
-```
-// -----------------------------------------------------------------    -----------
-IPlugView* PLUGIN_API MyEditController::createView(FIDString   _name)
+
+``` c++
+//-----------------------------------------------------------------
+IPlugView* PLUGIN_API MyEditController::createView (FIDString _name)
 {
     ConstString name (_name);
     if (name == ViewType::kEditor)
     {
-        FUnknownPtr<IInterAppAudioHost> interAudioApp   (getHostContext ());
+        FUnknownPtr<IInterAppAudioHost> interAudioApp (getHostContext ());
         if (interAudioApp)
         {
             // create and return the view for iOS
@@ -102,7 +105,6 @@ If you want to create a native UIView as your plug-in editor, you have to create
 
 ### Host UI Integration
 
-The example project in *"public.sdk/samples/vst/InterAppAudio"* uses a custom solution to show the UI for controlling and switching to the host application. You should take this as an example if you want to add it this way. You can also use the UI Apple provides with the its example source for Inter-App Audio.
+The example project in *"public.sdk/samples/vst/InterAppAudio"* uses a custom solution to show the UI for controlling and switching to the host application. You should take this as an example if you want to add it this way. You can also use the UI Apple provides with its example source for Inter-App Audio.
 
 But you can also implement the host UI integration into your plug-in view. Your edit controller will get an interface to **IInterAppAudioHost** via its initialize method which you can use to get the host icon and send commands or switch to the host. If you use this method to show the host controls you should implement the **IInterAppAudioConnectionNotification** interface in your edit controller to conditionally show or hide the controls depending on the connection state.
-

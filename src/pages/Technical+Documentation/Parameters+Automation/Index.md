@@ -127,7 +127,7 @@ This kind of controls usually control continuous parameters and they are usually
 
 Trouble starts with the **mouse wheel**: There simply is nothing like a defined start or end when the wheel is operated - each wheel event arrives 'out of the blue'. The only way to enable proper automation recording in this case is the usage of a timer.
 
-- A plug-in implementation should call beginEdit when the first wheel event is handled and start a timer (followed by the first call to performEdit). Further wheel events that arrive inside of the timeout interval are reported with performEdit and the timer is restarted. When the timeout period has passed without further events, endEdit should be called and the timer can be removed.</p>
+- A plug-in implementation should call beginEdit when the first wheel event is handled and start a timer (followed by the first call to performEdit). Further wheel events that arrive inside of the timeout interval are reported with performEdit and the timer is restarted. When the timeout period has passed without further events, endEdit should be called and the timer can be removed.
 - But since it is the host's task to record automation data, one could argue that it should be the host's task to take care of the timer in this case. This is the reason for the following exception to the rule:
   - Mouse wheel events can be reported without beginEdit and endEdit to the host. The host must be prepared to receive a performEdit without a previous call of beginEdit for a parameter and handle the timeout itself.
 
@@ -171,7 +171,7 @@ See also [Steinberg::Vst::IParameterChanges](https://steinbergmedia.github.io/vs
 
 If something happens, user interaction for example, which change the parameter styles ([ParameterFlags](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645)) or title or default value of one or multiple parameters, the plug-in must call
 
-```
+``` c++
 IComponentHandler::restartComponent (kParamTitlesChanged);
 ```
 
@@ -181,7 +181,7 @@ to inform the host about this change (in the **UI Thread**). The host rescans th
 
 As result of a program change for example, the plug-in must call
 
-```
+``` c++
 IComponentHandler::restartComponent (kParamValuesChanged);
 ```
 

@@ -41,6 +41,7 @@ Dark Mode version
 ### Audio Input
 
 In this section you can select the audio source of your plug-in for the Main Input Audio Bus and for the Aux Input Audio Bus ([Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain): if available) between:
+
 - A sine wave
 - Noise
 - Silence
@@ -52,6 +53,7 @@ A Volume slider allows you to control the level of the source.
 ### Event Input
 
 This section simulates note events sent to the plug-in.
+
 - A pattern could be defined and initialized with randomized, chromatic or manual events. (for Chromatic choose the start note in the pattern and select Chromatic in the pop-up menu).
 - Active check box: enable/disable the playback of this pattern.
 - You can choose different loop stepping for this pattern [1, 1/2, ...1/32]
@@ -59,10 +61,12 @@ This section simulates note events sent to the plug-in.
 ### VST Rack
 
 This section allows you to load serialized multiple plug-ins. Each plug-in will be loaded in a slot.
+
 - To load a plug-in (Audio or Instrument) click on the associated pop-up menu and select one plug-in.
 - To unload a plug-in, click on its associated X button on its slot.
 
 For each loaded plug-in in a slot you can:
+
 - Enable/disable the plug-in with the **On** button.
 - Bypass/process the plug-in with the **Byp** button (if available as parameter).
 - Enable/disable the [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) bus with the **Aux** button (available only if the plug-in has input [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain)).
@@ -92,7 +96,7 @@ Right click on the opened plug-in opens a context menu which allows to trigger s
 ![what_if_20](../../resources/what_is_20.jpg)
 
 - **Switch to Generic Editor**: open the generic editor instead of the one provided by the plug-in.
-- **Export Presets Parameters as XML**:  load automatically all available VST 3 Presets for this plug-in and create a readable XML file for each preset including the parameter states.
+- **Export Presets Parameters as XML**: load automatically all available VST 3 Presets for this plug-in and create a readable XML file for each preset including the parameter states.
 
 ### Transport
 
@@ -108,10 +112,12 @@ In this section you can:
 In this window you can select a specific test branch for a specific plug-in. You can navigate in the test tree (left part), then click on the button **Run Selected** to process only the selected tests.
 
 There are 2 kinds of tests concerning the way the plug-in is instantiated:
+
 - Global Instance: only one instance of the plug-in will be instantiated for all tests.
 - Local Instances: for each test a new instance of the plug-in will be instantiated.
 
 We define currently 2 sets of test:
+
 - VST 3 Conformity
 - Special Features
 

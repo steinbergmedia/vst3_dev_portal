@@ -26,4 +26,5 @@ You can choose between the *"Proprietary Steinberg VST 3"* or the *"Open-source 
 All files describing the VST 3 interface, except VST 2 files, located in the folder *"pluginterfaces"* of the SDK, fall under the dual-license described previously.
 
 # [Developer use cases (FAQs)](../VST+3+Licensing/Developer+use+cases.md)
+
 The following use cases support you to choose the right license.

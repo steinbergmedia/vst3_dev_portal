@@ -51,7 +51,7 @@ Building the SDK examples requires installation of several packages:
 
 Required:
 
-```
+``` c++
 sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-devlibxcb-util-dev libxcb-cursor-dev libxcb-xkb-devlibxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-devlibcairo2-dev libgtkmm-3.0-dev libsqlite3-devlibxcb-keysyms1-dev
 ```
 
@@ -60,13 +60,13 @@ sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-devlibxcb-util-dev libxcb
 
 Optional:
 
-```
+``` c++
 sudo apt-get install subversion git ninja-build
 ```
 
 A recommended IDE (optional): **QTCreator**
 
-```
+``` c++
 sudo apt-get install qtcreator
 ```
 
@@ -79,6 +79,7 @@ sudo apt-get install qtcreator
 >- [Jack Audio](http://www.jackaudio.org) is required for [audiohost](../What+is+the+VST+3+SDK/Index.md#audiohost) example!
 
 ## Get cmake
+
 In order to control the compilation process and create an IDE project, **VST 3 SDK** uses the open-source and cross-platform tool [cmake](https://cmake.org/).
 
 You can download cmake here: <https://cmake.org/download/> or use a package manager for your OS (Linux).
@@ -95,13 +96,13 @@ You can use it as a command line tool or use the cmake executable with GUI. cmak
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >
->```
+>``` c++
 >-DSMTG_CREATE_PLUGIN_LINK=0
 >```
 >
 >You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for VST 3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
 >
->```
+>``` c++
 >-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
 >```
 

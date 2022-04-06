@@ -21,7 +21,7 @@ Otherwise the inline UI editor won't work properly.
 
 Next you have to add vstgui to your project. For *cmake* users, you can just add the vstgui_support library to your target:
 
-```
+``` c++
 target_link_libraries(${target} PRIVATE vstgui_support)
 ```
 
@@ -37,13 +37,13 @@ After that you have to alter your project settings to add a preprocessor definit
 
 With *cmake*, this would look like this:
 
-```
+``` c++
 target_compile_definitions(${target} PUBLIC$<$<CONFIG:Debug>:VSTGUI_LIVE_EDITING=1>)
 ```
 
 Finally, you have to modify your edit controller class to overwrite the **createView()** method:
 
-```
+``` c++
 #include "vstgui/plugin-bindings/vst3editor.h"
 
 IPlugView* PLUGIN_API MyEditController::createView (FIDStringname)
@@ -66,7 +66,7 @@ Now you can build your plug-in and start your preferred **VST 3** host to start 
 
 If you now open your plug-in editor, you will see a blank editor. To enter the UI editor, right-click on it and choose "**Open UIDescription Editor**".
 
-After your first edits, you have to add the *uidesc* file you have saved to your project (already done if you have used [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)) . You also have to make sure to always build your project after changes to the *uidesc* file.
+After your first edits, you have to add the *uidesc* file you have saved to your project (already done if you have used [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)). You also have to make sure to always build your project after changes to the *uidesc* file.
 
 ---
 

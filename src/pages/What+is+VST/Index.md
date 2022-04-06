@@ -33,6 +33,6 @@ From the host application's point of view, a **VST** plug-in is a black box with
 
 The source code of a **VST** plug-in is platform independent, but the delivery system depends on the platform architecture:
 
-* On **Windows**, a **VST** plug-in is a multi-threaded DLL (Dynamic Link Library), recently packaged into a folder structure.
-* On **Mac OS X**, a **VST** plug-in is a Mach-O Bundle
-* On **Linux**, a **VST** plug-in is a package
+- On **Windows**, a **VST** plug-in is a multi-threaded DLL (Dynamic Link Library), recently packaged into a folder structure.
+- On **Mac OS X**, a **VST** plug-in is a Mach-O Bundle
+- On **Linux**, a **VST** plug-in is a package

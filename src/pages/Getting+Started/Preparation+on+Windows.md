@@ -6,13 +6,13 @@ Generated VST 3 Microsoft Visual Studio Projects using the [cmake](https://cmake
 
 If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 
-```
+``` c++
 -DSMTG_CREATE_PLUGIN_LINK=0
 ```
 
 You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.html) for VST 3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
 
-```
+``` c++
 -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
 ```
 

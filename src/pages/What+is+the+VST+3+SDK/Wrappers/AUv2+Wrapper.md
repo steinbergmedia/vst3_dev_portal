@@ -14,7 +14,6 @@
 
 Helper Class wrapping a **VST 3 plug-in** to an Audio Unit v2 plug-in
 
-
 ## Introduction
 
 The VST 3 SDK comes with an AudioUnit wrapper, which can wrap one VST 3 audio processor and edit controller as an AudioUnit effect/instrument.
@@ -28,12 +27,12 @@ The wrapper is a small dynamic library which loads the **VST 3 plug-in**. As Aud
 - create a copy of the again AU wrapper example project directory (public.sdk/source/vst/auwrapper/again/)
 - rename the copy to your needs
 - edit the target settings of the project and change
-    - Product Name
-    - Library search path so that it points to the directory where libauwrapper.a exists
-    - architecture setting so that it only includes architectures that the **VST 3 plug-in** supports
+  - Product Name
+  - Library search path so that it points to the directory where libauwrapper.a exists
+  - architecture setting so that it only includes architectures that the **VST 3 plug-in** supports
 - search in the project for AUWRAPPER_CHANGE and change the settings to your needs, especially in:
-    - edit audiounitconfig.h, see comments there
-    - edit Info.plist, see comments there
+  - edit audiounitconfig.h, see comments there
+  - edit Info.plist, see comments there
 - edit the "Make Links Script" for easier debugging/development
 - build your project
 - done ... that is all!

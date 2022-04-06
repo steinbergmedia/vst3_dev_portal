@@ -74,7 +74,6 @@ When you download the **VST 3 SDK**, the last official release version of **[VST
 
 Here you can find some links to external resource about **VST 3**, DSP and Plug-ins development:
 
-
 | Category | Links |
 | :- | :- |
 | **YouTube** | • [ADC 2020](https://www.youtube.com/watch?v=zXnHaoN2Cig): Support of MIDI2 and MIDI-CI in **VST 3** instruments, Arne Scheffler and Janne Roeper [![getting_started_vid_1](https://i.ytimg.com/vi/zXnHaoN2Cig/maxresdefault.jpg)](https://www.youtube.com/watch?v=zXnHaoN2Cig) • [ADC 2017](https://www.youtube.com/watch?v=0QBWXC8KNz0): VST 3 history, advantages and best practice, Yvan Grabit [![getting_started_vid_2](https://i.ytimg.com/vi/0QBWXC8KNz0/maxresdefault.jpg)](https://www.youtube.com/watch?v=0QBWXC8KNz0) • [ADC 2016](https://www.youtube.com/watch?v=SJXGSJ6Zoro): The Golden Rules of Audio Programming, Pete Goodliffe<br> • [How to setup the VST3 SDK's Sample Plugin Projects](https://www.youtube.com/watch?v=004zcWwgi1A) |

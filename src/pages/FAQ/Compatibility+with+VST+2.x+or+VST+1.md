@@ -10,7 +10,7 @@
 
 You have to provide a special UID for your [kVstAudioEffectClass](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivstaudioprocessor_8h.html#ae55c95a44e931e1cd78998c94bc65ee1) and [kVstComponentControllerClass](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivsteditcontroller_8h.html#a49d6f6f53c7630ea334474e9998c0a99) components, based on its **VST 2** UniqueID (4 characters) and its plug-in name like this:
 
-```
+``` c++
 static void convertVST2UID_To_FUID (FUID& newOne, int32 myVST2UID_4Chars, const char* pluginName, bool forControllerUID = false)
 {
     char uidString[33];
@@ -46,7 +46,7 @@ static void convertVST2UID_To_FUID (FUID& newOne, int32 myVST2UID_4Chars, const 
 
 Note that if you are developing a new plug-in and if you are using the **VST 2** wrapper included in the SDK you do not need to use convertVST2UID_To_FUID, a **VST 2** specific vendor call allows the host ([Steinberg](https://www.steinberg.net/) hosts since **Cubase** 4.0) to get from a **VST 2** version a **VST 3** UID.
 
-```
+``` c++
 // extracted code from vst2wrapper.cpp
 //-----------------------------------------------------------------------------
 VstIntPtr Vst2Wrapper::vendorSpecific (VstInt32 lArg, VstIntPtr lArg2, void* ptrArg, float floatArg)
@@ -76,7 +76,7 @@ The host will call [IComponent::setState()](https://steinbergmedia.github.io/vst
 
 Here the code to add in the **VST 3** version when a **VST 3 plug-in** replaces a **VST 2** plug-in in a Steinberg sequencer project:
 
-```
+``` c++
 #include "public.sdk/source/vst/utility/vst2persistence.h"
  
 //------------------------------------------------------------------------

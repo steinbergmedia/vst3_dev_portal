@@ -99,7 +99,7 @@ In each processing block, the section of the curve for each parameter is transmi
 - If the curve has a slope of 0 over a period of multiple blocks, only one point is transmitted for the block where the constant curve section starts. The queue for the following blocks will be empty as long as the curve slope is 0.
 - If the curve has a constant slope other than 0 over the period of several blocks, only the value for the last sample of the block is transmitted. In this case, the last valid point is at block position -1. The processor can calculate the value for each sample in the block by using a linear interpolation:
 
-    ```
+    ``` c++
     double x1 = -1; // position of last point related to current buffer
     double y1 = currentParameterValue; // last transmitted value
     

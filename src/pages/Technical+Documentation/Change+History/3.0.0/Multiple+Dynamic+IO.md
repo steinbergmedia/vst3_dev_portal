@@ -30,22 +30,25 @@ A **bus** can be understood as a "collection of data channels" belonging togethe
 
 A plug-in could have different reason to define multiple event input busses, for examples:
 
-- in case of complex multitimbral instrument supporting more than 16 loaded sub-instruments at the same time by adding a kind of structure in its inputs from host perspective (simulating a kind of a number of "MIDI Port" having its sub-MIDI channels)
+- in case of complex multitimbral instrument supporting more than 16 loaded sub-instruments at the same time by adding a kind of structure in its inputs from host perspective (simulating a kind of number of "MIDI Port" having its sub-MIDI channels)
 - in case to different inputs meaning, which are distinctly visible and selectable in the host:
-    - one input for playing event
-    - one input for modulation event
+  - one input for playing event
+  - one input for modulation event
 
 A plug-in could have different reason to define multiple event output busses, for example:
-    - in case of a main event output for played event from the UI and one event output for internally generated events from an arpeggiator
+
+ - in case of a main event output for played event from the UI and one event output for internally generated events from an arpeggiator.
+
 A plug-in could decide to export more than one audio input by adding a second audio input ([Side-chains, see below](../3.0.0/Multiple+Dynamic+IO.md#what-is-a-side-chain)) or more.
 
 A typical use case for multiple audio outputs is instrument plug-ins, for examples:
-    - with one main audio output and some auxiliary audio outputs for FX Returns or FX Sends.
-    - with one main audio output for each internally loaded instrument.
 
+- with one main audio output and some auxiliary audio outputs for FX Returns or FX Sends.
+- with one main audio output for each internally loaded instrument.
 
-**Examlpe**
-```
+**Example**
+
+``` c++
 //------------------------------------------------------------------------
 tresult PLUGIN_API MyPlugin::initialize (FUnknown* context)
 {
@@ -79,7 +82,7 @@ tresult PLUGIN_API MyPlugin::initialize (FUnknown* context)
 
 In order to get the number and information about busses exported by the plug-in, the host uses this interface [IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html) with these functions:
 
-```
+``` c++
 /** Called after the plug-in is initialized. */
 virtual int32 PLUGIN_API getBusCount (MediaType type, BusDirection dir) = 0;
  
@@ -93,29 +96,28 @@ virtual tresult PLUGIN_API getBusInfo (MediaType type, BusDirection dir, int32 i
 - number of channel,
 - ...
 - and the some flags indicating:
-    - **kDefaultActive**: The bus should be activated by the host per default on instantiation (activateBus call is requested). By default a bus is inactive. 
-    - **kIsControlVoltage**: The bus does not contain ordinary audio data, but data used for control changes at sample rate.
-        - The data is in the same format as the audio data [-1..1].
-        - A host has to prevent unintended routing to speakers to prevent damage.
-        - Only valid for audio media type busses.
+  - **kDefaultActive**: The bus should be activated by the host per default on instantiation (activateBus call is requested). By default a bus is inactive. 
+  - **kIsControlVoltage**: The bus does not contain ordinary audio data, but data used for control changes at sample rate.
+    - The data is in the same format as the audio data [-1..1].
+    - A host has to prevent unintended routing to speakers to prevent damage.
+    - Only valid for audio media type busses.
 
 ## Activation of busses
 
 Dynamic usage of busses is handled in the host by activating and deactivating busses. All busses are initially inactive.
 
-The plug-in has to define which of them have to be activated by default after instantiation of the plug-in, this is only a wish, the host is allow to not follow it, and only activate the first bus for example.
+The plug-in has to define which of them have to be activated by default after instantiation of the plug-in, this is only a wish, the host is allowed to not follow it, and only activate the first bus for example.
 
-```
+``` c++
 // here default activation is wanted (but not guaranteed)
 addAudioInput (STR16 ("SideChain"), SpeakerArr::kStereo, kAux, BusInfo::kDefaultActive);
 ```
 
 In order to be use each Input bus and Output bus have to be activated, this is done by the host by using this interface implemented by the plug-in ([IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html)):
 
-```
+``` c++
 //------------------------------------------------------------------------
-tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int32 index,
-                                           TBool state)
+tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int32 index, TBool state)
 {
     // ...
 ```
@@ -156,7 +158,7 @@ Here an example of Side-Chaining for a Instrument in Cubase
 In AudioEffect::initialize (FUnknown* context) you must add the required bus- and speaker configuration of your plug-in.
 For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look like this:
 
-```
+``` c++
 addAudioInput (USTRING ("Stereo In"), SpeakerArr::kStereo);
 addAudioOutput (USTRING ("Stereo Out"), SpeakerArr::kStereo);
  
@@ -170,7 +172,7 @@ Each audio bus has its channel configuration which is a Speaker Arrangement:
 
 **Stereo (L+R)**
 
-```
+``` c++
 const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR;
 ```
 
@@ -179,8 +181,10 @@ const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR;
 Here's an overview of the main defined speaker locations (Check enum Speakers and namespace SpeakerArr). A [SpeakerArrangement](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__vst3typedef.html#ga54884a26d0b6dfa18eb919ea004775ac) is a bitset combination of speakers.
 
 For example:
-const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR;
-=> representing in hexadecimal 0x03 and in binary 0011.
+
+``` c++
+const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR; // => representing in hexadecimal 0x03 and in binary 0011.
+```
 
 ![tech_doc_28](../../../../resources/tech_doc_28.jpg)
 
@@ -190,7 +194,7 @@ What type of speaker arrangement should I select when adding busses?
 
 Take the configuration your plug-in is most likely to be used with. For a 5.1-surround setup that would be the following:
 
-```
+``` c++
 addAudioInput (USTRING ("Surround In"), SpeakerArr::k51);
 addAudioOutput (USTRING ("Surround Out"), SpeakerArr::k51);
 ```
@@ -207,8 +211,8 @@ But when the host calls [Vst::IAudioProcessor::setBusArrangements](https://stein
 After instantiation of the plug-in, the host calls [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) with a default configuration (depending on the current channel configuration), if the plug-in accepts it (by returning **kResultOK**), it will continue with this configuration.
 If not (by returning **kResultFalse**), the host asks the plug-in for its wanted configuration by calling [Vst::IAudioProcessor::getBusArrangement](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94) (for Input and Output) and then recall [Vst::IAudioProcessor::setBusArrangements](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42) with the final wanted configuration. Check [Bus Arrangement Setting Sequences](../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.md) workflow.
 
-```
-Example of a Plug-in supporting only symmetric Input-Output Arrangements:
+``` c++
+// Example of a Plug-in supporting only symmetric Input-Output Arrangements:
 
 host -> plug-in : setBusArrangements (monoIN, stereoOUT)
 plug-in return : kResultFalse
@@ -218,8 +222,8 @@ host -> plug-in : setBusArrangements (stereoIN, stereoOUT)
 plug-in return : kResultOk
 ```
 
-```
-Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono->stereo):
+``` c++
+// Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono->stereo):
 
 host -> plug-in : setBusArrangements (stereoIN, stereoOUT)
 plug-in return : kResultFalse
@@ -229,8 +233,8 @@ host -> plug-in : setBusArrangements (MonoIN, stereoOUT)
 plug-in return : kResultOk
 ```
 
-```
-Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono-> stereo to up 5.1):
+``` c++
+// Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono-> stereo to up 5.1):
 
 host -> plug-in : setBusArrangements (5.1IN, 5.1OUT)
 plug-in return : kResultFalse
@@ -240,8 +244,8 @@ host -> plug-in : setBusArrangements (MonoIN, 5.1OUT)
 plug-in return : kResultOk
 ```
 
-```
-Host -> Plug-in : setBusArrangements (QuadroIN, QuadroOUT)
+``` c++
+// Host -> Plug-in : setBusArrangements (QuadroIN, QuadroOUT)
 
 plug-in return : kResultFalse
 host -> plug-in : getBusArrangement (IN) => return Mono;
@@ -250,8 +254,8 @@ host -> plug-in : setBusArrangements (MonoIN, QuadroOUT)
 plug-in return : kResultOk
 ```
 
-```
-Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input always mono:
+``` c++
+// Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input always mono:
 
 host -> plug-in : getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
 host -> plug-in : getBusArrangements (OUT) => Output: mono
@@ -269,8 +273,8 @@ host -> plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:mono,
 plug-in return : kResultOk
 ```
 
-```
-Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input following the Main Input Arrangement:
+``` c++
+// Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input following the Main Input Arrangement:
 
 host -> plug-in : getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
 host -> plug-in : getBusArrangements (OUT) => Output: mono
@@ -286,7 +290,7 @@ plug-in return : kResultOk
 
 When loading a preset or with an user interaction, the plug-in wants to change its IO configuration. In this case the plug-in should call from the editController its component handler with flag kIoChanged:
 
-```
+``` c++
 componentHandler->restartComponent (kIoChanged);
 ```
 
@@ -300,7 +304,7 @@ There are two ways to instantiate a plug-in like this.
 
 In AudioEffect::initialize (FUnknown* context) you add one mono and one stereo bus.
 
-```
+``` c++
 //---------------------------------------------------------------
 tresult PLUGIN_API AGain::initialize (FUnknown* context)
 {
@@ -323,7 +327,7 @@ tresult PLUGIN_API AGain::initialize (FUnknown* context)
 
  In [AudioEffect](https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1AudioEffect.html)::initialize (FUnknown* context) you add one stereo input and one stereo output bus.
 
-```
+``` c++
 //---------------------------------------------------------------
 tresult PLUGIN_API AGain::initialize (FUnknown* context)
 {
@@ -340,4 +344,4 @@ tresult PLUGIN_API AGain::initialize (FUnknown* context)
     //...
 ```
 
-For processing, the algorithm of your plug-in takes the left channel only, or creates a new mono input  signal, by adding the samples of the left and right channels.
+For processing, the algorithm of your plug-in takes the left channel only, or creates a new mono input signal, by adding the samples of the left and right channels.

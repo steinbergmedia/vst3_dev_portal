@@ -21,7 +21,7 @@ Interface to access preset meta information from stream, used, for example, in [
 
 ## Example
 
-```
+``` c++
 #include "pluginterfaces/base/ustring.h"
 #include "pluginterfaces/vst/vstpresetkeys.h"
 // ...

@@ -17,6 +17,7 @@
 You can choose between the *"Proprietary Steinberg VST 3"* or the *"Open-source [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)"* license (**dual-license**) depending on how you want to distribute your VST 3 plug-in/host. **The License Agreement could be found here and in the VST SDK package**.
 
 ## "*Proprietary Steinberg VST 3*" license
+
 The "***Proprietary Steinberg VST 3***" license allows you to distribute your VST 3 plug-in/host in a binary form. However, please note the following requirements:
 - You need written permission from **Steinberg Media Technologies GmbH** in order to distribute your VST 3 plug-in/host (Steinberg will send you the countersigned License agreement included in the SDK that you signed and sent to us).
 - You need to mention **Steinberg Media Technologies GmbH** in the about box and/or documentation of your VST 3 plug-in/host and follow the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md).
@@ -35,11 +36,12 @@ The open-source license lets you share the source code of your VST 3 plug-in/hos
 For more information about [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) check [this link](https://www.gnu.org/licenses/gpl-3.0.en.html). It also permits you to change and modify the VST 3 SDK's sources as long as you share your changes and make them available for everyone (e.g. on an Internet hosting service like GitHub). Note that you have to follow the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md).
 
 ## Steinberg Dual-License file
+
 ```
-/----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // LICENSE
-// (c) 2021, Steinberg Media Technologies GmbH, All RightsReserved
-/----------------------------------------------------------------------------
+// (c) 2022, Steinberg Media Technologies GmbH, All RightsReserved
+//----------------------------------------------------------------------------
 This license applies only to files referencing this license,
 for other files of the Software Development Kit therespective embedded license text
 is applicable. The license can be found at: <http://www.steinberg.net/sdklicenses_vst3>
@@ -58,7 +60,7 @@ unless permitted by law.
 Neither the name of the Steinberg Media Technologies GmbH northe names of its
 contributors may be used to endorse or promote productsderived from this
 software without specific prior written permission.
-Before publishing a software under the proprietary license,you need to obtain a copy
+Before publishing a software under the proprietary license, you need to obtain a copy
 of the License Agreement signed by Steinberg MediaTechnologies GmbH.
 The Steinberg VST SDK License Agreement can be found at:
 <http://www.steinberg.net/en/company/developers.html>

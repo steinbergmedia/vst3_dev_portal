@@ -132,6 +132,7 @@ iOS InterApp-Audio application out of your **VST 3 plug-in**
 >Please sign this **License Agreement** if you want to develop, release or host **VST 3** plug-Ins.
 
 ## System requirements
+
 | Operating System | Architecture | Compiler | Notes |
 | ---------------- | ------------ | -------- | ----- |
 | Windows 10 | x86, x86_64 | MSVC 2019, MSVC 2017 | |

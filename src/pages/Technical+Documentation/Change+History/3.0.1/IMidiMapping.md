@@ -32,7 +32,7 @@ So any functionality that is to be controlled by **MIDI** controllers must be ex
 
 **In myeditcontroller.h**
 
-```
+``` c++
 //--------------------------------------
 class MyEditController: public EditControllerEx1, public IMidiMapping
 {
@@ -50,7 +50,7 @@ class MyEditController: public EditControllerEx1, public IMidiMapping
 
 **In myeditcontroller.cpp**
 
-```
+``` c++
 //--------------------------------------
 tresult PLUGIN_API MyEditController::getMidiControllerAssignment (int32 busIndex, int16 midiChannel, CtrlNumber midiControllerNumber, ParamID& tag)
 {

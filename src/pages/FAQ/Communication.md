@@ -24,7 +24,7 @@ See [Q: How should I communicate between the 'Processing' and the 'User Interfac
 
 Automation data is sent to the audio processing method as part of the data passed as a parameter to the [IAudioProcessor::process](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13) (processData) method.
 
-```
+``` c++
 IAudioProcessor::process (processData)
 {
     IParameterChanges* paramChanges = processData.inputParameterChanges;
@@ -40,7 +40,7 @@ See also [Parameters and Automation](../Technical+Documentation/Parameters+Autom
 
 Due to preset loading or user interaction the plug-in may change its parameters names (title) (but not the number of them or their IDs). To inform the host about this change, the plug-in should call from the editController its component handler function [restartComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6) with flag **kParamTitlesChanged**:
 
-```
+``` c++
 componentHandler->restartComponent (kParamTitlesChanged);
 ```
 

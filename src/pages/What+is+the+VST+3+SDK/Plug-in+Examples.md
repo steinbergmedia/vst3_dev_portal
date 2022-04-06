@@ -108,47 +108,48 @@ Classes:
 ## mda Plug-ins
 
 - Effects (stereo to stereo Plug-ins):
-    - Ambience : Reverb
-    - Bandisto : Multi-band Distortion
-    - BeatBox : Drum Replacer
-    - Combo : Amp and Speaker Simulator
-    - DeEsser : High frequency Dynamics Processor
-    - Degrade : Sample quality reduction
-    - Delay : Simple stereo delay with feedback tone control
-    - Detune : Simple up/down pitch shifting thickener
-    - Dither : Range of dither types including noise shaping
-    - DubDelay : Delay with feedback saturation and time/pitch modulation
-    - Dynamics : Compressor / Limiter / Gate
-    - Image : Stereo image adjustment and M-S matrix
-    - Leslie : Rotary speaker simulator
-    - Limiter : Opto-electronic style limiter
-    - Loudness : Equal loudness contours for bass EQ and mix correction
-    - MultiBand : Multi-band compressor with M-S processing modes
-    - Overdrive : Soft distortion
-    - RePsycho! : Drum loop pitch changer
-    - RezFilter : Resonant filter with LFO and envelope follower
-    - RingMod : Simple Ring Modulator
-    - Round Panner: 3D panner
-    - Shepard : Continuously rising/falling tone generator
-    - SpecMeter : Stereo 13 Bands spectral Meter
-    - Splitter : Frequency / level crossover for setting up dynamic processing
-    - Stereo Simulator: Haas delay and comb filtering
-    - Sub-Bass Synthesizer: Several low frequency enhancement methods
-    - TalkBox : High resolution vocoder
-    - TestTone : Signal generator with pink and white noise, impulses and sweeps
-    - Thru-Zero Flanger : Classic tape-flanging simulation
-    - Tracker : Pitch tracking oscillator, or pitch tracking EQ
+  - Ambience : Reverb
+  - Bandisto : Multi-band Distortion
+  - BeatBox : Drum Replacer
+  - Combo : Amp and Speaker Simulator
+  - DeEsser : High frequency Dynamics Processor
+  - Degrade : Sample quality reduction
+  - Delay : Simple stereo delay with feedback tone control
+  - Detune : Simple up/down pitch shifting thickener
+  - Dither : Range of dither types including noise shaping
+  - DubDelay : Delay with feedback saturation and time/pitch modulation
+  - Dynamics : Compressor / Limiter / Gate
+  - Image : Stereo image adjustment and M-S matrix
+  - Leslie : Rotary speaker simulator
+  - Limiter : Opto-electronic style limiter
+  - Loudness : Equal loudness contours for bass EQ and mix correction
+  - MultiBand : Multi-band compressor with M-S processing modes
+  - Overdrive : Soft distortion
+  - RePsycho! : Drum loop pitch changer
+  - RezFilter : Resonant filter with LFO and envelope follower
+  - RingMod : Simple Ring Modulator
+  - Round Panner: 3D panner
+  - Shepard : Continuously rising/falling tone generator
+  - SpecMeter : Stereo 13 Bands spectral Meter
+  - Splitter : Frequency / level crossover for setting up dynamic processing
+  - Stereo Simulator: Haas delay and comb filtering
+  - Sub-Bass Synthesizer: Several low frequency enhancement methods
+  - TalkBox : High resolution vocoder
+  - TestTone : Signal generator with pink and white noise, impulses and sweeps
+  - Thru-Zero Flanger : Classic tape-flanging simulation
+  - Tracker : Pitch tracking oscillator, or pitch tracking EQ
 - Instruments (1 Event input, 1 stereo Audio output):
-    - DX10 : Sounds similar to the later Yamaha DX synths including the heavy bass but with a warmer, cleaner tone.
-    - EPiano : Simple EPiano
-    - JX10 : The Plug-in is designed for high quality (lower aliasing than most soft synths) and low processor usage
-    - Piano : Not designed to be the best sounding piano in the world, but boasts extremely low CPU and memory usage.
+  - DX10 : Sounds similar to the later Yamaha DX synths including the heavy bass but with a warmer, cleaner tone.
+  - EPiano : Simple EPiano
+  - JX10 : The Plug-in is designed for high quality (lower aliasing than most soft synths) and low processor usage
+  - Piano : Not designed to be the best sounding piano in the world, but boasts extremely low CPU and memory usage.
 
 Based on the OpenSource mda Plug-ins (<http://mda.smartelectronix.com/>), this set of Plug-ins demonstrates how wrap DS- code in a **VST 3** Plug-in.
 
 Check the folder *"public.sdk/samples/vst/mda-vst3"* of the SDK!
 
 Classes:
+
 - BaseProcessor
 - BaseController
 - BaseParameter
@@ -164,6 +165,7 @@ Classes:
 Check the folder *"public.sdk/samples/vst/note_expression_synth"* of the SDK!
 
 Classes:
+
 - NoteExpressionSynth::Processor
 - NoteExpressionSynth::Controller
 - NoteExpressionSynth::Voice
@@ -185,6 +187,7 @@ Check the folder *"public.sdk/samples/vst/note_expression_text"* of the SDK!
 Check the folder *"public.sdk/samples/vst/panner"* of the SDK!
 
 Classes:
+
 - PlugController
 - PlugProcessor
 
@@ -198,6 +201,7 @@ Classes:
 Check the folder *"public.sdk/samples/vst/pitchnames"* of the SDK!
 
 Classes:
+
 - PitchNamesController
 - PitchNamesProcessor
 - PitchNamesDataBrowserSource
@@ -215,6 +219,7 @@ Check the folder *"public.sdk/samples/vst/prefetchablesupport"* of the SDK!
 ## TestProgramChange
 
 Very simple Plug-in:
+
 - showing how to support Program List
 - using a generic UI
 

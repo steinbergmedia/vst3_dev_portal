@@ -17,14 +17,15 @@
 All files describing the VST 3 interface, except VST 2 files, located in the folder *"pluginterfaces"* of the SDK, fall under the dual-license described previously.
 
 Each of these files includes this text:
-```
-/----------------------------------------------------------------------------
+
+``` c++
+//----------------------------------------------------------------------------
 // This file is part of a Steinberg SDK. It is subject to thelicense terms
 // in the LICENSE file found in the top-level directory ofthis distribution
 // and at www.steinberg.net/sdklicenses.
 // No part of the SDK, including this file, may be copied,modified, propagated,
 // or distributed except according to the terms contained inthe LICENSE file.
-/----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 ```
 
 - for all other files of the VST 3 SDK, the respective embedded license text is applicable, for example:

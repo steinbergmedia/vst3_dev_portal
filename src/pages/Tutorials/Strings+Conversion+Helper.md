@@ -14,7 +14,7 @@ Here some code examples:
 
 ## Convert a String128 string to an UTF-8 string
 
-```
+``` c++
 #include "public.sdk/source/vst/utility/stringconvert.h"
 
 //...
@@ -33,7 +33,7 @@ if (hostApp)
 
 ## Convert an UTF-8 string to a String128 string
 
-```
+``` c++
 #include "public.sdk/source/vst/utility/stringconvert.h"
 
 //...

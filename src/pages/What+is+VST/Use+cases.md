@@ -17,9 +17,12 @@
 There are different use cases you can realize by using the **VST 3 SDK**:
 
 1. You are a ***plug-in developer*** and you want to create audio FX or instrument plug-ins which can be included and used in a **VST 3** host application.
-    - an audio FX plug-in is an audio processor effect taking audio as input and creating audio as output: such as *Delay*, *Phaser*, *Compressor*, *Reverb*, …
-    - an instrument plug-in is a sound/audio generator, taking as input note events and creating audio as output: such as emulations of well-known hardware synths. There are 2 kinds of instrument plug-ins: virtual sample-based (using audio samples as the basis for sound generation) and virtual synth (using different types of synthesis: physical modelling, additive, subtractive, FM, sample-based, …)
+
+   - an audio FX plug-in is an audio processor effect taking audio as input and creating audio as output: such as *Delay*, *Phaser*, *Compressor*, *Reverb*, …
+   - an instrument plug-in is a sound/audio generator, taking as input note events and creating audio as output: such as emulations of well-known hardware synths. There are 2 kinds of instrument plug-ins: virtual sample-based (using audio samples as the basis for sound generation) and virtual synth (using different types of synthesis: physical modelling, additive, subtractive, FM, sample-based, …)
+
 2. You are a ***host developer*** and you want to load in your application **VST 3** plug-ins:
+
     - audio FX and/or
     - instruments plug-ins.
 
@@ -29,13 +32,13 @@ By using **VST 3 SDK** directly:
 
 - you are sure to be compliant with the **VST 3** format.
 - developing your plug-in based on the **VST 3** format allows you to support easily new **VST 3** features that improve the integration of these plug-ins inside a DAW. Some 3rd party SDKs use only a common layer between all plug-in formats, limiting in this way the possibility for a better integration, for example exclusive **VST 3** features:
-    - [context menu](../Technical+Documentation/Change+History/3.5.0/IComponentHandler3.md)
-    - [dirty state](../Technical+Documentation/Change+History/3.1.0/IComponentHandler2.md)
-    - loading differentially a preset or a project
-    - [note expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
-    - see [other benefits of VST 3](../Main+benefits+of+VST+3/Index.md)
+  - [context menu](../Technical+Documentation/Change+History/3.5.0/IComponentHandler3.md)
+  - [dirty state](../Technical+Documentation/Change+History/3.1.0/IComponentHandler2.md)
+  - loading differentially a preset or a project
+  - [note expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
+  - see [other benefits of VST 3](../Main+benefits+of+VST+3/Index.md)
 - you get optimal integration of the **[VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md)** tool with **VST 3**
-- it includes the major plug-in format wrappers:  AAX, AUv3, AU, VST 2 (deprecated)
+- it includes the major plug-in format wrappers: AAX, AUv3, AU, VST 2 (deprecated)
 - the included [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line) allows you to check your plug-in's conformity to the VST 3 standard
 
 ## Examples of VST 3 host applications

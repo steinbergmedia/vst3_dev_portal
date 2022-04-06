@@ -20,7 +20,7 @@ Allows a plug-in to ask the host if a given plug-in interface is supported/used 
 
 ## Example
 
-```
+``` c++
 //------------------------------------------------------------------------
 tresult PLUGIN_API MyPluginController::initialize (FUnknown* context)
 {

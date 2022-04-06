@@ -13,7 +13,7 @@ Unlike C++ classes, **VST-MA** interfaces do not use inheritance to express spec
 
 For example the C++ classes:
 
-```
+``` c++
 class Shape
 {
 public:
@@ -34,7 +34,7 @@ protected:
 
 expressed in **VST-MA**, define an interface for each inheritance level:
 
-```
+``` c++
 class IShape : public FUnknown
 {
 public:
@@ -49,7 +49,7 @@ public:
 
 In the next program version there need to be changes to the *Shape* class that look like this:
 
-```
+``` c++
 class Shape
 {
 public:
@@ -64,7 +64,7 @@ protected:
 
 The **VST-MA** representation now reflect the changes to Shape by adding a new interface that inherits from *IShape* and looks like the following code, while the former interface definitions remain the same:
 
-```
+``` c++
 class IShape2 : public IShape
 {
 public:

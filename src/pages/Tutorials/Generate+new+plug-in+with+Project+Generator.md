@@ -422,8 +422,8 @@ In our example we want to modulate our main audio input with a [Side-chain](../T
 
 **plugprocessor.cpp**
 
-```
-/-----------------------------------------------------------------------
+``` c++
+//-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 {
     //---always initialize the parent-------
@@ -450,12 +450,12 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 
 **plugprocessor.h**
 
-```
-/-----------------------------------------------------------------------
+``` c++
+//-----------------------------------------------------------------------
 class PlugProcessor: public AudioEffect
 {
 public:
-    PlugProcessor();
+    PlugProcessor ();
     
     //...
     // overwrite this function
@@ -469,8 +469,8 @@ public:
 
 **plugprocessor.cpp**
 
-```
-/-----------------------------------------------------------------------
+``` c++
+//-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::setBusArrangements(Vst::SpeakerArrangement* inputs, int32 numIns,
                                                     Vst::SpeakerArrangement* outputs,
                                                     int32 numOuts)
@@ -503,8 +503,8 @@ tresult PLUGIN_API PlugProcessor::setBusArrangements(Vst::SpeakerArrangement* in
 
 3. Adapt our process using the side-chain input as modulation:
 
-```
-/-----------------------------------------------------------------------
+``` c++
+//-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (ProcessData& data)
 {
     //--- First : Read inputs parameter changes-----------

@@ -12,11 +12,11 @@ Check the included cpp files showing how to load such Component/plug-in:
 
 - *public.sdk/source/vst/hosting/module.h*\
 and
-- *for each platform public.sdk/source/vst/hosting/module_win32.cpp,.....*
+- *for each platform public.sdk/source/vst/hosting/module_win32.cpp, ...*
 
 Here below you could found a basic implementation on Windows showing how to load the library and get pointer to the wanted exported functions:
 
-```
+``` c++
 HMODULE hModule = LoadLibrary ("SomePlugin.dll");
 if (hModule)
 {
