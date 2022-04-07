@@ -16,23 +16,23 @@ Formats definition of a **VST 3 Plug-in** and its preset and where they are loca
 
 ## [Plug-in Format Structure](../Locations+Format/Plugin+Format.md)
 
-TODO
-
-## [Snapshots](../Locations+Format/Snapshots.md)
-
-TODO
+This section explains how a **VST 3 Plug-in** is structured as files and folders.
 
 ## [Plug-in Locations](../Locations+Format/Plugin+Locations.md)
 
-TODO
+This section explains where **VST 3 Plug-in** are located on the different supported platforms.
 
 ## [Preset Format](../Locations+Format/Preset+Format.md)
 
-TODO
+This section explains the **VST 3** format for preset file.
 
 ## [Preset Locations](../Locations+Format/Preset+Locations.md)
 
-TODO
+This section explains where **VST 3** preset files are located on the different supported platforms.
 
-## [Remote Presentation of Parameters](../Change+History/3.5.0/IXmlRepresentationController.md)
-See **[Remote Representation Locations](../Change+History/3.5.0/IXmlRepresentationController.md#location-table-for-vst-xmls-representation)**
+## [Snapshots](../Locations+Format/Snapshots.md)
+
+Since VST 3.6.10, a **VST 3** bundle can contain pre-rendered snapshot images for **VST 3** host as visual representation of the plug-in UI.
+
+## [Remote Representation Locations](../Change+History/3.5.0/IXmlRepresentationController.md#location-table-for-vst-xmls-representation)
+This section explains where **VST XMLs** files (Remote Presentation of Parameters) are located on the different supported platforms.

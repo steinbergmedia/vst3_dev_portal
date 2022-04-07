@@ -29,9 +29,9 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 
 ## [Getting Started](../pages/Getting+Started/Index.md)
 
-- [VST 3 Links](../pages/Getting+Started/Links.md) — Important links you will need for working with VST 3
-- [How to setup up my system for VST 3](../pages/Getting+Started/How+to+setup+my+system.md) — In order to build VST 3 plug-ins, you need the source code of the VST 3 (interface definition), an IDE/compiler, cmake and a VST 3 host application.
-- [Preparation on Windows](../pages/Getting+Started/Preparation+on+Windows.md) — Generated VST 3 Microsoft Visual Studio Projects using the cmake <https://cmake.org/> included in the SDK will create by default symbolic links for each built plug-in in the official VST 3 folder, in order to allow this on Windows you have to adapt the Group Policy of Windows. See Here! TODO LINK
+- [VST 3 Links](../pages/Getting+Started/Links.md) — Important links you will need for working with **VST 3**
+- [How to setup up my system for VST 3](../pages/Getting+Started/How+to+setup+my+system.md) — In order to build VST 3 plug-ins, you need the source code of the **VST 3** (API: interface definition), an IDE/compiler, cmake and a VST 3 host application.
+- [Preparation on Windows](../pages/Getting+Started/Preparation+on+Windows.md) — Generated **VST 3** Microsoft Visual Studio Projects using the [cmake](<https://cmake.org/>) files included in the SDK will create by default symbolic links for each built plug-in in the official **VST 3** folder, in order to allow this on Windows you have to adapt the Group Policy of Windows. [See Here!](../pages/Getting+Started/Preparation+on+Windows.md)
 
 ## [Tutorials](../pages/Tutorials/Index.md)
 
