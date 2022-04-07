@@ -1,5 +1,5 @@
 [book]
-authors = ["ascheffler"]
+authors = ["ascheffler", "nzorn", "ygrabit"]
 language = "en"
 multilingual = false
 src = "src"
