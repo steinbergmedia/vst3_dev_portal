@@ -168,7 +168,7 @@
 <p>But how does it works? The following part will show you how to get this information in the process call and how to propagate it to the audio outputs of the plug-in.</p>
 <p>The silence flags is part of the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">AudioBusBuffers</a> (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#a2c73b926e22ddb05193b6edd16a008f8">silenceFlags</a>) passed from the host to the plug-in and back to the host in the process call.</p>
 <h2><a class="header" href="#plug-in-receives-a-silent-audio-input" id="plug-in-receives-a-silent-audio-input">Plug-in receives a silent audio input</a></h2>
-<pre><code>/-----------------------------------------------------------------------
+<pre><code class="language-c++">/-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 {
     //...
@@ -204,7 +204,7 @@ tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 The host has the responsibility to clear the input buffers (set to zero) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)).</p>
 </blockquote>
 <h2><a class="header" href="#plug-in-generates-silent-output" id="plug-in-generates-silent-output">Plug-in generates silent output</a></h2>
-<pre><code>/-----------------------------------------------------------------------
+<pre><code class="language-c++">/-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 {
     //...
@@ -238,7 +238,7 @@ The plug-in, if it produces silence output, has the responsibility to clear (set
 </blockquote>
 <h2><a class="header" href="#in-bypass" id="in-bypass">In bypass</a></h2>
 <p>In Bypass mode the plug-in has to be sure that its outputs have the same stand than its inputs:</p>
-<pre><code>/-----------------------------------------------------------------------
+<pre><code class="language-c++">//-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 {
     //...
@@ -268,7 +268,7 @@ tresult PLUGIN_API AGain::process (ProcessData&amp; data)
     }
 </code></pre>
 <h2><a class="header" href="#plug-in-generates-audio-output" id="plug-in-generates-audio-output">Plug-in generates audio output</a></h2>
-<pre><code>/-----------------------------------------------------------------------
+<pre><code class="language-c++">//-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 {
     //...

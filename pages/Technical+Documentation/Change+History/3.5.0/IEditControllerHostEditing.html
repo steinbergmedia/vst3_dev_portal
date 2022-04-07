@@ -169,7 +169,7 @@
 </ul>
 <p>This allows the host to start a parameter editing action which can generate other parameter changes (like linked parameters) and this in one session (between a beginEdit and endEdit).If this interface is implemented by the edit controller, and when performing edits from outside the plug-in (host / remote) of a not automatable, not read-only, and not hidden flagged parameter (kind of helper parameter), the host will start with a <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditControllerHostEditing.html#a97cc85e97b22ff0d4fb9b5109a1a2bf2">beginEditFromHost</a> before calling <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#aded549c5b0f342a23dee18cc41ece6b8">setParamNormalized</a> and end with an <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditControllerHostEditing.html#a589c94be69d4ee5ed29cf62e437fecbb">endEditFromHost</a>. Here the sequence that the host will call:</p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
-<pre><code>//------------------------------------------------------------------------
+<pre><code class="language-c++">//------------------------------------------------------------------------
 plugEditController-&gt;beginEditFromHost (id);
 plugEditController-&gt;setParamNormalized (id, value);
 plugEditController-&gt;setParamNormalized (id, value + 0.1);

@@ -164,7 +164,7 @@
 <hr />
 <h2><a class="header" href="#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one" id="q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one">Q: How can I update my VST 2 version of my plug-in to a VST 3 version and be sure that Cubase will load it instead of my old one?</a></h2>
 <p>You have to provide a special UID for your <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivstaudioprocessor_8h.html#ae55c95a44e931e1cd78998c94bc65ee1">kVstAudioEffectClass</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivsteditcontroller_8h.html#a49d6f6f53c7630ea334474e9998c0a99">kVstComponentControllerClass</a> components, based on its <strong>VST 2</strong> UniqueID (4 characters) and its plug-in name like this:</p>
-<pre><code>static void convertVST2UID_To_FUID (FUID&amp; newOne, int32 myVST2UID_4Chars, const char* pluginName, bool forControllerUID = false)
+<pre><code class="language-c++">static void convertVST2UID_To_FUID (FUID&amp; newOne, int32 myVST2UID_4Chars, const char* pluginName, bool forControllerUID = false)
 {
     char uidString[33];
  
@@ -197,7 +197,7 @@
 }
 </code></pre>
 <p>Note that if you are developing a new plug-in and if you are using the <strong>VST 2</strong> wrapper included in the SDK you do not need to use convertVST2UID_To_FUID, a <strong>VST 2</strong> specific vendor call allows the host (<a href="https://www.steinberg.net/">Steinberg</a> hosts since <strong>Cubase</strong> 4.0) to get from a <strong>VST 2</strong> version a <strong>VST 3</strong> UID.</p>
-<pre><code>// extracted code from vst2wrapper.cpp
+<pre><code class="language-c++">// extracted code from vst2wrapper.cpp
 //-----------------------------------------------------------------------------
 VstIntPtr Vst2Wrapper::vendorSpecific (VstInt32 lArg, VstIntPtr lArg2, void* ptrArg, float floatArg)
 {
@@ -222,7 +222,7 @@ VstIntPtr Vst2Wrapper::vendorSpecific (VstInt32 lArg, VstIntPtr lArg2, void* ptr
 <h2><a class="header" href="#q-how-can-i-support-projects-which-were-saved-with-the-vst-2-version-of-my-plug-in" id="q-how-can-i-support-projects-which-were-saved-with-the-vst-2-version-of-my-plug-in">Q: How can I support projects which were saved with the VST 2 version of my plug-in?</a></h2>
 <p>The host will call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805">IComponent::setState()</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f">IEditController::setComponentState()</a> with the complete FXB/FXP stream. You have to extract your old state from that, for this the SDK provides a helper function <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/namespaceVST3.html#aadc6b99109a9b056a0176f49f9220822">VST3::tryVst2StateLoad</a>.</p>
 <p>Here the code to add in the <strong>VST 3</strong> version when a <strong>VST 3 plug-in</strong> replaces a <strong>VST 2</strong> plug-in in a Steinberg sequencer project:</p>
-<pre><code>#include &quot;public.sdk/source/vst/utility/vst2persistence.h&quot;
+<pre><code class="language-c++">#include &quot;public.sdk/source/vst/utility/vst2persistence.h&quot;
  
 //------------------------------------------------------------------------
 tresult PLUGIN_API MyVST3Effect::setState (IBStream* state)

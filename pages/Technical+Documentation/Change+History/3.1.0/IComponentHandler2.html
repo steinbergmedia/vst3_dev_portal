@@ -176,7 +176,7 @@
 </ul>
 <h2><a class="header" href="#dirty-state-support" id="dirty-state-support">Dirty State Support</a></h2>
 <p>This allows the plug-in to tell the host that its internal state is dirty or not, if set to true it means that something besides parameters has changed since last save, then the host should apply a save before quitting.</p>
-<pre><code>void MyPluginController::informHostAboutMyDirtyState (bool dirty)
+<pre><code class="language-c++">void MyPluginController::informHostAboutMyDirtyState (bool dirty)
 {
     FUnknownPtr&lt;IComponentHandler2&gt; componentHandler2 (componentHandler);
     if (componentHandler2)
@@ -185,7 +185,7 @@
 </code></pre>
 <h2><a class="header" href="#open-editor-request-support" id="open-editor-request-support">Open Editor Request Support</a></h2>
 <p>Requesting the host to open the plug-in´s editor the next time it's possible. You should use this instead of showing an alert and blocking the program flow (especially on loading projects).</p>
-<pre><code>void MyPluginController::requestHostToOpenEditor()
+<pre><code class="language-c++">void MyPluginController::requestHostToOpenEditor()
 {
     FUnknownPtr&lt;IComponentHandler2&gt; componentHandler2 (componentHandler);
     if (componentHandler2)
@@ -195,7 +195,7 @@
 <h2><a class="header" href="#ui-group-editing" id="ui-group-editing">UI Group Editing</a></h2>
 <p>This part handles parameter group editing from the plug-in UI. It wraps a set of IComponentHandler::beginEdit / Steinberg::Vst::IComponentHandler::performEdit / Steinberg::Vst::IComponentHandler::endEdit functions (see IComponentHandler) which should use the same timestamp in the host when writing automation. This allows for better synchronizing of multiple parameter changes at once.</p>
 <h3><a class="header" href="#examples-of-different-use-cases" id="examples-of-different-use-cases">Examples of different use cases</a></h3>
-<pre><code>//--------------------------------------
+<pre><code class="language-c++">//--------------------------------------
 // we are in the editcontroller...
 // in case of multiple switch buttons (with associated ParamID 1 and 3)
 // on mouse down :

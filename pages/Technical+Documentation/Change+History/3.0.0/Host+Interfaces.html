@@ -241,7 +241,7 @@ In each processing block, the section of the curve for each parameter is transmi
 </li>
 <li>
 <p>If the curve has a constant slope other than 0 over the period of several blocks, only the value for the last sample of the block is transmitted. In this case, the last valid point is at block position -1. The processor can calculate the value for each sample in the block by using a linear interpolation:</p>
-<pre><code>double x1 = -1; // position of last point related to current buffer
+<pre><code class="language-c++">double x1 = -1; // position of last point related to current buffer
 double y1 = currentParameterValue; // last transmitted value
 
 int32 pointTime = 0;

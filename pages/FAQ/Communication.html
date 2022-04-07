@@ -171,7 +171,7 @@
 <p>See <a href="#q-how-should-i-communicate-between-the-processing-and-the-user-interface">Q: How should I communicate between the 'Processing' and the 'User Interface'?</a></p>
 <h2><a class="header" href="#q-how-does-the-host-send-automation-data-to-my-vst-3-plug-in" id="q-how-does-the-host-send-automation-data-to-my-vst-3-plug-in">Q: How does the host send automation data to my VST 3 plug-in?</a></h2>
 <p>Automation data is sent to the audio processing method as part of the data passed as a parameter to the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IAudioProcessor::process</a> (processData) method.</p>
-<pre><code>IAudioProcessor::process (processData)
+<pre><code class="language-c++">IAudioProcessor::process (processData)
 {
     IParameterChanges* paramChanges = processData.inputParameterChanges;
     //...
@@ -181,7 +181,7 @@
 <p>See also <a href="../Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></p>
 <h2><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-has-new-parameter-titles" id="q-how-report-to-the-host-that-the-plug-in-has-new-parameter-titles">Q: How report to the host that the plug-in has new parameter titles?</a></h2>
 <p>Due to preset loading or user interaction the plug-in may change its parameters names (title) (but not the number of them or their IDs). To inform the host about this change, the plug-in should call from the editController its component handler function <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">restartComponent</a> with flag <strong>kParamTitlesChanged</strong>:</p>
-<pre><code>componentHandler-&gt;restartComponent (kParamTitlesChanged);
+<pre><code class="language-c++">componentHandler-&gt;restartComponent (kParamTitlesChanged);
 </code></pre>
 <p>The host will rescan the parameter list and update the titles.</p>
 <blockquote>

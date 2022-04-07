@@ -179,7 +179,7 @@
 <li>
 <p>Just copy the folder <strong>VST_SDK/my_plugins</strong> containing the HelloWorld example into your development folder.</p>
 <ul>
-<li>For example: copy <strong>VST_SDK/my_plugins</strong> to <em>D:/Users/Me/Desktop/development/my_plugins</em></p></li>
+<li>For example: copy <strong>VST_SDK/my_plugins</strong> to <em>D:/Users/Me/Desktop/development/my_plugins</em></li>
 </ul>
 </li>
 <li>
@@ -193,18 +193,18 @@
 </ul>
 </li>
 <li>
-<p>Or when using the <strong>CMake GUI App</strong>, you can specify the new location by using the browser for the variable <strong>SMTG_MYPLUGINS_SRC_PATH</strong>.</p></p>
+<p>Or when using the <strong>CMake GUI App</strong>, you can specify the new location by using the browser for the variable <strong>SMTG_MYPLUGINS_SRC_PATH</strong>.</p>
 </li>
 <li>
 <p>Or call <strong>cmake</strong> with the option</p>
 <ul>
-<li><em><strong>-DSMTG_MYPLUGINS_SRC_PATH=D:/Users/Me/Desktop/development/my_plugins</strong></em></p></li>
+<li><em><strong>-DSMTG_MYPLUGINS_SRC_PATH=D:/Users/Me/Desktop/development/my_plugins</strong></em></li>
 </ul>
 </li>
 <li>
 <p>You can duplicate the helloworld folder for your plug-in, for example:</p>
 <ul>
-<li>copy <em><strong>D:/Users/Me/Desktop/development/my_plugins/helloworld</strong></em> to <em><strong>D:/Users/Me/Desktop/development/my_plugins/MyDelayPlugin</strong></em></p></li>
+<li>copy <em><strong>D:/Users/Me/Desktop/development/my_plugins/helloworld</strong></em> to <em><strong>D:/Users/Me/Desktop/development/my_plugins/MyDelayPlugin</strong></em></li>
 </ul>
 </li>
 <li>
@@ -223,31 +223,35 @@
 </li>
 <li>Add this entry (your newly created folder):
 <ul>
-<li><em><strong>add_subdirectory(MyDelayPlugin)</strong></em></p></li>
+<li><em><strong>add_subdirectory(MyDelayPlugin)</strong></em></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p>Generate the project by using the command line or the cmake editor (cmake-gui) as described here: How to use cmake for building VST 3 plug-ins. Your new plug-in should appear in the project afterwards.</p></p>
+<p>Generate the project by using the command line or the cmake editor (cmake-gui) as described here: How to use cmake for building VST 3 plug-ins. Your new plug-in should appear in the project afterwards.</p>
 </li>
 <li>
 <p>Now you have to adapt some <em><strong>uids</strong></em> and naming to make your plug-in unique (and not a duplicate of helloworld!)</p>
 <ol>
-<li>Rename all strings for your plug-in from <em><strong>HelloWorld</strong></em> to <em><strong>MyDelay</strong></em> for example:
+<li>
+<p>Rename all strings for your plug-in from <em><strong>HelloWorld</strong></em> to <em><strong>MyDelay</strong></em> for example:</p>
 <ul>
 <li><em><strong>HelloWorldProcessor::HelloWorldProcessor</strong></em> to <em><strong>MyDelayProcessor::MyDelayProcessor</strong></em></li>
 </ul>
 </li>
-<li>Open the file MyDelayPlugin/include/plugids.h and create new uids for processor and for controller: you can use GUID creator tools like <a href="https://www.guidgenerator.com/">https://www.guidgenerator.com/</a>:
+<li>
+<p>Open the file MyDelayPlugin/include/plugids.h and create new uids for processor and for controller: you can use GUID creator tools like <a href="https://www.guidgenerator.com/">https://www.guidgenerator.com/</a>:</p>
 <ul>
 <li>static const FUID MyProcessorUID (0x2A0CC26C, 0xBF88964C, 0xB0BFFCB0, 0x554AF523);</li>
 <li>static const FUID MyControllerUID (0xB9DBBD64, 0xF7C40A4C, 0x9C8BFB33, 0x8761E244);</li>
 </ul>
 </li>
-<li>Open the file <em><strong>version.h</strong></em> and adapt the strings like this:</li>
+<li>
+<p>Open the file <em><strong>version.h</strong></em> and adapt the strings like this:</p>
+</li>
 </ol>
-<pre><code>#define stringPluginName &quot;My First Delay&quot;
+<pre><code class="language-c++">#define stringPluginName &quot;My First Delay&quot;
 #define stringOriginalFilename &quot;MyDelay.vst3&quot;
 </code></pre>
 <ol start="4">

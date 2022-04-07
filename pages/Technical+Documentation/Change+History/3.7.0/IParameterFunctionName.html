@@ -170,7 +170,7 @@
 <p>This interface allows the host to get a parameter associated to a specific meaning (a functionName) for a given unit. The host can use this information, for example, for drawing a Gain Reduction meter in its own UI. In order to get the plain value of this parameter, the host should use the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a849747dc98909312b4cdbdeea82dbae0">IEditController::normalizedParamToPlain</a>. The host can automatically map parameters to dedicated UI controls, such as the wet-dry mix knob or the Randomize button.</p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
 <p><strong>In mycontroller.h</strong></p>
-<pre><code>//------------------------------------------------------------------------
+<pre><code class="language-c++">//------------------------------------------------------------------------
 // here an example of how a VST 3 Plug-in could support this IParameterFunctionName interface.
 // we need to define somewhere the iids:
   
@@ -191,7 +191,7 @@ class MyController : public Vst::EditController, public Vst::IParameterFunctionN
 }
 </code></pre>
 <p><strong>In mycontroller.cpp</strong></p>
-<pre><code>#include &quot;pluginterfaces/vst/ivstparameterfunctionname.h&quot;
+<pre><code class="language-c++">#include &quot;pluginterfaces/vst/ivstparameterfunctionname.h&quot;
  
 namespace Steinberg {
     namespace Vst {
@@ -214,7 +214,7 @@ tresult PLUGIN_API MyController::getParameterIDFromFunctionName (UnitID unitID, 
 }
 </code></pre>
 <p><strong>Example of host implementation</strong></p>
-<pre><code>FUnknownPtr&lt;Vst::IParameterFunctionName&gt; functionName (mEditController-&gt;getIEditController ());
+<pre><code class="language-c++">FUnknownPtr&lt;Vst::IParameterFunctionName&gt; functionName (mEditController-&gt;getIEditController ());
 if (functionName)
 {
     Vst::ParamID paramID;

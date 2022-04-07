@@ -177,7 +177,7 @@
 <p>So any functionality that is to be controlled by <strong>MIDI</strong> controllers must be exported as regular parameter. The host will transform incoming <strong>MIDI</strong> controller data using this interface and transmit them as regular parameter change. This allows the host to automate them in the same way as other parameters. <em>CtrlNumber</em> can be a typical <strong>MIDI</strong> controller value extended to some others values like pitchbend or aftertouch (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a70ee68a13248febed5047cfa0fddf4e6">ControllerNumbers</a>). If the mapping has changed, the plug-in must call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">IComponentHandler::restartComponent</a> (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a17867782006f9fdb2b72c16b0420bed5ae2e3ed4527f88e577a2aeb595bd853fd">kMidiCCAssignmentChanged</a>) to inform the host about this change.</p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
 <p><strong>In myeditcontroller.h</strong></p>
-<pre><code>//--------------------------------------
+<pre><code class="language-c++">//--------------------------------------
 class MyEditController: public EditControllerEx1, public IMidiMapping
 {
     //...
@@ -192,7 +192,7 @@ class MyEditController: public EditControllerEx1, public IMidiMapping
 };
 </code></pre>
 <p><strong>In myeditcontroller.cpp</strong></p>
-<pre><code>//--------------------------------------
+<pre><code class="language-c++">//--------------------------------------
 tresult PLUGIN_API MyEditController::getMidiControllerAssignment (int32 busIndex, int16 midiChannel, CtrlNumber midiControllerNumber, ParamID&amp; tag)
 {
     // for my first Event bus and for MIDI channel 0 and for MIDI CC Volume only

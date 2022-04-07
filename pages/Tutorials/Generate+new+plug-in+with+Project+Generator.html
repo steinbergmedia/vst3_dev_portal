@@ -528,7 +528,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&amp;data)
 <li>First add a new side-chain audio input (busType: <em><strong>kAux</strong></em>) in the initialize call of our processor:</li>
 </ol>
 <p><strong>plugprocessor.cpp</strong></p>
-<pre><code>/-----------------------------------------------------------------------
+<pre><code class="language-c++">//-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 {
     //---always initialize the parent-------
@@ -554,11 +554,11 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 <li>We want to be sure that our side-chain is handled as mono input. For this we need to overwrite the AudioEffect::setBusArrangements function:</li>
 </ol>
 <p><strong>plugprocessor.h</strong></p>
-<pre><code>/-----------------------------------------------------------------------
+<pre><code class="language-c++">//-----------------------------------------------------------------------
 class PlugProcessor: public AudioEffect
 {
 public:
-    PlugProcessor();
+    PlugProcessor ();
     
     //...
     // overwrite this function
@@ -570,7 +570,7 @@ public:
 };
 </code></pre>
 <p><strong>plugprocessor.cpp</strong></p>
-<pre><code>/-----------------------------------------------------------------------
+<pre><code class="language-c++">//-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::setBusArrangements(Vst::SpeakerArrangement* inputs, int32 numIns,
                                                     Vst::SpeakerArrangement* outputs,
                                                     int32 numOuts)
@@ -603,7 +603,7 @@ tresult PLUGIN_API PlugProcessor::setBusArrangements(Vst::SpeakerArrangement* in
 <ol start="3">
 <li>Adapt our process using the side-chain input as modulation:</li>
 </ol>
-<pre><code>/-----------------------------------------------------------------------
+<pre><code class="language-c++">//-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (ProcessData&amp; data)
 {
     //--- First : Read inputs parameter changes-----------

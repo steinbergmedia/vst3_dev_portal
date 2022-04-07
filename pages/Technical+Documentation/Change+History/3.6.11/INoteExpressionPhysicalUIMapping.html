@@ -177,7 +177,7 @@
 <p>With this plug-in interface, the host can retrieve the preferred physical mapping associated to note expression supported by the plug-in.When the mapping changes (for example, when switching presets) the plug-in needs to inform the host about it via <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">IComponentHandler::restartComponent</a> (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a17867782006f9fdb2b72c16b0420bed5aa11fe6e24349c6d2f7e0035dbc01c10b">kNoteExpressionChanged</a>).</p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
 <p><strong>In mycontroller.h</strong></p>
-<pre><code>//------------------------------------------------------------------------
+<pre><code class="language-c++">//------------------------------------------------------------------------
 // here an example of how a VST 3 Plug-in could support this INoteExpressionPhysicalUIMapping interface.
 // we need to define somewhere the iids:
   
@@ -198,7 +198,7 @@ class MyController : public Vst::EditController, public Vst::INoteExpressionPhys
 }
 </code></pre>
 <p><strong>In mycontroller.cpp</strong></p>
-<pre><code>#include &quot;pluginterfaces/vst/ivstnoteexpression.h&quot;
+<pre><code class="language-c++">#include &quot;pluginterfaces/vst/ivstnoteexpression.h&quot;
  
 namespace Steinberg {
     namespace Vst {

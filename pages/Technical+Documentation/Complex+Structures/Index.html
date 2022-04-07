@@ -170,14 +170,22 @@
 <h2><a class="header" href="#the-problem" id="the-problem">The Problem</a></h2>
 <p>A simple VST effect plug-in usually does not cause the host too many problems. It has only one audio input and output bus and a defined set of parameters that control aspects of its sound. But a VST plug-in can be a lot more complex than this. When the plug-in implements a multi-timbral musical instrument, the host is confronted with a range of problems regarding the integration of this plug-in in its GUI. To mention a few of them:</p>
 <ul>
-<li>The plug-in can define multiple event input and multiple audio outputs. How can the host know on which output a sound will emerge when a note-event is transmitted to the plug-in?
--&gt; This may be of interest for the host in order to link a MIDI track to the corresponding audio channel.</li>
+<li>
+<p>The plug-in can define multiple event input and multiple audio outputs. How can the host know on which output a sound will emerge when a note-event is transmitted to the plug-in?</p>
+<ul>
+<li>This may be of interest for the host in order to link a MIDI track to the corresponding audio channel.</li>
 </ul>
-<p>T- he plug-in can define a list of programs that the user can load from the plug-in GUI. In a multi-timbral instrument, a program only affects a certain part of the plug-in (we call this part a 'unit'). How can the host know about these parts and about the plug-in defined programs that can be loaded?
--&gt; This may be of interest for a host in order to provide shortcuts for this functionality in its own GUI.</p>
+</li>
+<li>
+<p>The plug-in can define a list of programs that the user can load from the plug-in GUI. In a multi-timbral instrument, a program only affects a certain part of the plug-in (we call this part a 'unit'). How can the host know about these parts and about the plug-in defined programs that can be loaded?</p>
+<ul>
+<li>This may be of interest for a host in order to provide shortcuts for this functionality in its own GUI.</li>
+</ul>
+</li>
+</ul>
 <p>Since a VST plug-in unlike a hardware MIDI instrument is more than only a black box, a complex plug-in should help its host to provide a more convenient GUI integration than it is possible with hardware instruments. <strong>VST 3</strong> uses the concept of units to describe the internal structure of the plug-in (see <a href="../VST+3+Units/Index.html">VST 3 Units</a>) and a multi-timbral instrument is supposed to support the respective interfaces. But the preferred solution in VST 3 is a reduction of this complexity with the 'simple mode'.</p>
 <h2><a class="header" href="#the-simple-mode" id="the-simple-mode">The Simple Mode</a></h2>
-<p>The 'VST 3 simple mode' has the (selfish) background to support the so-called 'simple instrument tracks' of Cubase. These tracks combine a MIDI track and VST audio channel (without the need to make any further assignments such as the choice of a MIDI output port or a MIDI channel). This mode is defined as 'only one input and only one output'. In 'simple mode', only MIDI channel 0 is used. Therefore, an instrument has to be mono-timbral.</p>
+<p>The 'VST 3 simple mode' has the (selfish) background to support the so-called &quot;simple instrument tracks&quot; of Cubase. These tracks combine a MIDI track and VST audio channel (without the need to make any further assignments such as the choice of a MIDI output port or a MIDI channel). This mode is defined as 'only one input and only one output'. In 'simple mode', only MIDI channel 0 is used. Therefore, an instrument has to be mono-timbral.</p>
 <p>The host will now work with multiple instances of the plug-in rather than using the same instance in a way that it contains multiple internal sections of the same kind. The <strong>VST-MA</strong> component model supports shared resources between multiple instances of a plug-in because usually the same module instance (dll/bundle) is used for each plug-in instance.</p>
 <p>Yet, a plug-in has the option to support both the simple and the advanced mode with the same implementation. The host tests the general ability to support the 'simple mode' by checking the processor's class flags (<a href="https://steinbergmedia.github.io/vst3_doc/base/structSteinberg_1_1PClassInfo2.html#ab5ab9135185421caad5ad8ae1d758409">Steinberg::PClassInfo2::classFlags</a>) for the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a626a070dcd2e025250f41b9c3f9817cdabc2edc9bb281cebe9cc6dc00a7cac0ea">Steinberg::Vst::kSimpleModeSupported</a> flag. If the plug-in is to be used in an instrument track (or whenever a host regards it more suitable) the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Steinberg::Vst::IComponent::setIoMode</a> method is called (before any other call!) to configure the plug-in. A mono-timbral plug-in should set this flag as well and does not need to take into account the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">setIoMode</a> call.</p>
 <h2><a class="header" href="#multi-timbral-program-lists" id="multi-timbral-program-lists">Multi-timbral Program Lists</a></h2>
@@ -187,7 +195,7 @@
 <p>The plug-in can define any number of program lists.</p>
 </li>
 <li>
-<p>Each unit can reference one program list - this reference must not change.</p>
+<p>Each unit can reference one program list (this reference must not change).</p>
 </li>
 <li>
 <p>Each unit that uses a program list references one list item.</p>
@@ -206,12 +214,16 @@
 <p>Similar to the simple case, the host may want to save and load preset files. The component state of the plug-in is not useful here. A preset of a complex plug-in can be:</p>
 <ul>
 <li>
-<p>The state of a plug-in unit
--&gt; To support this, the plug-in must implement the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IUnitData</a> interface in its component part.</p>
+<p>The state of a plug-in unit</p>
+<ul>
+<li>To support this, the plug-in must implement the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IUnitData</a> interface in its component part.</li>
+</ul>
 </li>
 <li>
-<p>The contents of an item in the program list
--&gt; To support this, the plug-in must implement the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IProgramListData</a> interface in its component part.</p>
+<p>The contents of an item in the program list</p>
+<ul>
+<li>To support this, the plug-in must implement the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IProgramListData</a> interface in its component part.</li>
+</ul>
 </li>
 </ul>
 <p>A plug-in can support unit presets and program list presets.</p>

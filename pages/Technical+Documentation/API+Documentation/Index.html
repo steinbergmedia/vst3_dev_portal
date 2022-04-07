@@ -155,10 +155,10 @@
 </blockquote>
 <p><strong>On this page:</strong></p>
 <ul>
-<li><a href="#basic-conception">Basic Conception</a>
+<li><a href="#basic-concept">Basic Concept</a>
 <ul>
-<li><a href="#initialize">Initialize</a></li>
-<li><a href="#creation-and-initialize-from-host-point-of-view">Creation and Initialize from Host point of view</a></li>
+<li><a href="#initialization">Initialization</a></li>
+<li><a href="#creation-and-initialization-from-host-point-of-view">Creation and initialization from Host point of view</a></li>
 <li><a href="#extensions">Extensions</a></li>
 <li><a href="#persistence">Persistence</a></li>
 </ul>
@@ -187,7 +187,7 @@
 <p>The <strong>VST 3 API</strong> is an interface collection designed for realtime audio processing components. Such a component can be an audio effect or an audio instrument.
 <strong>VST 3</strong> is based on a technology called <a href="../VST+Module+Architecture/Index.html">VST Module Architecture</a> (<strong>VST-MA</strong>). Please read the <a href="../VST+Module+Architecture/Index.html">VST-MA documentation</a> to find out more about how the plug-in system works in general.
 The API files belonging to <strong>VST 3</strong> are located in the folder <em>&quot;pluginterfaces/vst&quot;</em>.</p>
-<h2><a class="header" href="#basic-conception" id="basic-conception">Basic Conception</a></h2>
+<h2><a class="header" href="#basic-concept" id="basic-concept">Basic Concept</a></h2>
 <p>A <strong>VST 3</strong> audio effect or instrument basically consists of two parts: a processing part and an edit controller part.
 The corresponding interfaces are:</p>
 <ul>
@@ -197,18 +197,18 @@ The corresponding interfaces are:</p>
 <p><img src="../../../resources/tech_doc_1.jpg" alt="tech_doc_1" /></p>
 <p><img src="../../../resources/tech_doc_2.png" alt="tech_doc_2" /></p>
 <p>The design of <strong>VST 3</strong> suggests a complete separation of processor and edit controller by implementing two components. Splitting up an effect into these two parts requires some extra implementation efforts.
-However, this separation enables the host to run each component in a different context, even on different computers. Another benefit is that parameter changes can be separated when it comes to automation. While for processing these changes need to be transmitted in a sample-accurate way, the GUI part can be updated with a much lower frequency and it can be shifted by the amount that results from any delay compensation or other processing offset.</p></p>
-<p>A plug-in that supports this separation has to set the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a626a070dcd2e025250f41b9c3f9817cda3185111648c1599241528f1a7f523396">Steinberg::Vst::kDistributable</a> flag in the class info of the processor component (<a href="https://steinbergmedia.github.io/vst3_doc/base/structSteinberg_1_1PClassInfo2.html#ab5ab9135185421caad5ad8ae1d758409">Steinberg::PClassInfo2::classFlags</a>). Of course not every plug-in can support this, for example if it depends deeply on resources that cannot be moved easily to another computer. So when this flag is not set, the host must not try to separate the components in any way.
+However, this separation enables the host to run each component in a different context, even on different computers. Another benefit is that parameter changes can be separated when it comes to automation. While for processing these changes need to be transmitted in a sample-accurate way, the GUI part can be updated with a much lower frequency and it can be shifted by the amount that results from any delay compensation or other processing offset.
+A plug-in that supports this separation has to set the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a626a070dcd2e025250f41b9c3f9817cda3185111648c1599241528f1a7f523396">Steinberg::Vst::kDistributable</a> flag in the class info of the processor component (<a href="https://steinbergmedia.github.io/vst3_doc/base/structSteinberg_1_1PClassInfo2.html#ab5ab9135185421caad5ad8ae1d758409">Steinberg::PClassInfo2::classFlags</a>). Of course not every plug-in can support this, for example if it depends deeply on resources that cannot be moved easily to another computer. So when this flag is not set, the host must not try to separate the components in any way.
 Although it is not recommended, it is possible to implement both the processing part and the controller part in one component class. The host tries to query the  <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Steinberg::Vst::IEditController</a> interface after creating an <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">Steinberg::Vst::IAudioProcessor</a> and on success uses it as the controller.</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
 A host does not need to instantiate the controller part of a plug-in for processing it.</p>
 <p>The plug-in should be prepared for processing without having the controller part instantiated.</p>
 </blockquote>
-<h3><a class="header" href="#initialize" id="initialize">Initialize</a></h3>
+<h3><a class="header" href="#initialization" id="initialization">Initialization</a></h3>
 <p>Both <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">Steinberg::Vst::IComponent</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Steinberg::Vst::IEditController</a> derive from <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html">Steinberg::IPluginBase</a>. The purpose of this basic interface is to initialize the component and to terminate it before it is destroyed.</p>
 <p>The context parameter passed to <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html#a3c81be4ff2e7bbb541d3527264f26eed">Steinberg::IPluginBase::initialize</a> should implement the interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html">Steinberg::Vst::IHostApplication</a>. Hosts should not call other functions before initialize is called, with the sole exception of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Steinberg::Vst::IComponent::setIoMode</a> which must be called before initialize. <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a8aa65685068ad033af57b1497926b689">Steinberg::Vst::IComponent::getControllerClassId</a> can also be called before (<a href="../Workflow+Diagrams/Index.html">See VST 3 Workflow Diagrams</a>).</p>
-<p><strong>How the plug-in can access IHostApplication?</strong></p>
+<p><strong>How can the plug-in access IHostApplication?</strong></p>
 <pre><code>/-----------------------------------------------------------------------
 tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
 {
@@ -225,7 +225,7 @@ tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
 }
 /-----------------------------------------------------------------------
 </code></pre>
-<h3><a class="header" href="#creation-and-initialize-from-host-point-of-view" id="creation-and-initialize-from-host-point-of-view">Creation and Initialize from Host point of view</a></h3>
+<h3><a class="header" href="#creation-and-initialization-from-host-point-of-view" id="creation-and-initialization-from-host-point-of-view">Creation and initialization from Host point of view</a></h3>
 <p>Here an example of a host implementation creating the component and its associated controller of a plug-in with a given classID:</p>
 <pre><code>/-----------------------------------------------------------------------
 Vst::IComponent* processorComponent;
@@ -333,46 +333,28 @@ After restoring a state, the host rescans the parameters (asking the controller)
 <h3><a class="header" href="#iaudioprocessor" id="iaudioprocessor">IAudioProcessor</a></h3>
 <p>The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">Steinberg::Vst::IAudioProcessor</a> interface extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">Steinberg::Vst::IComponent</a> by providing a state machine for processing and the process method:</p>
 <ol>
-<li>
-<p><strong>Setup</strong>: The processor must be configured before processing can start. Configurations are only allowed when the processor is inactive (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">Steinberg::Vst::IComponent::setActive</a>).</p></p>
+<li><strong>Setup</strong>: The processor must be configured before processing can start. Configurations are only allowed when the processor is inactive (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">Steinberg::Vst::IComponent::setActive</a>).
 <ul>
-<li>
-<p><strong>Process setup</strong>: The processor is informed about the parameters that cannot be changed while processing is active. (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html">Steinberg::Vst::ProcessSetup</a>).</p></p>
-</li>
-<li>
-<p><strong>Dynamic Speaker Arrangements</strong>: The host can try to change the number of channels of an audio bus. By default the speaker arrangement is defined by the plug-in. In order to adjust the plug-in to a context where a different speaker arrangement is used, the host can try to change it using <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Steinberg::Vst::IAudioProcessor::setBusArrangements</a></p>
-</li>
+<li><strong>Process setup</strong>: The processor is informed about the parameters that cannot be changed while processing is active. (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html">Steinberg::Vst::ProcessSetup</a>).</li>
+<li><strong>Dynamic Speaker Arrangements</strong>: The host can try to change the number of channels of an audio bus. By default the speaker arrangement is defined by the plug-in. In order to adjust the plug-in to a context where a different speaker arrangement is used, the host can try to change it using <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Steinberg::Vst::IAudioProcessor::setBusArrangements</a></li>
 </ul>
 </li>
-<li>
-<p>When the processor is configured, it has to be activated (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">Steinberg::Vst::IComponent::setActive</a>). The activation call signals that all configurations have been finished.</p>
-</li>
-<li>
-<p>In addition to that, the processor has a 'processing state'. Before a host begins to perform processing calls, it has to signal this by calling <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af252fd721b195b793f3a5dfffc069401">IAudioProcessor::setProcessing</a> (true). When the host stops processing, it must call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af252fd721b195b793f3a5dfffc069401">IAudioProcessor::setProcessing</a> (false) after the last processing call. Please see also: <a href="../Workflow+Diagrams/Index.html">VST 3 Workflow Diagrams</a></p>
-</li>
-<li>
-<p><strong>Process</strong>: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">Steinberg::Vst::IAudioProcessor::process</a> is the method that implements the actual processing. Any data needed for processing is passed to it as a parameter <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a100f97803b72565daedee80e34bbb7f0">Steinberg::Vst::ProcessData</a>. This is necessary because processing is often performed in a separate thread and this is a simple way to avoid thread synchronization problems.</p></p>
-<ul>
-<li>
-<p><strong>Block Size</strong>: Processing is done in blocks. The maximum number of samples to be processed in one block is set in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#aefb5731b94dbc899a4a7e9cd1c96e6a2">Steinberg::Vst::IAudioProcessor::setupProcessing</a>. The actual number of samples in a processing block is transmitted in the process call and can be different from call to call, but it must be a value between 1 and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html#a41cd06a0c942a1b3f283092b893d0de3">maxSamplesPerBlock</a>.</p></p>
-</li>
-<li>
-<p><strong>Audio Buffers</strong>: For any audio bus defined by the plug-in, the host must provide buffer data - even for inactive busses. Busses are addressed by index, so leaving out inactive busses will mix up these indices. The actual data buffer can be null though (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">Steinberg::Vst::AudioBusBuffers</a>).</p></p>
-<p><strong>Note</strong>: The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#abac2239417d88a091cad5b4f917dc49a">channelBuffers32</a> (or <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#a0bbcd9a3e75d01b547097c91f9f659cf">channelBuffers64</a>) buffer pointers can be the same or different for input and output: this has to be taken into account in the process function (for example not resetting the output before processing if input and output buffers are the same!). It can be the same for multiple inputs or multiple outputs (in the case of instrument plug-ins) all outputs (or inputs) can share the same buffer!</p></p>
-<p><strong>Important</strong>: The host can call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">Steinberg::Vst::IAudioProcessor::process</a> without buffers (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a852a74fc4e461ef086bac048313d2de9">numInputs</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a1338255f88bad5cf4fb714c71f92b61a">numOutputs</a> of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">Steinberg::Vst::AudioBusBuffers</a> are zeroed, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#aeb42971a4bd34d7baa27cff8d7e3cf26">numSamples</a> too), in order to flush parameters (from host to plug-in). Parameters can only be flushed when the host needs to send parameter changes and no processing is called.</p></p>
-</li>
-<li>
-<p><strong>Parameters &amp; Automation</strong>: Any parameter changes are transmitted in the process call through the interfaces <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">Steinberg::Vst::IParameterChanges</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">Steinberg::Vst::IParamValueQueue</a>. Simple parameter changes as a result of GUI interaction are transmitted exactly in the same way as automation. (see <a href="../Parameters+Automation/Index.html">Parameters and Automation</a>).</p></p>
-</li>
-<li>
-<p><strong>Context</strong>: For each processing block the host should provide information about its state. See <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html">Steinberg::Vst::ProcessContext</a></p></p>
-</li>
-<li>
-<p><strong>Events</strong>: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEventList.html">Steinberg::Vst::IEventList</a></p>
-</li>
-</ul>
-</li>
+<li>When the processor is configured, it has to be activated (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">Steinberg::Vst::IComponent::setActive</a>). The activation call signals that all configurations have been finished.</li>
+<li>In addition to that, the processor has a 'processing state'. Before a host begins to perform processing calls, it has to signal this by calling <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af252fd721b195b793f3a5dfffc069401">IAudioProcessor::setProcessing</a> (true). When the host stops processing, it must call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af252fd721b195b793f3a5dfffc069401">IAudioProcessor::setProcessing</a> (false) after the last processing call. Please see also: <a href="../Workflow+Diagrams/Index.html">VST 3 Workflow Diagrams</a></li>
+<li><strong>Process</strong>: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">Steinberg::Vst::IAudioProcessor::process</a> is the method that implements the actual processing. Any data needed for processing is passed to it as a parameter <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a100f97803b72565daedee80e34bbb7f0">Steinberg::Vst::ProcessData</a>. This is necessary because processing is often performed in a separate thread and this is a simple way to avoid thread synchronization problems.</li>
 </ol>
+<pre><code>- **Block Size**: Processing is done in blocks. The maximum number of samples to be processed in one block is set in [Steinberg::Vst::IAudioProcessor::setupProcessing](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#aefb5731b94dbc899a4a7e9cd1c96e6a2). The actual number of samples in a processing block is transmitted in the process call and can be different from call to call, but it must be a value between 1 and [maxSamplesPerBlock](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html#a41cd06a0c942a1b3f283092b893d0de3).
+
+- **Audio Buffers**: For any audio bus defined by the plug-in, the host must provide buffer data - even for inactive busses. Busses are addressed by index, so leaving out inactive busses will mix up these indices. The actual data buffer can be null though (see [Steinberg::Vst::AudioBusBuffers](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html)).&lt;/br&gt;
+**Note**: The [channelBuffers32](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#abac2239417d88a091cad5b4f917dc49a) (or [channelBuffers64](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#a0bbcd9a3e75d01b547097c91f9f659cf)) buffer pointers can be the same or different for input and output: this has to be taken into account in the process function (for example not resetting the output before processing if input and output buffers are the same!). It can be the same for multiple inputs or multiple outputs (in the case of instrument plug-ins) all outputs (or inputs) can share the same buffer!&lt;/br&gt;
+**Important**: The host can call [Steinberg::Vst::IAudioProcessor::process](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13) without buffers ([numInputs](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a852a74fc4e461ef086bac048313d2de9) and [numOutputs](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a1338255f88bad5cf4fb714c71f92b61a) of [Steinberg::Vst::AudioBusBuffers](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html) are zeroed, [numSamples](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#aeb42971a4bd34d7baa27cff8d7e3cf26) too), in order to flush parameters (from host to plug-in). Parameters can only be flushed when the host needs to send parameter changes and no processing is called.
+
+- **Parameters &amp; Automation**: Any parameter changes are transmitted in the process call through the interfaces [Steinberg::Vst::IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) and [Steinberg::Vst::IParamValueQueue](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html). Simple parameter changes as a result of GUI interaction are transmitted exactly in the same way as automation. (see [Parameters and Automation](../Parameters+Automation/Index.md)).
+
+- **Context**: For each processing block the host should provide information about its state. See [Steinberg::Vst::ProcessContext](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html)
+
+- **Events**: [Steinberg::Vst::IEventList](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEventList.html)
+</code></pre>
 <p><img src="../../../resources/tech_doc_6.png" alt="tech_doc_6" /></p>
 <h2><a class="header" href="#the-editing-part" id="the-editing-part">The Editing Part</a></h2>
 <p><img src="../../../resources/tech_doc_7.jpg" alt="tech_doc_7" /></p>
@@ -427,7 +409,7 @@ More details can be found on the page about <a href="../Parameters+Automation/In
 <p><img src="../../../resources/tech_doc_10.png" alt="tech_doc_10" /></p>
 <h3><a class="header" href="#initialization-of-communication-from-host-point-of-view" id="initialization-of-communication-from-host-point-of-view">Initialization of communication from Host point of view</a></h3>
 <p>Here an example of host implementation where the component and controller parts are connected and synchronized:</p>
-<pre><code>/-----------------------------------------------------------------------
+<pre><code class="language-c++">/-----------------------------------------------------------------------
 // the component and the controller parts are previously becreated and initialized (see above)
 // ...
 if (editController)

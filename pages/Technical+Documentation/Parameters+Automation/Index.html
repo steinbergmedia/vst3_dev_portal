@@ -306,11 +306,8 @@ To address the most common cases:</p>
 <p>This kind of controls usually control continuous parameters and they are usually operated with the mouse. This common case is the most simple to handle: On mouse-click-down call beginEdit (followed by performEdit when the control allows a jump), on mouse-drag call performEdit and on mouse-click-up call endEdit.</p>
 <p>Trouble starts with the <strong>mouse wheel</strong>: There simply is nothing like a defined start or end when the wheel is operated - each wheel event arrives 'out of the blue'. The only way to enable proper automation recording in this case is the usage of a timer.</p>
 <ul>
-<li>
-<p>A plug-in implementation should call beginEdit when the first wheel event is handled and start a timer (followed by the first call to performEdit). Further wheel events that arrive inside of the timeout interval are reported with performEdit and the timer is restarted. When the timeout period has passed without further events, endEdit should be called and the timer can be removed.</p></p>
-</li>
-<li>
-<p>But since it is the host's task to record automation data, one could argue that it should be the host's task to take care of the timer in this case. This is the reason for the following exception to the rule:</p>
+<li>A plug-in implementation should call beginEdit when the first wheel event is handled and start a timer (followed by the first call to performEdit). Further wheel events that arrive inside of the timeout interval are reported with performEdit and the timer is restarted. When the timeout period has passed without further events, endEdit should be called and the timer can be removed.</li>
+<li>But since it is the host's task to record automation data, one could argue that it should be the host's task to take care of the timer in this case. This is the reason for the following exception to the rule:
 <ul>
 <li>Mouse wheel events can be reported without beginEdit and endEdit to the host. The host must be prepared to receive a performEdit without a previous call of beginEdit for a parameter and handle the timeout itself.</li>
 </ul>
@@ -341,12 +338,12 @@ To address the most common cases:</p>
 <h2><a class="header" href="#informing-the-host-about-changes" id="informing-the-host-about-changes">Informing the host about changes</a></h2>
 <h3><a class="header" href="#parameter-titles-default-values-or-flags-have-changed" id="parameter-titles-default-values-or-flags-have-changed">Parameter titles, default values or flags have changed</a></h3>
 <p>If something happens, user interaction for example, which change the parameter styles (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645">ParameterFlags</a>) or title or default value of one or multiple parameters, the plug-in must call</p>
-<pre><code>IComponentHandler::restartComponent (kParamTitlesChanged);
+<pre><code class="language-c++">IComponentHandler::restartComponent (kParamTitlesChanged);
 </code></pre>
 <p>to inform the host about this change (in the <strong>UI Thread</strong>). The host rescans the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html">ParameterInfos</a> with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a0ba78602ecf2f5e8d747d8b01d4cfb6c">getParameterInfo</a>.</p>
 <h3><a class="header" href="#multiple-parameter-values-have-changed" id="multiple-parameter-values-have-changed">Multiple parameter values have changed</a></h3>
 <p>As result of a program change for example, the plug-in must call</p>
-<pre><code>IComponentHandler::restartComponent (kParamValuesChanged);
+<pre><code class="language-c++">IComponentHandler::restartComponent (kParamValuesChanged);
 </code></pre>
 <p>to inform the host about this change (in the <strong>UI Thread</strong>). The host invalidates all caches of parameter values and asks the edit controller for the current values.</p>
 <p>If only some values have changed (less than 10)  the plug-in should use the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93">Steinberg::Vst::IComponentHandler::performEdit</a> interface (Show the right use when automation are used: <a href="../Parameters+Automation/Index.html#automation-recording">Automation Recording</a>)</p>

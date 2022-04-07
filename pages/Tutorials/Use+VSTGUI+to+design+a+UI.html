@@ -165,11 +165,11 @@
 <p>This tutorial explains how to use <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a>. <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> comes with a <em>WYSIWYG</em> editor that allows you to create stunning user interfaces for your plug-in.</p>
 <hr />
 <h2><a class="header" href="#part-1-preparation" id="part-1-preparation">Part 1: Preparation</a></h2>
-<p>If you have created your project with the <a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a> and check the &quot;<strong>Use VSTGUI</strong>&quot; you can directly jump to Part 2 of this tutorial.</p>
+<p>If you have created your project with the <a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a> and check the &quot;<strong>Use VSTGUI</strong>&quot; you can directly jump to <a href="#part-2-open-the-vstguiwyswyg-editor">Part 2</a> of this tutorial.</p>
 <p>Before using the inline UI editor, you must make sure that you use the <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1EditController.html">Steinberg::Vst::EditController</a> class as a base of your own edit controller and that you have used the <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1Parameter.html">Steinberg::Vst::Parameter</a> class or any subclass of it for your parameters.
 Otherwise the inline UI editor won't work properly.</p>
 <p>Next you have to add vstgui to your project. For <em>cmake</em> users, you can just add the vstgui_support library to your target:</p>
-<pre><code>target_link_libraries(${target} PRIVATE vstgui_support)
+<pre><code class="language-c++">target_link_libraries(${target} PRIVATE vstgui_support)
 </code></pre>
 <p>If you are not using cmake, you have to manually include the following source files to your project:</p>
 <ul>
@@ -182,10 +182,10 @@ Otherwise the inline UI editor won't work properly.</p>
 <li><em>VSTGUI_LIVE_EDITING=1</em></li>
 </ul>
 <p>With <em>cmake</em>, this would look like this:</p>
-<pre><code>target_compile_definitions(${target} PUBLIC$&lt;$&lt;CONFIG:Debug&gt;:VSTGUI_LIVE_EDITING=1&gt;)
+<pre><code class="language-c++">target_compile_definitions(${target} PUBLIC$&lt;$&lt;CONFIG:Debug&gt;:VSTGUI_LIVE_EDITING=1&gt;)
 </code></pre>
 <p>Finally, you have to modify your edit controller class to overwrite the <strong>createView()</strong> method:</p>
-<pre><code>#include &quot;vstgui/plugin-bindings/vst3editor.h&quot;
+<pre><code class="language-c++">#include &quot;vstgui/plugin-bindings/vst3editor.h&quot;
 
 IPlugView* PLUGIN_API MyEditController::createView (FIDStringname)
 {
@@ -201,7 +201,7 @@ IPlugView* PLUGIN_API MyEditController::createView (FIDStringname)
 <hr />
 <h2><a class="header" href="#part-2-open-the-vstguiwyswyg-editor" id="part-2-open-the-vstguiwyswyg-editor">Part 2: Open the VSTGUI/WYSWYG editor</a></h2>
 <p>If you now open your plug-in editor, you will see a blank editor. To enter the UI editor, right-click on it and choose &quot;<strong>Open UIDescription Editor</strong>&quot;.</p>
-<p>After your first edits, you have to add the <em>uidesc</em> file you have saved to your project (already done if you have used <a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a>) . You also have to make sure to always build your project after changes to the <em>uidesc</em> file.</p>
+<p>After your first edits, you have to add the <em>uidesc</em> file you have saved to your project (already done if you have used <a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a>). You also have to make sure to always build your project after changes to the <em>uidesc</em> file.</p>
 <hr />
 <h2><a class="header" href="#part-3-parameter-binding" id="part-3-parameter-binding">Part 3: Parameter Binding</a></h2>
 <p>If you've used the Parameter class provided by the <strong>VST 3 SDK</strong>, you get automatic parameter bindings between the controls of your editor and the parameters in your VST Edit Controller.</p>

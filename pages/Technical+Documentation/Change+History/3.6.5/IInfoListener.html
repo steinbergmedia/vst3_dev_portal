@@ -167,10 +167,10 @@
 <li>[released: 3.6.5]</li>
 <li>[optional]</li>
 </ul>
-<p>Allows the host to inform the plug-in about the context in which the plug-in is instantiated, mainly channel based info (color, name, index,...).Index can be defined inside a namespace (for example, index start from 1 to N for Type Input/Output Channel (Index namespace) and index start from 1 to M for Type Audio Channel).
-As soon as the plug-in provides this <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html">Vst::IInfoListener</a> interface, the host will call setChannelContextInfos for each change occurring to this channel (new name, new color, new indexation,...)</p>
+<p>Allows the host to inform the plug-in about the context in which the plug-in is instantiated, mainly channel based info (color, name, index, ...). Index can be defined inside a namespace (for example, index start from 1 to N for Type Input/Output Channel (Index namespace) and index start from 1 to M for Type Audio Channel).
+As soon as the plug-in provides this <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html">Vst::IInfoListener</a> interface, the host will call setChannelContextInfos for each change occurring to this channel (new name, new color, new indexation, ...)</p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
-<pre><code>//------------------------------------------------------------------------
+<pre><code class="language-c++">//------------------------------------------------------------------------
 tresult PLUGIN_API MyPlugin::setChannelContextInfos (IAttributeList* list)
 {
     if (list)

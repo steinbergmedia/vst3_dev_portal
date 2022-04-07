@@ -171,10 +171,10 @@
 <li>[released: 3.6.8]</li>
 <li>[optional]</li>
 </ul>
-<p>Allows the plug-in to request the host to activate or deactivate a specific bus.If the host accepts this request, it will call later on <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a3ab7d06aaefe03da1fcd1819f1261050">IComponent::activateBus</a>. This is particularly useful for instruments with more than 1 outputs, where the user could request from the plug-in UI a given output bus activation.</p>
+<p>Allows the plug-in to request the host to activate or deactivate a specific bus. If the host accepts this request, it will call later on <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a3ab7d06aaefe03da1fcd1819f1261050">IComponent::activateBus</a>. This is particularly useful for instruments with more than 1 outputs, where the user could request from the plug-in UI a given output bus activation.</p>
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a></p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
-<pre><code>// somewhere in your code when you need to inform the host to enable a specific Bus.
+<pre><code class="language-c++">// somewhere in your code when you need to inform the host to enable a specific Bus.
 FUnknownPtr&lt;IComponentHandlerBusActivation&gt; busActivation (componentHandler);
 if (busActivation)
 {

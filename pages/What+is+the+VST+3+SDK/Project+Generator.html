@@ -214,7 +214,7 @@
 <li><strong>URL</strong>: the URL of your Company: e.g. <em>&quot;<a href="https://www.steinberg.net">https://www.steinberg.net</a>&quot;</em></li>
 <li><strong>C++ Namespace</strong>: this allows you to predefine a namespace which will be used to surround your plug-in source code: e.g. <em>&quot;MyWantedNamespace&quot;</em>:</li>
 </ul>
-<pre><code>//...
+<pre><code class="language-c++">//...
 namespace MyWantedNamespace {
 
 /-----------------------------------------------------------------------
@@ -236,27 +236,18 @@ namespace MyWantedNamespace {
 <p>In this tab you are defining some information for the creation of a new plug-in:</p>
 <p><img src="../../resources/what_is_31.png" alt="what_if_31" /></p>
 <ul>
-<li>
-<p><strong>Name</strong>: the name of the plug-in which is displayed in a host: e.g. <em>&quot;AGain&quot;</em></p>
-</li>
-<li>
-<p><strong>Type</strong>: this specifies the main <strong>VST 3</strong> Sub-Category (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html">PlugType</a>) of your plug-in:</p>
+<li><strong>Name</strong>: the name of the plug-in which is displayed in a host: e.g. <em>&quot;AGain&quot;</em></li>
+<li><strong>Type</strong>: this specifies the main <strong>VST 3</strong> Sub-Category (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html">PlugType</a>) of your plug-in:
 <ul>
 <li><strong>Audio Effect</strong>: (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga0411b97bcc13d604e738a28aee43bb61">kFx</a>) a simple audio effect Stereo→Stereo</li>
 <li><strong>Instrument</strong>: (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga93cb7a7100ac96cfafceb6216770c42dl#gabe030351fd22d14dad35c817e1849f59">kInstrument</a>) a simple instrument with 1 Event input and 1 stereo Audio output</li>
 </ul>
 </li>
-<li>
-<p><strong>Use VSTGUI</strong>: check this if you want to use <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> as UI framework</p>
-</li>
-<li>
-<p><strong>macOS Deployment Target</strong>: enter here the minimum requested macOS version targeted</p></p>
-</li>
-<li>
-<p><strong>C++ Class Name</strong>: this specifies the basename of your plug-in classes: e.g. <em>&quot;AGain&quot;</em></p>
-</li>
+<li><strong>Use VSTGUI</strong>: check this if you want to use <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> as UI framework</li>
+<li><strong>macOS Deployment Target</strong>: enter here the minimum requested macOS version targeted</li>
+<li><strong>C++ Class Name</strong>: this specifies the basename of your plug-in classes: e.g. <em>&quot;AGain&quot;</em></li>
 </ul>
-<pre><code>class AGainProcessor : public AudioEffect
+<pre><code class="language-c++">class AGainProcessor : public AudioEffect
 {
     //...
 };
@@ -278,11 +269,11 @@ class AGainController : public EditControllerEx1
 </li>
 <li><strong>CMake Platform</strong>: you could here define which target platform should be used, i.e x64 or ARM64</li>
 </ul>
-<p>Once all information is setup, you could click on <strong>Create</strong>, a script will created and <strong>CMake</strong> will be used and the chosen IDE will be opened. In the bottom area the script output is displayed, you have the possibility to copy it by using the dedicated button: <strong>Copy Script Output To Clipboard</strong>.</p>
+<p>Once all information is setup, you could click on <strong>Create</strong>, a script will create and <strong>CMake</strong> will be used and the chosen IDE will be opened. In the bottom area the script output is displayed, you have the possibility to copy it by using the dedicated button: <strong>Copy Script Output To Clipboard</strong>.</p>
 <p><strong>Example of script Output</strong></p>
-<pre><code>C:\Program Files\CMake\bin\CMake.exe   C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.  2\VST_SDK\VST3_Project_Generator\Windows\Resources\GenerateVS3Plugi   n.cmake
--DSMTG_VST3_SDK_SOURCE_DIR_CLI=&quot;C:/Users/YGrabit/DesktopSDKs/  VST3_SDKs/3.7.2/VST_SDK/VST3_SDK&quot;
--DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI=&quot;C:/Users/YGrabitDesktop/    SDKs/VST3_SDKs/3.7.2/VST_SDK&quot;
+<pre><code>C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.  2\VST_SDK\VST3_Project_Generator\Windows\Resources\GenerateVS3Plugin.cmake
+-DSMTG_VST3_SDK_SOURCE_DIR_CLI=&quot;C:/Users/YGrabit/DesktopSDKs/VST3_SDKs/3.7.2/VST_SDK/VST3_SDK&quot;
+-DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI=&quot;C:/Users/YGrabitDesktop/SDKs/VST3_SDKs/3.7.2/VST_SDK&quot;
 -DSMTG_PLUGIN_NAME_CLI=&quot;AGain&quot;-DSMTG_PLUGIN_CATEGORY_CLI=&quot;Fx&quot; -DSMTG_CMAKE_PROJECT_NAME_CLI=&quot;AGain&quot;
 -DSMTG_PLUGIN_BUNDLE_NAME_CLI=&quot;AGain&quot;  -DSMTG_PLUGIN_IDENTIFIER_CLI=&quot;com.steinberg.again&quot;
 -DSMTG_MACOS_DEPLOYMENT_TARGET_CLI=&quot;10.12&quot; -DSMTG_VENDOR_NAME_CLI=&quot;Steinberg Media Technologies&quot;
@@ -306,57 +297,57 @@ class AGainController : public EditControllerEx1
 -- SMTG_VENDOR_NAME            : Steinberg Media Technologies
 -- SMTG_VENDOR_HOMEPAGE        : www.steinberg.net
 -- SMTG_VENDOR_EMAIL           : info@steinberg.net
--- SMTG_SOURCE_COPYRIGHT_HEADER: Copyright(c) 2021 SteinbergMedia  Technologies.
+-- SMTG_SOURCE_COPYRIGHT_HEADER: Copyright(c) 2021 SteinbergMedia Technologies.
 -- SMTG_PLUGIN_NAME            : AGain
 -- SMTG_PREFIX_FOR_FILENAMES   : e.g. myplugincontroller.h
--- SMTG_PLUGIN_IDENTIFIER      : com.steinberg.again, used eg. in  Info.plist
+-- SMTG_PLUGIN_IDENTIFIER      : com.steinberg.again, used eg. in Info.plist
 -- SMTG_PLUGIN_BUNDLE_NAME     : AGain
 
 -- SMTG_CMAKE_PROJECT_NAME     : e.g. AGain will output AGainvst3
 -- SMTG_VENDOR_NAMESPACE       : e.g. namespace MyCompanyName{...}
--- SMTG_PLUGIN_CLASS_NAME      : e.g. class AGainProcessor :public     AudioEffect {...}
+-- SMTG_PLUGIN_CLASS_NAME      : e.g. class AGainProcessor :public AudioEffect {...}
 -- SMTG_PLUGIN_CATEGORY        : Fx
 -- SMTG_MACOS_DEPLOYMENT_TARGET: 10.12
 
--- SMTG_Processor_UUID         : 0x127C3DBA, 0x64685FC5,   0x93CB28A6, 0x3D757D0D
--- SMTG_Controller_UUID        : 0x9D1EB67B, 0x14815678,   0x898F9FEE, 0xAD51C016
+-- SMTG_Processor_UUID         : 0x127C3DBA, 0x64685FC5, 0x93CB28A6, 0x3D757D0D
+-- SMTG_Controller_UUID        : 0x9D1EB67B, 0x14815678, 0x898F9FEE, 0xAD51C016
 
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/CMakeLists.txt
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/resource/Info.plist
--- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/resource127C3DBA64685FC593CB28A63D757D0D_snapshot.png
--- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/resource127C3DBA64685FC593CB28A63D757D0D_snapshot_2.    0x.png
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/resource/myplugineditor.uidesc
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/resource/win32resource.rc
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/source/version.h
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/source/myplugincids.h
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/source/myplugincontroller.cpp
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/source/myplugincontroller.h
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/source/mypluginentry.cpp
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/source/mypluginprocessor.cpp
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/   VST_SDK/AGain/source/mypluginprocessor.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/CMakeLists.txt
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource/Info.plist
+-- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource127C3DBA64685FC593CB28A63D757D0D_snapshot.png
+-- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource127C3DBA64685FC593CB28A63D757D0D_snapshot_2.0x.png
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource/myplugineditor.uidesc
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource/win32resource.rc
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/version.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/myplugincids.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/myplugincontroller.cpp
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/myplugincontroller.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/mypluginentry.cpp
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/mypluginprocessor.cpp
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/mypluginprocessor.h
 
-C:\Program Files\CMake\bin\CMake.exe -G &quot;Visual Studio 162019&quot; -S  &quot;C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.2VST_SDK\AGain&quot; -B     &quot;C:/Users/YGrabit/Desktop/SDKsVST3_SDKs/3.7.2/VST_SDK\AGain\build&quot;     -DSMTG_ADD_VSTGUI=ON
+C:\Program Files\CMake\bin\CMake.exe -G &quot;Visual Studio 162019&quot; -S &quot;C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.2VST_SDK\AGain&quot; -B &quot;C:/Users/YGrabit/Desktop/SDKsVST3_SDKs/3.7.2/VST_SDK\AGain\build&quot; -DSMTG_ADD_VSTGUI=ON
 -- Selecting Windows SDK version 10.0.19041.0 to targetWindows 10. 0.19042.
 -- The C compiler identification is MSVC 19.28.29913.0
 -- The CXX compiler identification is MSVC 19.28.29913.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files (x86)Microsoft   Visual Studio/2019/Professional/VC/Tools/MSVC/1428.29910/bin/    Hostx64/x64/cl.exe - skipped
+-- Check for working C compiler: C:/Program Files (x86)Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/1428.29910/bin/Hostx64/x64/cl.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/Program Files (x86)Microsoft     Visual Studio/2019/Professional/VC/Tools/MSVC14.28.29910/bin/  Hostx64/x64/cl.exe - skipped
+-- Check for working CXX compiler: C:/Program Files (x86)Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC14.28.29910/bin/Hostx64/x64/cl.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- [SMTG] SMTG_PLUGIN_TARGET_PATH is set to: C:/ProgramFiles/  Common Files/VST3
--- [SMTG] CMAKE_SOURCE_DIR is set to: C:/Users/YGrabitDesktop/SDKs/    VST3_SDKs/3.7.2/VST_SDK/AGain
--- [SMTG] CMAKE_CURRENT_LIST_DIR is set to: C:/UsersYGrabit/   Desktop/SDKs/VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
+-- [SMTG] SMTG_PLUGIN_TARGET_PATH is set to: C:/ProgramFiles/Common Files/VST3
+-- [SMTG] CMAKE_SOURCE_DIR is set to: C:/Users/YGrabitDesktop/SDKs/VST3_SDKs/3.7.2/VST_SDK/AGain
+-- [SMTG] CMAKE_CURRENT_LIST_DIR is set to: C:/UsersYGrabit/Desktop/SDKs/VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
 -- [SMTG] Disable all VST 3 samples
 -- Could NOT find EXPAT (missing: EXPAT_LIBRARYEXPAT_INCLUDE_DIR)
 -- VSTGUI will use the embedded Expat package!
--- [SMTG] SMTG_VSTGUI_ROOT is set to: C:/Users/YGrabitDesktop/SDKs/    VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
--- [SMTG] SMTG_AAX_SDK_PATH is not set. If you need it,please  download the AAX SDK!
+-- [SMTG] SMTG_VSTGUI_ROOT is set to: C:/Users/YGrabitDesktop/SDKs/VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
+-- [SMTG] SMTG_AAX_SDK_PATH is not set. If you need it, please download the AAX SDK!
 -- Looking for C++ include stdatomic.h
 -- Looking for C++ include stdatomic.h - not found
 -- [SMTG] Setup running validator for AGain
@@ -372,27 +363,27 @@ C:\Program Files\CMake\bin\CMake.exe -G &quot;Visual Studio 162019&quot; -S  &qu
 VST3ProjectGenerator LICENSE
 (c) Steinberg Media Technologies, All Rights Reserved
 
-Redistribution and use in source and binary forms, with orwithout  modification,
+Redistribution and use in source and binary forms, with orwithout modification,
 are permitted provided that the following conditions are met:
 
-* Redistributions of source code must retain the abovecopyright    notice,
+* Redistributions of source code must retain the abovecopyright notice,
 this list of conditions and the following disclaimer.
-* Redistributions in binary form must reproduce the abovecopyright     notice,
-this list of conditions and the following disclaimer inthe     documentation
+* Redistributions in binary form must reproduce the abovecopyright notice,
+this list of conditions and the following disclaimer inthe documentation
 and/or other materials provided with the distribution.
-* Neither the name of the Steinberg Media Technologies northe  names of its
-contributors may be used to endorse or promote productsderived     from this
+* Neither the name of the Steinberg Media Technologies northe names of its
+contributors may be used to endorse or promote productsderived from this
 software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ANDCONTRIBUTORS     &quot;AS IS&quot; AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO,   THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULARPURPOSE  ARE DISCLAIMED.
-IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BELIABLE FOR     ANY DIRECT,
-INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIALDAMAGES  (INCLUDING,
-BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS ORSERVICES;    LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSEDAND ON   ANY THEORY OF
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT  (INCLUDING NEGLIGENCE
-OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THISSOFTWARE,   EVEN IF ADVISED
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ANDCONTRIBUTORS &quot;AS IS&quot; AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULARPURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BELIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIALDAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS ORSERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSEDAND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THISSOFTWARE, EVEN IF ADVISED
 OF THE POSSIBILITY OF SUCH DAMAGE.
 </code></pre>
 

@@ -179,7 +179,7 @@
 <li>[optional]</li>
 </ul>
 <p>A representation based on XML is a way to export, structure, and group plug-in parameters for a specific remote (hardware or software rack (such as quick controls)).
-It allows to describe each parameter more precisely (what is the best matching to a knob, different title lengths matching limited remote display,...).</p>
+It allows to describe each parameter more precisely (what is the best matching to a knob, different title lengths matching limited remote display, ...).</p>
 <ul>
 <li>A representation is composed of pages (this means that to see all exported parameters, the user has to navigate through the pages).</li>
 <li>A page is composed of cells (for example, 8 cells per page).</li>
@@ -196,7 +196,7 @@ It allows to describe each parameter more precisely (what is the best matching t
 <p>This representation is implemented as XML text following the Document Type Definition (DTD): http://dtd.steinberg.net/VST-Remote-1.1.dtd</p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
 <p><strong>Here an example of what should be passed in the stream of getXmlRepresentationStream:</strong></p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;!DOCTYPE vstXML PUBLIC &quot;-//Steinberg//DTD VST Remote 1.1//EN&quot; &quot;http://dtd.steinberg.net/VST-Remote-1.1.dtd&quot;&gt;
 &lt;vstXML version=&quot;1.0&quot;&gt;
     &lt;plugin classID=&quot;341FC5898AAA46A7A506BC0799E882AE&quot; name=&quot;Chorus&quot; vendor=&quot;Steinberg Media Technologies&quot; /&gt;
@@ -296,7 +296,11 @@ It allows to describe each parameter more precisely (what is the best matching t
 <li>replace characters &quot;\*?/:.&lt;&gt;|\&quot;\t\n\r&quot; by &quot;_&quot;</li>
 </ul>
 </li>
-<li>$UID is the Unique ID of the processor in its string representation (for example: &quot;57F704D1FA974D668083E4B9AF581D23&quot; len=32)</li>
+<li>$UID is the Unique ID of the processor in its string representation
+<ul>
+<li>for example: &quot;57F704D1FA974D668083E4B9AF581D23&quot; len=32)</li>
+</ul>
+</li>
 </ul>
 <h3><a class="header" href="#for-mac-platform" id="for-mac-platform">For Mac platform</a></h3>
 <table><thead><tr><th align="left">Prio</th><th align="left">Type</th><th align="left">Scope</th><th align="left">Write</th><th align="left">Path</th><th align="left">Comment</th></tr></thead><tbody>

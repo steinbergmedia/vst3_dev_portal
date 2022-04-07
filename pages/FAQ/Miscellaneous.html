@@ -172,7 +172,7 @@
 <h2><a class="header" href="#q-what-is-the-return-value-tresult" id="q-what-is-the-return-value-tresult">Q: What is the return value tresult?</a></h2>
 <p>Almost all <strong>VST 3</strong> interfaces return a <em>tresult</em> value. This integer value allows to return to the caller more differentiated error/success information than just a boolean value with its true and false.</p>
 <p>The various possible values are defined in <em>funknown.h</em>. They are the same values as used in COM. Be careful when checking a <em>tresult</em> return value, because on success <strong>kResultOk</strong> is returned which has the integer value <em>0</em>:</p>
-<pre><code>// this is WRONG!!!!!
+<pre><code class="language-c++">// this is WRONG!!!!!
 if (component-&gt;setActive (true))
 {
 }
@@ -199,7 +199,7 @@ if (component-&gt;setActive (true) != kResultOK)
 <h2><a class="header" href="#q-why-do-plug-ins-need-subcategories" id="q-why-do-plug-ins-need-subcategories">Q: Why do plug-ins need subcategories?</a></h2>
 <p>When you export your plug-in in the factory instance (check <em>againentry.cpp</em>: DEF_CLASS2), you have to define a subcategory string (can be a combination of more than one string: like &quot;<strong>Fx|Dynamics|EQ</strong>&quot; for example).</p>
 <p>Currently the subcategory string is used by <strong>Cubase</strong>/<strong>Nuendo</strong> to organize the plug-ins menu like this:</p>
-<pre><code>Computation of Folder Name (SubCategories =&gt; folder in menu)
+<pre><code class="language-c++">Computation of Folder Name (SubCategories =&gt; folder in menu)
       &quot;Fx&quot;                        =&gt; &quot;Other&quot;
       &quot;Fx|Delay&quot;                  =&gt; &quot;Delay&quot;
       &quot;Fx|Mastering|Delay&quot;        =&gt; &quot;Mastering&quot;
@@ -221,14 +221,14 @@ if (component-&gt;setActive (true) != kResultOK)
 <h2><a class="header" href="#q-when-compiling-for-mac-audiounit-i-have-a-compiler-error-in-aucarbonviewbasecpp-what-can-i-do" id="q-when-compiling-for-mac-audiounit-i-have-a-compiler-error-in-aucarbonviewbasecpp-what-can-i-do">Q: When compiling for Mac AudioUnit, I have a compiler error in AUCarbonViewBase.cpp. What can I do?</a></h2>
 <p>Due to an issue in the Mac CoreAudio SDK, not yet fixed by Apple, you have to apply a small patch to the file AUCarbonViewBase.cpp (located in CoreAudio/AudioUnits/AUPublic/AUCarbonViewBase):<br />
 =&gt; Change:</p>
-<pre><code>HISize originalSize = { mBottomRight.h, mBottomRight.v };
+<pre><code class="language-c++">HISize originalSize = { mBottomRight.h, mBottomRight.v };
 to
 HISize originalSize = { static_cast&lt;CGFloat&gt;(mBottomRight.h),
                         static_cast&lt;CGFloat&gt;(mBottomRight.v) };
 </code></pre>
 <h2><a class="header" href="#q-how-can-i-develop-a-surroundpanner-plug-in-which-is-integrated-in-nuendo-as-panner" id="q-how-can-i-develop-a-surroundpanner-plug-in-which-is-integrated-in-nuendo-as-panner">Q: How can I develop a SurroundPanner plug-in which is integrated in Nuendo as Panner?</a></h2>
 <p>In order to make a surroundPanner plug-in selectable as panner (Post-fader) in Nuendo, this plug-in should have as subCategories: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#gaa334568999d986b4e50627646e51a8b4">kSpatial</a> or <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga9439d03e5e14fb7a35976d2e37f34e31">kSpatialFx</a> (in order to use it as insert too). For example:</p>
-<pre><code>DEF_CLASS2 (INLINE_UID_FROM_FUID(Steinberg::Vst::SPannerProcessor::cid),
+<pre><code class="language-c++">DEF_CLASS2 (INLINE_UID_FROM_FUID(Steinberg::Vst::SPannerProcessor::cid),
             PClassInfo::kManyInstances,
             kVstAudioEffectClass,
             stringPluginName,
