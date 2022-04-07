@@ -16,7 +16,7 @@ The **VST 3 API** is an interface collection designed for realtime audio process
 **VST 3** is based on a technology called [VST Module Architecture](../VST+Module+Architecture/Index.md) (**VST-MA**). Please read the [VST-MA documentation](../VST+Module+Architecture/Index.md) to find out more about how the plug-in system works in general.
 The API files belonging to **VST 3** are located in the folder *"pluginterfaces/vst"*.
 
-## Basic Conception
+## Basic Concept
 
 A **VST 3** audio effect or instrument basically consists of two parts: a processing part and an edit controller part.
 The corresponding interfaces are:
@@ -39,14 +39,14 @@ Although it is not recommended, it is possible to implement both the processing 
 >The plug-in should be prepared for processing without having the controller part instantiated.
 
 
-### Initialize
+### Initialization
 
 Both [Steinberg::Vst::IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html) and [Steinberg::Vst::IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html) derive from [Steinberg::IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html). The purpose of this basic interface is to initialize the component and to terminate it before it is destroyed.
 
 
 The context parameter passed to [Steinberg::IPluginBase::initialize](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html#a3c81be4ff2e7bbb541d3527264f26eed) should implement the interface [Steinberg::Vst::IHostApplication](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html). Hosts should not call other functions before initialize is called, with the sole exception of [Steinberg::Vst::IComponent::setIoMode](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137) which must be called before initialize. [Steinberg::Vst::IComponent::getControllerClassId](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a8aa65685068ad033af57b1497926b689) can also be called before ([See VST 3 Workflow Diagrams](../Workflow+Diagrams/Index.md)).
 
-**How the plug-in can access IHostApplication?**
+**How can the plug-in access IHostApplication?**
 
 ```
 /-----------------------------------------------------------------------
@@ -66,7 +66,7 @@ tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
 /-----------------------------------------------------------------------
 ```
 
-### Creation and Initialize from Host point of view
+### Creation and initialization from Host point of view
 
 Here an example of a host implementation creating the component and its associated controller of a plug-in with a given classID:
 
