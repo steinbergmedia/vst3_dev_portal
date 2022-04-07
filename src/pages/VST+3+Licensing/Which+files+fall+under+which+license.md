@@ -23,7 +23,7 @@ Each of these files includes this text:
 // This file is part of a Steinberg SDK. It is subject to thelicense terms
 // in the LICENSE file found in the top-level directory ofthis distribution
 // and at www.steinberg.net/sdklicenses.
-// No part of the SDK, including this file, may be copied,modified, propagated,
+// No part of the SDK, including this file, may be copied, modified, propagated,
 // or distributed except according to the terms contained inthe LICENSE file.
 //----------------------------------------------------------------------------
 ```

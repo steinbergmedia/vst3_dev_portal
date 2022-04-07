@@ -51,31 +51,29 @@ VSTGUI LICENSE
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
 
-* Redistributions of source code must retain the abovecopyright    notice,
+* Redistributions of source code must retain the abovecopyright notice,
 this list of conditions and the following disclaimer.
-* Redistributions in binary form must reproduce the above  copyright notice,
-this list of conditions and the following disclaimer inthe     documentation
+* Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer inthe documentation
 and/or other materials provided with the distribution.
-* Neither the name of the Steinberg Media Technologies northe  names of its
-contributors may be used to endorse or promote productsderived     from this
+* Neither the name of the Steinberg Media Technologies northe names of its
+contributors may be used to endorse or promote productsderived from this
 software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO,   THE IMPLIED
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO, THE IMPLIED
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BELIABLE     FOR ANY DIRECT,
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BELIABLE FOR ANY DIRECT,
 INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS ORSERVICES;    LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSEDAND ON   ANY THEORY OF
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT  (INCLUDING NEGLIGENCE
-OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THISSOFTWARE,   EVEN IF ADVISED
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS ORSERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSEDAND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THISSOFTWARE, EVEN IF ADVISED
 OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
 ## [Tutorials for VSTGUI](../Tutorials/Use+VSTGUI+to+design+a+UI.md)
 
->**[Use VSTGUI to design a User Interface](../Tutorials/Use+VSTGUI+to+design+a+UI.md)**
->
->---
->
->This tutorial explains how to use **VSTGUI**. **VSTGUI** comes with a *WYSIWYG* editor that allows you to createstunning user interfaces for your plug-in.
+**[Use VSTGUI to design a User Interface](../Tutorials/Use+VSTGUI+to+design+UI.md)**
+
+This tutorial explains how to use **VSTGUI**. **VSTGUI** comes with a *WYSIWYG* editor that allows you to createstunning user interfaces for your plug-in.

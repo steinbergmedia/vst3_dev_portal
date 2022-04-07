@@ -131,4 +131,4 @@ In this version of this Plug-in Test Host, the tests are limited to the main **V
 
 ![what_if_23](../../resources/what_is_23.jpg)
 
-With this editor you can load and modify VST 3 presets created with the **Store** button of the VST Rack by adding some meta-attributes.
+With this editor you can load and modify **VST 3** presets created with the **Store** button of the VST Rack by adding some meta-attributes.

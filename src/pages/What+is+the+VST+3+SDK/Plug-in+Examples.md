@@ -34,17 +34,20 @@ Check the folder *"public.sdk/samples/vst"* of the SDK!
 ## ADelay
 
 Very simple delay Plug-in:
+
 - only one parameter (a delay)
 
 Check the folder *"public.sdk/samples/vst/adelay"* of the SDK!
 
 Classes:
+
 - ADelayProcessor
 - ADelayController
 
 ## AGain
 
 The SDK includes an AGain Plug-in which is a very simple **VST 3 Plug-in**. This Plug-in:
+
 - is multichannel compatible
 - supports bypass processing
 - has an automated gain parameter
@@ -95,6 +98,7 @@ Check the folder *"public.sdk/samples/vst/hostchecker"* of the SDK!
 ## TestLegacyMIDICCOut
 
 Very simple Plug-in:
+
 - showing how to use [LegacyMIDICCOutEvent](../Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.md) which allow to generate MIDI CC as output event
 - VST parameters change which creates [LegacyMIDICCOutEvent](../Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.md) Event
 
@@ -103,6 +107,7 @@ Very simple Plug-in:
 Check the folder *"public.sdk/samples/vst/legacymidiccout"* of the SDK!
 
 Classes:
+
 - LegacyMIDICCOut::Plug
 
 ## mda Plug-ins

@@ -33,3 +33,4 @@ The wrapped AudioUnit does support MPE when the **VST 3** plug-in has Note Expre
   - open audiounitconfig.h and change the definitions in this file.
   - also change the other files in that folder to your requirements. Code signing is required, but you can build and test with a developer only identity.
   - build & run targets
+  

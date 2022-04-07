@@ -80,7 +80,8 @@ mkdir build
 cd build
 ```
 
-- Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:\
+- Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
+
 For XCode:
 
 ``` c++
@@ -133,12 +134,12 @@ cmake --build . --config Release
 
 ![tutorials_1](../../resources/tutorials_1.png)
 
-- "***Browse Source...***": select the folder VST3_SDK
-- "***Browse Build...***": select a folder where the outputs (projects/...) will be created. Typically a folder named "build"
-- You can check the ***SMTG** Options*
-- Press "***Configure***" and choose the generator in the window that opens: for example "**Visual Studio 16 2019**"
+- **Browse Source...**: select the folder VST3_SDK
+- **Browse Build...**: select a folder where the outputs (projects/...) will be created. Typically a folder named *build*
+- You can check the **SMTG Options**
+- Press **Configure** and choose the generator in the window that opens: for example "**Visual Studio 16 2019**"
 
 ![tutorials_2](../../resources/tutorials_2.png)
 
-- Press "***Generate***" to create the project
+- Press **Generate** to create the project
 - Open your targeted IDE, and compile the solution/project.

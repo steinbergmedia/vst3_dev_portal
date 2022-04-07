@@ -9,7 +9,7 @@
 
 ---
 
-The file extension has to be "**.vstpreset**", for example: *myBestDefault.vstpreset*
+The file extension has to be **.vstpreset**, for example: *myBestDefault.vstpreset*
 
 Specification of a **VST 3** Preset file:
 

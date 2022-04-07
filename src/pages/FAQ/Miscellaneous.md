@@ -49,7 +49,7 @@ When you export your plug-in in the factory instance (check *againentry.cpp*: DE
 Currently the subcategory string is used by **Cubase**/**Nuendo** to organize the plug-ins menu like this:
 
 ``` c++
-Computation of Folder Name (SubCategories => folder in menu)
+/* Computation of Folder Name (SubCategories => folder in menu) */
       "Fx"                        => "Other"
       "Fx|Delay"                  => "Delay"
       "Fx|Mastering|Delay"        => "Mastering"

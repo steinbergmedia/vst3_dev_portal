@@ -152,11 +152,11 @@ C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7
 
 ==================================================
 
--- Found Git: C:/Program Files/Git/cmd/git.exe (found version"2.9. 2.windows.1")
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version"2.9.2.windows.1")
 -- SMTG_CMAKE_SCRIPT_DIR           : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_Project_Generator/WindowsResources
 -- SMTG_ENABLE_VSTGUI_SUPPORT      : ON
 -- SMTG_GENERATOR_OUTPUT_DIRECTORY : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK
--- SMTG_TEMPLATE_FILES_PATH        : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_Project_Generator/WindowsResources/    cmake/templates
+-- SMTG_TEMPLATE_FILES_PATH        : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_Project_Generator/WindowsResources/cmake/templates
 -- SMTG_VST3_SDK_SOURCE_DIR        : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
 
 -- SMTG_VENDOR_NAME            : Steinberg Media Technologies
