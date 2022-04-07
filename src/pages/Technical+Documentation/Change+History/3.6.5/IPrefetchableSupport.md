@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.5] Prefetchable
 
@@ -21,7 +21,7 @@ The plug-in should implement this interface if it needs to dynamically change be
 
 ## Example
 
-```
+``` c++
 //------------------------------------------------------------------------
 tresult PLUGIN_API myPlug::getPrefetchableSupport (PrefetchableSupport& prefetchable)
 {

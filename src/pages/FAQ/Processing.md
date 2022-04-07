@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Frequently Asked Questions](../FAQ/Index.md)
+>/ [VST Home](../../index.md) / [Frequently Asked Questions](../FAQ/Index.md)
 >
 ># Processing
 
@@ -18,8 +18,8 @@ This is the choice of the plug-in to handle/process the bypass (like any other p
 
 During bypass the process is still called, but if not, for some reason, the host may call a flush (using process call with null audio buffer).
 
->***Note:***<br>
->The plug-in needs to save in its state the bypass parameter like any other parameters.
+>ⓘ **Note**\
+The plug-in needs to save in its state the bypass parameter like any other parameters.
 
 Q: Must the host deliver valid initialized Audio buffers if the associated bus is deactivated?
 
@@ -33,16 +33,16 @@ The max. sample block size ([maxSamplesPerBlock](https://steinbergmedia.github.i
 
 If the host changes the maximum sample block size it specifically calls the following:
 
-```
-Steinberg::Vst::IAudioProcessor::process (...);
-Steinberg::Vst::IAudioProcessor::setProcessing (false);
-Steinberg::Vst::IAudioProcessor::setActive (false);
- 
-Steinberg::Vst::IAudioProcessor::setupProcessing (...);
- 
-Steinberg::Vst::IAudioProcessor::setActive (true);
-Steinberg::Vst::IAudioProcessor::setProcessing (true);
-Steinberg::Vst::IAudioProcessor::process (...);
+``` c++
+Vst::IAudioProcessor::process (...);
+Vst::IAudioProcessor::setProcessing (false);
+Vst::IAudioProcessor::setActive (false);
+
+Vst::IAudioProcessor::setupProcessing (...);
+
+Vst::IAudioProcessor::setActive (true);
+Vst::IAudioProcessor::setProcessing (true);
+Vst::IAudioProcessor::process (...);
 ```
 
 Note that the [ProcessData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html)->[numSamples](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#aeb42971a4bd34d7baa27cff8d7e3cf26) which indicates how many samples are used in a process call can change from call to call, but never bigger than the [maxSamplesPerBlock](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html#a41cd06a0c942a1b3f283092b893d0de3).
@@ -57,33 +57,33 @@ Yes, the host can call [IAudioProcessor::process](https://steinbergmedia.github.
 
 ## Q: What is a Side-Chain?
 
-See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: How can I implement a Side-chain path into my plug-in?
 
-See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: My plug-in is capable of processing all possible channel configurations.
 
-See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: How are speaker arrangement settings handled for FX plug-ins?
 
-See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: My plug-in has mono input and stereo output. How does VST 3 handle this?
 
-See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: How does it work with silence flags?
 
-See [[3.0.0] Silence flags Support](../Technical+Documentation/Change+History/3.0.0/Silence+flags.md) and tutorial about [how to use Silence flags](../Tutorials/How+to+use+the+silence+flags.md).
+See [(3.0.0) Silence flags Support](../Technical+Documentation/Change+History/3.0.0/Silence+flags.md) and tutorial about [how to use Silence flags](../Tutorials/How+to+use+the+silence+flags.md).
 
 ## Q: How report to the host that the plug-in latency has changed?
 
 The plug-in should call from the editController its component handler [restartComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6) function with flag kLatencyChanged:
 
-```
+``` c++
 componentHandler->restartComponent (kLatencyChanged);
 ```
 
@@ -91,13 +91,13 @@ The host will call [Vst::IAudioProcessor->getLatencySamples()](https://steinberg
 
 ## Q: How report to the host that the plug-in arrangement has changed?
 
-See [[3.0.0] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: Can IAudioProcessor::setProcessing be called without any IAudioProcessor::process call?
 
 Yes, it depends how the DAW is supporting its processing, the following call sequence is legal:
 
-```
+``` c++
 Vst::IAudioProcessor::process (...);
 Vst::IAudioProcessor::setProcessing (false);
 Vst::IAudioProcessor::setProcessing (true);
@@ -121,11 +121,11 @@ When a plug-in is used in an offline processing context (which is the case with 
 The offline processing mode (passed in the process call) is used when:
 
 - the user exports audio (downmix)
-- direct offline processing feature <br>
+- direct offline processing feature
+
 With [IComponent::setIoMode](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137) (Vst::kOfflineProcessing) you are able to differentiate between export and DOP (Direct Offline Processing).
 
 [![getting_started_vid_1](https://i.ytimg.com/vi/62yMkHRfd2I/maxresdefault.jpg)](https://www.youtube.com/watch?v=62yMkHRfd2I)
-
 
 Direct Offline Processing since Cubase 9.5
 

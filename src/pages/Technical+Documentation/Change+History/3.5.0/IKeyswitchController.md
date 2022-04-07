@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.5.0] Key Switch
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [[3.5.0] Note Expression](../3.5.0/INoteExpressionController.md)
+- [(3.5.0) Note Expression](../3.5.0/INoteExpressionController.md)
 
 ---
 
@@ -40,183 +40,183 @@ We want a plug-in with 1 event bus, which is mono-timbral (1 channel), and which
 
 1. The instrument plug-in should have one input event bus (could be more):
 
-    ```
-    //  ------------------------------------------------------------------    ------
-    tresult PLUGIN_API MyExampleProcessor::initialize (FUnknown*    context)
+``` c++
+//------------------------------------------------------------------
+tresult PLUGIN_API MyExampleProcessor::initialize (FUnknown* context)
+{
+    //---always initialize the parent-------
+    tresult result = AudioEffect::initialize (context);
+    if (result == kResultTrue)
     {
-        //---always initialize the parent-------
-        tresult result = AudioEffect::initialize (context);
-        if (result == kResultTrue)
-        {
-            // we want a Stereo Output
-            addAudioOutput (STR16 ("Stereo Output"),    SpeakerArr::kStereo);
-    
-            // create Event In bus (1 bus with only 1 channel)
-            addEventInput (STR16 ("Event Input"), 1);
-        }
-        return result;
+        // we want a Stereo Output
+        addAudioOutput (STR16 ("Stereo Output"), SpeakerArr::kStereo);
+
+        // create Event In bus (1 bus with only 1 channel)
+        addEventInput (STR16 ("Event Input"), 1);
     }
-    ```
+    return result;
+}
+```
 
 2. The controller should have the interface [Steinberg::Vst::IKeyswitchController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html), here in the class declaration:
 
-    ```
-    //  ------------------------------------------------------------------    -----------
-    class MyExampleController: public EditController, public    IKeyswitchController
-    {
-    public:
-        //...
-        //---from IKeyswitchController
-        virtual int32 PLUGIN_API getKeyswitchCount (int32 busIndex,     int16 channel);
-        virtual tresult PLUGIN_API getKeyswitchInfo (int32 busIndex,    int16 channel, int32 keySwitchIndex, KeyswitchInfo& info);
-        //...
-    
-        OBJ_METHODS (MyExampleController, EditController)
-        DEFINE_INTERFACES
-            DEF_INTERFACE (IKeyswitchController)
-        END_DEFINE_INTERFACES (EditController)
-    
-        REFCOUNT_METHODS(EditController)
-        //...
-    };
-    ```
+``` c++
+//------------------------------------------------------------------
+class MyExampleController: public EditController, public IKeyswitchController
+{
+public:
+    //...
+    //---from IKeyswitchController
+    virtual int32 PLUGIN_API getKeyswitchCount (int32 busIndex, int16 channel);
+    virtual tresult PLUGIN_API getKeyswitchInfo (int32 busIndex, int16 channel, int32 keySwitchIndex, KeyswitchInfo& info);
+    //...
+
+    OBJ_METHODS (MyExampleController, EditController)
+    DEFINE_INTERFACES
+        DEF_INTERFACE (IKeyswitchController)
+    END_DEFINE_INTERFACES (EditController)
+
+    REFCOUNT_METHODS(EditController)
+    //...
+};
+```
 
 3. Now we have to implement the interface [Steinberg::Vst::IKeyswitchController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html) (only 2 functions), in our example [Steinberg::Vst::IKeyswitchController::getKeyswitchCount](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html#aa98a707edb1b58d05da0c50e38983a4e) should return 2 (2 key switches):
 
-    ```
-    //  ------------------------------------------------------------------    ------
-    int32 MyExampleController::getKeyswitchCount (int32 busIndex,   int16 channel)
-    {
-        // we accept only the first bus and 1 channel
-        if (busIndex == 0 && channel == 0)
-            return 2;
-        return 0;
-    }
-    ```
+``` c++
+//------------------------------------------------------------------
+int32 MyExampleController::getKeyswitchCount (int32 busIndex, int16 channel)
+{
+    // we accept only the first bus and 1 channel
+    if (busIndex == 0 && channel == 0)
+        return 2;
+    return 0;
+}
+```
 
 4. Then, we have to implement [Steinberg::Vst::IKeyswitchController::getKeyswitchInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html#a8193190849039a70d08b084241d29e38), which allows to inform the host about what the plug-in supports:
 
-    ```
-    //  ------------------------------------------------------------------    ------
-    tresult PLUGIN_API MyExampleController::getKeyswitchInfo (int32     busIndex, int16 channel, int32 keySwitchIndex, KeyswitchInfo&   info)
+``` c++
+//------------------------------------------------------------------
+tresult PLUGIN_API MyExampleController::getKeyswitchInfo (int32 busIndex, int16 channel, int32 keySwitchIndex, KeyswitchInfo& info)
+{
+    // we accept only the first bus and 1 channel and only 2 keyswitches
+    if (busIndex == 0 && channel == 0 && (keySwitchIndex == 0 || keySwitchIndex == 1)
     {
-        // we accept only the first bus and 1 channel and only 2    keyswitches
-        if (busIndex == 0 && channel == 0 && (keySwitchIndex == 0 ||    keySwitchIndex == 1)
+        memset (&info, 0, sizeof (KeyswitchInfo));
+
+        // in this case we want that Keyswitch should be maintained pressed for playing
+        info.typeId = kKeyRangeTypeID;
+
+        // we could use keyRemapped to make easier the use of the keyswitch (near the available instrument key range)
+        // take care that there are no overlap between keyswitches and real key (playing sound)
+
+        if (keySwitchIndex == 0)
         {
-            memset (&info, 0, sizeof (KeyswitchInfo));
-    
-            // in this case we want that Keyswitch should be    maintained pressed for playing
-            info.typeId = kKeyRangeTypeID;
+            USTRING ("Accentuation").copyTo (info.title, 128);
+            USTRING ("Acc").copyTo (info.shortTitle, 128);
 
-            // we could use keyRemapped to make easier the use of the   keyswitch (near the available instrument key range)
-            // take care that there are no overlap between  keyswitches and real key (playing sound)
-    
-            if (keySwitchIndex == 0)
-            {
-                USTRING ("Accentuation").copyTo (info.title, 128);
-                USTRING ("Acc").copyTo (info.shortTitle, 128);
-    
-                // if the user keeps pressed C-1 or C#-1 or C-0 then    the Accentuation sound should be played
-                info.keyswitchMin = 12; // C-1
-                info.keyswitchMax = 13; // C#-1
-                info.keyRemapped  = 24; // C-0
-            }
-            else
-            {
-                USTRING ("Softly").copyTo (info.title, 128);
-                USTRING ("Soft").copyTo (info.shortTitle, 128);
-
-                // if the user keeps pressed D-1 or D#-1 or D-0 then    the Softly sound should be played
-                info.keyswitchMin = 14; // D-1
-                info.keyswitchMax = 15; // D#-1
-                info.keyRemapped  = 26; // D-0
-            }
-    
-            info.unitID = -1; // not used
-            info.flags = 0;  // not used
-
-            return kResultTrue;
+            // if the user keeps pressed C-1 or C#-1 or C-0 then the Accentuation sound should be played
+            info.keyswitchMin = 12; // C-1
+            info.keyswitchMax = 13; // C#-1
+            info.keyRemapped  = 24; // C-0
         }
-        return kResultFalse;
+        else
+        {
+            USTRING ("Softly").copyTo (info.title, 128);
+            USTRING ("Soft").copyTo (info.shortTitle, 128);
+
+            // if the user keeps pressed D-1 or D#-1 or D-0 then the Softly sound should be played
+            info.keyswitchMin = 14; // D-1
+            info.keyswitchMax = 15; // D#-1
+            info.keyRemapped  = 26; // D-0
+        }
+
+        info.unitID = -1; // not used
+        info.flags = 0;  // not used
+
+        return kResultTrue;
     }
-    ```
+    return kResultFalse;
+}
+```
 
 5. Last step, in the processor component, we have to adapt the process call to switch to the wanted articulation:
 
-    ```
-    //  ------------------------------------------------------------------    ------
-    tresult MyExampleProcessor::process (ProcessData& data)
-    {
-        // ....
-    
-        // get the input event queue
-        IEventList* inputEvents = data.inputEvents;
-        if (inputEvents)
-        {
-            Event e;
-            int32 numEvents = inputEvents->getEventCount ();
-    
-            // for each events check it..
-            for (int32 i = 0; i < numEvents; i++)
-            {
-                if (inputEvents->getEvent (i, e) == kResultTrue)
-                {
-                    switch (e.type)
-                    {
-                        //-----------------------
-                        case Event::kNoteOnEvent:
-                        {
-                            // here a note On
-                            // check if this is a Keyswitch
-                            switch (e.noteOn.pitch)
-                            {
-                                // Accentuation Keyswitch
-                                case 12:
-                                case 13:
-                                case 24:
-                                    currentLayer = kAccentuationLayer;
-                                    break;
-    
-                                // Softly Keyswitch
-                                case 14:
-                                case 15:
-                                case 26:
-                                    currentLayer = kSoftlyLayer;
-                                    break;
-    
-                                default:
-                                    // play the note in the     currentLayer
-                                    // ...
-                            }
-                        }   break;
+``` c++
+//------------------------------------------------------------------
+tresult MyExampleProcessor::process (ProcessData& data)
+{
+    // ....
 
-                        //-----------------------
-                        case Event::kNoteOffEvent:
+    // get the input event queue
+    IEventList* inputEvents = data.inputEvents;
+    if (inputEvents)
+    {
+        Event e;
+        int32 numEvents = inputEvents->getEventCount ();
+
+        // for each events check it..
+        for (int32 i = 0; i < numEvents; i++)
+        {
+            if (inputEvents->getEvent (i, e) == kResultTrue)
+            {
+                switch (e.type)
+                {
+                    //-----------------------
+                    case Event::kNoteOnEvent:
+                    {
+                        // here a note On
+                        // check if this is a Keyswitch
+                        switch (e.noteOn.pitch)
                         {
-                            // check if keyswitch is released
-                            switch (e.noteOff.pitch)
-                            {
-                                // Accentuation Keyswitch
-                                case 12:
-                                case 13:
-                                case 24:
-                                case 14:
-                                case 15:
-                                case 26:
-                                    currentLayer = kDefaultLayer;
-                                    break;
-                                default:
-                                    // released note...
-                                    //...
-                            }
-                        }   break;
-                        //....
-                    }
+                            // Accentuation Keyswitch
+                            case 12:
+                            case 13:
+                            case 24:
+                                currentLayer = kAccentuationLayer;
+                                break;
+
+                            // Softly Keyswitch
+                            case 14:
+                            case 15:
+                            case 26:
+                                currentLayer = kSoftlyLayer;
+                                break;
+
+                            default:
+                                // play the note in the currentLayer
+                                // ...
+                        }
+                    }   break;
+
+                    //-----------------------
+                    case Event::kNoteOffEvent:
+                    {
+                        // check if keyswitch is released
+                        switch (e.noteOff.pitch)
+                        {
+                            // Accentuation Keyswitch
+                            case 12:
+                            case 13:
+                            case 24:
+                            case 14:
+                            case 15:
+                            case 26:
+                                currentLayer = kDefaultLayer;
+                                break;
+                            default:
+                                // released note...
+                                //...
+                        }
+                    }   break;
+                    //....
                 }
             }
         }
-        //...
     }
-    ```
+    //...
+}
+```
 
 That is it!

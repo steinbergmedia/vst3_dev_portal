@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.0] Preset Meta-Information
 
@@ -21,7 +21,7 @@ Interface to access preset meta information from stream, used, for example, in [
 
 ## Example
 
-```
+``` c++
 #include "pluginterfaces/base/ustring.h"
 #include "pluginterfaces/vst/vstpresetkeys.h"
 // ...

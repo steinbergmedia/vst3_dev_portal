@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.1] Parameter MIDI Mapping
 
@@ -8,8 +8,8 @@
 
 **Related pages**
 
-- [About MIDI in VST 3](/pages/Technical+Documentation/About+MIDI/Index.md)
-- [[3.6.12] MIDI Learn](/pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.md)
+- [About MIDI in VST 3](../../About+MIDI/Index.md)
+- [(3.6.12) MIDI Learn](../../Change+History/3.6.12/IMidiLearn.md)
 
 ---
 
@@ -32,7 +32,7 @@ So any functionality that is to be controlled by **MIDI** controllers must be ex
 
 **In myeditcontroller.h**
 
-```
+``` c++
 //--------------------------------------
 class MyEditController: public EditControllerEx1, public IMidiMapping
 {
@@ -50,7 +50,7 @@ class MyEditController: public EditControllerEx1, public IMidiMapping
 
 **In myeditcontroller.cpp**
 
-```
+``` c++
 //--------------------------------------
 tresult PLUGIN_API MyEditController::getMidiControllerAssignment (int32 busIndex, int16 midiChannel, CtrlNumber midiControllerNumber, ParamID& tag)
 {

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.11] NoteExpression Physical UI Mapping
 
@@ -8,11 +8,12 @@
 
 **Related pages:**
 
-- [[3.5.0] Note Expression](/pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
+- [(3.5.0) Note Expression](../../Change+History/3.5.0/INoteExpressionController.md)
 
 ---
 
 # Introduction
+
 Extended plug-in interface [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html) for note expression event support: [Vst::INoteExpressionPhysicalUIMapping](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionPhysicalUIMapping.html)
 
 - [plug imp]
@@ -26,9 +27,9 @@ With this plug-in interface, the host can retrieve the preferred physical mappin
 
 **In mycontroller.h**
 
-```
+``` c++
 //------------------------------------------------------------------------
-// here an example of how a VST3 Plug-in could support this INoteExpressionPhysicalUIMapping interface.
+// here an example of how a VST 3 Plug-in could support this INoteExpressionPhysicalUIMapping interface.
 // we need to define somewhere the iids:
   
 //in MyController class declaration
@@ -50,7 +51,7 @@ class MyController : public Vst::EditController, public Vst::INoteExpressionPhys
 
 **In mycontroller.cpp**
 
-```
+``` c++
 #include "pluginterfaces/vst/ivstnoteexpression.h"
  
 namespace Steinberg {

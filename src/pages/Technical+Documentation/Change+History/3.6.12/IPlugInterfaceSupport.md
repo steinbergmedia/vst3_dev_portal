@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.12] Host Query Interface support
 
@@ -20,7 +20,7 @@ Allows a plug-in to ask the host if a given plug-in interface is supported/used 
 
 ## Example
 
-```
+``` c++
 //------------------------------------------------------------------------
 tresult PLUGIN_API MyPluginController::initialize (FUnknown* context)
 {

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.1] Parameter MIDI Mapping
 
@@ -13,7 +13,7 @@
 Extended [IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html) interface for a component: [Vst::IAudioPresentationLatency](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioPresentationLatency.html).
 
 - [plug imp]
-- [extends IAudioProcessor]
+- [extends [IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html)]
 - [released: 3.1.0]
 - [optional]
 
@@ -25,4 +25,4 @@ A value of zero either means no latency or an unknown latency.
 
 Each plug-in adding a latency (returning a none zero value for [IAudioProcessor::getLatencySamples](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#af8884671ccefe68e0a86e72413a0fcf8)) will modify the input presentation latency of the next plug-ins in the mixer routing graph and will modify the output presentation latency of the previous plug-ins.
 
-![tech_doc_31](/resources/tech_doc_31.png)
+![tech_doc_31](../../../../resources/tech_doc_31.png)

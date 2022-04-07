@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Tutorials](../Tutorials.md)
+>/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># How to use the silence flags
 
@@ -20,7 +20,7 @@ The silence flags is part of the [AudioBusBuffers](https://steinbergmedia.github
 
 ## Plug-in receives a silent audio input
 
-```
+``` c++
 /-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
@@ -53,12 +53,12 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
     }
 ```
         
->***Note***<br>
+>ⓘ **Note**\
 >The host has the responsibility to clear the input buffers (set to zero) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)).
 
 ## Plug-in generates silent output
 
-```
+``` c++
 /-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
@@ -88,15 +88,15 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
     }
 ```
 
->***Note***<br>
+>ⓘ **Note**\
 >The plug-in, if it produces silence output, has the responsibility to clear (set to zero) its output buffers and to correctly set the output silence flags.
 
 ## In bypass
 
 In Bypass mode the plug-in has to be sure that its outputs have the same stand than its inputs:
 
-```
-/-----------------------------------------------------------------------
+``` c++
+//-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
     //...
@@ -128,8 +128,8 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
 
 ## Plug-in generates audio output
 
-```
-/-----------------------------------------------------------------------
+``` c++
+//-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
     //...

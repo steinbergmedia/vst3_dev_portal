@@ -17,21 +17,19 @@
 **VST 3** presets are located at predefined locations on the computer, depending on the operating system.
 
 - 3 levels of preset scope are defined:
-    - **User**: available only for the current logged user
-    - **Public**: available for all users of the system
-    - **Apps**: available only inside a specific audio application
+  - **User**: available only for the current logged user
+  - **Public**: available for all users of the system
+  - **Apps**: available only inside a specific audio application
 - 4 types of preset are defined:
-    - **User**: presets created by the user
-    - **User_Factory**: like User type, but more hidden
-    - **Shared_Factory**: factory presets installed by the plug-in  installer
-    - **App_Factory**: presets installed by an audio application installer, only visible for this specific audio application
+  - **User**: presets created by the user
+  - **User_Factory**: like User type, but more hidden
+  - **Shared_Factory**: factory presets installed by the plug-in  installer
+  - **App_Factory**: presets installed by an audio application installer, only visible for this specific audio application
 
+>⚠️ **Warning**\
+>**$COMPANY** and **$PLUGIN-NAME** folder names contain only allowed characters for file naming (replace characters "\\*?/:<>|\"by "_").
 
->***Caution***<br>
->**$COMPANY** and **$PLUGIN-NAME** folder names contain only allowed characters for file naming (replace characters "**\\*?/:<>|\**"by "_").
-
-
->***Note***<br>
+>ⓘ **Note**\
 >Each path defined below should be scanned in the given priority, presets extracted and added to the preset list.
 
 ### For Mac platform

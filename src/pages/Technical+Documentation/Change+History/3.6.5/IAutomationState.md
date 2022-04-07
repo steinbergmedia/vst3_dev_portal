@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.5] Automation State
 
@@ -23,7 +23,7 @@ Hosts can inform the plug-in about its current automation state (Read/Write/Noth
 
 **in mycontroller.h**
 
-```
+``` c++
 //------------------------------------------------------------------------
 class MyController: public EditControllerEx1, public IAutomationState
 {
@@ -42,7 +42,7 @@ class MyController: public EditControllerEx1, public IAutomationState
 
 **In mycontroller.cpp**
 
-```
+``` c++
 //------------------------------------------------------------------------
 tresult PLUGIN_API MyController::setAutomationState (int32 state)
 {

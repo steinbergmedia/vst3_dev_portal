@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md)
+>/ [VST Home](../index.md)
 >
 ># Main benefits of VST 3
 
@@ -46,7 +46,7 @@ The host can ask the plug-in which parameter is under the mouse.
 
 ## 8. [Channel Context Information](../Technical+Documentation/Change+History/3.6.5/IInfoListener.md)
 
-A **VST 3** plug-in can access channel information where it is instantiated: name, color,...
+A **VST 3** plug-in can access channel information where it is instantiated: name, color, ...
 
 ## 9. [Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
 
@@ -76,9 +76,9 @@ While designing **VST 3**, we performed a careful analysis of the existing funct
 - Advanced preset system
 - Multiple plug-ins per library
 - [VST 3 SDK package](../What+is+the+VST+3+SDK/Index.md):
-    - [Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) included
-    - Automated testing environment
-    - Validator (small command line Test Host)
-    - [Plug-in and host examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md) code included
-    - [Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)
-    - ...
+  - [Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) included
+  - Automated testing environment
+  - Validator (small command line Test Host)
+  - [Plug-in and host examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md) code included
+  - [Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)
+  - ...

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.7.0] Progress display
 
@@ -23,7 +23,7 @@ Allows the plug-in to request the host to create a progress for some specific ta
 
 ### How to call it from the plug-in side
 
-```
+``` c++
 //--------------------------------------
 // we are in the editcontroller:
 // as member: IProgress::ID mProgressID;
@@ -43,6 +43,7 @@ FUnknownPtr<IProgress> progress (componentHandler);
 if (progress)
     progress->finish (mProgressID);
 ```
-[VST 3 Plug-in Test Host](/pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.md) integration of [Vst::IProgress](https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IProgress.html)
 
-![tech_doc_35](/resources/tech_doc_35.png)
+[VST 3 Plug-in Test Host](../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) integration of [Vst::IProgress](https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IProgress.html)
+
+![tech_doc_35](../../../../resources/tech_doc_35.png)

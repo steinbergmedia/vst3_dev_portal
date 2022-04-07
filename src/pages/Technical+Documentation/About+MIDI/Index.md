@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../index.md) / [Technical Documentation](../Index.md)
 >
 ># About MIDI in VST 3
 
@@ -8,12 +8,12 @@
 
 **Related pages:**
 
-- [[3.0.1] Parameter MIDI Mapping](../Change+History/3.0.1/IMidiMapping.md)
-- [[3.5.0] Note Expression](../Change+History/3.5.0/INoteExpressionController.md)
-- [[3.5.0] Key Switch](../Change+History/3.5.0/IKeyswitchController.md)
-- [[3.6.11] NoteExpression Physical UI Mapping](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md)
-- [[3.6.12] Legacy MIDI CC Out Event](../Change+History/3.6.12/LegacyMIDICCOutEvent.md)
-- [[3.6.12] MPE support for Wrappers](../Change+History/3.6.12/IVst3WrapperMPESupport.md)
+- [(3.0.1) Parameter MIDI Mapping](../Change+History/3.0.1/IMidiMapping.md)
+- [(3.5.0) Note Expression](../Change+History/3.5.0/INoteExpressionController.md)
+- [(3.5.0) Key Switch](../Change+History/3.5.0/IKeyswitchController.md)
+- [(3.6.11) NoteExpression Physical UI Mapping](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md)
+- [(3.6.12) Legacy MIDI CC Out Event](../Change+History/3.6.12/LegacyMIDICCOutEvent.md)
+- [(3.6.12) MPE support for Wrappers](../Change+History/3.6.12/IVst3WrapperMPESupport.md)
 
 ---
 
@@ -21,7 +21,7 @@ Unlike in **VST 2, MIDI** is not included in **VST 3**.
 
 But **VST 3** offers suitable concepts that can be translated to and from MIDI using [Event](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Event.html):
 
-![tech_doc_27](/resources/tech_doc_27.png)
+![tech_doc_27](../../../resources/tech_doc_27.png)
 
 ## Related Concepts in MIDI and VST 3
 
@@ -41,7 +41,7 @@ Relationship of concepts in **MIDI 1.0** to **VST 3**
 | MPE (MIDI Polyphonic Expression) | [NoteExpression](../Change+History/3.5.0/INoteExpressionController.md), [PhysicalUI](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md) | *ivstnoteexpression.h*, *ivstphysicalui.h* |
 | System Exclusive | [Steinberg::Vst::DataEvent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1DataEvent.html) of Type [Steinberg::Vst::DataEvent::kMidiSysEx](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1DataEvent.html#afb6eb4f28419b652027fad41104a6d22ab06d86440be6a85eccce4df100ce8e79) | *ivstevents.h* |
 
-<br>Additional relationships of concepts introduced in MIDI 2.0 (<https://www.midi.org/>) to **VST 3**
+Additional relationships of concepts introduced in MIDI 2.0 (<https://www.midi.org/>) to **VST 3**
 
 | MIDI 2.0 | VST 3 | Defined in/Comments |
 | :- | :- | :- |

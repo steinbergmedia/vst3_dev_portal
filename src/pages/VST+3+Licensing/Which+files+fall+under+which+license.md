@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
+>/ [VST Home](../index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
 >
 ># Which files fall under which license?
 
@@ -14,26 +14,27 @@
 
 ## Which files of the VST 3 SDK fall under which license?
 
-All files describing the VST 3 interface, except VST 2 files, located in the folder "pluginterfaces" of the SDK, fall under the dual-license described previously.
+All files describing the VST 3 interface, except VST 2 files, located in the folder *"pluginterfaces"* of the SDK, fall under the dual-license described previously.
 
 Each of these files includes this text:
-```
-/----------------------------------------------------------------------------
+
+``` c++
+//----------------------------------------------------------------------------
 // This file is part of a Steinberg SDK. It is subject to thelicense terms
 // in the LICENSE file found in the top-level directory ofthis distribution
 // and at www.steinberg.net/sdklicenses.
 // No part of the SDK, including this file, may be copied,modified, propagated,
 // or distributed except according to the terms contained inthe LICENSE file.
-/----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 ```
 
 - for all other files of the VST 3 SDK, the respective embedded license text is applicable, for example:
-    - all **VSTGUI** files fall under a **BSD style** license
-    - all **Helper files** (included in base and public.sdk folders) except VST 2 files fall under a **BSD style** license
-    - all **VST 2 files** (included in pluginterfaces and public.sdk folders) fall under the "**Proprietary Steinberg VST 2**" license
-    - all **mda-vst3 examples** (*public.sdk/samples/mda-vst3 folder*) fall under a **BSD style** license: Copyright (c) 2008 Paul Kellett
+  - all **VSTGUI** files fall under a **BSD style** license
+  - all **Helper files** (included in base and public.sdk folders) except VST 2 files fall under a **BSD style** license
+  - all **VST 2 files** (included in pluginterfaces and public.sdk folders) fall under the "**Proprietary Steinberg VST 2**" license
+  - all **mda-vst3 examples** (*public.sdk/samples/mda-vst3 folder*) fall under a **BSD style** license: Copyright (c) 2008 Paul Kellett
 
-## What´s about VST 2?
+## What about VST 2?
 
 The "Proprietary Steinberg VST 2" license, which is the VST 2 license agreement, allows you to distribute your VST 2 plug-in/host in a binary form. However, please note the following requirements:
 

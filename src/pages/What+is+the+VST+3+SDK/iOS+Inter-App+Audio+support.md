@@ -1,5 +1,5 @@
->/ [VST Home](/Index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 >
 ># iOS Inter-App Audio Support
 
-See **[[3.6.0] iOS Inter-App Audio](../Technical+Documentation/Change+History/3.6.0/IAA.md)**
+See **[(3.6.0) iOS Inter-App Audio](../Technical+Documentation/Change+History/3.6.0/IAA.md)**

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.5.0] Enhanced Linked Parameters
 
@@ -21,7 +21,7 @@ This allows the host to start a parameter editing action which can generate othe
 
 ## Example
 
-```
+``` c++
 //------------------------------------------------------------------------
 plugEditController->beginEditFromHost (id);
 plugEditController->setParamNormalized (id, value);

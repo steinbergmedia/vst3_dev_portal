@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../index.md) / [Technical Documentation](../Index.md)
 >
 ># VST 3 Locations / Format
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [[3.5.0] Remote Presentation of Parameters](../Change+History/3.5.0/IXmlRepresentationController.md)
+- [(3.5.0) Remote Presentation of Parameters](../Change+History/3.5.0/IXmlRepresentationController.md)
 
 ---
 

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Tutorials](../Tutorials.md)
+>/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
 >
 ># Use VSTGUI to design a User Interface
 
@@ -14,14 +14,14 @@ This tutorial explains how to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.m
 
 ## Part 1: Preparation
 
-If you have created your project with the [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) and check the "**Use VSTGUI**" you can directly jump to Part 2 of this tutorial.
+If you have created your project with the [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) and check the "**Use VSTGUI**" you can directly jump to [Part 2](#part-2-open-the-vstguiwyswyg-editor) of this tutorial.
 
 Before using the inline UI editor, you must make sure that you use the [Steinberg::Vst::EditController](https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1EditController.html) class as a base of your own edit controller and that you have used the [Steinberg::Vst::Parameter](https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1Parameter.html) class or any subclass of it for your parameters.
 Otherwise the inline UI editor won't work properly.
 
 Next you have to add vstgui to your project. For *cmake* users, you can just add the vstgui_support library to your target:
 
-```
+``` c++
 target_link_libraries(${target} PRIVATE vstgui_support)
 ```
 
@@ -37,13 +37,13 @@ After that you have to alter your project settings to add a preprocessor definit
 
 With *cmake*, this would look like this:
 
-```
+``` c++
 target_compile_definitions(${target} PUBLIC$<$<CONFIG:Debug>:VSTGUI_LIVE_EDITING=1>)
 ```
 
 Finally, you have to modify your edit controller class to overwrite the **createView()** method:
 
-```
+``` c++
 #include "vstgui/plugin-bindings/vst3editor.h"
 
 IPlugView* PLUGIN_API MyEditController::createView (FIDStringname)
@@ -66,7 +66,7 @@ Now you can build your plug-in and start your preferred **VST 3** host to start 
 
 If you now open your plug-in editor, you will see a blank editor. To enter the UI editor, right-click on it and choose "**Open UIDescription Editor**".
 
-After your first edits, you have to add the *uidesc* file you have saved to your project (already done if you have used [VST 3 Project Generator](/What+is+the+VST+3+SDK/Project+Generator.md)) . You also have to make sure to always build your project after changes to the *uidesc* file.
+After your first edits, you have to add the *uidesc* file you have saved to your project (already done if you have used [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)). You also have to make sure to always build your project after changes to the *uidesc* file.
 
 ---
 
@@ -92,9 +92,8 @@ Another way to use your own views is to register them at runtime with the UIView
 
 Here's an example video recorded while creating the new user interface for the famous Grungelizer plug-in of Cubase after it was ported from **VST 2.4** to **VST 3**.
 
-![tutorials_5](/resources/tutorials_5.png)
+![tutorials_5](../../resources/tutorials_5.png)
 
 **Create the VST 3 Grungelizer UI in 15 minutes with the UIDescriptionEditor of VSTGUI**
 
 [![tutorial_vid_1](https://i.ytimg.com/vi/0zFT6bo2Dig/maxresdefault.jpg)](https://www.youtube.com/watch?v=0zFT6bo2Dig)
-

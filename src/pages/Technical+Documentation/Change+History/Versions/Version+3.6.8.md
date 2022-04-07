@@ -3,8 +3,8 @@
 ># Version 3.6.8 (2017/11/08)
 
 ## Version 3.6.8 (2017/11/08)
-- Changes in the Licensing Agreement! Please check it ([VST 3 Licensing Issues](/pages/VST+3+Licensing/Index.md)).
-- [New Steinberg VST usage guidelines](/pages/VST+3+Licensing/Usage+guidelines.md) PDF
+- Changes in the Licensing Agreement! Please check it ([VST 3 Licensing Issues](../../../VST+3+Licensing/Index.md)).
+- [New Steinberg VST usage guidelines](../../../VST+3+Licensing/Usage+guidelines.md) PDF
 - This SDK version required compilers supporting C++11. It requires on Windows Visual Studio 2015 minimum!
 - Linux support in Beta
 - Interfaces changes:
@@ -15,7 +15,7 @@
 - Samples:
     - New VST 3 Host implementation examples:
     - Folder reorganization: hosting examples are in a separate folder: public.sdk/samples/vst-hosting
-    - New AudioHost (AudioHost - cross-platform standalone) showing how integrate a VST3 plug-in in a Jack world! This required Jack Audio (<http://www.jackaudio.org>), only tested under Linux but should work on Windows 32bits and Mac.
+    - New AudioHost (AudioHost - cross-platform standalone) showing how integrate a VST 3 plug-in in a Jack world! This required Jack Audio (<http://www.jackaudio.org>), only tested under Linux but should work on Windows 32bits and Mac.
 - Plug-in wrappers:
     - New Audio Unit v3 (AUv3) Wrapper (VST 3 - Audio Unit v3 Wrapper)
     - New AAX wrapper (VST 3 - AAX Wrapper): Note that in order to use this AAX wrapper for your plug-in, you have to download the AAX SDK (contact AVID), tested with AAX SDK Version 2.3.0.

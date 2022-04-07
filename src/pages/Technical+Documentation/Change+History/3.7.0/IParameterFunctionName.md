@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.7.0] Parameter Function Name
 
@@ -23,9 +23,9 @@ This interface allows the host to get a parameter associated to a specific meani
 
 **In mycontroller.h**
 
-```
+``` c++
 //------------------------------------------------------------------------
-// here an example of how a VST3 Plug-in could support this IParameterFunctionName interface.
+// here an example of how a VST 3 Plug-in could support this IParameterFunctionName interface.
 // we need to define somewhere the iids:
   
 //in MyController class declaration
@@ -47,7 +47,7 @@ class MyController : public Vst::EditController, public Vst::IParameterFunctionN
 
 **In mycontroller.cpp**
 
-```
+``` c++
 #include "pluginterfaces/vst/ivstparameterfunctionname.h"
  
 namespace Steinberg {
@@ -73,7 +73,7 @@ tresult PLUGIN_API MyController::getParameterIDFromFunctionName (UnitID unitID, 
 
 **Example of host implementation**
 
-```
+``` c++
 FUnknownPtr<Vst::IParameterFunctionName> functionName (mEditController->getIEditController ());
 if (functionName)
 {

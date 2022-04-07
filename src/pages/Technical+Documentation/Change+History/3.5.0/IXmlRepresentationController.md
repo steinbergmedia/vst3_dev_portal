@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.5.0] Remote Presentation of Parameters
 
@@ -22,7 +22,7 @@ Extended plug-in interface [IEditController](https://steinbergmedia.github.io/vs
 - [optional]
 
 A representation based on XML is a way to export, structure, and group plug-in parameters for a specific remote (hardware or software rack (such as quick controls)).
-It allows to describe each parameter more precisely (what is the best matching to a knob, different title lengths matching limited remote display,...).
+It allows to describe each parameter more precisely (what is the best matching to a knob, different title lengths matching limited remote display, ...).
 
 - A representation is composed of pages (this means that to see all exported parameters, the user has to navigate through the pages).
 - A page is composed of cells (for example, 8 cells per page).
@@ -39,7 +39,7 @@ This representation is implemented as XML text following the Document Type Defin
 
 **Here an example of what should be passed in the stream of getXmlRepresentationStream:**
 
-```
+``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE vstXML PUBLIC "-//Steinberg//DTD VST Remote 1.1//EN" "http://dtd.steinberg.net/VST-Remote-1.1.dtd">
 <vstXML version="1.0">
@@ -118,7 +118,7 @@ This representation is implemented as XML text following the Document Type Defin
 
 ## Graphical overview
 
-![tech_doc_32](/resources/tech_doc_32.jpg)
+![tech_doc_32](../../../../resources/tech_doc_32.jpg)
 
 ## Example of implementation using helper class
 
@@ -131,14 +131,15 @@ When a host needs to use a VST XMLs representation (for internal use, like quick
 Explanation:
 
 - priority column:
-    - specifies the scan order by the host. Path #1 will be checked first, #8 will be checked last. The first XML found will be used and overrides the others.
+  - specifies the scan order by the host. Path #1 will be checked first, #8 will be checked last. The first XML found will be used and overrides the others.
 - type of column:
-    - user : specific to the currently logged in user
-    - shared : for all users of this machine
-    - factory : installed by Plug-in or App installer with the Plug-in
+  - user : specific to the currently logged in user
+  - shared : for all users of this machine
+  - factory : installed by Plug-in or App installer with the Plug-in
 - $COMPANY and $PLUGIN-NAME folder names contain only allowed characters for file naming
-        - replace characters "\\*?/:.<>|\\"\t\n\r" by "_"
-- $UID is the Unique ID of the processor in its string representation (for example: "57F704D1FA974D668083E4B9AF581D23" len=32)
+  - replace characters "\\*?/:.<>|\\"\t\n\r" by "_"
+- $UID is the Unique ID of the processor in its string representation
+  - for example: "57F704D1FA974D668083E4B9AF581D23" len=32)
 
 ### For Mac platform
 

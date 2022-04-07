@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Frequently Asked Questions](../FAQ/Index.md)
+>/ [VST Home](../../index.md) / [Frequently Asked Questions](../FAQ/Index.md)
 >
 ># GUI-Editor
 

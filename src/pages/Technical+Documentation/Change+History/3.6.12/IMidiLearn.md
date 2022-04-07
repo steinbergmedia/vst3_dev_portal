@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.12] MIDI Learn
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [[3.0.1] Parameter MIDI Mapping](/pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.md)
+- [(3.0.1) Parameter MIDI Mapping](../../Change+History/3.0.1/IMidiMapping.md)
 
 ---
 
@@ -27,9 +27,9 @@ If this interface is implemented by the edit controller, the host will call this
 
 **In mycontroller.h**
 
-```
+``` c++
 //------------------------------------------------------------------------
-// here an example of how a VST3 Plug-in could support this IMidiLearn interface.
+// here an example of how a VST 3 Plug-in could support this IMidiLearn interface.
 // we need to define somewhere the iids:
   
 //in MyController class declaration
@@ -52,7 +52,7 @@ class MyController : public Vst::EditController, public Vst::IMidiLearn
 
 **In mycontroller.cpp**
 
-```
+``` c++
 #include "pluginterfaces/vst/ivstmidilearn.h
  
 namespace Steinberg {

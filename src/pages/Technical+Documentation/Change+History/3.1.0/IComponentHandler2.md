@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.1.0] Dirty State, Open Editor Request and UI Group Editing Support
 
@@ -23,7 +23,7 @@ Extended host callback interface [Vst::IComponentHandler2](https://steinbergmedi
 
 This allows the plug-in to tell the host that its internal state is dirty or not, if set to true it means that something besides parameters has changed since last save, then the host should apply a save before quitting.
 
-```
+``` c++
 void MyPluginController::informHostAboutMyDirtyState (bool dirty)
 {
     FUnknownPtr<IComponentHandler2> componentHandler2 (componentHandler);
@@ -36,7 +36,7 @@ void MyPluginController::informHostAboutMyDirtyState (bool dirty)
 
 Requesting the host to open the plug-in´s editor the next time it's possible. You should use this instead of showing an alert and blocking the program flow (especially on loading projects).
 
-```
+``` c++
 void MyPluginController::requestHostToOpenEditor()
 {
     FUnknownPtr<IComponentHandler2> componentHandler2 (componentHandler);
@@ -51,7 +51,7 @@ This part handles parameter group editing from the plug-in UI. It wraps a set of
 
 ### Examples of different use cases
 
-```
+``` c++
 //--------------------------------------
 // we are in the editcontroller...
 // in case of multiple switch buttons (with associated ParamID 1 and 3)

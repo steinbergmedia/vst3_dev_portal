@@ -16,7 +16,7 @@
     - VST 3 - Audio Unit Wrapper :
         - update to last Audio Core update
     - VST 3 - VST 2.x Wrapper :
-        - add support of version (VST3 -> VST2)
+        - add support of version (VST 3 -> VST 2)
 - Helpers classes:
     - add support for bypass including delay compensation (vstbypassprocessor.h)
     - add helpers for events/parameters iterator (vstaudioprocessoralgo.h)
@@ -25,7 +25,7 @@
         - bool isSubsetOf (const SpeakerArrangement& arrSubSet, const SpeakerArrangement& arr)
 - VSTGUI 4.3
     - update to VSTGUI 4.3.1 (available here too: <http://sourceforge.net/projects/vstgui/files/vstgui/VSTGUI%204.3/)>
-    - the [VSTGUI](/pages/What+is+the+VST+3+SDK/VSTGUI.md) repository was moved to github: <https://github.com/steinbergmedia/vstgui>
+    - the [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) repository was moved to github: <https://github.com/steinbergmedia/vstgui>
     - Please use github if you want to contribute to VSTGUI.
 - VST3PluginTestHost: VST 3 Plug-in Test Host
     - fix support of SingleComponent

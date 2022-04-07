@@ -26,7 +26,7 @@ On the macOS platform, **VST 3 Plug-in** is a standard macOS bundle, its file ex
 
 ## For the Windows platform
 
-On the Windows platform, a VST 3 Plug-in is organized as a bundle like package format (simple folder), its file extension is ".vst3" and has the following folder structure:
+On the Windows platform, a **VST 3 Plug-in** is organized as a bundle like package format (simple folder), its file extension is "**.vst3**" and has the following folder structure:
 
 | Folder | Description |
 | :- | :- |
@@ -38,10 +38,10 @@ On the Windows platform, a VST 3 Plug-in is organized as a bundle like package f
 | MyPlugin.vst3/desktop.ini | used to set custom icon in Windows Explorer |
 | MyPlugin.vst3/Plugin.ico | customized plug-in icon
 
->***Note***<br>
->In previous SDKs, the VST 3 Plug-in was defined as a single dll file with the .vst3 extension. This is deprecated since VST 3.6.10.
+>ⓘ **Note**\
+>In previous SDKs, the **VST 3 Plug-in** was defined as a single dll file with the **.vst3** extension. This is deprecated since VST 3.6.10.
 
-The file desktop.ini should contain:
+The file **desktop.ini** should contain:
 
 **desktop.ini**
 
@@ -66,13 +66,13 @@ On Linux, a **VST 3 Plug-in** is organized as a bundle like package format, its 
 | MyPlugin.vst3/Contents/Resources/ | folder contains all additional resource files useful for the plug-in |
 | MyPlugin.vst3/Contents/i386-linux | folder contains the plug-in binary (32 bit shared library .so for Kernel Architecture i386) |
 | MyPlugin.vst3/Contents/x86_64-linux | folder contains the plug-in binary (64 bit shared library .so for Kernel Architecture x86_64) |
-| MyPlugin.vst3/Contents/XXX-linux | with XXX the architecture name based on the output of command-line "uname -m" (machine hardware) + "-linux"</p> for example:</p> • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux |
+| MyPlugin.vst3/Contents/XXX-linux | with XXX the architecture name based on the output of command-line "uname -m" (machine hardware) + "-linux" for example: • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux |
 
 ## Merged Bundle
 
 Note that all the bundles can be merged to one, which allows to have a cross-platform bundle/folder.
 
-For example:
+**For example:**
 
 ```
 MyPlugin.vst3/

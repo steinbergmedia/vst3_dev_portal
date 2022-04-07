@@ -4,7 +4,7 @@
 
 ## Version 3.6.9 (2018/03/01)
 
-- [VSTGUI](/pages/What+is+the+VST+3+SDK/VSTGUI.md) 4.6
+- [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.6
     - update to VSTGUI 4.6
     - including a new UI element: KeyboardView supporting Note Expression
 - Interfaces changes:
@@ -20,7 +20,7 @@
 - Samples:
     - fix Validator State test
     - NoteExpressionSynth uses the new KeyboardView
-    - New HelloWorld VST3 plug-ins (template): [Creating a plug-in from the Helloworld template](/pages/Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
+    - New HelloWorld VST 3 plug-ins (template): [Creating a plug-in from the Helloworld template](../../../Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
 - Plug-in wrappers:
     - VST 3 - Audio Unit Wrapper : fix and adaptation for newer XCode versions
     - Audio Unit v3 (AUv3) Wrapper (VST 3 - Audio Unit v3 Wrapper): some fixes, add cmake

@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md)
+>/ [VST Home](../index.md)
 >
 ># Tutorials
 
@@ -19,9 +19,9 @@
 
 ---
 
-The tutorials explain common techniques and best practices for building your plug-ins. By following the instructions step by step you will learn how to develop **VST 3** plug-ins.
+The tutorials explain common techniques and best practices for building your plug-ins. By following the instruction step by step you will learn how to develop **VST 3** plug-ins.
 
->***Note***<br>
+>ⓘ **Note**\
 >This section is under construction and will be extended inthe future with new tutorials.
 
 ## [Building the examples included in the SDK](../Tutorials/Building+the+examples+included+in+the+SDK.md)
@@ -54,7 +54,7 @@ This tutorial explains how to use silence flags.
 
 ## [Strings Conversion Helper](../Tutorials/Strings+Conversion+Helper.md)
 
-The SDK provides some helpers functions to convert from UTF16 (use in VST3 interfaces) to UTF8 (used by std::string).
+The SDK provides some helpers functions to convert from UTF16 (use in VST 3 interfaces) to UTF8 (used by std::string).
 
 ## [Creating a plug-in from the Helloworld template](../Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
 

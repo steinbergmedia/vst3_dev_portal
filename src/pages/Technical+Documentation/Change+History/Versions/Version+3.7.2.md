@@ -4,7 +4,7 @@
 
 ## Version 3.7.2 (2021/03/30)
 
-- [VSTGUI](/pages/What+is+the+VST+3+SDK/VSTGUI.md) 4.10
+- [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.10
     - minimum requirement C++14.
     - [VSTGUI](https://steinbergmedia.github.io/vst3_doc/vstgui/html/namespace_v_s_t_g_u_i.html) now needs to be initialized and terminated explicitly. See [VSTGUI::init()](https://steinbergmedia.github.io/vst3_doc/vstgui/html/group__new__in__4__10.html)
     - UIDescription files are now written in JSON format and the old XML format is deprecated
@@ -31,14 +31,14 @@
     - Fix LOCAL_JACK_LIB in SMTG_FindJack.cmake on Windows
     - Fix link plug-in to common location on Windows
     - Fix: Failing unit test with validator results inplug-in resources/snapshots not being copied
-- [Plug-in Wrappers](/pages/What+is+the+VST+3+SDK/Wrappers/Index.md):
+- [Plug-in Wrappers](../../../What+is+the+VST+3+SDK/Wrappers/Index.md):
     - AAX Wrapper
         - Fix Export Symbols for AAX on macOS
     - Audio Unit v2
         - Fix AUv2 with Xcode 12
-- [Samples](/pages/What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Samples](../../../What+is+the+VST+3+SDK/Plug-in+Examples.md):
     - New VST 3 hosting example:
-        - [VST3 Inspector app](/pages/What+is+the+VST+3+SDK/Index.md): example showing how to parse the available VST3 plugins factories, using VSTGUI.
+        - [VST 3 Inspector app](../../../What+is+the+VST+3+SDK/Index.md): example showing how to parse the available VST 3 plugins factories, using VSTGUI.
     - C++14 minimum requirements for validator, audiohost, editorhost, Inspector app
 - Helpers classes:
     - New file handling module initialization: public.sdk\source\main\moduleinit.cpp, public.sdk\source\main\moduleinit.h
@@ -46,9 +46,9 @@
     - Fix incorrect string copy regression in HostAttributeList::getString
     - Fix some Validation tests:  SliceProcessingTest,ValidStateTransitionTest.
     - Fix module_linux.cpp building in C++20 mode
-- [VST3PluginTestHost](/pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.1.0:
-    - New context menu entry for instantiated plugin: "Export Presets Parameters as XML" which allows to load automatically VST3 presets and export them as XML files.
-- [VST3 Project Generator](/pages/What+is+the+VST+3+SDK/Project+Generator.md) v2021.03:
+- [VST3PluginTestHost](../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.1.0:
+    - New context menu entry for instantiated plugin: "Export Presets Parameters as XML" which allows to load automatically VST 3 presets and export them as XML files.
+- [VST 3 Project Generator](../../../What+is+the+VST+3+SDK/Project+Generator.md) v2021.03:
     - This project is now open source on <https://github.com/steinbergmedia/vst3projectgenerator>
     - Universal binary for macOS (Intel/M1)
     - Add another default location to search for cmake on macOS

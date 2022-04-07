@@ -1,4 +1,4 @@
->/ [VST Home](/Index.md) / [Technical Documentation](/pages/Technical+Documentation/Index.md)
+>/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.12] Legacy MIDI CC Out Event
 
@@ -22,7 +22,7 @@ This kind of event is reserved for generating MIDI CC as output event for kEvent
 
 **In myprocessor.cpp**
 
-```
+``` c++
 #include "public.sdk/source/vst/vsteventshelper.h"
  
 //-----------------------------------------------------------------------------
