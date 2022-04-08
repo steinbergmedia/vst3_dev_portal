@@ -355,6 +355,7 @@ ul#searchresults span.teaser em {
 .js .sidebar .sidebar-resize-handle {
     cursor: col-resize;
     width: 5px;
+    background: rgba(127,127,127,0.05);
 }
 .sidebar-hidden .sidebar {
     transform: translateX(calc(0px - var(--sidebar-width)));
