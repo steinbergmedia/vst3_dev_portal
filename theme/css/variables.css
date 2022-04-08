@@ -271,7 +271,7 @@
     --scrollbar: var(--sidebar-fg);
 
     --icons: #737480;
-    --icons-hover: #262625;
+    --icons-hover: var(--tc);
 
     --links: #db304c;
 
