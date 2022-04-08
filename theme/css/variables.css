@@ -238,7 +238,7 @@
     --theme-hover: hsla(0, 0%, 81%, 0.2);
 
     --quote-bg: hsl(0, 0%, 81%);
-    --quote-border: hsl(0, 0%, 81%);
+    --quote-border: hsl(0, 0%, 61%);
 
     --table-border-color: hsl(0, 0%, 77%);
     --table-header-bg: #e4e4e4;
@@ -282,7 +282,7 @@
     --theme-hover: hsla(0, 0%, 36%, 0.2);
 
     --quote-bg: hsl(0, 0%, 20%);
-    --quote-border: hsl(0, 0%, 36%);
+    --quote-border: hsl(0, 0%, 46%);
 
     --table-border-color: hsl(60, 9%, 82%);
     --table-header-bg: #3b3b3b;
