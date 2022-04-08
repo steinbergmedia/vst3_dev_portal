@@ -235,7 +235,7 @@
 
     --theme-popup-bg: #ededec;
     --theme-popup-border: #8a8a8a;
-    --theme-hover: hsl(0, 0%, 81%);
+    --theme-hover: hsla(0, 0%, 81%, 0.2);
 
     --quote-bg: hsl(0, 0%, 81%);
     --quote-border: hsl(0, 0%, 81%);
@@ -279,7 +279,7 @@
 
     --theme-popup-bg: #131313;
     --theme-popup-border: #737480;
-    --theme-hover: hsl(0, 0%, 36%);
+    --theme-hover: hsla(0, 0%, 36%, 0.2);
 
     --quote-bg: hsl(0, 0%, 20%);
     --quote-border: hsl(0, 0%, 36%);
