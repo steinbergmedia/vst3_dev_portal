@@ -499,3 +499,16 @@ ul#searchresults span.teaser em {
 	background: var(--mermaid-bg);
 	border: 1px solid var(--mermaid-border);
 }
+
+.footer {
+    position: -webkit-sticky;
+    position: sticky;
+	bottom: 0px;
+	background-color: var(--bg);
+	font-size: 0.8em;
+	text-align:center;
+}
+
+.footer a {
+	color: red;
+}
