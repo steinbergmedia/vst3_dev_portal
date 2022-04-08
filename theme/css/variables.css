@@ -289,8 +289,8 @@
     --table-alternate-bg: hsl(0, 0%, 12%);
 
     --searchbar-border-color: #aaa;
-    --searchbar-bg: #fafafa;
-    --searchbar-fg: #000;
+    --searchbar-bg: #000;
+    --searchbar-fg: #fafafa;
     --searchbar-shadow-color: #aaa;
     --searchresults-header-fg: rgb(171, 171, 171);
     --searchresults-border-color: #888;
