@@ -32,7 +32,7 @@ if (hModule)
 
     GetFactoryProc proc = (GetFactoryProc)GetProcAddress (hModule, "GetPluginFactory");
 
-    IPluginFactory* factory = proc ? proc () : 0;
+    IPluginFactory* factory = proc ? proc () : nullptr;
     if (factory)
     {
         for (int32 i = 0; i < factory->countClasses (); i++)
@@ -50,7 +50,7 @@ if (hModule)
     }
 
     ExitModuleProc exitProc = (ExitModuleProc)GetProcAddress (hModule, "ExitDll");
-    if (exitProc)  // This exit function is optional on Windows, not on MacOS and Linux!  
+    if (exitProc) // This exit function is optional on Windows, not on MacOS and Linux!
         exitProc ();
 
     FreeLibrary (hModule);
