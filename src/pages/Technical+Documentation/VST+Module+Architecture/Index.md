@@ -167,7 +167,7 @@ A class is also described with a name and it has a unique id.
 
 The entry-point interface for any component class is [Steinberg::IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html). The host uses this interface to initialize and to terminate the Plug-in component. When the host initializes the Plug-in, it **has to pass** a so called context. This context contains any interface to the host that the Plug-in will need to work.
 
-Purpose-specific interfaces
+### Purpose-specific interfaces
 
 Each plug-in category (VST 3 Effects, Project import/export Filters, Audio Codecs, etc...) defines its own set of purpose-specific interfaces. These are not part of the basic **VST-MA** layer.
 
