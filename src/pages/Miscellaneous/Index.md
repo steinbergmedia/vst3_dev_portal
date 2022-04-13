@@ -56,4 +56,4 @@ External Glossary: [AES - PAR - Pro Audio Reference:](https://www.aes.org/par/) 
 | **VST-MA**    | Virtual Studio Technology - Module Architecture | This is the base architecture for VST 3 |
 | **VSTGUI**    | Virtual Studio Technology - Graphical User Interface | <https://github.com/steinbergmedia/vstgui> |
 | **Vtable**    | Virtual method table | <https://en.wikipedia.org/wiki/Virtual_method_table> |
-| **WYSIWYG**    What You See Is What You Get | |
+| **WYSIWYG**  |  What You See Is What You Get |
