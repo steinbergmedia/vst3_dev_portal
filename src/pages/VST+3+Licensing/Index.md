@@ -5,7 +5,7 @@
 **Related pages:**
 
 - [Steinberg VST usage guidelines](Usage+guidelines.md)
-- [Steinberg VST usage guidelines](Usage+guidelines.md)
+- [What are the licensing options for VST 3?](What+are+the+licensing+options.md)
 - [Which files fall under which license?](Which+files+fall+under+which+license.md)
 - [Developer use cases (FAQs)](Developer+use+cases.md)
 
