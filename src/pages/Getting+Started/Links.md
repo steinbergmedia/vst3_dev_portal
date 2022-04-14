@@ -1,4 +1,4 @@
->/ [VST Home](../) / [Getting Started](../Getting+Started/Index.md)
+>/ [VST Home](../) / [Getting Started](Index.md)
 >
 ># VST 3 Links
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)
+- [How to set up my system for VST 3](How+to+setup+my+system.md)
 
 ---
 

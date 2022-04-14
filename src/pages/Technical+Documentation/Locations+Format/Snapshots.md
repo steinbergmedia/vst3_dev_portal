@@ -1,4 +1,4 @@
-> / ... / [VST 3 Locations / Format](../Locations+Format/Index.md)
+> / ... / [VST 3 Locations / Format](Index.md)
 > 
 > # Snapshots
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [VST 3 Locations / Format](../Locations+Format/Index.md)
+- [VST 3 Locations / Format](Index.md)
 
 ---
 

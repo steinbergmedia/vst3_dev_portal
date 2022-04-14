@@ -14,23 +14,23 @@
 
 Formats definition of a **VST 3 Plug-in** and its preset and where they are located on different platforms.
 
-## [Plug-in Format Structure](../Locations+Format/Plugin+Format.md)
+## [Plug-in Format Structure](Plugin+Format.md)
 
 This section explains how a **VST 3 Plug-in** is structured as files and folders.
 
-## [Plug-in Locations](../Locations+Format/Plugin+Locations.md)
+## [Plug-in Locations](Plugin+Locations.md)
 
 This section explains where **VST 3 Plug-in** are located on the different supported platforms.
 
-## [Preset Format](../Locations+Format/Preset+Format.md)
+## [Preset Format](Preset+Format.md)
 
 This section explains the **VST 3** format for preset file.
 
-## [Preset Locations](../Locations+Format/Preset+Locations.md)
+## [Preset Locations](Preset+Locations.md)
 
 This section explains where **VST 3** preset files are located on the different supported platforms.
 
-## [Snapshots](../Locations+Format/Snapshots.md)
+## [Snapshots](Snapshots.md)
 
 Since VST 3.6.10, a **VST 3** bundle can contain pre-rendered snapshot images for **VST 3** host as visual representation of the plug-in UI.
 

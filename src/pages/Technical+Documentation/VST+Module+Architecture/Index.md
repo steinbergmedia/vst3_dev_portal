@@ -8,9 +8,9 @@
 
 **Related pages:**
 
-- [How the host will load a VST-MA based Plug-in](../VST+Module+Architecture/Loading.md)
-- [How to derive a class from an interface](../VST+Module+Architecture/Derive+From+Interface.md)
-- [Interface Versions and Inheritance](../VST+Module+Architecture/Interface+Versions+and+Inheritance.md)
+- [How the host will load a VST-MA based Plug-in](Loading.md)
+- [How to derive a class from an interface](Derive+From+Interface.md)
+- [Interface Versions and Inheritance](Interface+Versions+and+Inheritance.md)
 - [VST 3 API Documentation](../API+Documentation/Index.md)
 
 ---
@@ -61,7 +61,7 @@ A new version inherits the old version(s) of the interface, so the old and the n
 
 >- ISpecialInterface [**extends** IBaseInterface] => means IBaseInterface::queryInterface (ISpecialInterface::iid, ...) can be used to retrieve the derived interface.
 
-You can find some example code here: [Interface Versions and Inheritance](../VST+Module+Architecture/Interface+Versions+and+Inheritance.md).
+You can find some example code here: [Interface Versions and Inheritance](Interface+Versions+and+Inheritance.md).
 
 ### COM Compatibility
 
@@ -80,7 +80,7 @@ Helper Classes
 - [Steinberg::FUID](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUID.html)
 - [Steinberg::FUnknownPtr](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUnknownPtr.html)
 
-See also "[How to derive a class from an interface](../VST+Module+Architecture/Derive+From+Interface.md)".
+See also "[How to derive a class from an interface](Derive+From+Interface.md)".
 
 ## Plug-ins
 

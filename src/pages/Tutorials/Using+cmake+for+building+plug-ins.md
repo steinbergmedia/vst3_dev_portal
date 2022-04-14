@@ -1,4 +1,4 @@
->/ [VST Home](../) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../) / [Tutorials](Index.md)
 >
 ># Using cmake for building VST 3 plug-ins
 
@@ -9,7 +9,7 @@
 **Related pages:**
 
 - [How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)
-- [Building the examples included in the SDK](../Tutorials/Building+the+examples+included+in+the+SDK.md)
+- [Building the examples included in the SDK](Building+the+examples+included+in+the+SDK.md)
 
 ---
 

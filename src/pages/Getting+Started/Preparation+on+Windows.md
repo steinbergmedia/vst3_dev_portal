@@ -1,4 +1,4 @@
->/ [VST Home](../) / [Getting Started](../Getting+Started/Index.md)
+>/ [VST Home](../) / [Getting Started](Index.md)
 >
 ># Preparation on Windows
 

@@ -1,4 +1,4 @@
->/ [VST Home](../) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../) / [Tutorials](Index.md)
 >
 ># Creating a plug-in from the Helloworld template
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [Generate a new plug-in with Project Generator](../Tutorials/Generate+new+plug-in+with+Project+Generator.md)
+- [Generate a new plug-in with Project Generator](Generate+new+plug-in+with+Project+Generator.md)
 
 ---
 
@@ -22,7 +22,7 @@ For downloading the SDK, see the section "[How to set up my system for VST 3](..
 
 You have the following possibilities to start a new project:
 
-- You can use the [**helloworld** template](../Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md) included in the **VST SDK** and duplicate the folder into a new folder. Adapt each file where the comment mentions it.
+- You can use the [**helloworld** template](Creating+a+plug-in+from+the+Helloworld+template.md) included in the **VST SDK** and duplicate the folder into a new folder. Adapt each file where the comment mentions it.
 - Or, which is **easier** and **recommended**, you can use the [**VST 3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST SDK**. The following steps show how to use it.
 
 ---
@@ -74,7 +74,7 @@ The SDK provides a HelloWorld example which you can use to create a new **VST 3 
   <string>com.steinberg.vst3.helloworld</string> =><string>com.steinberg.vst3.mydelay</string>
   ```
 
-- Now you can start to code for your effect/instrument (see [Generate a new plug-in with Project Generator](../Tutorials/Generate+new+plug-in+with+Project+Generator.md) for a step-by-step explanation)
+- Now you can start to code for your effect/instrument (see [Generate a new plug-in with Project Generator](Generate+new+plug-in+with+Project+Generator.md) for a step-by-step explanation)
   1. Add parameters in plugcontroller.cpp
   2. Adapt your process algorithm in plugprocessor.cpp
   3. Add persistence in plugprocessor.cpp

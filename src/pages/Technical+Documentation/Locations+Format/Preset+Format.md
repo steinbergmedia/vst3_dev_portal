@@ -1,10 +1,10 @@
->/ ... / [VST 3 Locations / Format](../Locations+Format/Index.md)
+>/ ... / [VST 3 Locations / Format](Index.md)
 >
 ># Preset Format
 
 **Related pages:**
 
-- [Preset Locations](../Locations+Format/Preset+Locations.md)
+- [Preset Locations]Preset+Locations.md)
 - [Presets & Program Lists](../Presets+Program+Lists/Index.md)
 
 ---

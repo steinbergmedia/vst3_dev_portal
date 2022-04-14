@@ -1,4 +1,4 @@
->/ [VST Home](../) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
+>/ [VST Home](../) / [VST 3 Licensing](Index.md)
 >
 ># Which files fall under which license?
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [VST 3 Licensing](../VST+3+Licensing/Index.md)
+- [VST 3 Licensing](Index.md)
 
 ---
 
@@ -39,7 +39,7 @@ Each of these files includes this text:
 The "Proprietary Steinberg VST 2" license, which is the VST 2 license agreement, allows you to distribute your VST 2 plug-in/host in a binary form. However, please note the following requirements:
 
 - You need written permission from Steinberg Media Technologies GmbH in order to distribute your VST 2 plug-in/host (which had to be done before October 2018).
-- You need to mention **Steinberg Media Technologies GmbH** in the about box and/or documentation of your VST 2 plug-in/host and follow the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md).
+- You need to mention **Steinberg Media Technologies GmbH** in the about box and/or documentation of your VST 2 plug-in/host and follow the [Steinberg VST usage guidelines](Usage+guidelines.md).
 - Note that the "Proprietary Steinberg VST 3" license does not include the "Proprietary Steinberg VST 2" license, you have to sign it separately! It was available in the VST 2 SDK and in the VST 3 SDK old version.
 - Note that from the first of October 2018, Steinberg does **not accept any more submissions of license agreement for VST 2** plug-in/host! This means:
 

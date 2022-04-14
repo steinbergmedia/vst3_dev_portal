@@ -1,11 +1,11 @@
->/ ... / [VST Module Architecture](../VST+Module+Architecture/Index.md)
+>/ ... / [VST Module Architecture](Index.md)
 >
 ># Interface Versions and Inheritance
 
 **Related pages:**
 
-- [VST Module Architecture](../VST+Module+Architecture/Index.md)
-- [How to derive a class from an interface](../VST+Module+Architecture/Derive+From+Interface.md)
+- [VST Module Architecture](Index.md)
+- [How to derive a class from an interface](Derive+From+Interface.md)
 
 ---
 

@@ -1,4 +1,4 @@
->/ ... / [VST 3 Locations / Format](../Locations+Format/Index.md)
+>/ ... / [VST 3 Locations / Format](Index.md)
 >
 ># Plug-in Locations
 
@@ -8,8 +8,8 @@
 
 **Related pages:**
 
-- [VST 3 Locations / Format](../Locations+Format/Index.md)
-- [Plug-in Format Structure](../Locations+Format/Plugin+Format.md)
+- [VST 3 Locations / Format](Index.md)
+- [Plug-in Format Structure](Plugin+Format.md)
 
 ---
 

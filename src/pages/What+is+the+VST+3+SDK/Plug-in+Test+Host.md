@@ -1,4 +1,4 @@
->/ [VST Home](../) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
 >
 ># VST 3 Plug-in Test Host
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [VST 3 Plug-in Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md)
+- [VST 3 Plug-in Examples](Plug-in+Examples.md)
 
 ---
 

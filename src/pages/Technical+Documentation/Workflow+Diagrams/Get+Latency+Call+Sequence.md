@@ -1,4 +1,4 @@
->/ ... / [VST 3 Workflow Diagrams](../Workflow+Diagrams/Index.md)
+>/ ... / [VST 3 Workflow Diagrams](Index.md)
 >
 ># Get Latency Call Sequence
 

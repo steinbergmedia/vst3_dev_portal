@@ -1,10 +1,10 @@
->/ ... / [VST Module Architecture](../VST+Module+Architecture/Index.md)
+>/ ... / [VST Module Architecture](Index.md)
 >
 ># How the host will load a VST-MA based Plug-in
 
 **Related pages:**
 
-- [VST Module Architecture](../VST+Module+Architecture/Index.md)
+- [VST Module Architecture](Index.md)
 
 ---
 

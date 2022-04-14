@@ -1,4 +1,4 @@
->/ [VST Home](../) / [Frequently Asked Questions](../FAQ/Index.md)
+>/ [VST Home](../) / [Frequently Asked Questions](Index.md)
 >
 ># Compatibility with VST 2.x or VST 1
 

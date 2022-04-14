@@ -1,4 +1,4 @@
->/ ... / [AAX, AUv3, AU and VST 2 Wrappers](../Wrappers/Index.md)
+>/ ... / [AAX, AUv3, AU and VST 2 Wrappers](Index.md)
 >
 ># VST 3 - AAX Wrapper
 

@@ -1,10 +1,10 @@
->/ ... / [VST 3 Workflow Diagrams](../Workflow+Diagrams/Index.md)
+>/ ... / [VST 3 Workflow Diagrams](Index.md)
 >
 ># Audio Processor Call Sequence
 
 **Related pages:**
 
-- [Edit Controller Call Sequence](../Workflow+Diagrams/Edit+Controller+Call+Sequence.md)
+- [Edit Controller Call Sequence](Edit+Controller+Call+Sequence.md)
 
 ---
 

@@ -1,4 +1,4 @@
->/ [VST Home](../) / [Getting Started](../Getting+Started/Index.md)
+>/ [VST Home](../) / [Getting Started](Index.md)
 >
 ># How to setup up my system for VST 3
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [VST 3 Links](../Getting+Started/Links.md)
+- [VST 3 Links](Links.md)
 - [Using cmake for building VST 3 plug-ins](../Tutorials/Using+cmake+for+building+plug-ins.md)
 
 ---
@@ -19,7 +19,7 @@ In order to build **VST 3** plug-ins, you need the source code of the **VST 3** 
 
 ### From the downloaded *vstsdk.zip* file
 
-Download the **VST 3 SDK**: check [VST 3 SDK Download](../Getting+Started/Links.md).
+Download the **VST 3 SDK**: check [VST 3 SDK Download](Links.md).
 
 Unpack the zip file to a development folder on your computer.
 
@@ -92,7 +92,7 @@ You can use it as a command line tool or use the cmake executable with GUI. cmak
 >
 >---
 >
->Generated **VST 3** Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](../Getting+Started/Preparation+on+Windows.md)!
+>Generated **VST 3** Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](Preparation+on+Windows.md)!
 >
 >If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
 >

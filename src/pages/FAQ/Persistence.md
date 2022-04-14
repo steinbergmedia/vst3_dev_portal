@@ -1,4 +1,4 @@
->/ [VST Home](../) / [Frequently Asked Questions](../FAQ/Index.md)
+>/ [VST Home](../) / [Frequently Asked Questions](Index.md)
 >
 ># Persistence
 
