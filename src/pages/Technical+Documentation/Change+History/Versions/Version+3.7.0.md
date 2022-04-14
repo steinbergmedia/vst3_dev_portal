@@ -20,8 +20,8 @@
     - New Bus flag: kIsControlVoltage for audio busses
 - Documentation:
     - add documentation about **VST 3** and **MIDI 2.0**:
-        - [MIDI 2.0 Increased Resolution, compared to MIDI 1.0](../About+MIDI/Index.md)
-        - [MIDI 2.0 Per-Note Controllers](../About+MIDI/Index.md)
+        - [MIDI 2.0 Increased Resolution, compared to MIDI 1.0](../../About+MIDI/Index.md)
+        - [MIDI 2.0 Per-Note Controllers](../../About+MIDI/Index.md)
 - cmake:
     - New cmake files
     - Fix on Windows creation of VST 3 folder using powershell with admin rights

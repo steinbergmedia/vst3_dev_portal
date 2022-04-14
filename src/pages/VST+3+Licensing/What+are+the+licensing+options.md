@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
+>/ [VST Home](../) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
 >
 ># What are the licensing options
 
@@ -22,7 +22,7 @@ The "***Proprietary Steinberg VST 3***" license allows you to distribute your VS
 - You need written permission from **Steinberg Media Technologies GmbH** in order to distribute your VST 3 plug-in/host (Steinberg will send you the countersigned License agreement included in the SDK that you signed and sent to us).
 - You need to mention **Steinberg Media Technologies GmbH** in the about box and/or documentation of your VST 3 plug-in/host and follow the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md).
 
-For more details please read the "***Proprietary Steinberg VST 3***" license agreement. If you accept it, please enter all required information, sign it and send it back to us, either via land mail (to the [Steinberg address](https://o.steinberg.net/en/extras/about.html) mentioned in the license), or via e-mail (<reception@steinberg.de>) or via fax (+49 (0)40 210 35-300). We will countersign the license agreement and send it back to you.
+For more details please read the "***Proprietary Steinberg VST 3***" license agreement. If you accept it, please enter all required information, sign it and send it back to us, either via land mail (to the [Steinberg address](https://o.steinberg.net/en/extras/about.html) mentioned in the license), or via e-mail to [reception@steinberg.de](mailto:reception@steinberg.de) or via fax (+49 (0)40 210 35-300). We will countersign the license agreement and send it back to you.
 
 - as PDF: [The License agreement](../../resources/VST3_License_Agreement.pdf) is part of the VST SDK package, too.
 

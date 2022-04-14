@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../) / [Tutorials](../Tutorials/Index.md)
 >
 ># Creating a plug-in from the Helloworld template
 

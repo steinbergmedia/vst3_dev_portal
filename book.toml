@@ -32,3 +32,6 @@ level = 0
 
 [output.html.redirect]
 "display/VST/Main+benefits+of+VST+3/index.html" = "../../../pages/Main+benefits+of+VST+3/index.html"
+
+[output.linkcheck]
+optional = true

@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 >
 ># VSTGUI
 
@@ -74,6 +74,6 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## [Tutorials for VSTGUI](../Tutorials/Use+VSTGUI+to+design+a+UI.md)
 
-**[Use VSTGUI to design a User Interface](../Tutorials/Use+VSTGUI+to+design+UI.md)**
+**[Use VSTGUI to design a User Interface](../Tutorials/Use+VSTGUI+to+design+a+UI.md)**
 
 This tutorial explains how to use **VSTGUI**. **VSTGUI** comes with a *WYSIWYG* editor that allows you to createstunning user interfaces for your plug-in.

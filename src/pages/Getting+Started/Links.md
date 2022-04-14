@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [Getting Started](../Getting+Started/Index.md)
+>/ [VST Home](../) / [Getting Started](../Getting+Started/Index.md)
 >
 ># VST 3 Links
 
@@ -55,7 +55,7 @@ Browse the **VST 3 SDK**'s online documentation including **API** reference and 
 
 >**<https://steinbergmedia.github.io/vst3_doc>**
 
-Browse the [VST portal](../..//pages/Index.md) for the whole documentation and tutorials:
+Browse the [VST portal](../) for the whole documentation and tutorials:
 
 >**<https://developer.steinberg.help/display/VST>** **<- Needs to be replaced with new link**
 

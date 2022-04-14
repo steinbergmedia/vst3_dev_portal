@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../) / [Tutorials](../Tutorials/Index.md)
 >
 ># Using cmake for building VST 3 plug-ins
 

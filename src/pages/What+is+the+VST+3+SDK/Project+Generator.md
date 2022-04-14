@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 >
 ># VST 3 Project Generator
 
@@ -72,7 +72,7 @@ Company Information
 The information included in this subsection will be used for generating Factory information associated to all plug-ins you will generate. This will be read by the host application loading your plug-ins and the host may display it to an user.
 
 - **Vendor**: this is your Company name: e.g. *"Steinberg Media Technologies GmbH"*
-- **E-Mail**: your email, which could be used by the host to redirect an user to your support for example: e.g. *"<support@steinberg.net>"*
+- **E-Mail**: your email, which could be used by the host to redirect an user to your support for example: e.g. *"<mailto:support@steinberg.net>"*
 - **URL**: the URL of your Company: e.g. *"<https://www.steinberg.net>"*
 - **C++ Namespace**: this allows you to predefine a namespace which will be used to surround your plug-in source code: e.g. *"MyWantedNamespace"*:
 

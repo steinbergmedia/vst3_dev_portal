@@ -1,4 +1,4 @@
->/ [VST Home](../index.md)
+>/ [VST Home](../)
 >
 ># Tutorials
 

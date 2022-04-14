@@ -1,4 +1,4 @@
->/ [VST Home](../../index.md) / [What is the VST 3 SDK?](../Index.md)
+>/ [VST Home](../../) / [What is the VST 3 SDK?](../Index.md)
 >
 ># AAX, AUv3, AU and VST 2 Wrappers
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [iOS Inter-App Audio support](../What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.md)
+- [iOS Inter-App Audio support](../iOS+Inter-App+Audio+support.md)
 
 ---
 
@@ -19,14 +19,14 @@ These wrappers allow you to create versions of your **VST 3** plug-in in other p
 
 Check the folder *"public.sdk/source/vst/aaxwrapper"* of the SDK!
 
->## [VST 3 - VST 2.x Wrapper](../What+is+the+VST+3+SDK/Wrappers/AUv2+Wrapper.md)
+>## [VST 3 - VST 2.x Wrapper](AUv2+Wrapper.md)
 >Helper Class wrapping a **VST 3 plug-in** to a **VST 2.4 plug-in**
 
->## [VST 3 - AAX Wrapper](../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)
+>## [VST 3 - AAX Wrapper](AAX+Wrapper.md)
 >Helper Class wrapping a **VST 3 plug-in** to an **AAX plug-in**
 
->## [VST 3 - Audio Unit v3 Wrapper](../What+is+the+VST+3+SDK/Wrappers/AUv3+Wrapper.md)
+>## [VST 3 - Audio Unit v3 Wrapper](AUv3+Wrapper.md)
 >Helper Class wrapping a **VST 3 plug-in** to an **Audio Unit v3 plug-in**
 
->## [VST 3 - Audio Unit Wrapper](../What+is+the+VST+3+SDK/Wrappers/AUv2+Wrapper.md)
+>## [VST 3 - Audio Unit Wrapper](AUv2+Wrapper.md)
 >Helper Class wrapping a **VST 3 plug-in** to an **Audio Unit v2 plug-in**

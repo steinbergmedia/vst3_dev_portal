@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [Getting Started](../Getting+Started/Index.md)
+>/ [VST Home](../) / [Getting Started](../Getting+Started/Index.md)
 >
 ># Miscellaneous
 

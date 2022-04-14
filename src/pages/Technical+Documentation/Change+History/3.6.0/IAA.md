@@ -1,4 +1,4 @@
->/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.0] iOS Inter-App Audio
 
@@ -16,7 +16,7 @@ The **VST 3 SDK** provides an easy way to create an iOS InterApp-Audio applicati
 
 The SDK comes with an iOS **VST 3** host application that can run standalone or as an Inter-App Audio slave. If your plug-in does not use any specific Windows or Mac OS X API's, it should be reasonably easy to get your plug-in running on iOS.
 
-If you use [**VSTGUI4**](../What+is+the+VST+3+SDK/VSTGUI.md) with the VST3Editor class as your UI, you mainly only have to create a new UI description for the different device sizes.
+If you use [**VSTGUI4**](../../../What+is+the+VST+3+SDK/VSTGUI.md) with the VST3Editor class as your UI, you mainly only have to create a new UI description for the different device sizes.
 
 ## How does it work?
 
@@ -95,9 +95,9 @@ IPlugView* PLUGIN_API MyEditController::createView (FIDString _name)
 }
 ```
 
-### Using [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md)
+### Using [**VSTGUI**](../../../What+is+the+VST+3+SDK/VSTGUI.md)
 
-[**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) 4.3 or higher includes support for iOS. You can use it the same like you use it for Windows or Mac OS X. See the [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) documentation for some limitations.
+[**VSTGUI**](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.3 or higher includes support for iOS. You can use it the same like you use it for Windows or Mac OS X. See the [**VSTGUI**](../../../What+is+the+VST+3+SDK/VSTGUI.md) documentation for some limitations.
 
 ### Using a native UIView
 

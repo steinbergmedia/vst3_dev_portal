@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
+>/ [VST Home](../) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
 >
 ># Steinberg VST usage guidelines
 
@@ -114,4 +114,4 @@ Attribution:
 
 ## 16. Questions and suggestions
 
-Questions and suggestions regarding this guide can be sent to <reception@steinberg.de>
+Questions and suggestions regarding this guide can be sent to [reception@steinberg.de](mailto:reception@steinberg.de)
