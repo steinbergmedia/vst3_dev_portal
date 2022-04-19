@@ -9,7 +9,7 @@
     - New defines: SMTG_CPU_ARM_64EC, SMTG_CPP14 and SMTG_CPP17
     - New [VST 3 plug-in location](../../Locations+Format/Plugin+Locations.md) user local on Windows: %LOCALAPPDATA%/Programs/Common/VST3/
     - Use SMTG_CONSTEXPR where needed
-- [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.10.§
+- [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.10.3
     - different fixes
 - Licensing has changed to version 2.2.2! Please read the new license agreement [VST 3 Licensing Issues](../../../VST+3+Licensing/Index.md). (if you have already signed the version 2.0 of the license agreement you do not have to sign it again).
 - cmake:
