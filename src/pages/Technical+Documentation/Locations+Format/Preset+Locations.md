@@ -35,7 +35,7 @@
 ### For Mac platform
 
 | Prio  | Type            | Scope   | Write | Path | Comment |
-| :-    | :-              | :-      | :-    | :- | :- |
+| :-    | :-              | :-      | :-    | :-   | :-      |
 | 1     | User            | User    | X     | Users/$USERNAME/Library/Audio/Presets/$COMPANY/$PLUGIN-NAME/ |
 | 2     | Shared_Factory  | Public  | -     | Library/Audio/Presets/$COMPANY/$PLUGIN-NAME/ | Computer shared FactoryROM |
 | 3     | Shared_Factory  | Public  | -     | Network/Library/Audio/Presets/$COMPANY/$PLUGIN-NAME/ | Network shared FactoryROM |
@@ -44,7 +44,7 @@
 ### For Windows XP/2000 platform
 
 | Prio  | Type          |  Scope  | Write | Path | Comment |
-| :-    | :-            | :-      | :-    | :- | :- |
+| :-    | :-            | :-      | :-    | :-   | :-      |
 | 1     | User          | User    | X     | [my documents]/vst3 presets/$company/$plugin-name/ | csidl_personal |
 | 2     | User_Factory  | User    | X     | [documents and settings/$username/application data]/vst3 presets/$company/$plugin-name/ | csidl_appdata |
 | 3     | Shared_Factory| Public  | -     | [documents and settings/$allusers/application data]/vst3 presets/$company/$plugin-name/ | csidl_common_appdata |
@@ -53,7 +53,7 @@
 ### For Windows Vista/7/8/10 
 
 | Prio  | Type          | Scope | Write | Path | Comment |
-| :-    | :-            | :-    | :-    | :- | :- |
+| :-    | :-            | :-    | :-    | :-   | :-      |
 | 1     | User          | User  | X     | [Users/$USERNAME/Documents]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | FOLDERID_Documents |
 | 2     | User_Factory  | User  | X     | [Users/$USERNAME/AppData/Roaming]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | FOLDERID_RoamingAppData |
 | 3     | Shared_Factory| Public| -     | [ProgramData]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | FOLDERID_ProgramData |
@@ -63,7 +63,7 @@
 
 | Prio  | Type            | Scope   | Write | Path                                                | Comment |
 | :-    | :-              | :-      | :-    | :-                                                  | :-      |
-| 1     | User            | User    | X     | $HOME/.vst3/presets/$COMPANY/$PLUGIN-NAME/          | |
-| 2     | Shared_Factory  | Public  | -     | /usr/share/vst3/presets/$COMPANY/$PLUGIN-NAME/      | |
-| 3     | Shared_Factory  | Public  | -     | /usr/local/share/vst3/presets/$COMPANY/$PLUGIN-NAME/| |
+| 1     | User            | User    | X     | $HOME/.vst3/presets/$COMPANY/$PLUGIN-NAME/          |         |
+| 2     | Shared_Factory  | Public  | -     | /usr/share/vst3/presets/$COMPANY/$PLUGIN-NAME/      |         |
+| 3     | Shared_Factory  | Public  | -     | /usr/local/share/vst3/presets/$COMPANY/$PLUGIN-NAME/|         |
 | 4     | App_Factory     | Apps    | -     | [$APPFOLDER]/vst3/presets/$COMPANY/$PLUGIN-NAME/    | Host Application |

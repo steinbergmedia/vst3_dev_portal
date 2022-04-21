@@ -90,7 +90,7 @@ A module (Windows: Dynamic Link Library, MAC: Mach-O Bundle, Linux: package) con
 The host has access to this factory through the [Steinberg::IPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory.html) interface. This is the anchor point for the module and it is realized as a C-style export function named [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330). You can find an export definition file in the SDK - *public.sdk/source/main/winexport.def*  (*public.sdk/source/main/macexport.exp*) which can be used to export this function or you could use the macro SMTG_EXPORT_SYMBOL directly in cpp file (check *public.sdk/source/main/dllmain.cpp* for example).\
 [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330) is declared as follows:
 
-```
+``` c++
 SMTG_EXPORT_SYMBOL IPluginFactory* PLUGIN_APIGetPluginFactory ();
 ```
 
@@ -129,7 +129,7 @@ Here an example when using def/exp files instead of SMTG_EXPORT_SYMBOL:
 
 **winexport.def file on Windows**
 
-```
+``` c
 EXPORTS
 GetPluginFactory
 InitDll
@@ -138,7 +138,7 @@ ExitDll
 
 **macexport.exp file on mac**
 
-```
+``` c
 _GetPluginFactory
 _bundleEntry
 _bundleExit
