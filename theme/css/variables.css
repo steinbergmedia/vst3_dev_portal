@@ -253,8 +253,8 @@
     --searchresults-li-bg: #dec2a2;
     --search-mark-bg: #e69f67;
 
-	--mermaid-bg: #fafafa;
-	--mermaid-border: #000000;
+	/*--mermaid-bg: #fafafa;
+	--mermaid-border: #000000;*/
 }
 
 .steinberg-dark {
@@ -297,8 +297,8 @@
     --searchresults-li-bg: #dec2a2;
     --search-mark-bg: #e69f67;
 
-	--mermaid-bg: #454555;
-	--mermaid-border: #FFFFFF;
+	/*--mermaid-bg: #555555;
+	--mermaid-border: #cecece;*/
 }
 
 @media (prefers-color-scheme: dark) {
