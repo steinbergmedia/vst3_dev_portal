@@ -495,11 +495,6 @@ ul#searchresults span.teaser em {
     border-top-right-radius: inherit;
 }
 
-/*.mermaid {
-	background-color: var(--mermaid-bg);
-	border: 1px solid var(--mermaid-border);
-}*/
-
 .footer {
     position: -webkit-sticky;
     position: sticky;
