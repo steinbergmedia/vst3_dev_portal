@@ -5,10 +5,8 @@
 ## Version 3.7.5 (2022/05/16)
 
 - Interface changes:
-  - New moduleinfo.json file: The moduleinfo.json describes the contents of the plug-in in a JSON5 compatible format. It contains the factory info (see PFactoryInfo), the contained classes (see PClassInfo), the
-included snapshots and a list of compatibility of the included classes.
-
-  - New interface in pluginterfaces/base/iplugincompatibility.h as replacement of the moduleinfo.json when not available.
+  - New **moduleinfo.json** file: The moduleinfo.json describes the contents of the plug-in in a JSON5 compatible format. It contains the factory info (see PFactoryInfo), the contained classes (see PClassInfo), the included snapshots and a list of compatibility of the included classes.
+  - New interface *IPluginCompatibility* in *pluginterfaces/base/iplugincompatibility.h* as replacement of the moduleinfo.json when not available.
   - Fix https://github.com/steinbergmedia/vst3sdk/issues/90
   - Fix warnings for Windows ARM64EC target
   - Fix constexpr issue by using SMTG_CONSTEXPR
@@ -17,16 +15,25 @@ included snapshots and a list of compatibility of the included classes.
 - New Flags/Enums:
   - New predefined 3D speaker arrangement:
     - add **5.0.5.3** and **5.1.5.3** speaker arrangements
+- Documentation
+  - New tutorial explaining [How to use the silence flags](../../../Tutorials/how+to+use+the+silence+flags.md).
+  - Move VST3 documentation to md files.
 - cmake
   - Minimum cmake version is now 3.19
   - New function *smtg_target_setup_as_vst3_example*
+  - Change *smtg_target_set_bundle* for mac
+  - New option: **SMTG_CREATE_MODULE_INFO**: Create the moduleinfo.json file (default ON)
   - Fix https://github.com/steinbergmedia/vst3sdk/pull/91
 
 - [Plug-in Wrappers](../../../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
     - Fix AUv3 validation issue
 - [Samples](../../../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+  - New VST 3 plug-ins example:
+    - New *multiple_programchanges* showing support of multiple program change parameters.
   - refactoring the examples cmake for using the new versioning handling and *smtg_target_setup_as_vst3_example*
+- Validator:
+  - Add test for *IPluginCompatibility* interface
 - Helpers classes:
   - New file in public.sdk\samples\vst-utilities for moduleinfo support.
   - New files in public.sdk\source\vst\moduleinfo for creating and parsing moduleinfo.

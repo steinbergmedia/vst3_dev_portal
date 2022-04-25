@@ -211,7 +211,7 @@ Classes:
 - PitchNamesProcessor
 - PitchNamesDataBrowserSource
 
-## TestPrefetchableSupport
+## Test Prefetchable Support
 
 Very simple Plug-in:
 - showing how to use the [Steinberg::Vst::IPrefetchableSupport](../Technical+Documentation/Change+History/3.6.5/IPrefetchableSupport.md) interface
@@ -221,7 +221,14 @@ Very simple Plug-in:
 
 Check the folder *"public.sdk/samples/vst/prefetchablesupport"* of the SDK!
 
-## TestProgramChange
+## Test Multiple Program Changes
+
+Very simple Plug-in:
+
+- showing how to support multiple ProgramChange parameters: 16 slots with one associated program change parameter and a program list for each slot.
+- using a generic UI
+
+## Test Program Change
 
 Very simple Plug-in:
 
