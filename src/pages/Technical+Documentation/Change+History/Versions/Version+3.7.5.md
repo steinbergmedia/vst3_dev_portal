@@ -5,21 +5,33 @@
 ## Version 3.7.5 (2022/05/16)
 
 - Interface changes:
-    -
-- [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.10.3
-    - 
-    -
+  - New moduleinfo.json file: The moduleinfo.json describes the contents of the plug-in in a JSON5 compatible format. It contains the factory info (see PFactoryInfo), the contained classes (see PClassInfo), the
+included snapshots and a list of compatibility of the included classes.
+
+  - New interface in pluginterfaces/base/iplugincompatibility.h as replacement of the moduleinfo.json when not available.
+  - Fix https://github.com/steinbergmedia/vst3sdk/issues/90
+  - Fix warnings for Windows ARM64EC target
+  - Fix constexpr issue by using SMTG_CONSTEXPR
+- [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.11
+  - different fixes
+- New Flags/Enums:
+  - New predefined 3D speaker arrangement:
+    - add **5.0.5.3** and **5.1.5.3** speaker arrangements
 - cmake
-    - **Refactoring**: 
+  - Minimum cmake version is now 3.19
+  - New function *smtg_target_setup_as_vst3_example*
+  - Fix https://github.com/steinbergmedia/vst3sdk/pull/91
 
 - [Plug-in Wrappers](../../../What+is+the+VST+3+SDK/Wrappers/Index.md):
-    - Audio Unit:
-        -
+  - Audio Unit:
+    - Fix AUv3 validation issue
 - [Samples](../../../What+is+the+VST+3+SDK/Plug-in+Examples.md):
-    - 
+  - refactoring the examples cmake for using the new versioning handling and *smtg_target_setup_as_vst3_example*
 - Helpers classes:
-    - 
-- [VST3PluginTestHost](../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.2.20:
-    - 
+  - New file in public.sdk\samples\vst-utilities for moduleinfo support.
+  - New files in public.sdk\source\vst\moduleinfo for creating and parsing moduleinfo.
+  - Fix https://github.com/steinbergmedia/vst3_public_sdk/issues/37
+- [VST3PluginTestHost](../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.3.0:
+  - The 32bits version of plugintesthost is not availble anymore
 - [VST3 Project Generator](../../../What+is+the+VST+3+SDK/Project+Generator.md) v2022.05:
-    - 
+  - Adapt VST3 Inspector for Compatibility json file support
