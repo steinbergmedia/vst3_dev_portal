@@ -31,7 +31,8 @@
 - [Samples](../../../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 plug-ins example:
     - New *multiple_programchanges* showing support of multiple program change parameters.
-  - refactoring the examples cmake for using the new versioning handling and *smtg_target_setup_as_vst3_example*
+  - Add new *Processing Load* simulation parameter in **HostChecker** which allows to create a CPU load.
+  - Refactoring the examples cmake for using the new versioning handling and *smtg_target_setup_as_vst3_example*
 - Validator:
   - Add test for *IPluginCompatibility* interface
 - Helpers classes:
