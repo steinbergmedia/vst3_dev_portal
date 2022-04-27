@@ -203,6 +203,6 @@ This interface allows the host to get a parameter associated to a specific meani
 
 Allows the plug-in to request the host to create a progress for some specific tasks which take some time.
 
-## [(3.7.0) Process Context Requirements]Change+History/3.7.0/IProcessContextRequirements.md)
+## [(3.7.0) Process Context Requirements](Change+History/3.7.0/IProcessContextRequirements.md)
 
 To get accurate process context information ([Vst::ProcessContext](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html)), it is now required to implement this interface.
