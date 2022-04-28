@@ -58,6 +58,7 @@
 		- [Snapshots](pages/Technical+Documentation/Locations+Format/Snapshots.md)
 	- [About MIDI in VST 3](pages/Technical+Documentation/About+MIDI/Index.md)
 	- [Change History](pages/Technical+Documentation/Change+History/Index.md)
+		- [Version 3.7.5 (2022/05/16)](pages/Technical+Documentation/Change+History/Versions/Version+3.7.5.md)
 		- [Version 3.7.4 (2021/12/14)](pages/Technical+Documentation/Change+History/Versions/Version+3.7.4.md)
 		- [Version 3.7.3 (2021/08/10)](pages/Technical+Documentation/Change+History/Versions/Version+3.7.3.md)
 		- [Version 3.7.2 (2021/03/30)](pages/Technical+Documentation/Change+History/Versions/Version+3.7.2.md)

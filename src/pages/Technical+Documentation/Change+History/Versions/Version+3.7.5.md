@@ -14,7 +14,14 @@
   - different fixes
 - New Flags/Enums:
   - New predefined 3D speaker arrangement:
-    - add **5.0.5.3** and **5.1.5.3** speaker arrangements
+    - **k50_5_3** => L R C Ls Rs Tfl Tfc Tfr Trl Trr Bfl Bfc Bfr
+    - **k51_5_3** => L R C LFE Ls Rs Tfl Tfc Tfr Trl Trr Bfl Bfc Bfr
+    - ITU 4+5+1 Sound System E
+      - **k50_4_1** => L R C Ls Rs Tfl Tfr Trl Trr Bfc
+      - **k51_4_1** => L R C LFE Ls Rs Tfl Tfr Trl Trr Bfc
+    - ITU 3+7+0 Sound System F
+      - **k70_3** => L R C Ls Rs Sl Sr Tsl Tsr Trc
+      - **k72_3** => L R C LFE Ls Rs Sl Sr Tsl Tsr Trc LFE2
 - Documentation
   - New tutorial explaining [How to use the silence flags](../../../Tutorials/how+to+use+the+silence+flags.md).
   - Move VST3 documentation to md files.
