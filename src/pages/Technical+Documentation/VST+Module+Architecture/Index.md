@@ -91,7 +91,7 @@ The host has access to this factory through the [Steinberg::IPluginFactory](http
 [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330) is declared as follows:
 
 ``` c++
-SMTG_EXPORT_SYMBOL IPluginFactory* PLUGIN_APIGetPluginFactory ();
+SMTG_EXPORT_SYMBOL IPluginFactory* PLUGIN_API GetPluginFactory ();
 ```
 
 In addition to the **GetPluginFactory** function the plug-in may has to export additional **entry/exit** functions depending on the platform:
