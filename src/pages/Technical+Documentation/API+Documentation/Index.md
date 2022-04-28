@@ -48,7 +48,7 @@ The context parameter passed to [Steinberg::IPluginBase::initialize](https://ste
 
 **How can the plug-in access IHostApplication?**
 
-```
+``` c++
 /-----------------------------------------------------------------------
 tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
 {
@@ -70,7 +70,7 @@ tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
 
 Here an example of a host implementation creating the component and its associated controller of a plug-in with a given classID:
 
-```
+``` c++
 /-----------------------------------------------------------------------
 Vst::IComponent* processorComponent;
 Vst::IEditController* editController;
@@ -112,7 +112,6 @@ if (processorComponent && (result == kResultOk))
 
 >ⓘ **Note**\
 >Please be aware that IPluginBase::initialize and IPluginBase::terminate must only be called once per object instance. So if an object implements both IAudioProcessor and IEditController take care to only call them once as in the example above.
-
 
 ### Extensions
 
