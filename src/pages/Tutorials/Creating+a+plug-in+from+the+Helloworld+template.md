@@ -35,7 +35,10 @@ The SDK provides a HelloWorld example which you can use to create a new **VST 3 
   - For example: copy **VST_SDK/my_plugins** to *D:/Users/Me/Desktop/development/my_plugins*
 - Now you have to indicate to **cmake** to add this new location to the projects. There are 3 possibilities:
   - Search in *VST3_SDK/CMakeLists.txt* for the comment "# Here you can add your VST 3 Plug-ins folder" and specify the path to the folder, for example:
-    - ***set(SMTG_MYPLUGINS_SRC_PATH "D:/Users/Me/Desktop/development/my_plugins"***)
+  ``` c++
+   set(SMTG_MYPLUGINS_SRC_PATH "D:/Users/Me/Desktop/development/my_plugins")
+  ```
+
 - Or when using the **CMake GUI App**, you can specify the new location by using the browser for the variable **SMTG_MYPLUGINS_SRC_PATH**.
 - Or call **cmake** with the option
   - ***-DSMTG_MYPLUGINS_SRC_PATH=D:/Users/Me/Desktop/development/my_plugins***
@@ -56,12 +59,14 @@ The SDK provides a HelloWorld example which you can use to create a new **VST 3 
   1. Rename all strings for your plug-in from ***HelloWorld*** to ***MyDelay*** for example:
      - ***HelloWorldProcessor::HelloWorldProcessor*** to ***MyDelayProcessor::MyDelayProcessor***
 
-  2. Open the file MyDelayPlugin/include/plugids.h and create new uids for processor and for controller: you can use GUID creator tools like <https://www.guidgenerator.com/>:
-     - static const FUID MyProcessorUID (0x2A0CC26C, 0xBF88964C, 0xB0BFFCB0, 0x554AF523);
-     - static const FUID MyControllerUID (0xB9DBBD64, 0xF7C40A4C, 0x9C8BFB33, 0x8761E244);
+  2. Open the file MyDelayPlugin/include/plugids.h and create new uids for processor and for controller: you can use GUID creator tools like <https://www.guidgenerator.com>:
+  ``` c++
+  static const FUID MyProcessorUID (0x2A0CC26C, 0xBF88964C, 0xB0BFFCB0, 0x554AF523);
+  static const FUID MyControllerUID (0xB9DBBD64, 0xF7C40A4C, 0x9C8BFB33, 0x8761E244);
+  ```
 
   3. Open the file ***version.h*** and adapt the strings like this:
-  
+
   ``` c++
   #define stringPluginName "My First Delay"
   #define stringOriginalFilename "MyDelay.vst3"
