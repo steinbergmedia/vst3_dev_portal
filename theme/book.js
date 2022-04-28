@@ -380,6 +380,7 @@ function playground_text(playground) {
             return;
         }
         set_theme(theme);
+        location.reload(true);
     });
 
     themePopup.addEventListener('focusout', function(e) {
