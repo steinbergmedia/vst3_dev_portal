@@ -41,6 +41,7 @@
 		- [How the host will load a VST-MA based Plug-in](pages/Technical+Documentation/VST+Module+Architecture/Loading.md)
 		- [How to derive a class from an interface](pages/Technical+Documentation/VST+Module+Architecture/Derive+From+Interface.md)
 		- [Interface Versions and Inheritance](pages/Technical+Documentation/VST+Module+Architecture/Interface+Versions+and+Inheritance.md)
+		- [Moduleinfo](pages/Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md)
 	- [Parameters and Automation](pages/Technical+Documentation/Parameters+Automation/Index.md)
 	- [VST 3 Units](pages/Technical+Documentation/VST+3+Units/Index.md)
 	- [Presets & Program Lists](pages/Technical+Documentation/Presets+Program+Lists/Index.md)

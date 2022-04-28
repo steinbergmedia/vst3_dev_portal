@@ -17,12 +17,13 @@
 
 On the macOS platform, **VST 3 Plug-in** is a standard macOS bundle, its file extension is "**.vst3**" and has the following folder structure:
 
-| Folder                            | Description                                                   |
-| :-                                | :-                                                            |
-| MyPlugin.vst3/Contents/Resources/ | folder contains all additional resource files useful for the plug-in |
-| MyPlugin.vst3/Contents/MacOS/     | folder contains the plug-in’s macOS universal binary (Mach-O) |
-| MyPlugin.vst3/Contents/Info.plist | the plug-in’s property list                                   |
-| MyPlugin.vst3/Contents/PkgInfo    | specifies the type and creator codes of the bundle (optional) |
+| Folder                                 | Description                                                   |
+| :-                                     | :-                                                            |
+| MyPlugin.vst3/Contents/Resources/      | folder contains all additional resource files useful for the plug-in |
+| MyPlugin.vst3/Contents/MacOS/          | folder contains the plug-in’s macOS universal binary (Mach-O) |
+| MyPlugin.vst3/Contents/moduleinfo.json | the plug-in’s moduleinfo                                   |
+| MyPlugin.vst3/Contents/Info.plist      | the plug-in’s property list                                   |
+| MyPlugin.vst3/Contents/PkgInfo         | specifies the type and creator codes of the bundle (optional) |
 
 ## For the Windows platform
 
@@ -35,6 +36,7 @@ On the Windows platform, a **VST 3 Plug-in** is organized as a bundle like packa
 | MyPlugin.vst3/Contents/x86_64-win/MyPlugin.vst3 | folder contains the plug-in binary (64 bit dll for the x86_64 architecture) |
 | MyPlugin.vst3/Contents/arm-win/MyPlugin.vst3    | Proposal: folder contains the plug-in binary (32 bit dll for the arm architecture) |
 | MyPlugin.vst3/Contents/arm_64-win/MyPlugin.vst3 | Proposal: folder contains the plug-in binary (64 bit dll for the arm64 architecture) |
+| MyPlugin.vst3/Contents/moduleinfo.json          | the plug-in’s moduleinfo |
 | MyPlugin.vst3/desktop.ini                       | used to set custom icon in Windows Explorer |
 | MyPlugin.vst3/Plugin.ico                        | customized plug-in icon |
 
@@ -61,12 +63,13 @@ attrib +r +h Plugin.ico
 
 On Linux, a **VST 3 Plug-in** is organized as a bundle like package format, its file extension is "**.vst3**", it follows this folder structure:
  
-| Folder                              | Description                        |
-| :-                                  | :-                                 |
-| MyPlugin.vst3/Contents/Resources/   | folder contains all additional resource files useful for the plug-in |
-| MyPlugin.vst3/Contents/i386-linux   | folder contains the plug-in binary (32 bit shared library .so for Kernel Architecture i386) |
-| MyPlugin.vst3/Contents/x86_64-linux | folder contains the plug-in binary (64 bit shared library .so for Kernel Architecture x86_64) |
-| MyPlugin.vst3/Contents/XXX-linux    | with XXX the architecture name based on the output of command-line "uname -m" (machine hardware) + "-linux" for example: • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux |
+| Folder                                 | Description                        |
+| :-                                     | :-                                 |
+| MyPlugin.vst3/Contents/Resources/      | folder contains all additional resource files useful for the plug-in |
+| MyPlugin.vst3/Contents/i386-linux      | folder contains the plug-in binary (32 bit shared library .so for Kernel Architecture i386) |
+| MyPlugin.vst3/Contents/x86_64-linux    | folder contains the plug-in binary (64 bit shared library .so for Kernel Architecture x86_64) |
+| MyPlugin.vst3/Contents/XXX-linux       | with XXX the architecture name based on the output of command-line "uname -m" (machine hardware) + "-linux" for example: • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux |
+| MyPlugin.vst3/Contents/moduleinfo.json | the plug-in’s moduleinfo |
 
 ## Merged Bundle
 
@@ -114,6 +117,7 @@ MyPlugin.vst3/
     |   |__ x86_64-win/
     |   |   |__ MyPlugin.vst3
     |   |
+    |   |__ moduleinfo.json
     |   |__ Info.plist  (macOS Only)
     |   |__ PkgInfo     (macOS Only)
     |
