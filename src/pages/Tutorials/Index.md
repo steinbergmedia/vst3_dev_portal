@@ -34,7 +34,11 @@ This tutorial explains how to use *cmake* with **VST 3 SDK**.
 
 ## [Generate a new plug-in with the Project Generator App](Generate+new+plug-in+with+Project+Generator.md)
 
-This tutorial explains how to create a new audio plug-in by using the ***[VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)*** included in the **VST 3 SDK** and how to add some basic features.
+This tutorial explains how to create a new audio plug-in by using the ***[VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)*** included in the **VST 3 SDK**.
+
+## [Code your first plug-in](Code+your+first+plug-in.md)
+
+Following the previous tutorial [Generate a new plug-in with the Project Generator App](Generate+new+plug-in+with+Project+Generator.md), this tutorial explains how to code an audio plug-in and how to add some basic features.
 
 ## [Use VSTGUI to design a User Interface](Use+VSTGUI+to+design+a+UI.md)
 
