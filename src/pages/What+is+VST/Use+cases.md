@@ -74,4 +74,5 @@ By using **VST 3 SDK** directly:
 | Soundop                 | Ivosight Software Inc.          | <https://ivosight.com>                        |
 | TS2                     | Ircam Lab                       | <https://www.ircamlab.com>                    |
 | Cross DJ                | MixVibes                        | <https://www.mixvibes.com>                    |
-| VST Rack Pro            | Yamaha Corporation              |                                               |
+| VST Rack Pro            | Yamaha Corporation              | <https://europe.yamaha.com/en/products/proaudio/software/vst_rack/index.html>|
+| DaVinci Resolve         | Blackmagic Design               | <https://www.blackmagicdesign.com/products/davinciresolve>|
