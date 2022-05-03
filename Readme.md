@@ -29,4 +29,3 @@ mdbook serve
 then you can locate you webbrowser to http://localhost:3000
 
 the html pages will automatically be updated if you change the source files.
-
