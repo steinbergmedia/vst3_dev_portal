@@ -5,7 +5,7 @@
 ## Version 3.7.5 (2022/05/16)
 
 - Interface changes:
-  - New **moduleinfo.json** file: The moduleinfo.json describes the contents of the plug-in in a JSON5 compatible format. It contains the factory info (see PFactoryInfo), the contained classes (see PClassInfo), the included snapshots and a list of compatibility of the included classes.
+  - New **moduleinfo.json** file: The moduleinfo.json describes the contents of the plug-in in a JSON5 compatible format. It contains the factory info (see PFactoryInfo), the contained classes (see PClassInfo), the included snapshots and a list of compatibility of the included classes. This compatibility list allows, for example, that a VST 3 plug-in could replace a given VST 2 plug-in.
   - New interface *IPluginCompatibility* in *pluginterfaces/base/iplugincompatibility.h* as replacement of the moduleinfo.json when not available.
   - Fix https://github.com/steinbergmedia/vst3sdk/issues/90
   - Fix warnings for Windows ARM64EC target
@@ -30,11 +30,12 @@
   - New function *smtg_target_setup_as_vst3_example*
   - Change *smtg_target_set_bundle* for mac
   - New option: **SMTG_CREATE_MODULE_INFO**: Create the moduleinfo.json file (default ON)
+  - use VERSION and DESCRIPTION wih project() for generating automatically with cmake version file.
   - Fix https://github.com/steinbergmedia/vst3sdk/pull/91
 
 - [Plug-in Wrappers](../../../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
-    - Fix AUv3 validation issue
+    - Fix AUv3 validation issue (https://github.com/steinbergmedia/vst3_public_sdk/issues/39)
 - [Samples](../../../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 plug-ins example:
     - New *multiple_programchanges* showing support of multiple program change parameters.
