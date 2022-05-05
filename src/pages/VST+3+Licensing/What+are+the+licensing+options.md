@@ -78,5 +78,5 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 
 b) General Public License (GPL) Version 3
 Details of these licenses can be found at: <http://www.gnu.orglicenses/gpl-3.0.html>
-/---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 ```

@@ -49,7 +49,7 @@ The context parameter passed to [Steinberg::IPluginBase::initialize](https://ste
 **How can the plug-in access IHostApplication?**
 
 ``` c++
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
 {
     FUnknownPtr<IHostApplication> hostApp (hostContext);
@@ -63,7 +63,7 @@ tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
     }
     //...
 }
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 ```
 
 ### Creation and initialization from Host point of view
@@ -71,7 +71,7 @@ tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
 Here an example of a host implementation creating the component and its associated controller of a plug-in with a given classID:
 
 ``` c++
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 Vst::IComponent* processorComponent;
 Vst::IEditController* editController;
 IPluginFactory* factory;
@@ -107,7 +107,7 @@ if (processorComponent && (result == kResultOk))
         }
     }
 }
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 ```
 
 >ⓘ **Note**\
@@ -255,7 +255,7 @@ Please note that messages from the processor to the controller must not be sent 
 Here an example of host implementation where the component and controller parts are connected and synchronized:
 
 ``` c++
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 // the component and the controller parts are previously becreated and initialized (see above)
 // ...
 if (editController)
