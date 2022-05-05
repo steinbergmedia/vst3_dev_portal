@@ -29,6 +29,7 @@
 	- [Building the examples included in the SDK](pages/Tutorials/Building+the+examples+included+in+the+SDK.md)
 	- [Using cmake for building VST 3 plug-ins](pages/Tutorials/Using+cmake+for+building+plug-ins.md)
 	- [Generate a new plug-in with the Project Generator App](pages/Tutorials/Generate+new+plug-in+with+Project+Generator.md)
+	- [Code your first plug-in](pages/Tutorials/Code+your+first+plug-in.md)
 	- [Use VSTGUI to design a User Interface](pages/Tutorials/Use+VSTGUI+to+design+a+UI.md)
 	- [Advanced VST 3 techniques](pages/Tutorials/Advanced+VST+3+techniques.md)
 	- [How to use the silence flags](pages/Tutorials/How+to+use+the+silence+flags.md)
