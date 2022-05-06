@@ -5,9 +5,9 @@
 ## Version 3.7.5 (2022/05/16)
 
 - Interface changes:
-  - New **moduleinfo.json** file: The moduleinfo.json describes the contents of the plug-in in a JSON5 compatible format. It contains the factory info (see PFactoryInfo), the contained classes (see PClassInfo), the included snapshots and a list of compatibility of the included classes. This compatibility list allows, for example, that a VST 3 plug-in could replace a given VST 2 plug-in.
-  - New interface *IPluginCompatibility* in *pluginterfaces/base/iplugincompatibility.h* as replacement of the moduleinfo.json when not available.
-  - Fix https://github.com/steinbergmedia/vst3sdk/issues/90
+  - New [moduleinfo.json](../../VST+Module+Architecture/ModuleInfo-JSON.md) file: The moduleinfo.json describes the contents of the plug-in in a JSON5 compatible format. It contains the factory info (see PFactoryInfo), the contained classes (see PClassInfo), the included snapshots and a list of compatibility of the included classes. This compatibility list allows, for example, that a VST 3 plug-in could replace a given VST 2 plug-in.
+  - New interface *IPluginCompatibility* in *pluginterfaces/base/iplugincompatibility.h* to be used when a moduleinfo.json file cannot be used.
+  - Fix issue building with Visual Studio 2022 (https://github.com/steinbergmedia/vst3sdk/issues/90)
   - Fix warnings for Windows ARM64EC target
   - Fix constexpr issue by using SMTG_CONSTEXPR
 - [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.11
