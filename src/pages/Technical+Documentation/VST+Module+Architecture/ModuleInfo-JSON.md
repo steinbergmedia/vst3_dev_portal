@@ -53,6 +53,14 @@ An example moduleinfo.json looks like this:
       "Class Flags": 1,
       "Cardinality": 2147483647,
       "Snapshots": [
+        {
+          "Scale Factor": 1,
+          "Path": "Contents/Resources/Snapshots/BD58B550F9E5634E9D2EFF39EA0927B1_snapshot.png",
+        },
+        {
+          "Scale Factor": 2,
+          "Path": "Contents/Resources/Snapshots/BD58B550F9E5634E9D2EFF39EA0927B1_snapshot_2.0x.png",
+        },
       ],
     },
     {
