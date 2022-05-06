@@ -64,7 +64,7 @@ Now you can build your plug-in and start your preferred **VST 3** host to start 
 
 ## Part 2: Open the VSTGUI/WYSWYG editor
 
-If you now open your plug-in editor, you will see a blank editor. To enter the UI editor, right-click on it and choose "**Open UIDescription Editor**".
+If you now open your plug-in UI in your host, you will see a blank editor. To enter the UI editor, right-click on it and choose "**Open UIDescription Editor**".
 
 After your first edits, you have to add the *uidesc* file you have saved to your project (already done if you have used [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)). You also have to make sure to always build your project after changes to the *uidesc* file.
 
