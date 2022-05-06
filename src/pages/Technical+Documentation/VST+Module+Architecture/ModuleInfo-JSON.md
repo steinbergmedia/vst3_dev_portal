@@ -2,14 +2,26 @@
 >
 ># Moduleinfo
 
-An optional moduleinfo.json file can be part of the module file package.
+An optional moduleinfo.json file can be part of the [module file package](../Locations+Format/Plugin+Format.md).
 
 The file contains the same information as the [Module Factory](Index.md#module-factory), plus an optional list of compatible classes.
-The file is encoded in a [json5](http://json5.org) format.
+The file is encoded in [json5](http://json5.org) format.
 
-This way the host does not need to load the component to know which classes the module provides.
+The compatible array is used to declare a class to be treated as a replacement for another class or classes.
 
-The optional list of compatible classes is used to declare a class to be treated as a one to one replacement for other classes.
+When used this way the host does not need to load the component to know which classes the module provides.
+
+### SDK
+
+The VST SDK contains a command-line utility to create and validate the moduleinfo.json file from a VST plug-in.
+See **public.sdk/vst-utilities/moduleinfotool/**.
+
+The moduleinfotool uses the ModuleInfoLib which can be used by hosts to read and parse the moduleinfo.json file.
+See **public.sdk/source/vst/moduleinfo/**
+ 
+For plug-ins build with the VST SDK, the moduleinfo.json file will be automatically created during the build process.
+
+### Example
 
 An example moduleinfo.json looks like this:
 
@@ -67,3 +79,4 @@ An example moduleinfo.json looks like this:
   ],
 }
 ```
+
