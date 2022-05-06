@@ -88,23 +88,10 @@ You can use it as a command line tool or use the cmake executable with GUI. cmak
 
 ![getting_started_1](../../resources/getting_started_1.jpg)
 
->**Preparation on Windows**
+>**Specific on Windows**
 >
 >---
->
->Generated **VST 3** Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](Preparation+on+Windows.md)!
->
->If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
->
->``` c++
->-DSMTG_CREATE_PLUGIN_LINK=0
->```
->
->You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for **VST 3** plug-ins, call [cmake](https://cmake.org/) with this parameter:
->
->``` c++
->-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
->```
+> You have to adapt your Windows right access to allow creation of symbolic links for VST3 plug-ins: [Check HERE!](./Preparation%2Bon%2BWindows.md)
 
 ## Get a VST 3 host application
 
