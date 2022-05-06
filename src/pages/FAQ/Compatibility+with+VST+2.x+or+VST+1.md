@@ -99,6 +99,13 @@ tresult *PLUGIN_API Processor::setState (IBStream* state)* in the file *public.s
 
 For Automation compatibility, you have to ensure that **VST 3** parameter IDs have the same value than the indexes of their associated parameters in **VST 2**. Only with this condition the host can play back the automation. The parameter value has the same meaning in **VST 2** and **VST 3**.
 
+## Q: I've already released a VST 3 plug-in with a different UID than its VST 2 equivalent. How can I declare that the VST 3 plug-in can replace its VST 2 plug-in counterpart?
+
+You can use the compatibility array of the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file.
+There you use the UID of your VST 3 audio effect class as the "New" UID and put the UID of your VST 2 plug-in in the "Old" array.
+
+If you cannot use the moduleinfo.json file, you can create a class that implements the IPluginCompatibility interface which you must provide to the host via your plugin factory.
+
 ## Q: In VST 2 the editor was able to access the processing part, named effect, directly. How can I do this in VST 3?
 
 You cannot and more importantly must not do this. The processing part and user interface part communicate via a messaging system.\
