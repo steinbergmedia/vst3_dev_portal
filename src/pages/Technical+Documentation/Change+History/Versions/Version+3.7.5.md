@@ -11,6 +11,9 @@
   - Fix warnings for Windows ARM64EC target
   - Fix constexpr issue by using SMTG_CONSTEXPR
 - [VSTGUI](../../../What+is+the+VST+3+SDK/VSTGUI.md) 4.11
+  - Using DirectComposition on Windows now with support for CLayeredViewContainer
+  - Removed 32-bit Carbon support
+  - Reworked Event handling
   - different fixes
 - New Flags/Enums:
   - New predefined 3D speaker arrangement:
@@ -32,7 +35,6 @@
   - New option: **SMTG_CREATE_MODULE_INFO**: Create the moduleinfo.json file (default ON)
   - use VERSION and DESCRIPTION wih project() for generating automatically with cmake version file.
   - Fix https://github.com/steinbergmedia/vst3sdk/pull/91
-
 - [Plug-in Wrappers](../../../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
     - Fix AUv3 validation issue (https://github.com/steinbergmedia/vst3_public_sdk/issues/39)
