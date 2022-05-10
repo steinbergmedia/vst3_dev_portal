@@ -43,7 +43,7 @@
     - New *multiple_programchanges* showing support of multiple program change parameters.
   - Add new *Processing Load* simulation parameter in **HostChecker** which allows to create a CPU load.
   - Refactoring the examples cmake for using the new versioning handling and *smtg_target_setup_as_vst3_example*
-- Validator:
+- [Validator](../../../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add test for *IPluginCompatibility* interface
 - Helpers classes:
   - New file in public.sdk/samples/vst-utilities for moduleinfo support.
