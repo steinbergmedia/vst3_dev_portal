@@ -310,7 +310,7 @@
     --hjls-blue: #3b62fd;
     --hjls-purple: #b049e3;
     --hljs-text: #f3f2ef;
-    --hljs-bg: #333333;
+    --hljs-bg: #3d3d3d;
 }
 
 @media (prefers-color-scheme: dark) {
