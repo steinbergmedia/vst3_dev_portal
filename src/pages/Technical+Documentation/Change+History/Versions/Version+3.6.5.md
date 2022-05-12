@@ -22,5 +22,5 @@ use "#pragma once" instead of "#ifndef"
         - add PresetAttributes::StateType support in AUWrapper::restoreState
 - New Flags/Enums:
     - New predefined 3D Speaker Arrangements: k91Atmos
-- VST3PluginTestHost: VST 3 Plug-in Test Host
+-  [VST3PluginTestHost](../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.md): VST 3 Plug-in Test Host
     - add some new unit tests: Bypass parameter support is mandatory for FX Plug-in (not Instrument)!

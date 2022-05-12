@@ -35,7 +35,9 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 
 ## [Tutorials](Tutorials/Index.md)
 
-- [Building the examples included in the SDK](Tutorials/Building+the+examples+included+in+the+SDK.md)
+- [Building the examples included in the SDK on Windows](Tutorials/Building+the+examples+included+in+the+SDK+Windows.md)
+- [Building the examples included in the SDK on macOS](Tutorials/Building+the+examples+included+in+the+SDK+macOS.md)
+- [Building the examples included in the SDK on Linux](Tutorials/Building+the+examples+included+in+the+SDK+Linux.md)
 - [Using cmake for building VST 3 plug-ins](Tutorials/Using+cmake+for+building+plug-ins.md)
 - [Generate a new plug-in with the Project Generator App](Tutorials/Generate+new+plug-in+with+Project+Generator.md)
 - [Use VSTGUI to design a User Interface](Tutorials/Use+VSTGUI+to+design+a+UI.md)

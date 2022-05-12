@@ -34,7 +34,7 @@
     - Added checks in HostChecker plug-in:
         - Check IParameterChanges for multiple queues with same ID
         - Check IParameterChanges for multiple points at same position
-        - Add restartComponent (kKeyswitchChanged) / restartComponent (kNoteExpressionChanged)  / restartComponent (kParamValuesChanged)
+        - Add restartComponent (kKeyswitchChanged) / restartComponent (kNoteExpressionChanged) / restartComponent (kParamValuesChanged)
     - Add support of ivstparameterfunctionname in Panner sample
     - New VST 3 plug-ins example:
         - New "AGain Sample Accurate" showing sample accurate parameter changes processing

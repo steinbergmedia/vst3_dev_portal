@@ -8,7 +8,9 @@
 
 **Related pages:**
 
-- [Building the examples included in the SDK](Building+the+examples+included+in+the+SDK.md)
+- [Building the examples included in the SDK on Windows](Building+the+examples+included+in+the+SDK+Windows.md)
+- [Building the examples included in the SDK on macOS](Building+the+examples+included+in+the+SDK+macOS.md)
+- [Building the examples included in the SDK on Linux](Building+the+examples+included+in+the+SDK+Linux.md)
 - [Using cmake for building VST 3 plug-ins](Using+cmake+for+building+plug-ins.md)
 - [Generate a new plug-in with the Project Generator App](Generate+new+plug-in+with+Project+Generator.md)
 - [Use VSTGUI to design a User Interface](Use+VSTGUI+to+design+a+UI.md)
@@ -24,7 +26,14 @@ The tutorials explain common techniques and best practices for building your plu
 >ⓘ **Note**\
 >This section is under construction and will be extended inthe future with new tutorials.
 
-## [Building the examples included in the SDK](Building+the+examples+included+in+the+SDK.md)
+## [Building the examples included in the SDK on Windows](Building+the+examples+included+in+the+SDK+Windows.md)
+
+This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
+## [Building the examples included in the SDK on macOS](Building+the+examples+included+in+the+SDK+macOS.md)
+
+This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
+
+## [Building the examples included in the SDK on Linux](Building+the+examples+included+in+the+SDK+Linux.md)
 
 This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
 

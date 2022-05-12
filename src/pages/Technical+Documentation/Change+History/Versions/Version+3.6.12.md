@@ -15,7 +15,7 @@
 - Interfaces changes:
     - New LegacyMIDICCOutEvent (plug-in): allow a plug-in to generate MIDI CC as output event.
     - New IMidiLearn (plug-in): allow a plug-in to get the currently live playing MIDI CC to implement custom MIDI learning.
-    - New IPlugInterfaceSupport (host): allow a plug-in to ask the host if a given plug-in interface is supported/used by the host. 
+    - New IPlugInterfaceSupport (host): allow a plug-in to ask the host if a given plug-in interface is supported/used by the host.
     - New IVst3WrapperMPESupport (wrapper): allow a plug-in to setup MPE support in wrappers.
 - cmake:
     - minor refactoring (like renaming WIN to SMTG_WIN)

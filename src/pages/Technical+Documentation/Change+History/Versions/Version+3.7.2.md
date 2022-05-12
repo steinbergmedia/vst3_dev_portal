@@ -27,7 +27,7 @@
     - New flag: SMTG_ENABLE_ADDRESS_SANITIZER: Enable AddressSanitizer
     - Add check for C11 atomic header
     - Add support for enabling Sanitizer
-    - Add new file SMTG_SetDebugExecutable.cmake: allows topreconfigure the debug executable to run 
+    - Add new file SMTG_SetDebugExecutable.cmake: allows topreconfigure the debug executable to run
     - Fix LOCAL_JACK_LIB in SMTG_FindJack.cmake on Windows
     - Fix link plug-in to common location on Windows
     - Fix: Failing unit test with validator results inplug-in resources/snapshots not being copied
@@ -44,7 +44,7 @@
     - New file handling module initialization: public.sdk\source\main\moduleinit.cpp, public.sdk\source\main\moduleinit.h
     - #include <windows.h> instead of #include <Windows.h>
     - Fix incorrect string copy regression in HostAttributeList::getString
-    - Fix some Validation tests:  SliceProcessingTest,ValidStateTransitionTest.
+    - Fix some Validation tests: SliceProcessingTest,ValidStateTransitionTest.
     - Fix module_linux.cpp building in C++20 mode
 - [VST3PluginTestHost](../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.1.0:
     - New context menu entry for instantiated plugin: "Export Presets Parameters as XML" which allows to load automatically VST 3 presets and export them as XML files.

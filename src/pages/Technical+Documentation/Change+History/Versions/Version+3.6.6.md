@@ -30,4 +30,4 @@
 - VST3PluginTestHost: VST 3 Plug-in Test Host
     - fix support of SingleComponent
 - new Developer Forum:
-    - finally we get our VST forum at start, please check <https://sdk.steinberg.net> and use it as new communication platform, the VST mailing list will be kept as archive mailing list.
+    - finally we get our VST forum at start, please check <https://sdk.steinberg.net> and use it as new communication platform, the VST mailing list will be kept as archive mailing list

@@ -14,7 +14,7 @@ If you do not want to create these links, call [cmake](https://cmake.org/) with 
 
 ## Solution 2
 
-You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.html) for VST 3 plug-ins which should have no right access issue as normal user, call [cmake](https://cmake.org/) with this parameter:
+You could choose (which is the default) the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.html) for VST 3 plug-ins which should have no right access issue as normal user, call [cmake](https://cmake.org/) with this parameter:
 
 ``` c++
 -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1

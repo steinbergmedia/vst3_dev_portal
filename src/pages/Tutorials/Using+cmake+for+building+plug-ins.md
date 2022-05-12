@@ -9,7 +9,9 @@
 **Related pages:**
 
 - [How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)
-- [Building the examples included in the SDK](Building+the+examples+included+in+the+SDK.md)
+- [Building the examples included in the SDK on Windows](Building+the+examples+included+in+the+SDK+Windows.md)
+- [Building the examples included in the SDK on macOS](Building+the+examples+included+in+the+SDK+macOS.md)
+- [Building the examples included in the SDK on Linux](Building+the+examples+included+in+the+SDK+Linux.md)
 
 ---
 
@@ -24,27 +26,27 @@ The SDK provides a set of cmake files allowing you to compile the included sampl
 
 ## Command line for Windows
 
-Example for building "**Microsoft Studio 16 2019**" solution:
+Example for building "**Microsoft Studio 17 2022**" solution:
 
-```
+``` c++
 // go in to the folder where you extracted the VST 3 SDK
 mkdir build
 cd build
-cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk"
-//  or without symbolic links
-cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk" -DSMTG_CREATE_PLUGIN_LINK=0
+cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk"
+// or without symbolic links
+cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_CREATE_PLUGIN_LINK=0
 
-//  or with symbolic links but using the user location (does not request admin right)
-cmake.exe -G "Visual Studio 16 2019" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
+// or with symbolic links but using the user location (enable by default), it does not request admin right
+cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
 
-// note: you can find the string definition for differentVisual Studio Generators in the cmake online documentation
+// note: you can find the string definition for different Visual Studio Generators in the cmake online documentation
 ```
 
 ## Command line for macOS
 
  Example for building **Xcode** project:
 
-```
+``` c++
 // go in to the folder where you extracted the VST 3 SDK
 mkdir build
 cd build
@@ -55,21 +57,18 @@ cd build
 
 You can use **QtCreator** 2.3.1 (or higher)
 
-```
-start QtCreator 2.3.2
-open the CMakeLists.txt located at the top of the VST 3 SDKfolder
-click on the menu Build->Run CMake
-```
+- start QtCreator 2.3.2
+- open the CMakeLists.txt located at the top of the VST 3 SDKfolder
+- click on the menu Build->Run CMake
 
 ## Use of cmake-gui
 
-```
-start the CMake (cmake-gui) application
-set "Where is the source code" to the location of the"VST3_SDK" folder
-set "Where to build the binaries" to a build folder of yourchoice
-click on "Configure"
-click on "Generate" for creating project/solution
-```
+- start the CMake (cmake-gui) application
+- set **Where is the source code** to the location of the "VST3_SDK" folder
+- set **Where to build the binaries** to a build folder of yourchoice
+- click on **Configure**
+- click on **Generate** for creating project/solution
+
 
 ![tutorials_3](../../resources/tutorials_3.jpg)
 
@@ -87,7 +86,7 @@ cmake --build
 ``` c++
 cmake -DCMAKE_C_COMPILER=/usr/bin/clang-DCMAKE_CXX_COMPILER=/usr/bin/clang++
 
-or
+// or
 
 cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 ```
@@ -113,28 +112,10 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 - **SMTG_IOS_DEVELOPMENT_TEAM**: Needed for building the InterAppAudio and AUv3 examples for iOS (Mac only)
 - **SMTG_MYPLUGINS_SRC_PATH**: Here you can add your VST 3 plug-ins folder
 - **SMTG_PLUGIN_TARGET_PATH**: Here you can redefine the VST 3 plug-ins folder
-- **SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON**: use FOLDERID_UserProgramFilesCommon as VST 3 target path (Windows only) (default OFF)
+- **SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON**: use FOLDERID_UserProgramFilesCommon as VST 3 target path (Windows only) (default ON)
 - **SMTG_RENAME_ASSERT**: Rename ASSERT to SMTG_ASSERT to avoid conflicts with 3rd party libraries (default ON)
 - **SMTG_RUN_VST_VALIDATOR**: Run the VST validator on VST 3 plug-ins each time they are built (default ON)
 - **SMTG_USE_STATIC_CRT**: Use static CRuntime on Windows (option /MT) (default OFF) (Windows only)
-
->**Preparation on Windows**
->
->---
->
->Generated VST 3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST 3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](../Getting+Started/Preparation+on+Windows.md)!
->
->If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
->
->``` c++
->-DSMTG_CREATE_PLUGIN_LINK=0
->```
->
->You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for VST 3 plug-ins, call [cmake](https://cmake.org/) with this parameter:
->
->``` c++
->-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
->```
 
 ## Using your IDE for compiling the examples
 

@@ -23,5 +23,5 @@
     - VST 3 - Audio Unit Wrapper :
         - fix initial editor size issue
         - optimization for GetParameterInfo
-- VST3PluginTestHost: VST 3 Plug-in Test Host
+-  [VST3PluginTestHost](../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.md): VST 3 Plug-in Test Host
     - New feature: Convert VST 3 Preset to VST 2 preset (fxp or fxb)
