@@ -135,12 +135,12 @@ iOS InterApp-Audio application out of your **VST 3 plug-in**
 
 | Operating System                  | Architecture                  | Compiler              | Notes                             |
 | --------------------------------- | ----------------------------- | --------------------- | --------------------------------- |
-| Windows 10                        | x86, x86_64                   | MSVC 2019, MSVC 2017  |                                   |
-| Windows 8.1                       | x86, x86_64                   | MSVC 2019, MSVC 2017  |                                   |
-| macOS 10.13, 10.14, 10.15, 11.0   | x86, x86_64, Apple Silicon    | Xcode 7, 8, 9, 10, 11, 12.2 |                             |
-| iOS 13, iOS 14                    | arm64                         | Xcode 11, 12.2        |                                   |
+| Windows 10                        | x86, x86_64                   | MSVC 2019, MSVC 2022  |                                   |
+| Windows 8.1                       | x86, x86_64                   | MSVC 2019, MSVC 2022  |                                   |
+| macOS 10.13 - 12                  | x86, x86_64, Apple Silicon    | Xcode 10 - 13.3       |                                   |
+| iOS 13 - 15                       | arm64                         | Xcode 11 - 13.3       |                                   |
 | Linux - Raspberry Pi OS (Buster)  | arm32                         | GCC 8.3 and higher    | Visual Studio Code                |
-| Linux - Ubuntu 18.04 LTS          | x86, x86_64                   | GCC 8.3 and higher    | Visual Studio Code, Qt Creator    |
+| Linux - Ubuntu 22.04 LTS          | x86, x86_64                   | GCC 11.2 and higher   | Visual Studio Code, Qt Creator    |
 | Linux - Ubuntu 20.04 LTS          | x86, x86_64                   | GCC 8.3 and higher    | Visual Studio Code, Qt Creator    |
 
 ## [Download link](../Getting+Started/Links.md)
