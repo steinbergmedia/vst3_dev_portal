@@ -344,6 +344,17 @@ ul#searchresults span.teaser em {
     right: 0;
     padding: 10px 10px;
 }
+.sidebar-image {
+	width:100%;
+	height:1.5em;
+	background-image:url(../resources/Steinberg_logo.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
 .sidebar .sidebar-resize-handle {
     position: absolute;
     cursor: col-resize;
