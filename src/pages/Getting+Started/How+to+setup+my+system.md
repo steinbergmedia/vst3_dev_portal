@@ -42,8 +42,7 @@ On MacOS, a first choice is **Xcode** (available here <https://developer.apple.c
 In order to build the SDK successfully, you need an Ubuntu-based **Linux** distribution. Other distributions might work as well, but are not tested.
 
 1. Download Linux: <http://www.ubuntu.com> or <https://www.linuxmint.com>
-2. Install it directly or in a virtual machine like Parallels
-We used and tested on Ubuntu 20.04 LTS.
+2. Install it directly or in a virtual machine like Parallels. We used and tested on Ubuntu 22.04 LTS.
 
 ### Package Requirements
 
@@ -52,7 +51,7 @@ Building the SDK examples requires installation of several packages:
 Required:
 
 ``` c++
-sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-devlibxcb-util-dev libxcb-cursor-dev libxcb-xkb-devlibxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-devlibcairo2-dev libgtkmm-3.0-dev libsqlite3-devlibxcb-keysyms1-dev
+sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-dev libxcb-util-dev libxcb-cursor-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-dev libcairo2-dev libgtkmm-3.0-dev libsqlite3-dev libxcb-keysyms1-dev
 ```
 
 >ⓘ **Note**\

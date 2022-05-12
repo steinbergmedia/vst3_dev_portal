@@ -26,7 +26,7 @@ The SDK provides a set of cmake files allowing you to compile the included sampl
 
 ## Command line for Windows
 
-Example for building "**Microsoft Studio 17 2022**" solution:
+Example for building **Microsoft Studio 17 2022** solution:
 
 ``` c++
 // go in to the folder where you extracted the VST 3 SDK
@@ -50,7 +50,7 @@ cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_US
 // go in to the folder where you extracted the VST 3 SDK
 mkdir build
 cd build
-/Applications/CMake.app/Content/bin/cmake -G"Xcode" "..vst3sdk"
+/Applications/CMake.app/Content/bin/cmake -G"Xcode" "../vst3sdk"
 ```
 
 ## On Linux with QtCreator
@@ -58,17 +58,16 @@ cd build
 You can use **QtCreator** 2.3.1 (or higher)
 
 - start QtCreator 2.3.2
-- open the CMakeLists.txt located at the top of the VST 3 SDKfolder
+- open the CMakeLists.txt located at the top of the **VST3_SDK** folder
 - click on the menu Build->Run CMake
 
 ## Use of cmake-gui
 
 - start the CMake (cmake-gui) application
-- set **Where is the source code** to the location of the "VST3_SDK" folder
+- set **Where is the source code** to the location of the **VST3_SDK** folder
 - set **Where to build the binaries** to a build folder of yourchoice
 - click on **Configure**
 - click on **Generate** for creating project/solution
-
 
 ![tutorials_3](../../resources/tutorials_3.jpg)
 

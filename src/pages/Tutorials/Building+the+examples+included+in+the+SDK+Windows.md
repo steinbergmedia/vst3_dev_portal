@@ -44,8 +44,7 @@ cmake.exe -G "Visual Studio 17 2022" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=
 >ⓘ **Note**\
 >You can find the string definition for different Visual Studio Generators in the cmake online documentation (<https://cmake.org/documentation/>)
 
-- Check [Preparation on Windows](../Getting+Started/Preparation+on+Windows.md) in order to be sure that you have user right access to write some links
-
+- You have to adapt your Windows right access to allow creation of symbolic links for VST3 plug-ins: [Check HERE!](../Getting+Started/Preparation+on+Windows.md)
 - Build the plug-in (you can use Visual Studio too):
 
 ``` text
