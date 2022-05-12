@@ -1,4 +1,4 @@
->/ [VST Home](../)
+>/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
 >
 ># EditorHost Application
 

@@ -9,6 +9,7 @@
 	- [VST 3 Plug-in Examples](pages/What+is+the+VST+3+SDK/Plug-in+Examples.md)
 	- [VST 3 Plug-in Test Host](pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
 	- [VST 3 Project Generator](pages/What+is+the+VST+3+SDK/Project+Generator.md)
+	- [Validator command line](pages/What+is+the+VST+3+SDK/Validator.md)
 	- [AudioHost Application](pages/What+is+the+VST+3+SDK/AudioHost.md)
 	- [EditorHost Application](pages/What+is+the+VST+3+SDK/EditorHost.md)
 	- [VST 3 Inspector Application](pages/What+is+the+VST+3+SDK/VST3Inspector.md)

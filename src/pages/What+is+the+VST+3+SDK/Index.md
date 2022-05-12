@@ -16,46 +16,45 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 
 The **VST 3 SDK** package contains:
 
->**The VST 3 API**\
->This is a **C++ interface** defining how a **VST 3** plug-in communicates with a host and vice versa. The heart of **VST 3**.
->
+### The VST 3 API
+
+This is a **C++ interface** defining how a **VST 3** plug-in communicates with a host and vice versa. The heart of **VST 3**.
+
 >Check the folder *"pluginterfaces/vst"* of the SDK!
 
->**VST 3 Implementation Helper Classes**\
->Some helper classes are provided, implementing some **VST 3** interfaces for hosting and for creating **VST 3** plug-ins. Simply derived your plug-in C++ classes from these helper classes.
->
->![what_if_1](../../resources/what_is_1.png)
->
+### VST 3 Implementation Helper Classes
+
+Some helper classes are provided, implementing some **VST 3** interfaces for hosting and for creating **VST 3** plug-ins. Simply derived your plug-in C++ classes from these helper classes.
+
+![what_if_1](../../resources/what_is_1.png)
+
 >Check the folder *"public.sdk"* of the SDK!
 
 ## [VST 3 Plug-ins Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md)
 
-The SDK includes some Plug-ins implementation examples. The Legendary **AGain** and **ADelay**, thanks Paul Kellet the Open-source **mda** Plug-ins, a basic "Note Expression Synth" supporting "**Note Expression Event**", an example of **pitchnames** support Plug-in, a **VST 3 Host Checker** which checks if a host is VST 3 compliant and more...
-
-Check the folder *"public.sdk/samples/vst"* of the SDK!
+The SDK includes some Plug-ins implementation examples.
 
 ## [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
 
-The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).
+The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (x86_64/M1) and Microsoft Windows (64bits).
 
-This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.
+## [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)
 
-Included in this application is a test module which allows you to check your plug-in in regard to the **VST 3** standard.
+This open source application (Win/macOS) allows you to generate easily a new **VST 3** plug-in project by just entering in a GUI some parameters.
 
-## Validator command line
+## [Validator command line](../What+is+the+VST+3+SDK/Validator.md)
 
-As Cross-platform source code:
-The ***validator*** is a small command line host application (source code included) which can be used to check your > plug-in for VST 3 conformity. You can also write your own test code and let the **validator** execute it. Very nice for > automatic build server integration.
+The ***validator*** is a small command line host application (source code included) which can be used to check your plug-in for VST 3 conformity.
 
-## [AudioHost](./AudioHost.md)
+## [AudioHost](../What+is+the+VST+3+SDK/AudioHost.md)
 
 Simple cross-platform (only tested on Linux) host application allowing you to register a VST 3 plug-in with Jack Server.
 
-## [EditorHost](./EditorHost.md)
+## [EditorHost](../What+is+the+VST+3+SDK/EditorHost.md)
 
 Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a VST 3 plug-in.
 
-## [VST 3 Inspector](./VST3Inspector.md)
+## [VST 3 Inspector](../What+is+the+VST+3+SDK/VST3Inspector.md)
 
 Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST 3 Folder, collects information from the factory about each VST 3 plug-in and display it in its UI.
 
@@ -63,16 +62,9 @@ Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, whi
 
 This is a user interface toolkit mainly for audio plug-ins (VST, AudioUnit, etc). Based on the XML definition of the plug-in UI, **VSTGUI** includes an embedded editor (UIDescription Editor) which allows the developer to create a plug-in UI just by drag & drop of the UI element.
 
-## [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)
-
-This open source application (Win/macOS) allows you to generate easily a new **VST 3** plug-in project by just entering in a GUI some parameters.
-
 ## [AAX, AUv3, AU and VST 2 wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md)
 
-These wrappers allow you to create versions of your **VST 3** plug-in in other plug-in formats with minimum effort:
-- **[AAX](http://apps.avid.com/aax-portal/)** format used by Pro Tools®
-- **[AUv3](https://developer.apple.com/documentation/audiotoolbox)** and **AU** (Audio Unit) on Apple platform
-- **VST 2** (deprecated)
+These wrappers allow you to create versions of your **VST 3** plug-in in other plug-in formats with minimum effort.
 
 ## [iOS Inter-App Audio support](../What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.md)
 
@@ -80,8 +72,7 @@ iOS InterApp-Audio application out of your **VST 3 plug-in**
 
 ## [VST 3 Licensing](../VST+3+Licensing/Index.md)
 
->**Steinberg VST 3 Plug-In SDK Licensing Agreement**\
->Please sign this **License Agreement** if you want to develop, release or host **VST 3** plug-Ins.
+Please sign this **Steinberg VST 3 Plug-In SDK Licensing Agreement** if you want to develop, release or host **VST 3** plug-Ins.
 
 ## System requirements
 
