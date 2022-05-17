@@ -122,6 +122,7 @@
 	- [[3.7.0] Progress display](pages/Technical+Documentation/Change+History/3.7.0/IProgress.md)
 	- [[3.7.0] Process Context Requirements](pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.md)
 	- [[3.7.0] Control Voltage Bus Flag](pages/Technical+Documentation/Change+History/3.7.0/Control+Voltage.md)
+	- [[3.7.5] Module Info](pages/Technical+Documentation/Change+History/3.7.5/ModuleInfo.md)
 - [Frequently Asked Questions](pages/FAQ/Index.md)
 	- [Communication](pages/FAQ/Communication.md)
 	- [Processing](pages/FAQ/Processing.md)
