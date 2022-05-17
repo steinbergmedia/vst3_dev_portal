@@ -1,4 +1,4 @@
->/ ... / [Change History](../Index.md)
+>/ [VST Home](../) / [Change History](./Index.md)
 >
 ># Version 3.0.0 (2008/01/17)
 

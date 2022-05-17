@@ -90,6 +90,6 @@ Please sign this **Steinberg VST 3 Plug-In SDK Licensing Agreement** if you want
 
 Important links you will need for working with **VST 3**
 
-## [Change history](../Technical+Documentation/Change+History/Index.md)
+## [Change history](../Versions/Index.md)
 
 All released versions of the **VST 3 SDK** with changes and dates.
