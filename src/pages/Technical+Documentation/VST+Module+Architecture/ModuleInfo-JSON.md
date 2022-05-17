@@ -11,7 +11,7 @@ The compatible array is used to declare a class to be treated as a replacement f
 
 When used this way the host does not need to load the component to know which classes the module provides.
 
-### SDK
+## SDK
 
 The VST SDK contains a command-line utility to create and validate the moduleinfo.json file from a VST plug-in.
 See **public.sdk/vst-utilities/moduleinfotool/**.
@@ -21,14 +21,14 @@ See **public.sdk/source/vst/moduleinfo/**
  
 For plug-ins build with the VST SDK, the moduleinfo.json file will be automatically created during the build process.
 
-### Example
+## Example
 
 An example moduleinfo.json looks like this:
 
 ```json
 {
   "Name": "helloworld",
-  "Version": "3.7.4.0",
+  "Version": "3.7.5.0",
   "Factory Info": {
     "Vendor": "Steinberg Media Technologies",
     "URL": "http://www.steinberg.net",
@@ -87,4 +87,3 @@ An example moduleinfo.json looks like this:
   ],
 }
 ```
-
