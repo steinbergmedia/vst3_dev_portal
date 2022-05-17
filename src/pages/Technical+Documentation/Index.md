@@ -206,3 +206,6 @@ Allows the plug-in to request the host to create a progress for some specific ta
 ## [(3.7.0) Process Context Requirements](Change+History/3.7.0/IProcessContextRequirements.md)
 
 To get accurate process context information ([Vst::ProcessContext](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html)), it is now required to implement this interface.
+
+## [(3.7.5) Module Info](Change+History/3.7.5/ModuleInfo.md)
+The moduleinfo.json describes the contents of the plug-in in a JSON5 compatible format.
