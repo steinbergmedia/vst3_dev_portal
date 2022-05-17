@@ -22,9 +22,7 @@ Download cmake from: <https://cmake.org/download/> or use a package manager for 
 
 ---
 
-## Part 2: Building the examples
-
-### Building the examples on macOS
+## Part 2: Building the examples on macOS
 
 - Create a folder for the build and move to this folder (using cd):
 

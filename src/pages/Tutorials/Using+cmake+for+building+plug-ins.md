@@ -17,6 +17,8 @@
 
 This tutorial explains how to use *cmake* with **VST 3 SDK**.
 
+---
+
 ## CMake for building VST 3 plug-ins
 
 The SDK provides a set of cmake files allowing you to compile the included samples and to develop new plug-ins.

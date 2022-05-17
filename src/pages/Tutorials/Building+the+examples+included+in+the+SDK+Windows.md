@@ -22,9 +22,7 @@ Download cmake from: <https://cmake.org/download/> or use a package manager for 
 
 ---
 
-## Part 2: Building the examples
-
-### Building the examples on Windows
+## Part 2: Building the examples on Windows
 
 - Create a folder for the build and move to this folder (using cd):
 
@@ -54,7 +52,7 @@ msbuild.exe vstsdk.sln
 cmake --build . --config Release
 ```
 
-### Building using cmake-gui
+## Building using cmake-gui
 
 - Start the cmake-gui application which is part of the cmake installation (<https://cmake.org/download/>)
 
