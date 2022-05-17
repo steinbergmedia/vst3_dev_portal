@@ -4,7 +4,7 @@
 
 **Related pages:**
 
-- [Preset Locations]Preset+Locations.md)
+- [Preset Locations](Preset+Locations.md)
 - [Presets & Program Lists](../Presets+Program+Lists/Index.md)
 
 ---

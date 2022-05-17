@@ -6,19 +6,6 @@
 
 [[_TOC_]]
 
-**Related pages:**
-
-- [Building the examples included in the SDK on Windows](Building+the+examples+included+in+the+SDK+Windows.md)
-- [Building the examples included in the SDK on macOS](Building+the+examples+included+in+the+SDK+macOS.md)
-- [Building the examples included in the SDK on Linux](Building+the+examples+included+in+the+SDK+Linux.md)
-- [Using cmake for building VST 3 plug-ins](Using+cmake+for+building+plug-ins.md)
-- [Generate a new plug-in with the Project Generator App](Generate+new+plug-in+with+Project+Generator.md)
-- [Use VSTGUI to design a User Interface](Use+VSTGUI+to+design+a+UI.md)
-- [Advanced VST 3 techniques](Advanced+VST+3+techniques.md)
-- [How to use the silence flags](How+to+use+the+silence+flags.md)
-- [Strings Conversion Helper](Strings+Conversion+Helper.md)
-- [Creating a plug-in from the Helloworld template](Creating+a+plug-in+from+the+Helloworld+template.md)
-
 ---
 
 The tutorials explain common techniques and best practices for building your plug-ins. By following the instruction step by step you will learn how to develop **VST 3** plug-ins.

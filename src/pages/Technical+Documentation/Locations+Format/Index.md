@@ -6,10 +6,6 @@
 
 [[_TOC_]]
 
-**Related pages:**
-
-- [(3.5.0) Remote Presentation of Parameters](../Change+History/3.5.0/IXmlRepresentationController.md)
-
 ---
 
 Formats definition of a **VST 3 Plug-in** and its preset and where they are located on different platforms.
