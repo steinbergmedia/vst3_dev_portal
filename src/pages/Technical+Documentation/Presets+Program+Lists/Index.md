@@ -23,7 +23,6 @@ See [VST 3 Locations / Format](../Locations+Format/Index.md#preset-format) for p
 
 For a simple plug-in, the data of a preset is nothing more than its state. In this case:
 
-
 - It is the job of the host to manage the preset handling for the plug-in.
 
 - The plug-in itself does not need to provide any means in its GUI for loading presets at all and it does not need to define any program lists.

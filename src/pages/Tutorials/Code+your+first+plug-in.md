@@ -46,7 +46,7 @@ enum GainParams : Steinberg::Vst::ParamID
 ```c++
 #include "myplugincids.h"
 
-/----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 {
     tresult result = EditController::initialize (context);
@@ -92,7 +92,7 @@ This includes some helpers to access audio buffer.
 #include "pluginterfaces/vst/ivstparameterchanges.h"
 #include "public.sdk/source/vst/vstaudioprocessoralgo.h"
 
-/----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 {
     //--- First : Read inputs parameter changes-----------
@@ -207,7 +207,7 @@ In the file *plugprocessor.cpp*, add the **mGain** value to the state stream giv
 **plugprocessor.cpp**
 
 ```c++
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::getState (IBStream* state)
 {
     // here we need to save the model (preset or project)

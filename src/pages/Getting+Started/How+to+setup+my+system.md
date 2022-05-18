@@ -42,8 +42,7 @@ On MacOS, a first choice is **Xcode** (available here <https://developer.apple.c
 In order to build the SDK successfully, you need an Ubuntu-based **Linux** distribution. Other distributions might work as well, but are not tested.
 
 1. Download Linux: <http://www.ubuntu.com> or <https://www.linuxmint.com>
-2. Install it directly or in a virtual machine like Parallels
-We used and tested on Ubuntu 20.04 LTS.
+2. Install it directly or in a virtual machine like Parallels. We used and tested on Ubuntu 22.04 LTS.
 
 ### Package Requirements
 
@@ -52,7 +51,7 @@ Building the SDK examples requires installation of several packages:
 Required:
 
 ``` c++
-sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-devlibxcb-util-dev libxcb-cursor-dev libxcb-xkb-devlibxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-devlibcairo2-dev libgtkmm-3.0-dev libsqlite3-devlibxcb-keysyms1-dev
+sudo apt-get install cmake gcc "libstdc++6" libx11-xcb-dev libxcb-util-dev libxcb-cursor-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libfontconfig1-dev libcairo2-dev libgtkmm-3.0-dev libsqlite3-dev libxcb-keysyms1-dev
 ```
 
 >ⓘ **Note**\
@@ -75,7 +74,7 @@ sudo apt-get install qtcreator
 
 >ⓘ **Note**\
 >- [Instead of](http://www.gtkmm.org/en/) [**gcc**](https://gcc.gnu.org/install/) compiler, a recent version of [**clang**](https://clang.llvm.org/) [compiler will also work!](http://www.gtkmm.org/en/)
->- [libgtkmm3](http://www.gtkmm.org/en/) is required for [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md)  and the [editorhost](../What+is+the+VST+3+SDK/Index.md#editorhost) example!
+>- [libgtkmm3](http://www.gtkmm.org/en/) is required for [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) and the [editorhost](../What+is+the+VST+3+SDK/Index.md#editorhost) example!
 >- [Jack Audio](http://www.jackaudio.org) is required for [audiohost](../What+is+the+VST+3+SDK/Index.md#audiohost) example!
 
 ## Get cmake
@@ -88,23 +87,10 @@ You can use it as a command line tool or use the cmake executable with GUI. cmak
 
 ![getting_started_1](../../resources/getting_started_1.jpg)
 
->**Preparation on Windows**
+>**Specific on Windows**
 >
 >---
->
->Generated **VST 3** Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md), in order to allow this on Windows you have to adapt the Group Policy of Windows. See [Here](Preparation+on+Windows.md)!
->
->If you do not want to create this link, call [cmake](https://cmake.org/) with this parameter:
->
->``` c++
->-DSMTG_CREATE_PLUGIN_LINK=0
->```
->
->You could choose the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md) for **VST 3** plug-ins, call [cmake](https://cmake.org/) with this parameter:
->
->``` c++
->-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1`
->```
+> You have to adapt your Windows right access to allow creation of symbolic links for VST3 plug-ins: [Check HERE!](./Preparation+on+Windows.md)
 
 ## Get a VST 3 host application
 

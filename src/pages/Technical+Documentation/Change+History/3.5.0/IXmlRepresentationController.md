@@ -28,10 +28,10 @@ It allows to describe each parameter more precisely (what is the best matching t
 - A page is composed of cells (for example, 8 cells per page).
 - A cell is composed of layers (for example, a cell can have a knob, a display, and a button, which means 3 layers).
 - A layer is associated to a plug-in parameter using the ParameterID as identifier:
-    - it could be a knob with a display for title and/or value, this display uses the same ParameterID, but it could be another one.
-    - switch
-    - link which allows to jump directly to a subpage (on another page)
-    - more... See Vst::LayerType
+  - it could be a knob with a display for title and/or value, this display uses the same ParameterID, but it could be another one.
+  - switch
+  - link which allows to jump directly to a subpage (on another page)
+  - more... See Vst::LayerType
 
 This representation is implemented as XML text following the Document Type Definition (DTD): http://dtd.steinberg.net/VST-Remote-1.1.dtd
 

@@ -80,7 +80,7 @@ The information included in this subsection will be used for generating Factory 
 //...
 namespace MyWantedNamespace {
 
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 MyPluginController::MyPluginController ()
 {
 //...

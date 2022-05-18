@@ -14,8 +14,10 @@
 
 ## Introduction
 
-The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).\
-This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.\
+The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (x86_64/Apple M1) and Microsoft Windows (64bits).
+
+This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.
+
 Included in this application is a test module which allows you to check your plug-in in regard to the **VST 3** standard.
 
 ![what_if_15](../../resources/what_is_15.jpg)
