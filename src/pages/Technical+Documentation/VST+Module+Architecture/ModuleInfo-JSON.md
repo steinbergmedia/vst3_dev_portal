@@ -13,7 +13,7 @@ When used this way the host does not need to load the component to know which cl
 
 ## SDK
 
-The VST SDK contains a command-line utility to create and validate the moduleinfo.json file from a VST plug-in.
+The VST SDK contains a command-line utility called moduleinfotool in order to create and validate the moduleinfo.json file from a VST plug-in.
 See **public.sdk/vst-utilities/moduleinfotool/**.
 
 The moduleinfotool uses the ModuleInfoLib which can be used by hosts to read and parse the moduleinfo.json file.
