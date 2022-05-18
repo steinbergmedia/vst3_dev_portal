@@ -7,7 +7,7 @@ An optional moduleinfo.json file can be part of the [module file package](../Loc
 The file contains the same information as the [Module Factory](Index.md#module-factory), plus an optional list of compatible classes.
 The file is encoded in [json5](http://json5.org) format.
 
-The compatible array is used to declare a class to be treated as a replacement for another class or classes.
+The compatibility array is used to declare a class to be treated as a replacement for another class or classes.
 
 When used this way the host does not need to load the component to know which classes the module provides.
 
