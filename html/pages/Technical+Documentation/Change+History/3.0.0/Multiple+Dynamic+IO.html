@@ -1,0 +1,519 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js steinberg-light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>[3.0.0] Multiple Dynamic I/O Support - VST 3 Developer Portal</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        
+        <link rel="stylesheet" href="../../../../css/variables.css">
+        <link rel="stylesheet" href="../../../../css/general.css">
+        <link rel="stylesheet" href="../../../../css/chrome.css">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../../FontAwesome/css/font-awesome.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../../highlight.css">
+        <link rel="stylesheet" href="../../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "steinberg-dark" : "steinberg-light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('steinberg-light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-image"></div>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../../pages/index.html">VST</a></li><li class="chapter-item "><a href="../../../../pages/What+is+VST/Index.html">What is VST?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/What+is+VST/Use+cases.html">Use cases</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/Main+benefits+of+VST+3/Index.html">Main benefits of VST 3</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Index.html">What is the VST 3 SDK?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Plug-in+Examples.html">VST 3 Plug-in Examples</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Validator.html">Validator command line</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/AudioHost.html">AudioHost Application</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/EditorHost.html">EditorHost Application</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/VST3Inspector.html">VST 3 Inspector Application</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Wrappers/Index.html">AAX, AUv3, AU and VST 2 Wrappers</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Wrappers/VST+2+Wrapper.html">VST 2.x Wrapper</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.html">AAX Wrapper</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Wrappers/AUv3+Wrapper.html">AudioUnit v3 Wrapper</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/Wrappers/AUv2+Wrapper.html">AudioUnit v2 Wrapper</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.html">iOS Inter-App Audio Support</a></li><li class="chapter-item "><a href="../../../../pages/What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/VST+3+Licensing/Index.html">VST 3 Licensing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/VST+3+Licensing/Usage+guidelines.html">Steinberg VST usage guidelines</a></li><li class="chapter-item "><a href="../../../../pages/VST+3+Licensing/What+are+the+licensing+options.html">What are the licensing options</a></li><li class="chapter-item "><a href="../../../../pages/VST+3+Licensing/Which+files+fall+under+which+license.html">Which files fall under which license?</a></li><li class="chapter-item "><a href="../../../../pages/VST+3+Licensing/Developer+use+cases.html">Developer use cases (FAQs)</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/Getting+Started/Index.html">Getting Started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/Getting+Started/Links.html">VST 3 Links</a></li><li class="chapter-item "><a href="../../../../pages/Getting+Started/How+to+setup+my+system.html">How to set up my system for VST 3</a></li><li class="chapter-item "><a href="../../../../pages/Getting+Started/Preparation+on+Windows.html">Preparation on Windows</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Index.html">Tutorials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/Tutorials/Building+the+examples+included+in+the+SDK+Windows.html">Building the examples included in the SDK on Windows</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Building+the+examples+included+in+the+SDK+macOS.html">Building the examples included in the SDK on macOS</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Building+the+examples+included+in+the+SDK+Linux.html">Building the examples included in the SDK on Linux</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Using+cmake+for+building+plug-ins.html">Using cmake for building VST 3 plug-ins</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Generate+new+plug-in+with+Project+Generator.html">Generate a new plug-in with the Project Generator App</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Code+your+first+plug-in.html">Code your first plug-in</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Use+VSTGUI+to+design+a+UI.html">Use VSTGUI to design a User Interface</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Advanced+VST+3+techniques.html">Advanced VST 3 techniques</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/How+to+use+the+silence+flags.html">How to use the silence flags</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Strings+Conversion+Helper.html">Strings Conversion Helper</a></li><li class="chapter-item "><a href="../../../../pages/Tutorials/Creating+a+plug-in+from+the+Helloworld+template.html">Creating a plug-in from the Helloworld template</a></li></ol></li><li class="chapter-item expanded "><a href="../../../../pages/Technical+Documentation/Index.html">Technical Documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/API+Documentation/Index.html">VST 3 API Documentation</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/VST+Module+Architecture/Index.html">VST Module Architecture</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/VST+Module+Architecture/Loading.html">How the host will load a VST-MA based Plug-in</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/VST+Module+Architecture/Derive+From+Interface.html">How to derive a class from an interface</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/VST+Module+Architecture/Interface+Versions+and+Inheritance.html">Interface Versions and Inheritance</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">Moduleinfo</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/VST+3+Units/Index.html">VST 3 Units</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Workflow+Diagrams/Index.html">VST 3 Workflow Diagrams</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Workflow+Diagrams/Edit+Controller+Call+Sequence.html">Edit Controller Call Sequence</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Workflow+Diagrams/Get+Latency+Call+Sequence.html">Get Latency Call Sequence</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Workflow+Diagrams/Resize+View+Call+Sequence.html">Resize View Call Sequence</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Locations+Format/Index.html">VST 3 Locations / Format</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Locations+Format/Plugin+Format.html">Plug-in Format Structure</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Locations+Format/Plugin+Locations.html">Plug-in Locations</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Locations+Format/Preset+Format.html">Preset Format</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Locations+Format/Preset+Locations.html">Preset Locations</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Locations+Format/Snapshots.html">Snapshots</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/About+MIDI/Index.html">About MIDI in VST 3</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.html">[3.0.0] Interfaces supported by the plug-in</a></li><li class="chapter-item expanded "><a href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html" class="active">[3.0.0] Multiple Dynamic I/O Support</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.html">[3.0.0] Silence flags</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Host+Interfaces.html">[3.0.0] Interfaces supported by the host</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html">[3.0.2] Parameter Finder</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.html">[3.1.0] Audio Presentation Latency</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.1.0/IComponentHandler2.html">[3.1.0] Dirty State, Open Editor Request and UI Group Editing Support</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.1.0/IEditController2.html">[3.1.0] KnobMode, Open Help &amp; Open Aboutbox</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.html">[3.5.0] Note Expression</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.5.0/IKeyswitchController.html">[3.5.0] Key Switch</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.html">[3.5.0] Remote Presentation of Parameters</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.5.0/IComponentHandler3.html">[3.5.0] Context Menu</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.html">[3.5.0] Enhanced Linked Parameters</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.0/IAA.html">[3.6.0] iOS Inter-App Audio</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.0/IStreamAttributes.html">[3.6.0] Preset Meta-Information</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.5/IInfoListener.html">[3.6.5] Channel Context Info</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.5/IUnitHandler2.html">[3.6.5] Unit-Bus Assignment Change</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.5/IPrefetchableSupport.html">[3.6.5] Prefetchable</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.5/IAutomationState.html">[3.6.5] Automation State</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.6/IPlugViewContentScaleSupport.html">[3.6.6] PlugView Content Scaling</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.8/IComponentHandlerBusActivation.html">[3.6.8] Request Bus Activation</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.10/UI+Snapshots.html">[3.6.10] UI Snapshots</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping.html">[3.6.11] NoteExpression Physical UI Mapping</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.html">[3.6.12] Legacy MIDI CC Out Event</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.12/IPlugInterfaceSupport.html">[3.6.12] Host Query Interface support</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.6.12/IVst3WrapperMPESupport.html">[3.6.12] MPE support for Wrappers</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html">[3.7.0] Parameter Function Name</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.7.0/IProgress.html">[3.7.0] Progress display</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.html">[3.7.0] Process Context Requirements</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.7.0/Control+Voltage.html">[3.7.0] Control Voltage Bus Flag</a></li><li class="chapter-item "><a href="../../../../pages/Technical+Documentation/Change+History/3.7.5/ModuleInfo.html">[3.7.5] Module Info</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/Versions/Index.html">Change History</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.7.5.html">Version 3.7.5 (2022/05/16)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.7.4.html">Version 3.7.4 (2021/12/14)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.7.3.html">Version 3.7.3 (2021/08/10)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.7.2.html">Version 3.7.2 (2021/03/30)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.7.1.html">Version 3.7.1 (2020/11/17)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.7.0.html">Version 3.7.0 (2020/07/29)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.14.html">Version 3.6.14 (2019/11/29)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.13.html">Version 3.6.13 (2019/04/08)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.12.html">Version 3.6.12 (2018/12/03)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.11.html">Version 3.6.11 (2018/10/22)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.10.html">Version 3.6.10 (2018/06/11)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.9.html">Version 3.6.9 (2018/03/01)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.8.html">Version 3.6.8 (2017/11/08)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.7.html">Version 3.6.7 (2017/03/03)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.6.html">Version 3.6.6 (2016/06/17)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.5.html">Version 3.6.5 (2015/08/28)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.6.0.html">Version 3.6.0 (2013/11/22)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.5.2.html">Version 3.5.2 (2012/09/25)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.5.1.html">Version 3.5.1 (2011/11/11)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.5.0.html">Version 3.5.0 (2011/02/04)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.1.0.html">Version 3.1.0 (2010/06/25)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.0.2.html">Version 3.0.2 (2009/01/15)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.0.1.html">Version 3.0.1 (2008/03/19)</a></li><li class="chapter-item "><a href="../../../../pages/Versions/Version+3.0.0.html">Version 3.0.0 (2008/01/17)</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/FAQ/Index.html">Frequently Asked Questions</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pages/FAQ/Communication.html">Communication</a></li><li class="chapter-item "><a href="../../../../pages/FAQ/Processing.html">Processing</a></li><li class="chapter-item "><a href="../../../../pages/FAQ/GUI+Editor.html">GUI-Editor</a></li><li class="chapter-item "><a href="../../../../pages/FAQ/Compatibility+with+VST+2.x+or+VST+1.html">Compatibility with VST 2.x or VST 1</a></li><li class="chapter-item "><a href="../../../../pages/FAQ/Persistence.html">Persistence</a></li><li class="chapter-item "><a href="../../../../pages/FAQ/Miscellaneous.html">Miscellaneous</a></li><li class="chapter-item "><a href="../../../../pages/FAQ/Licensing.html">Licensing</a></li></ol></li><li class="chapter-item "><a href="../../../../pages/Forum/Index.html">VST 3 Forum</a></li><li class="chapter-item "><a href="../../../../pages/Miscellaneous/Index.html">Miscellaneous</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">VST 3 Developer Portal</h1>
+
+                    <div class="right-buttons">
+                        
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <blockquote>
+<p>/ <a href="../../../">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
+<h1><a class="header" href="#300-multiple-dynamic-io-support" id="300-multiple-dynamic-io-support">[3.0.0] Multiple Dynamic I/O Support</a></h1>
+</blockquote>
+<p><strong>On this page:</strong></p>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#multiple-input-or-output-busses">Multiple Input or Output busses</a></li>
+<li><a href="#information-about-busses">Information about busses</a></li>
+<li><a href="#activation-of-busses">Activation of busses</a></li>
+<li><a href="#what-is-a-side-chain">What is a Side-Chain?</a></li>
+<li><a href="#how-can-i-implement-a-side-chain-path-into-my-plug-in">How can I implement a Side-chain path into my plug-in?</a></li>
+<li><a href="#audio-bus-channel-configuration">Audio bus Channel Configuration</a>
+<ul>
+<li><a href="#how-are-the-different-speakers-located">How are the different Speakers located?</a></li>
+<li><a href="#my-plug-in-is-capable-of-processing-all-possible-channel-configurations">My plug-in is capable of processing all possible channel configurations</a></li>
+<li><a href="#how-are-speaker-arrangement-settings-handled-for-fx-plug-ins">How are speaker arrangement settings handled for FX plug-ins?</a></li>
+<li><a href="#how-report-to-the-host-that-the-plug-in-arrangement-has-changed">How report to the host that the plug-in Arrangement has changed?</a></li>
+<li><a href="#my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">My plug-in has mono input and stereo output. How does VST 3 handle this?</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Related pages</strong></p>
+<ul>
+<li><a href="../../Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li>
+<li><a href="../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li>
+<li><a href="../../Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></li>
+</ul>
+<hr />
+<h2><a class="header" href="#introduction" id="introduction">Introduction</a></h2>
+<p><strong>VST 3</strong> plug-ins are no longer limited to a fixed number of inputs and outputs, and their I/O configuration can dynamically adapt to the channel configuration. <a href="../3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain">Side-chains</a> are also very easily realizable. This includes the possibility to deactivate unused busses after loading and even reactivate those when needed. This cleans up the mixer and further helps to reduce CPU load.</p>
+<p>A <strong>bus</strong> can be understood as a &quot;collection of data channels&quot; belonging together:</p>
+<ul>
+<li>it describes a data input (<strong>kInput</strong>) or a data output (<strong>kOutput</strong>) of the plug-in.</li>
+<li>2 types of bus is supported: <strong>kAudio</strong> and <strong>kEvent</strong></li>
+<li>a VST component can define any desired number of busses.</li>
+<li>a bus could be defined a main bus (<strong>kMain</strong>) or auxiliary bus (<strong>kAux</strong>) for sidechaining (The kMain busses have to place before any others kAux busses in the exported busses list)</li>
+<li>a host that can handle multiple busses, allows the user to activate busses which are initially all inactive.</li>
+</ul>
+<h2><a class="header" href="#multiple-input-or-output-busses" id="multiple-input-or-output-busses">Multiple Input or Output busses</a></h2>
+<p>A plug-in could have different reason to define multiple event input busses, for examples:</p>
+<ul>
+<li>in case of complex multitimbral instrument supporting more than 16 loaded sub-instruments at the same time by adding a kind of structure in its inputs from host perspective (simulating a kind of number of &quot;MIDI Port&quot; having its sub-MIDI channels)</li>
+<li>in case to different inputs meaning, which are distinctly visible and selectable in the host:
+<ul>
+<li>one input for playing event</li>
+<li>one input for modulation event</li>
+</ul>
+</li>
+</ul>
+<p>A plug-in could have different reason to define multiple event output busses, for example:</p>
+<ul>
+<li>in case of a main event output for played event from the UI and one event output for internally generated events from an arpeggiator.</li>
+</ul>
+<p>A plug-in could decide to export more than one audio input by adding a second audio input (<a href="../3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain">Side-chains, see below</a>) or more.</p>
+<p>A typical use case for multiple audio outputs is instrument plug-ins, for examples:</p>
+<ul>
+<li>with one main audio output and some auxiliary audio outputs for FX Returns or FX Sends.</li>
+<li>with one main audio output for each internally loaded instrument.</li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code class="language-c++">//------------------------------------------------------------------------
+tresult PLUGIN_API MyPlugin::initialize (FUnknown* context)
+{
+    //---always initialize the parent-------
+    tresult result = AudioEffect::initialize (context);
+    // if everything Ok, continue
+    if (result != kResultOk)
+    {
+        return result;
+    }
+ 
+    //---create Audio In/Out busses------
+    // we want a stereo Input and a Stereo Output
+    addAudioInput (STR16 (&quot;Stereo In&quot;), SpeakerArr::kStereo, kMain, BusInfo::kDefaultActive);
+    addAudioOutput (STR16 (&quot;Stereo Out&quot;), SpeakerArr::kStereo, kMain, BusInfo::kDefaultActive);
+ 
+    //---create Main Event In bus (1 bus with only 16 channel)------
+    addEventInput (STR16 (&quot;Event In&quot;), 16, kMain, BusInfo::kDefaultActive);
+ 
+   //---create Aux Event In bus (1 bus with only 1 channel)------
+   addEventInput (STR16 (&quot;Mod In&quot;), 1, kAux, 0); // not default activated wanted
+ 
+    //---create Event out bus (1 bus with only 1 channel)------
+   addEventOutput (STR16 (&quot;Arpeggiator&quot;), 1, kAux, 0); // not default activated wanted
+ 
+    return kResultOk;
+}
+</code></pre>
+<h2><a class="header" href="#information-about-busses" id="information-about-busses">Information about busses</a></h2>
+<p>In order to get the number and information about busses exported by the plug-in, the host uses this interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">IComponent</a> with these functions:</p>
+<pre><code class="language-c++">/** Called after the plug-in is initialized. */
+virtual int32 PLUGIN_API getBusCount (MediaType type, BusDirection dir) = 0;
+ 
+/** Called after the plug-in is initialized. */
+virtual tresult PLUGIN_API getBusInfo (MediaType type, BusDirection dir, int32 index, BusInfo&amp; bus /*out*/) = 0;
+</code></pre>
+<p><strong>BusInfo</strong> contains information like:</p>
+<ul>
+<li>name,</li>
+<li>number of channel,</li>
+<li>...</li>
+<li>and the some flags indicating:
+<ul>
+<li><strong>kDefaultActive</strong>: The bus should be activated by the host per default on instantiation (activateBus call is requested). By default a bus is inactive. </li>
+<li><strong>kIsControlVoltage</strong>: The bus does not contain ordinary audio data, but data used for control changes at sample rate.
+<ul>
+<li>The data is in the same format as the audio data [-1..1].</li>
+<li>A host has to prevent unintended routing to speakers to prevent damage.</li>
+<li>Only valid for audio media type busses.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#activation-of-busses" id="activation-of-busses">Activation of busses</a></h2>
+<p>Dynamic usage of busses is handled in the host by activating and deactivating busses. All busses are initially inactive.</p>
+<p>The plug-in has to define which of them have to be activated by default after instantiation of the plug-in, this is only a wish, the host is allowed to not follow it, and only activate the first bus for example.</p>
+<pre><code class="language-c++">// here default activation is wanted (but not guaranteed)
+addAudioInput (STR16 (&quot;SideChain&quot;), SpeakerArr::kStereo, kAux, BusInfo::kDefaultActive);
+</code></pre>
+<p>In order to be use each Input bus and Output bus have to be activated, this is done by the host by using this interface implemented by the plug-in (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">IComponent</a>):</p>
+<pre><code class="language-c++">//------------------------------------------------------------------------
+tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int32 index, TBool state)
+{
+    // ...
+</code></pre>
+<p>Not activated busses does need to be processed by the plug-in, which allows to reduce the CPU load.</p>
+<p>Check the workflow diagrams in order to understand when this is called: </p>
+<ul>
+<li><a href="../../Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li>
+<li><a href="../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li>
+</ul>
+<h2><a class="header" href="#what-is-a-side-chain" id="what-is-a-side-chain">What is a Side-Chain?</a></h2>
+<p>In audio applications, some plug-ins allow for a secondary signal to be made available to the plug-in and act as a controller of one or more parameters in the processing. Such a signal is commonly called a Side-chain Signal or Side-chain Input.</p>
+<p><strong>Examples</strong>:</p>
+<p>If a recorded kick drum is considered well played, but the recording of the bass player's part shows that he regularly plays slightly ahead of the kick drum, a plug-in with a 'Gating' function on the bass part can use the kick drum signal as a side-chain to 'trim' the bass part precisely to that of the kick.</p>
+<p>Another application is to automatically lower the level of a musical background when another signal, such as a voice, reaches a certain level. In this case a plug-in with a 'Ducking' function would be used - where the main musical signal is reduced while the voice signal is applied to the side-chain input.</p>
+<p>A delay's mix parameter can be controlled by a side-chain input signal - to make the amount of delay signal proportional to the level of another.</p>
+<p>The side-chain can be used as an additional modulation source instead of cyclic forms of modulation. From the plug-in's perspective, side-chain inputs and/or outputs are additional inputs and outputs which can be enabled or disabled by the host.</p>
+<p>The host (if supported) will provide to the user a way to route some signal paths to these side-chain inputs or from side-chain outputs to others signal inputs.</p>
+<p><a href="https://www.youtube.com/watch?v=6AvqoFSk2S8"><img src="https://i.ytimg.com/vi/6AvqoFSk2S8/maxresdefault.jpg" alt="getting_started_vid_3" /></a></p>
+<p>What is Side-Chaining and How to Use It | Music Production For Beginners</p>
+<p><a href="https://www.youtube.com/watch?v=PBQr-PnI6Yw"><img src="https://i.ytimg.com/vi/PBQr-PnI6Yw/maxresdefault.jpg" alt="getting_started_vid_4" /></a></p>
+<p>Here an example of Side-Chaining for a Instrument in Cubase</p>
+<h2><a class="header" href="#how-can-i-implement-a-side-chain-path-into-my-plug-in" id="how-can-i-implement-a-side-chain-path-into-my-plug-in">How can I implement a Side-chain path into my plug-in?</a></h2>
+<p>In AudioEffect::initialize (FUnknown* context) you must add the required bus- and speaker configuration of your plug-in.
+For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look like this:</p>
+<pre><code class="language-c++">addAudioInput (USTRING (&quot;Stereo In&quot;), SpeakerArr::kStereo);
+addAudioOutput (USTRING (&quot;Stereo Out&quot;), SpeakerArr::kStereo);
+ 
+// In addition, adding a stereo side-chain bus would look like this:
+addAudioInput (USTRING (&quot;Aux In&quot;), SpeakerArr::kStereo, kAux, 0); // 0 here means not activated by default wanted
+</code></pre>
+<h2><a class="header" href="#audio-bus-channel-configuration" id="audio-bus-channel-configuration">Audio bus Channel Configuration</a></h2>
+<p>Each audio bus has its channel configuration which is a Speaker Arrangement:</p>
+<p><strong>Stereo (L+R)</strong></p>
+<pre><code class="language-c++">const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR;
+</code></pre>
+<h3><a class="header" href="#how-are-the-different-speakers-located" id="how-are-the-different-speakers-located">How are the different Speakers located?</a></h3>
+<p>Here's an overview of the main defined speaker locations (Check enum Speakers and namespace SpeakerArr). A <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__vst3typedef.html#ga54884a26d0b6dfa18eb919ea004775ac">SpeakerArrangement</a> is a bitset combination of speakers.</p>
+<p>For example:</p>
+<pre><code class="language-c++">const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR; // =&gt; representing in hexadecimal 0x03 and in binary 0011.
+</code></pre>
+<p><img src="../../../../resources/tech_doc_28.jpg" alt="tech_doc_28" /></p>
+<h3><a class="header" href="#my-plug-in-is-capable-of-processing-all-possible-channel-configurations" id="my-plug-in-is-capable-of-processing-all-possible-channel-configurations">My plug-in is capable of processing all possible channel configurations</a></h3>
+<p>What type of speaker arrangement should I select when adding busses?</p>
+<p>Take the configuration your plug-in is most likely to be used with. For a 5.1-surround setup that would be the following:</p>
+<pre><code class="language-c++">addAudioInput (USTRING (&quot;Surround In&quot;), SpeakerArr::k51);
+addAudioOutput (USTRING (&quot;Surround Out&quot;), SpeakerArr::k51);
+</code></pre>
+<p>But when the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> the host is informing your plug-in of the current speaker arrangement of the track it was selected in. You should return <strong>kResultOk</strong>, in the case you accept this arrangement, or <strong>kResultFalse</strong>, in case you do not.</p>
+<blockquote>
+<p>ⓘ <strong>Note</strong><br />
+If you reject a <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> by returning <strong>kResultFalse</strong>, the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> where you have the chance to give the parameter 'arrangement' the value of the speaker arrangement your plug-in does accept for this given bus.</p>
+<p>Afterward the host can recall <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> with the plug-in wanted Arrangements then the plug-in should return <strong>kResultOk</strong>.</p>
+</blockquote>
+<h3><a class="header" href="#how-are-speaker-arrangement-settings-handled-for-fx-plug-ins" id="how-are-speaker-arrangement-settings-handled-for-fx-plug-ins">How are speaker arrangement settings handled for FX plug-ins?</a></h3>
+<p>After instantiation of the plug-in, the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> with a default configuration (depending on the current channel configuration), if the plug-in accepts it (by returning <strong>kResultOK</strong>), it will continue with this configuration.
+If not (by returning <strong>kResultFalse</strong>), the host asks the plug-in for its wanted configuration by calling <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> (for Input and Output) and then recall <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> with the final wanted configuration. Check <a href="../../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequences</a> workflow.</p>
+<pre><code class="language-c++">// Example of a Plug-in supporting only symmetric Input-Output Arrangements:
+
+host -&gt; plug-in : setBusArrangements (monoIN, stereoOUT)
+plug-in return : kResultFalse
+host -&gt; plug-in : getBusArrangement (IN) =&gt; return Stereo;
+host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Stereo;
+host -&gt; plug-in : setBusArrangements (stereoIN, stereoOUT)
+plug-in return : kResultOk
+</code></pre>
+<pre><code class="language-c++">// Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono-&gt;stereo):
+
+host -&gt; plug-in : setBusArrangements (stereoIN, stereoOUT)
+plug-in return : kResultFalse
+host -&gt; plug-in : getBusArrangement (IN) =&gt; return Mono;
+host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Stereo;
+host -&gt; plug-in : setBusArrangements (MonoIN, stereoOUT)
+plug-in return : kResultOk
+</code></pre>
+<pre><code class="language-c++">// Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono-&gt; stereo to up 5.1):
+
+host -&gt; plug-in : setBusArrangements (5.1IN, 5.1OUT)
+plug-in return : kResultFalse
+host -&gt; plug-in : getBusArrangement (IN) =&gt; return Mono;
+host -&gt; plug-in : getBusArrangement (OUT) =&gt; return 5.1;
+host -&gt; plug-in : setBusArrangements (MonoIN, 5.1OUT)
+plug-in return : kResultOk
+</code></pre>
+<pre><code class="language-c++">// Host -&gt; Plug-in : setBusArrangements (QuadroIN, QuadroOUT)
+
+plug-in return : kResultFalse
+host -&gt; plug-in : getBusArrangement (IN) =&gt; return Mono;
+host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Quadro;
+host -&gt; plug-in : setBusArrangements (MonoIN, QuadroOUT)
+plug-in return : kResultOk
+</code></pre>
+<pre><code class="language-c++">// Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input always mono:
+
+host -&gt; plug-in : getBusArrangements (IN) =&gt; Input Main:Mono / Input Side-chain:Mono
+host -&gt; plug-in : getBusArrangements (OUT) =&gt; Output: mono
+host -&gt; plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:Mono, Output: stereo)
+plug-in return : kResultTrue
+
+or
+host -&gt; plug-in : getBusArrangements (IN) =&gt; Input Main:Mono / Input Side-chain:Mono
+host -&gt; plug-in : getBusArrangements (OUT) =&gt; Output: mono
+host -&gt; plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:stereo, Output: stereo)
+plug-in return : kResultFalse // because we want mono for Side-chain
+host -&gt; plug-in : getBusArrangement (IN) =&gt; return Input Main:stereo / Input Side-chain:mono;
+host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Stereo;
+host -&gt; plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:mono, Output: stereo)
+plug-in return : kResultOk
+</code></pre>
+<pre><code class="language-c++">// Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input following the Main Input Arrangement:
+
+host -&gt; plug-in : getBusArrangements (IN) =&gt; Input Main:Mono / Input Side-chain:Mono
+host -&gt; plug-in : getBusArrangements (OUT) =&gt; Output: mono
+host -&gt; plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:Mono, Output: stereo)
+plug-in return : kResultFalse // because we want the same arrangement for Input Main and Side-chain
+host -&gt; plug-in : getBusArrangement (IN) =&gt; return Input Main:stereo / Input Side-chain:stereo;
+host -&gt; plug-in : getBusArrangement (OUT) =&gt; return Stereo;
+host -&gt; plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:stereo, Output: stereo)
+plug-in return : kResultOk
+</code></pre>
+<h3><a class="header" href="#how-report-to-the-host-that-the-plug-in-arrangement-has-changed" id="how-report-to-the-host-that-the-plug-in-arrangement-has-changed">How report to the host that the plug-in Arrangement has changed?</a></h3>
+<p>When loading a preset or with an user interaction, the plug-in wants to change its IO configuration. In this case the plug-in should call from the editController its component handler with flag kIoChanged:</p>
+<pre><code class="language-c++">componentHandler-&gt;restartComponent (kIoChanged);
+</code></pre>
+<p>The host will call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> (for Input and Output) in order to check the new requested arrangement and then the host will call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> (called in suspend state: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">setActive</a> (false)) to confirm the requested arrangement.</p>
+<h3><a class="header" href="#my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this" id="my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">My plug-in has mono input and stereo output. How does VST 3 handle this?</a></h3>
+<p>There are two ways to instantiate a plug-in like this.</p>
+<ul>
+<li><strong>Way 1</strong></li>
+</ul>
+<p>In AudioEffect::initialize (FUnknown* context) you add one mono and one stereo bus.</p>
+<pre><code class="language-c++">//---------------------------------------------------------------
+tresult PLUGIN_API AGain::initialize (FUnknown* context)
+{
+    //---always initialize the parent-------
+    tresult result = AudioEffect::initialize (context);
+    // if everything Ok, continue
+    if (result != kResultOk)
+    {
+        return result;
+    }
+
+    addAudioInput (USTRING (&quot;Mono In&quot;), SpeakerArr::kMono);
+    addAudioOutput (USTRING (&quot;Stereo Out&quot;), SpeakerArr::kStereo);
+    //...
+</code></pre>
+<p>In case of <strong>Cubase/Nuendo</strong> being the host, the plug-in, afterbeing inserted into a stereo track, gets the left channel ofthe stereo input signal as its mono input. From this signalyou can create a stereo output signal.</p>
+<ul>
+<li><strong>Way 2</strong></li>
+</ul>
+<p>In <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1AudioEffect.html">AudioEffect</a>::initialize (FUnknown* context) you add one stereo input and one stereo output bus.</p>
+<pre><code class="language-c++">//---------------------------------------------------------------
+tresult PLUGIN_API AGain::initialize (FUnknown* context)
+{
+    //---always initialize the parent-------
+    tresult result = AudioEffect::initialize (context);
+    // if everything Ok, continue
+    if (result != kResultOk)
+    {
+        return result;
+    }
+
+    addAudioInput (USTRING (&quot;Stereo In&quot;), SpeakerArr::kStereo);
+    addAudioOutput (USTRING (&quot;Stereo Out&quot;), SpeakerArr::kStereo);
+    //...
+</code></pre>
+<p>For processing, the algorithm of your plug-in takes the left channel only, or creates a new mono input signal, by adding the samples of the left and right channels.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="footer" class="footer">
+                <!-- Here comes the footer when available			 -->                
+                © 2022 <a href="https://www.steinberg.net" target="_blank">Steinberg Media Technologies GmbH</a>.&nbsp; All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://o.steinberg.net/en/extras/about.html" target="_blank">About</a> |
+                <a href="https://o.steinberg.net/en/extras/privacy_policy.html" target="_blank">Privacy Policy</a> |
+                <a href="https://o.steinberg.net/en/extras/terms_conditions.html" target="_blank">Legal Terms</a> 
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../../../pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        <script src="../../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="../../../../mermaid.min.js"></script>
+        
+        <script type="text/javascript" src="../../../../mermaid-init.js"></script>
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js steinberg-light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Licensing - VST 3 Developer Portal</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "steinberg-dark" : "steinberg-light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('steinberg-light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-image"></div>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../pages/index.html">VST</a></li><li class="chapter-item "><a href="../../pages/What+is+VST/Index.html">What is VST?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/What+is+VST/Use+cases.html">Use cases</a></li></ol></li><li class="chapter-item "><a href="../../pages/Main+benefits+of+VST+3/Index.html">Main benefits of VST 3</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Index.html">What is the VST 3 SDK?</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Plug-in+Examples.html">VST 3 Plug-in Examples</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Validator.html">Validator command line</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/AudioHost.html">AudioHost Application</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/EditorHost.html">EditorHost Application</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/VST3Inspector.html">VST 3 Inspector Application</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/Index.html">AAX, AUv3, AU and VST 2 Wrappers</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/VST+2+Wrapper.html">VST 2.x Wrapper</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.html">AAX Wrapper</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/AUv3+Wrapper.html">AudioUnit v3 Wrapper</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/Wrappers/AUv2+Wrapper.html">AudioUnit v2 Wrapper</a></li></ol></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.html">iOS Inter-App Audio Support</a></li><li class="chapter-item "><a href="../../pages/What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a></li></ol></li><li class="chapter-item "><a href="../../pages/VST+3+Licensing/Index.html">VST 3 Licensing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/VST+3+Licensing/Usage+guidelines.html">Steinberg VST usage guidelines</a></li><li class="chapter-item "><a href="../../pages/VST+3+Licensing/What+are+the+licensing+options.html">What are the licensing options</a></li><li class="chapter-item "><a href="../../pages/VST+3+Licensing/Which+files+fall+under+which+license.html">Which files fall under which license?</a></li><li class="chapter-item "><a href="../../pages/VST+3+Licensing/Developer+use+cases.html">Developer use cases (FAQs)</a></li></ol></li><li class="chapter-item "><a href="../../pages/Getting+Started/Index.html">Getting Started</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Getting+Started/Links.html">VST 3 Links</a></li><li class="chapter-item "><a href="../../pages/Getting+Started/How+to+setup+my+system.html">How to set up my system for VST 3</a></li><li class="chapter-item "><a href="../../pages/Getting+Started/Preparation+on+Windows.html">Preparation on Windows</a></li></ol></li><li class="chapter-item "><a href="../../pages/Tutorials/Index.html">Tutorials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Tutorials/Building+the+examples+included+in+the+SDK+Windows.html">Building the examples included in the SDK on Windows</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Building+the+examples+included+in+the+SDK+macOS.html">Building the examples included in the SDK on macOS</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Building+the+examples+included+in+the+SDK+Linux.html">Building the examples included in the SDK on Linux</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Using+cmake+for+building+plug-ins.html">Using cmake for building VST 3 plug-ins</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Generate+new+plug-in+with+Project+Generator.html">Generate a new plug-in with the Project Generator App</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Code+your+first+plug-in.html">Code your first plug-in</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Use+VSTGUI+to+design+a+UI.html">Use VSTGUI to design a User Interface</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Advanced+VST+3+techniques.html">Advanced VST 3 techniques</a></li><li class="chapter-item "><a href="../../pages/Tutorials/How+to+use+the+silence+flags.html">How to use the silence flags</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Strings+Conversion+Helper.html">Strings Conversion Helper</a></li><li class="chapter-item "><a href="../../pages/Tutorials/Creating+a+plug-in+from+the+Helloworld+template.html">Creating a plug-in from the Helloworld template</a></li></ol></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Index.html">Technical Documentation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Technical+Documentation/API+Documentation/Index.html">VST 3 API Documentation</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+Module+Architecture/Index.html">VST Module Architecture</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+Module+Architecture/Loading.html">How the host will load a VST-MA based Plug-in</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+Module+Architecture/Derive+From+Interface.html">How to derive a class from an interface</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+Module+Architecture/Interface+Versions+and+Inheritance.html">Interface Versions and Inheritance</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">Moduleinfo</a></li></ol></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/VST+3+Units/Index.html">VST 3 Units</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Index.html">VST 3 Workflow Diagrams</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Edit+Controller+Call+Sequence.html">Edit Controller Call Sequence</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Get+Latency+Call+Sequence.html">Get Latency Call Sequence</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Resize+View+Call+Sequence.html">Resize View Call Sequence</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html">Bus Arrangement Setting Sequence</a></li></ol></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Index.html">VST 3 Locations / Format</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Plugin+Format.html">Plug-in Format Structure</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Plugin+Locations.html">Plug-in Locations</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Preset+Format.html">Preset Format</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Preset+Locations.html">Preset Locations</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Locations+Format/Snapshots.html">Snapshots</a></li></ol></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/About+MIDI/Index.html">About MIDI in VST 3</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.html">[3.0.0] Interfaces supported by the plug-in</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.html">[3.0.0] Silence flags</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.0/Host+Interfaces.html">[3.0.0] Interfaces supported by the host</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html">[3.0.2] Parameter Finder</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.html">[3.1.0] Audio Presentation Latency</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.1.0/IComponentHandler2.html">[3.1.0] Dirty State, Open Editor Request and UI Group Editing Support</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.1.0/IEditController2.html">[3.1.0] KnobMode, Open Help &amp; Open Aboutbox</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.html">[3.5.0] Note Expression</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/IKeyswitchController.html">[3.5.0] Key Switch</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.html">[3.5.0] Remote Presentation of Parameters</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/IComponentHandler3.html">[3.5.0] Context Menu</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.html">[3.5.0] Enhanced Linked Parameters</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.0/IAA.html">[3.6.0] iOS Inter-App Audio</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.0/IStreamAttributes.html">[3.6.0] Preset Meta-Information</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.5/IInfoListener.html">[3.6.5] Channel Context Info</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.5/IUnitHandler2.html">[3.6.5] Unit-Bus Assignment Change</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.5/IPrefetchableSupport.html">[3.6.5] Prefetchable</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.5/IAutomationState.html">[3.6.5] Automation State</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.6/IPlugViewContentScaleSupport.html">[3.6.6] PlugView Content Scaling</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.8/IComponentHandlerBusActivation.html">[3.6.8] Request Bus Activation</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.10/UI+Snapshots.html">[3.6.10] UI Snapshots</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping.html">[3.6.11] NoteExpression Physical UI Mapping</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.html">[3.6.12] Legacy MIDI CC Out Event</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.12/IPlugInterfaceSupport.html">[3.6.12] Host Query Interface support</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.6.12/IVst3WrapperMPESupport.html">[3.6.12] MPE support for Wrappers</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html">[3.7.0] Parameter Function Name</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.7.0/IProgress.html">[3.7.0] Progress display</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.html">[3.7.0] Process Context Requirements</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.7.0/Control+Voltage.html">[3.7.0] Control Voltage Bus Flag</a></li><li class="chapter-item "><a href="../../pages/Technical+Documentation/Change+History/3.7.5/ModuleInfo.html">[3.7.5] Module Info</a></li></ol></li><li class="chapter-item "><a href="../../pages/Versions/Index.html">Change History</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/Versions/Version+3.7.5.html">Version 3.7.5 (2022/05/16)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.7.4.html">Version 3.7.4 (2021/12/14)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.7.3.html">Version 3.7.3 (2021/08/10)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.7.2.html">Version 3.7.2 (2021/03/30)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.7.1.html">Version 3.7.1 (2020/11/17)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.7.0.html">Version 3.7.0 (2020/07/29)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.14.html">Version 3.6.14 (2019/11/29)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.13.html">Version 3.6.13 (2019/04/08)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.12.html">Version 3.6.12 (2018/12/03)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.11.html">Version 3.6.11 (2018/10/22)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.10.html">Version 3.6.10 (2018/06/11)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.9.html">Version 3.6.9 (2018/03/01)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.8.html">Version 3.6.8 (2017/11/08)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.7.html">Version 3.6.7 (2017/03/03)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.6.html">Version 3.6.6 (2016/06/17)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.5.html">Version 3.6.5 (2015/08/28)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.6.0.html">Version 3.6.0 (2013/11/22)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.5.2.html">Version 3.5.2 (2012/09/25)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.5.1.html">Version 3.5.1 (2011/11/11)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.5.0.html">Version 3.5.0 (2011/02/04)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.1.0.html">Version 3.1.0 (2010/06/25)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.0.2.html">Version 3.0.2 (2009/01/15)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.0.1.html">Version 3.0.1 (2008/03/19)</a></li><li class="chapter-item "><a href="../../pages/Versions/Version+3.0.0.html">Version 3.0.0 (2008/01/17)</a></li></ol></li><li class="chapter-item expanded "><a href="../../pages/FAQ/Index.html">Frequently Asked Questions</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../pages/FAQ/Communication.html">Communication</a></li><li class="chapter-item "><a href="../../pages/FAQ/Processing.html">Processing</a></li><li class="chapter-item "><a href="../../pages/FAQ/GUI+Editor.html">GUI-Editor</a></li><li class="chapter-item "><a href="../../pages/FAQ/Compatibility+with+VST+2.x+or+VST+1.html">Compatibility with VST 2.x or VST 1</a></li><li class="chapter-item "><a href="../../pages/FAQ/Persistence.html">Persistence</a></li><li class="chapter-item "><a href="../../pages/FAQ/Miscellaneous.html">Miscellaneous</a></li><li class="chapter-item expanded "><a href="../../pages/FAQ/Licensing.html" class="active">Licensing</a></li></ol></li><li class="chapter-item "><a href="../../pages/Forum/Index.html">VST 3 Forum</a></li><li class="chapter-item "><a href="../../pages/Miscellaneous/Index.html">Miscellaneous</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">VST 3 Developer Portal</h1>
+
+                    <div class="right-buttons">
+                        
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <blockquote>
+<p>/ <a href="../">VST Home</a> / <a href="Index.html">Frequently Asked Questions</a></p>
+<h1><a class="header" href="#licensing" id="licensing">Licensing</a></h1>
+</blockquote>
+<ul>
+<li><a href="#q-i-would-like-to-share-the-source-code-of-my-vst-3-plug-inhost-on-github-or-other-such-platform">Q: I would like to share the source code of my VST 3 plug-in/host on GitHub or other such platform.</a></li>
+<li><a href="#q-i-would-like-to-distribute-my-vst-3-plug-inhost-as-freewareshareware-in-binary-form-only">Q: I would like to distribute my VST 3 plug-in/host as freeware/shareware in binary form only.</a></li>
+<li><a href="#q-i-would-like-to-sell-my-vst-3-plug-inhost-in-binary-form-only">Q: I would like to sell my VST 3 plug-in/host in binary form only.</a></li>
+<li><a href="#q-i-would-like-to-adapt-the-vst-3-sdks-sources-to-my-vst-3-plug-inhosts-needs">Q: I would like to adapt the VST 3 SDK's sources to my VST 3 plug-in/host's needs.</a></li>
+<li><a href="#q-i-would-like-to-reuse-a-distributed-modified-version-of-the-vst-3-sdk-for-my-own-vst-3-plug-inshost">Q: I would like to reuse a distributed modified version of the VST 3 SDK for my own VST 3 plug-ins/host.</a></li>
+<li><a href="#q-i-would-like-to-distribute-my-vst-3-plug-inhost-in-binary-form-based-on-a-modified-version-of-vst-3-sdk-which-is-under-gplv3">Q: I would like to distribute my VST 3 plug-in/host in binary form based on a modified version of VST 3 SDK which is under GPLv3.</a></li>
+<li><a href="#q-i-would-like-to-sell-my-vst-3-plug-inhost-in-binary-form-which-is-based-on-a-3rd-party-sdk-like-juce">Q: I would like to sell my VST 3 plug-in/host in binary form which is based on a 3rd party SDK like JUCE.</a></li>
+<li><a href="#q-i-would-like-to-distribute-my-vst-3-plug-inhost-in-binary-form-which-is-based-on-a-3rd-party-sdk-like-juce-and-used-its-gplv3-license">Q: I would like to distribute my VST 3 plug-in/host in binary form which is based on a 3rd party SDK like JUCE and used its GPLv3 license.</a></li>
+<li><a href="#q-do-i-have-to-sign-and-send-to-steinberg-the-proprietary-steinberg-vst-3-license-agreement-for-each-new-version-of-the-vst-3-sdk">Q: Do I have to sign and send to Steinberg the &quot;Proprietary Steinberg VST 3&quot; license agreement for each new version of the VST 3 SDK?</a></li>
+<li><a href="#q-i-would-like-to-share-the-source-code-of-my-vst-2-plug-inhost-on-github-or-other-web-based-exchange-platform">Q: I would like to share the source code of my VST 2 plug-in/host on GitHub or other web-based exchange platform.</a></li>
+<li><a href="#q-i-am-a-developercompany-and-i-want-to-develop-and-distribute-a-vst-2-plug-in-andor-host-in-binary-form">Q: I am a developer/company and I want to develop and distribute a VST 2 plug-in and/or host in binary form.</a></li>
+</ul>
+<hr />
+<h2><a class="header" href="#q-i-would-like-to-share-the-source-code-of-my-vst-3-plug-inhost-on-github-or-other-such-platform" id="q-i-would-like-to-share-the-source-code-of-my-vst-3-plug-inhost-on-github-or-other-such-platform">Q: I would like to share the source code of my VST 3 plug-in/host on GitHub or other such platform.</a></h2>
+<ul>
+<li>You can choose the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> license and feel free to share your plug-ins/host's source code including or referencing the VST 3 SDK's sources on GitHub.</li>
+<li>You are allowed to provide a binary form of your plug-ins/host too, provided that you provide its source code as <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> too.</li>
+<li>Note that you have to follow the <a href="../VST+3+Licensing/Usage+guidelines.html">Steinberg VST usage guidelines</a>.</li>
+</ul>
+<h2><a class="header" href="#q-i-would-like-to-distribute-my-vst-3-plug-inhost-as-freewareshareware-in-binary-form-only" id="q-i-would-like-to-distribute-my-vst-3-plug-inhost-as-freewareshareware-in-binary-form-only">Q: I would like to distribute my VST 3 plug-in/host as freeware/shareware in binary form only.</a></h2>
+<ul>
+<li>You can distribute your VST 3 plug-in/host in a binary form. This always requires that you to choose the &quot;Proprietary Steinberg VST 3&quot; license.</li>
+<li>Even though you distribute your VST 3 plug-in/host as freeware/shareware you need to adhere to the requirements of the &quot;Proprietary Steinberg VST 3&quot; license. </li>
+<li>Download the <a href="../VST+3+Licensing/What+are+the+licensing+options.html">license agreement</a> (it is part of the <a href="../Getting+Started/Links.html">SDK</a> too), sign it and return it to Steinberg.</li>
+</ul>
+<h2><a class="header" href="#q-i-would-like-to-sell-my-vst-3-plug-inhost-in-binary-form-only" id="q-i-would-like-to-sell-my-vst-3-plug-inhost-in-binary-form-only">Q: I would like to sell my VST 3 plug-in/host in binary form only.</a></h2>
+<p>If you work for-profit and distribute your VST 3 plug-in/host in binary form, you need to choose the &quot;Proprietary Steinberg VST 3&quot; license.
+Download the <a href="../VST+3+Licensing/What+are+the+licensing+options.html">license agreement</a> (it is part of the <a href="../Getting+Started/Links.html">SDK</a> too), sign it and return it to Steinberg.</p>
+<h2><a class="header" href="#q-i-would-like-to-adapt-the-vst-3-sdks-sources-to-my-vst-3-plug-inhosts-needs" id="q-i-would-like-to-adapt-the-vst-3-sdks-sources-to-my-vst-3-plug-inhosts-needs">Q: I would like to adapt the VST 3 SDK's sources to my VST 3 plug-in/host's needs.</a></h2>
+<p>You can adapt and modify the VST 3 SDK's source for your needs, but if you want to distribute these sources under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> you have to distribute your VST 3 plug-in/host's sources under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> too.
+It is allowed to modify the VST 3 SDK's when you distribute your VST 3 plug-in/host in binary form and choose the &quot;Proprietary Steinberg VST 3&quot; license.
+If you are of the opinion that we should include your changes in the SDK, please contact us (use the <a href="https://forums.steinberg.net/c/developer/103/none">sdk.steinberg.net</a>).</p>
+<h2><a class="header" href="#q-i-would-like-to-reuse-a-distributed-modified-version-of-the-vst-3-sdk-for-my-own-vst-3-plug-inshost" id="q-i-would-like-to-reuse-a-distributed-modified-version-of-the-vst-3-sdk-for-my-own-vst-3-plug-inshost">Q: I would like to reuse a distributed modified version of the VST 3 SDK for my own VST 3 plug-ins/host.</a></h2>
+<p>Yes, but you have to make sure that your VST 3 plug-in/host sources are under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> too!</p>
+<h2><a class="header" href="#q-i-would-like-to-distribute-my-vst-3-plug-inhost-in-binary-form-based-on-a-modified-version-of-vst-3-sdk-which-is-under-a-hrefhttpswwwgnuorglicensesgpl-30enhtmlgplv3a" id="q-i-would-like-to-distribute-my-vst-3-plug-inhost-in-binary-form-based-on-a-modified-version-of-vst-3-sdk-which-is-under-a-hrefhttpswwwgnuorglicensesgpl-30enhtmlgplv3a">Q: I would like to distribute my VST 3 plug-in/host in binary form based on a modified version of VST 3 SDK which is under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>.</a></h2>
+<ul>
+<li>Yes, but you have to make sure that your VST 3 plug-in/host sources are under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> too!</li>
+<li>Note that you have to follow the <a href="../VST+3+Licensing/What+are+the+licensing+options.html">Steinberg VST usage guidelines</a>.</li>
+<li>If you do not want to be <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>, you have to build your VST 3 plug-in/host based on the original or any private modified version of the VST 3 SDK and choose the &quot;Proprietary Steinberg VST 3&quot; license.</li>
+</ul>
+<h2><a class="header" href="#q-i-would-like-to-sell-my-vst-3-plug-inhost-in-binary-form-which-is-based-on-a-3rd-party-sdk-like-juce" id="q-i-would-like-to-sell-my-vst-3-plug-inhost-in-binary-form-which-is-based-on-a-3rd-party-sdk-like-juce">Q: I would like to sell my VST 3 plug-in/host in binary form which is based on a 3rd party SDK like JUCE.</a></h2>
+<ul>
+<li>If you work for-profit and distribute your plug-in/host in binary form, you need to choose the &quot;Proprietary Steinberg VST 3&quot; license.</li>
+<li>Download the <a href="../VST+3+Licensing/What+are+the+licensing+options.html">license agreement</a> (it is part of the <a href="../Getting+Started/Links.html">SDK</a> too), sign it and return it to Steinberg.</li>
+<li>Note that you have to follow the <a href="../VST+3+Licensing/What+are+the+licensing+options.html">Steinberg VST usage guidelines</a>.</li>
+</ul>
+<h2><a class="header" href="#q-i-would-like-to-distribute-my-vst-3-plug-inhost-in-binary-form-which-is-based-on-a-3rd-party-sdk-like-juce-and-used-its-a-hrefhttpswwwgnuorglicensesgpl-30enhtmlgplv3a-license" id="q-i-would-like-to-distribute-my-vst-3-plug-inhost-in-binary-form-which-is-based-on-a-3rd-party-sdk-like-juce-and-used-its-a-hrefhttpswwwgnuorglicensesgpl-30enhtmlgplv3a-license">Q: I would like to distribute my VST 3 plug-in/host in binary form which is based on a 3rd party SDK like JUCE and used its <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> license.</a></h2>
+<ul>
+<li>Yes, but you have to make sure that your VST 3 plug-in/host sources are under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> too!</li>
+<li>Note that you have to follow the <a href="../VST+3+Licensing/What+are+the+licensing+options.html">Steinberg VST usage guidelines</a>.</li>
+</ul>
+<h2><a class="header" href="#q-do-i-have-to-sign-and-send-to-steinberg-the-proprietary-steinberg-vst-3-license-agreement-for-each-new-version-of-the-vst-3-sdk" id="q-do-i-have-to-sign-and-send-to-steinberg-the-proprietary-steinberg-vst-3-license-agreement-for-each-new-version-of-the-vst-3-sdk">Q: Do I have to sign and send to Steinberg the &quot;Proprietary Steinberg VST 3&quot; license agreement for each new version of the VST 3 SDK?</a></h2>
+<ul>
+<li>No, the license agreement has its own versioning, you just have to be sure that you have already signed the correct version of it.</li>
+<li>As of SDK version <strong>3.6.8</strong>, the license has the version <strong>2.0</strong> (only some minor change/formatting of the text of the license agreement were done in the last SDK versions [3.6.9 up to 3.7.1])
+<ul>
+<li><strong>If</strong> you use a <strong>VST 3 SDK version &gt;= 3.6.8</strong>, you have to be sure that you sent Steinberg a signed license agreement (<em>version 2.x</em>) from one of the last VST 3 SDKs (&gt;= 3.6.8).</li>
+<li><strong>If</strong> you use a <strong>VST 3 SDK version &lt; 3.6.8</strong>, you have to be sure that you sent Steinberg a signed license agreement (<strong>version 1</strong>) included in the VST 3 SDK that you use.</li>
+<li><strong>If</strong> you do not know if you already sent it, it is recommended to send it again and in this case it is possible to use the license agreement of the <strong>last VST 3 SDK</strong>, too!</li>
+<li><strong>If</strong> you have signed a license agreement (<strong>version 2.x</strong>) and a new released <strong>VST 3 SDK</strong> uses a new license agreement (<strong>version 3.x</strong>), then you have to signed it again.</li>
+</ul>
+</li>
+<li>The previous explanation also applies to used 3rd parties SDK like JUCE/iPlug/SynthEdit... just check which VST 3 SDK version is used by the 3rd party SDK you work with and sign the correct license agreement or the last available one.</li>
+</ul>
+<h2><a class="header" href="#q-i-would-like-to-share-the-source-code-of-my-vst-2-plug-inhost-on-github-or-other-web-based-exchange-platform" id="q-i-would-like-to-share-the-source-code-of-my-vst-2-plug-inhost-on-github-or-other-web-based-exchange-platform">Q: I would like to share the source code of my VST 2 plug-in/host on GitHub or other web-based exchange platform.</a></h2>
+<ul>
+<li>It is allowed but be sure that you do NOT include the Steinberg VST 2 files: like <em>aeffect.h</em> and <em>aeffectx.h</em>. These files are under a different license which does not allow redistribution!</li>
+</ul>
+<h2><a class="header" href="#q-i-am-a-developercompany-and-i-want-to-develop-and-distribute-a-vst-2-plug-in-andor-host-in-binary-form" id="q-i-am-a-developercompany-and-i-want-to-develop-and-distribute-a-vst-2-plug-in-andor-host-in-binary-form">Q: I am a developer/company and I want to develop and distribute a VST 2 plug-in and/or host in binary form.</a></h2>
+<ul>
+<li>If you have signed the VST 2 license agreement (before October 2018), you can.</li>
+<li>If not, you are not allowed to distribute it!</li>
+<li>See <a href="../Main+benefits+of+VST+3/Index.html">here</a>!</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../pages/FAQ/Miscellaneous.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../pages/Forum/Index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="footer" class="footer">
+                <!-- Here comes the footer when available			 -->                
+                © 2022 <a href="https://www.steinberg.net" target="_blank">Steinberg Media Technologies GmbH</a>.&nbsp; All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://o.steinberg.net/en/extras/about.html" target="_blank">About</a> |
+                <a href="https://o.steinberg.net/en/extras/privacy_policy.html" target="_blank">Privacy Policy</a> |
+                <a href="https://o.steinberg.net/en/extras/terms_conditions.html" target="_blank">Legal Terms</a> 
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../pages/FAQ/Miscellaneous.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../pages/Forum/Index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="../../mermaid.min.js"></script>
+        
+        <script type="text/javascript" src="../../mermaid-init.js"></script>
+        
+
+        
+
+    </body>
+</html>
