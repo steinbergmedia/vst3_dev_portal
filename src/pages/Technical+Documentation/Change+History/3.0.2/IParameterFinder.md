@@ -1,4 +1,4 @@
->/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.2] Parameter Finder
 
@@ -21,6 +21,6 @@ It is highly recommended to implement this interface. A host can implement impor
 
 ## Examples
 
-For example, all Steinberg hosts require this interface in order to support the "AI Knob".
+For example, all Steinberg hosts require this interface in order to support the **AI Knob**.
 
-[![tech_doc_image_link_1](../../../../resources/tech_doc_30.png)](https://www.steinberg.net/de/cc121/)
+[![tech_doc_image_link_1](../../../../resources/tech_doc_30.jpg)](https://www.steinberg.net/de/cc121/)

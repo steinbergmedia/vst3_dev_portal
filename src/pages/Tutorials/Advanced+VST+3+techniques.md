@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../) / [Tutorials](Index.md)
 >
 ># Advanced VST 3 techniques
 
@@ -136,7 +136,7 @@ void MyEffect::handleParameterChanges (IParameterChanges*inputParameterChanges)
 }
 ```
 
-to delegate the handling of the parameter changes to the *gainParameter* object.
+in order to delegate the handling of the parameter changes to the *gainParameter* object.
 
 Now we just need another small change in the process lambda to use the nearly sample accurate *gain* value. We have to call the *gainParameter* object to *advance* the parameter value:
 

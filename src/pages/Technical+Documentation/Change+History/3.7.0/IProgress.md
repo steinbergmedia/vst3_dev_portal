@@ -1,4 +1,4 @@
->/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
 ># [3.7.0] Progress display
 
@@ -17,7 +17,7 @@ Extended host callback interface for an edit controller: [Vst::IProgress](https:
 - [released: 3.7.0]
 - [optional]
 
-Allows the plug-in to request the host to create a progress for some specific tasks which take some time.The host can visualize the progress as read-only UI elements. For example, after loading a project where a plug-in needs to load extra data (e.g. samples) in a background thread, this enables the host to get and visualize the current status of the loading progress and to inform the user when the loading is finished. Note: During the progress, the host can unload the plug-in at any time. Make sure that the plug-in supports this use case.
+Allows the plug-in to request the host to create a progress for some specific tasks which take some time. The host can visualize the progress as read-only UI elements. For example, after loading a project where a plug-in needs to load extra data (e.g. samples) in a background thread, this enables the host to get and visualize the current status of the loading progress and to inform the user when the loading is finished. Note: During the progress, the host can unload the plug-in at any time. Make sure that the plug-in supports this use case.
 
 ## Examples
 

@@ -1,4 +1,4 @@
->/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
 ># [3.5.0] Context Menu
 
@@ -21,7 +21,7 @@ A plug-in can ask the host to create a context menu for a given exported paramet
 The host may pre-fill this context menu with specific items regarding the parameter ID like "Show automation for parameter", "MIDI learn" etc...
 The plug-in can use the context menu in two ways :
 
-- add its own items to the menu via the [IContextMenu](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html) interface and call [IContextMenu::popup(..)](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html#a8d6e113be32dfccabcacca0c81ee6f10) to create the pop-up. See below for an example of how to use it.
+- add its own items to the menu via the [IContextMenu](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html) interface and call [IContextMenu::popup(...)](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html#a8d6e113be32dfccabcacca0c81ee6f10) to create the pop-up. See below for an example of how to use it.
 - extract the host menu items and add them to a context menu created by the plug-in.
 
 >ⓘ **Note**\

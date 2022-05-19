@@ -25,6 +25,11 @@
         {{/if}}
         {{#if favicon_png}}
         <link rel="shortcut icon" href="{{ path_to_root }}favicon.png">
+        <link rel="shortcut icon" href="{{ path_to_root }}resources/favicon/favicon-16x16.png" type="image/png">
+        <link rel="shortcut icon" href="{{ path_to_root }}resources/favicon/favicon-32x32.png" type="image/png">
+        <link rel="shortcut icon" href="{{ path_to_root }}resources/favicon/favicon-192x192.png" type="image/png">
+        <link rel="shortcut icon" href="{{ path_to_root }}resources/favicon/favicon-256x256.png" type="image/png">
+
         {{/if}}
         <link rel="stylesheet" href="{{ path_to_root }}css/variables.css">
         <link rel="stylesheet" href="{{ path_to_root }}css/general.css">
@@ -102,6 +107,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-image"></div>
             <div class="sidebar-scrollbox">
                 {{#toc}}{{/toc}}
             </div>
@@ -198,6 +204,14 @@
                         <div style="clear: both"></div>
                     </nav>
                 </div>
+            </div>
+
+            <div id="footer" class="footer">
+                <!-- Here comes the footer when available			 -->                
+                © 2022 <a href="https://www.steinberg.net" target="_blank">Steinberg Media Technologies GmbH</a>.&nbsp; All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://o.steinberg.net/en/extras/about.html" target="_blank">About</a> |
+                <a href="https://o.steinberg.net/en/extras/privacy_policy.html" target="_blank">Privacy Policy</a> |
+                <a href="https://o.steinberg.net/en/extras/terms_conditions.html" target="_blank">Legal Terms</a> 
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">

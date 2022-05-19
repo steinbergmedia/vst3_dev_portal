@@ -1,15 +1,15 @@
->/ [VST Home](../../index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../) / [Technical Documentation](../Index.md)
 >
 ># VST 3 Workflow Diagrams
 
 Some useful graphical call sequences a **VST 3** compliant host should follow.
 
-## [Audio Processor Call Sequence](../Workflow+Diagrams/Audio+Processor+Call+Sequence.md)
+## [Audio Processor Call Sequence](Audio+Processor+Call+Sequence.md)
 
-## [Edit Controller Call Sequence](../Workflow+Diagrams/Edit+Controller+Call+Sequence.md)
+## [Edit Controller Call Sequence](Edit+Controller+Call+Sequence.md)
 
-## [Get Latency Call Sequence](../Workflow+Diagrams/Get+Latency+Call+Sequence.md)
+## [Get Latency Call Sequence](Get+Latency+Call+Sequence.md)
 
-## [Resize View Call Sequence](../Workflow+Diagrams/Resize+View+Call+Sequence.md)
+## [Resize View Call Sequence](Resize+View+Call+Sequence.md)
 
-## [Bus Arrangement Setting Sequence](../Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.md)
+## [Bus Arrangement Setting Sequence](Bus+Arrangement+Setting+Sequence.md)

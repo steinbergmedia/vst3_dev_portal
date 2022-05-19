@@ -1,5 +1,5 @@
 [book]
-authors = ["ascheffler"]
+authors = ["ascheffler", "nzorn", "ygrabit"]
 language = "en"
 multilingual = false
 src = "src"
@@ -22,8 +22,8 @@ command = "mdbook-mermaid"
 
 [output.html]
 no-section-label = true
-default-theme = "steinberg"
-preferred-dark-theme = "steinberg"
+default-theme = "steinberg-light"
+preferred-dark-theme = "steinberg-dark"
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.fold]
@@ -32,3 +32,6 @@ level = 0
 
 [output.html.redirect]
 "display/VST/Main+benefits+of+VST+3/index.html" = "../../../pages/Main+benefits+of+VST+3/index.html"
+
+[output.linkcheck]
+optional = true

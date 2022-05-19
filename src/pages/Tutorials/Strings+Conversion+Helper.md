@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../) / [Tutorials](Index.md)
 >
 ># Strings Conversion Helper
 

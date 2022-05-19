@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
 >
 ># VST 3 Project Generator
 
@@ -52,7 +52,7 @@ If you do not have previously installed the **VST SDK**, you could download it, 
 
 You have 2 possibilities to download the **VST 3 SDK**:
 
-- **Commercial**: by clicking on it you will be redirect to the latest available SDK version to download, including all tools (check [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)), with this variant of the SDK you are able to create and commercialize your plug-ins (See [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)).
+- **Commercial**: by clicking on it you will be redirect to the latest available SDK version to download, including all tools (check [What is the VST 3 SDK?](Index.md)), with this variant of the SDK you are able to create and commercialize your plug-ins (See [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)).
 - **Open Source**: by clicking on it you will be redirect to Steinberg **Github** where you will be able to clone the **VST 3 SDK**, this variant does not included all available tools (See [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)).
 
 ### VST SDK and cmake successfully located
@@ -72,7 +72,7 @@ Company Information
 The information included in this subsection will be used for generating Factory information associated to all plug-ins you will generate. This will be read by the host application loading your plug-ins and the host may display it to an user.
 
 - **Vendor**: this is your Company name: e.g. *"Steinberg Media Technologies GmbH"*
-- **E-Mail**: your email, which could be used by the host to redirect an user to your support for example: e.g. *"<support@steinberg.net>"*
+- **E-Mail**: your email, which could be used by the host to redirect an user to your support for example: e.g. *"<mailto:support@steinberg.net>"*
 - **URL**: the URL of your Company: e.g. *"<https://www.steinberg.net>"*
 - **C++ Namespace**: this allows you to predefine a namespace which will be used to surround your plug-in source code: e.g. *"MyWantedNamespace"*:
 
@@ -80,7 +80,7 @@ The information included in this subsection will be used for generating Factory 
 //...
 namespace MyWantedNamespace {
 
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 MyPluginController::MyPluginController ()
 {
 //...
@@ -107,7 +107,7 @@ In this tab you are defining some information for the creation of a new plug-in:
 - **Type**: this specifies the main **VST 3** Sub-Category ([PlugType](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html)) of your plug-in:
   - **Audio Effect**: ([kFx](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga0411b97bcc13d604e738a28aee43bb61)) a simple audio effect Stereo→Stereo
   - **Instrument**: ([kInstrument](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga93cb7a7100ac96cfafceb6216770c42dl#gabe030351fd22d14dad35c817e1849f59)) a simple instrument with 1 Event input and 1 stereo Audio output
-- **Use VSTGUI**: check this if you want to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) as UI framework
+- **Use VSTGUI**: check this if you want to use [**VSTGUI**](VSTGUI.md) as UI framework
 - **macOS Deployment Target**: enter here the minimum requested macOS version targeted
 - **C++ Class Name**: this specifies the basename of your plug-in classes: e.g. *"AGain"*
 
@@ -152,11 +152,11 @@ C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7
 
 ==================================================
 
--- Found Git: C:/Program Files/Git/cmd/git.exe (found version"2.9. 2.windows.1")
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version"2.9.2.windows.1")
 -- SMTG_CMAKE_SCRIPT_DIR           : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_Project_Generator/WindowsResources
 -- SMTG_ENABLE_VSTGUI_SUPPORT      : ON
 -- SMTG_GENERATOR_OUTPUT_DIRECTORY : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK
--- SMTG_TEMPLATE_FILES_PATH        : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_Project_Generator/WindowsResources/    cmake/templates
+-- SMTG_TEMPLATE_FILES_PATH        : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_Project_Generator/WindowsResources/cmake/templates
 -- SMTG_VST3_SDK_SOURCE_DIR        : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
 
 -- SMTG_VENDOR_NAME            : Steinberg Media Technologies

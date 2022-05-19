@@ -1,4 +1,4 @@
->/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
 ># [3.5.0] Remote Presentation of Parameters
 
@@ -28,10 +28,10 @@ It allows to describe each parameter more precisely (what is the best matching t
 - A page is composed of cells (for example, 8 cells per page).
 - A cell is composed of layers (for example, a cell can have a knob, a display, and a button, which means 3 layers).
 - A layer is associated to a plug-in parameter using the ParameterID as identifier:
-    - it could be a knob with a display for title and/or value, this display uses the same ParameterID, but it could be another one.
-    - switch
-    - link which allows to jump directly to a subpage (on another page)
-    - more... See Vst::LayerType
+  - it could be a knob with a display for title and/or value, this display uses the same ParameterID, but it could be another one.
+  - switch
+  - link which allows to jump directly to a subpage (on another page)
+  - more... See Vst::LayerType
 
 This representation is implemented as XML text following the Document Type Definition (DTD): http://dtd.steinberg.net/VST-Remote-1.1.dtd
 
@@ -49,7 +49,7 @@ This representation is implemented as XML text following the Document Type Defin
     <comment>This is an example for 4 Cells per Page for the Remote named ProductRemote
              from company HardwareCompany.</comment>
  
-    <!-- ===================================== -->
+     <!-- ===================================== -->
     <representation name="ProductRemote" vendor="HardwareCompany" version="1.0">
         <page name="Root">
             <cell>
@@ -143,43 +143,43 @@ Explanation:
 
 ### For Mac platform
 
-| Prio | Type | Scope | Write | Path | Comment |
-| :- | :- | :- | :- | :- | :- |
-| 1 | User | User | X | Users/$USERNAME/Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | |
-| 2 | User | User | X | Users/$USERNAME/Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME | |
-| 3 | Shared_Factory | Public | - | Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | Computer shared FactoryROM |
-| 4 | Shared_Factory | Public | - | Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME | Computer shared FactoryROM |
-| 5 | App_Factory | Apps | - | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | Host Application |
-| 6 | App_Factory | Apps | - | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME | Host Application |
-| 7 | Plug_Factory | Plugs | - | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME/$UID | Plug-in Bundle |
-| 8 | Plug_Factory | Plugs | - | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME | Plug-in Bundle |
+| Prio  | Type          | Scope | Write | Path                                                              | Comment |
+| :-    | :-            | :-    | :-    | :-                                                                | :- |
+| 1     | User          | User  | X     | Users/$USERNAME/Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | |
+| 2     | User          | User  | X     | Users/$USERNAME/Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME      | |
+| 3     | Shared_Factory| Public| -     | Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID                 | Computer shared FactoryROM |
+| 4     | Shared_Factory| Public| -     | Library/Audio/VST XMLs/$COMPANY/$PLUGIN-NAME                      | Computer shared FactoryROM |
+| 5     | App_Factory   | Apps  | -     | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID                  | Host Application |
+| 6     | App_Factory   | Apps  | -     | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME                       | Host Application |
+| 7     | Plug_Factory  | Plugs | -     | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME/$UID        | Plug-in Bundle |
+| 8     | Plug_Factory  | Plugs | -     | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME             | Plug-in Bundle |
 
 ### For Windows Vista/7/8/10/11 platform
 
-| Prio | Type | Scope | Write | Path | Comment |
-| :- | :- | :- | :- | :- | :- |
-| 1 | User | User | X | [Users/$USERNAME/Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | FOLDERID_Documents |
-| 2 | User | User | X | [Users/$USERNAME/Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME | FOLDERID_Documents |
-| 3 | User_Factory | User | X | [Users/$USERNAME/AppData/Roaming]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | FOLDERID_RoamingAppData |
-| 4 | User_Factory | User | X | [Users/$USERNAME/AppData/Roaming]/VST XMLs/$COMPANY/$PLUGIN-NAME | FOLDERID_RoamingAppData |
-| 5 | Shared_Factory | Public | - | [ProgramData]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | FOLDERID_ProgramData |
-| 6 | Shared_Factory | Public | - | [ProgramData]/VST XMLs/$COMPANY/$PLUGIN-NAME | FOLDERID_ProgramData |
-| 7 | App_Factory | Apps | - | [$APPFOLDER]/VST XMLs/$COMPANY/ | Host Application |
-| 8 | App_Factory | Apps | - | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME | Host Application |
-| 9 | Plug_Factory | Plugs | - | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME/$UID | Plug-in Bundle |
-| 10 | Plug_Factory | Plugs | - | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME | Plug-in Bundle |
+| Prio  | Type          | Scope | Write | Path                                                                  | Comment |
+| :-    | :-            | :-    | :-    | :-                                                                    | :- |
+| 1     | User          | User  | X     | [Users/$USERNAME/Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID       | FOLDERID_Documents |
+| 2     | User          | User  | X     | [Users/$USERNAME/Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME            | FOLDERID_Documents |
+| 3     | User_Factory  | User  | X     | [Users/$USERNAME/AppData/Roaming]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | FOLDERID_RoamingAppData |
+| 4     | User_Factory  | User  | X     | [Users/$USERNAME/AppData/Roaming]/VST XMLs/$COMPANY/$PLUGIN-NAME      | FOLDERID_RoamingAppData |
+| 5     | Shared_Factory| Public| -     | [ProgramData]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID                     | FOLDERID_ProgramData |
+| 6     | Shared_Factory| Public| -     | [ProgramData]/VST XMLs/$COMPANY/$PLUGIN-NAME                          | FOLDERID_ProgramData |
+| 7     | App_Factory   | Apps  | -     | [$APPFOLDER]/VST XMLs/$COMPANY/                                       | Host Application |
+| 8     | App_Factory   | Apps  | -     | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME                           | Host Application |
+| 9     | Plug_Factory  | Plugs | -     | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME/$UID            | Plug-in Bundle |
+| 10    | Plug_Factory  | Plugs | -     | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME                 | Plug-in Bundle |
 
 ## For Windows XP/2000 platform
 
-| Prio | Type | Scope | Write | Path | Comment |
-| :- | :- | :- | :- | :- | :- |
-| 1 | User | User | X | [My Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | CSIDL_PERSONAL |
-| 2 | User | User | X | [My Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME | CSIDL_PERSONAL |
-| 3 | User_Factory | User | X | [Documents and Settings/$USERNAME/Application Data]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | CSIDL_APPDATA |
-| 4 | User_Factory | User | X | [Documents and Settings/$USERNAME/Application Data]/VST XMLs/$COMPANY/$PLUGIN-NAME | CSIDL_APPDATA |
-| 5 | Shared_Factory | Public | - | [Documents and Settings/$ALLUSERS/Application Data]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | CSIDL_COMMON_APPDATA |
-| 6 | Shared_Factory | Public | - | [Documents and Settings/$ALLUSERS/Application Data]/VST XMLs/$COMPANY/$PLUGIN-NAME | CSIDL_COMMON_APPDATA |
-| 7 | App_Factory | Apps | - | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | Host Application |
-| 8 | App_Factory | Apps | - | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME | Host Application |
-| 9 | Plug_Factory | Plugs | - | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME/$UID | Plug-in Bundle |
-| 10 | Plug_Factory | Plugs | - | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME | Plug-in Bundle |
+| Prio  | Type          | Scope | Write | Path                                                                  | Comment |
+| :-    | :-            | :-    | :-    | :-                                                                    | :- |
+| 1     | User          | User  | X     | [My Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID                    | CSIDL_PERSONAL |
+| 2     | User          | User  | X     | [My Documents]/VST XMLs/$COMPANY/$PLUGIN-NAME                         | CSIDL_PERSONAL |
+| 3     | User_Factory  | User  | X     | [Documents and Settings/$USERNAME/Application Data]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | CSIDL_APPDATA |
+| 4     | User_Factory  | User  | X     | [Documents and Settings/$USERNAME/Application Data]/VST XMLs/$COMPANY/$PLUGIN-NAME | CSIDL_APPDATA |
+| 5     | Shared_Factory| Public| -     | [Documents and Settings/$ALLUSERS/Application Data]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID | CSIDL_COMMON_APPDATA |
+| 6     | Shared_Factory| Public| -     | [Documents and Settings/$ALLUSERS/Application Data]/VST XMLs/$COMPANY/$PLUGIN-NAME | CSIDL_COMMON_APPDATA |
+| 7     | App_Factory   | Apps  | -     | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME/$UID                      | Host Application |
+| 8     | App_Factory   | Apps  | -     | [$APPFOLDER]/VST XMLs/$COMPANY/$PLUGIN-NAME                           | Host Application |
+| 9     | Plug_Factory  | Plugs | -     | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME/$UID            | Plug-in Bundle |
+| 10    | Plug_Factory  | Plugs | -     | $PLUGIN-PATH/Contents/Resources/VST XMLs/$PLUGIN-NAME                 | Plug-in Bundle |

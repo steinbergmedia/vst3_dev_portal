@@ -1,4 +1,4 @@
->/ [VST Home](../../index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../) / [Technical Documentation](../Index.md)
 >
 ># Complex Plug-in Structures / Multi-timbral Instruments
 
@@ -73,7 +73,9 @@ A unit can be associated with busses (or channels of busses). In particular, a u
 When a plug-in GUI is organized in the described way, it should support the described behavior by implementing
 
 - [Steinberg::Vst::IUnitInfo::getUnitByBus](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a718fa905d04d7d559bc89c7ca761413b): find out the track - unit relations
+
 - [Steinberg::Vst::IUnitInfo::getSelectedUnit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a6f1b43425ba894764f35b7d492e81c53): let the host know which track to select
+
 - [Steinberg::Vst::IUnitInfo::selectUnit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a2504c2bb3c57742102577f34cb58e257): cause the plug-in to select its unit
 
 and by calling

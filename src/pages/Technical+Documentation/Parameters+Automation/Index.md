@@ -1,4 +1,4 @@
->/ [VST Home](../../index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../) / [Technical Documentation](../Index.md)
 >
 ># Parameters and Automation
 
@@ -18,11 +18,11 @@ Description of how parameters are defined and used in **VST 3**
 
 A plug-in requires parameters in order to control its DSP algorithm, for example, a Frequency parameter for a filter. The plug-in can export these parameters in order to make them visible to the host and allow the host to control/change/automate/remote/visualize them. Some parameters can be defined for private use only (not visible to the user) or as read-only, such as parameters associated to VU Meters.
 
-[Steinberg::Vst::IEditController::getParameterCount](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#ab6ffbb8e3bf6f4829ab1c9c23fe935a1) allows the host to to identify the number of parameters that are exported by the plug-in.
+[Steinberg::Vst::IEditController::getParameterCount](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#ab6ffbb8e3bf6f4829ab1c9c23fe935a1) allows the host to identify the number of parameters that are exported by the plug-in.
 The plug-in must assign a unique 32-bit identifier (ID) to each exported parameter.
 
 >ⓘ **Note**\
->Up to 2^31 parameters can be exported with ID range **[0, 2147483648]** (the range [2147483649, 429496729] is reserved for host application).
+>Up to 2^31 parameters can be exported with ID range **[0, 2.147.483.648]** (the range [2.147.483.649, 4.294.967.296] is reserved for host application).
 
 Please note that it is not allowed to change this assignment at any time. In particular, a plug-in must not perform any reconfigurations that lead to a different set of automatable parameters. The only allowed variation is the adding or removing of parameters in a future plug-in version. However, keep in mind that automation data can get lost when parameters are removed.
 
@@ -76,15 +76,14 @@ The controller and the processor have to work with normalized parameter values.
 - Step count 0 : Continuous parameters simply need to be mapped accordingly
 - Step count n : Discrete parameters need a little bit more care
 
-    - **Discrete Value => Normalize**
-        ```
-        double normalized = discreteValue / (double)stepCount;
-        ```
-
-    - **Normalize => Discrete Value (Denormalize)**
-        ```
-        int discreteValue = min (stepCount, normalized *(stepCount + 1));
-        ```
+  - **Discrete Value => Normalize**
+  ``` c++
+  double normalized = discreteValue / (double)stepCount;
+  ```
+  - **Normalize => Discrete Value (Denormalize)**
+  ``` c++
+  int discreteValue = min (stepCount, normalized *(stepCount + 1));
+  ```
 
 **Example**: Step Count 3
 
@@ -153,7 +152,7 @@ The need to perform all transformations, from the normalized GUI representation 
 
 The processor gets the automation data in the processing call by using queue of parameter changes for each parameter having automation data:
 
-a [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) has some [IParamValueQueues](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html) (for a specific parameter ID) which has some Automation Points.
+A [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) has some [IParamValueQueues](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html) (for a specific parameter ID) which has some Automation Points.
 
 >⚠️ **Warning**\
 >- A parameter (ID) is present only one time in the [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) list!
@@ -179,7 +178,7 @@ to inform the host about this change (in the **UI Thread**). The host rescans th
 
 ### Multiple parameter values have changed
 
-As result of a program change for example, the plug-in must call
+As result of a program change for example, the plug-in must call:
 
 ``` c++
 IComponentHandler::restartComponent (kParamValuesChanged);
@@ -190,5 +189,8 @@ to inform the host about this change (in the **UI Thread**). The host invalidate
 If only some values have changed (less than 10)  the plug-in should use the [Steinberg::Vst::IComponentHandler::performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93) interface (Show the right use when automation are used: [Automation Recording](../Parameters+Automation/Index.md#automation-recording))
 
 >ⓘ **Note**\
->If the plug-in needs to inform the host about changes containing parameter title, default or flags and values (of multiple parameters), it could combine the restartComponent flags:\
-`IComponentHandler::restartComponent (kParamValuesChanged|kParamTitlesChanged);`
+>If the plug-in needs to inform the host about changes containing parameter title, default or flags and values (of multiple parameters), it could combine the restartComponent flags:
+
+``` c++
+IComponentHandler::restartComponent (kParamValuesChanged|kParamTitlesChanged);
+```

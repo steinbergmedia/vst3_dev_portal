@@ -1,4 +1,4 @@
->/ [VST Home](../../index.md) / [Frequently Asked Questions](../FAQ/Index.md)
+>/ [VST Home](../) / [Frequently Asked Questions](Index.md)
 >
 ># Miscellaneous
 
@@ -10,7 +10,7 @@
 
 A detailed description of parameter handling is provided here: [**Parameters**](../Technical+Documentation/Parameters+Automation/Index.md).
 
-## Q: What is the return value tresult?
+## Q: What is the return value **tresult**?
 
 Almost all **VST 3** interfaces return a *tresult* value. This integer value allows to return to the caller more differentiated error/success information than just a boolean value with its true and false.
 
@@ -49,17 +49,17 @@ When you export your plug-in in the factory instance (check *againentry.cpp*: DE
 Currently the subcategory string is used by **Cubase**/**Nuendo** to organize the plug-ins menu like this:
 
 ``` c++
-Computation of Folder Name (SubCategories => folder in menu)
-      "Fx"                        => "Other"
-      "Fx|Delay"                  => "Delay"
-      "Fx|Mastering|Delay"        => "Mastering"
-      "Spatial|Fx"                => "Spatial"
-      "Fx|Spatial"                => "Spatial"
-      "Instrument|Fx"             => if used as VSTi "" else if used as Insert "Other"
-      "Instrument|Sampler"        => "Sampler"
-      "Fx|Mastering|Surround"     => "Mastering\Surround"
-      "Fx|Mastering|Delay|Stereo" => "Mastering\Stereo"
-      "Fx|Mastering|Mono"         => "Mastering\Mono"
+// Computation of Folder Name (SubCategories => folder in menu)
+"Fx"                        => "Other"
+"Fx|Delay"                  => "Delay"
+"Fx|Mastering|Delay"        => "Mastering"
+"Spatial|Fx"                => "Spatial"
+"Fx|Spatial"                => "Spatial"
+"Instrument|Fx"             => if used as VSTi "" else if used as Insert "Other"
+"Instrument|Sampler"        => "Sampler"
+"Fx|Mastering|Surround"     => "Mastering\Surround"
+"Fx|Mastering|Delay|Stereo" => "Mastering\Stereo"
+"Fx|Mastering|Mono"         => "Mastering\Mono"
 ```
 
 This string should only be a hint what type of plug-in it is. It's not possible to define all types. If you have wishes for new categories, please discuss them in the VST [Developer Forum](../Forum/Index.html) (<https://sdk.steinberg.net>) and we can add them to future versions of the SDK.
@@ -83,7 +83,7 @@ Due to an issue in the Mac CoreAudio SDK, not yet fixed by Apple, you have to ap
 
 ``` c++
 HISize originalSize = { mBottomRight.h, mBottomRight.v };
-to
+// to
 HISize originalSize = { static_cast<CGFloat>(mBottomRight.h),
                         static_cast<CGFloat>(mBottomRight.v) };
 ```
@@ -112,12 +112,18 @@ You have the Validator command line which can be automatically called after you 
 
 ## Q: How can I allow to create Symbolic Link on Windows?
 
-In order to be able to create Symbolic Link on Windows you have to set the correct group policy, this will allow you to build the **VST 3** plug-ins and create a symbolic link (cmake option SMTG_CREATE_PLUGIN_LINK) for each plug-in into the folder C:\Program Files\Common Files\VST3. For this you have to start the "Edit group policy" from the Windows Search (Windows icon):
->gpedit.msc
+You have to adapt your Windows right access to allow creation of symbolic links for VST3 plug-ins: [Check HERE!](../Getting+Started/Preparation+on+Windows.md)
 
-Navigate to\
-*Computer configuration => Windows Settings => Security Settings => Local Policies => User Rights Assignment => Create symbolic links*
+## Q: My generated **VST 3** plug-in is not visible in my preferred host?
 
-Here you can set which users can create symbolic links:
+If your plug-in is visible in the [VST 3 plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) but not in your DAW, this is maybe due to the fact:
 
-![faq_1](../../resources/faq_1.png)
+- this host is not supporting VST3! Check the vendor ([known list of VST3 host](../What+is+VST/Use+cases.md#examples-of-vst-3-host-applications))
+- this host does not scan on Windows the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.html).
+You can try to use the main [VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.html) by setting the cmake variable when you generate the project:
+
+```c++
+-DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=0
+```
+
+- this host could not resolve symbolic link! You could try to copy your plug-in directly in the main [VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.html) (C:\Program Files\Common Files\VST3)

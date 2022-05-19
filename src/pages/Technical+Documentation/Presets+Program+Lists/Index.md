@@ -1,4 +1,4 @@
->/ [VST Home](../../index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../) / [Technical Documentation](../Index.md)
 >
 ># Presets & Program Lists
 
@@ -22,7 +22,6 @@ See [VST 3 Locations / Format](../Locations+Format/Index.md#preset-format) for p
 ![tech_doc_17](../../../resources/tech_doc_17.png)
 
 For a simple plug-in, the data of a preset is nothing more than its state. In this case:
-
 
 - It is the job of the host to manage the preset handling for the plug-in.
 

@@ -1,4 +1,4 @@
->/ [VST Home](../index.md)
+>/ [VST Home](../)
 >
 ># VST 3 Forum
 

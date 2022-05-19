@@ -1,4 +1,4 @@
->/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.5] Prefetchable
 

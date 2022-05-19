@@ -1,4 +1,4 @@
->/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
 ># [3.7.0] Process Context Requirements
 
@@ -17,7 +17,7 @@ Extended [IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfac
 - [released: 3.7.0]
 - [mandatory]
 
-To get accurate process context information ([Vst::ProcessContext](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html)), it is now required to implement this interface and return the desired bit mask of flags which your audio effect needs. If you do not implement this interface, you may not get any information at all of the process function.
+To get accurate process context information ([Vst::ProcessContext](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html)), it is now required to implement this interface and return the desired bit mask of flags which your audio effect needs. If you do not implement this interface, you may not get any information at all in the process function.
 
 The host asks for this information once between initialize and setActive. It cannot be changed afterwards.
 

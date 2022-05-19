@@ -1,4 +1,4 @@
->/ ... / [VST 3 Locations / Format](../Locations+Format/Index.md)
+>/ ... / [VST 3 Locations / Format](Index.md)
 >
 ># Plug-in Locations
 
@@ -8,8 +8,8 @@
 
 **Related pages:**
 
-- [VST 3 Locations / Format](../Locations+Format/Index.md)
-- [Plug-in Format Structure](../Locations+Format/Plugin+Format.md)
+- [VST 3 Locations / Format](Index.md)
+- [Plug-in Format Structure](Plugin+Format.md)
 
 ---
 
@@ -36,12 +36,12 @@ A **VST 3** Plug-in should be installed at specific folder location, the followi
 
 On the macOS platform, the host application expects **VST 3 Plug-ins** to be located in:
 
-| Prio | Location | Path | Comment |
-| :- | :- | :- | :- |
-| 1 |  User | /Users/$USERNAME/Library/Audio/Plug-ins/VST3/ |
-| 2 |  Global | /Library/Audio/Plug-ins/VST3/ |
-| 3 |  Global | /Network/Library/Audio/Plug-ins/VST3/ |
-| 4 |  Application | $APPFOLDER/Contents/VST3/ |
+| Prio  | Location      | Path                                          |
+| :-    | :-            | :-                                            |
+| 1     |  User         | /Users/$USERNAME/Library/Audio/Plug-ins/VST3/ |
+| 2     |  Global       | /Library/Audio/Plug-ins/VST3/                 |
+| 3     |  Global       | /Network/Library/Audio/Plug-ins/VST3/         |
+| 4     |  Application  | $APPFOLDER/Contents/VST3/                     |
 
 >ⓘ **Note**\
 >The host recursively scans these folders at startup in this order (Global/Application).
@@ -50,12 +50,12 @@ On the macOS platform, the host application expects **VST 3 Plug-ins** to be loc
 
 On the Windows platform, the host application expects **VST 3 Plug-ins** to be located in:
 
-| Prio | Location | Path | Comment |
-| :- | :- | :- | :- |
-| 1 | User | %LOCALAPPDATA%/Programs/Common/VST3/ | FOLDERID_UserProgramFilesCommon native bitdepth: • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS<br> Mainly used for development use case. |
-| 2 | Global | /Program Files/Common Files/VST3/ | FOLDERID_ProgramFilesCommon native bitdepth: • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS |
-| 2 | Global | /Program Files (x86)/Common Files/VST3/ | 32bit Plug-ins on 64bit Windows |
-| 3 | Application | $APPFOLDER/VST3/ | |
+| Prio  | Location      | Path                                          | Comment   |
+| :-    | :-            | :-                                            | :-        |
+| 1     | User          | %LOCALAPPDATA%/Programs/Common/VST3/          | FOLDERID_UserProgramFilesCommon native bitdepth:<br> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS<br> Mainly used for development use case. |
+| 2     | Global         | /Program Files/Common Files/VST3/            | FOLDERID_ProgramFilesCommon native bitdepth:<br> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS |
+| 2     | Global        | /Program Files (x86)/Common Files/VST3/       | 32bit Plug-ins on 64bit Windows |
+| 3     | Application   | $APPFOLDER/VST3/                              | |
 
 >ⓘ **Note**\
 >The host recursively scans these folders at startup in this order (Global/Application).
@@ -64,12 +64,12 @@ On the Windows platform, the host application expects **VST 3 Plug-ins** to be l
 
 On the Linux platform, the host application expects **VST 3 Plug-ins** to be located in:
 
-| Prio | Location | Path | Comment |
-| :- | :- | :- | :- |
-| 1 | User | $HOME/.vst3/ |
-| 2 | Global | /usr/lib/vst3/ |
-| 3 | Global | /usr/local/lib/vst3/ |
-| 4 | Application | $APPFOLDER/vst3/ |	
+| Prio  | Location      | Path                  |
+| :-    | :-            | :-                    |
+| 1     | User          | $HOME/.vst3/          |
+| 2     | Global        | /usr/lib/vst3/        |
+| 3     | Global        | /usr/local/lib/vst3/  |
+| 4     | Application   | $APPFOLDER/vst3/      |
 
 >ⓘ **Note**\
 >The host recursively scans these folders at startup in this order (User/Global/Application).

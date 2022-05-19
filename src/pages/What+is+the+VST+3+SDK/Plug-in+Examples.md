@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
 >
 ># VST 3 Plug-in Examples
 
@@ -8,9 +8,11 @@
 
 **Related pages:**
 
-- [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
-- [AAX, AUv3, AU and VST 2 Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md)
-
+- [VST 3 Plug-in Test Host](Plug-in+Test+Host.md)
+- [AAX, AUv3, AU and VST 2 Wrappers](Wrappers/Index.md)
+- [Building the examples included in the SDK on Windows](../Tutorials/Building+the+examples+included+in+the+SDK+Windows.md)
+- [Building the examples included in the SDK on macOS](../Tutorials/Building+the+examples+included+in+the+SDK+macOS.md)
+- [Building the examples included in the SDK on Linux](../Tutorials/Building+the+examples+included+in+the+SDK+Linux.md)
 ---
 
 ## Introduction
@@ -34,23 +36,26 @@ Check the folder *"public.sdk/samples/vst"* of the SDK!
 ## ADelay
 
 Very simple delay Plug-in:
+
 - only one parameter (a delay)
 
 Check the folder *"public.sdk/samples/vst/adelay"* of the SDK!
 
 Classes:
+
 - ADelayProcessor
 - ADelayController
 
 ## AGain
 
 The SDK includes an AGain Plug-in which is a very simple **VST 3 Plug-in**. This Plug-in:
+
 - is multichannel compatible
 - supports bypass processing
 - has an automated gain parameter
 - has an Event input bus (allowing to use noteOn velocity to control the gain factor)
 - has a VU peak meter
-- uses the [**VSTGUI4**](../What+is+the+VST+3+SDK/VSTGUI.md) library
+- uses the [**VSTGUI4**](VSTGUI.md) library
 - a version of this Plug-in with side-chaining is available (showing a Plug-in using the same controller and different - components)
 - a **AAX** version is available
 - a **AUv3** version is available
@@ -85,7 +90,7 @@ Check the folder *"public.sdk/samples/vst/channelcontext"* of the SDK!
 ## HostChecker
 
 - Instrument, Panner and Fx Plug-in checking the **VST 3** support of a host.
-- It uses [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md)
+- It uses [**VSTGUI**](VSTGUI.md)
 - a **AAX** version is available
 
 ![what_if_5](../../resources/what_is_5.jpg)
@@ -95,6 +100,7 @@ Check the folder *"public.sdk/samples/vst/hostchecker"* of the SDK!
 ## TestLegacyMIDICCOut
 
 Very simple Plug-in:
+
 - showing how to use [LegacyMIDICCOutEvent](../Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.md) which allow to generate MIDI CC as output event
 - VST parameters change which creates [LegacyMIDICCOutEvent](../Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.md) Event
 
@@ -103,6 +109,7 @@ Very simple Plug-in:
 Check the folder *"public.sdk/samples/vst/legacymidiccout"* of the SDK!
 
 Classes:
+
 - LegacyMIDICCOut::Plug
 
 ## mda Plug-ins
@@ -157,7 +164,7 @@ Classes:
 ## Note Expression Synth
 
 - Instrument Plug-in supporting [note expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) events
-- It shows how easy it is to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md)
+- It shows how easy it is to use [**VSTGUI**](VSTGUI.md)
 - a **AUv3** version is available
 
 ![what_if_4](../../resources/what_is_4.jpg)
@@ -173,14 +180,14 @@ Classes:
 ## Note Expression Text
 
 - Plug-in visualizing the NoteExpression as Text
-- It shows how easy it is to use [**VSTGUI4**](../What+is+the+VST+3+SDK/VSTGUI.md)
+- It shows how easy it is to use [**VSTGUI4**](VSTGUI.md)
 
 Check the folder *"public.sdk/samples/vst/note_expression_text"* of the SDK!
 
 ## Panner
 
 - Simple Panner Plug-in showing how to support Panner category (mono to Stereo)
-- It shows how easy it is to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md)
+- It shows how easy it is to use [**VSTGUI**](VSTGUI.md)
 
 ![what_if_3](../../resources/what_is_3.jpg)
 
@@ -194,7 +201,7 @@ Classes:
 ## PitchNames
 
 - Instrument Plug-in showing PitchNames support
-- It shows how easy it is to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md)
+- It shows how easy it is to use [**VSTGUI**](VSTGUI.md)
 
 ![what_if_12](../../resources/what_is_12.jpg)
 
@@ -206,7 +213,7 @@ Classes:
 - PitchNamesProcessor
 - PitchNamesDataBrowserSource
 
-## TestPrefetchableSupport
+## Test Prefetchable Support
 
 Very simple Plug-in:
 - showing how to use the [Steinberg::Vst::IPrefetchableSupport](../Technical+Documentation/Change+History/3.6.5/IPrefetchableSupport.md) interface
@@ -216,7 +223,14 @@ Very simple Plug-in:
 
 Check the folder *"public.sdk/samples/vst/prefetchablesupport"* of the SDK!
 
-## TestProgramChange
+## Test Multiple Program Changes
+
+Very simple Plug-in:
+
+- showing how to support multiple ProgramChange parameters: 16 slots with one associated program change parameter and a program list for each slot.
+- using a generic UI
+
+## Test Program Change
 
 Very simple Plug-in:
 

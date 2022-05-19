@@ -1,4 +1,4 @@
->/ [VST Home](../../index.md) / [Technical Documentation](../Index.md)
+>/ [VST Home](../../) / [Technical Documentation](../Index.md)
 >
 ># VST Module Architecture
 
@@ -8,9 +8,9 @@
 
 **Related pages:**
 
-- [How the host will load a VST-MA based Plug-in](../VST+Module+Architecture/Loading.md)
-- [How to derive a class from an interface](../VST+Module+Architecture/Derive+From+Interface.md)
-- [Interface Versions and Inheritance](../VST+Module+Architecture/Interface+Versions+and+Inheritance.md)
+- [How the host will load a VST-MA based Plug-in](Loading.md)
+- [How to derive a class from an interface](Derive+From+Interface.md)
+- [Interface Versions and Inheritance](Interface+Versions+and+Inheritance.md)
 - [VST 3 API Documentation](../API+Documentation/Index.md)
 
 ---
@@ -61,7 +61,7 @@ A new version inherits the old version(s) of the interface, so the old and the n
 
 >- ISpecialInterface [**extends** IBaseInterface] => means IBaseInterface::queryInterface (ISpecialInterface::iid, ...) can be used to retrieve the derived interface.
 
-You can find some example code here: [Interface Versions and Inheritance](../VST+Module+Architecture/Interface+Versions+and+Inheritance.md).
+You can find some example code here: [Interface Versions and Inheritance](Interface+Versions+and+Inheritance.md).
 
 ### COM Compatibility
 
@@ -80,7 +80,7 @@ Helper Classes
 - [Steinberg::FUID](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUID.html)
 - [Steinberg::FUnknownPtr](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUnknownPtr.html)
 
-See also "[How to derive a class from an interface](../VST+Module+Architecture/Derive+From+Interface.md)".
+See also "[How to derive a class from an interface](Derive+From+Interface.md)".
 
 ## Plug-ins
 
@@ -90,8 +90,8 @@ A module (Windows: Dynamic Link Library, MAC: Mach-O Bundle, Linux: package) con
 The host has access to this factory through the [Steinberg::IPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory.html) interface. This is the anchor point for the module and it is realized as a C-style export function named [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330). You can find an export definition file in the SDK - *public.sdk/source/main/winexport.def*  (*public.sdk/source/main/macexport.exp*) which can be used to export this function or you could use the macro SMTG_EXPORT_SYMBOL directly in cpp file (check *public.sdk/source/main/dllmain.cpp* for example).\
 [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330) is declared as follows:
 
-```
-SMTG_EXPORT_SYMBOL IPluginFactory* PLUGIN_APIGetPluginFactory ();
+``` c++
+SMTG_EXPORT_SYMBOL IPluginFactory* PLUGIN_API GetPluginFactory ();
 ```
 
 In addition to the **GetPluginFactory** function the plug-in may has to export additional **entry/exit** functions depending on the platform:
@@ -129,7 +129,7 @@ Here an example when using def/exp files instead of SMTG_EXPORT_SYMBOL:
 
 **winexport.def file on Windows**
 
-```
+``` c
 EXPORTS
 GetPluginFactory
 InitDll
@@ -138,7 +138,7 @@ ExitDll
 
 **macexport.exp file on mac**
 
-```
+``` c
 _GetPluginFactory
 _bundleEntry
 _bundleExit
@@ -165,9 +165,9 @@ A class is also described with a name and it has a unique id.
 
 ### IPluginBase
 
-The entry-point interface for any component class is [Steinberg::IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html). The host uses this interface to initialize and to terminate the Plug-in component. When the host initializes the Plug-in, it passes a so called context. This context contains any interface to the host that the Plug-in will need to work.
+The entry-point interface for any component class is [Steinberg::IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html). The host uses this interface to initialize and to terminate the Plug-in component. When the host initializes the Plug-in, it **has to pass** a so called context. This context contains any interface to the host that the Plug-in will need to work.
 
-Purpose-specific interfaces
+### Purpose-specific interfaces
 
 Each plug-in category (VST 3 Effects, Project import/export Filters, Audio Codecs, etc...) defines its own set of purpose-specific interfaces. These are not part of the basic **VST-MA** layer.
 

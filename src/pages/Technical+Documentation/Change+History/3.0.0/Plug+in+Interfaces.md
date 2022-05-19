@@ -1,4 +1,4 @@
->/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
 ># [3.0.0] Interfaces supported by the plug-in
 
@@ -8,7 +8,7 @@
 
 **Related pages**
 
-- [(3.0.0) Interfaces supported by the host](../Change+History/3.0.0/Host+Interfaces.md)
+- [(3.0.0) Interfaces supported by the host](Host+Interfaces.md)
 
 ---
 

@@ -1,4 +1,4 @@
->[VST Home](../index.md) / [What is VST?](../What+is+VST/Index.md)
+>[VST Home](../) / [What is VST?](Index.md)
 >
 ># Use cases
 
@@ -39,40 +39,40 @@ By using **VST 3 SDK** directly:
   - see [other benefits of VST 3](../Main+benefits+of+VST+3/Index.md)
 - you get optimal integration of the **[VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md)** tool with **VST 3**
 - it includes the major plug-in format wrappers: AAX, AUv3, AU, VST 2 (deprecated)
-- the included [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line) allows you to check your plug-in's conformity to the VST 3 standard
+- the included [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line) allows you to check your plug-in's conformity to the **VST 3** standard
 
 ## Examples of VST 3 host applications
 
-
-| **Name** | **Companies** | **Link** |
-| -------- | ------------- | -------- |
-| Cubase | Steinberg Media Technologies | <https://new.steinberg.net/cubase> |
-| Nuendo | Steinberg Media Technologies	| <https://new.steinberg.net/nuendo> |
-| Wavelab | Steinberg Media Technologies | <https://new.steinberg.net/wavelab> |
-| Dorico | Steinberg Media Technologies | <https://new.steinberg.net/dorico> |
-| SpectraLayers	| Steinberg Media Technologies | <https://www.steinberg.net/spectralayers> |
-| Live | Ableton AG | <https://www.ableton.com/en/live> |
-| Audition	| Adobe	| <https://www.adobe.com> |
-| Sonar	| Bandlab/Cakewalk | <https://www.bandlab.com/products/cakewalk> |
-| Bitwig | Bitwig GmbH | <https://www.bitwig.com> |
-| Max | Cycling 74 | <https://cycling74.com> |
-| FL Studio	| ImageLine | <https://www.image-line.com> |
-| ACID Pro | MAGIX Software GmbH | <https://www.magix.com> |
-| Music Maker Plus	| MAGIX Software GmbH | <https://www.magix.com> |
-| Samplitude | MAGIX Software GmbH | <https://www.magix.com> |
-| SOUND FORGE Audio Studio	| MAGIX Software GmbH | <https://www.magix.com> |
-| Digital Performer	| MOTU | <https://motu.com/en-us/products/software/dp> |
-| Bidule | Plogue Art et Technologie, Inc. | <https://www.plogue.com> |
-| Studio One | PreSonus Software Ltd | <https://www.presonus.com/products/Studio-One> |
-| Reaper | Reaper | <https://www.reaper.fm> |
-| Waveform | Tracktion Software Corporation	| <https://www.tracktion.com> |
-| Gig Performer	| Deskew Technologies | <https://gigperformer.com> |
-| Camelot | Audio Modeling | <https://audiomodeling.com> |
-| deCoda | zplane | <https://products.zplane.de/products/decoda> |
-| Acoustica	| Acon Digital | <https://acondigital.com> |
-| Mixcraft | Acoustica | <https://acoustica.com> |
-| Overture | Sonic Scores | <https://sonicscores.com> |
-| Soundop | Ivosight Software Inc. | <https://ivosight.com> |
-| TS2 | Ircam Lab | <https://www.ircamlab.com> |
-| Cross DJ | MixVibes | <https://www.mixvibes.com> |
-| VST Rack Pro | Yamaha Corporation | |
+| **Name**                | **Companies**                   | **Link**                                      |
+| ----------------------- | ------------------------------- | --------------------------------------------- |
+| Cubase                  | Steinberg Media Technologies    | <https://new.steinberg.net/cubase>            |
+| Nuendo                  | Steinberg Media Technologies	  | <https://new.steinberg.net/nuendo>            |
+| Wavelab                 | Steinberg Media Technologies    | <https://new.steinberg.net/wavelab>           |
+| Dorico                  | Steinberg Media Technologies    | <https://new.steinberg.net/dorico>            |
+| SpectraLayers           | Steinberg Media Technologies    | <https://www.steinberg.net/spectralayers>     |
+| Live                    | Ableton AG                      | <https://www.ableton.com/en/live>             |
+| Audition                | Adobe                        	  | <https://www.adobe.com>                       |
+| Sonar                   | Bandlab/Cakewalk                | <https://www.bandlab.com/products/cakewalk>   |
+| Bitwig                  | Bitwig GmbH                     | <https://www.bitwig.com>                      |
+| Max                     | Cycling 74                      | <https://cycling74.com>                       |
+| FL Studio	              | ImageLine                       | <https://www.image-line.com>                  |
+| ACID Pro                | MAGIX Software GmbH             | <https://www.magix.com>                       |
+| Music Maker Plus        | MAGIX Software GmbH             | <https://www.magix.com>                       |
+| Samplitude              | MAGIX Software GmbH             | <https://www.magix.com>                       |
+| SOUND FORGE Audio Studio| MAGIX Software GmbH             | <https://www.magix.com>                       |
+| Digital Performer	      | MOTU                            | <https://motu.com/en-us/products/software/dp> |
+| Bidule                  | Plogue Art et Technologie, Inc. | <https://www.plogue.com>                      |
+| Studio One              | PreSonus Software Ltd           | <https://www.presonus.com/products/Studio-One>|
+| Reaper                  | Reaper                          | <https://www.reaper.fm>                       |
+| Waveform                | Tracktion Software Corporation  | <https://www.tracktion.com>                   |
+| Gig Performer           | Deskew Technologies             | <https://gigperformer.com>                    |
+| Camelot                 | Audio Modeling                  | <https://audiomodeling.com>                   |
+| deCoda                  | zplane                          | <https://products.zplane.de/products/decoda>  |
+| Acoustica	              | Acon Digital                    | <https://acondigital.com>                     |
+| Mixcraft                | Acoustica                       | <https://acoustica.com>                       |
+| Overture                | Sonic Scores                    | <https://sonicscores.com>                     |
+| Soundop                 | Ivosight Software Inc.          | <https://ivosight.com>                        |
+| TS2                     | Ircam Lab                       | <https://www.ircamlab.com>                    |
+| Cross DJ                | MixVibes                        | <https://www.mixvibes.com>                    |
+| VST Rack Pro            | Yamaha Corporation              | <https://europe.yamaha.com/en/products/proaudio/software/vst_rack/index.html>|
+| DaVinci Resolve         | Blackmagic Design               | <https://www.blackmagicdesign.com/products/davinciresolve>|

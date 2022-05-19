@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [VST 3 Licensing](../VST+3+Licensing/Index.md)
+>/ [VST Home](../) / [VST 3 Licensing](Index.md)
 >
 ># Steinberg VST usage guidelines
 
@@ -8,9 +8,9 @@
 
 **Related pages:**
 
-- [VST 3 Licensing](../VST+3+Licensing/Index.md)
-- [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)
-- [Developer use cases (FAQs)](../VST+3+Licensing/Developer+use+cases.md)
+- [VST 3 Licensing](Index.md)
+- [What are the licensing options for VST 3?](What+are+the+licensing+options.md)
+- [Developer use cases (FAQs)](Developer+use+cases.md)
 
 ---
 
@@ -114,4 +114,4 @@ Attribution:
 
 ## 16. Questions and suggestions
 
-Questions and suggestions regarding this guide can be sent to <reception@steinberg.de>
+Questions and suggestions regarding this guide can be sent to [reception@steinberg.de](mailto:reception@steinberg.de)

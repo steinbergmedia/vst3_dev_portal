@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+>/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
 >
 ># VST 3 Plug-in Test Host
 
@@ -8,14 +8,16 @@
 
 **Related pages:**
 
-- [VST 3 Plug-in Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md)
+- [VST 3 Plug-in Examples](Plug-in+Examples.md)
 
 ---
 
 ## Introduction
 
-The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (i386/x86_64) and Microsoft Windows (32bits, 64bits).\
-This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.\
+The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (x86_64/Apple M1) and Microsoft Windows (64bits).
+
+This application allows you to load a plug-in, simulates some inputs (Audio and Event) and acts like a small **VST 3** host application based on an **ASIO** driver.
+
 Included in this application is a test module which allows you to check your plug-in in regard to the **VST 3** standard.
 
 ![what_if_15](../../resources/what_is_15.jpg)
@@ -131,4 +133,4 @@ In this version of this Plug-in Test Host, the tests are limited to the main **V
 
 ![what_if_23](../../resources/what_is_23.jpg)
 
-With this editor you can load and modify VST 3 presets created with the **Store** button of the VST Rack by adding some meta-attributes.
+With this editor you can load and modify **VST 3** presets created with the **Store** button of the VST Rack by adding some meta-attributes.

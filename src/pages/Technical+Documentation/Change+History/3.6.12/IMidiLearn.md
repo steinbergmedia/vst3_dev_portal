@@ -1,4 +1,4 @@
->/ [VST Home](../../../index.md) / [Technical Documentation](../../Index.md)
+>/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
 ># [3.6.12] MIDI Learn
 
@@ -21,7 +21,7 @@ MIDI Learn Interface: [Vst::IMidiLearn](https://steinbergmedia.github.io/vst3_do
 - [released: 3.6.12]
 - [optional]
 
-If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI-CC input for the plug-in.This way, the plug-in can change its MIDI-CC parameter mapping and inform the host via the [IComponentHandler::restartComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6) with the [kMidiCCAssignmentChanged](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a17867782006f9fdb2b72c16b0420bed5ae2e3ed4527f88e577a2aeb595bd853fd) flag. Use this if you want to implement custom MIDI-Learn functionality in your plug-in.
+If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI-CC input for the plug-in. This way, the plug-in can change its MIDI-CC parameter mapping and inform the host via the [IComponentHandler::restartComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6) with the [kMidiCCAssignmentChanged](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a17867782006f9fdb2b72c16b0420bed5ae2e3ed4527f88e577a2aeb595bd853fd) flag. Use this if you want to implement custom MIDI-Learn functionality in your plug-in.
 
 ## Example
 

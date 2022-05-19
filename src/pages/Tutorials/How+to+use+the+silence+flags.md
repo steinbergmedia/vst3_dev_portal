@@ -1,4 +1,4 @@
->/ [VST Home](../index.md) / [Tutorials](../Tutorials/Index.md)
+>/ [VST Home](../) / [Tutorials](Index.md)
 >
 ># How to use the silence flags
 
@@ -9,6 +9,8 @@
 ---
 
 This tutorial explains how to use silence flags.
+
+---
 
 ## What about Silence flags?
 
@@ -21,7 +23,7 @@ The silence flags is part of the [AudioBusBuffers](https://steinbergmedia.github
 ## Plug-in receives a silent audio input
 
 ``` c++
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
     //...
@@ -59,7 +61,7 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
 ## Plug-in generates silent output
 
 ``` c++
-/-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 tresult PLUGIN_API AGain::process (ProcessData& data)
 {
     //...
