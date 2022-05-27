@@ -143,8 +143,8 @@ int32 numChannels = data.inputs[0].numChannels;
 
 //---get audio buffers using helper-functions(vstaudioprocessoralgo.h)-------------
 uint32 sampleFramesSize = getSampleFramesSizeInBytes(processSetup, data.numSamples);
-void** in = getChannelBuffersPointer (processSetup, datainputs[0]);
-void** out = getChannelBuffersPointer (processSetup, dataoutputs[0]);
+void** in = getChannelBuffersPointer (processSetup, data.inputs[0]);
+void** out = getChannelBuffersPointer (processSetup, data.outputs[0]);
 
 // Here could check the silent flags
 // now we will produce the output
