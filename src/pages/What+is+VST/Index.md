@@ -9,8 +9,8 @@
 **Related pages:**
 
 - [Use cases](../What+is+VST/Use+cases.md)
-- [Main benefits of VST 3](../Main+benefits+of+VST+3/index.md)
-- [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/index.md)
+- [Main benefits of VST 3](../Main+benefits+of+VST+3/Index.md)
+- [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
 
 ---
 
