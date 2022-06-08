@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [Main benefits of VST 3](../Main+benefits+of+VST+3/index.md)
+- [Main benefits of VST 3](../Main+benefits+of+VST+3/Index.md)
 
 ---
 
