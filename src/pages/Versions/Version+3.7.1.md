@@ -27,7 +27,7 @@
   - New links in help menu
   - New enable MPE Support
   - Dark-Light scheme Support
-  - Fix "Valid State Transition" test always fails a 64-bit-only plugin #50
+  - Fix "Valid State Transition" test always fails a 64-bit-only plug-in #50
   - Fix automation unit test
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2020.10:
   - New support of [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md)

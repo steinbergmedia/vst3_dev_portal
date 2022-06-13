@@ -393,7 +393,7 @@ void MyEffect::process (ProcessData& data)
 
 The *accessTransferObject_rt* function will check if there is a new model state and will call the lambda if it is and then we can set our *gainParameter* to the value of *stateModel.gain*.
 
-To free up the memory in the *stateTransfer* object we have to call the *clear_ui* method of it. In this case where we only have one double as state model it is OK to hold onto it until the next state is set or the effect is terminated. So we just add it to the *terminate* method of the plugin:
+To free up the memory in the *stateTransfer* object we have to call the *clear_ui* method of it. In this case where we only have one double as state model it is OK to hold onto it until the next state is set or the effect is terminated. So we just add it to the *terminate* method of the plug-in:
 
 ``` c++
 tresult PLUGIN_API MyEffect::terminate ()
