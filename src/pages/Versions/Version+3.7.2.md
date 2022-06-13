@@ -38,7 +38,7 @@
     - Fix AUv2 with Xcode 12
 - [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 hosting example:
-    - [VST 3 Inspector app](../What+is+the+VST+3+SDK/Index.md): example showing how to parse the available VST 3 plugins factories, using VSTGUI.
+    - [VST 3 Inspector app](../What+is+the+VST+3+SDK/Index.md): example showing how to parse the available VST 3 plug-ins factories, using VSTGUI.
   - C++14 minimum requirements for validator, audiohost, editorhost, Inspector app
 - Helpers classes:
   - New file handling module initialization: public.sdk\source\main\moduleinit.cpp, public.sdk\source\main\moduleinit.h
@@ -47,7 +47,7 @@
   - Fix some Validation tests: SliceProcessingTest,ValidStateTransitionTest.
   - Fix module_linux.cpp building in C++20 mode
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.1.0:
-  - New context menu entry for instantiated plugin: "Export Presets Parameters as XML" which allows to load automatically VST 3 presets and export them as XML files.
+  - New context menu entry for instantiated plug-in: "Export Presets Parameters as XML" which allows to load automatically VST 3 presets and export them as XML files.
 - [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2021.03:
   - This project is now open source on <https://github.com/steinbergmedia/vst3projectgenerator>
   - Universal binary for macOS (Intel/M1)
