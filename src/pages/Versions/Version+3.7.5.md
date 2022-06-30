@@ -27,7 +27,7 @@
       - **k72_3** => L R C LFE Ls Rs Sl Sr Tsl Tsr Trc LFE2
 - Documentation
   - New tutorial explaining [How to use the silence flags](../Tutorials/how+to+use+the+silence+flags.md).
-  - Move VST3 documentation to md files.
+  - Move VST 3 documentation to md files.
 - cmake
   - Minimum cmake version is now 3.19.
   - New function *smtg_target_setup_as_vst3_example*.

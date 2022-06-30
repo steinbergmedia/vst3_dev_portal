@@ -14,8 +14,13 @@
 - Documentation
 
 - cmake
-  - new file *SMTG_AddVST3AuV2.cmake*: Review AU Objective-C Namespace handling
-  
+  - new file *SMTG_AddVST3AuV2.cmake*:
+    - Allowing to add AUv2 target to a VST 3 plug-in
+    - Review AU Objective-C Namespace handling
+  - Add check if **PROJECT_VERSION** is set in *project()*, if not then FATAL_ERROR.
+  - Display error text when Spaces in Xcode path which is not supported by cmake.
+  - New function *smtg_check_language_cxx* in *SMTG_DetectPlatform.cmake* allowing to check if C++ compiler is available.
+
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
     - Rework AUWrapper Objective-C code  
