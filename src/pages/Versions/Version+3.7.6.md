@@ -5,7 +5,7 @@
 ## Version 3.7.6 (2022/08/??)
 
 - Interface changes:
-  - new [architecture folder for Windows Arm64EC](../Technical+Documentation/Locations+Format/Plugin+Format.html#for-the-windows-platform)
+  - new [architecture folder for Windows Arm64EC and Arm64 Classic](../Technical+Documentation/Locations+Format/Plugin+Format.html#for-the-windows-platform)
   
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) 4.??
   
