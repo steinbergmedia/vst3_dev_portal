@@ -27,7 +27,7 @@ A **VST 3** Plug-in should be installed at specific folder location, the followi
 
 - **User**: available only for the current logged user
 - **Global**: available for all users of the system
-- **Application**: available only inside an specific Audio Application (local Plug-ins)
+- **Application**: available only inside a specific Audio Application (local Plug-ins)
 
 >ⓘ **Note**\
 >The host should scan at first higher level of priority, first found Plug-in (for a given Processor UID) has to be used.
@@ -52,13 +52,29 @@ On the Windows platform, the host application expects **VST 3 Plug-ins** to be l
 
 | Prio  | Location      | Path                                          | Comment   |
 | :-    | :-            | :-                                            | :-        |
-| 1     | User          | %LOCALAPPDATA%/Programs/Common/VST3/          | FOLDERID_UserProgramFilesCommon native bitdepth:<br> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS<br> Mainly used for development use case. |
-| 2     | Global         | /Program Files/Common Files/VST3/            | FOLDERID_ProgramFilesCommon native bitdepth:<br> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS |
+| 1     | User          | %LOCALAPPDATA%/Programs/Common/VST3/          | FOLDERID_UserProgramFilesCommon native bitdepth:<br> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS<br> Mainly used for development use case. <br> example: C:\Users\MyUserName\AppData\Local\Programs\Common\VST3 |
+| 2     | Global        | /Program Files/Common Files/VST3/             | FOLDERID_ProgramFilesCommon native bitdepth:<br> • 32bit Plug-in on 32bit OS,<br> • 64bit on 64bit OS |
 | 2     | Global        | /Program Files (x86)/Common Files/VST3/       | 32bit Plug-ins on 64bit Windows |
 | 3     | Application   | $APPFOLDER/VST3/                              | |
 
 >ⓘ **Note**\
 >The host recursively scans these folders at startup in this order (Global/Application).
+
+#### Limitation for loading Plug-in DLL in a Host (inside the same process)
+
+See [Microsoft Blogs about this](https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/):
+
+| OS            | PC Architecture   | Host Process App	| Compatible Plug-in Architectures  |
+| :-            | :-                | :-                | :-                                |
+| Windows 10    | Intel x86         | Intel x86         | Intel x86                         |
+| Windows 10/11	| Intel x64	        | Intel x64	        | Intel x64*                        |
+| Windows 10/11	| Intel x64	        | Intel x86	        | Intel x86                         |
+| Windows 10/11	| Arm64	            | Arm64 Classic     | Arm64 Classic                     |
+| Windows 11	| Arm64	            | Arm64EC	        | Arm64EC, Intel x64                |
+| Windows 11	| Arm64	            | Intel x64	        | Arm64EC, Intel x64                |
+
+ >ⓘ **Note**\
+ With out of process (Inter-Process Commnunication) a Host could overriden these limitations, by allowing for example a Host Arm64 Classic to handle an Arm64EC Plug-in.
 
 ### On Linux platform
 
