@@ -47,8 +47,8 @@
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add test for *IPluginCompatibility* interface
 - Helpers classes:
-  - New file in public.sdk/samples/vst-utilities for moduleinfo support.
-  - New files in public.sdk/source/vst/moduleinfo for creating and parsing moduleinfo.
+  - New file in *public.sdk/samples/vst-utilities* for moduleinfo support.
+  - New files in *public.sdk/source/vst/moduleinfo* for creating and parsing moduleinfo.
   - Fix https://github.com/steinbergmedia/vst3_public_sdk/issues/37
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.3.0:
   - The 32bits version of plugintesthost is not availble anymore.
