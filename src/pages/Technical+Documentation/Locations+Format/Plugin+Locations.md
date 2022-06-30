@@ -74,7 +74,7 @@ See [Microsoft Blogs about this](https://devblogs.microsoft.com/windows-music-de
 | Windows 11	| Arm64	            | Intel x64	        | Arm64EC, Intel x64                |
 
  >ⓘ **Note**\
- With out of process (Inter-Process Commnunication) a Host could overriden these limitations, by allowing for example a Host Arm64 Classic to handle a Arm64EC Plug-in.
+ With out of process (Inter-Process Commnunication) a Host could overriden these limitations, by allowing for example a Host Arm64 Classic to handle an Arm64EC Plug-in.
 
 ### On Linux platform
 
