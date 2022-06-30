@@ -60,6 +60,22 @@ On the Windows platform, the host application expects **VST 3 Plug-ins** to be l
 >ⓘ **Note**\
 >The host recursively scans these folders at startup in this order (Global/Application).
 
+#### Limitation for loading Plug-in DLL in a Host (inside the same process)
+
+See [Microsoft Blogs about this](https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/):
+
+| OS            | PC Architecture   | Host Process App	| Compatible Plug-in Architectures  |
+| :-            | :-                | :-                | :-                                |
+| Windows 10    | Intel x86         | Intel x86         | Intel x86                         |
+| Windows 10/11	| Intel x64	        | Intel x64	        | Intel x64*                        |
+| Windows 10/11	| Intel x64	        | Intel x86	        | Intel x86                         |
+| Windows 10/11	| Arm64	            | Arm64 Classic     | Arm64 Classic                     |
+| Windows 11	| Arm64	            | Arm64EC	        | Arm64EC, Intel x64                |
+| Windows 11	| Arm64	            | Intel x64	        | Arm64EC, Intel x64                |
+
+ >ⓘ **Note**\
+ With out of process (Inter-Process Commnunication) a Host could overriden these limitations, by allowing for example a Host Arm64 Classic to handle a Arm64EC Plug-in.
+
 ### On Linux platform
 
 On the Linux platform, the host application expects **VST 3 Plug-ins** to be located in:
