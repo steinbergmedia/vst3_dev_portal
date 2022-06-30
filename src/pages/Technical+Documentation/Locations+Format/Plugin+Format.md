@@ -29,16 +29,17 @@ On the macOS platform, **VST 3 Plug-in** is a standard macOS bundle, its file ex
 
 On the Windows platform, a **VST 3 Plug-in** is organized as a bundle like package format (simple folder), its file extension is "**.vst3**" and has the following folder structure:
 
-| Folder                                          | Description                  |
-| :-                                              | :-                           |
-| MyPlugin.vst3/Contents/Resources/               | folder contains all additional resource files useful for the plug-in |
-| MyPlugin.vst3/Contents/x86-win/MyPlugin.vst3    | folder contains the plug-in binary (32 bit dll for the i386 architecture) |
-| MyPlugin.vst3/Contents/x86_64-win/MyPlugin.vst3 | folder contains the plug-in binary (64 bit dll for the x86_64 architecture) |
-| MyPlugin.vst3/Contents/arm-win/MyPlugin.vst3    | Proposal: folder contains the plug-in binary (32 bit dll for the arm architecture) |
-| MyPlugin.vst3/Contents/arm_64-win/MyPlugin.vst3 | Proposal: folder contains the plug-in binary (64 bit dll for the arm64 architecture) |
-| MyPlugin.vst3/Contents/moduleinfo.json          | the plug-in’s moduleinfo |
-| MyPlugin.vst3/desktop.ini                       | used to set custom icon in Windows Explorer |
-| MyPlugin.vst3/Plugin.ico                        | customized plug-in icon |
+| Folder                                             | Description                  |
+| :-                                                 | :-                           |
+| MyPlugin.vst3/Contents/Resources/                  | folder contains all additional resource files useful for the plug-in |
+| MyPlugin.vst3/Contents/x86-win/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for i386 architecture) |
+| MyPlugin.vst3/Contents/x86_64-win/MyPlugin.vst3    | folder contains the plug-in binary (64 bit dll for x86_64 architecture) |
+| MyPlugin.vst3/Contents/arm_64_ec-win/MyPlugin.vst3 | folder contains the plug-in binary (64 bit dll for Arm64EC architecture) |
+| MyPlugin.vst3/Contents/arm-win/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for Arm classic architecture) |
+| MyPlugin.vst3/Contents/arm_64-win/MyPlugin.vst3    | folder contains the plug-in binary (64 bit dll for Arm64 classic architecture) |
+| MyPlugin.vst3/Contents/moduleinfo.json             | the plug-in’s moduleinfo |
+| MyPlugin.vst3/desktop.ini                          | used to set custom icon in Windows Explorer |
+| MyPlugin.vst3/Plugin.ico                           | customized plug-in icon |
 
 >ⓘ **Note**\
 >In previous SDKs, the **VST 3 Plug-in** was defined as a single dll file with the **.vst3** extension. This is deprecated since VST 3.6.10.
@@ -111,10 +112,10 @@ MyPlugin.vst3/
     |   |__ MacOS/
     |   |   |__ MyPlugin
     |   |
-    |   |__ x86-win/
+    |   |__ x86_64-win/
     |   |   |__ MyPlugin.vst3
     |   |
-    |   |__ x86_64-win/
+    |   |__ arm_64_ec-win/
     |   |   |__ MyPlugin.vst3
     |   |
     |   |__ moduleinfo.json
