@@ -13,7 +13,7 @@ A new [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture
 - [plug imp]
 - [released: 3.7.5]
 
-## moduleinfo.json
+## Plug-in’s module info file: moduleinfo.json
 
 Check [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) for more information about the content of this file.
 

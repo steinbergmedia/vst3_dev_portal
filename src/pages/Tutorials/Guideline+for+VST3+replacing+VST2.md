@@ -34,3 +34,12 @@ in *pluginterfaces/base/iplugincompatibility.h* to use when a [moduleinfo.json](
 ## Preset/Project compatibility VST2 => VST3
 
 Check the FAQ [here](../FAQ/Compatibility+with+VST+2.x+or+VST+1.md#q-how-can-i-support-projects-which-were-saved-with-the-vst-2-version-of-my-plug-in) which shows how to use the helper function **VST3::tryVst2StateLoad** and read a VST2 state into a VST3 Plug-in.
+
+It is possible to write back for VST2 backward compatibility by using the helper function**VST3::writeVst2State** (*public.sdk/source/vst/utility/vst2persistence.h*).
+
+## Parameters compatibility
+
+VST2 was using index to identify parameter, VST3 uses an ID. It means that to be compatible the VST3 parameter ID should be kept to same index value than the VST2 one (starting from 0).
+If the parameter range or behavior is not changed, previously parameter automation in host should be played back correctly.
+
+If you change the meaning of a parameter, it is recommanded to create a new ID for this parameter.
