@@ -35,7 +35,7 @@ Check the folder *"public.sdk/samples/vst"* of the SDK!
 
 ## ADelay
 
-Very simple delay Plug-in:
+Very simple delay plug-in:
 
 - only one parameter (a delay)
 
@@ -48,7 +48,7 @@ Classes:
 
 ## AGain
 
-The SDK includes an AGain Plug-in which is a very simple **VST 3 Plug-in**. This Plug-in:
+The SDK includes an AGain plug-in which is a very simple **VST 3 Plug-in**. This plug-in:
 
 - is multichannel compatible
 - supports bypass processing
@@ -56,7 +56,7 @@ The SDK includes an AGain Plug-in which is a very simple **VST 3 Plug-in**. This
 - has an Event input bus (allowing to use noteOn velocity to control the gain factor)
 - has a VU peak meter
 - uses the [**VSTGUI4**](VSTGUI.md) library
-- a version of this Plug-in with side-chaining is available (showing a Plug-in using the same controller and different - components)
+- a version of this plug-in with side-chaining is available (showing a plug-in using the same controller and different - components)
 - a **AAX** version is available
 - a **AUv3** version is available
 
@@ -72,13 +72,13 @@ Classes:
 
 AGain Sample Accurate
 
-Simple Plug-in showing how to achieve sample accurate processing.
+Simple plug-in showing how to achieve sample accurate processing.
 
 Based Check the folder *"public.sdk/samples/vst/again_sampleaccurate"* of the SDK!
 
 ## TestChannelContext
 
-Very simple Plug-in:
+Very simple plug-in:
 
 - showing how to use the [Steinberg::Vst::ChannelContext::IInfoListener](../Technical+Documentation/Change+History/3.6.5/IInfoListener.md) interface
 - using a generic UI
@@ -89,7 +89,7 @@ Check the folder *"public.sdk/samples/vst/channelcontext"* of the SDK!
 
 ## HostChecker
 
-- Instrument, Panner and Fx Plug-in checking the **VST 3** support of a host.
+- Instrument, Panner and Fx plug-in checking the **VST 3** support of a host.
 - It uses [**VSTGUI**](VSTGUI.md)
 - a **AAX** version is available
 
@@ -99,7 +99,7 @@ Check the folder *"public.sdk/samples/vst/hostchecker"* of the SDK!
 
 ## TestLegacyMIDICCOut
 
-Very simple Plug-in:
+Very simple plug-in:
 
 - showing how to use [LegacyMIDICCOutEvent](../Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.md) which allow to generate MIDI CC as output event
 - VST parameters change which creates [LegacyMIDICCOutEvent](../Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.md) Event
@@ -112,9 +112,9 @@ Classes:
 
 - LegacyMIDICCOut::Plug
 
-## mda Plug-ins
+## mda plug-ins
 
-- Effects (stereo to stereo Plug-ins):
+- Effects (stereo to stereo plug-ins):
   - Ambience : Reverb
   - Bandisto : Multi-band Distortion
   - BeatBox : Drum Replacer
@@ -148,10 +148,10 @@ Classes:
 - Instruments (1 Event input, 1 stereo Audio output):
   - DX10 : Sounds similar to the later Yamaha DX synths including the heavy bass but with a warmer, cleaner tone.
   - EPiano : Simple EPiano
-  - JX10 : The Plug-in is designed for high quality (lower aliasing than most soft synths) and low processor usage
+  - JX10 : The plug-in is designed for high quality (lower aliasing than most soft synths) and low processor usage
   - Piano : Not designed to be the best sounding piano in the world, but boasts extremely low CPU and memory usage.
 
-Based on the OpenSource mda Plug-ins (<http://mda.smartelectronix.com/>), this set of Plug-ins demonstrates how wrap DS- code in a **VST 3** Plug-in.
+Based on the OpenSource mda plug-ins (<http://mda.smartelectronix.com/>), this set of plug-ins demonstrates how wrap DS- code in a **VST 3** Plug-in.
 
 Check the folder *"public.sdk/samples/vst/mda-vst3"* of the SDK!
 
@@ -163,7 +163,7 @@ Classes:
 
 ## Note Expression Synth
 
-- Instrument Plug-in supporting [note expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) events
+- Instrument plug-in supporting [note expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) events
 - It shows how easy it is to use [**VSTGUI**](VSTGUI.md)
 - a **AUv3** version is available
 
@@ -186,7 +186,7 @@ Check the folder *"public.sdk/samples/vst/note_expression_text"* of the SDK!
 
 ## Panner
 
-- Simple Panner Plug-in showing how to support Panner category (mono to Stereo)
+- Simple Panner plug-in showing how to support Panner category (mono to Stereo)
 - It shows how easy it is to use [**VSTGUI**](VSTGUI.md)
 
 ![what_if_3](../../resources/what_is_3.jpg)
@@ -200,7 +200,7 @@ Classes:
 
 ## PitchNames
 
-- Instrument Plug-in showing PitchNames support
+- Instrument plug-in showing PitchNames support
 - It shows how easy it is to use [**VSTGUI**](VSTGUI.md)
 
 ![what_if_12](../../resources/what_is_12.jpg)
@@ -215,7 +215,7 @@ Classes:
 
 ## Test Prefetchable Support
 
-Very simple Plug-in:
+Very simple plug-in:
 - showing how to use the [Steinberg::Vst::IPrefetchableSupport](../Technical+Documentation/Change+History/3.6.5/IPrefetchableSupport.md) interface
 - using a generic UI
 
@@ -225,14 +225,14 @@ Check the folder *"public.sdk/samples/vst/prefetchablesupport"* of the SDK!
 
 ## Test Multiple Program Changes
 
-Very simple Plug-in:
+Very simple plug-in:
 
 - showing how to support multiple ProgramChange parameters: 16 slots with one associated program change parameter and a program list for each slot.
 - using a generic UI
 
 ## Test Program Change
 
-Very simple Plug-in:
+Very simple plug-in:
 
 - showing how to support Program List
 - using a generic UI
@@ -241,7 +241,7 @@ Very simple Plug-in:
 
 ## Sync Delay
 
-Very simple delay Plug-in:
+Very simple delay plug-in:
 - showing how to support [IProcessContextRequirements](../Technical+Documentation/Change+History/3.7.0/IProgress.md)
 
 Check the folder *"public.sdk/samples/vst/syncdelay"* of the SDK!

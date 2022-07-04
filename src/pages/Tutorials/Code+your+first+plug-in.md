@@ -14,7 +14,7 @@ The artifact will be an audio plug-in that can compute a gain to an audio signal
 
 ---
 
-## Part 1: Coding your Plug-in
+## Part 1: Coding your plug-in
 
 Now you have an automatically generated frame for your plug-in. The following sections explain how to add a new parameter, its associated processing algorithm, and other specific features like saving/loading project or presets, creating a dedicated user interface, etc.
 

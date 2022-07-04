@@ -39,6 +39,7 @@
   - [Use VSTGUI to design a User Interface](pages/Tutorials/Use+VSTGUI+to+design+a+UI.md)
   - [Advanced VST 3 techniques](pages/Tutorials/Advanced+VST+3+techniques.md)
   - [How to use the silence flags](pages/Tutorials/How+to+use+the+silence+flags.md)
+  - [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](pages/Tutorials/Guideline+for+VST3+replacing+VST2.md)
   - [Strings Conversion Helper](pages/Tutorials/Strings+Conversion+Helper.md)
   - [Creating a plug-in from the Helloworld template](pages/Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
 - [Technical Documentation](pages/Technical+Documentation/Index.md)

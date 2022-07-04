@@ -11,7 +11,7 @@
 
 The file extension has to be **.vstpreset**, for example: *myBestDefault.vstpreset*
 
-Specification of a **VST 3** Preset file:
+Specification of a **VST 3 Preset file**:
 
 ![tech_doc_21](../../../resources/tech_doc_21.jpg)
 

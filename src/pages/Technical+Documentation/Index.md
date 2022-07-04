@@ -86,7 +86,7 @@ Some useful graphical call sequences a **VST 3** compliant host should follow.
 
 ## [VST 3 Locations / Format](Locations+Format/Index.md)
 
-Formats definition of a **VST 3** Plug-in and its preset and where they are located on different platforms.
+Formats definition of a **VST 3 Plug-in** and its preset and where they are located on different platforms.
 
 ## [About MIDI in VST 3](About+MIDI/Index.md)
 

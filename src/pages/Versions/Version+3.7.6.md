@@ -12,7 +12,7 @@
 - New Flags/Enums:
 
 - Documentation
-
+  - new tutorial: [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](../Tutorials/Guideline+for+VST3+replacing+VST2.md)
 - cmake
   - new file *SMTG_AddVST3AuV2.cmake*:
     - Allowing to add AUv2 target to a VST 3 plug-in
