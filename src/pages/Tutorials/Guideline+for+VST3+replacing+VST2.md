@@ -31,11 +31,11 @@ The **Compatibility** json array in the *moduleinfo.json* allows to list the UID
 
 in *pluginterfaces/base/iplugincompatibility.h* to use when a [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file cannot be used. Check [here](../Technical+Documentation/Change+History/3.7.5/ModuleInfo.md).
 
-## Preset/Project compatibility VST2 => VST3
+## Preset/Project compatibility VST2 <-> VST3
 
 Check the FAQ [here](../FAQ/Compatibility+with+VST+2.x+or+VST+1.md#q-how-can-i-support-projects-which-were-saved-with-the-vst-2-version-of-my-plug-in) which shows how to use the helper function **VST3::tryVst2StateLoad** and read a VST2 state into a VST3 Plug-in.
 
-It is possible to write back for VST2 backward compatibility by using the helper function**VST3::writeVst2State** (*public.sdk/source/vst/utility/vst2persistence.h*).
+It is possible to write back for VST2 backward compatibility by using the helper function **VST3::writeVst2State** (*public.sdk/source/vst/utility/vst2persistence.h*).
 
 ## Parameters compatibility
 
