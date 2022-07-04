@@ -29,7 +29,7 @@ The **Compatibility** json array in the *moduleinfo.json* allows to list the UID
 
 ### Using the new interface *IPluginCompatibility* 
 
-in *pluginterfaces/base/iplugincompatibility.h* to use when a moduleinfo.json file cannot be used. Check [here](../Technical+Documentation/Change+History/3.7.5/ModuleInfo.md).
+in *pluginterfaces/base/iplugincompatibility.h* to use when a [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file cannot be used. Check [here](../Technical+Documentation/Change+History/3.7.5/ModuleInfo.md).
 
 ## Preset/Project compatibility VST2 => VST3
 

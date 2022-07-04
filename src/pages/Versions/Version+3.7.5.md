@@ -32,7 +32,7 @@
   - Minimum cmake version is now 3.19.
   - New function *smtg_target_setup_as_vst3_example*.
   - Change *smtg_target_set_bundle* for mac.
-  - New option: **SMTG_CREATE_MODULE_INFO**: Create the moduleinfo.json file (default ON).
+  - New option: **SMTG_CREATE_MODULE_INFO**: Create the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file (default ON).
   - use **VERSION** and **DESCRIPTION** with project() for generating automatically with cmake version file.
   - Change default to ON for SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON on Windows.
   - Fix https://github.com/steinbergmedia/vst3sdk/pull/91.

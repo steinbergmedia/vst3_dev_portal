@@ -212,4 +212,4 @@ To get accurate process context information ([Vst::ProcessContext](https://stein
 
 ## [(3.7.5) Module Info](Change+History/3.7.5/ModuleInfo.md)
 
-The moduleinfo.json describes the contents of the plug-in in a JSON5 compatible format.
+The [moduleinfo.json](VST+Module+Architecture/ModuleInfo-JSON.md) describes the contents of the plug-in in a JSON5 compatible format.

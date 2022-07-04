@@ -1,14 +1,14 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.7.5] Module Info and IPluginCompatibility
+># [3.7.5] Module Info and Plug-in Compatibility
 
 **On this page:**
 
-[[TOC]]
+[[_TOC_]]
 
 ## Introduction
 
-A new moduleinfo.json file added to the plug-in bundle describes the contents of the plug-in in a JSON5 compatible format. This includes a compatibility list which allows, for example, that a VST 3 plug-in could replace a given VST 2 plug-in.
+A new [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file added to the plug-in bundle describes the contents of the plug-in in a JSON5 compatible format. This includes a compatibility list which allows, for example, that a VST 3 plug-in could replace a given VST 2 plug-in.
 
 - [plug imp]
 - [released: 3.7.5]
@@ -19,7 +19,7 @@ Check [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture
 
 ## IPluginCompatibility
 
-If the plug-in could not deliver the moduleinfo.json because it does not support bundle, it is possible to add to the Plug-in factory this new interface *IPluginCompatibility*.
+If the plug-in could not deliver the [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) because it does not support bundle, it is possible to add to the plug-in factory this new interface *IPluginCompatibility*.
 ### Example
 
 **In plugentry.cpp**
@@ -67,7 +67,7 @@ BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb, stringCompanyEmail)
 				createCompatibilityInstance)
 ```
 
-**Example of host implementation**
+### Example of host implementation
 
 Check function **void Validator::testModule** in public.sdk/samples/vst-hosting/validator/source/validator.cpp
 
