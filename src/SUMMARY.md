@@ -66,6 +66,7 @@
     - [Preset Locations](pages/Technical+Documentation/Locations+Format/Preset+Locations.md)
     - [Snapshots](pages/Technical+Documentation/Locations+Format/Snapshots.md)
   - [About MIDI in VST 3](pages/Technical+Documentation/About+MIDI/Index.md)
+  - [Features History >>>>>>>>>>>>>>](pages/Technical+Documentation/Change+History/Index.md)
   - [[3.0.0] Interfaces supported by the plug-in](pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.md)
   - [[3.0.0] Multiple Dynamic I/O Support](pages/Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
   - [[3.0.0] Silence flags](pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.md)
