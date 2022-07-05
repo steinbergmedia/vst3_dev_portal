@@ -223,7 +223,7 @@ C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 162019" -S "C:/Users/YGra
 
 That´s it!
 
-You can contribute to this project on <https://github.com/steinbergmedia/vst3projectgenerator!>
+You can contribute to this project on <https://github.com/steinbergmedia/vst3projectgenerator>!
 
 ## VST3ProjectGenerator License
 
