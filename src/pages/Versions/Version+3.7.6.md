@@ -15,11 +15,11 @@
   - new tutorial: [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](../Tutorials/Guideline+for+VST3+replacing+VST2.md)
 - cmake
   - new file *SMTG_AddVST3AuV2.cmake*:
-    - Allowing to add AUv2 target to a VST 3 plug-in
+    - Allow adding AUv2 target to a VST 3 plug-in
     - Review AU Objective-C Namespace handling
   - Add check if **PROJECT_VERSION** is set in *project()*, if not then FATAL_ERROR.
   - Display error text when Spaces in Xcode path which is not supported by cmake.
-  - New function *smtg_check_language_cxx* in *SMTG_DetectPlatform.cmake* allowing to check if C++ compiler is available.
+  - New function *smtg_check_language_cxx* in *SMTG_DetectPlatform.cmake* allows checking if C++ compiler is available.
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
@@ -30,6 +30,7 @@
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
 
 - Helpers classes:
+  - Refactoring by using IPtr in *public.sdk/source/vst/vsteditcontroller.h* and *public.sdk/source/common/pluginview.h*
 
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.3.0:
 
