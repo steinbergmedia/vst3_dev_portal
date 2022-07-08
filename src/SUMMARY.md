@@ -131,5 +131,6 @@
   - [Persistence](pages/FAQ/Persistence.md)
   - [Miscellaneous](pages/FAQ/Miscellaneous.md)
   - [Licensing](pages/FAQ/Licensing.md)
+  - [Hosting](pages/FAQ/Hosting.md)
 - [VST 3 Forum](pages/Forum/Index.md)
 - [Miscellaneous](pages/Miscellaneous/Index.md)
