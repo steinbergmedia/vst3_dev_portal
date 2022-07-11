@@ -28,7 +28,7 @@ The source code is available at [GitHub - steinbergmedia/vst3projectgenerator: V
 
 The first time you start the application, you will ask to define 2 folders where are located the **VST SDK** and the **CMake** tool. It still possible to change these folders afterward in the *Preferences* Tab, see [Setting the Preferences](#setting-the-preferences).
 
-The ***Visit us***: menu includes some useful links.
+The ***Visit us*** menu includes some useful links.
 
 ### Locate CMake
 
@@ -52,8 +52,8 @@ If you do not have previously installed the **VST SDK**, you could download it, 
 
 You have 2 possibilities to download the **VST 3 SDK**:
 
-- **Commercial**: by clicking on it you will be redirect to the latest available SDK version to download, including all tools (check [What is the VST 3 SDK?](Index.md)), with this variant of the SDK you are able to create and commercialize your plug-ins (See [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)).
-- **Open Source**: by clicking on it you will be redirect to Steinberg **Github** where you will be able to clone the **VST 3 SDK**, this variant does not included all available tools (See [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)).
+- **Commercial**: by clicking on it you will be redirected to the latest available SDK version to download, including all tools (check [What is the VST 3 SDK?](Index.md)), with this variant of the SDK you are able to create and commercialize your plug-ins (See [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)).
+- **Open Source**: by clicking on it you will be redirected to Steinberg **Github** where you will be able to clone the **VST 3 SDK**, this variant does not include all available tools (See [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)).
 
 ### VST SDK and cmake successfully located
 
@@ -131,7 +131,7 @@ class AGainController : public EditControllerEx1
   - on macOS: **Xcode**
 - **CMake Platform**: you could here define which target platform should be used, i.e x64 or ARM64
 
-Once all information is setup, you could click on **Create**, a script will create and **CMake** will be used and the chosen IDE will be opened. In the bottom area the script output is displayed, you have the possibility to copy it by using the dedicated button: **Copy Script Output To Clipboard**.
+Once all information is set up, you could click on **Create**, a script will create and **CMake** will be used and the chosen IDE will be opened. In the bottom area the script output is displayed, you have the possibility to copy it by using the dedicated button: **Copy Script Output To Clipboard**.
 
 **Example of script Output**
 
@@ -223,11 +223,11 @@ C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 162019" -S "C:/Users/YGra
 
 That´s it!
 
-You can contribute to this project on <https://github.com/steinbergmedia/vst3projectgenerator!>
+You can contribute to this project on <https://github.com/steinbergmedia/vst3projectgenerator>!
 
 ## VST3ProjectGenerator License
 
-```
+``` text
 BSD style
 
 VST3ProjectGenerator LICENSE
