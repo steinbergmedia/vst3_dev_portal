@@ -52,6 +52,10 @@ In this tutorial you will learn:
 
 This tutorial explains how to use silence flags.
 
+## [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](Guideline+for+VST3+replacing+VST2.md)
+
+This tutorial explains how to create a **VST 3** plug-in that replaces an old **VST 2** plug-in.
+
 ## [Strings Conversion Helper](Strings+Conversion+Helper.md)
 
 The SDK provides some helpers functions to convert from UTF16 (use in VST 3 interfaces) to UTF8 (used by std::string).
