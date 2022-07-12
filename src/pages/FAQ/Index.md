@@ -19,3 +19,5 @@ The FAQ provides answers to some common questions. Kindly note that we do not pr
 - [Miscellaneous](../FAQ/Miscellaneous.md)
 
 - [Licensing](../FAQ/Licensing.md)
+
+- [Hosting](../FAQ/Hosting.md)
