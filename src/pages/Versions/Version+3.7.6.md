@@ -10,11 +10,13 @@
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) 4.??
   
 - New Flags/Enums:
-
+  - Fix ITU 3+7+0 Sound System F
+    - **k70_3** => L R C Ls Rs Sl Sr Tfl Tfr Trc
+    - **k72_3** => L R C LFE Ls Rs Sl Sr Tfl Tfr Trc LFE2
 - Documentation
   - new tutorial: [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](../Tutorials/Guideline+for+VST3+replacing+VST2.md)
 - cmake
-  - new file *SMTG_AddVST3AuV2.cmake*:
+  - New file *SMTG_AddVST3AuV2.cmake*:
     - Allow adding AUv2 target to a VST 3 plug-in
     - Review AU Objective-C Namespace handling
   - Add check if **PROJECT_VERSION** is set in *project()*, if not then FATAL_ERROR.
