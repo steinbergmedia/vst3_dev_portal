@@ -23,8 +23,8 @@
       - **k50_4_1** => L R C Ls Rs Tfl Tfr Trl Trr Bfc
       - **k51_4_1** => L R C LFE Ls Rs Tfl Tfr Trl Trr Bfc
     - ITU 3+7+0 Sound System F
-      - **k70_3** => L R C Ls Rs Sl Sr Tsl Tsr Trc
-      - **k72_3** => L R C LFE Ls Rs Sl Sr Tsl Tsr Trc LFE2
+      - **k70_3** => L R C Ls Rs Sl Sr Tfl Tfr Trc
+      - **k72_3** => L R C LFE Ls Rs Sl Sr Tfl Tfr Trc LFE2
 - Documentation
   - New tutorial explaining [How to use the silence flags](../Tutorials/how+to+use+the+silence+flags.md).
   - Move VST 3 documentation to md files.
