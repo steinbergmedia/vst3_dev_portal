@@ -27,13 +27,8 @@
   - Audio Unit:
     - Rework AUWrapper Objective-C code  
 
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
-
-- [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
-
 - Helpers classes:
   - Refactoring by using IPtr in *public.sdk/source/vst/vsteditcontroller.h* and *public.sdk/source/common/pluginview.h*
 
-- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.3.0:
-
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.05:
+  - Fix: Prevent crash when PATH contains empty substring [PR#3](https://github.com/steinbergmedia/vst3projectgenerator/pull/3)
