@@ -30,6 +30,9 @@
 - [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Add more structured Units and parameters to Hostchecker plug-in.
 
+- [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
+  - Fix validator output on Windows, cout was not flushed in case of crash
+
 - Helpers classes:
   - Refactoring by using IPtr in *public.sdk/source/vst/vsteditcontroller.h* and *public.sdk/source/common/pluginview.h*
 
