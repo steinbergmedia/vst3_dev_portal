@@ -25,7 +25,10 @@
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
-    - Rework AUWrapper Objective-C code  
+    - Rework AUWrapper Objective-C code
+
+- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+  - Add more structured Units and parameters to Hostchecker plug-in.
 
 - Helpers classes:
   - Refactoring by using IPtr in *public.sdk/source/vst/vsteditcontroller.h* and *public.sdk/source/common/pluginview.h*
