@@ -101,7 +101,7 @@
   - [[3.7.0] Control Voltage Bus Flag](pages/Technical+Documentation/Change+History/3.7.0/Control+Voltage.md)
   - [[3.7.5] Module Info and Plug-in Compatibility](pages/Technical+Documentation/Change+History/3.7.5/ModuleInfo.md)
 - [Change History](pages/Versions/Index.md)
-  - [Version 3.7.6 (2022/08/??)](pages/Versions/Version+3.7.6.md)
+  - [Version 3.7.6 (2022/09/05)](pages/Versions/Version+3.7.6.md)
   - [Version 3.7.5 (2022/05/16)](pages/Versions/Version+3.7.5.md)
   - [Version 3.7.4 (2021/12/14)](pages/Versions/Version+3.7.4.md)
   - [Version 3.7.3 (2021/08/10)](pages/Versions/Version+3.7.3.md)

@@ -1,8 +1,8 @@
 >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.7.6(2022/08/??)
+># Version 3.7.6(2022/09/05)
 
-## Version 3.7.6 (2022/08/??)
+## Version 3.7.6 (2022/09/05)
 
 - Interface changes:
   - new [architecture folder for Windows Arm64EC and Arm64 Classic](../Technical+Documentation/Locations+Format/Plugin+Format.html#for-the-windows-platform)
