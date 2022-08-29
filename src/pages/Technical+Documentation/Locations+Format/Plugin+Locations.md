@@ -15,10 +15,10 @@
 
 ## Introduction
 
-A **VST 3** Plug-in should be installed at specific folder location, the following tables specify these predefined locations for different operating system.
+A **VST 3 Plug-in** should be installed at specific folder location, the following tables specify these predefined locations for different operating system.
 
 >ⓘ **Note**\
->**VST 3** doesn't require a Plug-in registration like it is used with DirectX.
+>**VST 3** doesn't require a plug-in registration like it is used with DirectX.
 
 >⚠️ **Warning**\
 >Links, Symbolic links or Shortcuts could be used from these predefined folders.
@@ -27,10 +27,10 @@ A **VST 3** Plug-in should be installed at specific folder location, the followi
 
 - **User**: available only for the current logged user
 - **Global**: available for all users of the system
-- **Application**: available only inside a specific Audio Application (local Plug-ins)
+- **Application**: available only inside a specific Audio Application (local plug-ins)
 
 >ⓘ **Note**\
->The host should scan at first higher level of priority, first found Plug-in (for a given Processor UID) has to be used.
+>The host should scan at first higher level of priority, first found plug-in (for a given Processor UID) has to be used.
 
 ### On macOS platform
 

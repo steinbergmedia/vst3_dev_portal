@@ -54,7 +54,7 @@ This tutorial explains how to use silence flags.
 
 ## [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](Guideline+for+VST3+replacing+VST2.md)
 
-This tutorial explains how to create a **VST 3** plug-in that replaces an old **VST 2** plug-in.
+This guideline explains what could be done for creating a VST3 Plug-in replacing an old VST2 Plug-in.
 
 ## [Strings Conversion Helper](Strings+Conversion+Helper.md)
 
@@ -63,3 +63,25 @@ The SDK provides some helpers functions to convert from UTF16 (use in VST 3 inte
 ## [Creating a plug-in from the Helloworld template](Creating+a+plug-in+from+the+Helloworld+template.md)
 
 This tutorial explains how to create a new audio plug-in from the Helloworld template included in the **VST 3 SDK**.
+
+## Tutorials on Youtube from 3rd Party developers
+
+### How to setup the VST3 SDK's Sample Plugin Projects
+
+https://www.youtube.com/watch?v=004zcWwgi1A
+
+### VST3 SDK Tutorial: Create your own VST3 Synth plug-in
+
+https://www.youtube.com/watch?v=zdgytoRLKj0
+
+### Building Your First Audio Plug-in (Windows 10)
+
+https://www.youtube.com/watch?v=4MQZyZKOPPM
+
+### Building Your First Audio Plug-in (MacOS)
+
+https://www.youtube.com/watch?v=Twcx6Sd6HBw
+
+### Building Your First Audio Plug-in (Linux Ubuntu)
+
+https://www.youtube.com/watch?v=jXryyxEsFag

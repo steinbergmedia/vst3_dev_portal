@@ -5,7 +5,7 @@
 ## Version 3.6.6 (2016/06/17)
 
 - Interface changes:
-  - New Steinberg::IPlugViewContentScaleSupport: Plug-in view content scale support
+  - New Steinberg::IPlugViewContentScaleSupport: plug-in view content scale support
 - New Flags/Enums:
   - New RestartFlags: kRoutingInfoChanged informing the host that the Routing Info (IComponent) has changed
 - Samples:

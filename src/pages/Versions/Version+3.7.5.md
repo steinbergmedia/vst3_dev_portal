@@ -23,16 +23,16 @@
       - **k50_4_1** => L R C Ls Rs Tfl Tfr Trl Trr Bfc
       - **k51_4_1** => L R C LFE Ls Rs Tfl Tfr Trl Trr Bfc
     - ITU 3+7+0 Sound System F
-      - **k70_3** => L R C Ls Rs Sl Sr Tsl Tsr Trc
-      - **k72_3** => L R C LFE Ls Rs Sl Sr Tsl Tsr Trc LFE2
+      - **k70_3** => L R C Ls Rs Sl Sr Tfl Tfr Trc
+      - **k72_3** => L R C LFE Ls Rs Sl Sr Tfl Tfr Trc LFE2
 - Documentation
   - New tutorial explaining [How to use the silence flags](../Tutorials/how+to+use+the+silence+flags.md).
-  - Move VST3 documentation to md files.
+  - Move VST 3 documentation to md files.
 - cmake
   - Minimum cmake version is now 3.19.
   - New function *smtg_target_setup_as_vst3_example*.
   - Change *smtg_target_set_bundle* for mac.
-  - New option: **SMTG_CREATE_MODULE_INFO**: Create the moduleinfo.json file (default ON).
+  - New option: **SMTG_CREATE_MODULE_INFO**: Create the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file (default ON).
   - use **VERSION** and **DESCRIPTION** with project() for generating automatically with cmake version file.
   - Change default to ON for SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON on Windows.
   - Fix https://github.com/steinbergmedia/vst3sdk/pull/91.
@@ -47,8 +47,8 @@
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add test for *IPluginCompatibility* interface
 - Helpers classes:
-  - New file in public.sdk/samples/vst-utilities for moduleinfo support.
-  - New files in public.sdk/source/vst/moduleinfo for creating and parsing moduleinfo.
+  - New file in *public.sdk/samples/vst-utilities* for moduleinfo support.
+  - New files in *public.sdk/source/vst/moduleinfo* for creating and parsing moduleinfo.
   - Fix https://github.com/steinbergmedia/vst3_public_sdk/issues/37
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.3.0:
   - The 32bits version of plugintesthost is not availble anymore.

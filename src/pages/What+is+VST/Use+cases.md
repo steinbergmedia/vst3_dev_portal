@@ -45,39 +45,40 @@ By using **VST 3 SDK** directly:
 
 | **Name**                | **Companies**                     | **Link**                                      |
 | ----------------------- | --------------------------------- | --------------------------------------------- |
-| Cubase                  | Steinberg Media Technologies GmbH | <https://new.steinberg.net/cubase>            |
-| Nuendo                  | Steinberg Media Technologies GmbH	| <https://new.steinberg.net/nuendo>            |
-| Wavelab                 | Steinberg Media Technologies GmbH | <https://new.steinberg.net/wavelab>           |
-| Dorico                  | Steinberg Media Technologies GmbH | <https://new.steinberg.net/dorico>            |
-| SpectraLayers           | Steinberg Media Technologies GmbH | <https://www.steinberg.net/spectralayers>     |
-| VST Live                | Steinberg Media Technologies GmbH | <https://www.steinberg.net/vst-live>          |
-| Live                    | Ableton AG                        | <https://www.ableton.com/en/live>             |
-| Audition                | Adobe                        	    | <https://www.adobe.com>                       |
-| Sonar                   | Bandlab/Cakewalk                  | <https://www.bandlab.com/products/cakewalk>   |
-| Bitwig                  | Bitwig GmbH                       | <https://www.bitwig.com>                      |
-| Max                     | Cycling 74                        | <https://cycling74.com>                       |
-| FL Studio	              | ImageLine                         | <https://www.image-line.com>                  |
 | ACID Pro                | MAGIX Software GmbH               | <https://www.magix.com>                       |
-| Music Maker Plus        | MAGIX Software GmbH               | <https://www.magix.com>                       |
-| Samplitude              | MAGIX Software GmbH               | <https://www.magix.com>                       |
-| Sound Forge Audio Studio| MAGIX Software GmbH               | <https://www.magix.com>                       |
-| Digital Performer	      | MOTU                              | <https://motu.com/en-us/products/software/dp> |
-| Bidule                  | Plogue Art et Technologie, Inc.   | <https://www.plogue.com>                      |
-| Studio One              | PreSonus Software Ltd             | <https://www.presonus.com/products/Studio-One>|
-| Reaper                  | Reaper                            | <https://www.reaper.fm>                       |
-| Waveform                | Tracktion Software Corporation    | <https://www.tracktion.com>                   |
-| Gig Performer           | Deskew Technologies               | <https://gigperformer.com>                    |
-| Camelot                 | Audio Modeling                    | <https://audiomodeling.com>                   |
-| deCoda                  | zplane                            | <https://products.zplane.de/products/decoda>  |
 | Acoustica	              | Acon Digital                      | <https://acondigital.com>                     |
-| Mixcraft                | Acoustica                         | <https://acoustica.com>                       |
-| Overture                | Sonic Scores                      | <https://sonicscores.com>                     |
-| Soundop                 | Ivosight Software Inc.            | <https://ivosight.com>                        |
-| TS2                     | Ircam Lab                         | <https://www.ircamlab.com>                    |
-| Cross DJ                | MixVibes                          | <https://www.mixvibes.com>                    |
-| VST Rack Pro            | Yamaha Corporation                | <https://europe.yamaha.com/en/products/proaudio/software/vst_rack/index.html>|
-| DaVinci Resolve         | Blackmagic Design                 | <https://www.blackmagicdesign.com/products/davinciresolve>|
-| Modula                  | Quantica Audio                    | <https://quanticaaudio.com>                   |
-| Maschine                | Native Instruments                | <https://www.native-instruments.com>          |
-| Orb Composer Pro        | Hexachords                        | <https://hexachords.com>                      |
+| Audacity                | Audacity Team                     | <https://www.audacityteam.org>                 |
+| Audition                | Adobe                        	    | <https://www.adobe.com>                       |
+| Bidule                  | Plogue Art et Technologie, Inc.   | <https://www.plogue.com>                      |
+| Bitwig                  | Bitwig GmbH                       | <https://www.bitwig.com>                      |
+| Camelot                 | Audio Modeling                    | <https://audiomodeling.com>                   |
 | Cantabile               | Topten Software                   | <https://www.cantabilesoftware.com>           |
+| Cross DJ                | MixVibes                          | <https://www.mixvibes.com>                    |
+| Cubase                  | Steinberg Media Technologies GmbH | <https://new.steinberg.net/cubase>            |
+| DaVinci Resolve         | Blackmagic Design                 | <https://www.blackmagicdesign.com/products/davinciresolve>|
+| deCoda                  | zplane                            | <https://products.zplane.de/products/decoda>  |
+| Digital Performer	      | MOTU                              | <https://motu.com/en-us/products/software/dp> |
+| Dorico                  | Steinberg Media Technologies GmbH | <https://new.steinberg.net/dorico>            |
+| FL Studio	              | ImageLine                         | <https://www.image-line.com>                  |
+| Gig Performer           | Deskew Technologies               | <https://gigperformer.com>                    |
+| Live                    | Ableton AG                        | <https://www.ableton.com/en/live>             |
+| Maschine                | Native Instruments                | <https://www.native-instruments.com>          |
+| Max                     | Cycling 74                        | <https://cycling74.com>                       |
+| Mixcraft                | Acoustica                         | <https://acoustica.com>                       |
+| Modula                  | Quantica Audio                    | <https://quanticaaudio.com>                   |
+| Music Maker Plus        | MAGIX Software GmbH               | <https://www.magix.com>                       |
+| Nuendo                  | Steinberg Media Technologies GmbH	| <https://new.steinberg.net/nuendo>            |
+| Orb Composer Pro        | Hexachords                        | <https://hexachords.com>                      |
+| Overture                | Sonic Scores                      | <https://sonicscores.com>                     |
+| Reaper                  | Reaper                            | <https://www.reaper.fm>                       |
+| Samplitude              | MAGIX Software GmbH               | <https://www.magix.com>                       |
+| Sonar                   | Bandlab/Cakewalk                  | <https://www.bandlab.com/products/cakewalk>   |
+| Sound Forge Audio Studio| MAGIX Software GmbH               | <https://www.magix.com>                       |
+| Soundop                 | Ivosight Software Inc.            | <https://ivosight.com>                        |
+| SpectraLayers           | Steinberg Media Technologies GmbH | <https://www.steinberg.net/spectralayers>     |
+| Studio One              | PreSonus Software Ltd             | <https://www.presonus.com/products/Studio-One>|
+| TS2                     | Ircam Lab                         | <https://www.ircamlab.com>                    |
+| VST Live                | Steinberg Media Technologies GmbH | <https://www.steinberg.net/vst-live>          |
+| VST Rack Pro            | Yamaha Corporation                | <https://europe.yamaha.com/en/products/proaudio/software/vst_rack/index.html>|
+| Waveform                | Tracktion Software Corporation    | <https://www.tracktion.com>                   |
+| Wavelab                 | Steinberg Media Technologies GmbH | <https://new.steinberg.net/wavelab>           |

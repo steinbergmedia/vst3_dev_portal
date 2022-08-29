@@ -17,7 +17,7 @@
   - add AAX version of "HostChecker Plug-in"
   - add new test in Validator:
     - threaded process, bypass persistence
-    - new option to run more tests (optExtensiveTests, "Run extensive tests [may take a long time]")
+    - new option to run more tests (optExtensiveTests, "Run extensive tests (may take a long time)")
     - improvement to MidiMappingTest performance
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - The InterAppAudio Wrapper is deprecated and may be removed in the next SDK update. Please switch to AudioUnit V3 on iOS.
