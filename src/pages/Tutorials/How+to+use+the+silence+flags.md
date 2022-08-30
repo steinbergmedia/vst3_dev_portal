@@ -56,7 +56,7 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
 ```
         
 >ⓘ **Note**\
->The host has the responsibility to clear the input buffers (set to zero) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)).
+>The host has the responsibility to clear the input buffers (set to something near zero, like 10e-7, to prevent de-normalization issue) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)).
 
 ## Plug-in generates silent output
 
