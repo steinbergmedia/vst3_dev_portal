@@ -4,7 +4,7 @@
 
 ## Version 3.7.6 (2022/09/05)
 
-### Breaking change:
+### General change:
 
 The integer types used throughout the SDK are now based on the standard types defined in <cstdint> and the UTF-16 character type is now char16_t from c++11.
 This is not an ABI change, all types have the same size as before, and old compiled plug-ins will still load without any issue in all hosts on all supported systems.
