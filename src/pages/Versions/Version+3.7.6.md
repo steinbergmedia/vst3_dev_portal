@@ -43,6 +43,11 @@ There are simple casting functions in pluginterfaces/base/fstrdefs.h (see wscast
 
 - Helpers classes:
   - Refactoring by using IPtr in *public.sdk/source/vst/vsteditcontroller.h* and *public.sdk/source/common/pluginview.h*
+  - Fix crash in module_win32.cpp when loading failed and the error code could not be printed
+  - Prevent the pluginfactory_constexpr on Linux to export symbols in debug mode which may be shared between modules.
 
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.05:
   - Fix: Prevent crash when PATH contains empty substring [PR#3](https://github.com/steinbergmedia/vst3projectgenerator/pull/3)
+
+- VST3PluginTestHost
+  - Support loading PACE protected plug-ins on macOS by using the required entitlement for the hardened runtime
