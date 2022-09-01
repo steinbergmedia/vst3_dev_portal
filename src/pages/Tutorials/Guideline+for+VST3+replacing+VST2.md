@@ -9,11 +9,11 @@
 ---
 
 Here you can find some informations about how to write a VST3 version of a plug-in which already exists as VST2 version.
-How to garanty that a Host will correctly replace the old VST2 by the new VST3 version of your plug-in.
+How to guaranty that a Host will correctly replace the old VST2 by the new VST3 version of your plug-in.
 
-For a VST3 Host the important information is the UID of your (processor) plug-in, with this information it will allow it to find the correct VST3 version to use.
+For a VST3 Host the important information is the UID of your (processor) plug-in, with this information it will find the correct VST3 version to use.
 
-2 scenarii are possible: The VST3 and the VST2 version of your plug-in have the same UID or not.
+2 scenarios are possible: The VST3 and the VST2 version of your plug-in have the same UID or not.
 
 ## VST2 and VST3 version of your Plug-in have the same UID
 
