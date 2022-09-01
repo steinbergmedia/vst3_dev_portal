@@ -24,15 +24,16 @@ There are simple casting functions in pluginterfaces/base/fstrdefs.h (see wscast
   - new tutorial: [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](../Tutorials/Guideline+for+VST3+replacing+VST2.md)
 - cmake
   - New file *SMTG_AddVST3AuV2.cmake*:
-    - Allow adding AUv2 target to a VST 3 plug-in
-    - Review AU Objective-C Namespace handling
+    - Add AUv2 target for a VST 3 plug-in
+    - Reworked AU Objective-C Namespace handling
   - Add check if **PROJECT_VERSION** is set in *project()*, if not then FATAL_ERROR.
   - Display error text when Spaces in Xcode path which is not supported by cmake.
   - New function *smtg_check_language_cxx* in *SMTG_DetectPlatform.cmake* allows checking if C++ compiler is available.
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
-    - Rework AUWrapper Objective-C code
+  	- Simplify the creation of an AUv2 wrapped plug-in by a simple cmake function (see smtg_target_add_auv2)
+    - Reworked AUWrapper Objective-C code
 
 - [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Add more structured Units and parameters to Hostchecker plug-in.
