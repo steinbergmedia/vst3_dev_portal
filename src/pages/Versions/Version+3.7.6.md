@@ -4,6 +4,13 @@
 
 ## Version 3.7.6 (2022/09/05)
 
+### Breaking change:
+
+The integer types used throughout the SDK are now based on the standard types defined in <cstdint> and the UTF-16 character type is now char16_t from c++11.
+This is not an ABI change, all types have the same size as before, and old compiled plug-ins will still load without any issue in all hosts on all supported systems.
+But implementations may have to be adopted especially on Windows where the tchar/char16 type was directly used for Windows API's.
+There are simple casting functions in pluginterfaces/base/fstrdefs.h (see wscast) for easy adoption.
+
 - Interface changes:
   - new [architecture folder for Windows Arm64EC and Arm64 Classic](../Technical+Documentation/Locations+Format/Plugin+Format.html#for-the-windows-platform)
   
