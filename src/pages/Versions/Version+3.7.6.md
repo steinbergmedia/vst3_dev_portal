@@ -13,6 +13,7 @@ There are simple casting functions in pluginterfaces/base/fstrdefs.h (see wscast
 
 - Interface changes:
   - new [architecture folder for Windows Arm64EC and Arm64 Classic](../Technical+Documentation/Locations+Format/Plugin+Format.html#for-the-windows-platform)
+  - new macro **SMTG_HIDDEN_SYMBOL** in *pluginterfaces/base/fplatform.h*
   
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) Bugfix update [4.11.1](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_11_1)
   
