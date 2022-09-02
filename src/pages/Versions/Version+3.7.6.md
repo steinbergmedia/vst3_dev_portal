@@ -33,7 +33,7 @@ There are simple casting functions in pluginterfaces/base/fstrdefs.h (see wscast
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
-  	- Simplify the creation of an AUv2 wrapped plug-in by a simple cmake function (see smtg_target_add_auv2)
+    - Simplify the creation of an AUv2 wrapped plug-in by a simple cmake function (see smtg_target_add_auv2)
     - Reworked AUWrapper Objective-C code
 
 - [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
