@@ -4,12 +4,12 @@
 
 ## Version 3.7.6 (2022/09/05)
 
-### General change:
+### General change
 
-The integer types used throughout the SDK are now based on the standard types defined in ```<cstdint>``` and the UTF-16 character type is now char16_t from c++11.
+The integer types used throughout the SDK are now based on the standard types defined in ```<cstdint>``` and the UTF-16 character type is now **char16_t** from c++11.
 This is not an ABI change, all types have the same size as before, and old compiled plug-ins will still load without any issue in all hosts on all supported systems.
 But implementations may have to be adopted especially on Windows where the tchar/char16 type was directly used for Windows API's.
-There are simple casting functions in pluginterfaces/base/fstrdefs.h (see wscast) for easy adoption.
+There are simple casting functions in *pluginterfaces/base/fstrdefs.h* (see **wscast**) for easy adoption.
 
 - Interface changes:
   - new [architecture folder for Windows Arm64EC and Arm64 Classic](../Technical+Documentation/Locations+Format/Plugin+Format.html#for-the-windows-platform)
@@ -47,8 +47,8 @@ There are simple casting functions in pluginterfaces/base/fstrdefs.h (see wscast
   - Fix crash in module_win32.cpp when loading failed and the error code could not be printed
   - Prevent the pluginfactory_constexpr on Linux to export symbols in debug mode which may be shared between modules.
 
-- [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.05:
-  - Fix: Prevent crash when PATH contains empty substring [PR#3](https://github.com/steinbergmedia/vst3projectgenerator/pull/3)
-
-- VST3PluginTestHost
+- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.3.10:
   - Support loading PACE protected plug-ins on macOS by using the required entitlement for the hardened runtime
+
+- [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.09:
+  - Fix: Prevent crash when PATH contains empty substring [PR#3](https://github.com/steinbergmedia/vst3projectgenerator/pull/3)
