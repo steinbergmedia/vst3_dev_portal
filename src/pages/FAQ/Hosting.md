@@ -73,6 +73,10 @@ The design of this interface was done before it was possible on Windows for a pl
 
 But it could be used by the host to try to rescale a given plug-in or all plug-in. This is what is used in Cubase by changing the overall App scaling in the preference up to 50% to the system scale.
 
-## Q: In the examples that implement host-specific interfaces, *FUnknown::addRef*() and *FUnknown::release*() tends to be implemented as a no-op, e.g. { return 1000; } - this seems safer as the plugin can't delete or leak objects that live in the host. Is there any case when the host needs to implement true *addRef*() and *release*(), which actually control the lifetime of the object?
+## Q: In the examples that implement host-specific interfaces, _FUnknown::addRef()_ and _FUnknown::release()_ tends to be implemented as a no-op, _e.g. {return 1000;}_ - this seems safer as the plugin can't delete or leak objects that live in the host. Is there any case when the host needs to implement true _addRef()_ and _release()_, which actually control the lifetime of the object?
 
 You can only do this reference count no-ops for objects that are alive the whole lifetime of the host and will always outlive the plug-ins.
+
+## Q: What should the host do if a plug-in does not call _ComponentHandler::restartComponent()_ from the main/UI thread?
+
+You could report directly to the developer of this plug-in about this wrong behaviour, restartComponent has to be called from UI Thread! As security fallback the host could postpone this call in the UI Thread and handles it in the next UI idle.
