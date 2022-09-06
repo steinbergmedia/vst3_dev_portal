@@ -68,20 +68,20 @@ This tutorial explains how to create a new audio plug-in from the Helloworld tem
 
 ### How to setup the VST3 SDK's Sample Plugin Projects
 
-https://www.youtube.com/watch?v=004zcWwgi1A
+[https://www.youtube.com/watch?v=004zcWwgi1A](https://www.youtube.com/watch?v=004zcWwgi1A)
 
 ### VST3 SDK Tutorial: Create your own VST3 Synth plug-in
 
-https://www.youtube.com/watch?v=zdgytoRLKj0
+[https://www.youtube.com/watch?v=zdgytoRLKj0](https://www.youtube.com/watch?v=zdgytoRLKj0)
 
 ### Building Your First Audio Plug-in (Windows 10)
 
-https://www.youtube.com/watch?v=4MQZyZKOPPM
+[https://www.youtube.com/watch?v=4MQZyZKOPPM](https://www.youtube.com/watch?v=4MQZyZKOPPM)
 
-### Building Your First Audio Plug-in (MacOS)
+### Building Your First Audio Plug-in (macOS)
 
-https://www.youtube.com/watch?v=Twcx6Sd6HBw
+[https://www.youtube.com/watch?v=Twcx6Sd6HBw](https://www.youtube.com/watch?v=Twcx6Sd6HBw)
 
 ### Building Your First Audio Plug-in (Linux Ubuntu)
 
-https://www.youtube.com/watch?v=jXryyxEsFag
+[https://www.youtube.com/watch?v=jXryyxEsFag](https://www.youtube.com/watch?v=jXryyxEsFag)
