@@ -19,7 +19,7 @@ Whenever **VST**® is used or the SDK has been used to create a product or the S
 
 # [What are the licensing options for VST 3?](What+are+the+licensing+options.md)
 
-You can choose between the *"Proprietary Steinberg VST 3"* or the *"Open-source [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)"* license (**dual-license**) depending on how you want to distribute your VST 3 plug-in/host. **The License Agreement could be found here and in the VST SDK package**.
+You can choose between the [Proprietary Steinberg VST 3](What+are+the+licensing+options.md#proprietary-steinberg-vst-3-license) or the [Open-source GPLv3](What+are+the+licensing+options.md#open-source-gplv3-license) license ([dual-license](What+are+the+licensing+options.md#steinberg-dual-license-file)) depending on how you want to distribute your VST 3 plug-in/host. **The License Agreement could be found here and in the VST SDK package**.
 
 # [Which files fall under which license?](Which+files+fall+under+which+license.md)
 

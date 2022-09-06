@@ -87,3 +87,5 @@ An example moduleinfo.json looks like this:
   ],
 }
 ```
+
+Check [here](../../FAQ/Compatibility+with+VST+2.x+or+VST+1.md) to learn how to create UID for old VST 2 plug-in.

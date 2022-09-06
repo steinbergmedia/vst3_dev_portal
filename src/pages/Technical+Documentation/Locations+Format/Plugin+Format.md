@@ -29,16 +29,17 @@ On the macOS platform, **VST 3 Plug-in** is a standard macOS bundle, its file ex
 
 On the Windows platform, a **VST 3 Plug-in** is organized as a bundle like package format (simple folder), its file extension is "**.vst3**" and has the following folder structure:
 
-| Folder                                          | Description                  |
-| :-                                              | :-                           |
-| MyPlugin.vst3/Contents/Resources/               | folder contains all additional resource files useful for the plug-in |
-| MyPlugin.vst3/Contents/x86-win/MyPlugin.vst3    | folder contains the plug-in binary (32 bit dll for the i386 architecture) |
-| MyPlugin.vst3/Contents/x86_64-win/MyPlugin.vst3 | folder contains the plug-in binary (64 bit dll for the x86_64 architecture) |
-| MyPlugin.vst3/Contents/arm-win/MyPlugin.vst3    | Proposal: folder contains the plug-in binary (32 bit dll for the arm architecture) |
-| MyPlugin.vst3/Contents/arm_64-win/MyPlugin.vst3 | Proposal: folder contains the plug-in binary (64 bit dll for the arm64 architecture) |
-| MyPlugin.vst3/Contents/moduleinfo.json          | the plug-in’s moduleinfo |
-| MyPlugin.vst3/desktop.ini                       | used to set custom icon in Windows Explorer |
-| MyPlugin.vst3/Plugin.ico                        | customized plug-in icon |
+| Folder                                             | Description                  |
+| :-                                                 | :-                           |
+| MyPlugin.vst3/Contents/Resources/                  | folder contains all additional resource files useful for the plug-in |
+| MyPlugin.vst3/Contents/**x86-win**/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for i386 architecture) |
+| MyPlugin.vst3/Contents/**x86_64-win**/MyPlugin.vst3    | folder contains the plug-in binary (64 bit dll for x86_64 architecture) |
+| MyPlugin.vst3/Contents/**arm64ec-win**/MyPlugin.vst3   | folder contains the plug-in binary (64 bit dll for Arm64EC architecture).<br> Recommended archi for Windows on Arm64! |
+| MyPlugin.vst3/Contents/**arm-win**/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for Arm classic architecture) |
+| MyPlugin.vst3/Contents/**arm64-win**/MyPlugin.vst3     | folder contains the plug-in binary (64 bit dll for Arm64 classic architecture) |
+| MyPlugin.vst3/Contents/moduleinfo.json             | the plug-in’s moduleinfo |
+| MyPlugin.vst3/desktop.ini                          | used to set custom icon in Windows Explorer |
+| MyPlugin.vst3/Plugin.ico                           | customized plug-in icon |
 
 >ⓘ **Note**\
 >In previous SDKs, the **VST 3 Plug-in** was defined as a single dll file with the **.vst3** extension. This is deprecated since VST 3.6.10.
@@ -58,6 +59,24 @@ and you should then change their attributes with this command line (s for system
 attrib +s +r +h desktop.ini
 attrib +r +h Plugin.ico
 ```
+
+### Limitation for loading Plug-in DLL in a Host (inside the same process)
+
+See [Microsoft Blogs about this](https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/):
+
+| OS            | PC Architecture   | Host Process App	| Compatible Plug-in Architectures  |
+| :-            | :-                | :-                | :-                                |
+| Windows 10    | Intel x86         | Intel x86         | Intel x86                         |
+| Windows 10/11	| Intel x64	        | Intel x64	        | Intel x64*                        |
+| Windows 10/11	| Intel x64	        | Intel x86	        | Intel x86                         |
+| Windows 10/11	| Arm64	            | Arm64 Classic     | Arm64 Classic                     |
+| Windows 11	| Arm64	            | Arm64EC	        | Arm64EC, Intel x64                |
+| Windows 11	| Arm64	            | Intel x64	        | Arm64EC, Intel x64                |
+
+>"TLDR: Please offer both Arm64EC and x64 versions of your DAWs and plug-ins, and please stay up to date with the latest developer tooling and SDKs." ([Pete Brown (Microsoft)](https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/))
+
+ >ⓘ **Note**\
+ With out of process (Inter-Process Commnunication) a Host could overriden these limitations, by allowing for example a Host Arm64 Classic to handle an Arm64EC Plug-in.
 
 ## For the Linux platform
 
@@ -111,10 +130,10 @@ MyPlugin.vst3/
     |   |__ MacOS/
     |   |   |__ MyPlugin
     |   |
-    |   |__ x86-win/
+    |   |__ x86_64-win/
     |   |   |__ MyPlugin.vst3
     |   |
-    |   |__ x86_64-win/
+    |   |__ arm_64_ec-win/
     |   |   |__ MyPlugin.vst3
     |   |
     |   |__ moduleinfo.json

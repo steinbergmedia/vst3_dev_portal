@@ -24,7 +24,7 @@ Attribute list used in [IMessage](https://steinbergmedia.github.io/vst3_doc/vsti
 
 An attribute list associates values with a key (id: some predefined keys can be found in [Predefined Preset Attributes](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__presetAttributes.html)).
 
-## IComponentHandler
+## [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html)
 
 Host callback interface for an edit controller.
 

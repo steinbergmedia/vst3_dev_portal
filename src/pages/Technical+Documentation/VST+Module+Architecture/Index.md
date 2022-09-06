@@ -15,7 +15,7 @@
 
 ---
 
-### Introduction
+## Introduction
 
 **VST-MA** is a component model system which is used in all [Steinberg](https://www.steinberg.net/) host applications as the basic layer for plug-in support.
 

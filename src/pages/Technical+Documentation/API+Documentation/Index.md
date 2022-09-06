@@ -211,7 +211,7 @@ More details can be found on the page about [Parameters](../Parameters+Automatio
 The threading model used by **VST 3** is quite simple and requires that:
 
 - all initialisation/de-initialisation are done in the UI Thread
-- all function exported by the plugin-in are called by the host in the UI Thread with the exception of:
+- all function exported by the plug-in are called by the host in the UI Thread with the exception of:
   - IAudioProcessor→process: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!
   - IAudioProcessor→setProcessing: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!
 - all function exported by the host are called by the plug-in in the UI Thread

@@ -31,7 +31,7 @@
 - Helpers classes:
   - New file pluginterfaces/base/funknownimpl.h (C++11 required): it provides classes for working with FUnknown.
   - Add Unitests for all hosting helpers classes
-  - Show example const_exp (C++17) in plugin factory: public.sdk/source/main/pluginfactory_constexpr.h
+  - Show example const_exp (C++17) in plug-in factory: public.sdk/source/main/pluginfactory_constexpr.h
   - Add documentation to mpeprocessor classes
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.2.20:
   - Adapted to scan the new VST 3 plug-in location on Windows

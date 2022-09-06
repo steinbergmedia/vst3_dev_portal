@@ -14,7 +14,7 @@ The artifact will be an audio plug-in that can compute a gain to an audio signal
 
 ---
 
-## Part 1: Coding your Plug-in
+## Part 1: Coding your plug-in
 
 Now you have an automatically generated frame for your plug-in. The following sections explain how to add a new parameter, its associated processing algorithm, and other specific features like saving/loading project or presets, creating a dedicated user interface, etc.
 
@@ -143,8 +143,8 @@ int32 numChannels = data.inputs[0].numChannels;
 
 //---get audio buffers using helper-functions(vstaudioprocessoralgo.h)-------------
 uint32 sampleFramesSize = getSampleFramesSizeInBytes(processSetup, data.numSamples);
-void** in = getChannelBuffersPointer (processSetup, datainputs[0]);
-void** out = getChannelBuffersPointer (processSetup, dataoutputs[0]);
+void** in = getChannelBuffersPointer (processSetup, data.inputs[0]);
+void** out = getChannelBuffersPointer (processSetup, data.outputs[0]);
 
 // Here could check the silent flags
 // now we will produce the output
@@ -200,9 +200,9 @@ if (data.inputs[0].silenceFlags != 0)
 
 ### Add store/restore state
 
-The *Processor* part represents the state of the plug-in, so it is its job to implement the **getState**/**setState** method used by the host to save/load projects and presets.
+The *Processor* part represents the state of the plug-in, so it is its job to implement the **getState**/**setState** method used by the host to save/load projects and presets. The *Controller* part gets the *Processor* state too in its **setComponentState** method which allows to synchronize its parameters too (used for example by the UI).
 
-In the file *plugprocessor.cpp*, add the **mGain** value to the state stream given by the host in the **getState** method which will save it as a project or preset.
+1. In the file *plugprocessor.cpp*, add the **mGain** value to the state stream given by the host in the **getState** method which will save it as a project or preset.
 
 **plugprocessor.cpp**
 
@@ -218,7 +218,7 @@ tresult PLUGIN_API PlugProcessor::getState (IBStream* state)
 }
 ```
 
-2. In the **setState()** method, the plug-in receives a new state (called after a project or preset is loaded) from the host.
+2. In the **setState** method, the plug-in receives a new state from the host, it is called after a project or preset is loaded.
 
 **plugprocessor.cpp**
 
@@ -228,12 +228,38 @@ tresult PLUGIN_API PlugProcessor::setState (IBStream* state)
 {
     if (!state)
         return kResultFalse;
+
     // called when we load a preset or project, the model has to be reloaded
     IBStreamer streamer (state, kLittleEndian);
     float savedParam1 = 0.f;
     if (streamer.readFloat (savedParam1) == false)
         return kResultFalse;
     mGain = savedParam1;
+
+    return kResultOk;
+}
+```
+
+3. In the **setComponentState** method, the *Controller* part of the plug-in receives the same state than the one used in **PlugProcessor::setState**. **PlugController::setComponentState** is called just after **PlugProcessor::setState**.
+
+**plugcontroller.cpp**
+
+```c++
+//-----------------------------------------------------------------------
+tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
+{
+	// Here you get the state of the component (Processor part)
+	if (!state)
+		return kResultFalse;
+
+    IBStreamer streamer (state, kLittleEndian);
+    float savedParam1 = 0.f;
+    if (streamer.readFloat (savedParam1) == false)
+        return kResultFalse;
+
+	// sync with our parameter
+	if (auto param = getParameter (GainParams::kParamGainId))
+		param->setNormalized (savedParam1);
 
     return kResultOk;
 }
@@ -247,13 +273,13 @@ tresult PLUGIN_API PlugProcessor::setState (IBStream* state)
 
 In our example we want to modify our current Gain factor with the velocity of a played "MIDI" event (noteOn).
 
-1. If you need in your plug-in to receive not only audio but events (like MIDI), you have to add an Event input. For this you just have to add in , in order to do this call in the **initialize()** method of the processor [addEventInput](https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1AudioEffect.html#a98a16757564b1a077d82e2b2decc2ad8):
+1. If you need in your plug-in to receive not only audio but events (like MIDI), you have to add an Event input. For this you just have to add the Event input with [addEventInput](https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1AudioEffect.html#a98a16757564b1a077d82e2b2decc2ad8) in the **initialize** method of the processor:
 
 **plugprocessor.cpp**
 
 ```c++
 //-----------------------------------------------------------------------
-tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
+tresult PLUGIN_API PlugProcessor::initialize (FUnknown* context)
 {
     //---always initialize the parent-------
     tresult result = AudioEffect::initialize (context);
@@ -277,7 +303,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 >
 >addEventInput (STR16 ("Event In"), 4); // here 4 channels
 
-2. We create a new internal value mGainReduction (not exported to the host) which is changed by the velocity of a played noteOn, so that the harder you hit the note, the higher is the gain reduction (this is what we want here):
+2. We create a new internal value *mGainReduction* (not exported to the host) which is changed by the velocity of a played noteOn, so that the harder you hit the note, the higher is the gain reduction (this is what we want here in this plug-in):
 
 **plugprocessor.h**
 
@@ -290,7 +316,6 @@ static FUnknown* createInstance (void*)
 protected:
     Steinberg::Vst::ParamValue mGain= 1.;
     Steinberg::Vst::ParamValue mGainReduction = 0.;
-
 // ...
 ```
 
@@ -336,7 +361,7 @@ tresult PLUGIN_API PlugProcessor::process (ProcessData& data)
     }
 ```
 
-4. Make use of this mGainReduction in our real processing part:
+4. Make use of this *mGainReduction* in our real processing part:
 
 **plugprocessor.cpp**
 
@@ -373,7 +398,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 
 In our example we want to modulate our main audio input with a [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) audio input.
 
-1. First add a new side-chain audio input (busType: ***kAux***) in the initialize call of our processor:
+1. First add a new side-chain audio input (busType: ***kAux***) in the **initialize** call of our processor:
 
 **plugprocessor.cpp**
 
@@ -401,7 +426,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
 }
 ```
 
-2. We want to be sure that our side-chain is handled as mono input. For this we need to overwrite the AudioEffect::setBusArrangements function:
+2. We want to be sure that our side-chain is handled as mono input. For this we need to overwrite the **AudioEffect::setBusArrangements** function:
 
 **plugprocessor.h**
 
