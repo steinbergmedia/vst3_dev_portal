@@ -5913,7 +5913,7 @@ tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int
 {
     // ...
 </code></pre>
-<p>Not activated busses does need to be processed by the plug-in, which allows to reduce the CPU load.</p>
+<p>Deactivated busses do not need to be processed by the plug-in, which allows to reduce the CPU load.</p>
 <p>Check the workflow diagrams in order to understand when this is called: </p>
 <ul>
 <li><a href="pages/Technical+Documentation/Change+History/3.0.0/../../Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a></li>
