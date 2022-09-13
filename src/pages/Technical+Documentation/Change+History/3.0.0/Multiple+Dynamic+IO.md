@@ -122,7 +122,7 @@ tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int
     // ...
 ```
 
-Not activated busses does not need to be processed by the plug-in, which allows to reduce the CPU load.
+Deactivated busses do not need to be processed by the plug-in, which allows to reduce the CPU load.
 
 Check the workflow diagrams in order to understand when this is called: 
 
