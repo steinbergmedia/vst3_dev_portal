@@ -28,19 +28,22 @@ If the plug-in could not deliver the [moduleinfo.json](../../../Technical+Docume
 //------------------------------------------------------------------------
 class PluginCompatibility : public FObject, public IPluginCompatibility
 {
-  public:  
-    //... 
+  public:
+    //...
     tresult PLUGIN_API getCompatibilityJSON (IBStream* stream) override
     {
-        // write in the stream the JSON compatibility array
-        /* "Compatibility": [
-        {
-            "New": "BD58B550F9E5634E9D2EFF39EA0927B1",
-            "Old": [
-            "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-            "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
-            ],
-	    }*/
+      /* write in the stream the JSON compatibility array
+      {
+          "Compatibility": [
+          {
+              "New": "BD58B550F9E5634E9D2EFF39EA0927B1",
+              "Old": [
+                  "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+              ],
+          }
+      }
+      */
 	    return kResultTrue;
     }
     //... 
