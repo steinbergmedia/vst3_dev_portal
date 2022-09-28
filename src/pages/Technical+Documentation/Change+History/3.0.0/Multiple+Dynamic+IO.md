@@ -37,7 +37,7 @@ A plug-in could have different reason to define multiple event input busses, for
 
 A plug-in could have different reason to define multiple event output busses, for example:
 
- - in case of a main event output for played event from the UI and one event output for internally generated events from an arpeggiator.
+- in case of a main event output for played event from the UI and one event output for internally generated events from an arpeggiator.
 
 A plug-in could decide to export more than one audio input by adding a second audio input ([Side-chains, see below](../3.0.0/Multiple+Dynamic+IO.md#what-is-a-side-chain)) or more.
 
@@ -59,21 +59,21 @@ tresult PLUGIN_API MyPlugin::initialize (FUnknown* context)
     {
         return result;
     }
- 
+
     //---create Audio In/Out busses------
     // we want a stereo Input and a Stereo Output
     addAudioInput (STR16 ("Stereo In"), SpeakerArr::kStereo, kMain, BusInfo::kDefaultActive);
     addAudioOutput (STR16 ("Stereo Out"), SpeakerArr::kStereo, kMain, BusInfo::kDefaultActive);
- 
+
     //---create Main Event In bus (1 bus with only 16 channel)------
     addEventInput (STR16 ("Event In"), 16, kMain, BusInfo::kDefaultActive);
- 
-   //---create Aux Event In bus (1 bus with only 1 channel)------
-   addEventInput (STR16 ("Mod In"), 1, kAux, 0); // not default activated wanted
- 
+
+    //---create Aux Event In bus (1 bus with only 1 channel)------
+    addEventInput (STR16 ("Mod In"), 1, kAux, 0); // not default activated wanted
+
     //---create Event out bus (1 bus with only 1 channel)------
-   addEventOutput (STR16 ("Arpeggiator"), 1, kAux, 0); // not default activated wanted
- 
+    addEventOutput (STR16 ("Arpeggiator"), 1, kAux, 0); // not default activated wanted
+
     return kResultOk;
 }
 ```
@@ -96,7 +96,7 @@ virtual tresult PLUGIN_API getBusInfo (MediaType type, BusDirection dir, int32 i
 - number of channel,
 - ...
 - and the some flags indicating:
-  - **kDefaultActive**: The bus should be activated by the host per default on instantiation (activateBus call is requested). By default a bus is inactive. 
+  - **kDefaultActive**: The bus should be activated by the host per default on instantiation (activateBus call is requested). By default a bus is inactive. Note that if a host offers the possibility to activate/deactivate busses to the user later on, it may not follow this flag kDefaultActive and let some busses deactivated on instantiation.
   - **kIsControlVoltage**: The bus does not contain ordinary audio data, but data used for control changes at sample rate.
     - The data is in the same format as the audio data [-1..1].
     - A host has to prevent unintended routing to speakers to prevent damage.
