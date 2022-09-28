@@ -5857,21 +5857,21 @@ tresult PLUGIN_API MyPlugin::initialize (FUnknown* context)
     {
         return result;
     }
- 
+
     //---create Audio In/Out busses------
     // we want a stereo Input and a Stereo Output
     addAudioInput (STR16 (&quot;Stereo In&quot;), SpeakerArr::kStereo, kMain, BusInfo::kDefaultActive);
     addAudioOutput (STR16 (&quot;Stereo Out&quot;), SpeakerArr::kStereo, kMain, BusInfo::kDefaultActive);
- 
+
     //---create Main Event In bus (1 bus with only 16 channel)------
     addEventInput (STR16 (&quot;Event In&quot;), 16, kMain, BusInfo::kDefaultActive);
- 
-   //---create Aux Event In bus (1 bus with only 1 channel)------
-   addEventInput (STR16 (&quot;Mod In&quot;), 1, kAux, 0); // not default activated wanted
- 
+
+    //---create Aux Event In bus (1 bus with only 1 channel)------
+    addEventInput (STR16 (&quot;Mod In&quot;), 1, kAux, 0); // not default activated wanted
+
     //---create Event out bus (1 bus with only 1 channel)------
-   addEventOutput (STR16 (&quot;Arpeggiator&quot;), 1, kAux, 0); // not default activated wanted
- 
+    addEventOutput (STR16 (&quot;Arpeggiator&quot;), 1, kAux, 0); // not default activated wanted
+
     return kResultOk;
 }
 </code></pre>
@@ -5890,7 +5890,7 @@ virtual tresult PLUGIN_API getBusInfo (MediaType type, BusDirection dir, int32 i
 <li>...</li>
 <li>and the some flags indicating:
 <ul>
-<li><strong>kDefaultActive</strong>: The bus should be activated by the host per default on instantiation (activateBus call is requested). By default a bus is inactive. </li>
+<li><strong>kDefaultActive</strong>: The bus should be activated by the host per default on instantiation (activateBus call is requested). By default a bus is inactive. Note that if a host offers the possibility to activate/deactivate busses to the user later on, it may not follow this flag kDefaultActive and let some busses deactivated on instantiation.</li>
 <li><strong>kIsControlVoltage</strong>: The bus does not contain ordinary audio data, but data used for control changes at sample rate.
 <ul>
 <li>The data is in the same format as the audio data [-1..1].</li>
@@ -8181,19 +8181,22 @@ Plug-Ins built with an earlier SDK version (&lt; 3.7) will still get the old inf
 <pre><code class="language-c++">//------------------------------------------------------------------------
 class PluginCompatibility : public FObject, public IPluginCompatibility
 {
-  public:  
-    //... 
+  public:
+    //...
     tresult PLUGIN_API getCompatibilityJSON (IBStream* stream) override
     {
-        // write in the stream the JSON compatibility array
-        /* &quot;Compatibility&quot;: [
-        {
-            &quot;New&quot;: &quot;BD58B550F9E5634E9D2EFF39EA0927B1&quot;,
-            &quot;Old&quot;: [
-            &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;,
-            &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;,
-            ],
-	    }*/
+      /* write in the stream the JSON compatibility array
+      {
+          &quot;Compatibility&quot;: [
+          {
+              &quot;New&quot;: &quot;BD58B550F9E5634E9D2EFF39EA0927B1&quot;,
+              &quot;Old&quot;: [
+                  &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;,
+                  &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;,
+              ],
+          }
+      }
+      */
 	    return kResultTrue;
     }
     //... 
@@ -9336,11 +9339,11 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 <ul>
 <li>Interface changes:
 <ul>
-<li>New <a href="pages/Versions/../Technical+Documentation/Change+History/3.6.5/IInfoListener.html">Steinberg::Vst::ChannelContext::IInfoListener</a> interface: informing the plug-in about the channel in which it is instanciated (name, color...)</li>
+<li>New <a href="pages/Versions/../Technical+Documentation/Change+History/3.6.5/IInfoListener.html">Steinberg::Vst::ChannelContext::IInfoListener</a> interface: informing the plug-in about the channel in which it is instantiated (name, color...)</li>
 <li>New Steinberg::Vst::IPrefetchableSupport interface: allowing a plug-in to inform the host that it does not support prefetch/ASIO Guard (could be dynamically)</li>
 <li>New Steinberg::Vst::IUnitHandler2 interface: allowing a plug-in to inform the host that an assignment Unit-Bus defined by IUnitInfo::getUnitByBus has changed</li>
-<li>New Steinberg::Vst::IAutomationState interface: informing the plug-in about its current automation state
-use &quot;#pragma once&quot; instead of &quot;#ifndef&quot;</li>
+<li>New Steinberg::Vst::IAutomationState interface: informing the plug-in about its current automation state</li>
+<li>use &quot;#pragma once&quot; instead of &quot;#ifndef&quot;</li>
 </ul>
 </li>
 <li>Samples:
