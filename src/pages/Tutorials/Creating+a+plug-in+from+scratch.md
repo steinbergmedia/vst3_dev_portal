@@ -108,4 +108,22 @@ endif()
 
 ## Add plug-in GUI editor by using VSTGUI
 
-TODO
+In order to add a ```VSTGUI``` editor to the plug-in, link to the ```vstgui_support``` target.
+
+```
+target_link_libraries(MyPlugin
+        PRIVATE
+            vstgui_support
+    )
+```
+
+Add a ```myplugin_editor.uisdesc``` file as a resource. This file needs to be created manually.
+
+```
+    smtg_target_add_plugin_resources(MyPlugin
+        RESOURCES
+            "resource/myplugin_editor.uidesc"
+    )
+```
+
+> A plug-in with a basic ```*.uidesc``` file can be created by using the ```VST 3 project generator```.
