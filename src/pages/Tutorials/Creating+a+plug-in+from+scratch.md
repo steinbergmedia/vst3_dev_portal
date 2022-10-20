@@ -8,6 +8,14 @@
 
 ---
 
+## Goal
+
+This tutorial provides a step by step guide for building a VST 3 plug-in's ```CMakeLists.txt``` from scratch. It covers the necessary steps like defining a plug-in version number, adding C++ source files, linking to the ```sdk``` target and setting platform specific options.
+
+> You can also use the [```VST 3 project generator```](https://github.com/steinbergmedia/vst3projectgenerator) which generates the ```CMakeLists.txt```.
+
+## Building the ```CMakeLists.txt```
+
 Make a new directory and name it like your new plug-in e.g. ```MyPlugin```. Afterwards create a ```CMakeLists.txt``` file inside the new directory and open it in a text editor. Add the following lines to it.
 
 Set the minimum required version of cmake. In this example ```3.15.0``` is sufficient.
