@@ -20,7 +20,7 @@ Make a new directory and name it like your new plug-in e.g. ```MyPlugin```. Afte
 
 Set the minimum required version of cmake. In this example ```3.15.0``` is sufficient.
 
-```
+```cmake
 cmake_minimum_required(VERSION 3.15.0)
 ```
 
@@ -28,7 +28,7 @@ cmake_minimum_required(VERSION 3.15.0)
 
 Name the project ```MyPlugin```, add a ```VERSION``` and an optional ```DESCRIPTION```.
 
-```
+```cmake
 project(MyPlugin
     VERSION 1.0.0
     DESCRIPTION "MyPlugin Effect"
@@ -39,7 +39,7 @@ project(MyPlugin
 
 Set the variable ```vst3sdk_SOURCE_DIR``` to the VST 3 SDK's directory. The directory ***must*** contain the root ```CMakeLists.txt``` of the SDK.  Add the SDK as a subdirectory and call ```smtg_enable_vst3_sdk``` right after.
 
-```
+```cmake
 set(vst3sdk_SOURCE_DIR /path/to/vst3sdk)
 
 add_subdirectory(${vst3sdk_SOURCE_DIR} ${PROJECT_BINARY_DIR}/vst3sdk)
@@ -48,7 +48,7 @@ smtg_enable_vst3_sdk()
 
 Add a plug-in library and its source files by using ```smtg_add_vst3plugin``` function.
 
-```
+```cmake
 smtg_add_vst3plugin(MyPlugin
     source/version.h
     source/myplugin_cids.h
@@ -62,7 +62,7 @@ smtg_add_vst3plugin(MyPlugin
 
 Link the VST 3 SDK ```sdk``` to the plug-in library.
 
-```
+```cmake
 target_link_libraries(MyPlugin
     PRIVATE
         sdk
@@ -71,7 +71,7 @@ target_link_libraries(MyPlugin
 
 Configure the plug-in version by calling ```smtg_target_configure_version_file```. This generates a temporary ```projectversion.h``` header which is automatically included into your project.
 
-```
+```cmake
 smtg_target_configure_version_file(MyPlugin)
 ```
 
@@ -88,7 +88,7 @@ For Windows it needs
 * an executable ```.../VST3PluginTestHost.exe``` to start the plug-in with in debug
 
 
-```
+```cmake
 if(SMTG_MAC)
     smtg_target_set_bundle(MyPlugin
         BUNDLE_IDENTIFIER org.mycompany.MyPlugin
@@ -118,7 +118,7 @@ endif()
 
 In order to add a ```VSTGUI``` editor to the plug-in, link to the ```vstgui_support``` target.
 
-```
+```cmake
 target_link_libraries(MyPlugin
         PRIVATE
             vstgui_support
@@ -127,7 +127,7 @@ target_link_libraries(MyPlugin
 
 Add a ```myplugin_editor.uisdesc``` file as a resource. This file needs to be created manually.
 
-```
+```cmake
     smtg_target_add_plugin_resources(MyPlugin
         RESOURCES
             "resource/myplugin_editor.uidesc"
