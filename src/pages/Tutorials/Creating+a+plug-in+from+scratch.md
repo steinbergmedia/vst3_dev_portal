@@ -10,15 +10,15 @@
 
 ## Goal
 
-This tutorial provides a step by step guide for building a VST 3 plug-in's ```CMakeLists.txt``` from scratch. It covers the necessary steps like defining a plug-in version number, adding C++ source files, linking to the ```sdk``` target and setting platform specific options.
+This tutorial provides a step-by-step guide for building a VST 3 plug-in's ```CMakeLists.txt``` from scratch. It covers the necessary steps, like defining a plug-in version number, adding C++ source files, linking to the ```sdk``` target, and setting platform-specific options.
 
 > You can also use the [```VST 3 project generator```](https://github.com/steinbergmedia/vst3projectgenerator) which generates the ```CMakeLists.txt```.
 
 ## Building the ```CMakeLists.txt```
 
-Make a new directory and name it like your new plug-in e.g. ```MyPlugin```. Afterwards create a ```CMakeLists.txt``` file inside the new directory and open it in a text editor. Add the following lines to it.
+Make a new directory, and name it like your new plug-in, e.g. ```MyPlugin```. Afterwards, create a ```CMakeLists.txt``` file inside the new directory, and open it in a text editor. Add the following lines to it.
 
-Set the minimum required version of cmake. In this example ```3.15.0``` is sufficient.
+Set the minimum required version of cmake. In this example, ```3.15.0``` is sufficient.
 
 ```cmake
 cmake_minimum_required(VERSION 3.15.0)
@@ -37,7 +37,7 @@ project(MyPlugin
 
 > See also: https://cmake.org/cmake/help/latest/command/project.html
 
-Set the variable ```vst3sdk_SOURCE_DIR``` to the VST 3 SDK's directory. The directory ***must*** contain the root ```CMakeLists.txt``` of the SDK.  Add the SDK as a subdirectory and call ```smtg_enable_vst3_sdk``` right after.
+Set the variable ```vst3sdk_SOURCE_DIR``` to the VST 3 SDK's directory. The directory ***must*** contain the root ```CMakeLists.txt``` of the SDK.  Add the SDK as a subdirectory, and call ```smtg_enable_vst3_sdk``` right after this.
 
 ```cmake
 set(vst3sdk_SOURCE_DIR /path/to/vst3sdk)
@@ -46,7 +46,7 @@ add_subdirectory(${vst3sdk_SOURCE_DIR} ${PROJECT_BINARY_DIR}/vst3sdk)
 smtg_enable_vst3_sdk()
 ```
 
-Add a plug-in library and its source files by using ```smtg_add_vst3plugin``` function.
+Add a plug-in library and its source files by using the ```smtg_add_vst3plugin``` function.
 
 ```cmake
 smtg_add_vst3plugin(MyPlugin
@@ -69,22 +69,22 @@ target_link_libraries(MyPlugin
 )
 ```
 
-Configure the plug-in version by calling ```smtg_target_configure_version_file```. This generates a temporary ```projectversion.h``` header which is automatically included into your project.
+Configure the plug-in version by calling ```smtg_target_configure_version_file```. This generates a temporary ```projectversion.h``` header, which is automatically included in your project.
 
 ```cmake
 smtg_target_configure_version_file(MyPlugin)
 ```
 
-Define platform specific settings. 
+Define platform-specific settings. 
 
-For macOS this includes
-* the ```BUNDLE_IDENTIFIER``` being set to ```org.mycompany.myplugin```,
-* a proper ```COMPANY_NAME``` being set to ```My Company``` and
+For macOS, this includes
+* setting the ```BUNDLE_IDENTIFIER``` to ```org.mycompany.myplugin```,
+* setting a proper ```COMPANY_NAME``` to ```My Company``` and
 * an executable ```.../VST3PluginTestHost.app``` to start the plug-in with in debug
 
-For Windows it needs
+For Windows, it needs
 * a resource file ```resource/win32resource.rc```,
-* the ```VS_STARTUP_PROJECT``` property being set to ```MyPlugin``` and
+* setting the ```VS_STARTUP_PROJECT``` to ```MyPlugin``` and
 * an executable ```.../VST3PluginTestHost.exe``` to start the plug-in with in debug
 
 
