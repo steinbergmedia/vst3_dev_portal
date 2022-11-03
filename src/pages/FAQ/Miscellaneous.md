@@ -112,7 +112,7 @@ You have the Validator command line which can be automatically called after you 
 
 ## Q: How can I allow to create Symbolic Link on Windows?
 
-You have to adapt your Windows right access to allow creation of symbolic links for VST3 plug-ins: [Check HERE!](../Getting+Started/Preparation+on+Windows.md)
+You have to adapt your Windows right access to allow creation of symbolic links for VST 3 plug-ins: [Check HERE!](../Getting+Started/Preparation+on+Windows.md)
 
 ## Q: My generated **VST 3** plug-in is not visible in my preferred host?
 

@@ -21,7 +21,7 @@
   - New IoModes enum : Steinberg::Vst::IoModes::kOfflineProcessing used with setIoMode when the plug-in is used in an offline processing context
 - Plug-ins Wrappers:
   - New VST 3 - VST 2.x Wrapper : by just adding small initializing code, you can provide a VST 2.x version of your **VST 3 Plug-in**
-  - New VST 3 - Audio Unit Wrapper with just a few build settings, you can provide AU support with your VST 3 Plug-in
+  - New VST 3 - Audio Unit Wrapper with just a few build settings, you can provide AU support with your VST 3 plug-in
 - Samples:
   - New **VST 3 Plug-ins** examples: ADelay plug-in, mda **VST 3 Plug-ins** (thanks Paul Kellet and Arne Scheffler)
   - Remove Visual Studio 2003 projects

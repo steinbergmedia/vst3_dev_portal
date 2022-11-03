@@ -39,7 +39,7 @@
   - New VST 3 plug-ins example:
     - New "AGain Sample Accurate" showing sample accurate parameter changes processing
   - Fix editorHost when launch without arguments
-  - Fix crash in VST3Inspector when no VST 3 plugins available
+  - Fix crash in VST3Inspector when no VST 3 plug-ins available
   - Fix warnings for mda plug-ins
   - Fix the build with gcc 11
 - Helpers classes:

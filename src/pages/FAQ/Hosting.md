@@ -18,7 +18,7 @@ By default the host could return *kNotImplemented* if it does not implement a sp
 ## Q: Can the host expect ClassID to be globally unique or should it expect different modules to reuse class IDs?
 
 You must treat the Class ID as globally unique.
-If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by Cubase for example). It should be only one VST3 plugin registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.
+If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by Cubase for example). It should be only one VST 3 plug-in registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.
 
 ## Q: Do all version updates for a certain plugin require a new classID?
 

@@ -29,7 +29,7 @@ If this interface is implemented by the edit controller, the host will call this
 
 ``` c++
 //------------------------------------------------------------------------
-// here an example of how a VST 3 Plug-in could support this IMidiLearn interface.
+// here an example of how a VST 3 plug-in could support this IMidiLearn interface.
 // we need to define somewhere the iids:
   
 //in MyController class declaration

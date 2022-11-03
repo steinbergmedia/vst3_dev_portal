@@ -90,7 +90,7 @@ You can use it as a command line tool or use the cmake executable with GUI. cmak
 >**Specific on Windows**
 >
 >---
-> You have to adapt your Windows right access to allow creation of symbolic links for VST3 plug-ins: [Check HERE!](./Preparation+on+Windows.md)
+> You have to adapt your Windows right access to allow creation of symbolic links for VST 3 plug-ins: [Check HERE!](./Preparation+on+Windows.md)
 
 ## Get a VST 3 host application
 

@@ -21,7 +21,7 @@ For a VST3 Host the important information is the UID of your (processor) plug-in
 
 ## VST2 and VST3 version of your Plug-in have the same UID
 
-It is possible to reuse for a VST3 Plug-in the same generated UID of a VST2 version (based on 4 characters + its name), this should work with most VST3 Hosts. Check the function which generates a VST3 UID from a VST2 UID [here](../FAQ/Compatibility+with+VST+2.x+or+VST+1.md#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one) and reuse this value as UID for the VST3 plug-in (processor component UID)
+It is possible to reuse for a VST 3 plug-in the same generated UID of a VST2 version (based on 4 characters + its name), this should work with most VST3 Hosts. Check the function which generates a VST3 UID from a VST2 UID [here](../FAQ/Compatibility+with+VST+2.x+or+VST+1.md#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one) and reuse this value as UID for the VST 3 plug-in (processor component UID)
 
 ---
 
