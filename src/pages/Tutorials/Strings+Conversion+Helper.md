@@ -14,6 +14,8 @@ The SDK provides some helpers functions to convert from UTF16 (use in VST 3 inte
 
 Here some code examples:
 
+---
+
 ## Convert a String128 string to an UTF-8 string
 
 ``` c++
@@ -32,6 +34,8 @@ if (hostApp)
     }
 }
 ```
+
+---
 
 ## Convert an UTF-8 string to a String128 string
 

@@ -17,9 +17,13 @@ For a VST3 Host the important information is the UID of your (processor) plug-in
 
 2 scenarios are possible: The VST3 and the VST2 version of your plug-in have the same UID or not.
 
+---
+
 ## VST2 and VST3 version of your Plug-in have the same UID
 
 It is possible to reuse for a VST3 Plug-in the same generated UID of a VST2 version (based on 4 characters + its name), this should work with most VST3 Hosts. Check the function which generates a VST3 UID from a VST2 UID [here](../FAQ/Compatibility+with+VST+2.x+or+VST+1.md#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one) and reuse this value as UID for the VST3 plug-in (processor component UID)
+
+---
 
 ## VST2 and VST3 version of your Plug-in have not the same UID
 
@@ -33,11 +37,15 @@ The **Compatibility** json array in the [moduleinfo.json](../Technical+Documenta
 
 The plug-in should implement this interface (*pluginterfaces/base/iplugincompatibility.h*) when a [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file cannot be used (when no bundle is available for example). Check [here](../Technical+Documentation/Change+History/3.7.5/ModuleInfo.md).
 
+---
+
 ## Preset/Project compatibility VST2 <-> VST3
 
 Check the FAQ [here](../FAQ/Compatibility+with+VST+2.x+or+VST+1.md#q-how-can-i-support-projects-which-were-saved-with-the-vst-2-version-of-my-plug-in) which shows how to use the helper function **VST3::tryVst2StateLoad** and read a VST2 state into a VST3 Plug-in.
 
 It is possible to write back for VST2 backward compatibility by using the helper function **VST3::writeVst2State** (*public.sdk/source/vst/utility/vst2persistence.h*).
+
+---
 
 ## Parameters compatibility
 

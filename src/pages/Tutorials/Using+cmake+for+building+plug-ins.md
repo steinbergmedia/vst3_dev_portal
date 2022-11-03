@@ -28,6 +28,8 @@ The SDK provides a set of cmake files allowing you to compile the included sampl
 - Download cmake from: <https://cmake.org> or use a package manager for your OS (See [How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)).
 - You can use the command line or the cmake editor ([cmake-gui](https://cmake.org/download/)).
 
+---
+
 ## Command line for Windows
 
 Example for building **Microsoft Studio 17 2022** solution:
@@ -46,6 +48,8 @@ cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_US
 // note: you can find the string definition for different Visual Studio Generators in the cmake online documentation
 ```
 
+---
+
 ## Command line for macOS
 
  Example for building **Xcode** project:
@@ -57,6 +61,8 @@ cd build
 /Applications/CMake.app/Content/bin/cmake -G"Xcode" "../vst3sdk"
 ```
 
+---
+
 ## On Linux with QtCreator
 
 You can use **QtCreator** 2.3.1 (or higher)
@@ -64,6 +70,8 @@ You can use **QtCreator** 2.3.1 (or higher)
 - start QtCreator 2.3.2
 - open the CMakeLists.txt located at the top of the **VST3_SDK** folder
 - click on the menu Build->Run CMake
+
+---
 
 ## Use of cmake-gui
 
@@ -94,6 +102,8 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/clang-DCMAKE_CXX_COMPILER=/usr/bin/clang++
 cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 ```
 
+---
+
 ## Available SMTG cmake options
 
 - **SMTG_AAX_SDK_PATH**: Here you can define where the AAX SDK is located (if needed)
@@ -119,6 +129,8 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 - **SMTG_RENAME_ASSERT**: Rename ASSERT to SMTG_ASSERT to avoid conflicts with 3rd party libraries (default ON)
 - **SMTG_RUN_VST_VALIDATOR**: Run the VST validator on VST 3 plug-ins each time they are built (default ON)
 - **SMTG_USE_STATIC_CRT**: Use static CRuntime on Windows (option /MT) (default OFF) (Windows only)
+
+---
 
 ## Using your IDE for compiling the examples
 

@@ -14,6 +14,8 @@ This tutorial provides a step-by-step guide for building a VST 3 plug-in's ```CM
 
 > You can also use the [```VST 3 project generator```](https://github.com/steinbergmedia/vst3projectgenerator) which generates the ```CMakeLists.txt```.
 
+---
+
 ## Building the ```CMakeLists.txt```
 
 Make a new directory, and name it like your new plug-in, e.g. ```MyPlugin```. Afterwards, create a ```CMakeLists.txt``` file inside the new directory, and open it in a text editor. Add the following lines to it.
@@ -113,6 +115,8 @@ elseif(SMTG_WIN)
     endif()
 endif()
 ```
+
+---
 
 ## Add plug-in GUI editor by using VSTGUI
 
