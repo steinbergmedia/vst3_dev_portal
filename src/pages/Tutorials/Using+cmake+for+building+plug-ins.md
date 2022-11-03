@@ -15,6 +15,8 @@
 
 ---
 
+## Goal
+
 This tutorial explains how to use *cmake* with **VST 3 SDK**.
 
 ---

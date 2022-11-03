@@ -8,6 +8,8 @@
 
 ---
 
+## Goal
+
 Here you can find some informations about how to write a VST3 version of a plug-in which already exists as VST2 version.
 How to guaranty that a Host will correctly replace the old VST2 by the new VST3 version of your plug-in.
 

@@ -8,6 +8,8 @@
 
 ---
 
+## Goal
+
 This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**. These include plug-ins like simple DSP effects (Gain, compressor, delay, ...), synths instruments and some plug-ins showing how to handle some specific **VST 3** features (Note Expression, Program Change, channel info context, ...).
 
 They can be loaded into **VST 3** hosts like Cubase, WaveLab, ...

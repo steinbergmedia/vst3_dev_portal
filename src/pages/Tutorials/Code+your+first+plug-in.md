@@ -8,6 +8,8 @@
 
 ---
 
+## Goal
+
 Following the previous tutorial [Generate a new plug-in with the Project Generator App](Generate+new+plug-in+with+Project+Generator.md), this tutorial explains how to code an audio plug-in and how to add some basic features.
 
 The artifact will be an audio plug-in that can compute a gain to an audio signal and can be loaded into VST 3 hosts like **Cubase**, **WaveLab**, ...

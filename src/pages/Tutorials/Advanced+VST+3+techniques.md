@@ -8,6 +8,8 @@
 
 ---
 
+## Goal
+
 In this tutorial you will learn:
 
 - How to add nearly sample accurate parameter changes to an audio effect

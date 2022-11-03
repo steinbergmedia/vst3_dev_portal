@@ -60,6 +60,10 @@ This guideline explains what could be done for creating a VST3 Plug-in replacing
 
 The SDK provides some helpers functions to convert from UTF16 (use in VST 3 interfaces) to UTF8 (used by std::string).
 
+## [Creating a cmake plug-in project from scratch](Creating+a+plug-in+from+scratch.md)
+
+This tutorial provides a step-by-step guide for building a VST 3 plug-in's ```CMakeLists.txt``` from scratch.
+
 ## [Creating a plug-in from the Helloworld template](Creating+a+plug-in+from+the+Helloworld+template.md)
 
 This tutorial explains how to create a new audio plug-in from the Helloworld template included in the **VST 3 SDK**.

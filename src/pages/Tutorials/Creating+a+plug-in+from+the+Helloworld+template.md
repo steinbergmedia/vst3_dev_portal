@@ -12,6 +12,8 @@
 
 ---
 
+## Goal
+
 This tutorial explains how to create a new audio plug-in from the Helloworld template included in the **VST 3 SDK**.
 
 ---

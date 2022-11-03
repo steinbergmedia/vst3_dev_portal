@@ -8,6 +8,8 @@
 
 ---
 
+## Goal
+
 This tutorial explains how to use silence flags.
 
 ---

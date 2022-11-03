@@ -8,6 +8,8 @@
 
 ---
 
+## Goal
+
 This tutorial explains how to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md). [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) comes with a *WYSIWYG* editor that allows you to create stunning user interfaces for your plug-in.
 
 ---
