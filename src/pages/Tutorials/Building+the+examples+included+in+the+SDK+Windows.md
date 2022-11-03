@@ -54,6 +54,8 @@ msbuild.exe vstsdk.sln
 cmake --build . --config Release
 ```
 
+---
+
 ## Building using cmake-gui
 
 - Start the cmake-gui application which is part of the cmake installation (<https://cmake.org/download/>)
