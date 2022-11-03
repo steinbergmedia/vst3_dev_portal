@@ -1,6 +1,6 @@
 >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.7.6(2022/09/05)
+># Version 3.7.6 (2022/09/05)
 
 ## Version 3.7.6 (2022/09/05)
 
@@ -12,8 +12,8 @@ But implementations may have to be adopted especially on Windows where the tchar
 There are simple casting functions in *pluginterfaces/base/fstrdefs.h* (see **wscast**) for easy adoption.
 
 - Interface changes:
-  - new [architecture folder for Windows Arm64EC and Arm64 Classic](../Technical+Documentation/Locations+Format/Plugin+Format.html#for-the-windows-platform)
-  - new macro **SMTG_HIDDEN_SYMBOL** in *pluginterfaces/base/fplatform.h*
+  - New [architecture folder for Windows Arm64EC and Arm64 Classic](../Technical+Documentation/Locations+Format/Plugin+Format.html#for-the-windows-platform)
+  - New macro **SMTG_HIDDEN_SYMBOL** in *pluginterfaces/base/fplatform.h*
   
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) Bugfix update [4.11.1](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_11_1)
   
@@ -22,7 +22,7 @@ There are simple casting functions in *pluginterfaces/base/fstrdefs.h* (see **ws
     - **k70_3** => L R C Ls Rs Sl Sr Tfl Tfr Trc
     - **k72_3** => L R C LFE Ls Rs Sl Sr Tfl Tfr Trc LFE2
 - Documentation
-  - new tutorial: [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](../Tutorials/Guideline+for+VST3+replacing+VST2.md)
+  - New tutorial: [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](../Tutorials/Guideline+for+VST3+replacing+VST2.md)
 - cmake
   - New file *SMTG_AddVST3AuV2.cmake*:
     - Add AUv2 target for a VST 3 plug-in
