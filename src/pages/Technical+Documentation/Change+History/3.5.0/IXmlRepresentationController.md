@@ -133,9 +133,9 @@ Explanation:
 - priority column:
   - specifies the scan order by the host. Path #1 will be checked first, #8 will be checked last. The first XML found will be used and overrides the others.
 - type of column:
-  - user : specific to the currently logged in user
-  - shared : for all users of this machine
-  - factory : installed by Plug-in or App installer with the Plug-in
+  - user: specific to the currently logged in user
+  - shared: for all users of this machine
+  - factory: installed by Plug-in or App installer with the Plug-in
 - $COMPANY and $PLUGIN-NAME folder names contain only allowed characters for file naming
   - replace characters "\\*?/:.<>|\\"\t\n\r" by "_"
 - $UID is the Unique ID of the processor in its string representation

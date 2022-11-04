@@ -107,14 +107,14 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 ## Available SMTG cmake options
 
 - **SMTG_AAX_SDK_PATH**: Here you can define where the AAX SDK is located (if needed)
-- **SMTG_ADD_VST3_HOSTING_SAMPLES**: Add VST 3 hosting samples to the solution (default ON)
-- **SMTG_ADD_VST3_PLUGINS_SAMPLES**: Add VST 3 plug-in samples to the project (default ON)
+- **SMTG_ADD_VST3_HOSTING_SAMPLES**: Add **VST 3** hosting samples to the solution (default ON)
+- **SMTG_ADD_VST3_PLUGINS_SAMPLES**: Add **VST 3** plug-in samples to the project (default ON)
 - **SMTG_ADD_VSTGUI**: Add VSTGUI support (default ON)
 - **SMTG_BUILD_UNIVERSAL_BINARY**: Build universal binary (32 & 64 bit) (Mac only)
 - **SMTG_COREAUDIO_SDK_PATH**: Here you can define where the COREAUDIO SDK is located (Mac only, if needed)
-- **SMTG_CREATE_BUNDLE_FOR_WINDOWS**: Create bundle on Windows for the VST 3 plug-ins (new since 3.6.10! Windows only) (default ON)
+- **SMTG_CREATE_BUNDLE_FOR_WINDOWS**: Create bundle on Windows for the **VST 3** plug-ins (new since 3.6.10! Windows only) (default ON)
 - **SMTG_CREATE_MODULE_INFO**: Create the moduleinfo.json file (default ON)
-- **SMTG_CREATE_PLUGIN_LINK**: Create symbolic link for each VST 3 plug-in in ${VST3_FOLDER_NAME} folder (you need to have Administrator rights on Windows or change the Local Group Policy to allow the creation of symbolic links) (default ON)
+- **SMTG_CREATE_PLUGIN_LINK**: Create symbolic link for each **VST 3** plug-in in ${VST3_FOLDER_NAME} folder (you need to have Administrator rights on Windows or change the Local Group Policy to allow the creation of symbolic links) (default ON)
 - **SMTG_CREATE_VST2_AGAIN_SAMPLE_VERSION**: Allows you to create the VST 2 version of the Sample Plug-in AGain, be sure that you have copied the VST 2 interfaces into the folder VST_SDK/VST3_SDK/pluginterfaces/vst2.x (default OFF)
 - **SMTG_CUSTOM_BINARY_LOCATION**: Customize output location for binaries
 - **SMTG_CXX_STANDARD**: C++ standard version used for plugins: 14, 17, 20
@@ -123,11 +123,11 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 - **SMTG_ENABLE_USE_OF_JACK**: Allows you to create the audiohost application using Jack (default OFF)
 - **SMTG_MDA_VST3_VST2_COMPATIBLE**: Build the MDA examples as a replacement for their VST 2 counterpart (default ON)
 - **SMTG_IOS_DEVELOPMENT_TEAM**: Needed for building the InterAppAudio and AUv3 examples for iOS (Mac only)
-- **SMTG_MYPLUGINS_SRC_PATH**: Here you can add your VST 3 plug-ins folder
-- **SMTG_PLUGIN_TARGET_PATH**: Here you can redefine the VST 3 plug-ins folder
-- **SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON**: use FOLDERID_UserProgramFilesCommon as VST 3 target path (Windows only) (default ON)
+- **SMTG_MYPLUGINS_SRC_PATH**: Here you can add your **VST 3** plug-ins folder
+- **SMTG_PLUGIN_TARGET_PATH**: Here you can redefine the **VST 3** plug-ins folder
+- **SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON**: use FOLDERID_UserProgramFilesCommon as **VST 3** target path (Windows only) (default ON)
 - **SMTG_RENAME_ASSERT**: Rename ASSERT to SMTG_ASSERT to avoid conflicts with 3rd party libraries (default ON)
-- **SMTG_RUN_VST_VALIDATOR**: Run the VST validator on VST 3 plug-ins each time they are built (default ON)
+- **SMTG_RUN_VST_VALIDATOR**: Run the VST validator on **VST 3** plug-ins each time they are built (default ON)
 - **SMTG_USE_STATIC_CRT**: Use static CRuntime on Windows (option /MT) (default OFF) (Windows only)
 
 ---

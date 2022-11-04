@@ -17,7 +17,7 @@
 
 ## Introduction
 
-The SDK includes some Plug-ins implementation examples. The Legendary **AGain** and **ADelay**, thanks Paul Kellet the Open-source **mda** Plug-ins, a basic "Note Expression Synth" supporting "**Note Expression Event**", an example of **pitchnames** support Plug-in, a **VST 3 Host Checker** which checks if a host is VST 3 compliant and more...
+The SDK includes some Plug-ins implementation examples. The Legendary **AGain** and **ADelay**, thanks Paul Kellet the Open-source **mda** Plug-ins, a basic "Note Expression Synth" supporting "**Note Expression Event**", an example of **pitchnames** support Plug-in, a **VST 3 Host Checker** which checks if a host is **VST 3** compliant and more...
 
 >![what_if_2](../../resources/what_is_2.jpg)
 >
@@ -48,7 +48,7 @@ Classes:
 
 ## AGain
 
-The SDK includes an AGain plug-in which is a very simple **VST 3 Plug-in**. This plug-in:
+The SDK includes an AGain plug-in which is a very simple **VST 3** plug-in. This plug-in:
 
 - is multichannel compatible
 - supports bypass processing
@@ -115,43 +115,43 @@ Classes:
 ## mda plug-ins
 
 - Effects (stereo to stereo plug-ins):
-  - Ambience : Reverb
-  - Bandisto : Multi-band Distortion
-  - BeatBox : Drum Replacer
-  - Combo : Amp and Speaker Simulator
-  - DeEsser : High frequency Dynamics Processor
-  - Degrade : Sample quality reduction
-  - Delay : Simple stereo delay with feedback tone control
-  - Detune : Simple up/down pitch shifting thickener
-  - Dither : Range of dither types including noise shaping
-  - DubDelay : Delay with feedback saturation and time/pitch modulation
-  - Dynamics : Compressor / Limiter / Gate
-  - Image : Stereo image adjustment and M-S matrix
-  - Leslie : Rotary speaker simulator
-  - Limiter : Opto-electronic style limiter
-  - Loudness : Equal loudness contours for bass EQ and mix correction
-  - MultiBand : Multi-band compressor with M-S processing modes
-  - Overdrive : Soft distortion
-  - RePsycho! : Drum loop pitch changer
-  - RezFilter : Resonant filter with LFO and envelope follower
-  - RingMod : Simple Ring Modulator
+  - Ambience: Reverb
+  - Bandisto: Multi-band Distortion
+  - BeatBox: Drum Replacer
+  - Combo: Amp and Speaker Simulator
+  - DeEsser: High frequency Dynamics Processor
+  - Degrade: Sample quality reduction
+  - Delay: Simple stereo delay with feedback tone control
+  - Detune: Simple up/down pitch shifting thickener
+  - Dither: Range of dither types including noise shaping
+  - DubDelay: Delay with feedback saturation and time/pitch modulation
+  - Dynamics: Compressor / Limiter / Gate
+  - Image: Stereo image adjustment and M-S matrix
+  - Leslie: Rotary speaker simulator
+  - Limiter: Opto-electronic style limiter
+  - Loudness: Equal loudness contours for bass EQ and mix correction
+  - MultiBand: Multi-band compressor with M-S processing modes
+  - Overdrive: Soft distortion
+  - RePsycho!: Drum loop pitch changer
+  - RezFilter: Resonant filter with LFO and envelope follower
+  - RingMod: Simple Ring Modulator
   - Round Panner: 3D panner
-  - Shepard : Continuously rising/falling tone generator
-  - SpecMeter : Stereo 13 Bands spectral Meter
-  - Splitter : Frequency / level crossover for setting up dynamic processing
+  - Shepard: Continuously rising/falling tone generator
+  - SpecMeter: Stereo 13 Bands spectral Meter
+  - Splitter: Frequency / level crossover for setting up dynamic processing
   - Stereo Simulator: Haas delay and comb filtering
   - Sub-Bass Synthesizer: Several low frequency enhancement methods
-  - TalkBox : High resolution vocoder
-  - TestTone : Signal generator with pink and white noise, impulses and sweeps
-  - Thru-Zero Flanger : Classic tape-flanging simulation
-  - Tracker : Pitch tracking oscillator, or pitch tracking EQ
+  - TalkBox: High resolution vocoder
+  - TestTone: Signal generator with pink and white noise, impulses and sweeps
+  - Thru-Zero Flanger: Classic tape-flanging simulation
+  - Tracker: Pitch tracking oscillator, or pitch tracking EQ
 - Instruments (1 Event input, 1 stereo Audio output):
-  - DX10 : Sounds similar to the later Yamaha DX synths including the heavy bass but with a warmer, cleaner tone.
-  - EPiano : Simple EPiano
-  - JX10 : The plug-in is designed for high quality (lower aliasing than most soft synths) and low processor usage
-  - Piano : Not designed to be the best sounding piano in the world, but boasts extremely low CPU and memory usage.
+  - DX10: Sounds similar to the later Yamaha DX synths including the heavy bass but with a warmer, cleaner tone.
+  - EPiano: Simple EPiano
+  - JX10: The plug-in is designed for high quality (lower aliasing than most soft synths) and low processor usage
+  - Piano: Not designed to be the best sounding piano in the world, but boasts extremely low CPU and memory usage.
 
-Based on the OpenSource mda plug-ins (<http://mda.smartelectronix.com/>), this set of plug-ins demonstrates how wrap DS- code in a **VST 3** Plug-in.
+Based on the OpenSource mda plug-ins (<http://mda.smartelectronix.com/>), this set of plug-ins demonstrates how wrap DS- code in a **VST 3** plug-in.
 
 Check the folder *"public.sdk/samples/vst/mda-vst3"* of the SDK!
 

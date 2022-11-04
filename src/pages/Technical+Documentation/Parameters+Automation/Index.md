@@ -62,7 +62,7 @@ The **VST 3** interfaces suggest a normalized value representation for a part of
 
 Although values are transmitted in a normalized format, the host needs to know some details of the parameter's displayed GUI representation. When editing automation data, for example, the host must know the nature of a parameter expressed in its 'step count' (see [Steinberg::Vst::ParameterInfo::stepCount](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ac1efeff62e4ba9aea101c3327e0b5c4d)).
 
-**Step count semantics :**
+**Step count semantics:**
 
 - **0**: A continuous parameter. Any normalized value has an exact mapping (0 = there are no steps between the values)
 - **1**: A discrete parameter with 2 states like [on/off] [yes/no] etc. (1 = there is one step between these states)
@@ -73,8 +73,8 @@ Although values are transmitted in a normalized format, the host needs to know s
 
 The controller and the processor have to work with normalized parameter values.
 
-- Step count 0 : Continuous parameters simply need to be mapped accordingly
-- Step count n : Discrete parameters need a little bit more care
+- Step count 0: Continuous parameters simply need to be mapped accordingly
+- Step count n: Discrete parameters need a little bit more care
 
   - **Discrete Value => Normalize**
   ``` c++

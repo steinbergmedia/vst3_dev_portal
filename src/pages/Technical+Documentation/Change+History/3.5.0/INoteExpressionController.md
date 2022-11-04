@@ -129,7 +129,7 @@ tresult PLUGIN_API MyExampleController::getNoteExpressionInfo (int32 busIndex, i
 
         info.flags = NoteExpressionTypeInfo::kIsBipolar; // event is bipolar (centered)
 
-        // for Tuning the convert functions are : plain = 240 * (norm - 0.5); norm = plain / 240 + 0.5;
+        // for Tuning the convert functions are: plain = 240 * (norm - 0.5); norm = plain / 240 + 0.5;
         // we want to support only +/- one octave
         double kNormTuningOneOctave = 12.0 / 240.0;
 
@@ -222,7 +222,7 @@ tresult MyExampleProcessor::process (ProcessData& data)
                     //-----------------------
                     case Event::kNoteOffEvent:
                     {
-                        // here we have to release the voice associated to this id : e.noteOff.noteId
+                        // here we have to release the voice associated to this id: e.noteOff.noteId
                         // Note that kNoteExpressionValueEvent event could be sent after the note is in released
                         break;
                     }

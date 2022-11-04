@@ -2,7 +2,7 @@
 >
 ># Preparation on Windows
 
-Generated VST 3 Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST 3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md) (**C:\Program Files\Common Files\VST3**). In this folder it is not directly possible to write these symbolic links if you are allowed to do this (not Administrator for example), to solve this problem you have 3 solutions:
+Generated **VST 3** Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST 3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md) (**C:\Program Files\Common Files\VST3**). In this folder it is not directly possible to write these symbolic links if you are allowed to do this (not Administrator for example), to solve this problem you have 3 solutions:
 
 ## Solution 1
 
@@ -14,7 +14,7 @@ If you do not want to create these links, call [cmake](https://cmake.org/) with 
 
 ## Solution 2
 
-You could choose (which is the default) the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.html) for VST 3 plug-ins which should have no right access issue as normal user, call [cmake](https://cmake.org/) with this parameter:
+You could choose (which is the default) the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.html) for **VST 3** plug-ins which should have no right access issue as normal user, call [cmake](https://cmake.org/) with this parameter:
 
 ``` c++
 -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1

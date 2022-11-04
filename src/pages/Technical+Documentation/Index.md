@@ -86,7 +86,7 @@ Some useful graphical call sequences a **VST 3** compliant host should follow.
 
 ## [VST 3 Locations / Format](Locations+Format/Index.md)
 
-Formats definition of a **VST 3 Plug-in** and its preset and where they are located on different platforms.
+Formats definition of a **VST 3** plug-in and its preset and where they are located on different platforms.
 
 ## [About MIDI in VST 3](About+MIDI/Index.md)
 
@@ -96,11 +96,11 @@ Unlike in **VST 2**, **MIDI** is not included in **VST 3**.
 
 ## [(3.0.0) Interfaces supported by the plug-in](Change+History/3.0.0/Plug+in+Interfaces.md)
 
-List of interfaces supported/implemented by the plug-in in VST 3.0.0
+List of interfaces supported/implemented by the plug-in in **VST 3.0.0**
 
 ## [(3.0.0) Interfaces supported by the host](Change+History/3.0.0/Host+Interfaces.md)
 
-List of interfaces supported/implemented by the host in VST 3.0.0
+List of interfaces supported/implemented by the host in **VST 3.0.0**
 
 ## [(3.0.1) Parameter MIDI Mapping](Change+History/3.0.1/IMidiMapping.md)
 
@@ -144,7 +144,7 @@ This allows the host to start a parameter editing action which can generate othe
 
 ## [(3.6.0) iOS Inter-App Audio](Change+History/3.6.0/IAA.md)
 
-iOS InterApp-Audio application out of your **VST 3 plug-in**.
+iOS InterApp-Audio application out of your **VST 3** plug-in.
 
 ## [(3.6.0) Preset Meta-Information](Change+History/3.6.0/IStreamAttributes.md)
 

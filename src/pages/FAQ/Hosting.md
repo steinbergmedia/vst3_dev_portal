@@ -18,7 +18,7 @@ By default the host could return *kNotImplemented* if it does not implement a sp
 ## Q: Can the host expect ClassID to be globally unique or should it expect different modules to reuse class IDs?
 
 You must treat the Class ID as globally unique.
-If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by Cubase for example). It should be only one VST 3 plug-in registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.
+If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by Cubase for example). It should be only one **VST 3** plug-in registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.
 
 ## Q: Do all version updates for a certain plugin require a new classID?
 
@@ -36,7 +36,7 @@ The Host should be able to handle the case when no *IEditController* is availabl
 
 ## Q: Should the host support plugins that don't have IPlugView (*IEditController::createView*() fails or *IPlugView::isPlatformTypeSupported*() returns false)?
 
-A plug-in don't need to have a custom editor. See the examples in the SDK. Many of them don't have a custom editor. This was true for VST2 too. So the host have to support these plugins without dedicated UI, but it could provide a generic UI.
+A plug-in don't need to have a custom editor. See the examples in the SDK. Many of them don't have a custom editor. This was true for **VST 2** too. So the host have to support these plugins without dedicated UI, but it could provide a generic UI.
 
 ## Q: What is allowed to change for a given parameter (*ParamID*)? Name, number of steps, automatable or not, which unit it is part of?
 

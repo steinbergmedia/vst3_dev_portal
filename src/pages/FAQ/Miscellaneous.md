@@ -36,7 +36,7 @@ if (component->setActive (true) != kResultOK)
 
 ## Q: Which version of Steinberg Sequencers support VST 3?
 
-In order to load **VST 3 plug-ins** you need at least :
+In order to load **VST 3** plug-ins you need at least:
 
 - For VST 3.0.0 **Cubase**/**Nuendo** 4.1.2 is needed.
 - For VST 3.0.1 features **Cubase** 4.2 is needed.
@@ -74,7 +74,7 @@ No, not before the plug-in is instantiated, there is no way to ask the factory a
 
 ## Q: Which version of Steinberg Sequencers support [VST 3 Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)?
 
-In order to use Note Expression with **VST 3 plug-ins** you need at least Cubase/Nuendo 6.0.
+In order to use Note Expression with **VST 3** plug-ins you need at least Cubase/Nuendo 6.0.
 
 ## Q: When compiling for Mac AudioUnit, I have a compiler error in AUCarbonViewBase.cpp. What can I do?
 
@@ -112,13 +112,13 @@ You have the Validator command line which can be automatically called after you 
 
 ## Q: How can I allow to create Symbolic Link on Windows?
 
-You have to adapt your Windows right access to allow creation of symbolic links for VST 3 plug-ins: [Check HERE!](../Getting+Started/Preparation+on+Windows.md)
+You have to adapt your Windows right access to allow creation of symbolic links for **VST 3** plug-ins: [Check HERE!](../Getting+Started/Preparation+on+Windows.md)
 
 ## Q: My generated **VST 3** plug-in is not visible in my preferred host?
 
 If your plug-in is visible in the [VST 3 plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) but not in your DAW, this is maybe due to the fact:
 
-- this host is not supporting VST3! Check the vendor ([known list of VST3 host](../What+is+VST/Use+cases.md#examples-of-vst-3-host-applications))
+- this host is not supporting **VST 3**! Check the vendor ([known list of VST 3 host](../What+is+VST/Use+cases.md#examples-of-vst-3-host-applications))
 - this host does not scan on Windows the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.html).
 You can try to use the main [VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.html) by setting the cmake variable when you generate the project:
 

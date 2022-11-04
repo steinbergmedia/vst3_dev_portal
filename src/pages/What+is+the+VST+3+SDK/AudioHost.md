@@ -11,7 +11,7 @@
 ## AudioHost
 
 As Cross-platform source code:
-Simple cross-platform (only tested on Linux) host application allowing you to register a VST 3 plug-in with Jack Server. First, you have to download the Jack Audio SDK and application server (<http://www.jackaudio.org>).
+Simple cross-platform (only tested on Linux) host application allowing you to register a **VST 3** plug-in with Jack Server. First, you have to download the Jack Audio SDK and application server (<http://www.jackaudio.org>).
 
 - Windows (not tested):
 
@@ -20,12 +20,12 @@ Simple cross-platform (only tested on Linux) host application allowing you to re
 ```
 
 - macOS (not tested)
-- Linux: 
+- Linux:
 
 ``` c++
 audiohost PATH_TO_PLUGIN
 ```
 
-On Windows and macOS, you can also drag and drop a **VST 3 plug-in** on the executable via Explorer/Finder.
+On Windows and macOS, you can also drag and drop a **VST 3** plug-in on the executable via Explorer/Finder.
 
 Check the folder *"public.sdk/samples/vst-hosting/audiohost"* of the SDK!

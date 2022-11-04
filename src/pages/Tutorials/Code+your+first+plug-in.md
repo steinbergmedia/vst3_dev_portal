@@ -12,7 +12,7 @@
 
 Following the previous tutorial [Generate a new plug-in with the Project Generator App](Generate+new+plug-in+with+Project+Generator.md), this tutorial explains how to code an audio plug-in and how to add some basic features.
 
-The artifact will be an audio plug-in that can compute a gain to an audio signal and can be loaded into VST 3 hosts like **Cubase**, **WaveLab**, ...
+The artifact will be an audio plug-in that can compute a gain to an audio signal and can be loaded into **VST 3** hosts like **Cubase**, **WaveLab**, ...
 
 ---
 
@@ -97,7 +97,7 @@ This includes some helpers to access audio buffer.
 //----------------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 {
-    //--- First : Read inputs parameter changes-----------
+    //--- First: Read inputs parameter changes-----------
     if (data.inputParameterChanges)
     {
         // for each parameter defined by its ID
@@ -329,10 +329,10 @@ protected:
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (ProcessData& data)
 {
-    //--- First : Read inputs parameter changes-----------
+    //--- First: Read inputs parameter changes-----------
     //...
 
-    //---Second : Read input events-------------
+    //---Second: Read input events-------------
     // get the list of all event changes
     Vst::IEventList* eventList = data.inputEvents;
     if (eventList)
@@ -478,7 +478,7 @@ tresult PLUGIN_API PlugProcessor::setBusArrangements(Vst::SpeakerArrangement* in
         return kResultTrue;
     }
 
-    // we do not accept what the host wants : return kResultFalse !
+    // we do not accept what the host wants: return kResultFalse !
     return kResultFalse;
 }
 ```
@@ -489,10 +489,10 @@ tresult PLUGIN_API PlugProcessor::setBusArrangements(Vst::SpeakerArrangement* in
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (ProcessData& data)
 {
-    //--- First : Read inputs parameter changes-----------
+    //--- First: Read inputs parameter changes-----------
     //...
 
-    //---Second : Read input events-------------
+    //---Second: Read input events-------------
     //...
 
     float gain = mGain - mGainReduction;

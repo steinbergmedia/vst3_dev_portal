@@ -18,6 +18,7 @@ The tutorials explain common techniques and best practices for building your plu
 [Link](Building+the+examples+included+in+the+SDK+Windows.md)
 
 This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
+
 ## Building the examples included in the SDK on macOS
 
 [Link](Building+the+examples+included+in+the+SDK+macOS.md)
@@ -30,7 +31,7 @@ This tutorial explains how to set up your computer and create an environment for
 
 This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
 
-## Using cmake for building VST 3 plug-ins]
+## Using cmake for building VST 3 plug-ins
 
 [Link](Using+cmake+for+building+plug-ins.md)
 
@@ -40,7 +41,7 @@ This tutorial explains how to use *cmake* with **VST 3 SDK**.
 
 [Link](Generate+new+plug-in+with+Project+Generator.md)
 
-This tutorial explains how to create a new audio plug-in by using the ***[VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)*** included in the **VST 3 SDK**.
+This tutorial explains how to create a new audio plug-in by using the [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) included in the **VST 3 SDK**.
 
 ## Code your first plug-in
 
@@ -70,23 +71,23 @@ In this tutorial you will learn:
 
 This tutorial explains how to use silence flags.
 
-## Guideline for replacing a VST2 Plug-in by a VST3 Plug-in
+## Guideline for replacing a VST 2 plug-in by a VST 3 plug-in
 
 [Link](Guideline+for+VST3+replacing+VST2.md)
 
-This guideline explains what could be done for creating a VST3 Plug-in replacing an old VST2 Plug-in.
+This guideline explains what could be done for creating a **VST 3** plug-in replacing an old **VST 2** plug-in.
 
 ## Strings Conversion Helper
 
 [Link](Strings+Conversion+Helper.md)
 
-The SDK provides some helpers functions to convert from UTF16 (use in VST 3 interfaces) to UTF8 (used by std::string).
+The SDK provides some helpers functions to convert from UTF16 (use in **VST 3** interfaces) to UTF8 (used by std::string).
 
 ## Creating a cmake plug-in project from scratch
 
 [Link](Creating+a+plug-in+from+scratch.md)
 
-This tutorial provides a step-by-step guide for building a VST 3 plug-in's ```CMakeLists.txt``` from scratch.
+This tutorial provides a step-by-step guide for building a **VST 3** plug-in's ```CMakeLists.txt``` from scratch.
 
 ## Creating a plug-in from the Helloworld template
 
@@ -96,11 +97,11 @@ This tutorial explains how to create a new audio plug-in from the Helloworld tem
 
 ## Tutorials on Youtube from 3rd Party developers
 
-### How to setup the VST3 SDK's Sample Plugin Projects
+### How to setup the VST 3 SDK's Sample Plugin Projects
 
 [https://www.youtube.com/watch?v=004zcWwgi1A](https://www.youtube.com/watch?v=004zcWwgi1A)
 
-### VST3 SDK Tutorial: Create your own VST3 Synth plug-in
+### VST 3 SDK Tutorial: Create your own VST 3 Synth plug-in
 
 [https://www.youtube.com/watch?v=zdgytoRLKj0](https://www.youtube.com/watch?v=zdgytoRLKj0)
 

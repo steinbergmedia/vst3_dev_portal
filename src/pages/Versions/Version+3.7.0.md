@@ -37,7 +37,7 @@
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Fix for AAX/VST 2 BaseWrapper setChunk attribute Vst::StateType::kProject was not set for component.
 - Helpers classes:
-  - Added functions to load FXB/FXP states and to write FXB states for compatibility with VST2.x (see public.sdk/source/vst/utility/vst2persistence.h)
+  - Added functions to load FXB/FXP states and to write FXB states for compatibility with **VST 2.x** (see public.sdk/source/vst/utility/vst2persistence.h)
   - Fix compilation with MinGW-w64 GCC compiler
   - New helper: openurl.h allowing to open a URL in the default associated application
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v2.9.0: VST 3 Plug-in Test Host
@@ -48,4 +48,4 @@
   - Fix crashes when closing 2 or more instances of GUI of same plug-in in particular order
   - Fix support of SingleComponentEffect plug-ins that implement IMidiMapping
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v1.0.0:
-  - New easy to use VST 3 Project Generator
+  - New easy to use VST 3 Project Generator.

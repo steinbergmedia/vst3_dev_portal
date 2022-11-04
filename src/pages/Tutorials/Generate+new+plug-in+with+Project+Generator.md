@@ -43,7 +43,7 @@ Check the [Create Plug-in Project](../What+is+the+VST+3+SDK/Project+Generator.md
 
 Once you have entered all information, click **Create**. A script is started which creates a project with updated files in the Output directory. After this step, the IDE ([Visual Studio](https://visualstudio.microsoft.com/de/) or [XCode](https://developer.apple.com/xcode/)) is launched.
 
-Compile the project and test your new plug-in. The plug-in is created in the *Output Directory*, in order to make it visible to a **VST 3** host you may have to copy or symbolic-link it to the official VST 3 [Locations / Format](../Technical+Documentation/Locations+Format/Index.md).
+Compile the project and test your new plug-in. The plug-in is created in the *Output Directory*, in order to make it visible to a **VST 3** host you may have to copy or symbolic-link it to the official **VST 3** [Locations / Format](../Technical+Documentation/Locations+Format/Index.md).
 
 For example, if you chose **Audio Effect** as Type, a simple Stereo→Stereo plug-in is created.
 

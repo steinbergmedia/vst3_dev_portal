@@ -74,7 +74,7 @@ VstIntPtr Vst2Wrapper::vendorSpecific (VstInt32 lArg, VstIntPtr lArg2, void* ptr
 
 The host will call [IComponent::setState()](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805) and [IEditController::setComponentState()](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f) with the complete FXB/FXP stream. You have to extract your old state from that, for this the SDK provides a helper function [VST3::tryVst2StateLoad](https://steinbergmedia.github.io/vst3_doc/vstsdk/namespaceVST3.html#aadc6b99109a9b056a0176f49f9220822).
 
-Here the code to add in the **VST 3** version when a **VST 3 plug-in** replaces a **VST 2** plug-in in a Steinberg sequencer project:
+Here the code to add in the **VST 3** version when a **VST 3** plug-in replaces a **VST 2** plug-in in a Steinberg sequencer project:
 
 ``` c++
 #include "public.sdk/source/vst/utility/vst2persistence.h"
@@ -121,4 +121,4 @@ Not in version 3.1.0, we plan something in this direction later. (Note: this var
 
 ## Q: What is the equivalent to the VST 2 kPlugCategOfflineProcess?
 
-VST 3 doesn't support offline processing like it did in VST 2 (this interface was exclusively used by **WaveLab**). But it is possible to use **VST 3 plug-ins** in an offline context (this means that the process function can be called faster than real time : for example, during an export or a batch processing). If the plug-in doesn't support faster than realtime, it should add [kOnlyRealTime](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#gae58eb0aafa16197f12c1a61428fd5584) to its category.
+**VST 3** doesn't support offline processing like it did in VST 2 (this interface was exclusively used by **WaveLab**). But it is possible to use **VST 3** plug-ins in an offline context (this means that the process function can be called faster than real time: for example, during an export or a batch processing). If the plug-in doesn't support faster than realtime, it should add [kOnlyRealTime](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#gae58eb0aafa16197f12c1a61428fd5584) to its category.

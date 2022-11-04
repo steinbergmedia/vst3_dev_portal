@@ -22,10 +22,10 @@ There are simple casting functions in *pluginterfaces/base/fstrdefs.h* (see **ws
     - **k70_3** => L R C Ls Rs Sl Sr Tfl Tfr Trc
     - **k72_3** => L R C LFE Ls Rs Sl Sr Tfl Tfr Trc LFE2
 - Documentation
-  - New tutorial: [Guideline for replacing a VST2 Plug-in by a VST3 Plug-in](../Tutorials/Guideline+for+VST3+replacing+VST2.md)
+  - New tutorial: [Guideline for replacing a VST 2 plug-in by a VST 3 plug-in](../Tutorials/Guideline+for+VST3+replacing+VST2.md)
 - cmake
   - New file *SMTG_AddVST3AuV2.cmake*:
-    - Add AUv2 target for a VST 3 plug-in
+    - Add AUv2 target for a **VST 3** plug-in
     - Reworked AU Objective-C Namespace handling
   - Add check if **PROJECT_VERSION** is set in *project()*, if not then FATAL_ERROR.
   - Display error text when Spaces in Xcode path which is not supported by cmake.
