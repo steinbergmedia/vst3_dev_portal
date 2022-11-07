@@ -33,8 +33,7 @@ class PluginCompatibility : public FObject, public IPluginCompatibility
     tresult PLUGIN_API getCompatibilityJSON (IBStream* stream) override
     {
       /* write in the stream the JSON compatibility array
-      {
-          "Compatibility": [
+      [
           {
               "New": "BD58B550F9E5634E9D2EFF39EA0927B1",
               "Old": [
@@ -42,7 +41,7 @@ class PluginCompatibility : public FObject, public IPluginCompatibility
                   "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
               ],
           }
-      }
+      ]
       */
 	    return kResultTrue;
     }
