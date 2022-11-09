@@ -82,3 +82,4 @@ By using **VST 3 SDK** directly:
 | VST Rack Pro            | Yamaha Corporation                | <https://europe.yamaha.com/en/products/proaudio/software/vst_rack/index.html>|
 | Waveform                | Tracktion Software Corporation    | <https://www.tracktion.com>                   |
 | Wavelab                 | Steinberg Media Technologies GmbH | <https://new.steinberg.net/wavelab>           |
+| Zrythm DAW              | Zrythm                            | <https://www.zrythm.org>                      |
