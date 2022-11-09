@@ -13,21 +13,23 @@ The tutorials explain common techniques and best practices for building your plu
 >ⓘ **Note**\
 >This section is under construction and will be extended inthe future with new tutorials.
 
-## Building the examples included in the SDK on Windows
+## Building the examples included in the SDK
 
-[Link](Building+the+examples+included+in+the+SDK+Windows.md)
+### Building the examples included in the SDK on Windows
 
-This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
-
-## Building the examples included in the SDK on macOS
-
-[Link](Building+the+examples+included+in+the+SDK+macOS.md)
+[Link](Building+the+examples/Building+the+examples+included+in+the+SDK+Windows.md)
 
 This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
 
-## Building the examples included in the SDK on Linux
+### Building the examples included in the SDK on macOS
 
-[Link](Building+the+examples+included+in+the+SDK+Linux.md)
+[Link](Building+the+examples/Building+the+examples+included+in+the+SDK+macOS.md)
+
+This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
+
+### Building the examples included in the SDK on Linux
+
+[Link](Building+the+examples/Building+the+examples+included+in+the+SDK+Linux.md)
 
 This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
 
@@ -94,6 +96,12 @@ This tutorial provides a step-by-step guide for building a **VST 3** plug-in's `
 [Link](Creating+a+plug-in+from+the+Helloworld+template.md)
 
 This tutorial explains how to create a new audio plug-in from the Helloworld template included in the **VST 3 SDK**.
+
+## Switching to another VSTGUI submodule or branch
+
+[Link](Switching+to+another-VSTGUI+submodule+or+branch.md)
+
+Sometimes it is necessary to switch to another **VSTGUI** submodule or branch for testing purpose. This tutorial explains how to do that.
 
 ## Tutorials on Youtube from 3rd Party developers
 

@@ -14,7 +14,7 @@
 
 ---
 
-You can choose between the [Proprietary Steinberg VST 3](#proprietary-steinberg-vst-3-license) or the [Open-source GPLv3](#open-source-gplv3-license) license ([dual-license](#steinberg-dual-license-file)) depending on how you want to distribute your **VST 3** plug-in/host. **The License Agreement could be found here and in the VST SDK package**.
+You can choose between the [Proprietary Steinberg VST 3](#proprietary-steinberg-vst-3-license) or the [Open-source GPLv3](#open-source-gplv3-license) license ([dual-license](#steinberg-dual-license-file)) depending on how you want to distribute your **VST 3** plug-in/host. **The License Agreement could be found here and in the VST 3 SDK package**.
 
 ## Proprietary Steinberg VST 3 license
 

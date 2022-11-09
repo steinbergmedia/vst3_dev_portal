@@ -22,16 +22,16 @@ For downloading the SDK, see the section "[How to set up my system for VST 3](..
 
 You have the following possibilities to start a new project:
 
-- You can use the [**helloworld** template](Creating+a+plug-in+from+the+Helloworld+template.md) included in the **VST SDK** and duplicate the folder into a new folder. Adapt each file where the comment mentions it.
-- Or, which is **easier** and **recommended**, you can use the [**VST 3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST SDK**. The following steps show how to use it.
+- You can use the [**helloworld** template](Creating+a+plug-in+from+the+Helloworld+template.md) included in the **VST 3 SDK** and duplicate the folder into a new folder. Adapt each file where the comment mentions it.
+- Or, which is **easier** and **recommended**, you can use the [**VST 3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST 3 SDK**. The following steps show how to use it.
 
 ---
 
 ## Part 2: Using the [VST 3 plug-in **Project Generator** application](../What+is+the+VST+3+SDK/Project+Generator.md)
 
-The [**VST3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST SDK**  is available for Windows and for macOS.
+The [**VST3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST 3 SDK**  is available for Windows and for macOS.
 
-Start the application located in the *VST3_Project_Generator* folder of the **VST SDK**.
+Start the application located in the *VST3_Project_Generator* folder of the **VST 3 SDK**.
 
 Check that the **Preferences** tab has the required information: see [Setting the Preferences](../What+is+the+VST+3+SDK/Project+Generator.md#setting-the-preferences).
 

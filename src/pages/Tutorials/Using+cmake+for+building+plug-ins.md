@@ -9,9 +9,9 @@
 **Related pages:**
 
 - [How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)
-- [Building the examples included in the SDK on Windows](Building+the+examples+included+in+the+SDK+Windows.md)
-- [Building the examples included in the SDK on macOS](Building+the+examples+included+in+the+SDK+macOS.md)
-- [Building the examples included in the SDK on Linux](Building+the+examples+included+in+the+SDK+Linux.md)
+- [Building the examples included in the SDK on Windows](Building+the+examples/Building+the+examples+included+in+the+SDK+Windows.md)
+- [Building the examples included in the SDK on macOS](Building+the+examples/Building+the+examples+included+in+the+SDK+macOS.md)
+- [Building the examples included in the SDK on Linux](Building+the+examples/Building+the+examples+included+in+the+SDK+Linux.md)
 
 ---
 

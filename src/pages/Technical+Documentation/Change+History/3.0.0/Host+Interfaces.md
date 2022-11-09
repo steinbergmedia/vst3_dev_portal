@@ -64,7 +64,7 @@ See also [VST 3 Units](../../VST+3+Units/Index.md), [IUnitInfo](https://steinber
 Basic host callback interface.
 
 - [host imp]
-- [passed as 'context' in to IPluginBase::initialize() ]
+- [passed as 'context' in to [IPluginBase::initialize](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html#a3c81be4ff2e7bbb541d3527264f26eed])]
 - [released: 3.0.0]
 - [mandatory]
 

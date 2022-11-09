@@ -27,7 +27,7 @@ It is possible to reuse for a **VST 3** plug-in the same generated UID of a **VS
 
 ## VST 2 and VST 3 version of your Plug-in have not the same UID
 
-For this use case since VST SDK version 3.7.5 we have 2 possibilities for a **VST 3** plug-in to inform the Host about which **VST 2** plug-in it could replace:
+For this use case since **VST 3 SDK** version 3.7.5 we have 2 possibilities for a **VST 3** plug-in to inform the Host about which **VST 2** plug-in it could replace:
 
 ### Using the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file
 

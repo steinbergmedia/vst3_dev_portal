@@ -13,6 +13,7 @@
   
 - Documentation
   - New tutorial: [Creating a cmake plug-in project from scratch](../Tutorials/Creating+a+plug-in+from+scratch.md)
+  - New tutorial: [Switching to another VSTGUI submodule or branch](../Tutorials/Switching+to+another-VSTGUI+submodule+or+branch.md)
 
 - cmake
   - Adapting cmake for making possible to extract an example from the SDK.

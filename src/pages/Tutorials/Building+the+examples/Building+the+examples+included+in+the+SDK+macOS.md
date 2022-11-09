@@ -1,6 +1,6 @@
->/ [VST Home](../) / [Tutorials](Index.md)
+>/ [VST Home](../../)  / [Tutorials](../Index.md) / [Building the examples](Index.md)
 >
-># Building the examples included in the SDK on Linux
+># Building the examples included in the SDK on macOS
 
 **On this page:**
 
@@ -18,15 +18,14 @@ They can be loaded into **VST 3** hosts like Cubase, WaveLab, ...
 
 ## Part 1: Getting and installing the VST 3 SDK
 
-For downloading the SDK, see this section "[How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)".
+For downloading the SDK, see this section "[How to set up my system for VST 3](../../Getting+Started/How+to+setup+my+system.md)".
 
 Download cmake from: <https://cmake.org/download/> or use a package manager for your OS.
 
 ---
 
-## Part 2: Building the examples on Linux
+## Part 2: Building the examples on macOS
 
-- Install the required packages: [Required packages](../Getting+Started/How+to+setup+my+system.html#package-requirements)
 - Create a folder for the build and move to this folder (using cd):
 
 ``` c++
@@ -36,14 +35,22 @@ cd build
 
 - Generate the solution/projects: specify the path to the project where CMakeLists.txt is located:
 
+For XCode:
+
 ``` c++
-cmake ../vst3sdk
+cmake -GXcode ../vst3sdk
 ```
 
-- Build the plug-in:
+Without XCode (here debug variant):
 
 ``` c++
-make
+cmake -DCMAKE_BUILD_TYPE=Debug ../
+```
+
+- Build the plug-in (you can use XCode too):
+
+``` c++
+xcodebuild
 (or alternatively for example for release)
 
 cmake --build . --config Release

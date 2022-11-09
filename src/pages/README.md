@@ -35,16 +35,21 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 
 ## [Tutorials](Tutorials/Index.md)
 
-- [Building the examples included in the SDK on Windows](Tutorials/Building+the+examples+included+in+the+SDK+Windows.md)
-- [Building the examples included in the SDK on macOS](Tutorials/Building+the+examples+included+in+the+SDK+macOS.md)
-- [Building the examples included in the SDK on Linux](Tutorials/Building+the+examples+included+in+the+SDK+Linux.md)
+- [Building the examples included in the SDK](Tutorials/Building+the+examples/Index.md)
+  - [Building the examples included in the SDK on Windows](Tutorials/Building+the+examples/Building+the+examples+included+in+the+SDK+Windows.md)
+  - [Building the examples included in the SDK on macOS](Tutorials/Building+the+examples/Building+the+examples+included+in+the+SDK+macOS.md)
+  - [Building the examples included in the SDK on Linux](Tutorials/Building+the+examples/Building+the+examples+included+in+the+SDK+Linux.md)
 - [Using cmake for building VST 3 plug-ins](Tutorials/Using+cmake+for+building+plug-ins.md)
 - [Generate a new plug-in with the Project Generator App](Tutorials/Generate+new+plug-in+with+Project+Generator.md)
+- [Code your first plug-in](Tutorials/Code+your+first+plug-in.md)
 - [Use VSTGUI to design a User Interface](Tutorials/Use+VSTGUI+to+design+a+UI.md)
 - [Advanced VST 3 techniques](Tutorials/Advanced+VST+3+techniques.md)
 - [How to use the silence flags](Tutorials/How+to+use+the+silence+flags.md)
+- [Guideline for replacing a VST 2 plug-in by a VST 3 plug-in](Tutorials/Guideline+for+VST3+replacing+VST2.md)
 - [Strings Conversion Helper](Tutorials/Strings+Conversion+Helper.md)
+- [Creating a cmake plug-in project from scratch](Tutorials/Creating+a+plug-in+from+scratch.md)
 - [Creating a plug-in from the Helloworld template](Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
+- [Switching to another VSTGUI submodule or branch](Tutorials/Switching+to+another-VSTGUI+submodule+or+branch.md)
 
 ## [VST 3 Forum](Forum/Index.md)
 

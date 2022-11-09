@@ -1,4 +1,4 @@
->/ [VST Home](../) / [Tutorials](Index.md)
+>/ [VST Home](../../)  / [Tutorials](../Index.md) / [Building the examples](Index.md)
 >
 ># Building the examples included in the SDK on Windows
 
@@ -18,7 +18,7 @@ They can be loaded into **VST 3** hosts like Cubase, WaveLab, ...
 
 ## Part 1: Getting and installing the VST 3 SDK
 
-For downloading the SDK, see this section "[How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)".
+For downloading the SDK, see this section "[How to set up my system for VST 3](../../Getting+Started/How+to+setup+my+system.md)".
 
 Download cmake from: <https://cmake.org/download/> or use a package manager for your OS.
 
@@ -44,7 +44,7 @@ cmake.exe -G "Visual Studio 17 2022" -A x64 ../vst3sdk-DSMTG_CREATE_PLUGIN_LINK=
 >ⓘ **Note**\
 >You can find the string definition for different Visual Studio Generators in the cmake online documentation (<https://cmake.org/documentation/>)
 
-- You have to adapt your Windows right access to allow creation of symbolic links for VST 3 plug-ins: [Check HERE!](../Getting+Started/Preparation+on+Windows.md)
+- You have to adapt your Windows right access to allow creation of symbolic links for VST3 plug-ins: [Check HERE!](../../Getting+Started/Preparation+on+Windows.md)
 - Build the plug-in (you can use Visual Studio too):
 
 ``` text
@@ -54,20 +54,18 @@ msbuild.exe vstsdk.sln
 cmake --build . --config Release
 ```
 
----
-
 ## Building using cmake-gui
 
 - Start the cmake-gui application which is part of the cmake installation (<https://cmake.org/download/>)
 
-![tutorials_1](../../resources/tutorials_1.png)
+![tutorials_1](../../../resources/tutorials_1.png)
 
 - **Browse Source...**: select the folder VST3_SDK
 - **Browse Build...**: select a folder where the outputs (projects/...) will be created. Typically a folder named *build*
 - You can check the **SMTG Options**
 - Press **Configure** and choose the generator in the window that opens: for example "**Visual Studio 16 2019**"
 
-![tutorials_2](../../resources/tutorials_2.png)
+![tutorials_2](../../../resources/tutorials_2.png)
 
 - Press **Generate** to create the project
 - Open your targeted IDE, and compile the solution/project.
