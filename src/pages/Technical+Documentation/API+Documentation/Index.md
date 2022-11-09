@@ -204,17 +204,17 @@ More details can be found on the page about [Parameters](../Parameters+Automatio
 
 - **Plug-in structure**: If the plug-in is composed of discrete functional parts, the edit controller should publish this structure and the parameters belonging to each part by implementing the [Steinberg::Vst::IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html) interface. More details can be found on the page about [VST 3 Units](../VST+3+Units/Index.html).
 
-![tech_doc_8](../../../resources/tech_doc_8.png)
+![Tech_doc_8](../../../resources/tech_doc_8.png)
 
 ## VST 3 threading model
 
 The threading model used by **VST 3** is quite simple and requires that:
 
-- all initialisation/de-initialisation are done in the UI Thread
-- all function exported by the plug-in are called by the host in the UI Thread with the exception of:
+- All initialisation/de-initialisation are done in the UI Thread
+- All function exported by the plug-in are called by the host in the UI Thread with the exception of:
   - IAudioProcessor→process: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!
   - IAudioProcessor→setProcessing: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!
-- all function exported by the host are called by the plug-in in the UI Thread
+- All function exported by the host are called by the plug-in in the UI Thread
 
 Check the [Audio Processor Call Sequence](../Workflow+Diagrams/Audio+Processor+Call+Sequence.md) and the [Edit Controller Call Sequence](../Workflow+Diagrams/Edit+Controller+Call+Sequence.md)
 
@@ -231,7 +231,7 @@ All standard data (like parameter changes) are transmitted between processor and
 - When the controller transmits a parameter change to the host, the host synchronizes the processor by passing the new values as [Steinberg::Vst::IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) to the process call.
 - The processor can transmit outgoing parameter changes to the host as well. ([Steinberg::Vst::ProcessData::outputParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#af08c4f7dfd9e456cc98ba0eb325993ae)). These are transmitted to the edit controller by the call of [Steinberg::Vst::IEditController::setParamNormalized](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#aded549c5b0f342a23dee18cc41ece6b8).
 
-![tech_doc_9](../../../resources/tech_doc_9.jpg)
+![Tech_doc_9](../../../resources/tech_doc_9.jpg)
 
 ### Private communication
 
@@ -243,7 +243,7 @@ Data that is unknown to the host can be transmitted by means of messages. The co
 
 Please note that messages from the processor to the controller must not be sent during the process call, as this would not be fast enough and would break the real time processing. Such tasks should be handled in a separate timer thread.
 
-![tech_doc_10](../../../resources/tech_doc_10.png)
+![Tech_doc_10](../../../resources/tech_doc_10.png)
 
 ### Initialization of communication from Host point of view
 
