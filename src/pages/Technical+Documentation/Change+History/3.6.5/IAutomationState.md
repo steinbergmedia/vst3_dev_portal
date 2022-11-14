@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.6.5] Automation State
+># \[3.6.5\] Automation State
 
 **On this page:**
 
@@ -12,10 +12,10 @@
 
 Extended plug-in interface [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html): [Vst::IAutomationState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAutomationState.html)
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]
-- [released: 3.6.5]
-- [optional]
+- \[released: 3.6.5\]
+- \[optional\]
 
 Hosts can inform the plug-in about its current automation state (Read/Write/Nothing).
 

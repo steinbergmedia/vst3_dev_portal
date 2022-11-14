@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.6.12] Legacy MIDI CC Out Event
+># \[3.6.12\] Legacy MIDI CC Out Event
 
 **On this page:**
 
@@ -14,7 +14,8 @@ Legacy MIDI CC Out event specific data: [midiCCOut](https://steinbergmedia.githu
 
 Used in Event (union)
 
-- [released: 3.6.12]
+- \[released: 3.6.12\]
+
 
 This kind of event is reserved for generating MIDI CC as output event for kEvent Bus during the process call.
 

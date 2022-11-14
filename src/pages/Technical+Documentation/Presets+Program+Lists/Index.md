@@ -19,7 +19,7 @@ See [VST 3 Locations / Format](../Locations+Format/Index.md#preset-format) for p
 
 ## Simple Plug-ins
 
-![tech_doc_17](../../../resources/tech_doc_17.png)
+![Tech_doc_17](../../../resources/tech_doc_17.png)
 
 For a simple plug-in, the data of a preset is nothing more than its state. In this case:
 
@@ -41,7 +41,7 @@ If a plug-in uses a large pool of programs that require some kind of caching or 
 
 - If the plug-in defines a program list to be used as a pool of user presets that are initially in an 'empty' state, modifications can be applied to the list items directly. This way of using program lists should only be chosen if programs do require a lot of resources that need to be cached in order to achieve fast program changes (good examples for this are sample-based plug-ins).
 
-![tech_doc_18](../../../resources/tech_doc_18.jpg)
+![Tech_doc_18](../../../resources/tech_doc_18.jpg)
 
 - The plug-in can provide GUI for the selection of programs, but it must enable the host to display the list and the selected program as well. The index of the selected program in the list must be exported as program selection parameter. ([Steinberg::Vst::ParameterInfo::kIsProgramChange](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645a517665185bca1f4f3d77ce0a6468b8e3))
 

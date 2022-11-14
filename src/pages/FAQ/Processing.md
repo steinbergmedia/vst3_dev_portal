@@ -57,27 +57,27 @@ Yes, the host can call [IAudioProcessor::process](https://steinbergmedia.github.
 
 ## Q: What is a Side-Chain?
 
-See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [\[3.0.0\] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: How can I implement a Side-chain path into my plug-in?
 
-See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [\[3.0.0\] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: My plug-in is capable of processing all possible channel configurations.
 
-See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [\[3.0.0\] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: How are speaker arrangement settings handled for FX plug-ins?
 
-See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [\[3.0.0\] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: My plug-in has mono input and stereo output. How does VST 3 handle this?
 
-See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [\[3.0.0\] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: How does it work with silence flags?
 
-See [(3.0.0) Silence flags Support](../Technical+Documentation/Change+History/3.0.0/Silence+flags.md) and tutorial about [how to use Silence flags](../Tutorials/How+to+use+the+silence+flags.md).
+See [\[3.0.0\] Silence flags Support](../Technical+Documentation/Change+History/3.0.0/Silence+flags.md) and tutorial about [how to use Silence flags](../Tutorials/How+to+use+the+silence+flags.md).
 
 ## Q: How report to the host that the plug-in latency has changed?
 
@@ -91,7 +91,7 @@ The host will call [Vst::IAudioProcessor->getLatencySamples()](https://steinberg
 
 ## Q: How report to the host that the plug-in arrangement has changed?
 
-See [(3.0.0) Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
+See [\[3.0.0\] Multiple Dynamic I/O Support](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
 
 ## Q: Can IAudioProcessor::setProcessing be called without any IAudioProcessor::process call?
 

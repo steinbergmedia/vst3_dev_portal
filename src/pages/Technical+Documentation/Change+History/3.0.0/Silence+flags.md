@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.0.0] Silence flags
+># \[3.0.0\] Silence flags
 
 **On this page:**
 
@@ -21,8 +21,8 @@ The feature is supported by the [IAudioProcessor](https://steinbergmedia.github.
 The silence flags is part of the [AudioBusBuffers](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html) ([silenceFlags](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#a2c73b926e22ddb05193b6edd16a008f8)) passed from the host to the plug-in and back to the host in the process call:
 
 - MyPluginProcessor::process (ProcessData& data)
-- for the inputs: check this flag: **data.inputs[0]silenceFlags**
-- for the outputs: set this when the plug-in generates or notsilence: **data.outputs[0].silenceFlags**
+- for the inputs: check this flag: **data.inputs\[0\]silenceFlags**
+- for the outputs: set this when the plug-in generates or notsilence: **data.outputs\[0\].silenceFlags**
 
 The silence flags are a bitmask where each bit corresponds to one channel of a bus (for example L and R for stereo bus).
 

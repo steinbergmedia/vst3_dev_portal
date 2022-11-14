@@ -24,9 +24,9 @@ The corresponding interfaces are:
 - Processor: [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html) + [Steinberg::Vst::IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html)
 - Controller: [Steinberg::Vst::IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)
 
-![tech_doc_1](../../../resources/tech_doc_1.jpg)
+![Tech_doc_1](../../../resources/tech_doc_1.jpg)
 
-![tech_doc_2](../../../resources/tech_doc_2.png)
+![Tech_doc_2](../../../resources/tech_doc_2.png)
 
 The design of **VST 3** suggests a complete separation of processor and edit controller by implementing two components. Splitting up an effect into these two parts requires some extra implementation efforts.
 However, this separation enables the host to run each component in a different context, even on different computers. Another benefit is that parameter changes can be separated when it comes to automation. While for processing these changes need to be transmitted in a sample-accurate way, the GUI part can be updated with a much lower frequency and it can be shifted by the amount that results from any delay compensation or other processing offset.
@@ -136,9 +136,9 @@ store and restore any GUI settings that are not related to the processor (like s
 - **Restore**: When the states are restored, the host passes the processor state to both the processor and the controller ([Steinberg::Vst::IEditController::setComponentState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f)). A host must always pass that state to the processor first. The controller then has to synchronize its parameters to this state (but must not perform any [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html) callbacks).
 After restoring a state, the host rescans the parameters (asking the controller) in order to update its internal representation.
 
-![tech_doc_3](../../../resources/tech_doc_3.png)
+![Tech_doc_3](../../../resources/tech_doc_3.png)
 
-![tech_doc_4](../../../resources/tech_doc_4.png)
+![Tech_doc_4](../../../resources/tech_doc_4.png)
 
 See also
 
@@ -148,7 +148,7 @@ See also
 
 ## The Processing Part
 
-![tech_doc_5](../../../resources/tech_doc_5.png)
+![Tech_doc_5](../../../resources/tech_doc_5.png)
 
 The processing part consists of two related interfaces: [Steinberg::Vst::IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html) and [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html). The reason for splitting the two is to use the basic interfaces [Steinberg::Vst::IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html) not only for audio plug-ins but also for other kinds of media (e.g. video processing in the future). Hence the [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html) interface represents the audio-specific part of a processing component. Let's have a closer look at the concepts.
 
@@ -187,11 +187,11 @@ The [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/
    - **Context**: For each processing block the host should provide information about its state. See [Steinberg::Vst::ProcessContext](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html)
    - **Events**: [Steinberg::Vst::IEventList](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEventList.html)
 
-![tech_doc_6](../../../resources/tech_doc_6.png)
+![Tech_doc_6](../../../resources/tech_doc_6.png)
 
 ## The Editing Part
 
-![tech_doc_7](../../../resources/tech_doc_7.jpg)
+![Tech_doc_7](../../../resources/tech_doc_7.jpg)
 
 The edit controller is responsible for the GUI aspects ofthe plug-in. Its standard interface is [Steinberg::Vst::IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html). The host has to provide acallback interface for the edit controller named [Steinberg::Vst::IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html). The handler is essentialfor the communication with both the host and the processor.
 

@@ -8,12 +8,12 @@
 
 **Related pages:**
 
-- [(3.0.1) Parameter MIDI Mapping](../Change+History/3.0.1/IMidiMapping.md)
-- [(3.5.0) Note Expression](../Change+History/3.5.0/INoteExpressionController.md)
-- [(3.5.0) Key Switch](../Change+History/3.5.0/IKeyswitchController.md)
-- [(3.6.11) NoteExpression Physical UI Mapping](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md)
-- [(3.6.12) Legacy MIDI CC Out Event](../Change+History/3.6.12/LegacyMIDICCOutEvent.md)
-- [(3.6.12) MPE support for Wrappers](../Change+History/3.6.12/IVst3WrapperMPESupport.md)
+- [\[3.0.1\] Parameter MIDI Mapping](../Change+History/3.0.1/IMidiMapping.md)
+- [\[3.5.0\] Note Expression](../Change+History/3.5.0/INoteExpressionController.md)
+- [\[3.5.0\] Key Switch](../Change+History/3.5.0/IKeyswitchController.md)
+- [\[3.6.11\] NoteExpression Physical UI Mapping](../Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md)
+- [\[3.6.12\] Legacy MIDI CC Out Event](../Change+History/3.6.12/LegacyMIDICCOutEvent.md)
+- [\[3.6.12\] MPE support for Wrappers](../Change+History/3.6.12/IVst3WrapperMPESupport.md)
 
 ---
 
@@ -21,7 +21,7 @@ Unlike in **VST 2, MIDI** is not included in **VST 3**.
 
 But **VST 3** offers suitable concepts that can be translated to and from MIDI using [Event](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Event.html):
 
-![tech_doc_27](../../../resources/tech_doc_27.png)
+![Tech_doc_27](../../../resources/tech_doc_27.png)
 
 ## Related Concepts in MIDI and VST 3
 

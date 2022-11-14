@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.5.0] Note Expression
+># \[3.5.0\] Note Expression
 
 **On this page:**
 
@@ -8,8 +8,8 @@
 
 **Related pages:**
 
-- [(3.5.0) Key Switch](../3.5.0/IKeyswitchController.md)
-- [(3.6.11) NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
+- [\[3.5.0\] Key Switch](../3.5.0/IKeyswitchController.md)
+- [\[3.6.11\] NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
 
 ---
@@ -20,10 +20,10 @@ A new way to control / modify / change a specific played note during playback.
 
 Edit controller component interface extension: [Vst::INoteExpressionController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html)
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]
-- [released: 3.5.0]
-- [optional]
+- \[released: 3.5.0\]
+- \[optional\]
 
 Note Expression is a new way of event controller editing in hosts supporting this VST 3.5 feature (in **Cubase** since version 6).
 

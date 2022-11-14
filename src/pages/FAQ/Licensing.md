@@ -53,7 +53,7 @@ Yes, but you have to make sure that your **VST 3** plug-in/host sources are unde
 ## Q: Do I have to sign and send to Steinberg the "Proprietary Steinberg VST 3" license agreement for each new version of the VST 3 SDK?
 
 - No, the license agreement has its own versioning, you just have to be sure that you have already signed the correct version of it.
-- As of SDK version **3.6.8**, the license has the version **2.0** (only some minor change/formatting of the text of the license agreement were done in the last SDK versions [3.6.9 up to 3.7.1])
+- As of SDK version **3.6.8**, the license has the version **2.0** (only some minor change/formatting of the text of the license agreement were done in the last SDK versions \[3.6.9 up to 3.7.1\])
   - **If** you use a **VST 3 SDK version >= 3.6.8**, you have to be sure that you sent Steinberg a signed license agreement (*version 2.x*) from one of the last **VST 3 SDK**s (>= 3.6.8).
   - **If** you use a **VST 3 SDK version < 3.6.8**, you have to be sure that you sent Steinberg a signed license agreement (**version 1**) included in the **VST 3 SDK** that you use.
   - **If** you do not know if you already sent it, it is recommended to send it again and in this case it is possible to use the license agreement of the **last VST 3 SDK**, too!

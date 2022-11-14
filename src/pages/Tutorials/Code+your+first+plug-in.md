@@ -66,7 +66,7 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 
 >ⓘ **Note**\
 >- We add the flag [*kCanAutomate*](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31) which informs the DAW/host that this parameter can be automated.
->- A **VST 3** parameter is always normalized (its value is a floating point value between [0, 1]), here its default value is set to 0.5.
+>- A **VST 3** parameter is always normalized (its value is a floating point value between \[0.0, 1.0\]), here its default value is set to 0.5.
 
 3. Now adapt the processor part for this new parameter. Open the file *plugprocessor.h* and add a gain value **Vst::ParamValue mGain**. This value is used for the processing to apply the gain.
 

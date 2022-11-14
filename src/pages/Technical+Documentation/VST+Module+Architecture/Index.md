@@ -49,8 +49,8 @@ So a lot of different classes (with different class identifiers) can implement t
 
 An interface may have a **direction**, meaning that the interface is expected to be implemented either in the plug-in or in the host. The nature of an interface is documented like this:
 
-- **[host imp]**: the host implements the interface
-- **[plug imp]**: the plug-in implements the interface
+- **\[host imp\]**: the host implements the interface
+- **\[plug imp\]**: the plug-in implements the interface
 
 When neither of these is specified, the interface can be used in both ways.
 
@@ -59,7 +59,7 @@ When neither of these is specified, the interface can be used in both ways.
 Unlike C++ classes, interfaces do not use inheritance to express specializations of objects. Inheritance is used for versioning only. One of the strict rules is that once an interface has been released, it must never change again. Adding new functionality to an interface requires a new version (usually an ordinal number is added to its name in this case, for example [IPluginFactory3](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory3.html) adds new features to [IPluginFactory2](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory2.html)).\
 A new version inherits the old version(s) of the interface, so the old and the new methods are combined in one interface. This is why specializations need to be modeled as separate interfaces! If a specialized interface were to inherit from the basic interface as well, an implementation class that needs to implement all of these interfaces would inherit the base interface twice, causing the compiler to run into ambiguities. So the specialization relation to a basic interface can only be expressed in the documentation.
 
->- ISpecialInterface [**extends** IBaseInterface] => means IBaseInterface::queryInterface (ISpecialInterface::iid, ...) can be used to retrieve the derived interface.
+>- ISpecialInterface \[**extends** IBaseInterface\] => means IBaseInterface::queryInterface (ISpecialInterface::iid, ...) can be used to retrieve the derived interface.
 
 You can find some example code here: [Interface Versions and Inheritance](Interface+Versions+and+Inheritance.md).
 

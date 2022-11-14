@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.6.6] PlugView Content Scaling
+># \[3.6.6\] PlugView Content Scaling
 
 **On this page:**
 
@@ -12,10 +12,10 @@
 
 Plug-in view content scale support: [Vst::IPlugViewContentScaleSupport](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html)
 
-- [plug impl]
+- \[plug impl\]
 - [extends [IPlugView](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html)]
-- [released: 3.6.6]
-- [optional]
+- \[released: 3.6.6\]
+- \[optional\]
 
 This interface communicates the content scale factor from the host to the plug-in view on systems where plug-ins cannot get this information directly like Microsoft Windows.
 

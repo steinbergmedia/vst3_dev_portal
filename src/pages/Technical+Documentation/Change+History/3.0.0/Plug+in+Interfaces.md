@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.0.0] Interfaces supported by the plug-in
+># \[3.0.0\] Interfaces supported by the plug-in
 
 **On this page:**
 
@@ -8,7 +8,7 @@
 
 **Related pages**
 
-- [(3.0.0) Interfaces supported by the host](Host+Interfaces.md)
+- [\[3.0.0\] Interfaces supported by the host](Host+Interfaces.md)
 
 ---
 
@@ -18,9 +18,9 @@ List of interfaces supported/implemented by the plug-in in VST 3.0.0
 
 Component base interface.
 
-- [plug imp]
-- [released: 3.0.0]
-- [mandatory]
+- \[plug imp\]
+- \[released: 3.0.0\]
+- \[mandatory\]
 
 This is the basic interface for a VST component and must always be supported. It contains the common parts of any kind of processing class. The parts that are specific to a media type are defined in a separate interface. An implementation component must provide both the specific interface and [IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html).
 
@@ -30,10 +30,10 @@ See also [IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classStein
 
 Audio processing interface.
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html)]
-- [released: 3.0.0]
-- [mandatory]
+- \[released: 3.0.0\]
+- \[mandatory\]
 
 This interface must always be supported by audio processing plug-ins.
 
@@ -41,9 +41,9 @@ This interface must always be supported by audio processing plug-ins.
 
 Edit controller component interface.
 
-- [plug imp]
-- [released: 3.0.0]
-- [mandatory]
+- \[plug imp\]
+- \[released: 3.0.0\]
+- \[mandatory\]
 
 The controller part of an effect or instrument with parameter handling (export, definition, conversion...).
 
@@ -53,10 +53,10 @@ See also [IComponent::getControllerClassId](https://steinbergmedia.github.io/vst
 
 Connect a component with another one.
 
-- [plug imp]
-- [host imp]
-- [released: 3.0.0]
-- [mandatory]
+- \[plug imp\]
+- \[host imp\]
+- \[released: 3.0.0\]
+- \[mandatory\]
 
 This interface is used for the communication of separate components. Note that some hosts will place a proxy object between the components so that they are not directly connected.
 
@@ -66,10 +66,10 @@ See also [Communication between the components](../../API+Documentation/Index.ht
 
 Edit controller extension to describe the plug-in structure.
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]
-- [released: 3.0.0]
-- [optional]
+- \[released: 3.0.0\]
+- \[optional\]
 
 [IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html) describes the internal structure of the plug-in.
 
@@ -84,10 +84,10 @@ See also [VST 3 Units](../../VST+3+Units/Index.md), [IUnitHandler](https://stein
 
 Component extension to access program list data.
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html)]
-- [released: 3.0.0]
-- [optional]
+- \[released: 3.0.0\]
+- \[optional\]
 
 A component can support program list data via this interface or/and unit preset data ([IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html)).
 
@@ -97,10 +97,10 @@ See also [IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/cla
 
 Component extension to access unit data.
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html)]
-- [released: 3.0.0]
-- [optional]
+- \[released: 3.0.0\]
+- \[optional\]
 
 A component can support unit preset data via this interface or program list data ([IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html)).
 
@@ -110,8 +110,8 @@ See also [Presets & Program Lists](../../Presets+Program+Lists/Index.md)
 
 Plug-in definition of a view.
 
-- [plug imp]
-- [released: 3.0.0]
+- \[plug imp\]
+- \[released: 3.0.0\]
 
 ### Sizing of a view
 

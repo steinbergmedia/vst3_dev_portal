@@ -29,7 +29,7 @@ target_link_libraries(${target} PRIVATE vstgui_support)
 
 If you are not using cmake, you have to manually include the following source files to your project:
 
-- *vstgui/vstgui_[ios/mac/linux/win32].[cpp/mm]*
+- *vstgui/vstgui_\[ios/mac/linux/win32\].\[cpp/mm\]*
 - *vstgui/vstgui_uidescription.cpp*
 - *vstgui/plugin-bindings/vst3editor.cpp*
 

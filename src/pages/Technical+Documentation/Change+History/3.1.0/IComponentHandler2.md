@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.1.0] Dirty State, Open Editor Request and UI Group Editing Support
+># \[3.1.0\] Dirty State, Open Editor Request and UI Group Editing Support
 
 **On this page:**
 
@@ -14,10 +14,10 @@ Improvement of the plug-in's integration in the host (dirty state, request Open 
 
 Extended host callback interface [Vst::IComponentHandler2](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler2.html) for an edit controller.
 
-- [host imp]
+- \[host imp\]
 - [extends [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html)]
-- [released: 3.1.0]
-- [optional]
+- \[released: 3.1.0\]
+- \[optional\]
 
 ## Dirty State Support
 

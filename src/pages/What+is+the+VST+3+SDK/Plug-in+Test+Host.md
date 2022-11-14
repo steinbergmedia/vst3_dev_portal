@@ -58,7 +58,7 @@ This section simulates note events sent to the plug-in.
 
 - A pattern could be defined and initialized with randomized, chromatic or manual events. (for Chromatic choose the start note in the pattern and select Chromatic in the pop-up menu).
 - Active check box: enable/disable the playback of this pattern.
-- You can choose different loop stepping for this pattern [1, 1/2, ...1/32]
+- You can choose different loop stepping for this pattern (1, 1/2, ...1/32)
 
 ### VST Rack
 

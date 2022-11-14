@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.0.0] Multiple Dynamic I/O Support
+># \[3.0.0\] Multiple Dynamic I/O Support
 
 **On this page:**
 
@@ -98,7 +98,7 @@ virtual tresult PLUGIN_API getBusInfo (MediaType type, BusDirection dir, int32 i
 - and the some flags indicating:
   - **kDefaultActive**: The bus should be activated by the host per default on instantiation (activateBus call is requested). By default a bus is inactive. Note that if a host offers the possibility to activate/deactivate busses to the user later on, it may not follow this flag kDefaultActive and let some busses deactivated on instantiation.
   - **kIsControlVoltage**: The bus does not contain ordinary audio data, but data used for control changes at sample rate.
-    - The data is in the same format as the audio data [-1..1].
+    - The data is in the same format as the audio data \[-1.0, 1.0\].
     - A host has to prevent unintended routing to speakers to prevent damage.
     - Only valid for audio media type busses.
 
@@ -186,7 +186,7 @@ For example:
 const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR; // => representing in hexadecimal 0x03 and in binary 0011.
 ```
 
-![tech_doc_28](../../../../resources/tech_doc_28.jpg)
+![Tech_doc_28](../../../../resources/tech_doc_28.jpg)
 
 ### My plug-in is capable of processing all possible channel configurations
 

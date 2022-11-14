@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.6.0] iOS Inter-App Audio
+># \[3.6.0\] iOS Inter-App Audio
 
 **On this page:**
 
