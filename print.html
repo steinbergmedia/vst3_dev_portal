@@ -2263,21 +2263,22 @@ tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context);
 <p>In this basic plug-in example, we will add a Gain parameter which modifies the volume of the audio going through the plug-in.</p>
 <p>For this, each <strong>VST 3</strong> parameter requires a unique identifier (a number).</p>
 <ol>
-<li>Open the file plugids.h and enter a new id kParamGainId. In this example, assign the unique number 102.</li>
+<li>Open the file <em>plugids.h</em> and enter a new id <strong>kParamGainId</strong>. In this example, assign the unique number <strong>102</strong> for example.</li>
 </ol>
 <p><strong>plugids.h</strong></p>
 <pre><code class="language-c++">#include &quot;pluginterfaces/vst/vsttypes.h&quot;
 
 enum GainParams : Steinberg::Vst::ParamID
 {
-    kParamGainId = 102, // should be an unique id...
+    kParamGainId = 102, // should be a unique id...
 };
 </code></pre>
 <ol start="2">
-<li>Open the plugcontroller.cpp file, and add the gain parameter with the parameters.addParameter</li>
+<li>Open the <em>plugcontroller.cpp</em> file, and add the gain parameter with the <strong>parameters.addParameter</strong></li>
 </ol>
 <p><strong>plugcontroller.cpp</strong></p>
-<pre><code class="language-c++">#include &quot;myplugincids.h&quot;
+<pre><code class="language-c++">// Include the file where some ids are defined
+#include &quot;plugids.h&quot;
 
 //----------------------------------------------------------------------------
 tresult PLUGIN_API PlugController::initialize (FUnknown*context)
@@ -2295,11 +2296,9 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 }
 </code></pre>
 <blockquote>
-<p>ⓘ <strong>Note</strong></p>
-<ul>
-<li>We add the flag <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31"><em>kCanAutomate</em></a> which informs the DAW/host that this parameter can be automated.</li>
-<li>A <strong>VST 3</strong> parameter is always normalized (its value is a floating point value between [0, 1]), here its default value is set to 0.5.</li>
-</ul>
+<p>ⓘ <strong>Note</strong><br />
+We add the flag <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31"><em>kCanAutomate</em></a> which informs the DAW/host that this parameter can be automated.<br />
+A <strong>VST 3</strong> parameter is always normalized (its value is a floating point value between <strong>[0, 1]</strong>), here its default value is set to <strong>0.5</strong>.</p>
 </blockquote>
 <ol start="3">
 <li>Now adapt the processor part for this new parameter. Open the file <em>plugprocessor.h</em> and add a gain value <strong>Vst::ParamValue mGain</strong>. This value is used for the processing to apply the gain.</li>
@@ -2316,7 +2315,8 @@ protected:
 </code></pre>
 <h3><a class="header" href="#add-the-process-applying-the-gain" id="add-the-process-applying-the-gain">Add the process applying the gain</a></h3>
 <ol>
-<li>We need to set our internal <strong>mGain</strong> with its required value from the host. This is the first step of the process method. Parse the parameter change coming from the host in the structure <em>data.inputParameterChanges</em> for the current audio block to process. Be sure to add <strong>#include &quot;public.sdk/source/vst/vstaudioprocessoralgo.h</strong> at top of the file plugprocessor.cpp!<br />
+<li>We need to set our internal <strong>mGain</strong> with its required value from the host. This is the first step of the process method. Parse the parameter change coming from the host in the structure <em>data.inputParameterChanges</em> for the current audio block to process.<br />
+ⓘ Be sure to add <strong>#include &quot;public.sdk/source/vst/vstaudioprocessoralgo.h</strong> at top of the file <em>plugprocessor.cpp</em>!<br />
 This includes some helpers to access audio buffer.</li>
 </ol>
 <p><strong>plugprocessor.cpp</strong></p>
@@ -2427,11 +2427,17 @@ if (data.inputs[0].silenceFlags != 0)
 </code></pre>
 <h3><a class="header" href="#add-storerestore-state" id="add-storerestore-state">Add store/restore state</a></h3>
 <p>The <em>Processor</em> part represents the state of the plug-in, so it is its job to implement the <strong>getState</strong>/<strong>setState</strong> method used by the host to save/load projects and presets. The <em>Controller</em> part gets the <em>Processor</em> state too in its <strong>setComponentState</strong> method which allows to synchronize its parameters too (used for example by the UI).</p>
+<pre><code>IBStreamer streamer (state, kLittleEndian);
+</code></pre>
 <ol>
-<li>In the file <em>plugprocessor.cpp</em>, add the <strong>mGain</strong> value to the state stream given by the host in the <strong>getState</strong> method which will save it as a project or preset.</li>
+<li>In the file <em>plugprocessor.cpp</em>, add the <strong>mGain</strong> value to the state stream given by the host in the <strong>getState</strong> method which will save it as a project or preset.<br />
+The helper class <strong>IBStreamer</strong> could be used for handling the <strong>IBStream</strong> given by the host.</li>
 </ol>
 <p><strong>plugprocessor.cpp</strong></p>
-<pre><code class="language-c++">//-----------------------------------------------------------------------
+<pre><code class="language-c++">// add this include at the top of the file
+#include &quot;base/source/fstreamer.h&quot;
+
+//-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::getState (IBStream* state)
 {
     // here we need to save the model (preset or project)
@@ -2465,7 +2471,10 @@ tresult PLUGIN_API PlugProcessor::setState (IBStream* state)
 <li>In the <strong>setComponentState</strong> method, the <em>Controller</em> part of the plug-in receives the same state than the one used in <strong>PlugProcessor::setState</strong>. <strong>PlugController::setComponentState</strong> is called just after <strong>PlugProcessor::setState</strong>.</li>
 </ol>
 <p><strong>plugcontroller.cpp</strong></p>
-<pre><code class="language-c++">//-----------------------------------------------------------------------
+<pre><code class="language-c++">// add this include at the top of the file
+#include &quot;base/source/fstreamer.h&quot;
+
+//-----------------------------------------------------------------------
 tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
 {
 	// Here you get the state of the component (Processor part)
@@ -2478,7 +2487,7 @@ tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
         return kResultFalse;
 
 	// sync with our parameter
-	if (auto param = getParameter (GainParams::kParamGainId))
+	if (auto param = parameters.getParameter (GainParams::kParamGainId))
 		param-&gt;setNormalized (savedParam1);
 
     return kResultOk;
@@ -2517,7 +2526,7 @@ In this example we add 1 input event bus, receiving only on 1 channel. If you ne
 <p>addEventInput (STR16 (&quot;Event In&quot;), 4); // here 4 channels</p>
 </blockquote>
 <ol start="2">
-<li>We create a new internal value <em>mGainReduction</em> (not exported to the host) which is changed by the velocity of a played noteOn, so that the harder you hit the note, the higher is the gain reduction (this is what we want here in this plug-in):</li>
+<li>We create a new internal value <strong>mGainReduction</strong> (not exported to the host) which is changed by the velocity of a played <em>noteOn</em>, so that the harder you hit the note, the higher is the gain reduction (this is what we want here in this plug-in):</li>
 </ol>
 <p><strong>plugprocessor.h</strong></p>
 <pre><code class="language-c++">// ... 
@@ -2571,7 +2580,7 @@ tresult PLUGIN_API PlugProcessor::process (ProcessData&amp; data)
     }
 </code></pre>
 <ol start="4">
-<li>Make use of this <em>mGainReduction</em> in our real processing part:</li>
+<li>Make use of this <strong>mGainReduction</strong> in our real processing part:</li>
 </ol>
 <p><strong>plugprocessor.cpp</strong></p>
 <pre><code class="language-c++">//----------------------------------------------------------------------------
