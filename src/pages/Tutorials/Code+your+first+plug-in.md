@@ -44,8 +44,8 @@ enum GainParams : Steinberg::Vst::ParamID
 **plugcontroller.cpp**
 
 ```c++
- // Include the file where some ids are defined
- #include "plugids.h"
+// Include the file where some ids are defined
+#include "plugids.h"
 
 //----------------------------------------------------------------------------
 tresult PLUGIN_API PlugController::initialize (FUnknown*context)
@@ -558,3 +558,4 @@ tresult PLUGIN_API PlugProcessor::process (ProcessData& data)
 ```
 
 That´s it!
+
