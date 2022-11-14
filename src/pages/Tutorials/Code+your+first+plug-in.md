@@ -28,7 +28,7 @@ In this basic plug-in example, we will add a Gain parameter which modifies the v
 
 For this, each **VST 3** parameter requires a unique identifier (a number).
 
-1. Open the file plugids.h and enter a new id kParamGainId. In this example, assign the unique number 102.
+1. Open the file *plugids.h* and enter a new id **kParamGainId**. In this example, assign the unique number **102** for example.
 
 **plugids.h**
 
@@ -37,16 +37,17 @@ For this, each **VST 3** parameter requires a unique identifier (a number).
 
 enum GainParams : Steinberg::Vst::ParamID
 {
-    kParamGainId = 102, // should be an unique id...
+    kParamGainId = 102, // should be a unique id...
 };
 ```
 
-2. Open the plugcontroller.cpp file, and add the gain parameter with the parameters.addParameter
+2. Open the *plugcontroller.cpp* file, and add the gain parameter with the **parameters.addParameter**
 
 **plugcontroller.cpp**
 
 ```c++
-#include "myplugincids.h"
+// Include the file where some ids are defined
+#include "plugids.h"
 
 //----------------------------------------------------------------------------
 tresult PLUGIN_API PlugController::initialize (FUnknown*context)
@@ -66,7 +67,7 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 
 >ⓘ **Note**\
 >- We add the flag [*kCanAutomate*](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31) which informs the DAW/host that this parameter can be automated.
->- A **VST 3** parameter is always normalized (its value is a floating point value between \[0.0, 1.0\]), here its default value is set to 0.5.
+>- A **VST 3** parameter is always normalized (its value is a floating point value between **\[0.0, 1.0\]**), here its default value is set to **0.5**.
 
 3. Now adapt the processor part for this new parameter. Open the file *plugprocessor.h* and add a gain value **Vst::ParamValue mGain**. This value is used for the processing to apply the gain.
 
@@ -85,7 +86,8 @@ protected:
 
 ### Add the process applying the gain
 
-1. We need to set our internal **mGain** with its required value from the host. This is the first step of the process method. Parse the parameter change coming from the host in the structure *data.inputParameterChanges* for the current audio block to process. Be sure to add **#include "public.sdk/source/vst/vstaudioprocessoralgo.h** at top of the file plugprocessor.cpp!\
+1. We need to set our internal **mGain** with its required value from the host. This is the first step of the process method. Parse the parameter change coming from the host in the structure *data.inputParameterChanges* for the current audio block to process.\
+ⓘ Be sure to add **#include "public.sdk/source/vst/vstaudioprocessoralgo.h** at top of the file *plugprocessor.cpp*!\
 This includes some helpers to access audio buffer.
 
 **plugprocessor.cpp**
@@ -204,11 +206,16 @@ if (data.inputs[0].silenceFlags != 0)
 
 The *Processor* part represents the state of the plug-in, so it is its job to implement the **getState**/**setState** method used by the host to save/load projects and presets. The *Controller* part gets the *Processor* state too in its **setComponentState** method which allows to synchronize its parameters too (used for example by the UI).
 
-1. In the file *plugprocessor.cpp*, add the **mGain** value to the state stream given by the host in the **getState** method which will save it as a project or preset.
+    IBStreamer streamer (state, kLittleEndian);
+1. In the file *plugprocessor.cpp*, add the **mGain** value to the state stream given by the host in the **getState** method which will save it as a project or preset.\
+The helper class **IBStreamer** could be used for handling the **IBStream** given by the host.
 
 **plugprocessor.cpp**
 
 ```c++
+// add this include at the top of the file
+#include "base/source/fstreamer.h"
+
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::getState (IBStream* state)
 {
@@ -247,6 +254,9 @@ tresult PLUGIN_API PlugProcessor::setState (IBStream* state)
 **plugcontroller.cpp**
 
 ```c++
+// add this include at the top of the file
+#include "base/source/fstreamer.h"
+
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
 {
@@ -260,7 +270,7 @@ tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
         return kResultFalse;
 
 	// sync with our parameter
-	if (auto param = getParameter (GainParams::kParamGainId))
+	if (auto param = parameters.getParameter (GainParams::kParamGainId))
 		param->setNormalized (savedParam1);
 
     return kResultOk;
@@ -305,7 +315,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown* context)
 >
 >addEventInput (STR16 ("Event In"), 4); // here 4 channels
 
-2. We create a new internal value *mGainReduction* (not exported to the host) which is changed by the velocity of a played noteOn, so that the harder you hit the note, the higher is the gain reduction (this is what we want here in this plug-in):
+2. We create a new internal value **mGainReduction** (not exported to the host) which is changed by the velocity of a played *noteOn*, so that the harder you hit the note, the higher is the gain reduction (this is what we want here in this plug-in):
 
 **plugprocessor.h**
 
@@ -363,7 +373,7 @@ tresult PLUGIN_API PlugProcessor::process (ProcessData& data)
     }
 ```
 
-4. Make use of this *mGainReduction* in our real processing part:
+4. Make use of this **mGainReduction** in our real processing part:
 
 **plugprocessor.cpp**
 
@@ -550,3 +560,4 @@ tresult PLUGIN_API PlugProcessor::process (ProcessData& data)
 ```
 
 That´s it!
+
