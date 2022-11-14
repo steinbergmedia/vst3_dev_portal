@@ -206,7 +206,6 @@ if (data.inputs[0].silenceFlags != 0)
 
 The *Processor* part represents the state of the plug-in, so it is its job to implement the **getState**/**setState** method used by the host to save/load projects and presets. The *Controller* part gets the *Processor* state too in its **setComponentState** method which allows to synchronize its parameters too (used for example by the UI).
 
-    IBStreamer streamer (state, kLittleEndian);
 1. In the file *plugprocessor.cpp*, add the **mGain** value to the state stream given by the host in the **getState** method which will save it as a project or preset.\
 The helper class **IBStreamer** could be used for handling the **IBStream** given by the host.
 
