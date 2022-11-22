@@ -22,7 +22,8 @@
   - Remove **${SDK_ROOT}** from *smtg_target_configure_version_file*.
   - Replace **SDK_ROOT** with **vst3sdk_SOURCE_DIR**.
   - Better support of MinGW.
-
+  - Improve *SMTG_AAXSupport.cmake* and *SMTG_CoreAudioSupport.cmake*
+  - Fix initialization of CMAKE_OSX_DEPLOYMENT_TARGET.
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
 
