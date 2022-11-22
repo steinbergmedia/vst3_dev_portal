@@ -6,6 +6,7 @@
 
 - Interface changes:
   - Refactor SDK version macros in *vsttypes.h* so that the C API generator can use it.
+  - Better Support of MinGW in *fplatform.h*.
 
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md)
 
@@ -20,6 +21,8 @@
   - Fix folder name for Windows *Arm64EC*.
   - Remove **${SDK_ROOT}** from *smtg_target_configure_version_file*.
   - Replace **SDK_ROOT** with **vst3sdk_SOURCE_DIR**.
+  - Better support of MinGW.
+
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
 
