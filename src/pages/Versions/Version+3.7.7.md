@@ -1,8 +1,8 @@
 >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.7.7 (2022/12/??)
+># Version 3.7.7 (2022/12/12)
 
-## Version 3.7.7 (2022/12/??)
+## Version 3.7.7 (2022/12/12)
 
 - Interface changes:
   - Refactor SDK version macros in *vsttypes.h* so that the C API generator can use it.
