@@ -16,6 +16,9 @@ The **VST 3 API** is an interface collection designed for realtime audio process
 **VST 3** is based on a technology called [VST Module Architecture](../VST+Module+Architecture/Index.md) (**VST-MA**). Please read the [VST-MA documentation](../VST+Module+Architecture/Index.md) to find out more about how the plug-in system works in general.
 The API files belonging to **VST 3** are located in the folder *"pluginterfaces/vst"*.
 
+>ⓘ **If you are looking for the C API of VST 3**\
+>see [https://github.com/steinbergmedia/vst3_c_api](https://github.com/steinbergmedia/vst3_c_api).
+
 ## Basic Concept
 
 A **VST 3** audio effect or instrument basically consists of two parts: a processing part and an edit controller part.
