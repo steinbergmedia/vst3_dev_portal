@@ -128,7 +128,7 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 - **SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON**: use FOLDERID_UserProgramFilesCommon as **VST 3** target path (Windows only) (default ON)
 - **SMTG_RENAME_ASSERT**: Rename ASSERT to SMTG_ASSERT to avoid conflicts with 3rd party libraries (default ON)
 - **SMTG_RUN_VST_VALIDATOR**: Run the VST validator on **VST 3** plug-ins each time they are built (default ON)
-- **SMTG_USE_STATIC_CRT**: Use static CRuntime on Windows (option /MT) (default OFF) (Windows only)
+- **SMTG_USE_STATIC_CRT**: Use static CRuntime on Windows (option /MT) (default OFF: /MD is used) (Windows only)
 
 ---
 

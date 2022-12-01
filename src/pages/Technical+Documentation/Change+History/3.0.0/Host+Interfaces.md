@@ -79,7 +79,7 @@ Private plug-in message.
 - \[released: 3.0.0\]
 - \[mandatory\]
 
-Messages are sent from a VST controller component to a VST editor component and vice versa.
+Messages are sent from the processor component to then controller component and vice versa.
 
 See also [IAttributeList](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html), [IConnectionPoint](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html), [Communication between the components](../../API+Documentation/Index.md#communication-between-the-components)
 
