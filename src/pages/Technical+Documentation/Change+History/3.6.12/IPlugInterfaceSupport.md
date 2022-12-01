@@ -14,7 +14,7 @@ Host callback interface for an edit controller: [Vst::IPlugInterfaceSupport](htt
 
 - \[host imp\]
 - \[released: 3.6.12\]
-- \[optional\]
+- \[mandatory\]
 
 Allows a plug-in to ask the host if a given plug-in interface is supported/used by the host. It is implemented by the hostContext given when the component is initialized.
 

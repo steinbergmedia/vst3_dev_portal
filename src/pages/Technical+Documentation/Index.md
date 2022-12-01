@@ -94,6 +94,10 @@ Formats definition of a **VST 3** plug-in and its preset and where they are loca
 
 Unlike in **VST 2**, **MIDI** is not included in **VST 3**.
 
+## [Host Requirements for VST 3 Support](Host+Requirements/Index.md)
+
+Minimum Host requirements for **VST 3** support.
+
 ---
 
 ## [\[3.0.0\] Interfaces supported by the plug-in](Change+History/3.0.0/Plug+in+Interfaces.md)
