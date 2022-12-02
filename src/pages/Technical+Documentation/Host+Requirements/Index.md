@@ -9,5 +9,4 @@ Here the mandatory **VST 3** interfaces which should be implemented by every **V
 - [\[3.0.0\] Interfaces supported by the host](../Change+History/3.0.0/Host+Interfaces.md).
 - if MIDI is supported: [\[3.6.12\] MIDI Learn](../Change+History/3.6.12/IMidiLearn.md).
 - [\[3.6.12\] Host Query Interface support](../Change+History/3.6.12/IPlugInterfaceSupport.md).
-- [\[3.7.0\] Process Context Requirements](../Change+History/3.7.0/IProcessContextRequirements.md).
 - if *IPluginViewContentScaleSupport* is implemented, it should follow the [\[3.6.6\] PlugView Content Scaling](../Change+History/3.6.6/IPlugViewContentScaleSupport.md) requirements.
