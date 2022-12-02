@@ -36,7 +36,7 @@ The SDK includes some Plug-ins implementation examples.
 
 ## [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
 
-The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (x86_64/M1) and Microsoft Windows (64bits).
+The SDK provides a test application called **VST3PluginTestHost** for Apple macOS X (x86_64/M1) and Microsoft Windows (64bits).
 
 ## [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)
 
@@ -78,8 +78,8 @@ Please sign this **Steinberg VST 3 Plug-In SDK Licensing Agreement** if you want
 
 | Operating System                  | Architecture                  | Compiler              | Notes                             |
 | --------------------------------- | ----------------------------- | --------------------- | --------------------------------- |
-| Windows 10                        | x86, x86_64                   | MSVC 2019, MSVC 2022  |                                   |
-| Windows 8.1                       | x86, x86_64                   | MSVC 2019, MSVC 2022  |                                   |
+| Windows 11                        | x86, x86_64, arm64, arm64EC                   | MSVC 2022  |                                   |
+| Windows 8.1 -10                        | x86, x86_64                   | MSVC 2019, MSVC 2022  |                                   |
 | macOS 10.13 - 12                  | x86, x86_64, Apple Silicon    | Xcode 10 - 13.3       |                                   |
 | iOS 13 - 15                       | arm64                         | Xcode 11 - 13.3       |                                   |
 | Linux - Raspberry Pi OS (Buster)  | arm32                         | GCC 8.3 and higher    | Visual Studio Code                |

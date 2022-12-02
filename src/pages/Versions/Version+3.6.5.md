@@ -18,7 +18,7 @@
 - Plug-in wrappers:
   - VST 3 - Audio Unit Wrapper:
     - support MIDI output
-    - fix crash with namespace conflict with Mac OS X 10.10
+    - fix crash with namespace conflict with macOS X 10.10
     - add PresetAttributes::StateType support in AUWrapper::restoreState
 - New Flags/Enums:
   - New predefined 3D Speaker Arrangements: k91Atmos

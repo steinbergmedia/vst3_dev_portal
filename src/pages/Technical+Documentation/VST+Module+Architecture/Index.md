@@ -23,7 +23,7 @@ It is object-oriented, cross-platform and (almost) compiler-independent.\
 The basics are very much like [Microsoft® COM](https://en.wikipedia.org/wiki/Component_Object_Model), so if you are familiar with this technology, understanding **VST-MA** should be quite easy.
 
 **VST-MA** is provided in C++ only. Interfaces in C++ are expressed as pure virtual class (which is a class with nothing but abstract methods). Unlike COM there is no support for C or other languages yet - simply because there has been no need for this so far. But all **VST-MA** interfaces can be transformed into different representations in case this should be inevitable some day.\
-It is currently available for Windows, Mac OS X and Linux.
+It is currently available for Windows, macOS X and Linux.
 
 The C++ files belonging to **VST-MA** are located in the following folders:
 
