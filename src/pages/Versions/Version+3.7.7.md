@@ -21,12 +21,12 @@
   - Replace **SDK_ROOT** with **vst3sdk_SOURCE_DIR**.
   - Better support of MinGW.
   - Improve *SMTG_AAXSupport.cmake* and *SMTG_CoreAudioSupport.cmake*
-  - Fix initialization of CMAKE_OSX_DEPLOYMENT_TARGET.
+  - Fix initialization of **CMAKE_OSX_DEPLOYMENT_TARGET**.
 
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.4:
   - **MIDI 2** support on macOS with higher resolution for Velocity On/Off, Aftertouch, Poypressure, ControlChange and PitchBend.
 
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.11:
-  - Support of multiple namespaces for generated plug-in source code (XX::YY::ZZ), request C++17 minimum.
+  - Support of multiple namespaces for generated plug-in source code (XX::YY::ZZ), request **C++17** minimum.
   - Fix support of space character in paths.
   
