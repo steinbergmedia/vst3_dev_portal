@@ -8,9 +8,13 @@
 
 ---
 
-The SDK provides some helpers functions to convert from UTF16 (use in VST 3 interfaces) to UTF8 (used by std::string).
+## Goal
+
+The SDK provides some helpers functions to convert from **UTF16** (use in **VST 3** interfaces) to **UTF8** (used by std::string).
 
 Here some code examples:
+
+---
 
 ## Convert a String128 string to an UTF-8 string
 
@@ -30,6 +34,8 @@ if (hostApp)
     }
 }
 ```
+
+---
 
 ## Convert an UTF-8 string to a String128 string
 

@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.1.0] KnobMode, Open Help & Open Aboutbox
+># \[3.1.0\] KnobMode, Open Help & Open Aboutbox
 
 **On this page:**
 
@@ -12,10 +12,10 @@
 
 Edit controller component interface extension: [Vst::IEditController2](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController2.html)
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]
-- [released: 3.1.0]
-- [optional]
+- \[released: 3.1.0\]
+- \[optional\]
 
 Extension to allow the host to inform the plug-in about the host knob mode ([setKnobMode](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController2.html#ad38ac70a9efcc0cfee8ac0cc2b80e648)), and to open the plug-in's about box ([openAboutBox](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController2.html#aa52846d39014c3ca95224fa98930e7a8)) or help documentation ([openHelp](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController2.html#a749ceb08d2f33b5b12cdc59172d8a7c3)).
 

@@ -8,7 +8,7 @@
 
 ## Q: How does persistence work?
 
-An instantiated plug-in often has state information that must be saved in order to properly re-instantiate that plug-in at a later time. A VST 3 plug-in has two states which are saved and reloaded: its component state and its controller state.
+An instantiated plug-in often has state information that must be saved in order to properly re-instantiate that plug-in at a later time. A **VST 3** plug-in has two states which are saved and reloaded: its component state and its controller state.
 
 The sequence of actions for saving is:
 

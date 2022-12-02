@@ -8,9 +8,11 @@
 
 ---
 
+## Goal
+
 Following the previous tutorial [Generate a new plug-in with the Project Generator App](Generate+new+plug-in+with+Project+Generator.md), this tutorial explains how to code an audio plug-in and how to add some basic features.
 
-The artifact will be an audio plug-in that can compute a gain to an audio signal and can be loaded into VST 3 hosts like **Cubase**, **WaveLab**, ...
+The artifact will be an audio plug-in that can compute a gain to an audio signal and can be loaded into **VST 3** hosts like **Cubase**, **WaveLab**, ...
 
 ---
 
@@ -64,8 +66,8 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
 ```
 
 >ⓘ **Note**\
->  We add the flag [*kCanAutomate*](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31) which informs the DAW/host that this parameter can be automated.\
->A **VST 3** parameter is always normalized (its value is a floating point value between **[0, 1]**), here its default value is set to **0.5**.
+>- We add the flag [*kCanAutomate*](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31) which informs the DAW/host that this parameter can be automated.
+>- A **VST 3** parameter is always normalized (its value is a floating point value between **\[0.0, 1.0\]**), here its default value is set to **0.5**.
 
 3. Now adapt the processor part for this new parameter. Open the file *plugprocessor.h* and add a gain value **Vst::ParamValue mGain**. This value is used for the processing to apply the gain.
 
@@ -97,7 +99,7 @@ This includes some helpers to access audio buffer.
 //----------------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 {
-    //--- First : Read inputs parameter changes-----------
+    //--- First: Read inputs parameter changes-----------
     if (data.inputParameterChanges)
     {
         // for each parameter defined by its ID
@@ -185,7 +187,7 @@ if (data.inputs[0].silenceFlags != 0)
     // mark output silence too
     data.outputs[0].silenceFlags = data.inputs[0].silenceFlags;
 
-    // the Plug-in has to be sure that if it sets the flags silence that the output buffer are clear
+    // the plug-in has to be sure that if it sets the flags silence that the output buffer are clear
     for (int32 i = 0; i < numChannels; i++)
     {
        // do not need to be cleared if the buffers are the same (in this case input buffer are
@@ -204,7 +206,6 @@ if (data.inputs[0].silenceFlags != 0)
 
 The *Processor* part represents the state of the plug-in, so it is its job to implement the **getState**/**setState** method used by the host to save/load projects and presets. The *Controller* part gets the *Processor* state too in its **setComponentState** method which allows to synchronize its parameters too (used for example by the UI).
 
-    IBStreamer streamer (state, kLittleEndian);
 1. In the file *plugprocessor.cpp*, add the **mGain** value to the state stream given by the host in the **getState** method which will save it as a project or preset.\
 The helper class **IBStreamer** could be used for handling the **IBStream** given by the host.
 
@@ -337,10 +338,10 @@ protected:
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (ProcessData& data)
 {
-    //--- First : Read inputs parameter changes-----------
+    //--- First: Read inputs parameter changes-----------
     //...
 
-    //---Second : Read input events-------------
+    //---Second: Read input events-------------
     // get the list of all event changes
     Vst::IEventList* eventList = data.inputEvents;
     if (eventList)
@@ -486,7 +487,7 @@ tresult PLUGIN_API PlugProcessor::setBusArrangements(Vst::SpeakerArrangement* in
         return kResultTrue;
     }
 
-    // we do not accept what the host wants : return kResultFalse !
+    // we do not accept what the host wants: return kResultFalse !
     return kResultFalse;
 }
 ```
@@ -497,10 +498,10 @@ tresult PLUGIN_API PlugProcessor::setBusArrangements(Vst::SpeakerArrangement* in
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (ProcessData& data)
 {
-    //--- First : Read inputs parameter changes-----------
+    //--- First: Read inputs parameter changes-----------
     //...
 
-    //---Second : Read input events-------------
+    //---Second: Read input events-------------
     //...
 
     float gain = mGain - mGainReduction;

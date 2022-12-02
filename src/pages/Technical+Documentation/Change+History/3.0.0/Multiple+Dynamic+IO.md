@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.0.0] Multiple Dynamic I/O Support
+># \[3.0.0\] Multiple Dynamic I/O Support
 
 **On this page:**
 
@@ -98,7 +98,7 @@ virtual tresult PLUGIN_API getBusInfo (MediaType type, BusDirection dir, int32 i
 - and the some flags indicating:
   - **kDefaultActive**: The bus should be activated by the host per default on instantiation (activateBus call is requested). By default a bus is inactive. Note that if a host offers the possibility to activate/deactivate busses to the user later on, it may not follow this flag kDefaultActive and let some busses deactivated on instantiation.
   - **kIsControlVoltage**: The bus does not contain ordinary audio data, but data used for control changes at sample rate.
-    - The data is in the same format as the audio data [-1..1].
+    - The data is in the same format as the audio data \[-1.0, 1.0\].
     - A host has to prevent unintended routing to speakers to prevent damage.
     - Only valid for audio media type busses.
 
@@ -186,7 +186,7 @@ For example:
 const SpeakerArrangement kStereo = kSpeakerL | kSpeakerR; // => representing in hexadecimal 0x03 and in binary 0011.
 ```
 
-![tech_doc_28](../../../../resources/tech_doc_28.jpg)
+![Tech_doc_28](../../../../resources/tech_doc_28.jpg)
 
 ### My plug-in is capable of processing all possible channel configurations
 
@@ -214,76 +214,76 @@ If not (by returning **kResultFalse**), the host asks the plug-in for its wanted
 ``` c++
 // Example of a Plug-in supporting only symmetric Input-Output Arrangements:
 
-host -> plug-in : setBusArrangements (monoIN, stereoOUT)
-plug-in return : kResultFalse
-host -> plug-in : getBusArrangement (IN) => return Stereo;
-host -> plug-in : getBusArrangement (OUT) => return Stereo;
-host -> plug-in : setBusArrangements (stereoIN, stereoOUT)
-plug-in return : kResultOk
+host -> plug-in: setBusArrangements (monoIN, stereoOUT)
+plug-in return: kResultFalse
+host -> plug-in: getBusArrangement (IN) => return Stereo;
+host -> plug-in: getBusArrangement (OUT) => return Stereo;
+host -> plug-in: setBusArrangements (stereoIN, stereoOUT)
+plug-in return: kResultOk
 ```
 
 ``` c++
 // Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono->stereo):
 
-host -> plug-in : setBusArrangements (stereoIN, stereoOUT)
-plug-in return : kResultFalse
-host -> plug-in : getBusArrangement (IN) => return Mono;
-host -> plug-in : getBusArrangement (OUT) => return Stereo;
-host -> plug-in : setBusArrangements (MonoIN, stereoOUT)
-plug-in return : kResultOk
+host -> plug-in: setBusArrangements (stereoIN, stereoOUT)
+plug-in return: kResultFalse
+host -> plug-in: getBusArrangement (IN) => return Mono;
+host -> plug-in: getBusArrangement (OUT) => return Stereo;
+host -> plug-in: setBusArrangements (MonoIN, stereoOUT)
+plug-in return: kResultOk
 ```
 
 ``` c++
 // Example of a Plug-in supporting only asymmetric Input-Output Arrangements (mono-> stereo to up 5.1):
 
-host -> plug-in : setBusArrangements (5.1IN, 5.1OUT)
-plug-in return : kResultFalse
-host -> plug-in : getBusArrangement (IN) => return Mono;
-host -> plug-in : getBusArrangement (OUT) => return 5.1;
-host -> plug-in : setBusArrangements (MonoIN, 5.1OUT)
-plug-in return : kResultOk
+host -> plug-in: setBusArrangements (5.1IN, 5.1OUT)
+plug-in return: kResultFalse
+host -> plug-in: getBusArrangement (IN) => return Mono;
+host -> plug-in: getBusArrangement (OUT) => return 5.1;
+host -> plug-in: setBusArrangements (MonoIN, 5.1OUT)
+plug-in return: kResultOk
 ```
 
 ``` c++
-// Host -> Plug-in : setBusArrangements (QuadroIN, QuadroOUT)
+// Host -> Plug-in: setBusArrangements (QuadroIN, QuadroOUT)
 
-plug-in return : kResultFalse
-host -> plug-in : getBusArrangement (IN) => return Mono;
-host -> plug-in : getBusArrangement (OUT) => return Quadro;
-host -> plug-in : setBusArrangements (MonoIN, QuadroOUT)
-plug-in return : kResultOk
+plug-in return: kResultFalse
+host -> plug-in: getBusArrangement (IN) => return Mono;
+host -> plug-in: getBusArrangement (OUT) => return Quadro;
+host -> plug-in: setBusArrangements (MonoIN, QuadroOUT)
+plug-in return: kResultOk
 ```
 
 ``` c++
 // Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input always mono:
 
-host -> plug-in : getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
-host -> plug-in : getBusArrangements (OUT) => Output: mono
-host -> plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:Mono, Output: stereo)
-plug-in return : kResultTrue
+host -> plug-in: getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
+host -> plug-in: getBusArrangements (OUT) => Output: mono
+host -> plug-in: setBusArrangements (Input Main:stereo / Input Side-chain:Mono, Output: stereo)
+plug-in return: kResultTrue
 
 or
-host -> plug-in : getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
-host -> plug-in : getBusArrangements (OUT) => Output: mono
-host -> plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:stereo, Output: stereo)
-plug-in return : kResultFalse // because we want mono for Side-chain
-host -> plug-in : getBusArrangement (IN) => return Input Main:stereo / Input Side-chain:mono;
-host -> plug-in : getBusArrangement (OUT) => return Stereo;
-host -> plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:mono, Output: stereo)
-plug-in return : kResultOk
+host -> plug-in: getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
+host -> plug-in: getBusArrangements (OUT) => Output: mono
+host -> plug-in: setBusArrangements (Input Main:stereo / Input Side-chain:stereo, Output: stereo)
+plug-in return: kResultFalse // because we want mono for Side-chain
+host -> plug-in: getBusArrangement (IN) => return Input Main:stereo / Input Side-chain:mono;
+host -> plug-in: getBusArrangement (OUT) => return Stereo;
+host -> plug-in: setBusArrangements (Input Main:stereo / Input Side-chain:mono, Output: stereo)
+plug-in return: kResultOk
 ```
 
 ``` c++
 // Example of a Plug-in supporting only symmetric Input-Output Arrangements and Side-chain Input following the Main Input Arrangement:
 
-host -> plug-in : getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
-host -> plug-in : getBusArrangements (OUT) => Output: mono
-host -> plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:Mono, Output: stereo)
-plug-in return : kResultFalse // because we want the same arrangement for Input Main and Side-chain
-host -> plug-in : getBusArrangement (IN) => return Input Main:stereo / Input Side-chain:stereo;
-host -> plug-in : getBusArrangement (OUT) => return Stereo;
-host -> plug-in : setBusArrangements (Input Main:stereo / Input Side-chain:stereo, Output: stereo)
-plug-in return : kResultOk
+host -> plug-in: getBusArrangements (IN) => Input Main:Mono / Input Side-chain:Mono
+host -> plug-in: getBusArrangements (OUT) => Output: mono
+host -> plug-in: setBusArrangements (Input Main:stereo / Input Side-chain:Mono, Output: stereo)
+plug-in return: kResultFalse // because we want the same arrangement for Input Main and Side-chain
+host -> plug-in: getBusArrangement (IN) => return Input Main:stereo / Input Side-chain:stereo;
+host -> plug-in: getBusArrangement (OUT) => return Stereo;
+host -> plug-in: setBusArrangements (Input Main:stereo / Input Side-chain:stereo, Output: stereo)
+plug-in return: kResultOk
 ```
 
 ### How report to the host that the plug-in Arrangement has changed?

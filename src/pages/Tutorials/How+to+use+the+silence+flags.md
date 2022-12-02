@@ -8,6 +8,8 @@
 
 ---
 
+## Goal
+
 This tutorial explains how to use silence flags.
 
 ---
@@ -19,6 +21,8 @@ It is sometime useful for plug-ins processing to know if the audio inputs really
 But how does it works? The following part will show you how to get this information in the process call and how to propagate it to the audio outputs of the plug-in.
 
 The silence flags is part of the [AudioBusBuffers](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html) ([silenceFlags](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#a2c73b926e22ddb05193b6edd16a008f8)) passed from the host to the plug-in and back to the host in the process call.
+
+---
 
 ## Plug-in receives a silent audio input
 
@@ -58,6 +62,8 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
 >ⓘ **Note**\
 >The host has the responsibility to clear the input buffers (set to something near zero, like 10e-7, to prevent de-normalization issue) when it enables the silence flags (the output silence flags will be set by the host to no silence (=0)).
 
+---
+
 ## Plug-in generates silent output
 
 ``` c++
@@ -92,6 +98,8 @@ tresult PLUGIN_API AGain::process (ProcessData& data)
 
 >ⓘ **Note**\
 >The plug-in, if it produces silence output, has the responsibility to clear (set to zero) its output buffers and to correctly set the output silence flags.
+
+---
 
 ## In bypass
 

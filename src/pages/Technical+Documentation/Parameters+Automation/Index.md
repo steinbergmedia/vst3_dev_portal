@@ -22,30 +22,34 @@ A plug-in requires parameters in order to control its DSP algorithm, for example
 The plug-in must assign a unique 32-bit identifier (ID) to each exported parameter.
 
 >ⓘ **Note**\
->Up to 2^31 parameters can be exported with ID range **[0, 2.147.483.648]** (the range [2.147.483.649, 4.294.967.296] is reserved for host application).
+>Up to 2^31 parameters can be exported with ID range **\[0, 2.147.483.648\]** (the range \[2.147.483.649, 4.294.967.296\] is reserved for host application).
 
 Please note that it is not allowed to change this assignment at any time. In particular, a plug-in must not perform any reconfigurations that lead to a different set of automatable parameters. The only allowed variation is the adding or removing of parameters in a future plug-in version. However, keep in mind that automation data can get lost when parameters are removed.
 
 Usually, the host is unaware of a parameter's semantics. However, there are a few important exceptions that the controller must announce using the [Steinberg::Vst::ParameterInfo::flags](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#a8ffba1d4311e48ae488bc118f20d7edb):
 
-- **kCanAutomate**: This means that this parameter can be automated by the host using its automation track. **[SDK 3.0.0]**
+- **kCanAutomate**: This means that this parameter can be automated by the host using its automation track. **\[SDK 3.0.0\]**
 
-- **kIsBypass**: If the plug-in performs bypass processing itself, it must export the corresponding parameter and flag it with kIsBypass. It is highly recommended that this bypass parameter is provided by the effect plug-in. If the plug-in does not export a bypass parameter, the host can perform bypass processing and the plug-in process call will be discontinued. Only one bypass parameter is allowed. The plug-in should save the state of this bypass parameter like other parameters (when getState and setState are used). If the plug-in does not need a bypass (like Instrument) this flag should be not used. Check this [FAQ](../../FAQ/Index.md) in order to understand how bypass processing works. **[SDK 3.0.0]**
 
-- **kIsReadOnly**: This means that this parameter cannot be changed from outside the plug-in, this requires that kCanAutomate is NOT set. **[SDK 3.0.0]**
+- **kIsBypass**: If the plug-in performs bypass processing itself, it must export the corresponding parameter and flag it with kIsBypass. It is highly recommended that this bypass parameter is provided by the effect plug-in. If the plug-in does not export a bypass parameter, the host can perform bypass processing and the plug-in process call will be discontinued. Only one bypass parameter is allowed. The plug-in should save the state of this bypass parameter like other parameters (when getState and setState are used). If the plug-in does not need a bypass (like Instrument) this flag should be not used. Check this [FAQ](../../FAQ/Index.md) in order to understand how bypass processing works. **\[SDK 3.0.0\]**
 
-- **kIsWrapAround**: When a UI control created by the host for this parameter attempts to set its value out of the limits, this UI control will make a wrap around (useful for parameters like 360 degree rotation). **[SDK 3.0.2]**
 
-- **kIsList**: This means that the host will display this parameter as list in a generic editor or automation editing. **[SDK 3.1.0]**
+- **kIsReadOnly**: This means that this parameter cannot be changed from outside the plug-in, this requires that kCanAutomate is NOT set. **\[SDK 3.0.0\]**
 
-- **kIsHidden**: This means that this parameter will NOT be displayed and cannot be changed from outside the plug-in. This requires that kCanAutomate is NOT set and kIsReadOnly is set. **[SDK 3.7.0]**
 
-- **kIsProgramChange**: If the plug-in supports program lists (see [VST 3 Units](../VST+3+Units/Index.md), [Program Lists](../Presets+Program+Lists/Index.md)), each 'unit' of the plug-in needs to export a program selector parameter. Such a parameter is not allowed to be automated when the affected parameters are flagged as automatable as well. A host can display program parameters at dedicated locations of its GUI. **[SDK 3.0.0]**
+- **kIsWrapAround**: When a UI control created by the host for this parameter attempts to set its value out of the limits, this UI control will make a wrap around (useful for parameters like 360 degree rotation). **\[SDK 3.0.2\]**
+
+- **kIsList**: This means that the host will display this parameter as list in a generic editor or automation editing. **\[SDK 3.1.0\]**
+
+- **kIsHidden**: This means that this parameter will NOT be displayed and cannot be changed from outside the plug-in. This requires that kCanAutomate is NOT set and kIsReadOnly is set. **\[SDK 3.7.0\]**
+
+- **kIsProgramChange**: If the plug-in supports program lists (see [VST 3 Units](../VST+3+Units/Index.md), [Program Lists](../Presets+Program+Lists/Index.md)), each 'unit' of the plug-in needs to export a program selector parameter. Such a parameter is not allowed to be automated when the affected parameters are flagged as automatable as well. A host can display program parameters at dedicated locations of its GUI. **\[SDK 3.0.0\]**
+
 
 The controller must support the conversion to a string for any exported parameter. The conversion method [Steinberg::Vst::IEditController::getParamStringByValue](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#aab2f0b853e75361d331b667e7893962e) must provide a result for any possible normalized parameter value.
 
 >⚠️ **Warning**\
->Parameter values are always transmitted in a normalized floating point (64bit double) representation **[0.0, 1.0]**.
+>Parameter values are always transmitted in a normalized floating point (64bit double) representation **\[0.0, 1.0\]**.
 
 ### Representation of parameter values
 
@@ -62,32 +66,35 @@ The **VST 3** interfaces suggest a normalized value representation for a part of
 
 Although values are transmitted in a normalized format, the host needs to know some details of the parameter's displayed GUI representation. When editing automation data, for example, the host must know the nature of a parameter expressed in its 'step count' (see [Steinberg::Vst::ParameterInfo::stepCount](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ac1efeff62e4ba9aea101c3327e0b5c4d)).
 
-**Step count semantics :**
+**Step count semantics:**
 
 - **0**: A continuous parameter. Any normalized value has an exact mapping (0 = there are no steps between the values)
-- **1**: A discrete parameter with 2 states like [on/off] [yes/no] etc. (1 = there is one step between these states)
-- **2**: A discrete parameter with 3 states [0,1,2] or [3,5,7] (2 = there are two steps between these states)
+- **1**: A discrete parameter with 2 states like (on/off) (yes/no) etc. (1 = there is one step between these states)
+- **2**: A discrete parameter with 3 states (0,1,2) or (3,5,7) (2 = there are two steps between these states)
 - **3**: etc...
 
 ### Conversion of normalized values
 
 The controller and the processor have to work with normalized parameter values.
 
-- Step count 0 : Continuous parameters simply need to be mapped accordingly
-- Step count n : Discrete parameters need a little bit more care
+- Step count 0: Continuous parameters simply need to be mapped accordingly
+- Step count n: Discrete parameters need a little bit more care
 
   - **Discrete Value => Normalize**
+
   ``` c++
   double normalized = discreteValue / (double)stepCount;
   ```
+
   - **Normalize => Discrete Value (Denormalize)**
+
   ``` c++
   int discreteValue = min (stepCount, normalized *(stepCount + 1));
   ```
 
 **Example**: Step Count 3
 
-![tech_doc_11](../../../resources/tech_doc_11.jpg)
+![Tech_doc_11](../../../resources/tech_doc_11.jpg)
 
 ## Automation
 
@@ -148,7 +155,7 @@ In **VST 3**, automation playback is the task of the plug-in and it is the host'
 
 The need to perform all transformations, from the normalized GUI representation to the DSP representation, produces some overhead. Performing sample accurate automation requires even more overhead, because the DSP value must be calculated for each single sample. While this cannot be avoided entirely, it is the choice of the plug-in implementation how much processing time to spend on automation accuracy. The host always transmits value changes in a way that allows a sample accurate reconstruction of the underlying automation curve. The plug-in is responsible for the realization.
 
-![tech_doc_12](../../../resources/tech_doc_12.jpg)
+![Tech_doc_12](../../../resources/tech_doc_12.jpg)
 
 The processor gets the automation data in the processing call by using queue of parameter changes for each parameter having automation data:
 

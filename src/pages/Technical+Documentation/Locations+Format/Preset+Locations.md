@@ -39,25 +39,25 @@
 | 1     | User            | User    | X     | Users/$USERNAME/Library/Audio/Presets/$COMPANY/$PLUGIN-NAME/ |
 | 2     | Shared_Factory  | Public  | -     | Library/Audio/Presets/$COMPANY/$PLUGIN-NAME/ | Computer shared FactoryROM |
 | 3     | Shared_Factory  | Public  | -     | Network/Library/Audio/Presets/$COMPANY/$PLUGIN-NAME/ | Network shared FactoryROM |
-| 4     | App_Factory     | Apps    | -     | [$APPFOLDER]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | Host Application (Cubase, ...) |
+| 4     | App_Factory     | Apps    | -     | \[$APPFOLDER\]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | Host Application (Cubase, ...) |
 
 ### For Windows XP/2000 platform
 
 | Prio  | Type          |  Scope  | Write | Path | Comment |
 | :-    | :-            | :-      | :-    | :-   | :-      |
-| 1     | User          | User    | X     | [my documents]/vst3 presets/$company/$plugin-name/ | csidl_personal |
-| 2     | User_Factory  | User    | X     | [documents and settings/$username/application data]/vst3 presets/$company/$plugin-name/ | csidl_appdata |
-| 3     | Shared_Factory| Public  | -     | [documents and settings/$allusers/application data]/vst3 presets/$company/$plugin-name/ | csidl_common_appdata |
-| 4     | App_Factory   | Apps    | -     | [$APPFOLDER]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | Host Application (Cubase, ...) |
+| 1     | User          | User    | X     | \[My Documents\]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | csidl_personal |
+| 2     | User_Factory  | User    | X     | \[Documents and Settings/$USERNAME/Application Data\]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | csidl_appdata |
+| 3     | Shared_Factory| Public  | -     | \[Documents and Settings/$ALLUSERS/Application Data\]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | csidl_common_appdata |
+| 4     | App_Factory   | Apps    | -     | \[$APPFOLDER\]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | Host Application (Cubase, ...) |
 
 ### For Windows Vista/7/8/10 
 
 | Prio  | Type          | Scope | Write | Path | Comment |
 | :-    | :-            | :-    | :-    | :-   | :-      |
-| 1     | User          | User  | X     | [Users/$USERNAME/Documents]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | FOLDERID_Documents |
-| 2     | User_Factory  | User  | X     | [Users/$USERNAME/AppData/Roaming]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | FOLDERID_RoamingAppData |
-| 3     | Shared_Factory| Public| -     | [ProgramData]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | FOLDERID_ProgramData |
-| 4     | App_Factory   | Apps  | -     | [$APPFOLDER]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | Host Application (Cubase, ...) |
+| 1     | User          | User  | X     | \[Users/$USERNAME/Documents\]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | FOLDERID_Documents |
+| 2     | User_Factory  | User  | X     | \[Users/$USERNAME/AppData/Roaming\]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | FOLDERID_RoamingAppData |
+| 3     | Shared_Factory| Public| -     | \[ProgramData\]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | FOLDERID_ProgramData |
+| 4     | App_Factory   | Apps  | -     | \[$APPFOLDER\]/VST3 Presets/$COMPANY/$PLUGIN-NAME/ | Host Application (Cubase, ...) |
 
 ### For Linux platform
 
@@ -66,4 +66,4 @@
 | 1     | User            | User    | X     | $HOME/.vst3/presets/$COMPANY/$PLUGIN-NAME/          |         |
 | 2     | Shared_Factory  | Public  | -     | /usr/share/vst3/presets/$COMPANY/$PLUGIN-NAME/      |         |
 | 3     | Shared_Factory  | Public  | -     | /usr/local/share/vst3/presets/$COMPANY/$PLUGIN-NAME/|         |
-| 4     | App_Factory     | Apps    | -     | [$APPFOLDER]/vst3/presets/$COMPANY/$PLUGIN-NAME/    | Host Application |
+| 4     | App_Factory     | Apps    | -     | \[$APPFOLDER\]/vst3/presets/$COMPANY/$PLUGIN-NAME/  | Host Application |

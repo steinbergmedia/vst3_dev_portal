@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.1.0] Dirty State, Open Editor Request and UI Group Editing Support
+># \[3.1.0\] Dirty State, Open Editor Request and UI Group Editing Support
 
 **On this page:**
 
@@ -14,10 +14,10 @@ Improvement of the plug-in's integration in the host (dirty state, request Open 
 
 Extended host callback interface [Vst::IComponentHandler2](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler2.html) for an edit controller.
 
-- [host imp]
+- \[host imp\]
 - [extends [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html)]
-- [released: 3.1.0]
-- [optional]
+- \[released: 3.1.0\]
+- \[optional\]
 
 ## Dirty State Support
 
@@ -55,14 +55,14 @@ This part handles parameter group editing from the plug-in UI. It wraps a set of
 //--------------------------------------
 // we are in the editcontroller...
 // in case of multiple switch buttons (with associated ParamID 1 and 3)
-// on mouse down :
+// on mouse down:
 hostHandler2->startGroupEdit ();
 hostHandler->beginEdit (1);
 hostHandler->beginEdit (3);
 hostHandler->performEdit (1, 1.0);
 hostHandler->performEdit (3, 0.0); // the opposite of paramID 1 for example
 //....
-// on mouse up :
+// on mouse up:
 hostHandler->endEdit (1);
 hostHandler->endEdit (3);
 hostHandler2->finishGroupEdit ();
@@ -70,19 +70,19 @@ hostHandler2->finishGroupEdit ();
 //....
 //--------------------------------------
 // in case of multiple faders (with associated ParamID 1 and 3)
-// on mouse down :
+// on mouse down:
 hostHandler2->startGroupEdit ();
 hostHandler->beginEdit (1);
 hostHandler->beginEdit (3);
 hostHandler2->finishGroupEdit ();
 //....
-// on mouse move :
+// on mouse move:
 hostHandler2->startGroupEdit ();
 hostHandler->performEdit (1, x); // x the wanted value
 hostHandler->performEdit (3, x);
 hostHandler2->finishGroupEdit ();
 //....
-// on mouse up :
+// on mouse up:
 hostHandler2->startGroupEdit ();
 hostHandler->endEdit (1);
 hostHandler->endEdit (3);

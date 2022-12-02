@@ -28,7 +28,7 @@ Check the folder *"bin"* of the SDK!
 
 ![what_if_15](../../resources/what_is_15.jpg)
 
-- **View -> Open Plug-in Information Window**: opens a window showing all registered component and controller **VST 3 plug-ins**
+- **View -> Open Plug-in Information Window**: opens a window showing all registered component and controller **VST 3** plug-ins.
 - **View -> Open Plug-in Unit Tests Window**: opens a window where you can test your plug-in with a series of unit tests.
 - **View -> Open Preset Editor**: allows you to open, check and modify **VST 3** presets (adding meta attributes like in Instrument/- Style/Character)
 - **File -> Convert VST 3 Preset to VST 2 preset (fxp or fxb)**: allow to convert **VST 3** Presets to compatible **VST 2** Presets.
@@ -58,7 +58,7 @@ This section simulates note events sent to the plug-in.
 
 - A pattern could be defined and initialized with randomized, chromatic or manual events. (for Chromatic choose the start note in the pattern and select Chromatic in the pop-up menu).
 - Active check box: enable/disable the playback of this pattern.
-- You can choose different loop stepping for this pattern [1, 1/2, ...1/32]
+- You can choose different loop stepping for this pattern (1, 1/2, ...1/32)
 
 ### VST Rack
 

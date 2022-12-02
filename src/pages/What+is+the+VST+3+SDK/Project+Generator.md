@@ -42,11 +42,11 @@ If you do not have previously installed the **CMake** tool, you could download i
 
 ### Locate VST SDK
 
-If you have already downloaded the **VST SDK**, you just have to indicate the *Project Generator* where it is located, for this click on ***Locate VST SDK*** and choose with the folder selector the *VST3_SDK* folder:
+If you have already downloaded the **VST 3 SDK**, you just have to indicate the *Project Generator* where it is located, for this click on ***Locate VST SDK*** and choose with the folder selector the *VST3_SDK* folder:
 
 ![what_if_28](../../resources/what_is_28.png)
 
-If you do not have previously installed the **VST SDK**, you could download it, just click on ***Download VST SDK***, a dialog appears:
+If you do not have previously installed the **VST 3 SDK**, you could download it, just click on ***Download VST SDK***, a dialog appears:
 
 ![what_if_29](../../resources/what_is_29.png)
 

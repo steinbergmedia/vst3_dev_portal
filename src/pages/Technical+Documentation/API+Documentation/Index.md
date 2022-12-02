@@ -24,12 +24,12 @@ The API files belonging to **VST 3** are located in the folder *"pluginterfaces/
 A **VST 3** audio effect or instrument basically consists of two parts: a processing part and an edit controller part.
 The corresponding interfaces are:
 
-- Processor : [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html) + [Steinberg::Vst::IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html)
-- Controller : [Steinberg::Vst::IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)
+- Processor: [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html) + [Steinberg::Vst::IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html)
+- Controller: [Steinberg::Vst::IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)
 
-![tech_doc_1](../../../resources/tech_doc_1.jpg)
+![Tech_doc_1](../../../resources/tech_doc_1.jpg)
 
-![tech_doc_2](../../../resources/tech_doc_2.png)
+![Tech_doc_2](../../../resources/tech_doc_2.png)
 
 The design of **VST 3** suggests a complete separation of processor and edit controller by implementing two components. Splitting up an effect into these two parts requires some extra implementation efforts.
 However, this separation enables the host to run each component in a different context, even on different computers. Another benefit is that parameter changes can be separated when it comes to automation. While for processing these changes need to be transmitted in a sample-accurate way, the GUI part can be updated with a much lower frequency and it can be shifted by the amount that results from any delay compensation or other processing offset.
@@ -139,9 +139,9 @@ store and restore any GUI settings that are not related to the processor (like s
 - **Restore**: When the states are restored, the host passes the processor state to both the processor and the controller ([Steinberg::Vst::IEditController::setComponentState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f)). A host must always pass that state to the processor first. The controller then has to synchronize its parameters to this state (but must not perform any [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html) callbacks).
 After restoring a state, the host rescans the parameters (asking the controller) in order to update its internal representation.
 
-![tech_doc_3](../../../resources/tech_doc_3.png)
+![Tech_doc_3](../../../resources/tech_doc_3.png)
 
-![tech_doc_4](../../../resources/tech_doc_4.png)
+![Tech_doc_4](../../../resources/tech_doc_4.png)
 
 See also
 
@@ -151,7 +151,7 @@ See also
 
 ## The Processing Part
 
-![tech_doc_5](../../../resources/tech_doc_5.png)
+![Tech_doc_5](../../../resources/tech_doc_5.png)
 
 The processing part consists of two related interfaces: [Steinberg::Vst::IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html) and [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html). The reason for splitting the two is to use the basic interfaces [Steinberg::Vst::IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html) not only for audio plug-ins but also for other kinds of media (e.g. video processing in the future). Hence the [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html) interface represents the audio-specific part of a processing component. Let's have a closer look at the concepts.
 
@@ -190,11 +190,11 @@ The [Steinberg::Vst::IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/
    - **Context**: For each processing block the host should provide information about its state. See [Steinberg::Vst::ProcessContext](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html)
    - **Events**: [Steinberg::Vst::IEventList](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEventList.html)
 
-![tech_doc_6](../../../resources/tech_doc_6.png)
+![Tech_doc_6](../../../resources/tech_doc_6.png)
 
 ## The Editing Part
 
-![tech_doc_7](../../../resources/tech_doc_7.jpg)
+![Tech_doc_7](../../../resources/tech_doc_7.jpg)
 
 The edit controller is responsible for the GUI aspects ofthe plug-in. Its standard interface is [Steinberg::Vst::IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html). The host has to provide acallback interface for the edit controller named [Steinberg::Vst::IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html). The handler is essentialfor the communication with both the host and the processor.
 
@@ -207,17 +207,17 @@ More details can be found on the page about [Parameters](../Parameters+Automatio
 
 - **Plug-in structure**: If the plug-in is composed of discrete functional parts, the edit controller should publish this structure and the parameters belonging to each part by implementing the [Steinberg::Vst::IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html) interface. More details can be found on the page about [VST 3 Units](../VST+3+Units/Index.html).
 
-![tech_doc_8](../../../resources/tech_doc_8.png)
+![Tech_doc_8](../../../resources/tech_doc_8.png)
 
 ## VST 3 threading model
 
 The threading model used by **VST 3** is quite simple and requires that:
 
-- all initialisation/de-initialisation are done in the UI Thread
-- all function exported by the plug-in are called by the host in the UI Thread with the exception of:
+- All initialisation/de-initialisation are done in the UI Thread
+- All function exported by the plug-in are called by the host in the UI Thread with the exception of:
   - IAudioProcessor→process: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!
   - IAudioProcessor→setProcessing: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!
-- all function exported by the host are called by the plug-in in the UI Thread
+- All function exported by the host are called by the plug-in in the UI Thread
 
 Check the [Audio Processor Call Sequence](../Workflow+Diagrams/Audio+Processor+Call+Sequence.md) and the [Edit Controller Call Sequence](../Workflow+Diagrams/Edit+Controller+Call+Sequence.md)
 
@@ -234,7 +234,7 @@ All standard data (like parameter changes) are transmitted between processor and
 - When the controller transmits a parameter change to the host, the host synchronizes the processor by passing the new values as [Steinberg::Vst::IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) to the process call.
 - The processor can transmit outgoing parameter changes to the host as well. ([Steinberg::Vst::ProcessData::outputParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#af08c4f7dfd9e456cc98ba0eb325993ae)). These are transmitted to the edit controller by the call of [Steinberg::Vst::IEditController::setParamNormalized](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#aded549c5b0f342a23dee18cc41ece6b8).
 
-![tech_doc_9](../../../resources/tech_doc_9.jpg)
+![Tech_doc_9](../../../resources/tech_doc_9.jpg)
 
 ### Private communication
 
@@ -246,7 +246,7 @@ Data that is unknown to the host can be transmitted by means of messages. The co
 
 Please note that messages from the processor to the controller must not be sent during the process call, as this would not be fast enough and would break the real time processing. Such tasks should be handled in a separate timer thread.
 
-![tech_doc_10](../../../resources/tech_doc_10.png)
+![Tech_doc_10](../../../resources/tech_doc_10.png)
 
 ### Initialization of communication from Host point of view
 

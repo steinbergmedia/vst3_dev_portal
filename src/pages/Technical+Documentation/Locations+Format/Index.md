@@ -8,15 +8,15 @@
 
 ---
 
-Formats definition of a **VST 3 Plug-in** and its preset and where they are located on different platforms.
+Formats definition of a **VST 3** plug-in and its preset and where they are located on different platforms.
 
 ## [Plug-in Format Structure](Plugin+Format.md)
 
-This section explains how a **VST 3 Plug-in** is structured as files and folders.
+This section explains how a **VST 3** plug-in is structured as files and folders.
 
 ## [Plug-in Locations](Plugin+Locations.md)
 
-This section explains where **VST 3 Plug-in** are located on the different supported platforms.
+This section explains where **VST 3** plug-in are located on the different supported platforms.
 
 ## [Preset Format](Preset+Format.md)
 

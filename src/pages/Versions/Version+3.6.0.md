@@ -8,11 +8,11 @@
   - Preset meta information via Steinberg::Vst::IStreamAttributes
   - New Event Types: Steinberg::Vst::ChordEvent, Steinberg::Vst::ScaleEvent
 - Plug-in Wrappers:
-  - [3.6.0] iOS Inter-App Audio support
-  - VST 3 - VST 2.x Wrapper :
+  - \[3.6.0\] iOS Inter-App Audio support
+  - VST 3 - VST 2.x Wrapper:
     - fix when changing from host between single and double precision processing
     - fix setProgram and processMidiEvent for kProgramChangeStatus where the wrong idx was used for programChange Parameter
-  - VST 3 - Audio Unit Wrapper :
+  - VST 3 - Audio Unit Wrapper:
     - updopt to new AUPlugIn API in Mac OS X 10.7
     - virtual destructor for NSDataIBStream
 - New Flags/Enums:
