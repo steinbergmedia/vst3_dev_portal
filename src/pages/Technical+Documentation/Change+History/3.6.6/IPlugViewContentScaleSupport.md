@@ -6,6 +6,10 @@
 
 [[_TOC_]]
 
+**Related pages:**
+
+[Resize View Call Sequence](../../Workflow+Diagrams/Resize+View+Call+Sequence.md)
+
 ---
 
 ## Introduction
