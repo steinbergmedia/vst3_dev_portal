@@ -62,10 +62,10 @@ Yes, but you have to make sure that your **VST 3** plug-in/host sources are unde
 
 ## Q: I would like to share the source code of my VST 2 plug-in/host on GitHub or other web-based exchange platform.
 
-- It is allowed but be sure that you do NOT include the Steinberg VST 2 files: like *aeffect.h* and *aeffectx.h*. These files are under a different license which does not allow redistribution!
+- It is allowed but be sure that you do NOT include the Steinberg **VST 2** files: like *aeffect.h* and *aeffectx.h*. These files are under a different license which does not allow redistribution!
 
 ## Q: I am a developer/company and I want to develop and distribute a VST 2 plug-in and/or host in binary form.
 
-- If you have signed the VST 2 license agreement (before October 2018), you can.
+- If you have signed the **VST 2** license agreement (before October 2018), you can.
 - If not, you are not allowed to distribute it!
 - See [here](../Main+benefits+of+VST+3/Index.html)!

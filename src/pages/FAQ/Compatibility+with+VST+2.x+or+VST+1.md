@@ -102,7 +102,7 @@ For Automation compatibility, you have to ensure that **VST 3** parameter IDs ha
 ## Q: I've already released a VST 3 plug-in with a different UID than its VST 2 equivalent. How can I declare that the VST 3 plug-in can replace its VST 2 plug-in counterpart?
 
 You can use the compatibility array of the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file.
-There you use the UID of your VST 3 audio effect class as the "New" UID and put the UID of your VST 2 plug-in in the "Old" array.
+There you use the UID of your **VST 3** audio effect class as the "New" UID and put the UID of your **VST 2** plug-in in the "Old" array.
 
 If you cannot use the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file, you can create a class that implements the [IPluginCompatibility](../Technical+Documentation/Change+History/3.7.5/ModuleInfo.md) interface which you must provide to the host via your plug-in factory.
 
@@ -121,4 +121,4 @@ Not in version 3.1.0, we plan something in this direction later. (Note: this var
 
 ## Q: What is the equivalent to the VST 2 kPlugCategOfflineProcess?
 
-**VST 3** doesn't support offline processing like it did in VST 2 (this interface was exclusively used by **WaveLab**). But it is possible to use **VST 3** plug-ins in an offline context (this means that the process function can be called faster than real time: for example, during an export or a batch processing). If the plug-in doesn't support faster than realtime, it should add [kOnlyRealTime](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#gae58eb0aafa16197f12c1a61428fd5584) to its category.
+**VST 3** doesn't support offline processing like it did in **VST 2** (this interface was exclusively used by **WaveLab**). But it is possible to use **VST 3** plug-ins in an offline context (this means that the process function can be called faster than real time: for example, during an export or a batch processing). If the plug-in doesn't support faster than realtime, it should add [kOnlyRealTime](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#gae58eb0aafa16197f12c1a61428fd5584) to its category.
