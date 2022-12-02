@@ -20,7 +20,7 @@
 **VST-MA** is a component model system which is used in all [Steinberg](https://www.steinberg.net/) host applications as the basic layer for plug-in support.
 
 It is object-oriented, cross-platform and (almost) compiler-independent.\
-The basics are very much like [Microsoft® COM](https://en.wikipedia.org/wiki/Component_Object_Model), so if you are familiar with this technology, understanding *VST-MA* should be quite easy.
+The basics are very much like [Microsoft® COM](https://en.wikipedia.org/wiki/Component_Object_Model), so if you are familiar with this technology, understanding **VST-MA** should be quite easy.
 
 **VST-MA** is provided in C++ only. Interfaces in C++ are expressed as pure virtual class (which is a class with nothing but abstract methods). Unlike COM there is no support for C or other languages yet - simply because there has been no need for this so far. But all **VST-MA** interfaces can be transformed into different representations in case this should be inevitable some day.\
 It is currently available for Windows, Mac OS X and Linux.
@@ -86,7 +86,7 @@ See also "[How to derive a class from an interface](Derive+From+Interface.md)".
 
 ### Module Factory
 
-A module (Windows: Dynamic Link Library, MAC: Mach-O Bundle, Linux: package) contains the implementation of one or more components (e.g. VST 3 effects). A **VST-MA** module must contain a class factory where meta-data and create-methods for the components are registered.\
+A module (Windows: Dynamic Link Library, macOS: Mach-O Bundle, Linux: package) contains the implementation of one or more components (e.g. VST 3 effects). A **VST-MA** module must contain a class factory where meta-data and create-methods for the components are registered.\
 The host has access to this factory through the [Steinberg::IPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory.html) interface. This is the anchor point for the module and it is realized as a C-style export function named [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330). You can find an export definition file in the SDK - *public.sdk/source/main/winexport.def*  (*public.sdk/source/main/macexport.exp*) which can be used to export this function or you could use the macro SMTG_EXPORT_SYMBOL directly in cpp file (check *public.sdk/source/main/dllmain.cpp* for example).\
 [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330) is declared as follows:
 
@@ -148,7 +148,7 @@ _bundleExit
 
 Component modules do not require registration like **DirectX**. The host application expects component modules to be located in predefined folders of the file system. These folders and their subfolders are scanned for **VST-MA** modules during application startup. Each folder serves a special purpose:
 
-- The application's *Components* subfolder (e.g. *"C:\Program Files\Steinberg\Cubase 10\Components"*) is used for components tightly bound to the application. No other application should use it.
+- The application's *Components* subfolder (e.g. *"C:\Program Files\Steinberg\Cubase 12\Components"*) is used for components tightly bound to the application. No other application should use it.
 - Components that are shared between all [Steinberg](https://www.steinberg.net/) hosts are located at:
   - Win: *"/Program Files/Common Files/Steinberg/Shared Components"*
   - Mac: *"/Library/Application Support/Steinberg/Components/"*
@@ -165,7 +165,7 @@ A class is also described with a name and it has a unique id.
 
 ### IPluginBase
 
-The entry-point interface for any component class is [Steinberg::IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html). The host uses this interface to initialize and to terminate the Plug-in component. When the host initializes the Plug-in, it **has to pass** a so called context. This context contains any interface to the host that the Plug-in will need to work.
+The entry-point interface for any component class is [Steinberg::IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html). The host uses this interface to initialize and to terminate the plug-in component. When the host initializes the plug-in, it **has to pass** a so called context. This context contains any interface to the host that the plug-in will need to work.
 
 ### Purpose-specific interfaces
 

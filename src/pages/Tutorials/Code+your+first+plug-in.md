@@ -187,7 +187,7 @@ if (data.inputs[0].silenceFlags != 0)
     // mark output silence too
     data.outputs[0].silenceFlags = data.inputs[0].silenceFlags;
 
-    // the Plug-in has to be sure that if it sets the flags silence that the output buffer are clear
+    // the plug-in has to be sure that if it sets the flags silence that the output buffer are clear
     for (int32 i = 0; i < numChannels; i++)
     {
        // do not need to be cleared if the buffers are the same (in this case input buffer are

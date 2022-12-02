@@ -135,7 +135,7 @@ Explanation:
 - type of column:
   - user: specific to the currently logged in user
   - shared: for all users of this machine
-  - factory: installed by Plug-in or App installer with the Plug-in
+  - factory: installed by plug-in or application installer with the plug-in
 - $COMPANY and $PLUGIN-NAME folder names contain only allowed characters for file naming
   - replace characters "\\*?/:.<>|\\"\t\n\r" by "_"
 - $UID is the Unique ID of the processor in its string representation

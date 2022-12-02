@@ -59,7 +59,7 @@ public:
   
     virtual tresult PLUGIN_API executeMenuItem (int32 tag)
     {
-        // this will be called if the user has executed one of the menu items of the Plug-in.
+        // this will be called if the user has executed one of the menu items of the plug-in.
         // It won't be called for items of the host.
         switch (tag)
         {
