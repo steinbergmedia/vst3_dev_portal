@@ -127,98 +127,90 @@ class AGainController : public EditControllerEx1
 - **Filename Prefix**: (optional) this will be added as file prefix to the created files: e.g. *"AGain"* => AGainProcessor.cpp / AGainController.h / ...
 - **Output Directory**: you define here in which folder your project will be created
 - **CMake Generator**: CMake tool required to define a generator in order to create configuration files for a specific build system: there are 2 kinds of generators: Command-Line and IDE. Choose the one you need for example:
-  - on Windows: **Visual Studio 16 2019**
+  - on Windows: **Visual Studio 17 2022**
   - on macOS: **Xcode**
-- **CMake Platform**: you could here define which target platform should be used, i.e x64 or ARM64
+- **CMake Platform**: you could here define which target platform should be used, i.e x64 or ARM64EC (on Windows)
 
 Once all information is set up, you could click on **Create**, a script will create and **CMake** will be used and the chosen IDE will be opened. In the bottom area the script output is displayed, you have the possibility to copy it by using the dedicated button: **Copy Script Output To Clipboard**.
 
 **Example of script Output**
 
-```
-C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.  2\VST_SDK\VST3_Project_Generator\Windows\Resources\GenerateVS3Plugin.cmake
--DSMTG_VST3_SDK_SOURCE_DIR_CLI="C:/Users/YGrabit/DesktopSDKs/VST3_SDKs/3.7.2/VST_SDK/VST3_SDK"
--DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI="C:/Users/YGrabitDesktop/SDKs/VST3_SDKs/3.7.2/VST_SDK"
--DSMTG_PLUGIN_NAME_CLI="AGain"-DSMTG_PLUGIN_CATEGORY_CLI="Fx" -DSMTG_CMAKE_PROJECT_NAME_CLI="AGain"
--DSMTG_PLUGIN_BUNDLE_NAME_CLI="AGain"  -DSMTG_PLUGIN_IDENTIFIER_CLI="com.steinberg.again"
--DSMTG_MACOS_DEPLOYMENT_TARGET_CLI="10.12" -DSMTG_VENDOR_NAME_CLI="Steinberg Media Technologies"
--DSMTG_VENDOR_HOMEPAGE_CLI="www.steinberg.net" -DSMTG_VENDOR_EMAIL_CLI="info@steinberg.net"
--DSMTG_PREFIX_FOR_FILENAMES_CLI="" -DSMTG_PLUGIN_CLASS_NAME_CLI="AGain"
--DSMTG_ENABLE_VSTGUI_SUPPORT_CLI=ON -P "C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.   2\VST_SDK\VST3_Project_Generator\Windows\Resources\GenerateVS3Plugi    n.cmake"
+``` text
+C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\Windows_x64\Resources\GenerateVST3Plugin.cmake -DSMTG_VST3_SDK_SOURCE_DIR_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk" -DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7" -DSMTG_PLUGIN_NAME_CLI="AGain" -DSMTG_PLUGIN_CATEGORY_CLI="Fx" -DSMTG_CMAKE_PROJECT_NAME_CLI="AGain" -DSMTG_PLUGIN_BUNDLE_NAME_CLI="AGain" -DSMTG_PLUGIN_IDENTIFIER_CLI="com.steinberg.again" -DSMTG_MACOS_DEPLOYMENT_TARGET_CLI="10.13" -DSMTG_VENDOR_NAME_CLI="Steinberg" -DSMTG_VENDOR_HOMEPAGE_CLI="www.steinberg.net" -DSMTG_VENDOR_EMAIL_CLI="info@steinberg.net" -DSMTG_PREFIX_FOR_FILENAMES_CLI="" -DSMTG_PLUGIN_CLASS_NAME_CLI="AGain" -DSMTG_ENABLE_VSTGUI_SUPPORT_CLI=ON -P "C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\Windows_x64\Resources\GenerateVST3Plugin.cmake"
 ==================================================
 
  Steinberg Media Technologies GmbH
- VST 3 Project Generator
+ VST3 Project Generator
 
 ==================================================
 
--- Found Git: C:/Program Files/Git/cmd/git.exe (found version"2.9.2.windows.1")
--- SMTG_CMAKE_SCRIPT_DIR           : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_Project_Generator/WindowsResources
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.38.1.windows.1") 
+-- SMTG_CMAKE_SCRIPT_DIR           : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/VST_SDK/VST3_Project_Generator/Windows_x64/Resources
 -- SMTG_ENABLE_VSTGUI_SUPPORT      : ON
--- SMTG_GENERATOR_OUTPUT_DIRECTORY : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK
--- SMTG_TEMPLATE_FILES_PATH        : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_Project_Generator/WindowsResources/cmake/templates
--- SMTG_VST3_SDK_SOURCE_DIR        : C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
+-- SMTG_GENERATOR_OUTPUT_DIRECTORY : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7
+-- SMTG_TEMPLATE_FILES_PATH        : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/VST_SDK/VST3_Project_Generator/Windows_x64/Resources/cmake/templates
+-- SMTG_VST3_SDK_SOURCE_DIR        : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk
 
--- SMTG_VENDOR_NAME            : Steinberg Media Technologies
+-- SMTG_VENDOR_NAME            : Steinberg
 -- SMTG_VENDOR_HOMEPAGE        : www.steinberg.net
 -- SMTG_VENDOR_EMAIL           : info@steinberg.net
--- SMTG_SOURCE_COPYRIGHT_HEADER: Copyright(c) 2021 SteinbergMedia Technologies.
+-- SMTG_SOURCE_COPYRIGHT_HEADER: Copyright(c) 2022 Steinberg.
 -- SMTG_PLUGIN_NAME            : AGain
 -- SMTG_PREFIX_FOR_FILENAMES   : e.g. myplugincontroller.h
--- SMTG_PLUGIN_IDENTIFIER      : com.steinberg.again, used eg. in Info.plist
+-- SMTG_PLUGIN_IDENTIFIER      : com.steinberg.again, used e.g. in Info.plist
 -- SMTG_PLUGIN_BUNDLE_NAME     : AGain
 
--- SMTG_CMAKE_PROJECT_NAME     : e.g. AGain will output AGainvst3
--- SMTG_VENDOR_NAMESPACE       : e.g. namespace MyCompanyName{...}
--- SMTG_PLUGIN_CLASS_NAME      : e.g. class AGainProcessor :public AudioEffect {...}
+-- SMTG_CMAKE_PROJECT_NAME     : e.g. AGain will output AGain.vst3
+-- SMTG_VENDOR_NAMESPACE       : e.g. namespace MyCompanyName {...}
+-- SMTG_PLUGIN_CLASS_NAME      : e.g. class AGainProcessor : public AudioEffect {...}
 -- SMTG_PLUGIN_CATEGORY        : Fx
--- SMTG_MACOS_DEPLOYMENT_TARGET: 10.12
+-- SMTG_MACOS_DEPLOYMENT_TARGET: 10.13
 
--- SMTG_Processor_UUID         : 0x127C3DBA, 0x64685FC5, 0x93CB28A6, 0x3D757D0D
--- SMTG_Controller_UUID        : 0x9D1EB67B, 0x14815678, 0x898F9FEE, 0xAD51C016
+-- SMTG_Processor_UUID         : 0x310DE7F8, 0x10DA54D2, 0x98DE9223, 0xA9933093
+-- SMTG_Controller_UUID        : 0x80068D40, 0xBA125C34, 0x9B1E857C, 0xC17CD5F3
 
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/CMakeLists.txt
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource/Info.plist
--- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource127C3DBA64685FC593CB28A63D757D0D_snapshot.png
--- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource127C3DBA64685FC593CB28A63D757D0D_snapshot_2.0x.png
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource/myplugineditor.uidesc
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/resource/win32resource.rc
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/version.h
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/myplugincids.h
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/myplugincontroller.cpp
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/myplugincontroller.h
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/mypluginentry.cpp
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/mypluginprocessor.cpp
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.72/VST_SDK/AGain/source/mypluginprocessor.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/CMakeLists.txt
+-- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/resource/310DE7F810DA54D298DE9223A9933093_snapshot.png
+-- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/resource/310DE7F810DA54D298DE9223A9933093_snapshot_2.0x.png
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/resource/myplugineditor.uidesc
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/resource/win32resource.rc
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/version.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/myplugincids.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/myplugincontroller.cpp
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/myplugincontroller.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/mypluginentry.cpp
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/mypluginprocessor.cpp
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/mypluginprocessor.h
 
-C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 162019" -S "C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.2VST_SDK\AGain" -B "C:/Users/YGrabit/Desktop/SDKsVST3_SDKs/3.7.2/VST_SDK\AGain\build" -DSMTG_ADD_VSTGUI=ON
--- Selecting Windows SDK version 10.0.19041.0 to targetWindows 10. 0.19042.
--- The C compiler identification is MSVC 19.28.29913.0
--- The CXX compiler identification is MSVC 19.28.29913.0
+C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 17 2022" -A x64 -S "C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7\AGain" -B "C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7\AGain\build" -DSMTG_ADD_VSTGUI=ON 
+-- Selecting Windows SDK version 10.0.22000.0 to target Windows 10.0.19045.
+-- The C compiler identification is MSVC 19.34.31935.0
+-- The CXX compiler identification is MSVC 19.34.31935.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files (x86)Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/1428.29910/bin/Hostx64/x64/cl.exe - skipped
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/Program Files (x86)Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC14.28.29910/bin/Hostx64/x64/cl.exe - skipped
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- [SMTG] SMTG_PLUGIN_TARGET_PATH is set to: C:/ProgramFiles/Common Files/VST3
--- [SMTG] CMAKE_SOURCE_DIR is set to: C:/Users/YGrabitDesktop/SDKs/VST3_SDKs/3.7.2/VST_SDK/AGain
--- [SMTG] CMAKE_CURRENT_LIST_DIR is set to: C:/UsersYGrabit/Desktop/SDKs/VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
--- [SMTG] Disable all VST 3 samples
--- Could NOT find EXPAT (missing: EXPAT_LIBRARYEXPAT_INCLUDE_DIR)
+-- [SMTG] CMAKE_SOURCE_DIR is set to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain
+-- [SMTG] CMAKE_CURRENT_LIST_DIR is set to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk
+-- [SMTG] Disable all VST3 samples
+-- [SMTG] SMTG_VSTGUI_SOURCE_DIR is set to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk/vstgui4
+-- Could NOT find EXPAT (missing: EXPAT_LIBRARY EXPAT_INCLUDE_DIR) 
 -- VSTGUI will use the embedded Expat package!
--- [SMTG] SMTG_VSTGUI_ROOT is set to: C:/Users/YGrabitDesktop/SDKs/VST3_SDKs/3.7.2/VST_SDK/VST3_SDK
 -- [SMTG] SMTG_AAX_SDK_PATH is not set. If you need it, please download the AAX SDK!
--- Looking for C++ include stdatomic.h
--- Looking for C++ include stdatomic.h - not found
+-- Performing Test SMTG_USE_STDATOMIC_H
+-- Performing Test SMTG_USE_STDATOMIC_H - Failed
+-- [SMTG] Setup running moduleinfotool for AGain
 -- [SMTG] Setup running validator for AGain
+-- [SMTG] SMTG_PLUGIN_TARGET_PATH is set to: C:\Users\YGrabit\AppData\Local\Programs\Common\VST3
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/YGrabit/DesktopSDKs/ VST3_SDKs/3.7.2/VST_SDK/AGain/build
+-- Build files have been written to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/build
 ```
 
 That´s it!

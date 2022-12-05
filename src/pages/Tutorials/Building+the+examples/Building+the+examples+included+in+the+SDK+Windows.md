@@ -63,7 +63,7 @@ cmake --build . --config Release
 - **Browse Source...**: select the folder VST3_SDK
 - **Browse Build...**: select a folder where the outputs (projects/...) will be created. Typically a folder named *build*
 - You can check the **SMTG Options**
-- Press **Configure** and choose the generator in the window that opens: for example "**Visual Studio 16 2019**"
+- Press **Configure** and choose the generator in the window that opens: for example "**Visual Studio 17 2022**"
 
 ![tutorials_2](../../../resources/tutorials_2.png)
 
