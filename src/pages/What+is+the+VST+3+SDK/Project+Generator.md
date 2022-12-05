@@ -227,7 +227,7 @@ That´s it!
 
 You can contribute to this project on <https://github.com/steinbergmedia/vst3projectgenerator>!
 
-## VST3ProjectGenerator License
+## VST3 Project Generator License
 
 ``` text
 BSD style
