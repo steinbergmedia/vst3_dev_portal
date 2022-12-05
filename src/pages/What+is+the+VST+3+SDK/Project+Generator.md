@@ -136,7 +136,17 @@ Once all information is set up, you could click on **Create**, a script will cre
 **Example of script Output**
 
 ``` text
-C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\Windows_x64\Resources\GenerateVST3Plugin.cmake -DSMTG_VST3_SDK_SOURCE_DIR_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk" -DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7" -DSMTG_PLUGIN_NAME_CLI="AGain" -DSMTG_PLUGIN_CATEGORY_CLI="Fx" -DSMTG_CMAKE_PROJECT_NAME_CLI="AGain" -DSMTG_PLUGIN_BUNDLE_NAME_CLI="AGain" -DSMTG_PLUGIN_IDENTIFIER_CLI="com.steinberg.again" -DSMTG_MACOS_DEPLOYMENT_TARGET_CLI="10.13" -DSMTG_VENDOR_NAME_CLI="Steinberg" -DSMTG_VENDOR_HOMEPAGE_CLI="www.steinberg.net" -DSMTG_VENDOR_EMAIL_CLI="info@steinberg.net" -DSMTG_PREFIX_FOR_FILENAMES_CLI="" -DSMTG_PLUGIN_CLASS_NAME_CLI="AGain" -DSMTG_ENABLE_VSTGUI_SUPPORT_CLI=ON -P "C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\Windows_x64\Resources\GenerateVST3Plugin.cmake"
+C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\
+Windows_x64\Resources\GenerateVST3Plugin.cmake 
+-DSMTG_VST3_SDK_SOURCE_DIR_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk" 
+-DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7"
+-DSMTG_PLUGIN_NAME_CLI="AGain" -DSMTG_PLUGIN_CATEGORY_CLI="Fx" -DSMTG_CMAKE_PROJECT_NAME_CLI="AGain"
+-DSMTG_PLUGIN_BUNDLE_NAME_CLI="AGain" -DSMTG_PLUGIN_IDENTIFIER_CLI="com.steinberg.again"
+-DSMTG_MACOS_DEPLOYMENT_TARGET_CLI="10.13" -DSMTG_VENDOR_NAME_CLI="Steinberg" 
+-DSMTG_VENDOR_HOMEPAGE_CLI="www.steinberg.net" -DSMTG_VENDOR_EMAIL_CLI="info@steinberg.net" 
+-DSMTG_PREFIX_FOR_FILENAMES_CLI="" -DSMTG_PLUGIN_CLASS_NAME_CLI="AGain" -DSMTG_ENABLE_VSTGUI_SUPPORT_CLI=ON 
+ -P "C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\
+ Windows_x64\Resources\GenerateVST3Plugin.cmake"
 ==================================================
 
  Steinberg Media Technologies GmbH
