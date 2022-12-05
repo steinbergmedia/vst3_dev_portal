@@ -12,7 +12,7 @@
 
 ---
 
-Important links you will need for working with **VST 3**
+Important links you will need for working with **VST 3**.
 
 ## Getting VST 3 SDK
 

@@ -14,7 +14,7 @@ This section provides general information about where to find the **VST 3 SDK** 
 
 ## [VST 3 Links](../Getting+Started/Links.md)
 
-Important links you will need for working with **VST 3**
+Important links you will need for working with **VST 3**.
 
 ## [How to set up my system for VST 3](../Getting+Started/How+to+setup+my+system.md)
 

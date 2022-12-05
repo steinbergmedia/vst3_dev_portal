@@ -16,7 +16,7 @@
 - **AU** and **AUv3** by Apple Inc.
 - **Dolby™** is a registered trademark of Dolby Laboratories, Inc.
 - **GITHUB** is exclusive trademark registered in the United States by GitHub, Inc.
-- **JUCE library** - Copyright (c) 2017 - ROLI Ltd.
+- **JUCE library** - Copyright (c) 2022 - ROLI Ltd.
 - **Microsoft**, **Windows** are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 - **Pro Tools** is a trademark or registered trademark of Avid Technology, Inc. or its subsidiaries in the United States and/or other countries.
 - **VST**, **Cubase**, **Nuendo** and **WaveLab** are trademarks of [Steinberg Media Technologies GmbH](https://www.steinberg.net/de/), registered in Europe and other countries.
