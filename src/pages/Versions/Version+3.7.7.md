@@ -23,6 +23,11 @@
   - Improve *SMTG_AAXSupport.cmake* and *SMTG_CoreAudioSupport.cmake*
   - Fix initialization of **CMAKE_OSX_DEPLOYMENT_TARGET**.
 
+- [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
+  - Audio Unit:
+    - AUv3Wrapper: fix crash building parameter groups (PR43).
+    - AUv3Wrapper: fix crash for empty parameter groups (PR44).
+
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.4:
   - **MIDI 2** support on macOS with higher resolution for Velocity On/Off, Aftertouch, Poypressure, ControlChange and PitchBend.
 
