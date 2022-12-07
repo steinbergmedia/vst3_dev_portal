@@ -25,11 +25,11 @@
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
-    - AUv3Wrapper: fix crash building parameter groups (PR43).
-    - AUv3Wrapper: fix crash for empty parameter groups (PR44).
+    - AUv3Wrapper: fix crash building parameter groups ([PR#43](https://github.com/steinbergmedia/vst3_public_sdk/pull/43)).
+    - AUv3Wrapper: fix crash for empty parameter groups ([PR#44](https://github.com/steinbergmedia/vst3_public_sdk/pull/44)).
 
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.4:
-  - **MIDI 2** support on macOS with higher resolution for Velocity On/Off, Aftertouch, Poypressure, ControlChange and PitchBend.
+  - **MIDI 2** support on macOS with higher resolution for *Velocity On/Off*, *Aftertouch*, *Polypressure*, *ControlChange* and *PitchBend*.
 
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.11:
   - Support of multiple namespaces for generated plug-in source code (XX::YY::ZZ), request **C++17** minimum.
