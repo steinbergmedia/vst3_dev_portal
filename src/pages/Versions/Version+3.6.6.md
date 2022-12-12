@@ -9,13 +9,13 @@
 - New Flags/Enums:
   - New RestartFlags: kRoutingInfoChanged informing the host that the Routing Info (IComponent) has changed
 - Samples:
-  - New VST 3 plug-ins examples:
+  - New **VST 3 Plug-ins** examples:
     - New **VST 3 Plug-in** Program Change showing how handling its own Program List is working
   - Remove Visual Projects version 8 and 9
 - Plug-in wrappers:
-  - VST 3 - Audio Unit Wrapper :
+  - VST 3 - Audio Unit Wrapper:
     - update to last Audio Core update
-  - VST 3 - VST 2.x Wrapper :
+  - VST 3 - VST 2.x Wrapper:
     - add support of version (VST 3 -> VST 2)
 - Helpers classes:
   - add support for bypass including delay compensation (vstbypassprocessor.h)

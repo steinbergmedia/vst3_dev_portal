@@ -24,7 +24,7 @@ A simple VST effect plug-in usually does not cause the host too many problems. I
 - The plug-in can define a list of programs that the user can load from the plug-in GUI. In a multi-timbral instrument, a program only affects a certain part of the plug-in (we call this part a 'unit'). How can the host know about these parts and about the plug-in defined programs that can be loaded?
   - This may be of interest for a host in order to provide shortcuts for this functionality in its own GUI.
 
-Since a VST plug-in unlike a hardware MIDI instrument is more than only a black box, a complex plug-in should help its host to provide a more convenient GUI integration than it is possible with hardware instruments. **VST 3** uses the concept of units to describe the internal structure of the plug-in (see [VST 3 Units](../VST+3+Units/Index.md)) and a multi-timbral instrument is supposed to support the respective interfaces. But the preferred solution in VST 3 is a reduction of this complexity with the 'simple mode'.
+Since a VST plug-in unlike a hardware MIDI instrument is more than only a black box, a complex plug-in should help its host to provide a more convenient GUI integration than it is possible with hardware instruments. **VST 3** uses the concept of units to describe the internal structure of the plug-in (see [VST 3 Units](../VST+3+Units/Index.md)) and a multi-timbral instrument is supposed to support the respective interfaces. But the preferred solution in **VST 3** is a reduction of this complexity with the 'simple mode'.
 
 ## The Simple Mode
 
@@ -62,7 +62,7 @@ Similar to the simple case, the host may want to save and load preset files. The
 
 A plug-in can support unit presets and program list presets.
 
-![tech_doc_19](../../../resources/tech_doc_19.jpg)
+![Tech_doc_19](../../../resources/tech_doc_19.jpg)
 
 See also [Presets & Program Lists](../Presets+Program+Lists/Index.md), [Steinberg::Vst::IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html), [Steinberg::Vst::IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html)
 
@@ -89,4 +89,4 @@ In general, the host needs to know about any input to output routing of the plug
 
 - [Steinberg::Vst::IComponent::getRoutingInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#aa0ffeccad3c44364a199ce56365a4c12): find out the output of a given input
 
-![tech_doc_20](../../../resources/tech_doc_20.jpg)
+![Tech_doc_20](../../../resources/tech_doc_20.jpg)

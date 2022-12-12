@@ -8,6 +8,8 @@
 
 ---
 
+## Goal
+
 This tutorial explains how to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md). [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) comes with a *WYSIWYG* editor that allows you to create stunning user interfaces for your plug-in.
 
 ---
@@ -27,7 +29,7 @@ target_link_libraries(${target} PRIVATE vstgui_support)
 
 If you are not using cmake, you have to manually include the following source files to your project:
 
-- *vstgui/vstgui_[ios/mac/linux/win32].[cpp/mm]*
+- *vstgui/vstgui_\[ios/mac/linux/win32\].\[cpp/mm\]*
 - *vstgui/vstgui_uidescription.cpp*
 - *vstgui/plugin-bindings/vst3editor.cpp*
 

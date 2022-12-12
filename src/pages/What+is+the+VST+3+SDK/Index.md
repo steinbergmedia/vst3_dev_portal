@@ -36,7 +36,7 @@ The SDK includes some Plug-ins implementation examples.
 
 ## [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
 
-The SDK provides a test application called **VST3PluginTestHost** for Apple Mac OS X (x86_64/M1) and Microsoft Windows (64bits).
+The SDK provides a test application called **VST3PluginTestHost** for Apple macOS X (x86_64/M1) and Microsoft Windows (64bits).
 
 ## [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md)
 
@@ -44,19 +44,19 @@ This open source application (Win/macOS) allows you to generate easily a new **V
 
 ## [Validator command line](../What+is+the+VST+3+SDK/Validator.md)
 
-The ***validator*** is a small command line host application (source code included) which can be used to check your plug-in for VST 3 conformity.
+The ***validator*** is a small command line host application (source code included) which can be used to check your plug-in for **VST 3** conformity.
 
 ## [AudioHost](../What+is+the+VST+3+SDK/AudioHost.md)
 
-Simple cross-platform (only tested on Linux) host application allowing you to register a VST 3 plug-in with Jack Server.
+Simple cross-platform (only tested on Linux) host application allowing you to register a **VST 3** plug-in with Jack Server.
 
 ## [EditorHost](../What+is+the+VST+3+SDK/EditorHost.md)
 
-Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a VST 3 plug-in.
+Simple cross-platform (Win/macOS/Linux) host application allowing you to open the editor of a **VST 3** plug-in.
 
 ## [VST 3 Inspector](../What+is+the+VST+3+SDK/VST3Inspector.md)
 
-Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the VST 3 Folder, collects information from the factory about each VST 3 plug-in and display it in its UI.
+Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, which scans the **VST 3** Folder, collects information from the factory about each **VST 3** plug-in and display it in its UI.
 
 ## [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md)
 
@@ -68,7 +68,7 @@ These wrappers allow you to create versions of your **VST 3** plug-in in other p
 
 ## [iOS Inter-App Audio support](../What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.md)
 
-iOS InterApp-Audio application out of your **VST 3 plug-in**
+iOS InterApp-Audio application out of your **VST 3** plug-in
 
 ## [VST 3 Licensing](../VST+3+Licensing/Index.md)
 
@@ -78,8 +78,8 @@ Please sign this **Steinberg VST 3 Plug-In SDK Licensing Agreement** if you want
 
 | Operating System                  | Architecture                  | Compiler              | Notes                             |
 | --------------------------------- | ----------------------------- | --------------------- | --------------------------------- |
-| Windows 10                        | x86, x86_64                   | MSVC 2019, MSVC 2022  |                                   |
-| Windows 8.1                       | x86, x86_64                   | MSVC 2019, MSVC 2022  |                                   |
+| Windows 11                        | x86, x86_64, arm64, arm64EC                   | MSVC 2022  |                                   |
+| Windows 8.1 -10                        | x86, x86_64                   | MSVC 2019, MSVC 2022  |                                   |
 | macOS 10.13 - 12                  | x86, x86_64, Apple Silicon    | Xcode 10 - 13.3       |                                   |
 | iOS 13 - 15                       | arm64                         | Xcode 11 - 13.3       |                                   |
 | Linux - Raspberry Pi OS (Buster)  | arm32                         | GCC 8.3 and higher    | Visual Studio Code                |

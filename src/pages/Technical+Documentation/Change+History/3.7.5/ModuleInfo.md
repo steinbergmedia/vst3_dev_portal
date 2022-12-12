@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.7.5] Module Info and Plug-in Compatibility
+># \[3.7.5\] Module Info and Plug-in Compatibility
 
 **On this page:**
 
@@ -8,10 +8,10 @@
 
 ## Introduction
 
-A new [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file added to the plug-in bundle describes the contents of the plug-in in a JSON5 compatible format. This includes a compatibility list which allows, for example, that a VST 3 plug-in could replace a given VST 2 plug-in (check [here](../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.md) to learn how to create UID for old VST 2 plug-in).
+A new [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file added to the plug-in bundle describes the contents of the plug-in in a JSON5 compatible format. This includes a compatibility list which allows, for example, that a **VST 3** plug-in could replace a given **VST 2** plug-in (check [here](../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.md) to learn how to create UID for old **VST 2** plug-in).
 
-- [plug imp]
-- [released: 3.7.5]
+- \[plug imp\]
+- \[released: 3.7.5\]
 
 ## Plug-in’s module info file: moduleinfo.json
 

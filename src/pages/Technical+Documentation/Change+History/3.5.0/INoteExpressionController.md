@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.5.0] Note Expression
+># \[3.5.0\] Note Expression
 
 **On this page:**
 
@@ -8,8 +8,8 @@
 
 **Related pages:**
 
-- [(3.5.0) Key Switch](../3.5.0/IKeyswitchController.md)
-- [(3.6.11) NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
+- [\[3.5.0\] Key Switch](../3.5.0/IKeyswitchController.md)
+- [\[3.6.11\] NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
 
 ---
@@ -20,10 +20,10 @@ A new way to control / modify / change a specific played note during playback.
 
 Edit controller component interface extension: [Vst::INoteExpressionController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html)
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]
-- [released: 3.5.0]
-- [optional]
+- \[released: 3.5.0\]
+- \[optional\]
 
 Note Expression is a new way of event controller editing in hosts supporting this VST 3.5 feature (in **Cubase** since version 6).
 
@@ -129,7 +129,7 @@ tresult PLUGIN_API MyExampleController::getNoteExpressionInfo (int32 busIndex, i
 
         info.flags = NoteExpressionTypeInfo::kIsBipolar; // event is bipolar (centered)
 
-        // for Tuning the convert functions are : plain = 240 * (norm - 0.5); norm = plain / 240 + 0.5;
+        // for Tuning the convert functions are: plain = 240 * (norm - 0.5); norm = plain / 240 + 0.5;
         // we want to support only +/- one octave
         double kNormTuningOneOctave = 12.0 / 240.0;
 
@@ -222,7 +222,7 @@ tresult MyExampleProcessor::process (ProcessData& data)
                     //-----------------------
                     case Event::kNoteOffEvent:
                     {
-                        // here we have to release the voice associated to this id : e.noteOff.noteId
+                        // here we have to release the voice associated to this id: e.noteOff.noteId
                         // Note that kNoteExpressionValueEvent event could be sent after the note is in released
                         break;
                     }

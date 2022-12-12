@@ -38,7 +38,7 @@ By using **VST 3 SDK** directly:
   - [note expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md)
   - see [other benefits of VST 3](../Main+benefits+of+VST+3/Index.md)
 - you get optimal integration of the **[VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md)** tool with **VST 3**
-- it includes the major plug-in format wrappers: AAX, AUv3, AU, VST 2 (deprecated)
+- it includes the major plug-in format wrappers: **AAX**, **AUv3**, **AU**, **VST 2** (deprecated)
 - the included [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line) allows you to check your plug-in's conformity to the **VST 3** standard
 
 ## Examples of VST 3 host applications
@@ -82,3 +82,4 @@ By using **VST 3 SDK** directly:
 | VST Rack Pro            | Yamaha Corporation                | <https://europe.yamaha.com/en/products/proaudio/software/vst_rack/index.html>|
 | Waveform                | Tracktion Software Corporation    | <https://www.tracktion.com>                   |
 | Wavelab                 | Steinberg Media Technologies GmbH | <https://new.steinberg.net/wavelab>           |
+| Zrythm DAW              | Zrythm                            | <https://www.zrythm.org>                      |

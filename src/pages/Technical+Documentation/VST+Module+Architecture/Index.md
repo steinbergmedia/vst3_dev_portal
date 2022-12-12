@@ -20,10 +20,10 @@
 **VST-MA** is a component model system which is used in all [Steinberg](https://www.steinberg.net/) host applications as the basic layer for plug-in support.
 
 It is object-oriented, cross-platform and (almost) compiler-independent.\
-The basics are very much like [Microsoft® COM](https://en.wikipedia.org/wiki/Component_Object_Model), so if you are familiar with this technology, understanding *VST-MA* should be quite easy.
+The basics are very much like [Microsoft® COM](https://en.wikipedia.org/wiki/Component_Object_Model), so if you are familiar with this technology, understanding **VST-MA** should be quite easy.
 
 **VST-MA** is provided in C++ only. Interfaces in C++ are expressed as pure virtual class (which is a class with nothing but abstract methods). Unlike COM there is no support for C or other languages yet - simply because there has been no need for this so far. But all **VST-MA** interfaces can be transformed into different representations in case this should be inevitable some day.\
-It is currently available for Windows, Mac OS X and Linux.
+It is currently available for Windows, macOS X and Linux.
 
 The C++ files belonging to **VST-MA** are located in the following folders:
 
@@ -49,8 +49,8 @@ So a lot of different classes (with different class identifiers) can implement t
 
 An interface may have a **direction**, meaning that the interface is expected to be implemented either in the plug-in or in the host. The nature of an interface is documented like this:
 
-- **[host imp]**: the host implements the interface
-- **[plug imp]**: the plug-in implements the interface
+- **\[host imp\]**: the host implements the interface
+- **\[plug imp\]**: the plug-in implements the interface
 
 When neither of these is specified, the interface can be used in both ways.
 
@@ -59,7 +59,7 @@ When neither of these is specified, the interface can be used in both ways.
 Unlike C++ classes, interfaces do not use inheritance to express specializations of objects. Inheritance is used for versioning only. One of the strict rules is that once an interface has been released, it must never change again. Adding new functionality to an interface requires a new version (usually an ordinal number is added to its name in this case, for example [IPluginFactory3](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory3.html) adds new features to [IPluginFactory2](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory2.html)).\
 A new version inherits the old version(s) of the interface, so the old and the new methods are combined in one interface. This is why specializations need to be modeled as separate interfaces! If a specialized interface were to inherit from the basic interface as well, an implementation class that needs to implement all of these interfaces would inherit the base interface twice, causing the compiler to run into ambiguities. So the specialization relation to a basic interface can only be expressed in the documentation.
 
->- ISpecialInterface [**extends** IBaseInterface] => means IBaseInterface::queryInterface (ISpecialInterface::iid, ...) can be used to retrieve the derived interface.
+>- ISpecialInterface \[**extends** IBaseInterface\] => means IBaseInterface::queryInterface (ISpecialInterface::iid, ...) can be used to retrieve the derived interface.
 
 You can find some example code here: [Interface Versions and Inheritance](Interface+Versions+and+Inheritance.md).
 
@@ -86,7 +86,7 @@ See also "[How to derive a class from an interface](Derive+From+Interface.md)".
 
 ### Module Factory
 
-A module (Windows: Dynamic Link Library, MAC: Mach-O Bundle, Linux: package) contains the implementation of one or more components (e.g. VST 3 effects). A **VST-MA** module must contain a class factory where meta-data and create-methods for the components are registered.\
+A module (Windows: Dynamic Link Library, macOS: Mach-O Bundle, Linux: package) contains the implementation of one or more components (e.g. VST 3 effects). A **VST-MA** module must contain a class factory where meta-data and create-methods for the components are registered.\
 The host has access to this factory through the [Steinberg::IPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginFactory.html) interface. This is the anchor point for the module and it is realized as a C-style export function named [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330). You can find an export definition file in the SDK - *public.sdk/source/main/winexport.def*  (*public.sdk/source/main/macexport.exp*) which can be used to export this function or you could use the macro SMTG_EXPORT_SYMBOL directly in cpp file (check *public.sdk/source/main/dllmain.cpp* for example).\
 [GetPluginFactory](https://steinbergmedia.github.io/vst3_doc/base/group__pluginBase.html#ga843ac97a36dfc717dadaa7192c7e8330) is declared as follows:
 
@@ -148,7 +148,7 @@ _bundleExit
 
 Component modules do not require registration like **DirectX**. The host application expects component modules to be located in predefined folders of the file system. These folders and their subfolders are scanned for **VST-MA** modules during application startup. Each folder serves a special purpose:
 
-- The application's *Components* subfolder (e.g. *"C:\Program Files\Steinberg\Cubase 10\Components"*) is used for components tightly bound to the application. No other application should use it.
+- The application's *Components* subfolder (e.g. *"C:\Program Files\Steinberg\Cubase 12\Components"*) is used for components tightly bound to the application. No other application should use it.
 - Components that are shared between all [Steinberg](https://www.steinberg.net/) hosts are located at:
   - Win: *"/Program Files/Common Files/Steinberg/Shared Components"*
   - Mac: *"/Library/Application Support/Steinberg/Components/"*
@@ -165,7 +165,7 @@ A class is also described with a name and it has a unique id.
 
 ### IPluginBase
 
-The entry-point interface for any component class is [Steinberg::IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html). The host uses this interface to initialize and to terminate the Plug-in component. When the host initializes the Plug-in, it **has to pass** a so called context. This context contains any interface to the host that the Plug-in will need to work.
+The entry-point interface for any component class is [Steinberg::IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html). The host uses this interface to initialize and to terminate the plug-in component. When the host initializes the plug-in, it **has to pass** a so called context. This context contains any interface to the host that the plug-in will need to work.
 
 ### Purpose-specific interfaces
 

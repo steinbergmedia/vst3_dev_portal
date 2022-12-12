@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.5.0] Context Menu
+># \[3.5.0\] Context Menu
 
 **On this page:**
 
@@ -12,14 +12,14 @@
 
 Extended host callback interface for an edit controller: [Vst::IComponentHandler3](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler3.html)
 
-- [host imp]
+- \[host imp\]
 - [extends [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html)]
-- [released: 3.5.0]
-- [optional]
+- \[released: 3.5.0\]
+- \[optional\]
 
 A plug-in can ask the host to create a context menu for a given exported parameter ID or a generic context menu.
 The host may pre-fill this context menu with specific items regarding the parameter ID like "Show automation for parameter", "MIDI learn" etc...
-The plug-in can use the context menu in two ways :
+The plug-in can use the context menu in two ways:
 
 - add its own items to the menu via the [IContextMenu](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html) interface and call [IContextMenu::popup(...)](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html#a8d6e113be32dfccabcacca0c81ee6f10) to create the pop-up. See below for an example of how to use it.
 - extract the host menu items and add them to a context menu created by the plug-in.
@@ -38,11 +38,11 @@ For example, **Cubase** adds its owned entries in the context menu opened with r
 >ⓘ **Note**\
 >Plug-ins using VSTGUI automatically have this context menu feature.
 
-![tech_doc_33](../../../../resources/tech_doc_33.png)
+![Tech_doc_33](../../../../resources/tech_doc_33.png)
 
 Context menu with **Cubase**
 
-![tech_doc_34](../../../../resources/tech_doc_34.png)
+![Tech_doc_34](../../../../resources/tech_doc_34.png)
 
 Here an example of what **Bitwig** is doing with context menus.
 
@@ -59,7 +59,7 @@ public:
   
     virtual tresult PLUGIN_API executeMenuItem (int32 tag)
     {
-        // this will be called if the user has executed one of the menu items of the Plug-in.
+        // this will be called if the user has executed one of the menu items of the plug-in.
         // It won't be called for items of the host.
         switch (tag)
         {

@@ -18,10 +18,10 @@
 - VSTGUI 4.0
   - Update to the final 4.0 release
 - Plug-in Wrappers:
-  - VST 3 - VST 2.x Wrapper :
+  - VST 3 - VST 2.x Wrapper:
     - fix an issue with destroying the editor
-  - VST 3 - Audio Unit Wrapper :
+  - VST 3 - Audio Unit Wrapper:
     - fix initial editor size issue
     - optimization for GetParameterInfo
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md): VST 3 Plug-in Test Host
-  - New feature: Convert VST 3 Preset to VST 2 preset (fxp or fxb)
+  - New feature: Convert **VST 3** Preset to **VST 2** preset (fxp or fxb)

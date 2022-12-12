@@ -15,7 +15,7 @@
 
 ## Introduction
 
-A **VST 3 Plug-in** should be installed at specific folder location, the following tables specify these predefined locations for different operating system.
+A **VST 3** plug-in should be installed at specific folder location, the following tables specify these predefined locations for different operating system.
 
 >ⓘ **Note**\
 >**VST 3** doesn't require a plug-in registration like it is used with DirectX.
@@ -34,7 +34,7 @@ A **VST 3 Plug-in** should be installed at specific folder location, the followi
 
 ### On macOS platform
 
-On the macOS platform, the host application expects **VST 3 Plug-ins** to be located in:
+On the macOS platform, the host application expects **VST 3** plug-ins to be located in:
 
 | Prio  | Location      | Path                                          |
 | :-    | :-            | :-                                            |
@@ -48,7 +48,7 @@ On the macOS platform, the host application expects **VST 3 Plug-ins** to be loc
 
 ### On Windows platform
 
-On the Windows platform, the host application expects **VST 3 Plug-ins** to be located in:
+On the Windows platform, the host application expects **VST 3** plug-ins to be located in:
 
 | Prio  | Location      | Path                                          | Comment   |
 | :-    | :-            | :-                                            | :-        |
@@ -62,7 +62,7 @@ On the Windows platform, the host application expects **VST 3 Plug-ins** to be l
 
 ### On Linux platform
 
-On the Linux platform, the host application expects **VST 3 Plug-ins** to be located in:
+On the Linux platform, the host application expects **VST 3** plug-ins to be located in:
 
 | Prio  | Location      | Path                  |
 | :-    | :-            | :-                    |

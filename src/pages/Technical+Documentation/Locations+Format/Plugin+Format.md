@@ -15,7 +15,7 @@
 
 ## For the macOS platform
 
-On the macOS platform, **VST 3 Plug-in** is a standard macOS bundle, its file extension is "**.vst3**" and has the following folder structure:
+On the macOS platform, **VST 3** plug-in is a standard macOS bundle, its file extension is "**.vst3**" and has the following folder structure:
 
 | Folder                                 | Description                                                   |
 | :-                                     | :-                                                            |
@@ -27,7 +27,7 @@ On the macOS platform, **VST 3 Plug-in** is a standard macOS bundle, its file ex
 
 ## For the Windows platform
 
-On the Windows platform, a **VST 3 Plug-in** is organized as a bundle like package format (simple folder), its file extension is "**.vst3**" and has the following folder structure:
+On the Windows platform, a **VST 3** plug-in is organized as a bundle like package format (simple folder), its file extension is "**.vst3**" and has the following folder structure:
 
 | Folder                                             | Description                  |
 | :-                                                 | :-                           |
@@ -42,7 +42,7 @@ On the Windows platform, a **VST 3 Plug-in** is organized as a bundle like packa
 | MyPlugin.vst3/Plugin.ico                           | customized plug-in icon |
 
 >ⓘ **Note**\
->In previous SDKs, the **VST 3 Plug-in** was defined as a single dll file with the **.vst3** extension. This is deprecated since VST 3.6.10.
+>In previous SDKs, the **VST 3** plug-in was defined as a single dll file with the **.vst3** extension. This is deprecated since **VST 3.6.10**.
 
 The file **desktop.ini** should contain:
 
@@ -80,7 +80,7 @@ See [Microsoft Blogs about this](https://devblogs.microsoft.com/windows-music-de
 
 ## For the Linux platform
 
-On Linux, a **VST 3 Plug-in** is organized as a bundle like package format, its file extension is "**.vst3**", it follows this folder structure:
+On Linux, a **VST 3** plug-in is organized as a bundle like package format, its file extension is "**.vst3**", it follows this folder structure:
  
 | Folder                                 | Description                        |
 | :-                                     | :-                                 |

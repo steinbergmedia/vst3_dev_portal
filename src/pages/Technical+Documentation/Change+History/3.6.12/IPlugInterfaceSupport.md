@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.6.12] Host Query Interface support
+># \[3.6.12\] Host Query Interface support
 
 **On this page:**
 
@@ -12,9 +12,9 @@
 
 Host callback interface for an edit controller: [Vst::IPlugInterfaceSupport](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IPlugInterfaceSupport.html)
 
-- [host imp]
-- [released: 3.6.12]
-- [optional]
+- \[host imp\]
+- \[released: 3.6.12\]
+- \[mandatory\]
 
 Allows a plug-in to ask the host if a given plug-in interface is supported/used by the host. It is implemented by the hostContext given when the component is initialized.
 

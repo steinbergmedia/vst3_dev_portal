@@ -14,7 +14,7 @@
 
 ---
 
-Whenever **VST**® is used or the SDK has been used to create a product or the SDK is included (Open-source [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) case), it is required to add the reference to [Steinberg](https://www.steinberg.net/) by using the **VST compatible logo** as supplied by [Steinberg](https://www.steinberg.net/). Included in the VST SDK, the **VST compatible logo** can be found in the folder *VST_SDK/VST3_SDK/vst3_doc/artwork*.
+Whenever **VST**® is used or the SDK has been used to create a product or the SDK is included (Open-source [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) case), it is required to add the reference to [Steinberg](https://www.steinberg.net/) by using the **VST compatible logo** as supplied by [Steinberg](https://www.steinberg.net/). Included in the **VST 3 SDK**, the **VST compatible logo** can be found in the folder *VST_SDK/VST3_SDK/vst3_doc/artwork*.
 
 This logo exists in different forms: with and without the trademark text, black on white and white on black. If you choose the logo without the trademark text, you have to include the following statement somewhere:
 

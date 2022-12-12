@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.0.1] Parameter MIDI Mapping
+># \[3.0.1\] Parameter MIDI Mapping
 
 **On this page:**
 
@@ -9,7 +9,7 @@
 **Related pages**
 
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
-- [(3.6.12) MIDI Learn](../../Change+History/3.6.12/IMidiLearn.md)
+- [\[3.6.12\] MIDI Learn](../../Change+History/3.6.12/IMidiLearn.md)
 
 ---
 
@@ -19,10 +19,10 @@ How the mapping works between **MIDI CC**s and **parameters**.
 
 **MIDI** Mapping Interface: [Vst::IMidiMapping](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiMapping.html)
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]
-- [released: 3.0.1]
-- [optional]
+- \[released: 3.0.1\]
+- \[optional\]
 
 **MIDI** controllers are not transmitted directly to a **VST** component. **MIDI** as hardware protocol has restrictions that can be avoided in software. Controller data in particular come along with unclear and often ignored semantics. On top of this, they can interfere with regular parameter automation and the host is unaware of what happens in the plug-in when passing **MIDI** controllers directly.
 

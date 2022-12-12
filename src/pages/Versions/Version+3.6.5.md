@@ -11,14 +11,14 @@
   - New Steinberg::Vst::IAutomationState interface: informing the plug-in about its current automation state
   - use "#pragma once" instead of "#ifndef"
 - Samples:
-  - New VST 3 Plug-ins examples:
+  - New **VST 3 Plug-ins** examples:
     - New **VST 3 Plug-in** ChannelContext showing how Steinberg::Vst::ChannelContext::IInfoListener interface is working
     - New **VST 3 Plug-in** PrefetchableSupport showing how Steinberg::Vst::IPrefetchableSupport interface is working
   - "VST 3 Host Checker" plug-in updated with new checks
 - Plug-in wrappers:
   - VST 3 - Audio Unit Wrapper:
     - support MIDI output
-    - fix crash with namespace conflict with Mac OS X 10.10
+    - fix crash with namespace conflict with macOS X 10.10
     - add PresetAttributes::StateType support in AUWrapper::restoreState
 - New Flags/Enums:
   - New predefined 3D Speaker Arrangements: k91Atmos

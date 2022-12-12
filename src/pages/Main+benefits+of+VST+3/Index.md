@@ -62,7 +62,7 @@ A **VST 3** plug-in can access channel information where it is instantiated: nam
 
 ## 12. [Support Remote control Representation](../Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.md)
 
-Remote controllers for audio and MIDI software applications have become increasingly popular. **VST 3** offers far more flexible control of VST plug-ins by remote controllers. Using the knobs and faders on the control surface, parameters can be recorded, renamed and edited in many ways. Parameters that cannot be edited can be routed for display purposes to the control surface, for example, to show Gain Reduction on a compressor.
+Remote controllers for audio and MIDI software applications have become increasingly popular. **VST 3** offers far more flexible control of **VST** plug-ins by remote controllers. Using the knobs and faders on the control surface, parameters can be recorded, renamed and edited in many ways. Parameters that cannot be edited can be routed for display purposes to the control surface, for example, to show Gain Reduction on a compressor.
 
 ## 13. Others
 

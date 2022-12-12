@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.5.0] Key Switch
+># \[3.5.0\] Key Switch
 
 **On this page:**
 
@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [(3.5.0) Note Expression](../3.5.0/INoteExpressionController.md)
+- [\[3.5.0\] Note Expression](../3.5.0/INoteExpressionController.md)
 
 ---
 
@@ -18,10 +18,10 @@ Allows information exchange between the plug-in and host about which key switche
 
 Extended plug-in interface [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html) for key switches support: [Vst::IKeyswitchController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html)
 
-- [plug imp]
+- \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]
-- [released: 3.5.0]
-- [optional]
+- \[released: 3.5.0\]
+- \[optional\]
 
 Some instrument plug-ins support key switching functionality, which allows the user to switch between different layered sounds while playing notes. To achieve this, the user has to press a specific key associated to the wanted layer before playing new notes.
 

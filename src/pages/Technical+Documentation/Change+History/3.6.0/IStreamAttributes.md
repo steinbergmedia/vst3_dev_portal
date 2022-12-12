@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># [3.6.0] Preset Meta-Information
+># \[3.6.0\] Preset Meta-Information
 
 **On this page:**
 
@@ -12,10 +12,10 @@
 
 Meta attributes of a stream: [Vst::IStreamAttributes](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IStreamAttributes.html)
 
-- [host imp]
+- \[host imp\]
 - [extends [IBStream](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IBStream.html)]
-- [released: 3.6.0]
-- [optional]
+- \[released: 3.6.0\]
+- \[optional\]
 
 Interface to access preset meta information from stream, used, for example, in [setState](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805) in order to inform the plug-in about the current context in which the preset loading occurs(Project context or Preset load (see [StateType](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst_1_1StateType.html))) or used to get the full file path of the loaded preset (if available).
 

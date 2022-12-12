@@ -24,11 +24,11 @@ The last official release version of **VSTGUI** is always included in the **VST 
 
 Example of the **VSTGUI** UIDescription Editor (embedded editing WYSIWYG)
 
-Check the folder "*vstgui4"* of the SDK!
+Check the folder *vstgui4* of the SDK!
 
 ## VSTGUI Forum
 
-Visit Steinberg's **VST Developer Forum** in order to get help with development, submit bug reports, request new features and connect to other VSTGUI developers:
+Visit Steinberg's **VST Developer Forum** in order to get help with development, submit bug reports, request new features and connect to other **VSTGUI** developers:
 
 ![what_if_36](../../resources/what_is_36.jpg)
 
@@ -42,7 +42,7 @@ Visit Steinberg's **VST Developer Forum** in order to get help with development,
 
 ## VSTGUI License
 
-```
+```text
 BSD style
 
 VSTGUI LICENSE

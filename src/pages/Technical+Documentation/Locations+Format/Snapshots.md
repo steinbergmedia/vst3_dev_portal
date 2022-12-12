@@ -12,4 +12,4 @@
 
 ---
 
-See **[(3.6.10) UI Snapshots](../Change+History/3.6.10/UI+Snapshots.html)**
+See **[\[3.6.10\] UI Snapshots](../Change+History/3.6.10/UI+Snapshots.html)**

@@ -14,7 +14,7 @@
   - Using DirectComposition on Windows now with support for CLayeredViewContainer
   - Removed 32-bit Carbon support
   - Reworked Event handling
-  - different fixes
+  - Different fixes
 - New Flags/Enums:
   - New predefined 3D speaker arrangement:
     - **k50_5_3** => L R C Ls Rs Tfl Tfc Tfr Trl Trr Bfl Bfc Bfr
