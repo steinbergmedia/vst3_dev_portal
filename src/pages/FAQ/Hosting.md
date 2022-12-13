@@ -50,6 +50,11 @@ Yes, this is the way it should be done: *kParamTitlesChanged* => recheck title-u
 
 No see previous question.
 
+## Q: Some plug-ins have parameters that are not Automatable. They are calling beginEdit/performEdit/endEdit when the user manipulates them with the GUI. Is the host supposed to react to the performEdit by sending the value to the process call of the IAudioProcessor?
+
+Yes, the host must transfer the parameter change from the controller to the processor.
+The information Automatable is only there to allow the host and the user to create an associated automation track for this parameter.
+
 ## Q: Can the host get away with returning kNotImplemented for *restartComponent*(*kReloadComponent*)?
 
 It is allowed for a host to return *kNotImplemented* if it does not support it! The plugin has then to react accordingly.
@@ -80,3 +85,7 @@ You can only do this reference count no-ops for objects that are alive the whole
 ## Q: What should the host do if a plug-in does not call _ComponentHandler::restartComponent()_ from the main/UI thread?
 
 You could report directly to the developer of this plug-in about this wrong behaviour, restartComponent has to be called from UI Thread! As security fallback the host could postpone this call in the UI Thread and handles it in the next UI idle.
+
+## Q: Some plug-ins return kResultFalse when the host call *setComponentState*. Should the host just ignore the returned result code?
+
+Yes, just ignore the result in this case, but you could inform the plug-in developer about this issue.
