@@ -37,7 +37,7 @@ On the Windows platform, a **VST 3** plug-in is organized as a bundle like packa
 | MyPlugin.vst3/Contents/**arm64ec-win**/MyPlugin.vst3   | folder contains the plug-in binary (64 bit dll for Arm64EC architecture).<br> Recommended archi for Windows on Arm64! |
 | MyPlugin.vst3/Contents/**arm-win**/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for Arm classic architecture) |
 | MyPlugin.vst3/Contents/**arm64-win**/MyPlugin.vst3     | folder contains the plug-in binary (64 bit dll for Arm64 classic architecture) |
-| MyPlugin.vst3/Contents/**arm64x-win**/MyPlugin.vst3    | folder contains the plug-in binary for both Arm64 code and Arm64EC code together (64 bit dll for Arm64 classic architecture) |
+| MyPlugin.vst3/Contents/**arm64x-win**/MyPlugin.vst3    | folder contains the plug-in binary for both Arm64 code and Arm64EC code together<br> (64 bit dll for Arm64 classic architecture) |
 | MyPlugin.vst3/Contents/moduleinfo.json             | the plug-in’s moduleinfo |
 | MyPlugin.vst3/desktop.ini                          | used to set custom icon in Windows Explorer |
 | MyPlugin.vst3/Plugin.ico                           | customized plug-in icon |
