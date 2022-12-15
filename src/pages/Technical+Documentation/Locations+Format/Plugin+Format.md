@@ -21,13 +21,13 @@ On the macOS platform, **VST 3** plug-in is a standard macOS bundle, its file ex
 | :-                                     | :-                                                            |
 | MyPlugin.vst3/Contents/Resources/      | folder contains all additional resource files useful for the plug-in |
 | MyPlugin.vst3/Contents/MacOS/          | folder contains the plug-in’s macOS universal binary (Mach-O) |
-| MyPlugin.vst3/Contents/moduleinfo.json | the plug-in’s moduleinfo                                   |
+| MyPlugin.vst3/Contents/moduleinfo.json | the plug-in’s module info                                     |
 | MyPlugin.vst3/Contents/Info.plist      | the plug-in’s property list                                   |
 | MyPlugin.vst3/Contents/PkgInfo         | specifies the type and creator codes of the bundle (optional) |
 
 ## For the Windows platform
 
-On the Windows platform, a **VST 3** plug-in is organized as a bundle like package format (simple folder), its file extension is "**.vst3**" and has the following folder structure:
+On the Windows platform, a **VST 3** plug-in is organized as a bundle-like package (simple folder), its file extension is "**.vst3**" and has the following folder structure:
 
 | Folder                                             | Description                  |
 | :-                                                 | :-                           |
@@ -37,12 +37,13 @@ On the Windows platform, a **VST 3** plug-in is organized as a bundle like packa
 | MyPlugin.vst3/Contents/**arm64ec-win**/MyPlugin.vst3   | folder contains the plug-in binary (64 bit dll for Arm64EC architecture).<br> Recommended archi for Windows on Arm64! |
 | MyPlugin.vst3/Contents/**arm-win**/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for Arm classic architecture) |
 | MyPlugin.vst3/Contents/**arm64-win**/MyPlugin.vst3     | folder contains the plug-in binary (64 bit dll for Arm64 classic architecture) |
-| MyPlugin.vst3/Contents/moduleinfo.json             | the plug-in’s moduleinfo |
+| MyPlugin.vst3/Contents/**arm64x-win**/MyPlugin.vst3    | folder contains the plug-in binary for both Arm64 code and Arm64EC code together<br> (64 bit dll for Arm64 classic architecture) |
+| MyPlugin.vst3/Contents/moduleinfo.json             | the plug-in’s module info                   |
 | MyPlugin.vst3/desktop.ini                          | used to set custom icon in Windows Explorer |
-| MyPlugin.vst3/Plugin.ico                           | customized plug-in icon |
+| MyPlugin.vst3/Plugin.ico                           | customized plug-in icon                     |
 
 >ⓘ **Note**\
->In previous SDKs, the **VST 3** plug-in was defined as a single dll file with the **.vst3** extension. This is deprecated since **VST 3.6.10**.
+>In previous SDKs, the **VST 3** plug-in was defined as a single dll file with the **.vst3** extension. This has been deprecated since **VST 3.6.10**.
 
 The file **desktop.ini** should contain:
 
@@ -69,18 +70,21 @@ See [Microsoft Blogs about this](https://devblogs.microsoft.com/windows-music-de
 | Windows 10    | Intel x86         | Intel x86         | Intel x86                         |
 | Windows 10/11	| Intel x64	        | Intel x64	        | Intel x64*                        |
 | Windows 10/11	| Intel x64	        | Intel x86	        | Intel x86                         |
-| Windows 10/11	| Arm64	            | Arm64 Classic     | Arm64 Classic                     |
-| Windows 11	| Arm64	            | Arm64EC	        | Arm64EC, Intel x64                |
-| Windows 11	| Arm64	            | Intel x64	        | Arm64EC, Intel x64                |
+| Windows 11	| Arm64	            | Arm64 Classic     | Arm64 Classic, Arm64X             |
+| Windows 11	| Arm64	            | Arm64EC	        | Arm64X, Arm64EC, Intel x64        |
+| Windows 11	| Arm64	            | Intel x64	        | Arm64EC, Intel x64, Arm64X        |
 
->"TLDR: Please offer both Arm64EC and x64 versions of your DAWs and plug-ins, and please stay up to date with the latest developer tooling and SDKs." ([Pete Brown (Microsoft)](https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/))
+>"TLDR: Please offer both Arm64EC and x64 versions of your DAWs and plug-ins, and please stay up to date with the latest developer tooling and SDKs." ([Pete Brown - Microsoft](https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/))
 
- >ⓘ **Note**\
- With out of process (Inter-Process Commnunication) a Host could overriden these limitations, by allowing for example a Host Arm64 Classic to handle an Arm64EC Plug-in.
+>ⓘ **Note**\
+ With out-of-process/inter-process communication a host can overriden these limitations, by allowing, for example, an *Arm64 Classic* host to handle an *Arm64EC* plug-in.
+
+>ⓘ **Note**\
+To learn more about Arm64X (new type of binary that can contain both the classic *Arm64* code and *Arm64EC* code together), click [here](https://learn.microsoft.com/en-us/windows/arm/arm64x-pe).
 
 ## For the Linux platform
 
-On Linux, a **VST 3** plug-in is organized as a bundle like package format, its file extension is "**.vst3**", it follows this folder structure:
+On Linux, a **VST 3** plug-in is organized as a bundle-like package, its file extension is "**.vst3**", and it has the following folder structure:
  
 | Folder                                 | Description                        |
 | :-                                     | :-                                 |
@@ -88,7 +92,7 @@ On Linux, a **VST 3** plug-in is organized as a bundle like package format, its 
 | MyPlugin.vst3/Contents/i386-linux      | folder contains the plug-in binary (32 bit shared library .so for Kernel Architecture i386) |
 | MyPlugin.vst3/Contents/x86_64-linux    | folder contains the plug-in binary (64 bit shared library .so for Kernel Architecture x86_64) |
 | MyPlugin.vst3/Contents/XXX-linux       | with XXX the architecture name based on the output of command-line "uname -m" (machine hardware) + "-linux" for example: • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux |
-| MyPlugin.vst3/Contents/moduleinfo.json | the plug-in’s moduleinfo |
+| MyPlugin.vst3/Contents/moduleinfo.json | the plug-in’s module info          |
 
 ## Merged Bundle
 
@@ -133,7 +137,7 @@ MyPlugin.vst3/
     |   |__ x86_64-win/
     |   |   |__ MyPlugin.vst3
     |   |
-    |   |__ arm_64_ec-win/
+    |   |__ arm64ec-win/
     |   |   |__ MyPlugin.vst3
     |   |
     |   |__ moduleinfo.json
