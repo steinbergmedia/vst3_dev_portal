@@ -77,10 +77,10 @@ See [Microsoft Blogs about this](https://devblogs.microsoft.com/windows-music-de
 >"TLDR: Please offer both Arm64EC and x64 versions of your DAWs and plug-ins, and please stay up to date with the latest developer tooling and SDKs." ([Pete Brown - Microsoft](https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/))
 
 >ⓘ **Note**\
- With out-of-process/inter-process communication a host can overriden these limitations, by allowing, for example, a host Arm64 Classic to handle an Arm64EC Plug-in.
+ With out-of-process/inter-process communication a host can overriden these limitations, by allowing, for example, a *Arm64 Classic* host to handle an *Arm64EC* plug-in.
 
 >ⓘ **Note**\
-To learn more about Arm64X (new type of binary that can contain both the classic Arm64 code and Arm64EC code together), click [here](https://learn.microsoft.com/en-us/windows/arm/arm64x-pe).
+To learn more about Arm64X (new type of binary that can contain both the classic *Arm64* code and *Arm64EC* code together), click [here](https://learn.microsoft.com/en-us/windows/arm/arm64x-pe).
 
 ## For the Linux platform
 
@@ -137,7 +137,7 @@ MyPlugin.vst3/
     |   |__ x86_64-win/
     |   |   |__ MyPlugin.vst3
     |   |
-    |   |__ arm_64_ec-win/
+    |   |__ arm64ec-win/
     |   |   |__ MyPlugin.vst3
     |   |
     |   |__ moduleinfo.json
