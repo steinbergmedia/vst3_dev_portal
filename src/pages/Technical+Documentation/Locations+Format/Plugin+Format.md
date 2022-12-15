@@ -37,6 +37,7 @@ On the Windows platform, a **VST 3** plug-in is organized as a bundle like packa
 | MyPlugin.vst3/Contents/**arm64ec-win**/MyPlugin.vst3   | folder contains the plug-in binary (64 bit dll for Arm64EC architecture).<br> Recommended archi for Windows on Arm64! |
 | MyPlugin.vst3/Contents/**arm-win**/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for Arm classic architecture) |
 | MyPlugin.vst3/Contents/**arm64-win**/MyPlugin.vst3     | folder contains the plug-in binary (64 bit dll for Arm64 classic architecture) |
+| MyPlugin.vst3/Contents/**arm64x-win**/MyPlugin.vst3    | folder contains the plug-in binary for both Arm64 code and Arm64EC code together (64 bit dll for Arm64 classic architecture) |
 | MyPlugin.vst3/Contents/moduleinfo.json             | the plug-in’s moduleinfo |
 | MyPlugin.vst3/desktop.ini                          | used to set custom icon in Windows Explorer |
 | MyPlugin.vst3/Plugin.ico                           | customized plug-in icon |
@@ -69,14 +70,17 @@ See [Microsoft Blogs about this](https://devblogs.microsoft.com/windows-music-de
 | Windows 10    | Intel x86         | Intel x86         | Intel x86                         |
 | Windows 10/11	| Intel x64	        | Intel x64	        | Intel x64*                        |
 | Windows 10/11	| Intel x64	        | Intel x86	        | Intel x86                         |
-| Windows 10/11	| Arm64	            | Arm64 Classic     | Arm64 Classic                     |
-| Windows 11	| Arm64	            | Arm64EC	        | Arm64EC, Intel x64                |
-| Windows 11	| Arm64	            | Intel x64	        | Arm64EC, Intel x64                |
+| Windows 11	| Arm64	            | Arm64 Classic     | Arm64 Classic, Arm64X             |
+| Windows 11	| Arm64	            | Arm64EC	        | Arm64X, Arm64EC, Intel x64        |
+| Windows 11	| Arm64	            | Intel x64	        | Arm64EC, Intel x64, Arm64X        |
 
->"TLDR: Please offer both Arm64EC and x64 versions of your DAWs and plug-ins, and please stay up to date with the latest developer tooling and SDKs." ([Pete Brown (Microsoft)](https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/))
+>"TLDR: Please offer both Arm64EC and x64 versions of your DAWs and plug-ins, and please stay up to date with the latest developer tooling and SDKs." ([Pete Brown - Microsoft](https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/))
 
- >ⓘ **Note**\
- With out of process (Inter-Process Commnunication) a Host could overriden these limitations, by allowing for example a Host Arm64 Classic to handle an Arm64EC Plug-in.
+>ⓘ **Note**\
+ With out of process (Inter-Process Commnunication) a host could overriden these limitations, by allowing, for example, a host Arm64 Classic to handle an Arm64EC Plug-in.
+
+>ⓘ **Note**\
+To learn more about Arm64X (new type of binary that can contain both the classic Arm64 code and Arm64EC code together), check [here](https://learn.microsoft.com/en-us/windows/arm/arm64x-pe).
 
 ## For the Linux platform
 
