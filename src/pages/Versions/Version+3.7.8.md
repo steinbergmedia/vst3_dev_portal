@@ -5,7 +5,7 @@
 ## Version 3.7.8 (2023/03/??)
 
 - Interface changes:
-
+  - add new Microsoft unified *Arm64X* binary definition for **VST 3** plug-ins.
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.12](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_12)???
   
 - Documentation
