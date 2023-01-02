@@ -91,22 +91,30 @@ if (processorComponent && (result == kResultOk))
     // for Plug-ins which did not succeed to separate component from controller :-(
     if (processorComponent->queryInterface (Vst::IEditController::iid, (void**)&editController) != kResultTrue)
     {
-        // editController is now created, we have the ownership, which means that we have
-        // to release it when not used anymore FUID controllerCID;
+        // Here we are the normal case where the controller is separated from the component.
 
         // ask for the associated controller class ID (could be called before processorComponent->initialize ())
+        FUID controllerCID;
         if (processorComponent->getControllerClassId (controllerCID) == kResultTrue && controllerCID.isValid ())
         {
             // create its controller part created from the factory
             result = factory->createInstance (controllerCID, Vst::IEditController::iid, (void**)&editController);
             if (editController && (result == kResultOk))
             {
+                // editController is now created, we have the ownership, 
+                // which means that we have to release it when not used anymore.
+
                 // initialize the component with our context
                 res = (editController->initialize (gStandardPluginContext) == kResultOk);
 
                 // now processorComponent and editController are initialized... :-)
             }
         }
+    }
+    else
+    {
+        // editController is now created, we have the ownership, 
+        // which means that we have to release it when not used anymore.
     }
 }
 //-----------------------------------------------------------------------
