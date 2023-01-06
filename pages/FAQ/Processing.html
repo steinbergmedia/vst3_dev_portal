@@ -148,7 +148,25 @@
 <p>/ <a href="../">VST Home</a> / <a href="Index.html">Frequently Asked Questions</a></p>
 <h1 id="processing"><a class="header" href="#processing">Processing</a></h1>
 </blockquote>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#q-how-does-audio-processing-bypass-work">Q: How does Audio Processing Bypass work?</a></li>
+<li><a href="#q-can-the-maximum-sample-block-size-change-while-the-plug-in-is-processing">Q: Can the maximum sample block size change while the plug-in is processing?</a></li>
+<li><a href="#q-can-the-sample-rate-change-while-the-plug-in-is-processing">Q: Can the sample rate change while the plug-in is processing?</a></li>
+<li><a href="#q-can-the-host-call-the-process-function-without-audio-buffers">Q: Can the host call the process function without Audio buffers?</a></li>
+<li><a href="#q-what-is-a-side-chain">Q: What is a Side-Chain?</a></li>
+<li><a href="#q-how-can-i-implement-a-side-chain-path-into-my-plug-in">Q: How can I implement a Side-chain path into my plug-in?</a></li>
+<li><a href="#q-my-plug-in-is-capable-of-processing-all-possible-channel-configurations">Q: My plug-in is capable of processing all possible channel configurations.</a></li>
+<li><a href="#q-how-are-speaker-arrangement-settings-handled-for-fx-plug-ins">Q: How are speaker arrangement settings handled for FX plug-ins?</a></li>
+<li><a href="#q-my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">Q: My plug-in has mono input and stereo output. How does VST 3 handle this?</a></li>
+<li><a href="#q-how-does-it-work-with-silence-flags">Q: How does it work with silence flags?</a></li>
+<li><a href="#q-how-report-to-the-host-that-the-plug-in-latency-has-changed">Q: How report to the host that the plug-in latency has changed?</a></li>
+<li><a href="#q-how-report-to-the-host-that-the-plug-in-arrangement-has-changed">Q: How report to the host that the plug-in arrangement has changed?</a></li>
+<li><a href="#q-can-iaudioprocessorsetprocessing-be-called-without-any-iaudioprocessorprocess-call">Q: Can IAudioProcessor::setProcessing be called without any IAudioProcessor::process call?</a></li>
+<li><a href="#q-how-to-make-sure-that-a-plug-in-is-always-processed">Q: How to make sure that a plug-in is always processed?</a></li>
+<li><a href="#q-can-icomponentgetstatesetstate-be-called-during-processing">Q: Can IComponent::getState()/setState() be called during processing?</a></li>
+<li><a href="#q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing">Q: How can a plug-in be informed that it is currently processed in offline processing?</a></li>
+<li><a href="#q-what-should-i-not-call-in-the-realtime-process-function">Q: What should I NOT call in the realtime process function?</a></li>
+</ul>
 <hr />
 <h2 id="q-how-does-audio-processing-bypass-work"><a class="header" href="#q-how-does-audio-processing-bypass-work">Q: How does Audio Processing Bypass work?</a></h2>
 <p>In order to implement audio process bypassing, the plug-in can export a parameter which is additionally and exclusively flagged as having the attribute kIsBypass. When the user activates the plug-in bypass in the host, like all parameter changes, this is sent as part of the parameter data passed to the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IAudioProcessor::process</a> method.</p>

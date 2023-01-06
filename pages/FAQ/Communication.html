@@ -148,7 +148,14 @@
 <p>/ <a href="../">VST Home</a> / <a href="Index.html">Frequently Asked Questions</a></p>
 <h1 id="communication"><a class="header" href="#communication">Communication</a></h1>
 </blockquote>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#q-how-should-i-communicate-between-the-processing-and-the-user-interface">Q: How should I communicate between the 'Processing' and the 'User Interface'?</a></li>
+<li><a href="#q-i-want-to-implement-an-audio-meter-in-my-user-interface-how-do-i-do-this">Q: I want to implement an audio meter in my user interface. How do I do this?</a></li>
+<li><a href="#q-how-does-the-host-send-automation-data-to-my-vst-3-plug-in">Q: How does the host send automation data to my VST 3 plug-in?</a></li>
+<li><a href="#q-how-report-to-the-host-that-the-plug-in-has-new-parameter-titles">Q: How report to the host that the plug-in has new parameter titles?</a></li>
+<li><a href="#q-how-receive-midi-controllers-from-the-host">Q: How receive MIDI Controllers from the host?</a></li>
+<li><a href="#q-how-my-parameter-changes-from-ui-interaction-are-sent-to-the-processor-if-the-host-does-not-process">Q: How my parameter changes (from UI interaction) are sent to the processor if the host does not process?</a></li>
+</ul>
 <hr />
 <h2 id="q-how-should-i-communicate-between-the-processing-and-the-user-interface"><a class="header" href="#q-how-should-i-communicate-between-the-processing-and-the-user-interface">Q: How should I communicate between the 'Processing' and the 'User Interface'?</a></h2>
 <p>With the term 'Processing' we mean the code implementing the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">Steinberg::Vst::IAudioProcessor</a> interface, and with 'User Interface' the editor component implementing the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Steinberg::Vst::IEditController</a> interface.</p>

@@ -148,7 +148,9 @@
 <p>/ <a href="../">VST Home</a> / <a href="Index.html">Frequently Asked Questions</a></p>
 <h1 id="gui-editor"><a class="header" href="#gui-editor">GUI-Editor</a></h1>
 </blockquote>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#q-the-host-doesnt-open-my-plug-in-ui-why">Q: The host doesn't open my plug-in UI, why?</a></li>
+</ul>
 <hr />
 <h2 id="q-the-host-doesnt-open-my-plug-in-ui-why"><a class="header" href="#q-the-host-doesnt-open-my-plug-in-ui-why">Q: The host doesn't open my plug-in UI, why?</a></h2>
 <p>If you are not using <strong><a href="../What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a></strong>, please check that you provide the correct object derived from <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1EditorView.html">EditorView</a> or <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1CPluginView.html#a7c25891fe7dde6dc274a0ac9f20890a4">CPlugInView</a> and that you overwrite the function <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#abcfa60e135807caa316f3915622d9488">isPlatformTypeSupported()</a>.</p>

@@ -148,7 +148,15 @@
 <p>/ <a href="../">VST Home</a> / <a href="Index.html">Frequently Asked Questions</a></p>
 <h1 id="compatibility-with-vst-2x-or-vst-1"><a class="header" href="#compatibility-with-vst-2x-or-vst-1">Compatibility with VST 2.x or VST 1</a></h1>
 </blockquote>
-<p>[[<em>TOC</em>]]</p>
+<ul>
+<li><a href="#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one">Q: How can I update my VST 2 version of my plug-in to a VST 3 version and be sure that Cubase will load it instead of my old one?</a></li>
+<li><a href="#q-how-can-i-support-projects-which-were-saved-with-the-vst-2-version-of-my-plug-in">Q: How can I support projects which were saved with the VST 2 version of my plug-in?</a></li>
+<li><a href="#q-ive-already-released-a-vst-3-plug-in-with-a-different-uid-than-its-vst-2-equivalent-how-can-i-declare-that-the-vst-3-plug-in-can-replace-its-vst-2-plug-in-counterpart">Q: I've already released a VST 3 plug-in with a different UID than its VST 2 equivalent. How can I declare that the VST 3 plug-in can replace its VST 2 plug-in counterpart?</a></li>
+<li><a href="#q-in-vst-2-the-editor-was-able-to-access-the-processing-part-named-effect-directly-how-can-i-do-this-in-vst-3">Q: In VST 2 the editor was able to access the processing part, named effect, directly. How can I do this in VST 3?</a></li>
+<li><a href="#q-does-vst-3-implement-methods-like-beginedit-and-endedit-known-from-vst-2">Q: Does VST 3 implement methods like beginEdit and endEdit known from VST 2?</a></li>
+<li><a href="#q-does-vst-3-include-variable-inputoutput-processing-like-processvariableio-of-vst-2">Q: Does VST 3 include variable Input/Output processing like processVariableIo of VST 2?</a></li>
+<li><a href="#q-what-is-the-equivalent-to-the-vst-2-kplugcategofflineprocess">Q: What is the equivalent to the VST 2 kPlugCategOfflineProcess?</a></li>
+</ul>
 <hr />
 <h2 id="q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one"><a class="header" href="#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one">Q: How can I update my VST 2 version of my plug-in to a VST 3 version and be sure that Cubase will load it instead of my old one?</a></h2>
 <p>You have to provide a special UID for your <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivstaudioprocessor_8h.html#ae55c95a44e931e1cd78998c94bc65ee1">kVstAudioEffectClass</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivsteditcontroller_8h.html#a49d6f6f53c7630ea334474e9998c0a99">kVstComponentControllerClass</a> components, based on its <strong>VST 2</strong> UniqueID (4 characters) and its plug-in name like this:</p>
