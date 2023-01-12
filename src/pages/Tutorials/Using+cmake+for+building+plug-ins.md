@@ -107,9 +107,9 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 ## Available SMTG cmake options
 
 - **SMTG_AAX_SDK_PATH**: Here you can define where the AAX SDK is located (if needed)
-- **SMTG_ADD_VST3_HOSTING_SAMPLES**: Add **VST 3** hosting samples to the solution (default ON)
-- **SMTG_ADD_VST3_PLUGINS_SAMPLES**: Add **VST 3** plug-in samples to the project (default ON)
-- **SMTG_ADD_VSTGUI**: Add VSTGUI support (default ON)
+- **SMTG_ENABLE_VST3_HOSTING_EXAMPLES**: Enable **VST 3** Hosting Examples (default ON)
+- **SMTG_ENABLE_VST3_PLUGIN_EXAMPLES**: Enable **VST 3** Plug-in Examples (default ON)
+- **SMTG_ENABLE_VSTGUI_SUPPORT**: Enable VSTGUI Support (default ON)
 - **SMTG_BUILD_UNIVERSAL_BINARY**: Build universal binary (32 & 64 bit) (Mac only)
 - **SMTG_COREAUDIO_SDK_PATH**: Here you can define where the COREAUDIO SDK is located (Mac only, if needed)
 - **SMTG_CREATE_BUNDLE_FOR_WINDOWS**: Create bundle on Windows for the **VST 3** plug-ins (new since 3.6.10! Windows only) (default ON)
