@@ -21,6 +21,9 @@
 - Helpers classes:
   - Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([Issue#99](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
 
+- Validator:
+  - Add info when a unit has too many parameters
+
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.4: ???
 
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.11: ??
