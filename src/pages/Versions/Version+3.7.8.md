@@ -17,6 +17,7 @@
     - AUv3Wrapper: Remove duplicate -loadAudioFile: method declaration ([PR#46](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
     - AUv3Wrapper: fix iOS build errors ([PR#47](https://github.com/steinbergmedia/vst3_public_sdk/pull/46))
     - AUv3Wrapper: fix resets all parameter values when restartComponent(kParamTitlesChanged) is called ([Issue#45](https://github.com/steinbergmedia/vst3_public_sdk/issues/45))
+    - AUv2Wrapper: fix "AUv2 editor does not always work"([Issues#108](https://github.com/steinbergmedia/vst3sdk/issues/108))
 
 - Helpers classes:
   - Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([Issue#99](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
