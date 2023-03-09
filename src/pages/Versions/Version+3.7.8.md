@@ -19,8 +19,12 @@
     - AUv3Wrapper: fix resets all parameter values when restartComponent(kParamTitlesChanged) is called ([Issue#45](https://github.com/steinbergmedia/vst3_public_sdk/issues/45))
     - AUv2Wrapper: fix "AUv2 editor does not always work"([Issues#108](https://github.com/steinbergmedia/vst3sdk/issues/108))
 
+- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+  - Improve silence flag handling in some plug-ins examples.
+
 - Helpers classes:
-  - Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([Issue#99](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
+  - Fix Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([Issue#99](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
+  - Fix Controller CID output from validator cut on non-Windows platform ([Issue#109](https://github.com/steinbergmedia/vst3sdk/issues/109)).
 
 - Validator:
   - Add info when a unit has too many parameters
