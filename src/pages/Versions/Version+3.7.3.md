@@ -30,7 +30,7 @@
     - Simplify AUv3Wrapper code
     - Fix Logic/GarageBand not showing editor on macOS 11
 - Rename folder in zip SDK: VST3_SDK => vst3sdk
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Added checks in HostChecker plug-in:
     - Check IParameterChanges for multiple queues with same ID
     - Check IParameterChanges for multiple points at same position

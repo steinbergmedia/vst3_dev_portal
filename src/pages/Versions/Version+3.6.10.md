@@ -9,7 +9,7 @@
 - cmake:
   - adapt cmake files for better integration of users projects
   - fix support Universal Binary for AudioUnit
-- Plug-in wrappers:
+- [Plug-in wrappers](../What+is+the+VST+3+SDK/Wrappers/index.md):
   - refactoring AAX/VST 2 Wrappers
   - AAX Wrapper (VST 3 - AAX Wrapper):
     - fix Bypass behaviour

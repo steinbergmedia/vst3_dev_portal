@@ -15,15 +15,15 @@
 - Helpers Classes:
   - New Steinberg::Vst::XmlRepresentationHelper: helper for constructing a remote representation (xml based). See [\[3.5.0\] Remote Representation of Parameters Support](../Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.md).
   - Steinberg::Vst::EditControllerEx1: support of ProgramPitchNames added.
-- Samples:
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 instrument examples:
     - Instrument "Note Expression Synth" supporting Note Expression Events
     - Effect showing support of pitchnames (ProgramPitchNames)
-- Validator:
+- [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - More command line options
   - Possibility to add custom tests by the plug-in
-- VSTGUI 4.0
+- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) 4.0
   - preview version of VSTGUI with optimal **VST 3** support
-- Plug-in Wrappers:
+- [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - VST 3 - Audio Unit Wrapper fixes and support of Program changes
 - Some documentation changes

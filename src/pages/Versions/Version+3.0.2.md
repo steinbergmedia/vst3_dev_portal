@@ -6,6 +6,6 @@
 
 - Interface Changes:
   - [Steinberg::Vst::IParameterFinder](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterFinder.html) : Extension for [IPlugView](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html) to find view parameters (lookup value under mouse support)
-- Samples:
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Adaptation of AGain example for support of interface IParameterFinder
 - Some documentation changes

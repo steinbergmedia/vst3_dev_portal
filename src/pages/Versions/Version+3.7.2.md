@@ -36,7 +36,7 @@
     - Fix Export Symbols for AAX on macOS
   - Audio Unit v2
     - Fix AUv2 with Xcode 12
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 hosting example:
     - [VST 3 Inspector app](../What+is+the+VST+3+SDK/Index.md): example showing how to parse the available **VST 3** plug-ins factories, using VSTGUI.
   - C++14 minimum requirements for validator, audiohost, editorhost, Inspector app

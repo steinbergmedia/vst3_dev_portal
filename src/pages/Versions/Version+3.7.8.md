@@ -11,15 +11,20 @@
 - Documentation
 
 - cmake
+  - **Breaking Change**: options renamed to more meaningful words:
+    - SMTG_ADD_VST3_HOSTING_SAMPLES => **SMTG_ENABLE_VST3_HOSTING_EXAMPLES**
+    - SMTG_ADD_VST3_PLUGINS_SAMPLES => **SMTG_ENABLE_VST3_PLUGIN_EXAMPLES**
+    - SMTG_ADD_VSTGUI => **SMTG_ENABLE_VSTGUI_SUPPORT**
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
-    - AUv3Wrapper: Remove duplicate -loadAudioFile: method declaration ([PR#46](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
-    - AUv3Wrapper: fix iOS build errors ([PR#47](https://github.com/steinbergmedia/vst3_public_sdk/pull/46))
-    - AUv3Wrapper: fix resets all parameter values when restartComponent(kParamTitlesChanged) is called ([Issue#45](https://github.com/steinbergmedia/vst3_public_sdk/issues/45))
+    - AUv3Wrapper:
+      - Remove duplicate -loadAudioFile: method declaration ([PR#46](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
+      - Fix iOS build errors ([PR#47](https://github.com/steinbergmedia/vst3_public_sdk/pull/46))
+      - Fix resets all parameter values when restartComponent (kParamTitlesChanged) is called ([Issue#45](https://github.com/steinbergmedia/vst3_public_sdk/issues/45))
     - AUv2Wrapper: fix "AUv2 editor does not always work"([Issues#108](https://github.com/steinbergmedia/vst3sdk/issues/108))
 
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Improve silence flag handling in some plug-ins examples.
 
 - Helpers classes:
@@ -27,7 +32,7 @@
   - Fix Controller CID output from validator cut on non-Windows platform ([Issue#109](https://github.com/steinbergmedia/vst3sdk/issues/109)).
   - Add security check ([PR#51](https://github.com/steinbergmedia/vst3_public_sdk/pull/51)).
 
-- Validator:
+- [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add info when a unit has too many parameters
 
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.4: ???
