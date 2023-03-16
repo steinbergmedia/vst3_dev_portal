@@ -11,6 +11,7 @@
 - Documentation
 
 - cmake
+  - Fix "When vst3sdk is a submodule, example plugins are not built - a switch to choose would be very useful" ([Issue#94](https://github.com/steinbergmedia/vst3sdk/issues/94))
   - **Breaking Change**: options renamed to more meaningful words:
     - SMTG_ADD_VST3_HOSTING_SAMPLES => **SMTG_ENABLE_VST3_HOSTING_EXAMPLES**
     - SMTG_ADD_VST3_PLUGINS_SAMPLES => **SMTG_ENABLE_VST3_PLUGIN_EXAMPLES**
@@ -22,7 +23,7 @@
       - Remove duplicate -loadAudioFile: method declaration ([PR#46](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
       - Fix iOS build errors ([PR#47](https://github.com/steinbergmedia/vst3_public_sdk/pull/46))
       - Fix resets all parameter values when restartComponent (kParamTitlesChanged) is called ([Issue#45](https://github.com/steinbergmedia/vst3_public_sdk/issues/45))
-    - AUv2Wrapper: fix "AUv2 editor does not always work"([Issues#108](https://github.com/steinbergmedia/vst3sdk/issues/108))
+    - AUv2Wrapper: fix "AUv2 editor does not always work" ([Issues#108](https://github.com/steinbergmedia/vst3sdk/issues/108))
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Improve silence flag handling in some plug-ins examples.
@@ -35,6 +36,6 @@
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add info when a unit has too many parameters
 
-- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.4: ???
+- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.4: TODO
 
-- [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.11: ??
+- [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.11: TODO
