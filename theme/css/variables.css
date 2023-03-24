@@ -224,7 +224,7 @@
     --sidebar-active: #c90526;
     --sidebar-spacer: #45373a;
 
-    --scrollbar: var(--sidebar-fg);
+     --scrollbar: #cfcfcf; /*var(--sidebar-fg);*/
 
     --icons: #737480;
     --icons-hover: #262625;
@@ -274,7 +274,7 @@
     --sidebar-active: #db304c;
     --sidebar-spacer: #45373a;
 
-    --scrollbar: var(--sidebar-fg);
+    --scrollbar: #333333; /*var(--sidebar-fg);*/
 
     --icons: #737480;
     --icons-hover: var(--tc);
