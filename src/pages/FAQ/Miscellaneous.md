@@ -127,3 +127,32 @@ You can try to use the main [VST3 folder](../Technical+Documentation/Locations+F
 ```
 
 - this host could not resolve symbolic link! You could try to copy your plug-in directly in the main [VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.html) (C:\Program Files\Common Files\VST3)
+
+## Q: What is a GUID and how can I create it?
+
+[GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) is a 32 hexadecimal digits. VST 3 uses [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) (aka UUID) to identify a plug-in (one for the processor and one for the controller). These *Globally Unique IDentifiers* have to be generated when you create new plug-in and they should be unique. Here an example of GUID: **(0x84E8DE5F, 0x92554F53, 0x96FAE413, 0x3C935A18)**
+
+This has to be used in the declaration of your processor part like here in the AGain example (*againentry.cpp*):
+
+```c++
+static const FUID AGainProcessorUID (0x84E8DE5F, 0x92554F53, 0x96FAE413, 0x3C935A18);
+
+BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb, stringCompanyEmail)
+	//---First plug-in included in this factory-------
+	// its kVstAudioEffectClass component
+	DEF_CLASS2 (INLINE_UID_FROM_FUID(AGainProcessorUID),
+                PClassInfo::kManyInstances,	// cardinality
+				kVstAudioEffectClass,	// the component category
+				stringPluginName,		// here the plug-in name
+				Vst::kDistributable,
+				AGainVST3Category,		// Subcategory
+				FULL_VERSION_STR,		// Plug-in version
+				kVstVersionString,		// the VST 3 SDK version
+				Steinberg::Vst::AGain::createInstance)
+    //...
+
+```
+
+If you use the [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md), new GUIDs will be generated automatically for you. You could use your IDE (like Visual Studio) to create GUID or use some online generators (for example: [https://guidgenerator.com/](https://guidgenerator.com/)).
+
+GUIDs are also used as interface identifier in VST 3 (check in the VST SDK source code where the macro DECLARE_CLASS_IID is used).
