@@ -34,6 +34,7 @@
   - Fix Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([Issue#99](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
   - Fix Controller CID output from validator cut on non-Windows platform ([Issue#109](https://github.com/steinbergmedia/vst3sdk/issues/109)).
   - Add security check ([PR#51](https://github.com/steinbergmedia/vst3_public_sdk/pull/51)).
+  - Fix moduleinfotool.exe with UTF8 Normalization issue on Windows.
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add info when a unit has too many parameters
