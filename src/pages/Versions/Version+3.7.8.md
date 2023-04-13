@@ -39,6 +39,7 @@
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add info when a unit has too many parameters
 
-- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.4: TODO
+- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.5:
+  - New Native Arm64EC version for Windows on Arm: allowing to load VST3 Plug-ins built for Arm64EC.
 
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.11: TODO
