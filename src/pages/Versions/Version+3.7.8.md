@@ -1,8 +1,8 @@
 >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.7.8 (2023/03/??)
+># Version 3.7.8 (2023/05/02)
 
-## Version 3.7.8 (2023/03/??)
+## Version 3.7.8 (2023/05/02)
 
 - Interface changes:
   - Add new Microsoft unified *Arm64X* binary definition for **VST 3** plug-ins.
@@ -13,7 +13,8 @@
 - Documentation
 
 - cmake
-  - Fix "When vst3sdk is a submodule, example plugins are not built - a switch to choose would be very useful" ([Issue#94](https://github.com/steinbergmedia/vst3sdk/issues/94))
+  - Fix "When vst3sdk is a submodule, example plugins are not built - a switch to choose would be very useful" ([Issue#94](https://github.com/steinbergmedia/vst3sdk/issues/94)).
+  - Fix CMake fails with bad $-escape ([Issue#100](https://github.com/steinbergmedia/vst3sdk/issues/100)).
   - **Breaking Change**: options renamed to more meaningful words:
     - SMTG_ADD_VST3_HOSTING_SAMPLES => **SMTG_ENABLE_VST3_HOSTING_EXAMPLES**
     - SMTG_ADD_VST3_PLUGINS_SAMPLES => **SMTG_ENABLE_VST3_PLUGIN_EXAMPLES**
@@ -33,15 +34,18 @@
   - Improve silence flag handling in some plug-ins examples.
 
 - Helpers classes:
-  - Fix Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([Issue#99](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
+  - Fix Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([PR#46](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
+  - Fix cannot fully build on linux due to missing Steinberg::SystemClipboard::copyTextToClipboard() implementation ([Issue#102](https://github.com/steinbergmedia/vst3sdk/issues/102)).
   - Fix Controller CID output from validator cut on non-Windows platform ([Issue#109](https://github.com/steinbergmedia/vst3sdk/issues/109)).
   - Add security check ([PR#51](https://github.com/steinbergmedia/vst3_public_sdk/pull/51)).
   - Fix moduleinfotool.exe with UTF8 Normalization issue on Windows.
+  - Improve robustness of FStreamer::readString8 ([PR#5](https://github.com/steinbergmedia/vst3_base/pull/5)).
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add info when a unit has too many parameters
 
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.5:
   - New Native Arm64EC version for Windows on Arm: allowing to load VST3 Plug-ins built for Arm64EC.
+  - New Windows built-in ASIO Driver for x64 and Arm64EC.
 
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.11: TODO
