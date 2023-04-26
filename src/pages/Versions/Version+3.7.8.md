@@ -8,9 +8,8 @@
   - Add new Microsoft unified *Arm64X* binary definition for **VST 3** plug-ins.
   - New category: **kFxVocals** for tools dedicated to vocals.
   
-- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.12](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_12)???
+- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.12.3](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_12_3)
   
-- Documentation
 
 - cmake
   - Fix "When vst3sdk is a submodule, example plugins are not built - a switch to choose would be very useful" ([Issue#94](https://github.com/steinbergmedia/vst3sdk/issues/94)).
@@ -34,7 +33,7 @@
   - Improve silence flag handling in some plug-ins examples.
 
 - Helpers classes:
-  - Fix Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([PR#46](https://github.com/steinbergmedia/vst3_public_sdk/pull/46)).
+  - Fix Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([PR#49](https://github.com/steinbergmedia/vst3_public_sdk/pull/49)).
   - Fix cannot fully build on linux due to missing Steinberg::SystemClipboard::copyTextToClipboard() implementation ([Issue#102](https://github.com/steinbergmedia/vst3sdk/issues/102)).
   - Fix Controller CID output from validator cut on non-Windows platform ([Issue#109](https://github.com/steinbergmedia/vst3sdk/issues/109)).
   - Add security check ([PR#51](https://github.com/steinbergmedia/vst3_public_sdk/pull/51)).
