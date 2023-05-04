@@ -35,6 +35,7 @@
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Improve silence flag handling in some plug-ins examples.
+  - **Hello World VST 3** plug-in example is moved to [github](https://github.com/steinbergmedia/vst3_example_plugin_hello_world)!
 
 - Helpers classes:
   - Fix Build error on Linux with gcc 12 (moduleinfoparser.cpp) ([PR#49](https://github.com/steinbergmedia/vst3_public_sdk/pull/49)).
@@ -43,6 +44,12 @@
   - Add security check ([PR#51](https://github.com/steinbergmedia/vst3_public_sdk/pull/51)).
   - Fix moduleinfotool.exe with UTF8 Normalization issue on Windows.
   - Improve robustness of FStreamer::readString8 ([PR#5](https://github.com/steinbergmedia/vst3_base/pull/5)).
+  - Fix warning: loop variable 'flag' binds to a temporary value produced by a range of type 'std::optional<JSON::Object>::value_type'
+  - Fix warnings that cannot be silenced on MinGW 8.1 ([PR#14](https://github.com/steinbergmedia/vst3_pluginterfaces/pull/14)).
+  - Remove warnings that cannot be silenced on Linux ([PR#6](https://github.com/steinbergmedia/vst3_base/pull/6).
+  - Fix language standard check in module_linux.cpp ([PR#53](https://github.com/steinbergmedia/vst3_public_sdk/pull/53)).
+  - Fix Qualify std::move call in module.cpp to silence a -Wunqualified-std-cast-call warning ([PR#53](https://github.com/steinbergmedia/vst3_public_sdk/pull/53)).
+  - Fix Include <cstdint> in moduleinfo.h to ensure that sized int types are visible ([PR#53](https://github.com/steinbergmedia/vst3_public_sdk/pull/53)).
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add info when a unit has too many parameters
@@ -50,5 +57,3 @@
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.5:
   - New Native Arm64EC version for Windows on Arm: allowing to load VST3 Plug-ins built for Arm64EC.
   - New Windows built-in ASIO Driver for x64 and Arm64EC.
-
-- [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.11: TODO
