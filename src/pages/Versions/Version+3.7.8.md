@@ -31,7 +31,7 @@
       - Fix resets all parameter values when restartComponent (kParamTitlesChanged) is called ([Issue#45](https://github.com/steinbergmedia/vst3_public_sdk/issues/45))
     - AUv2Wrapper:
       - Fix "AUv2 editor does not always work" ([Issues#108](https://github.com/steinbergmedia/vst3sdk/issues/108))
-      - Fix endless [SMTG_AUView setFrame] recursion call in AUv2 Wrapper
+      - Fix endless **SMTG_AUView setFrame** recursion call in AUv2 Wrapper
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Improve silence flag handling in some plug-ins examples.
