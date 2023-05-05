@@ -1,8 +1,8 @@
 >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.7.8 (2023/05/02)
+># Version 3.7.8 (2023/05/08)
 
-## Version 3.7.8 (2023/05/02)
+## Version 3.7.8 (2023/05/08)
 
 - Interface changes:
   - Add new Microsoft unified *Arm64X* binary definition for **VST 3** plug-ins.
@@ -13,7 +13,6 @@
       - **kAmbi5thOrderACN**, **kAmbi6thOrderACN**, **kAmbi7thOrderACN**: breaking speaker-bit compability by starting from index 0. Including some helper functions to map speaker index between order 1 to 4 and order 5 to 7 (*convertSpeaker_Ambi_1234Order_to_Ambi567Order* and *convertSpeaker_Ambi_567Order_to_Ambi1234Order*).
 
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.12.3](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_12_3)
-  
 
 - cmake
   - Fix "When vst3sdk is a submodule, example plugins are not built - a switch to choose would be very useful" ([Issue#94](https://github.com/steinbergmedia/vst3sdk/issues/94)).
