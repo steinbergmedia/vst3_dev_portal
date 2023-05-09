@@ -11,6 +11,8 @@ The Compatibility json array is used to declare a class to be treated as a repla
 
 When used this way, the host does not need to load the component to know which classes the module provides.
 
+This optional *moduleinfo.json* file was added in the **VST 3 SDK** version 3.7.5 and was located in the **Content** folder of the bundle. In order to be in compliance with Apple Bundle Guideline, this file is, since version 3.7.8, located in **Contents/Resources** folder.
+
 ## SDK
 
 The **VST 3 SDK** contains a command-line utility called *moduleinfotool* that is used to create and validate the *moduleinfo.json* file from a VST plug-in.
