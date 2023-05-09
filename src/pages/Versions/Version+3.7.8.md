@@ -1,10 +1,11 @@
 >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.7.8 (2023/05/08)
+># Version 3.7.8 (2023/05/15)
 
-## Version 3.7.8 (2023/05/08)
+## Version 3.7.8 (2023/05/15)
 
 - Interface changes:
+  - **Breaking Change**: the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file, introduced in the VST 3.7.5, is now located in the **Resources** folder in order to be compliance with the Apple bundle guideline.
   - Add new Microsoft unified *Arm64X* binary definition for **VST 3** plug-ins.
   - New category: **kFxVocals** for tools dedicated to vocals.
   - New Flags/Enums:
