@@ -20,8 +20,8 @@ On the macOS platform, **VST 3** plug-in is a standard macOS bundle, its file ex
 | Folder                                 | Description                                                   |
 | :-                                     | :-                                                            |
 | MyPlugin.vst3/Contents/Resources/      | folder contains all additional resource files useful for the plug-in |
+| MyPlugin.vst3/Contents/Resources/moduleinfo.json | the plug-in’s module info                           |
 | MyPlugin.vst3/Contents/MacOS/          | folder contains the plug-in’s macOS universal binary (Mach-O) |
-| MyPlugin.vst3/Contents/moduleinfo.json | the plug-in’s module info                                     |
 | MyPlugin.vst3/Contents/Info.plist      | the plug-in’s property list                                   |
 | MyPlugin.vst3/Contents/PkgInfo         | specifies the type and creator codes of the bundle (optional) |
 
@@ -32,13 +32,13 @@ On the Windows platform, a **VST 3** plug-in is organized as a bundle-like packa
 | Folder                                             | Description                  |
 | :-                                                 | :-                           |
 | MyPlugin.vst3/Contents/Resources/                  | folder contains all additional resource files useful for the plug-in |
+| MyPlugin.vst3/Contents/Resources/moduleinfo.json   | the plug-in’s module info    |
 | MyPlugin.vst3/Contents/**x86-win**/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for i386 architecture) |
 | MyPlugin.vst3/Contents/**x86_64-win**/MyPlugin.vst3    | folder contains the plug-in binary (64 bit dll for x86_64 architecture) |
 | MyPlugin.vst3/Contents/**arm64ec-win**/MyPlugin.vst3   | folder contains the plug-in binary (64 bit dll for Arm64EC architecture).<br> Recommended archi for Windows on Arm64! |
 | MyPlugin.vst3/Contents/**arm-win**/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for Arm classic architecture) |
 | MyPlugin.vst3/Contents/**arm64-win**/MyPlugin.vst3     | folder contains the plug-in binary (64 bit dll for Arm64 classic architecture) |
 | MyPlugin.vst3/Contents/**arm64x-win**/MyPlugin.vst3    | folder contains the plug-in binary for both Arm64 code and Arm64EC code together<br> (64 bit dll for Arm64 classic architecture) |
-| MyPlugin.vst3/Contents/moduleinfo.json             | the plug-in’s module info                   |
 | MyPlugin.vst3/desktop.ini                          | used to set custom icon in Windows Explorer |
 | MyPlugin.vst3/Plugin.ico                           | customized plug-in icon                     |
 
@@ -89,10 +89,10 @@ On Linux, a **VST 3** plug-in is organized as a bundle-like package, its file ex
 | Folder                                 | Description                        |
 | :-                                     | :-                                 |
 | MyPlugin.vst3/Contents/Resources/      | folder contains all additional resource files useful for the plug-in |
+| MyPlugin.vst3/Contents/Resources/moduleinfo.json | the plug-in’s module info          |
 | MyPlugin.vst3/Contents/i386-linux      | folder contains the plug-in binary (32 bit shared library .so for Kernel Architecture i386) |
 | MyPlugin.vst3/Contents/x86_64-linux    | folder contains the plug-in binary (64 bit shared library .so for Kernel Architecture x86_64) |
 | MyPlugin.vst3/Contents/XXX-linux       | with XXX the architecture name based on the output of command-line "uname -m" (machine hardware) + "-linux" for example: • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux |
-| MyPlugin.vst3/Contents/moduleinfo.json | the plug-in’s module info          |
 
 ## Merged Bundle
 
@@ -109,6 +109,7 @@ MyPlugin.vst3/
     |   |   |   |__ WhatsNew.pdf
     |   |   |__ Help/
     |   |   |   |__ helpdoc.xml
+    |   |   |__ moduleinfo.json
     |   |   |__ Snapshots/
     |   |   |   |__ 84E8DE5F92554F5396FAE4133C935A18_snapshot.png
     |   |   |   |__ 84E8DE5F92554F5396FAE4133C935A18_snapshot_2.0x.png
@@ -140,7 +141,6 @@ MyPlugin.vst3/
     |   |__ arm64ec-win/
     |   |   |__ MyPlugin.vst3
     |   |
-    |   |__ moduleinfo.json
     |   |__ Info.plist  (macOS Only)
     |   |__ PkgInfo     (macOS Only)
     |
