@@ -70,6 +70,8 @@ VstIntPtr Vst2Wrapper::vendorSpecific (VstInt32 lArg, VstIntPtr lArg2, void* ptr
         // ....
 ```
 
+---
+
 ## Q: How can I support projects which were saved with the VST 2 version of my plug-in?
 
 The host will call [IComponent::setState()](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805) and [IEditController::setComponentState()](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f) with the complete FXB/FXP stream. You have to extract your old state from that, for this the SDK provides a helper function [VST3::tryVst2StateLoad](https://steinbergmedia.github.io/vst3_doc/vstsdk/namespaceVST3.html#aadc6b99109a9b056a0176f49f9220822).
@@ -99,6 +101,8 @@ tresult *PLUGIN_API Processor::setState (IBStream* state)* in the file *public.s
 
 For Automation compatibility, you have to ensure that **VST 3** parameter IDs have the same value than the indexes of their associated parameters in **VST 2**. Only with this condition the host can play back the automation. The parameter value has the same meaning in **VST 2** and **VST 3**.
 
+---
+
 ## Q: I've already released a VST 3 plug-in with a different UID than its VST 2 equivalent. How can I declare that the VST 3 plug-in can replace its VST 2 plug-in counterpart?
 
 You can use the compatibility array of the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file.
@@ -106,18 +110,26 @@ There you use the UID of your **VST 3** audio effect class as the "New" UID and 
 
 If you cannot use the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file, you can create a class that implements the [IPluginCompatibility](../Technical+Documentation/Change+History/3.7.5/ModuleInfo.md) interface which you must provide to the host via your plug-in factory.
 
+---
+
 ## Q: In VST 2 the editor was able to access the processing part, named effect, directly. How can I do this in VST 3?
 
 You cannot and more importantly must not do this. The processing part and user interface part communicate via a messaging system.\
 See [Q: How should I communicate between the 'Processing' and the 'User Interface'?](#q-how-should-i-communicate-between-the-processing-and-the-user-interface) for details.
 
+---
+
 ## Q: Does VST 3 implement methods like beginEdit and endEdit known from VST 2?
 
 Yes and it is essential to support this for automation. For details, please see [Parameters and Automation](../Technical+Documentation/Parameters+Automation/Index.md)
 
+---
+
 ## Q: Does VST 3 include variable Input/Output processing like processVariableIo of VST 2?
 
 Not in version 3.1.0, we plan something in this direction later. (Note: this variableIO processing was for example for time stretching plug-ins).
+
+---
 
 ## Q: What is the equivalent to the VST 2 kPlugCategOfflineProcess?
 

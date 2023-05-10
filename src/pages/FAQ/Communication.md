@@ -16,9 +16,13 @@ If you should need to exchange more data than just parameter changes, such as *t
 
 See [Communication between the components](../Technical+Documentation/API+Documentation/Index.md#communication-between-the-components).
 
+---
+
 ## Q: I want to implement an audio meter in my user interface. How do I do this?
 
 See [Q: How should I communicate between the 'Processing' and the 'User Interface'?](#q-how-should-i-communicate-between-the-processing-and-the-user-interface)
+
+---
 
 ## Q: How does the host send automation data to my VST 3 plug-in?
 
@@ -36,6 +40,8 @@ Automation data is transmitted as a list of parameter changes. This list always 
 
 See also [Parameters and Automation](../Technical+Documentation/Parameters+Automation/Index.md)
 
+---
+
 ## Q: How report to the host that the plug-in has new parameter titles?
 
 Due to preset loading or user interaction the plug-in may change its parameters names (title) (but not the number of them or their IDs). To inform the host about this change, the plug-in should call from the editController its component handler function [restartComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6) with flag **kParamTitlesChanged**:
@@ -49,6 +55,8 @@ The host will rescan the parameter list and update the titles.
 >ⓘ **Note**\
 >With the flag **kParamValuesChanged** only the parameters values will be updated.
 
+---
+
 ## Q: How receive MIDI Controllers from the host?
 
 **MIDI** controllers are not transmitted directly to a **VST** component. **MIDI** as a hardware protocol has restrictions that can be avoided in software. Controller data in particular come along with unclear and often ignored semantics. On top of this, they can interfere with regular parameter automation, and the host is unaware of what happens in the plug-in when passing **MIDI** controllers directly.
@@ -57,6 +65,8 @@ So any functionality that is to be controlled by **MIDI** controllers must be ex
 
 To inform the host about this **MIDI CC**s to plug-in parameters mapping, the plug-in should implement the [IMidiMapping](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiMapping.html) interface.
 If the mapping has changed, the plug-in should call [IComponentHandler::restartComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6) (kMidiCCAssignmentChanged) to inform the host about this change.
+
+---
 
 ## Q: How are my parameter changes (from UI interaction) sent to the processor if the host does not process?
 
