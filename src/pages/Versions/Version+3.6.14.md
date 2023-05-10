@@ -12,7 +12,7 @@
   - add file SMTG_VST3_SDK.cmake
   - better FindJack support
   - better Cross-compiler support for Linux
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - add more checks and 64 bit processing support in HostChecker plug-in
   - add AAX version of "HostChecker Plug-in"
   - add new test in Validator:

@@ -25,7 +25,7 @@
   - Audio Unit:
     - Update AU SDK as external (version 1.1)
     - Fix offline rendering info for AUWrapper
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Add to validator self-tests
   - Add to validator a new function addErrorWarningTextToOutput
 - Helpers classes:

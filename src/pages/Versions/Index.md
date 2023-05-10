@@ -6,6 +6,7 @@
 
 All released versions of the **VST 3 SDK** with changes and dates:
 
+- [Version 3.7.8 (2023/05/15)](Version+3.7.8.md)
 - [Version 3.7.7 (2022/12/12)](Version+3.7.7.md)
 - [Version 3.7.6 (2022/09/05)](Version+3.7.6.md)
 - [Version 3.7.5 (2022/05/16)](Version+3.7.5.md)

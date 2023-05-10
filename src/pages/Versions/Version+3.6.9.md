@@ -17,11 +17,11 @@
   - new kNoParamId constant for uninitialized parameter id
 - cmake:
   - reorganization of cmake files
-- Samples:
-  - fix Validator State test
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+  - fix [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line) State test
   - NoteExpressionSynth uses the new KeyboardView
   - New HelloWorld **VST 3** plug-ins (template): [Creating a plug-in from the Helloworld template](../Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
-- Plug-in wrappers:
+- [Plug-in wrappers](../What+is+the+VST+3+SDK/Wrappers/index.md):
   - VST 3 - Audio Unit Wrapper: fix and adaptation for newer XCode versions
   - Audio Unit v3 (AUv3) Wrapper (VST 3 - Audio Unit v3 Wrapper): some fixes, add cmake
   - AAX Wrapper (VST 3 - AAX Wrapper): add bypass and VU parameter support
