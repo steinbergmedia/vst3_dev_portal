@@ -29,18 +29,18 @@ On the macOS platform, **VST 3** plug-in is a standard macOS bundle, its file ex
 
 On the Windows platform, a **VST 3** plug-in is organized as a bundle-like package (simple folder), its file extension is "**.vst3**" and has the following folder structure:
 
-| Folder                                             | Description                  |
-| :-                                                 | :-                           |
-| MyPlugin.vst3/Contents/Resources/                  | folder contains all additional resource files useful for the plug-in |
-| MyPlugin.vst3/Contents/Resources/moduleinfo.json   | the plug-in’s module info    |
-| MyPlugin.vst3/Contents/**x86-win**/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for i386 architecture) |
-| MyPlugin.vst3/Contents/**x86_64-win**/MyPlugin.vst3    | folder contains the plug-in binary (64 bit dll for x86_64 architecture) |
-| MyPlugin.vst3/Contents/**arm64ec-win**/MyPlugin.vst3   | folder contains the plug-in binary (64 bit dll for Arm64EC architecture).<br> Recommended archi for Windows on Arm64! |
-| MyPlugin.vst3/Contents/**arm-win**/MyPlugin.vst3       | folder contains the plug-in binary (32 bit dll for Arm classic architecture) |
-| MyPlugin.vst3/Contents/**arm64-win**/MyPlugin.vst3     | folder contains the plug-in binary (64 bit dll for Arm64 classic architecture) |
-| MyPlugin.vst3/Contents/**arm64x-win**/MyPlugin.vst3    | folder contains the plug-in binary for both Arm64 code and Arm64EC code together<br> (64 bit dll for Arm64 classic architecture) |
-| MyPlugin.vst3/desktop.ini                          | used to set custom icon in Windows Explorer |
-| MyPlugin.vst3/Plugin.ico                           | customized plug-in icon                     |
+| Folder                                                | Description                  |
+| :-                                                    | :-                           |
+| MyPlugin.vst3/Contents/Resources/                     | folder contains all additional resource files useful for the plug-in |
+| MyPlugin.vst3/Contents/Resources/moduleinfo.json      | the plug-in’s module info    |
+| MyPlugin.vst3/Contents/**x86-win**/MyPlugin.vst3      | folder contains the plug-in binary (32 bit dll for i386 architecture) |
+| MyPlugin.vst3/Contents/**x86_64-win**/MyPlugin.vst3   | folder contains the plug-in binary (64 bit dll for x86_64 architecture) |
+| MyPlugin.vst3/Contents/**arm64ec-win**/MyPlugin.vst3  | folder contains the plug-in binary (64 bit dll for Arm64EC architecture).<br> Recommended archi for Windows on Arm64! |
+| MyPlugin.vst3/Contents/**arm-win**/MyPlugin.vst3      | folder contains the plug-in binary (32 bit dll for Arm classic architecture) |
+| MyPlugin.vst3/Contents/**arm64-win**/MyPlugin.vst3    | folder contains the plug-in binary (64 bit dll for Arm64 classic architecture) |
+| MyPlugin.vst3/Contents/**arm64x-win**/MyPlugin.vst3   | folder contains the plug-in binary for both Arm64 code and Arm64EC code together<br> (64 bit dll for Arm64 classic architecture) |
+| MyPlugin.vst3/desktop.ini                             | used to set custom icon in Windows Explorer |
+| MyPlugin.vst3/Plugin.ico                              | customized plug-in icon                     |
 
 >ⓘ **Note**\
 >In previous SDKs, the **VST 3** plug-in was defined as a single dll file with the **.vst3** extension. This has been deprecated since **VST 3.6.10**.
@@ -109,15 +109,15 @@ MyPlugin.vst3/
     |   |   |   |__ WhatsNew.pdf
     |   |   |__ Help/
     |   |   |   |__ helpdoc.xml
-    |   |   |__ moduleinfo.json
     |   |   |__ Snapshots/
     |   |   |   |__ 84E8DE5F92554F5396FAE4133C935A18_snapshot.png
     |   |   |   |__ 84E8DE5F92554F5396FAE4133C935A18_snapshot_2.0x.png
-    |   |   |__ VST XMLs
+    |   |   |__ VST XMLs/
     |   |   |   |__ AGain/
     |   |   |       |__84E8DE5F92554F5396FAE4133C935A18/
     |   |   |           |__Generic 8 Cells.xml
     |   |   |           |__WK-Audio ID 8 Cells.xml
+    |   |   |__ moduleinfo.json
     |   |   |__ MyPlugin.srf
     |   |
     |   |__ armv7l-linux/
