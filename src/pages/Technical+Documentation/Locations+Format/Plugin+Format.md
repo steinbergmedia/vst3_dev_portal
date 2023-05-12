@@ -101,49 +101,49 @@ Note that all the bundles can be merged to one, which allows to have a cross-pla
 **For example:**
 
 ``` text
-MyPlugin.vst3/
-    |_ Contents/
-    |   |__ Resources/
-    |   |   |__ Documentation/
-    |   |   |   |__ Manual.pdf
-    |   |   |   |__ WhatsNew.pdf
-    |   |   |__ Help/
-    |   |   |   |__ helpdoc.xml
-    |   |   |__ Snapshots/
-    |   |   |   |__ 84E8DE5F92554F5396FAE4133C935A18_snapshot.png
-    |   |   |   |__ 84E8DE5F92554F5396FAE4133C935A18_snapshot_2.0x.png
-    |   |   |__ VST XMLs/
-    |   |   |   |__ AGain/
-    |   |   |       |__84E8DE5F92554F5396FAE4133C935A18/
-    |   |   |           |__Generic 8 Cells.xml
-    |   |   |           |__WK-Audio ID 8 Cells.xml
-    |   |   |__ moduleinfo.json
-    |   |   |__ MyPlugin.srf
-    |   |
-    |   |__ armv7l-linux/
-    |   |   |__ MyPlugin.so
-    |   |
-    |   |__ i686-linux/
-    |   |   |__ MyPlugin.so
-    |   |
-    |   |__ i386-linux/
-    |   |   |__ MyPlugin.so
-    |   |
-    |   |__ x86_64-linux/
-    |   |   |__ MyPlugin.so
-    |   |
-    |   |__ MacOS/
-    |   |   |__ MyPlugin
-    |   |
-    |   |__ x86_64-win/
-    |   |   |__ MyPlugin.vst3
-    |   |
-    |   |__ arm64ec-win/
-    |   |   |__ MyPlugin.vst3
-    |   |
-    |   |__ Info.plist  (macOS Only)
-    |   |__ PkgInfo     (macOS Only)
-    |
-    |____desktop.ini    (Windows only)
-    |___ Plugin.ico     (Windows only)
+./MyPlugin.vst3
+    ├── Contents
+    │   ├── Resources
+    │   │   ├── Documentation
+    │   │   │   ├── Manual.pdf
+    │   │   │   └── WhatsNew.pdf
+    │   │   ├── Help
+    │   │   │   └── helpdoc.xml
+    │   │   ├── Snapshots
+    │   │   │   ├── 84E8DE5F92554F5396FAE4133C935A18_snapshot.png
+    │   │   │   └── 84E8DE5F92554F5396FAE4133C935A18_snapshot_2.0x.png
+    │   │   ├── VST XMLs
+    │   │   │   └── AGain
+    │   │   │       └── 84E8DE5F92554F5396FAE4133C935A18
+    │   │   │           ├── Generic 8 Cells.xml
+    │   │   │           └── WK-Audio ID 8 Cells.xml
+    │   │   ├── moduleinfo.json
+    │   │   └── MyPlugin.srf
+    │   │
+    │   ├── armv7l-linux
+    │   │   └── MyPlugin.so
+    │   │
+    │   ├── i686-linux
+    │   │   └── MyPlugin.so
+    │   │
+    │   ├── i386-linux
+    │   │   └── MyPlugin.so
+    │   │
+    │   ├── x86_64-linux
+    │   │   └── MyPlugin.so
+    │   │
+    │   ├── MacOS
+    │   │   └── MyPlugin
+    │   │
+    │   ├── x86_64-win
+    │   │   └── MyPlugin.vst3
+    │   │
+    │   ├── arm64ec-win
+    │   │   └── MyPlugin.vst3
+    │   │
+    │   ├── Info.plist  (macOS Only)
+    │   └── PkgInfo     (macOS Only)
+    │
+    ├── desktop.ini    (Windows only)
+    └── Plugin.ico     (Windows only)
 ```
