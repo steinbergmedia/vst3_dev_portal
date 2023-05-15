@@ -11,13 +11,13 @@
 - cmake:
   - minor refactoring
   - add Visual Studio 2020 support
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - add some more checks in HostChecker plug-in
   - add some debug output for editorhost
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - AAX Wrapper (VST 3 - AAX Wrapper):
     - loading of preset should not overwrite the current Bypass state
-- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md): 
+- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md):
   - support of IPlugInterfaceSupport
   - support of MPE
   - possibility to open 2 times the same plug-in editor

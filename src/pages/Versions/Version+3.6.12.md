@@ -22,7 +22,7 @@
   - fix WIN_ARCHITECTURE_NAME for Windows 32bits
   - fix SMTG_PACKAGE_ICON_PATH selection
   - split WIN_PDB into WIN_PDB32 and WIN_PDB64
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New LegacyMIDICCOut **VST 3** plug-in showing the use of LegacyMIDICCOutEvent
   - Add IMidiLearn support for NoteExpressionSynth
   - Add Audio Unit v3 NoteExpressionSynth example with MPE support

@@ -36,7 +36,7 @@ There are simple casting functions in *pluginterfaces/base/fstrdefs.h* (see **ws
     - Simplify the creation of an AUv2 wrapped plug-in by a simple cmake function (see smtg_target_add_auv2)
     - Reworked AUWrapper Objective-C code
 
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Add more structured Units and parameters to Hostchecker plug-in.
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):

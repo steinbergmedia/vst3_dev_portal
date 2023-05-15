@@ -39,7 +39,7 @@
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - Audio Unit:
     - Fix AUv3 validation issue (https://github.com/steinbergmedia/vst3_public_sdk/issues/39).
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 plug-ins example:
     - New *multiple_programchanges* showing support of multiple program change parameters.
   - Add new *Processing Load* simulation parameter in **HostChecker** which allows to create a CPU load.

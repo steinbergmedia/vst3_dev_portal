@@ -25,7 +25,7 @@
 - cmake:
   - New cmake files
   - Fix on Windows creation of VST 3 folder using powershell with admin rights
-- [Samples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 plug-ins examples:
     - SyncDelay using [Steinberg::Vst::IProcessContextRequirements](../Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.md)
     - Panner using PlugType::kSpatialFx as SubCategory, it shows how to build a Panner plug-in Mono to Stereo

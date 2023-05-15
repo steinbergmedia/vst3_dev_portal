@@ -2,7 +2,7 @@
 >
 ># Moduleinfo
 
-An optional moduleinfo.json file can be part of the [module file package](../Locations+Format/Plugin+Format.md).
+An optional *moduleinfo.json* file can be part of the [module file package](../Locations+Format/Plugin+Format.md), located in the *Resources* folder.
 
 The file contains the same information as the [Module Factory](Index.md#module-factory), plus an optional list of compatible classes.
 The file is encoded in [json5](http://json5.org) format.
@@ -11,19 +11,21 @@ The Compatibility json array is used to declare a class to be treated as a repla
 
 When used this way, the host does not need to load the component to know which classes the module provides.
 
+This optional *moduleinfo.json* file was added in the **VST 3 SDK** version 3.7.5 and was located in the **Contents** folder of the bundle. In order to be compliant with code signing on macOS, this file is now (since version 3.7.8) located in the **Contents/Resources** folder.
+
 ## SDK
 
-The **VST 3 SDK** contains a command-line utility called *moduleinfotool* that is used to create and validate the moduleinfo.json file from a VST plug-in.
+The **VST 3 SDK** contains a command-line utility called *moduleinfotool* that is used to create and validate the *moduleinfo.json* file from a VST plug-in.
 See **public.sdk/vst-utilities/moduleinfotool**.
 
-The *moduleinfotool* uses the ModuleInfoLib which can be used by hosts to read and parse the moduleinfo.json file.
+The *moduleinfotool* uses the ModuleInfoLib which can be used by hosts to read and parse the *moduleinfo.json* file.
 See **public.sdk/source/vst/moduleinfo**
 
-For plug-ins built with the **VST 3 SDK**, the moduleinfo.json file will be automatically created during the build process.
+For plug-ins built with the **VST 3 SDK**, the *moduleinfo.json* file will be automatically created during the build process.
 
 ## Example
 
-An example moduleinfo.json looks like this:
+An example *moduleinfo.json* looks like this:
 
 ```json
 {

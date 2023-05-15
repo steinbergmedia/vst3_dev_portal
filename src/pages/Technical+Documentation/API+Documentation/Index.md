@@ -88,19 +88,22 @@ if (processorComponent && (result == kResultOk))
     res = (processorComponent->initialize (gStandardPluginContext) == kResultOk);
 
     // try to create the controller part from the component
-    // for Plug-ins which did not succeed to separate component from controller :-(
+    // for Plug-ins which did not succeed in separating component from controller :-(
     if (processorComponent->queryInterface (Vst::IEditController::iid, (void**)&editController) != kResultTrue)
     {
-        // editController is now created, we have the ownership, which means that we have
-        // to release it when not used anymore FUID controllerCID;
+        // This is the normal case, where the controller is separated from the component.
 
         // ask for the associated controller class ID (could be called before processorComponent->initialize ())
+        FUID controllerCID;
         if (processorComponent->getControllerClassId (controllerCID) == kResultTrue && controllerCID.isValid ())
         {
             // create its controller part created from the factory
             result = factory->createInstance (controllerCID, Vst::IEditController::iid, (void**)&editController);
             if (editController && (result == kResultOk))
             {
+                // editController is now created, we have the ownership, 
+                // which means that we have to release it when not used anymore.
+
                 // initialize the component with our context
                 res = (editController->initialize (gStandardPluginContext) == kResultOk);
 
@@ -108,12 +111,17 @@ if (processorComponent && (result == kResultOk))
             }
         }
     }
+    else
+    {
+        // editController is now created, we have the ownership, 
+        // which means that we have to release it when not used anymore.
+    }
 }
 //-----------------------------------------------------------------------
 ```
 
 >ⓘ **Note**\
->Please be aware that IPluginBase::initialize and IPluginBase::terminate must only be called once per object instance. So if an object implements both IAudioProcessor and IEditController take care to only call them once as in the example above.
+>Please be aware that IPluginBase::initialize and IPluginBase::terminate must only be called once per object instance. So if an object implements both IAudioProcessor and IEditController, take care to only call them once, as in the example above.
 
 ### Extensions
 

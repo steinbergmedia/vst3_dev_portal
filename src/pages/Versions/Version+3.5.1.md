@@ -11,17 +11,17 @@
     - If you have used the SingleComponentEffect before, make sure that you must exclude vsteditcontroller.cpp now if it was in your project
   - EditControllerEx1 has a new function: setProgramName
   - ProgramList has a new function: setProgramName
-- Samples:
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Add Visual Studio 2010 projects
   - Remove Visual Studio 2003 projects
   - Fix AGain Single Component Effect
 - VSTGUI 4.0
   - Update to the final 4.0 release
-- Plug-in Wrappers:
+- [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - VST 3 - VST 2.x Wrapper:
     - fix an issue with destroying the editor
   - VST 3 - Audio Unit Wrapper:
     - fix initial editor size issue
     - optimization for GetParameterInfo
-- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md): VST 3 Plug-in Test Host
+- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md):
   - New feature: Convert **VST 3** Preset to **VST 2** preset (fxp or fxb)
