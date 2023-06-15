@@ -22,7 +22,7 @@ For downloading the SDK, see the section "[How to set up my system for VST 3](..
 
 You have the following possibilities to start a new project:
 
-- You can use the [**helloworld** template](Creating+a+plug-in+from+the+Helloworld+template.md) included in the **VST 3 SDK** and duplicate the folder into a new folder. Adapt each file where the comment mentions it.
+- You can use the [**helloworld** template](Creating+a+plug-in+with+VST+3+SDK+as+an+external+project.md).
 - Or, which is **easier** and **recommended**, you can use the [**VST 3 Project Generator**](../What+is+the+VST+3+SDK/Project+Generator.md) application included in the **VST 3 SDK**. The following steps show how to use it.
 
 ---

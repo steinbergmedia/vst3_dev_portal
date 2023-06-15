@@ -43,7 +43,7 @@
   - [Guideline for replacing a VST 2 plug-in by a VST 3 plug-in](pages/Tutorials/Guideline+for+VST3+replacing+VST2.md)
   - [Strings Conversion Helper](pages/Tutorials/Strings+Conversion+Helper.md)
   - [Creating a cmake plug-in project from scratch](pages/Tutorials/Creating+a+plug-in+from+scratch.md)
-  - [Creating a plug-in from the Helloworld template](pages/Tutorials/Creating+a+plug-in+from+the+Helloworld+template.md)
+  - [Creating a plug-in with VST 3 SDK as an external project](pages/Tutorials/Creating+a+plug-in+with+VST+3+SDK+as+an+external+project.md)
   - [Switching to another VSTGUI submodule or branch](pages/Tutorials/Switching+to+another-VSTGUI+submodule+or+branch.md)
 - [Technical Documentation](pages/Technical+Documentation/Index.md)
   - [VST 3 API Documentation](pages/Technical+Documentation/API+Documentation/Index.md)
