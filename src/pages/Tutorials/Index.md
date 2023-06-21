@@ -91,11 +91,11 @@ The SDK provides some helpers functions to convert from UTF16 (use in **VST 3** 
 
 This tutorial provides a step-by-step guide for building a **VST 3** plug-in's ```CMakeLists.txt``` from scratch.
 
-## Creating a plug-in from the Helloworld template
+## Creating a plug-in with VST 3 SDK as an external project
 
-[Link](Creating+a+plug-in+from+the+Helloworld+template.md)
+[Link](Creating+a+plug-in+with+VST+3+SDK+as+an+external+project.md)
 
-This tutorial explains how to create a new audio plug-in from the Helloworld template included in the **VST 3 SDK**.
+This is a simple Hello World **VST 3 SDK** plug-in to demonstrate how to use the VST 3 SDK as an external project.
 
 ## Switching to another VSTGUI submodule or branch
 
