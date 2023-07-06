@@ -2,6 +2,8 @@
 
 [VST](pages/README.md)
 
+# VST Overview
+
 - [What is VST?](pages/What+is+VST/Index.md)
   - [Use cases](pages/What+is+VST/Use+cases.md)
 - [Main benefits of VST 3](pages/Main+benefits+of+VST+3/Index.md)
@@ -25,6 +27,9 @@
   - [What are the licensing options](pages/VST+3+Licensing/What+are+the+licensing+options.md)
   - [Which files fall under which license?](pages/VST+3+Licensing/Which+files+fall+under+which+license.md)
   - [Developer use cases (FAQs)](pages/VST+3+Licensing/Developer+use+cases.md)
+
+# Getting Started with VST
+
 - [Getting Started](pages/Getting+Started/Index.md)
   - [VST 3 Links](pages/Getting+Started/Links.md)
   - [How to set up my system for VST 3](pages/Getting+Started/How+to+setup+my+system.md)
@@ -104,6 +109,9 @@
   - [\[3.7.0\] Process Context Requirements](pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.md)
   - [\[3.7.0\] Control Voltage Bus Flag](pages/Technical+Documentation/Change+History/3.7.0/Control+Voltage.md)
   - [\[3.7.5\] Module Info and Plug-in Compatibility](pages/Technical+Documentation/Change+History/3.7.5/ModuleInfo.md)
+
+# Additional Resources
+
 - [Change History](pages/Versions/Index.md)
   - [Version 3.7.8 (2023/05/15)](pages/Versions/Version+3.7.8.md)
   - [Version 3.7.7 (2022/12/12)](pages/Versions/Version+3.7.7.md)
