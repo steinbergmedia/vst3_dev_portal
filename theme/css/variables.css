@@ -6,6 +6,8 @@
     --page-padding: 15px;
     --content-max-width: 750px;
     --menu-bar-height: 50px;
+    --mono-font: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace;
+    --code-font-size: 0.875em /* please adjust the ace font size accordingly in editor.js */
 }
 
 /* Themes */
@@ -93,7 +95,6 @@
 .light {
     --bg: hsl(0, 0%, 100%);
     --fg: hsl(0, 0%, 0%);
-    --tc: #353535;
 
     --sidebar-bg: #fafafa;
     --sidebar-fg: hsl(0, 0%, 0%);
@@ -134,7 +135,6 @@
 .navy {
     --bg: hsl(226, 23%, 11%);
     --fg: #bcbdd0;
-    --tc: #353535;
 
     --sidebar-bg: #282d3f;
     --sidebar-fg: #c8c9db;
@@ -175,7 +175,6 @@
 .rust {
     --bg: hsl(60, 9%, 87%);
     --fg: #262625;
-    --tc: #353535;
 
     --sidebar-bg: #3b2e2a;
     --sidebar-fg: #c8c9db;
@@ -268,7 +267,7 @@
     --fg: #e6e1da;
     --tc: #e5e0d8;
 
-    --sidebar-bg: #0d0d0d;
+    --sidebar-bg: #14191f;
     --sidebar-fg: #c9c5bf;
     --sidebar-non-existant: #505254;
     --sidebar-active: #db304c;
@@ -279,7 +278,7 @@
     --icons: #737480;
     --icons-hover: var(--tc);
 
-    --links: #db304c;
+    --links: #2b79a2;
 
     --inline-code-color: #575757;
 
@@ -315,7 +314,7 @@
 
 @media (prefers-color-scheme: dark) {
     .light.no-js {
-        --bg: #131516;
+        --bg: hsl(200, 7%, 8%);
         --fg: #98a3ad;
 
         --sidebar-bg: #292c2f;
@@ -337,12 +336,12 @@
         --theme-popup-border: #43484d;
         --theme-hover: #1f2124;
 
-        --quote-bg: #242638;
-        --quote-border: #2e3147;
+        --quote-bg: hsl(234, 21%, 18%);
+        --quote-border: hsl(234, 21%, 23%);
 
-        --table-border-color: #1f2223;
-        --table-header-bg: #42494c;
-        --table-alternate-bg: #1a1d1e;
+        --table-border-color: hsl(200, 7%, 13%);
+        --table-header-bg: hsl(200, 7%, 28%);
+        --table-alternate-bg: hsl(200, 7%, 11%);
 
         --searchbar-border-color: #aaa;
         --searchbar-bg: #b7b7b7;
