@@ -23,7 +23,7 @@ jobs:
       - uses: jontze/action-mdbook@v1
         with:
           token: ${{secrets.GITHUB_TOKEN}}
-          mdbook-version: "~0.4.25"
+          mdbook-version: "~0.4.31"
           mermaid-version: "~0.12.6"
           toc-version: "~0.11.0"
           use-linkcheck: false
