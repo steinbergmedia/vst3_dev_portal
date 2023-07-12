@@ -24,14 +24,13 @@ jobs:
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           mdbook-version: "~0.4.30"
+          use-mermaid: true
           mermaid-version: "~0.12.6"
+          use-toc: true
           toc-version: "~0.11.0"
           use-linkcheck: false
-          use-mermaid: true
-          use-toc: true
           use-opengh: false
-  	  - name: Show mdbook version
-        run: mdbook --version
+
       - run: mdbook-mermaid install
       - run: mdbook build
 
@@ -41,4 +40,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./book/html
-
