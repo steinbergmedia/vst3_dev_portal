@@ -57,7 +57,7 @@ Browse the **VST 3 SDK**'s online documentation including **API** reference and 
 
 Browse the [VST portal](../) for the whole documentation and tutorials:
 
->**<https://developer.steinberg.help/display/VST>**
+>**<https://steinbergmedia.github.io/vst3_dev_portal/pages/index.html>**
 
 ## [VST 3 Forum](https://forums.steinberg.net/c/developer/103)
 Visit Steinberg's **[VST Developer Forum](https://forums.steinberg.net/c/developer/103/none)** in order to get help with development, submit bug reports, request new features and connect to other **VST 3** developers:
