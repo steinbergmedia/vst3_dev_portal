@@ -57,6 +57,12 @@ Following the previous tutorial [Generate a new plug-in with the Project Generat
 
 This tutorial explains how to use [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md). [**VSTGUI**](../What+is+the+VST+3+SDK/VSTGUI.md) comes with a *WYSIWYG* editor that allows you to create stunning user interfaces for your plug-in.
 
+## Data Exchange
+
+[Link](Data+Exchange.md)
+
+This tutorial explains how to send data from the realtime process to the edit controller.
+
 ## Advanced VST 3 techniques
 
 [Link](Advanced+VST+3+techniques.md)
