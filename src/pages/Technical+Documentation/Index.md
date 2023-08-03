@@ -84,7 +84,7 @@ How to handle complex plug-in structures and multi-timbrality.
 
 ## [Data Exchange](Data+Exchange/Index.md)
 
-How to transfer data from the realtime process function to the edit controller
+How to transfer data from the realtime process function to the edit controller.
 
 ## [VST 3 Workflow Diagrams](Workflow+Diagrams/Index.md)
 
