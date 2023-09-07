@@ -19,6 +19,7 @@ Browse the **VST 3 SDK**'s technical documentation. The full **VST 3 API** refer
 - [VST 3 Workflow Diagrams](Workflow+Diagrams/Index.md)
 - [VST 3 Locations / Format](Locations+Format/Index.md)
 - [About MIDI in VST 3](About+MIDI/Index.md)
+- [Provide A Runloop On Linux](Provide+A+Runloop+On+Linux/Index.md)
 
 ---
 
