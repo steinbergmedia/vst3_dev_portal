@@ -5,6 +5,7 @@
 :root {
     /* Browser default font-size is 16px, this way 1 rem = 10px */
     font-size: 62.5%;
+    --content-max-width: 900px;
 }
 
 html {
@@ -49,7 +50,7 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 .hide-boring .boring { display: none; }
 .hidden { display: none !important; }
 
-h2, h3 { margin-top: 2.5em; }
+h2, h3 { margin-top: 2.25em; }
 h4, h5 { margin-top: 2em; }
 
 .header + .header h3,
@@ -117,6 +118,8 @@ h6:target::before {
 table {
     margin: 0 auto;
     border-collapse: collapse;
+    float: left;
+    line-height: 1.45em;
 }
 table td {
     padding: 3px 20px;
@@ -131,9 +134,10 @@ table thead td {
 }
 table thead th {
     padding: 3px 20px;
+    border: 1px var(--table-border-color) solid;
 }
 table thead tr {
-    border: 1px var(--table-header-bg) solid;
+    border: 1px var(--table-border-color) solid;
 }
 /* Alternate background colors for rows */
 table tbody tr:nth-child(2n) {
@@ -203,3 +207,24 @@ kbd {
 .result-no-output {
     font-style: italic;
 }
+
+.image-container {
+    max-width: 750px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container .image-with-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container img {
+    margin-bottom: 5px;
+}
+
+.version-text {
+    font-size: 0.9em;
+}
+
