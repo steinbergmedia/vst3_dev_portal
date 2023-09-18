@@ -8,6 +8,8 @@
 
 **Related pages:**
 
+- [Data Exchange](../Technical+Documentation/Data+Exchange/Index.md)
+
 ---
 
 >You'll find the source for this tutorial in the [tutorial repository](https://github.com/steinbergmedia/vst3_tutorials/blob/master/dataexchange-tutorial)

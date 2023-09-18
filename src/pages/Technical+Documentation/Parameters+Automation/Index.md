@@ -12,7 +12,7 @@
 
 ---
 
-Description of how parameters are defined and used in **VST 3**
+Description of how parameters are defined and used in **VST 3**.
 
 ## Parameters
 

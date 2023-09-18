@@ -224,3 +224,11 @@ To get accurate process context information ([Vst::ProcessContext](https://stein
 ## [\[3.7.5\] Module Info](Change+History/3.7.5/ModuleInfo.md)
 
 The [moduleinfo.json](VST+Module+Architecture/ModuleInfo-JSON.md) describes the contents of the plug-in in a JSON5 compatible format.
+
+## [\[3.7.9\] Get Current SystemTime](Change+History/3.7.9/IComponentHandlerSystemTime.md)
+
+Allows a plug-in to ask the host for the current system time.
+
+## [\[3.7.9\] Data Transfert Between Processor/Controller](Change+History/3.7.9/IDataExchangeHandler.md)
+
+These interfaces allows to send data with a direct and thread-safe connection from the realtime audio context of the audio processor to the non-realtime audio context of the edit controller.

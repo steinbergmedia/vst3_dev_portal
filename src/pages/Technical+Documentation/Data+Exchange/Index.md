@@ -53,7 +53,7 @@ viusalization or other use-cases. To circumvent the bottleneck on the main threa
 to configure the connection in a way that the calls to the edit controller will happen on a
 background thread, see IDataExchangeReceiver below.
 
-#### Opening a queue:
+#### Opening a queue
 The main operation for a plug-in is to open a queue via the handler before the plug-in is activated
 (but it must be connected to the edit controller via the IConnectionPoint when the plug-in is using
 the recommended separation of edit controller and audio processor). The best place to do this is in
@@ -62,14 +62,14 @@ sample rate and maximum block size which the plug-in may need to calculate the q
 When a queue is opened the edit controller gets a notification about it and the controller can
 decide if it wishes to receive the data on the main thread or the background thread.
 
-#### Sending data:
+#### Sending data
 In the IAudioProcessor::process call the plug-in can now lock a block from the handler, fill it and
 when done free the block via the handler which then sends the block to the edit controller. The edit
 controller then receives the block either on the main thread or on a background thread depending on
 the setup of the queue.
 The host guarantees that all blocks are send before the plug-in is deactivated.
 
-#### Closing a queue:
+#### Closing a queue
 The audio processor must close an opened queue and this has to be done after the processor was
 deactivated and before it is disconnected from the edit controller (see IConnectionPoint).
 
