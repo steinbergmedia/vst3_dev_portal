@@ -8,9 +8,9 @@
 
 ---
 
-Helper Class wrapping a **VST 3** plug-in to a **VST 2.4** plug-in
-
 ## Introduction
+
+Helper Class wrapping a **VST 3** plug-in to a **VST 2.4** plug-in.
 
 The **VST 3 SDK** comes with a helper class which wraps one **VST 3** audio processor and edit controller to a **VST 2.x** plug-in.
 

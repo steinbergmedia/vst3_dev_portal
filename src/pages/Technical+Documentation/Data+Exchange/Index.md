@@ -10,6 +10,8 @@
 
 - [Data Exchange Tutorial](../../Tutorials/Data+Exchange.md)
 
+---
+
 ## Introduction
 
 In a modern plug-in the UI representation and the audio processing do not share any data directly.
