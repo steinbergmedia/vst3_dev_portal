@@ -5,7 +5,7 @@
 ## Version 3.7.9 (2023/10/??)
 
 - Interface changes:
-  - New [Vst::IDataExchangeHandler / Vst::IDataExchangeReceiver](../Technical+Documentation/Data+Exchange.md): allowing to transfer data between processor/controller.
+  - New [Vst::IDataExchangeHandler / Vst::IDataExchangeReceiver](../Technical+Documentation/Data+Exchange/Index.md): allowing to transfer data between processor/controller.
   - New [Vst::IComponentHandlerSystemTime](../Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md): allowing the plug-in to get the current SystemTime.
   - New Flags/Enums:
     - New speakers: kSpeakerLw and kSpeakerRw for Left and Right Wide
