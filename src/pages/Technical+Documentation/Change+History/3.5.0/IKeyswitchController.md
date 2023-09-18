@@ -12,9 +12,9 @@
 
 ---
 
-Allows information exchange between the plug-in and host about which key switches are currently used.
-
 ## Introduction
+
+Allows information exchange between the plug-in and host about which key switches are currently used.
 
 Extended plug-in interface [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html) for key switches support: [Vst::IKeyswitchController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html)
 

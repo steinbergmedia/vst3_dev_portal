@@ -12,9 +12,9 @@
 
 ---
 
-Helper Class wrapping a **VST 3** plug-in to an **Audio Unit v2** plug-in
-
 ## Introduction
+
+Helper Class wrapping a **VST 3** plug-in to an **Audio Unit v2** plug-in.
 
 The **VST 3 SDK** comes with an AudioUnit wrapper, which can wrap one **VST 3** audio processor and edit controller as an AudioUnit effect/instrument.
 
