@@ -8,9 +8,9 @@
 
 ---
 
-Helper Class wrapping a **VST 3** plug-in to a AAX plug-in
-
 ## Introduction
+
+Helper Class wrapping a **VST 3** plug-in to a **AAX** plug-in.
 
 The **VST 3 SDK** comes with a helper class which wraps one **VST 3** audio processor and edit controller to an AAX plug-in.
 

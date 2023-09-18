@@ -6,6 +6,13 @@
 
 [[_TOC_]]
 
+**Related pages:**
+
+- [Moduleinfo](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md)
+- [Compatibility with VST 2.x or VST 1](../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.md)
+
+---
+
 ## Introduction
 
 A new [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file added to the plug-in bundle (in the *Resources* folder) describes the contents of the plug-in in a JSON5 compatible format. This includes a compatibility list which allows, for example, a **VST 3** plug-in to replace a given **VST 2** plug-in (check [here](../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.md), to learn how to create UID for old **VST 2** plug-ins).
