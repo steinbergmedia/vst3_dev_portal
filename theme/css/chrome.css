@@ -571,6 +571,6 @@ ul#searchresults span.teaser em {
 }
 
 .footer a {
-	color: --links;
+	color: var(--links);
 	text-decoration: none;
 }
