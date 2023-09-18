@@ -7,6 +7,7 @@
 - Interface changes:
   - New [Vst::IDataExchangeHandler / Vst::IDataExchangeReceiver](../Technical+Documentation/Data+Exchange/Index.md): allowing to transfer data between processor/controller.
   - New [Vst::IComponentHandlerSystemTime](../Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md): allowing the plug-in to get the current SystemTime.
+  - New on Linux: [Query IRunLoop from the host context of IPlugFactory3](../Technical+Documentation/Provide+A+Runloop+On+Linux/Index.md).
   - New Flags/Enums:
     - New speakers: kSpeakerLw and kSpeakerRw for Left and Right Wide
     - New predefined 3D speaker arrangements (compatible Dolby Atmos):

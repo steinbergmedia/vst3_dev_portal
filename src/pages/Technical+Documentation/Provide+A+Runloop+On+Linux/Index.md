@@ -13,7 +13,7 @@ On Linux there is no global event run loop like on Windows and macOS. For this r
 
 ## Query IRunLoop from IPlugFrame
 
-The host application must provide the ```Vst::IRunLoop``` via ```Vst::IPluginFrame``` (by calling ```Vst::IPluView::setFrame(...)```).
+The host application must provide the ```Vst::IRunLoop``` via ```Vst::IPluginFrame``` (by calling ```Vst::IPlugView::setFrame(...)```).
 
 ```cpp
 // Plug-in implementation
@@ -35,7 +35,7 @@ A plug-in also needs a way to query for an ```Vst::IRunLoop``` without ```Vst::I
 
 These timers can be used inside ```Vst::IAudioProcessor``` for extra computations or sending messages within the UI thread.
 
-The host application must call Vst::IPlugFactory3::setHostContext(...) for this and provide a ```context```. This ```context``` can be used to query an ```Vst::IRunLoop``` interface.
+The host application must call *Vst::IPlugFactory3::setHostContext(...)* for this and provide a ```context```. This ```context``` can be used to query an ```Vst::IRunLoop``` interface.
 
 ```cpp
 // Plug-in implementation
