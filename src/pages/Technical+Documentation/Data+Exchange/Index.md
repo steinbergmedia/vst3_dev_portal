@@ -41,17 +41,17 @@ uses an alternative method based on the IMessage API to emulate the API. See the
 
 ## The Data Exchange API
 
-The API consists of two interfaces, the **IDataExchangeHandler** which needs to be implemented by the 
-host and the **IDataExchangeReceiver** which needs to be implemented by the plug-in.
+The API consists of two interfaces, the [IDataExchangeHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html) which needs to be implemented by the 
+host and the [IDataExchangeReceiver](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html) which needs to be implemented by the plug-in.
 
 ### IDataExchangeHandler
 
-The **IDataExchangeHandler** implements a direct and thread-safe connection from the realtime
+The [IDataExchangeHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html) implements a direct and thread-safe connection from the realtime
 audio context of the audio processor to the non-realtime audio context of the edit controller.
-This should be used when the edit controller needs continous data from the audio process for
+This should be used when the edit controller needs continuous data from the audio process for
 visualization or other use-cases. To circumvent the bottleneck on the main thread it is possible
 to configure the connection in a way that the calls to the edit controller will happen on a
-background thread, see **IDataExchangeReceiver** below.
+background thread, see [IDataExchangeReceiver](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html) below.
 
 #### Opening a queue
 
@@ -84,12 +84,12 @@ process method.
 
 ### IDataExchangeReceiver
 
-The **IDataExchangeReceiver** interface must be implemented by the edit controller of the plug-in.
-The host will call the *queueOpened* method when an exchange queue is opened by the processor and later
-when the processor closes the queue the host will call the *queueClosed* method.
+The [IDataExchangeReceiver](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html) interface must be implemented by the edit controller of the plug-in.
+The host will call the [queueOpened](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a64d0de322b49fd27b815e10947d98f65) method when an exchange queue is opened by the processor and later
+when the processor closes the queue the host will call the [queueClosed](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a37b2181ff0ae9bdc0a6feee03b65df42) method.
 
-While the queue is open, the host will call the *onDataExchangeBlocksReceived* method whenever the 
+While the queue is open, the host will call the [onDataExchangeBlocksReceived](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#af8c495fafdf429794e5b58709a403eaf) method whenever the 
 processor has send data.
 
-The edit controller can decide in the call to *queueOpened* if the host should deliver the data on a 
+The edit controller can decide in the call to [queueOpened](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a64d0de322b49fd27b815e10947d98f65) if the host should deliver the data on a 
 background thread or on the UI thread.

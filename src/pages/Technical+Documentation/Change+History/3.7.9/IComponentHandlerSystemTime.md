@@ -10,7 +10,7 @@
 
 ## Introduction
 
- Extended plug-in interface [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html)] for an edit controller, IComponentHandlerSystemTime allows the plug-in to ask for the current systemTime (this should be the kind of time reference than the one used in ProcessContext::systemTime.
+ Extended plug-in interface [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html) for an edit controller, [IComponentHandlerSystemTime](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandlerSystemTime.html) allows the plug-in to ask for the current systemTime (this should be the kind of time reference than the one used in ProcessContext::systemTime).
 
 - \[host imp\]
 - [extends [IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html)]

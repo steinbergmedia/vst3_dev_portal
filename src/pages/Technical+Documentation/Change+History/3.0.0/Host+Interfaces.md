@@ -121,7 +121,7 @@ A jump in the automation curve has to be transmitted as two points: one with the
 
 ![Tech_doc_29](../../../../resources/tech_doc_29.jpg)
 
-See also [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html), [ProcessData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html)
+See also [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html), [ProcessData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html).
 
 ## [IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html)
 
@@ -137,7 +137,7 @@ See [IParamValueQueue](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/c
 
 ## [IPlugFrame](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html)
 
-Callback interface passed to IPlugView.
+Callback interface passed to [IPlugView](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html).
 
 - \[host imp\]
 - \[released: 3.0.0\]
