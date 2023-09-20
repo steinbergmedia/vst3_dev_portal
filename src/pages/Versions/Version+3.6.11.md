@@ -19,7 +19,7 @@
 - cmake:
   - further improvement for users projects
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
-  - AAX Wrapper (VST 3 - AAX Wrapper):
+  - AAX Wrapper ([VST 3 - AAX Wrapper](../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)):
     - fix UI resizing
     - fix issue for default blocksize
   - VST 2 Wrapper:

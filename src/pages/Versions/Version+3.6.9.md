@@ -24,7 +24,7 @@
 - [Plug-in wrappers](../What+is+the+VST+3+SDK/Wrappers/index.md):
   - VST 3 - Audio Unit Wrapper: fix and adaptation for newer XCode versions
   - Audio Unit v3 (AUv3) Wrapper (VST 3 - Audio Unit v3 Wrapper): some fixes, add cmake
-  - AAX Wrapper (VST 3 - AAX Wrapper): add bypass and VU parameter support
+  - AAX Wrapper ([VST 3 - AAX Wrapper](../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)): add bypass and VU parameter support
   - interappaudio: improvements, fixes, add cmake
 - Helpers classes:
   - New Ring Buffer class (ringbuffer.h)

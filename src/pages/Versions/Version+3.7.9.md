@@ -24,14 +24,16 @@
 
 - cmake
   - Change minimal cmake version to 3.5.0
-  - Partially fix for Windows, create destination installation folders if they don't exist[(issue 8)](https://github.com/steinbergmedia/vst3_cmake/issues/8).
+  - Partially fix for Windows, create destination installation folders if they don't exist [(Issue#8)](https://github.com/steinbergmedia/vst3_cmake/issues/8).
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
+  - AAX Wrapper ([VST 3 - AAX Wrapper](../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)):
+    - fix some warnings
   - Audio Unit:
     - AUv3Wrapper:
       - Fix iOS build errors ([PR#47](https://github.com/steinbergmedia/vst3_public_sdk/pull/47))
       - Make AUv3 follow VST3 threading model [(PR#62)](https://github.com/steinbergmedia/vst3_public_sdk/pull/62)
-      - Fix "Missing field initializer" warnings in AUv3Wrapper [(Issue 55)](https://github.com/steinbergmedia/vst3_public_sdk/pull/55/commits/e2765e6d4365f1e81e719eb19e3e2a786f4281c8)
+      - Fix "Missing field initializer" warnings in AUv3Wrapper [(Issue#55)](https://github.com/steinbergmedia/vst3_public_sdk/pull/55/commits/e2765e6d4365f1e81e719eb19e3e2a786f4281c8)
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 plug-ins example showing the use of the VST Data Exchange API: public.sdk\samples\vst\dataexchange
@@ -42,7 +44,7 @@
   - Fix "Missing field initializer" warning in vstparameters.h [(PR#60)](https://github.com/steinbergmedia/vst3_public_sdk/pull/60)
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
-  - Allow moduleinfo.json and IPluginCompatibility to coexist, not seen as error but warning (not recommanded!) [(Issue 63)](https://github.com/steinbergmedia/vst3_public_sdk/issues/63)
+  - Allow moduleinfo.json and IPluginCompatibility to coexist, not seen as error but warning (not recommanded!) [(Issue#63)](https://github.com/steinbergmedia/vst3_public_sdk/issues/63)
 
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.5:
   - TODO
