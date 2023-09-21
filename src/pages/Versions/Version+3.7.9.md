@@ -20,10 +20,10 @@
 
 - Documentation
   - New tutorial: [Data Exchange Tutorial - How to send data from the realtime process to the edit controller](../Tutorials/Data+Exchange.md).
-  - New page about [Provide a RunLoop on Linux](../Technical+Documentation/Provide+A+Runloop+On+Linux/Index.md).
+  - New doc page about [Provide a RunLoop on Linux](../Technical+Documentation/Provide+A+Runloop+On+Linux/Index.md).
 
 - cmake
-  - Change minimal cmake version to 3.5.0
+  - Change minimal cmake version to 3.5.0.
   - Partially fix for Windows, create destination installation folders if they don't exist [(Issue#8)](https://github.com/steinbergmedia/vst3_cmake/issues/8).
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
@@ -36,19 +36,18 @@
       - Fix "Missing field initializer" warnings in AUv3Wrapper [(Issue#55)](https://github.com/steinbergmedia/vst3_public_sdk/pull/55/commits/e2765e6d4365f1e81e719eb19e3e2a786f4281c8)
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
-  - New VST 3 plug-ins example showing the use of the VST Data Exchange API: public.sdk\samples\vst\dataexchange
+  - New VST 3 plug-ins example showing the use of the VST Data Exchange API: public.sdk\samples\vst\dataexchange.
 
 - Helpers classes:
-  - New helper for system time public.sdk\source\vst\utility\systemtime.cpp
-  - New VST Data Exchange API Helper implementing IDataExchangeHandler: public.sdk/source/vst/utility/dataexchange.cpp
-  - Fix "Missing field initializer" warning in vstparameters.h [(PR#60)](https://github.com/steinbergmedia/vst3_public_sdk/pull/60)
+  - New helper for system time public.sdk\source\vst\utility\systemtime.cpp.
+  - New VST Data Exchange API Helper implementing IDataExchangeHandler: public.sdk/source/vst/utility/dataexchange.cpp.
+  - Fix "Missing field initializer" warning in vstparameters.h [(PR#60)](https://github.com/steinbergmedia/vst3_public_sdk/pull/60).
+  - Fix buffer overflow/memory corruption ([Issue#15](https://github.com/steinbergmedia/vst3_pluginterfaces/issues/15)).
+  - Fix undefined behavior - load of misaligned address ([Issue#64](https://github.com/steinbergmedia/vst3_pluginterfaces/issues/64)).
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
-  - Allow moduleinfo.json and IPluginCompatibility to coexist, not seen as error but warning (not recommanded!) [(Issue#63)](https://github.com/steinbergmedia/vst3_public_sdk/issues/63)
-
-- [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.5:
-  - TODO
+  - Allow moduleinfo.json and IPluginCompatibility to coexist, not seen as error but warning (not recommanded!) [(Issue#63)](https://github.com/steinbergmedia/vst3_public_sdk/issues/63).
 
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2023.09:
-  - Rename SMTG_ADD_VSTGUI to SMTG_ENABLE_VSTGUI_SUPPORT
+  - Rename SMTG_ADD_VSTGUI to **SMTG_ENABLE_VSTGUI_SUPPORT**.
   
