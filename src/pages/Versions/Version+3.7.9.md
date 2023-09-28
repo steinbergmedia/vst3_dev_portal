@@ -16,7 +16,7 @@
       - **k90_6_W** => L R C Ls Rs Sl Sr Tfl Tfr Trl Trr Tsl Tsr Lw Rw
       - **k91_6_W** => L R C Lfe Ls Rs Sl Sr Tfl Tfr Trl Trr Tsl Tsr Lw Rw
 
-- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.12.3](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_12_3)
+- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.13.0](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_13_0)
 
 - Documentation
   - New tutorial: [Data Exchange Tutorial - How to send data from the realtime process to the edit controller](../Tutorials/Data+Exchange.md).
@@ -37,6 +37,7 @@
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 plug-ins example showing the use of the VST Data Exchange API: public.sdk\samples\vst\dataexchange.
+  - Update Hostchecker plug-in to check new interfaces: [Vst::IDataExchangeHandler / Vst::IDataExchangeReceiver](../Technical+Documentation/Data+Exchange/Index.md) / [Vst::IComponentHandlerSystemTime](../Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md).
 
 - Helpers classes:
   - New helper for system time public.sdk\source\vst\utility\systemtime.cpp.
