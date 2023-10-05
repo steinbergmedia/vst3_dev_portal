@@ -5,8 +5,8 @@
 ## Version 3.7.9 (2023/10/09)
 
 - Interface changes:
-  - New [Vst::IDataExchangeHandler / Vst::IDataExchangeReceiver](../Technical+Documentation/Data+Exchange/Index.md): allowing to transfer data between processor/controller.
-  - New [Vst::IComponentHandlerSystemTime](../Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md): allowing the plug-in to get the current SystemTime.
+  - New [Vst::IDataExchangeHandler / Vst::IDataExchangeReceiver](../Technical+Documentation/Data+Exchange/Index.md): API to send data from the realtime processing function to the controller in a safe and efficient way.
+  - New [Vst::IComponentHandlerSystemTime](../Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md): API to query the system time from the controller.
   - New on Linux: [Query IRunLoop from the host context of IPlugFactory3](../Technical+Documentation/Provide+A+Runloop+On+Linux/Index.md).
   - New Flags/Enums:
     - New speakers: kSpeakerLw and kSpeakerRw for Left and Right Wide
