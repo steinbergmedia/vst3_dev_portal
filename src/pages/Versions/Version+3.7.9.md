@@ -36,19 +36,19 @@
       - Fix "Missing field initializer" warnings in AUv3Wrapper [(Issue#55)](https://github.com/steinbergmedia/vst3_public_sdk/pull/55/commits/e2765e6d4365f1e81e719eb19e3e2a786f4281c8)
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
-  - New VST 3 plug-ins example **DataExchange** showing the use of the VST Data Exchange API: public.sdk\samples\vst\dataexchange.
+  - New VST 3 plug-ins example **DataExchange** showing the use of the VST Data Exchange API: *public.sdk/samples/vst/dataexchange*.
   - Update Hostchecker plug-in to check new interfaces: [Vst::IDataExchangeHandler / Vst::IDataExchangeReceiver](../Technical+Documentation/Data+Exchange/Index.md) / [Vst::IComponentHandlerSystemTime](../Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md).
 
 - Helpers classes:
-  - New helper for system time public.sdk\source\vst\utility\systemtime.cpp.
-  - New VST Data Exchange API Helper implementing IDataExchangeHandler: public.sdk/source/vst/utility/dataexchange.cpp.
+  - New helper for system time *public.sdk/source/vst/utility/systemtime.cpp*.
+  - New VST Data Exchange API Helper implementing [Vst::IDataExchangeHandler](../Technical+Documentation/Data+Exchange/Index.md): *public.sdk/source/vst/utility/dataexchange.cpp*.
   - Fix "Missing field initializer" warning in vstparameters.h [(PR#60)](https://github.com/steinbergmedia/vst3_public_sdk/pull/60).
   - Fix buffer overflow/memory corruption ([Issue#15](https://github.com/steinbergmedia/vst3_pluginterfaces/issues/15)).
   - Fix undefined behavior - load of misaligned address ([Issue#64](https://github.com/steinbergmedia/vst3_pluginterfaces/issues/64)).
   - vstgui4 seems incomplete on Linux ([Issue#104](https://github.com/steinbergmedia/vst3sdk/issues/104)).
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
-  - Allow moduleinfo.json and IPluginCompatibility to coexist, not seen as error but warning (not recommanded!) [(Issue#63)](https://github.com/steinbergmedia/vst3_public_sdk/issues/63).
+  - Allow **moduleinfo.json** and **IPluginCompatibility** to coexist, not seen as error but warning (not recommanded!) [(Issue#63)](https://github.com/steinbergmedia/vst3_public_sdk/issues/63).
 
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2023.09:
   - Rename SMTG_ADD_VSTGUI to **SMTG_ENABLE_VSTGUI_SUPPORT**.
