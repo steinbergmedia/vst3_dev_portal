@@ -118,7 +118,7 @@
 # Additional Resources
 
 - [Change History](pages/Versions/Index.md)
-  - [Version 3.7.9 (2023/10/??)](pages/Versions/Version+3.7.9.md)
+  - [Version 3.7.9 (2023/10/09)](pages/Versions/Version+3.7.9.md)
   - [Version 3.7.8 (2023/05/15)](pages/Versions/Version+3.7.8.md)
   - [Version 3.7.7 (2022/12/12)](pages/Versions/Version+3.7.7.md)
   - [Version 3.7.6 (2022/09/05)](pages/Versions/Version+3.7.6.md)
