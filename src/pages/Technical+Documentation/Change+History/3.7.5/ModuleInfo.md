@@ -29,7 +29,7 @@ Check [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture
 If the plug-in could not deliver the [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) because it does not support bundle, it is possible to add to the plug-in factory this new interface *IPluginCompatibility*.
 ### Example
 
-**In plugentry.cpp**
+**In plugentry.cpp**:
 
 ``` c++
 //------------------------------------------------------------------------

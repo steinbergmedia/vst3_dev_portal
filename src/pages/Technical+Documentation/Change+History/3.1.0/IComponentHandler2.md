@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Improvement of the plug-in's integration in the host (dirty state, request Open Editor, group editing)
+Improvement of the plug-in's integration in the host (dirty state, request Open Editor, group editing).
 
 Extended host callback interface [Vst::IComponentHandler2](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler2.html) for an edit controller.
 

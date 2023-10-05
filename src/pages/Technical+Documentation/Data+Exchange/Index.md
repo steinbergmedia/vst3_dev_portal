@@ -41,37 +41,40 @@ uses an alternative method based on the IMessage API to emulate the API. See the
 
 ## The Data Exchange API
 
-The API consists of two interfaces, the IDataExchangeHandler which needs to be implemented by the 
-host and the IDataExchangeReceiver which needs to be implemented by the plug-in.
+The API consists of two interfaces, the [IDataExchangeHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html) which needs to be implemented by the 
+host and the [IDataExchangeReceiver](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html) which needs to be implemented by the plug-in.
 
 ### IDataExchangeHandler
 
-The IDataExchangeHandler implements a direct and thread-safe connection from the realtime
+The [IDataExchangeHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html) implements a direct and thread-safe connection from the realtime
 audio context of the audio processor to the non-realtime audio context of the edit controller.
-This should be used when the edit controller needs continous data from the audio process for
-viusalization or other use-cases. To circumvent the bottleneck on the main thread it is possible
+This should be used when the edit controller needs continuous data from the audio process for
+visualization or other use-cases. To circumvent the bottleneck on the main thread it is possible
 to configure the connection in a way that the calls to the edit controller will happen on a
-background thread, see IDataExchangeReceiver below.
+background thread, see [IDataExchangeReceiver](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html) below.
 
-#### Opening a queue:
+#### Opening a queue
+
 The main operation for a plug-in is to open a queue via the handler before the plug-in is activated
-(but it must be connected to the edit controller via the IConnectionPoint when the plug-in is using
+(but it must be connected to the edit controller via the [IConnectionPoint](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html) when the plug-in is using
 the recommended separation of edit controller and audio processor). The best place to do this is in
-the IAudioProcessor::setupProcessing method as this is also the place where the plug-in knows the
+the [IAudioProcessor::setupProcessing](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#aefb5731b94dbc899a4a7e9cd1c96e6a2) method as this is also the place where the plug-in knows the
 sample rate and maximum block size which the plug-in may need to calculate the queue block size.
 When a queue is opened the edit controller gets a notification about it and the controller can
 decide if it wishes to receive the data on the main thread or the background thread.
 
-#### Sending data:
-In the IAudioProcessor::process call the plug-in can now lock a block from the handler, fill it and
+#### Sending data
+
+In the [IAudioProcessor::process](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13) call the plug-in can now lock a block from the handler, fill it and
 when done free the block via the handler which then sends the block to the edit controller. The edit
 controller then receives the block either on the main thread or on a background thread depending on
 the setup of the queue.
 The host guarantees that all blocks are send before the plug-in is deactivated.
 
-#### Closing a queue:
+#### Closing a queue
+
 The audio processor must close an opened queue and this has to be done after the processor was
-deactivated and before it is disconnected from the edit controller (see IConnectionPoint).
+deactivated and before it is disconnected from the edit controller (see [IConnectionPoint](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html)).
 
 #### What to do when the queue is full and no block can be locked?
 The plug-in needs to be prepared for this situation as constraints in the overall system may cause
@@ -81,12 +84,12 @@ process method.
 
 ### IDataExchangeReceiver
 
-The IDataExchangeReceiver interface must be implemented by the edit controller of the plug-in.
-The host will call the queueOpened method when an exchange queue is opened by the processor and later
-when the processor closes the queue the host will call the queueClosed method.
+The [IDataExchangeReceiver](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html) interface must be implemented by the edit controller of the plug-in.
+The host will call the [queueOpened](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a64d0de322b49fd27b815e10947d98f65) method when an exchange queue is opened by the processor and later
+when the processor closes the queue the host will call the [queueClosed](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a37b2181ff0ae9bdc0a6feee03b65df42) method.
 
-While the queue is open, the host will call the onDataExchangeBlocksReceived method whenever the 
+While the queue is open, the host will call the [onDataExchangeBlocksReceived](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#af8c495fafdf429794e5b58709a403eaf) method whenever the 
 processor has send data.
 
-The edit controller can decide in the call to queueOpened if the host should deliver the data on a 
+The edit controller can decide in the call to [queueOpened](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a64d0de322b49fd27b815e10947d98f65) if the host should deliver the data on a 
 background thread or on the UI thread.
