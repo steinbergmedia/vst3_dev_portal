@@ -19,6 +19,7 @@ Browse the **VST 3 SDK**'s technical documentation. The full **VST 3 API** refer
 - [VST 3 Workflow Diagrams](Workflow+Diagrams/Index.md)
 - [VST 3 Locations / Format](Locations+Format/Index.md)
 - [About MIDI in VST 3](About+MIDI/Index.md)
+- [Provide A Runloop On Linux](Provide+A+Runloop+On+Linux/Index.md)
 
 ---
 
@@ -81,6 +82,10 @@ How presets and program lists are handled in **VST 3**.
 ## [Complex Plug-in Structures / Multi-timbral Instruments](Complex+Structures/Index.md)
 
 How to handle complex plug-in structures and multi-timbrality.
+
+## [Data Exchange](Data+Exchange/Index.md)
+
+How to transfer data from the realtime process function to the edit controller.
 
 ## [VST 3 Workflow Diagrams](Workflow+Diagrams/Index.md)
 
@@ -219,3 +224,11 @@ To get accurate process context information ([Vst::ProcessContext](https://stein
 ## [\[3.7.5\] Module Info](Change+History/3.7.5/ModuleInfo.md)
 
 The [moduleinfo.json](VST+Module+Architecture/ModuleInfo-JSON.md) describes the contents of the plug-in in a JSON5 compatible format.
+
+## [\[3.7.9\] Get Current SystemTime](Change+History/3.7.9/IComponentHandlerSystemTime.md)
+
+Allows a plug-in to ask the host for the current system time.
+
+## [\[3.7.9\] Data Transfert Between Processor/Controller](Change+History/3.7.9/IDataExchangeHandler.md)
+
+These interfaces allows to send data with a direct and thread-safe connection from the realtime audio context of the audio processor to the non-realtime audio context of the edit controller.

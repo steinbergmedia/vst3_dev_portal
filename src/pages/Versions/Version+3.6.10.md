@@ -11,7 +11,7 @@
   - fix support Universal Binary for AudioUnit
 - [Plug-in wrappers](../What+is+the+VST+3+SDK/Wrappers/index.md):
   - refactoring AAX/VST 2 Wrappers
-  - AAX Wrapper (VST 3 - AAX Wrapper):
+  - AAX Wrapper ([VST 3 - AAX Wrapper](../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)):
     - fix Bypass behaviour
     - fix initial signal latency
     - fix indexing of parameter, conflicting with VST 2

@@ -19,4 +19,4 @@
   - New AudioHost (AudioHost - cross-platform standalone) showing how integrate a VST 3 plug-in in a Jack world! This required Jack Audio (<http://www.jackaudio.org>), only tested under Linux but should work on Windows 32bits and Mac.
 - [Plug-in wrappers](../What+is+the+VST+3+SDK/Wrappers/index.md):
   - New Audio Unit v3 (AUv3) Wrapper (VST 3 - Audio Unit v3 Wrapper)
-  - New AAX wrapper (VST 3 - AAX Wrapper): Note that in order to use this AAX wrapper for your plug-in, you have to download the AAX SDK (contact AVID), tested with AAX SDK Version 2.3.0
+  - New AAX wrapper ([VST 3 - AAX Wrapper](../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)): Note that in order to use this AAX wrapper for your plug-in, you have to download the AAX SDK (contact AVID), tested with AAX SDK Version 2.3.0

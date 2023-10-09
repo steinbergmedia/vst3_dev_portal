@@ -43,6 +43,7 @@
   - [Generate a new plug-in with the Project Generator App](pages/Tutorials/Generate+new+plug-in+with+Project+Generator.md)
   - [Code your first plug-in](pages/Tutorials/Code+your+first+plug-in.md)
   - [Use VSTGUI to design a User Interface](pages/Tutorials/Use+VSTGUI+to+design+a+UI.md)
+  - [Data Exchange](pages/Tutorials/Data+Exchange.md)
   - [Advanced VST 3 techniques](pages/Tutorials/Advanced+VST+3+techniques.md)
   - [How to use the silence flags](pages/Tutorials/How+to+use+the+silence+flags.md)
   - [Guideline for replacing a VST 2 plug-in by a VST 3 plug-in](pages/Tutorials/Guideline+for+VST3+replacing+VST2.md)
@@ -61,6 +62,7 @@
   - [VST 3 Units](pages/Technical+Documentation/VST+3+Units/Index.md)
   - [Presets & Program Lists](pages/Technical+Documentation/Presets+Program+Lists/Index.md)
   - [Complex Plug-in Structures / Multi-timbral Instruments](pages/Technical+Documentation/Complex+Structures/Index.md)
+  - [Data Exchange](pages/Technical+Documentation/Data+Exchange/Index.md)
   - [VST 3 Workflow Diagrams](pages/Technical+Documentation/Workflow+Diagrams/Index.md)
     - [Audio Processor Call Sequence](pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.md)
     - [Edit Controller Call Sequence](pages/Technical+Documentation/Workflow+Diagrams/Edit+Controller+Call+Sequence.md)
@@ -74,6 +76,7 @@
     - [Preset Locations](pages/Technical+Documentation/Locations+Format/Preset+Locations.md)
     - [Snapshots](pages/Technical+Documentation/Locations+Format/Snapshots.md)
   - [About MIDI in VST 3](pages/Technical+Documentation/About+MIDI/Index.md)
+  - [Provide A Runloop On Linux](pages/Technical+Documentation/Provide+A+Runloop+On+Linux/Index.md)
   - [Host Requirements for VST 3 Support](pages/Technical+Documentation/Host+Requirements/Index.md)
   - [<<<<<<<< Features History >>>>>>>>](pages/Technical+Documentation/Change+History/Index.md)
   - [\[3.0.0\] Interfaces supported by the plug-in](pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.md)
@@ -109,10 +112,13 @@
   - [\[3.7.0\] Process Context Requirements](pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.md)
   - [\[3.7.0\] Control Voltage Bus Flag](pages/Technical+Documentation/Change+History/3.7.0/Control+Voltage.md)
   - [\[3.7.5\] Module Info and Plug-in Compatibility](pages/Technical+Documentation/Change+History/3.7.5/ModuleInfo.md)
+  - [\[3.7.9\] Get Current SystemTime](pages/Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md)
+  - [\[3.7.9\] Data Transfert Between Processor/Controller](pages/Technical+Documentation/Change+History/3.7.9/IDataExchangeHandler.md)
 
 # Additional Resources
 
 - [Change History](pages/Versions/Index.md)
+  - [Version 3.7.9 (2023/10/09)](pages/Versions/Version+3.7.9.md)
   - [Version 3.7.8 (2023/05/15)](pages/Versions/Version+3.7.8.md)
   - [Version 3.7.7 (2022/12/12)](pages/Versions/Version+3.7.7.md)
   - [Version 3.7.6 (2022/09/05)](pages/Versions/Version+3.7.6.md)

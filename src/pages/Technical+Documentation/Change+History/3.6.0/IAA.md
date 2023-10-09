@@ -8,9 +8,9 @@
 
 ---
 
-iOS InterApp-Audio application out of your **VST 3** plug-in
-
 ## Introduction
+
+iOS InterApp-Audio application out of your **VST 3** plug-in
 
 The **VST 3 SDK** provides an easy way to create an iOS InterApp-Audio application out of your **VST 3** plug-in.
 

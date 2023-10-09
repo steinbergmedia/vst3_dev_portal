@@ -13,9 +13,9 @@
 
 ---
 
-A unit is a logical section of the plug-in.
-
 ## Introduction
+
+A unit is a logical section of the plug-in.
 
 For example, an EQ section can be a unit.
 The purposes of units are:

@@ -14,9 +14,9 @@
 
 ---
 
-A new way to control / modify / change a specific played note during playback.
-
 ## Introduction
+
+A new way to control / modify / change a specific played note during playback.
 
 Edit controller component interface extension: [Vst::INoteExpressionController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html)
 

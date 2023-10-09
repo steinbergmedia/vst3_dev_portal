@@ -15,7 +15,7 @@
   - add some more checks in HostChecker plug-in
   - add some debug output for editorhost
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
-  - AAX Wrapper (VST 3 - AAX Wrapper):
+  - AAX Wrapper ([VST 3 - AAX Wrapper](../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)):
     - loading of preset should not overwrite the current Bypass state
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md):
   - support of IPlugInterfaceSupport

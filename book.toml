@@ -26,6 +26,9 @@ default-theme = "steinberg-light"
 preferred-dark-theme = "steinberg-dark"
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
+[output.linkcheck]
+optional = true
+
 [output.html.fold]
 enable = true
 level = 0
@@ -33,5 +36,3 @@ level = 0
 [output.html.redirect]
 "display/VST/Main+benefits+of+VST+3/index.html" = "../../../pages/Main+benefits+of+VST+3/index.html"
 
-[output.linkcheck]
-optional = true

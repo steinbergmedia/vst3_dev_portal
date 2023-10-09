@@ -21,7 +21,7 @@
     - improvement to MidiMappingTest performance
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   - The InterAppAudio Wrapper is deprecated and may be removed in the next SDK update. Please switch to AudioUnit V3 on iOS.
-  - AAX Wrapper (VST 3 - AAX Wrapper):
+  - AAX Wrapper ([VST 3 - AAX Wrapper](../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.md)):
     - add SMPTE support
 - Helpers classes:
   - clear programLists, programIndexMap and units in EditControllerEx1 when terminating

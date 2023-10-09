@@ -12,9 +12,9 @@
 
 ---
 
-Helper Class wrapping a **VST 3** plug-in to an **Audio Unit v3** plug-in
-
 ## Introduction
+
+Helper Class wrapping a **VST 3** plug-in to an **Audio Unit v3** plug-in.
 
 The **VST 3 SDK** comes with a helper class which wraps one **VST 3** audio processor and edit controller to an **AU v3** plug-in.
 
