@@ -57,7 +57,7 @@ The SDK includes an AGain plug-in which is a very simple **VST 3** plug-in. This
 - has a VU peak meter
 - uses the [**VSTGUI4**](VSTGUI.md) library
 - a version of this plug-in with side-chaining is available (showing a plug-in using the same controller and different - components)
-- a **AAX** version is available
+- an **AAX** version is available
 - a **AUv3** version is available
 
 ![what_if_2](../../resources/what_is_2.jpg)
@@ -91,7 +91,7 @@ Check the folder *"public.sdk/samples/vst/channelcontext"* of the SDK!
 
 - Instrument, Panner and Fx plug-in checking the **VST 3** support of a host.
 - It uses [**VSTGUI**](VSTGUI.md)
-- a **AAX** version is available
+- an **AAX** version is available
 
 ![what_if_5](../../resources/what_is_5.jpg)
 

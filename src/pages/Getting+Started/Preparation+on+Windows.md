@@ -39,6 +39,6 @@ Now the **Local Group Policy Editor** is started:
 
 >*Computer Configuration => Windows Settings => Security Settings =>Local Policies => User Rights Assignment => Create symbolic links*
 
-Here you can set which users can create symbolic links, add your user name.
+Here, you can set which users can create symbolic links, add your user name.
 
 ![getting_started_3](../../resources/getting_started_3.jpg)

@@ -30,7 +30,7 @@ A **VST 3** plug-in should be installed at specific folder location, the followi
 - **Application**: available only inside a specific Audio Application (local plug-ins)
 
 >ⓘ **Note**\
->The host should scan at first higher level of priority, first found plug-in (for a given Processor UID) has to be used.
+>The host should scan, at first, higher level of priority. First found plug-in (for a given Processor UID) has to be used.
 
 ### On macOS platform
 

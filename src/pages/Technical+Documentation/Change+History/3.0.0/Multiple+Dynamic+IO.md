@@ -156,13 +156,13 @@ Here an example of Side-Chaining for a Instrument in Cubase
 ## How can I implement a Side-chain path into my plug-in?
 
 In AudioEffect::initialize (FUnknown* context) you must add the required bus- and speaker configuration of your plug-in.
-For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look like this:
+For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look in the following way:
 
 ``` c++
 addAudioInput (USTRING ("Stereo In"), SpeakerArr::kStereo);
 addAudioOutput (USTRING ("Stereo Out"), SpeakerArr::kStereo);
  
-// In addition, adding a stereo side-chain bus would look like this:
+// In addition, adding a stereo side-chain bus would look in the following way:
 addAudioInput (USTRING ("Aux In"), SpeakerArr::kStereo, kAux, 0); // 0 here means not activated by default wanted
 ```
 
@@ -298,7 +298,7 @@ The host will call [Vst::IAudioProcessor::getBusArrangement](https://steinbergme
 
 ### My plug-in has mono input and stereo output. How does VST 3 handle this?
 
-There are two ways to instantiate a plug-in like this.
+There are two ways to instantiate a plug-in in the following way:
 
 - **Way 1**
 

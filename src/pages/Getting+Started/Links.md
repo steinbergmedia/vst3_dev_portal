@@ -72,7 +72,7 @@ When you download the **VST 3 SDK**, the last official release version of **[VST
 
 ## External Links to VST 3, DSP, Conferences and Plug-ins development
 
-Here you can find some links to external resource about **VST 3**, DSP and Plug-ins development:
+Here, you can find some links to external resource about **VST 3**, DSP and Plug-ins development:
 
 | Category                              | Links |
 | :-                                    | :-    |

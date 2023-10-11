@@ -139,11 +139,11 @@ A new way to control / modify / change a specific played note during playback.
 
 ## [\[3.5.0\] Key Switch](Change+History/3.5.0/IKeyswitchController.md)
 
-Allows information exchange between the plug-in and host about which key switches are currently used.
+Allows information exchange between the plug-in and the host about which key switches are currently used.
 
 ## [\[3.5.0\] Remote Presentation of Parameters](Change+History/3.5.0/IXmlRepresentationController.md)
 
-How to better support remote (UI and hardware) for parameters.
+How to better support remote devices/controllers (UI and hardware) for parameters.
 
 ## [\[3.5.0\] Context Menu](Change+History/3.5.0/IComponentHandler3.md)
 
@@ -215,7 +215,7 @@ This interface allows the host to get a parameter associated to a specific meani
 
 ## [\[3.7.0\] Progress Display](Change+History/3.7.0/IProgress.md)
 
-Allows the plug-in to request the host to create a progress for some specific tasks which take some time.
+Allows the plug-in to ask the host to create a progress for specific tasks which take some time.
 
 ## [\[3.7.0\] Process Context Requirements](Change+History/3.7.0/IProcessContextRequirements.md)
 
@@ -231,4 +231,4 @@ Allows a plug-in to ask the host for the current system time.
 
 ## [\[3.7.9\] Data Transfert Between Processor/Controller](Change+History/3.7.9/IDataExchangeHandler.md)
 
-These interfaces allows to send data with a direct and thread-safe connection from the realtime audio context of the audio processor to the non-realtime audio context of the edit controller.
+These interfaces allow you to send data with a direct and thread-safe connection from the realtime audio context of the audio processor to the non-realtime audio context of the edit controller.

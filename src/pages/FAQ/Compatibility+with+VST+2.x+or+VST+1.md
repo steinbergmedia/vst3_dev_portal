@@ -8,7 +8,7 @@
 
 ## Q: How can I update my VST 2 version of my plug-in to a VST 3 version and be sure that Cubase will load it instead of my old one?
 
-You have to provide a special UID for your [kVstAudioEffectClass](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivstaudioprocessor_8h.html#ae55c95a44e931e1cd78998c94bc65ee1) and [kVstComponentControllerClass](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivsteditcontroller_8h.html#a49d6f6f53c7630ea334474e9998c0a99) components, based on its **VST 2** UniqueID (4 characters) and its plug-in name like this:
+You have to provide a special UID for your [kVstAudioEffectClass](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivstaudioprocessor_8h.html#ae55c95a44e931e1cd78998c94bc65ee1) and [kVstComponentControllerClass](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivsteditcontroller_8h.html#a49d6f6f53c7630ea334474e9998c0a99) components, based on its **VST 2** UniqueID (4 characters) and its plug-in name in the following way:
 
 ``` c++
 static void convertVST2UID_To_FUID (FUID& newOne, int32 myVST2UID_4Chars, const char* pluginName, bool forControllerUID = false)
@@ -106,7 +106,7 @@ For Automation compatibility, you have to ensure that **VST 3** parameter IDs ha
 ## Q: I've already released a VST 3 plug-in with a different UID than its VST 2 equivalent. How can I declare that the VST 3 plug-in can replace its VST 2 plug-in counterpart?
 
 You can use the compatibility array of the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file.
-There you use the UID of your **VST 3** audio effect class as the "New" UID and put the UID of your **VST 2** plug-in in the "Old" array.
+There, you use the UID of your **VST 3** audio effect class as the "New" UID and put the UID of your **VST 2** plug-in in the "Old" array.
 
 If you cannot use the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file, you can create a class that implements the [IPluginCompatibility](../Technical+Documentation/Change+History/3.7.5/ModuleInfo.md) interface which you must provide to the host via your plug-in factory.
 

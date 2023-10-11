@@ -49,7 +49,7 @@ cmake --build .
   static const FUID kHelloWorldControllerUID (0xB9DBBD64, 0xF7C40A4C, 0x9C8BFB33, 0x8761E244);
   ```
 
-  3. Open the file ***version.h*** and adapt the strings like this:
+  3. Open the file ***version.h*** and adapt the strings in the following way:
 
   ``` c++
   #define stringOriginalFilename "MyDelay.vst3"
