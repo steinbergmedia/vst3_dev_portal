@@ -9,7 +9,7 @@
 
 ---
 
-On *Linux* there is no global event run loop like on *Windows* and *macOS*. For this reason the plug-in can query for an [Linux::IRunLoop](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1Linux_1_1IRunLoop.html) which must be provided by the host application in two different ways.
+On *Linux*, there is no global event run loop like on *Windows* and *macOS*. For this reason, the plug-in can query for an [Linux::IRunLoop](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1Linux_1_1IRunLoop.html) which must be provided by the host application in two different ways.
 
 ## Query IRunLoop from IPlugFrame
 

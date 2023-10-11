@@ -14,7 +14,7 @@
 
 ## Introduction
 
-Allows information exchange between the plug-in and host about which key switches are currently used.
+Allows information exchange between the plug-in and the host about which key switches are currently used.
 
 Extended plug-in interface [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html) for key switches support: [Vst::IKeyswitchController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html)
 
@@ -23,9 +23,9 @@ Extended plug-in interface [IEditController](https://steinbergmedia.github.io/vs
 - \[released: 3.5.0\]
 - \[optional\]
 
-Some instrument plug-ins support key switching functionality, which allows the user to switch between different layered sounds while playing notes. To achieve this, the user has to press a specific key associated to the wanted layer before playing new notes.
+Some instrument plug-ins support key switching functionality, which allows the users to switch between different layered sounds while playing notes. To achieve this, the users have to press a specific key associated to the wanted layer before playing new notes.
 
-A typical example is a sample-based player plug-in with a violin sound, which can include different layers or articulations: pizzicato, legato, tremolo, etc. By pressing or by keeping pressed a specific key, for example C-1, before playing new notes, the plug-in will choose to play pizzicato, by using D-1, it will play legato, and so on.
+A typical example is a sample-based player plug-in with a violin sound, which can include different layers or articulations: pizzicato, legato, tremolo, etc. By pressing and/or holding a specific key, for example C-1, before playing new notes, the plug-in will choose to play pizzicato, by using D-1, it will play legato, and so on.
 
 With [VST Expression Map](https://www.steinberg.net/de/technology/) (introduced by Steinberg in Cubase 5), these key switches can be used in the Score Editor, to associate a symbol (articulation) to a note. Each time this note is played, the corresponding key switch will be used (sent to the plug-in as noteOn event).
 

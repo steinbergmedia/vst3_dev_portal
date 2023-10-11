@@ -26,7 +26,7 @@ Check [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture
 
 ## IPluginCompatibility
 
-If the plug-in could not deliver the [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) because it does not support bundle, it is possible to add to the plug-in factory this new interface *IPluginCompatibility*.
+If the plug-in could not deliver the [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) because it does not support bundle, it is possible to add the new interface *IPluginCompatibility* to the plug-in factory.
 ### Example
 
 **In plugentry.cpp**:
@@ -39,7 +39,7 @@ class PluginCompatibility : public FObject, public IPluginCompatibility
     //...
     tresult PLUGIN_API getCompatibilityJSON (IBStream* stream) override
     {
-      /* write in the stream the JSON compatibility array
+      /* write the JSON compatibility array into the stream
       [
           {
               "New": "BD58B550F9E5634E9D2EFF39EA0927B1",

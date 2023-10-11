@@ -153,7 +153,7 @@ struct DataBlock
 So, we want to send the sample rate, size, the number of channels and the number of samples plus 
 the actual samples to the controller.
 
-To actually work with this `DataBlock` struct we introduce a little helper function we also add to
+To actually work with this `DataBlock` struct, we introduce a little helper function that we also add to
 this header:
 
 ```c++
@@ -165,7 +165,7 @@ inline DataBlock* toDataBlock (const Vst::DataExchangeBlock& block)
 }
 ```
 
-One thing is left to do before we can implement the sending of the data and that is that we need a 
+One thing remains to be done before we can start sending the data: We need a 
 member variable of the Vst::DataExchangeBlock struct where we store the actual block we work with
 while processing the audio. So we add this to our processor defintion:
 
@@ -178,7 +178,7 @@ private:
 }
 ```
 
-Now lets start to implement the processing:
+Now let's start to implement the processing:
 
 ```c++
 tresult PLUGIN_API DataExchangeProcessor::process (Vst::ProcessData& processData)
@@ -203,7 +203,7 @@ tresult PLUGIN_API DataExchangeProcessor::process (Vst::ProcessData& processData
 }
 ```
 
-We only want to acquire a new block if we have't already. So we check for this first and then we
+We only want to acquire a new block if we have not already done so. Therefore, we need to check this before we
 call the `acquireNewExchangeBlock` method that does this:
 
 ```c++
@@ -267,7 +267,7 @@ tresult PLUGIN_API DataExchangeProcessor::process (Vst::ProcessData& processData
 When it is filled with 1 second of audio data we send the block with `dataExchange->sendCurrentBlock()`
 and directly acquire a new block afterwards.
 
-Finally we need to copy back the input audio buffers to the output audio buffers. The whole method
+Finally, we need to copy back the input audio buffers to the output audio buffers. The whole method
 looks like this then:
 
 ```c++
@@ -353,7 +353,7 @@ private:
 ```
 
 First, we need to forward messages to the `DataExchangeReceiverHandler` so that it can process the
-data exchange messages when the host does not support the native API:
+data exchange messages in case the host does not support the native API:
 
 ```c++
 tresult PLUGIN_API DataExchangeController::notify (Vst::IMessage* message)
@@ -364,7 +364,7 @@ tresult PLUGIN_API DataExchangeController::notify (Vst::IMessage* message)
 }
 ```
 
-And next we can implement the `IDataExchangeReceiver` methods:
+In the next step, we can implement the `IDataExchangeReceiver` methods:
 
 ```c++
 void PLUGIN_API DataExchangeController::queueOpened (Vst::DataExchangeUserContextID userContextID,
@@ -395,7 +395,7 @@ void PLUGIN_API DataExchangeController::onDataExchangeBlocksReceived (
 }
 ```
 
-The `onDataExchangeBlocksReceived()` method will be called whenever the processor has send a block.
+The `onDataExchangeBlocksReceived()` method will be called each time the processor has sent a block.
 You can now do whatever you want with the data.
 
 If you want the data to be dispatched on a background thread you need to set the

@@ -52,7 +52,7 @@ In order to load **VST 3** plug-ins you need at least:
 ## Q: Why do plug-ins need subcategories?
 When you export your plug-in in the factory instance (check *againentry.cpp*: DEF_CLASS2), you have to define a subcategory string (can be a combination of more than one string: like "**Fx|Dynamics|EQ**" for example).
 
-Currently the subcategory string is used by **Cubase**/**Nuendo** to organize the plug-ins menu like this:
+Currently the subcategory string is used by **Cubase**/**Nuendo** to organize the plug-ins menu in the following way:
 
 ``` c++
 // Computation of Folder Name (SubCategories => folder in menu)

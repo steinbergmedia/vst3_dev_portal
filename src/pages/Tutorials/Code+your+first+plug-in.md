@@ -142,7 +142,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 if (data.numInputs == 0 || data.numSamples == 0)
     return kResultOk;
 
-//--- Here you have to implement your processing
+//--- Here, you have to implement your processing
 int32 numChannels = data.inputs[0].numChannels;
 
 //---get audio buffers using helper-functions(vstaudioprocessoralgo.h)-------------
@@ -259,7 +259,7 @@ tresult PLUGIN_API PlugProcessor::setState (IBStream* state)
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
 {
-	// Here you get the state of the component (Processor part)
+	// Here, you get the state of the component (Processor part)
 	if (!state)
 		return kResultFalse;
 
@@ -310,7 +310,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown* context)
 ```
 
 >ⓘ **Note**\
->In this example, we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:
+>In this example, we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it in the following way:
 >
 >addEventInput (STR16 ("Event In"), 4); // here 4 channels
 

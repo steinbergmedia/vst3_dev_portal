@@ -20,4 +20,4 @@
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md):
   - support of IPlugInterfaceSupport
   - support of MPE
-  - possibility to open 2 times the same plug-in editor
+  - possibility to open the same plug-in editor twice

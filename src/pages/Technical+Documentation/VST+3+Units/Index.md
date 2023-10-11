@@ -20,10 +20,10 @@ A unit is a logical section of the plug-in.
 For example, an EQ section can be a unit.
 The purposes of units are:
 
-- Reveal the internal logical structure of the plug-in
-- Organize parameters by associating them with units
-- Support program lists
-- Support handling of [Complex Plug-in Structures / Multi-timbral Instruments](../Complex+Structures/Index.md)
+- To reveal the internal logical structure of the plug-in
+- To organize parameters by associating them with units
+- To Support program lists
+- To support handling of [Complex Plug-in Structures / Multi-timbral Instruments](../Complex+Structures/Index.md)
   - Multiple program lists (associated with a unit)
   - Access to program list data
   - Associations of MIDI tracks and units
