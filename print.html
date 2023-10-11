@@ -585,7 +585,7 @@ In order to add your own Plug-ins check: <a href="pages/What+is+the+VST+3+SDK/..
 <li>has a VU peak meter</li>
 <li>uses the <a href="pages/What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI4</strong></a> library</li>
 <li>a version of this plug-in with side-chaining is available (showing a plug-in using the same controller and different - components)</li>
-<li>a <strong>AAX</strong> version is available</li>
+<li>an <strong>AAX</strong> version is available</li>
 <li>a <strong>AUv3</strong> version is available</li>
 </ul>
 <p><img src="pages/What+is+the+VST+3+SDK/../../resources/what_is_2.jpg" alt="what_if_2" /></p>
@@ -611,7 +611,7 @@ In order to add your own Plug-ins check: <a href="pages/What+is+the+VST+3+SDK/..
 <ul>
 <li>Instrument, Panner and Fx plug-in checking the <strong>VST 3</strong> support of a host.</li>
 <li>It uses <a href="pages/What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a></li>
-<li>a <strong>AAX</strong> version is available</li>
+<li>an <strong>AAX</strong> version is available</li>
 </ul>
 <p><img src="pages/What+is+the+VST+3+SDK/../../resources/what_is_5.jpg" alt="what_if_5" /></p>
 <p>Check the folder <em>&quot;public.sdk/samples/vst/hostchecker&quot;</em> of the SDK!</p>
@@ -1262,8 +1262,8 @@ Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, whi
 </ul>
 <hr />
 <h2 id="introduction-4"><a class="header" href="#introduction-4">Introduction</a></h2>
-<p>Helper Class wrapping a <strong>VST 3</strong> plug-in to a <strong>AAX</strong> plug-in.</p>
-<p>The <strong>VST 3 SDK</strong> comes with a helper class which wraps one <strong>VST 3</strong> audio processor and edit controller to an AAX plug-in.</p>
+<p>Helper Class wrapping a <strong>VST 3</strong> plug-in to an <strong>AAX</strong> plug-in.</p>
+<p>The <strong>VST 3 SDK</strong> comes with a helper class which wraps one <strong>VST 3</strong> audio processor and edit controller to an <strong>AAX</strong> plug-in.</p>
 <h2 id="how-does-it-work-1"><a class="header" href="#how-does-it-work-1">How does it work?</a></h2>
 <ul>
 <li>Check the AGainAAX example</li>
@@ -1335,29 +1335,29 @@ Simple cross-platform (Win/macOS/Linux) host application, built with VSTGUI, whi
 <h2 id="introduction-6"><a class="header" href="#introduction-6">Introduction</a></h2>
 <p>Helper Class wrapping a <strong>VST 3</strong> plug-in to an <strong>Audio Unit v2</strong> plug-in.</p>
 <p>The <strong>VST 3 SDK</strong> comes with an AudioUnit wrapper, which can wrap one <strong>VST 3</strong> audio processor and edit controller as an AudioUnit effect/instrument.</p>
-<p>The wrapper is a small dynamic library which loads the <strong>VST 3</strong> plug-in. As AudioUnits store some important information in their resource fork, this library must be compiled for every <strong>VST 3</strong> plug-in.</p>
+<p>The wrapper is a small dynamic library which loads the <strong>VST 3</strong> plug-in. As AudioUnits store important information in their resource fork, this library must be compiled for every <strong>VST 3</strong> plug-in.</p>
 <h2 id="how-does-it-work-3"><a class="header" href="#how-does-it-work-3">How does it work?</a></h2>
 <ul>
-<li>You first need to build the SDK (<a href="pages/What+is+the+VST+3+SDK/Wrappers/../../Tutorials/Building+the+examples/Building+the+examples+included+in+the+SDK+macOS.html">check here</a>) and then you should - have the xcode project.</li>
+<li>You first need to build the SDK (<a href="pages/What+is+the+VST+3+SDK/Wrappers/../../Tutorials/Building+the+examples/Building+the+examples+included+in+the+SDK+macOS.html">check here</a>) and then you should have the xcode project.</li>
 <li>You may need to download the CoreAudio SDK from Apple and point cmake to it when building the SDK with it (<a href="pages/What+is+the+VST+3+SDK/Wrappers/../../Tutorials/Using+cmake+for+building+plug-ins.html">see here</a>).</li>
-<li>create a copy of the again AU wrapper example project directory (public.sdk/source/vst/auwrapper/again/)</li>
-<li>rename the copy to your needs</li>
-<li>edit the target settings of the project and change
+<li>Create a copy of the again AU wrapper example project directory (public.sdk/source/vst/auwrapper/again/)</li>
+<li>Rename the copy to your needs</li>
+<li>Edit the target settings of the project and change
 <ul>
 <li>Product Name</li>
 <li>Library search path so that it points to the directory where libauwrapper.a exists</li>
 <li>architecture setting so that it only includes architectures that the <strong>VST 3</strong> plug-in supports</li>
 </ul>
 </li>
-<li>search in the project for AUWRAPPER_CHANGE and change the settings to your needs, especially in:
+<li>Search in the project for AUWRAPPER_CHANGE and change the settings to your needs, especially in:
 <ul>
-<li>edit audiounitconfig.h, see comments there</li>
-<li>edit Info.plist, see comments there</li>
+<li>Edit audiounitconfig.h, see comments there</li>
+<li>Edit Info.plist, see comments there</li>
 </ul>
 </li>
-<li>edit the &quot;Make Links Script&quot; for easier debugging/development</li>
-<li>build your project</li>
-<li>done ... that is all!</li>
+<li>Edit the &quot;Make Links Script&quot; for easier debugging/development</li>
+<li>Build your project</li>
+<li>Done ... that is all!</li>
 </ul>
 <p>For the release version, you must place a copy or an alias of your <strong>VST 3</strong> plug-in in the resource folder of the bundle named &quot;plugin.vst3&quot;</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
@@ -1781,7 +1781,7 @@ Independently of the download source of the <strong>VST 3 SDK</strong> be sure t
 <p><strong><a href="https://github.com/steinbergmedia/vstgui">https://github.com/steinbergmedia/vstgui</a></strong></p>
 </blockquote>
 <h2 id="external-links-to-vst-3-dsp-conferences-and-plug-ins-development"><a class="header" href="#external-links-to-vst-3-dsp-conferences-and-plug-ins-development">External Links to VST 3, DSP, Conferences and Plug-ins development</a></h2>
-<p>Here you can find some links to external resource about <strong>VST 3</strong>, DSP and Plug-ins development:</p>
+<p>Here, you can find some links to external resource about <strong>VST 3</strong>, DSP and Plug-ins development:</p>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">Category</th><th style="text-align: left">Links</th></tr></thead><tbody>
 <tr><td style="text-align: left"><strong>YouTube</strong></td><td style="text-align: left">• <a href="https://www.youtube.com/watch?v=zXnHaoN2Cig">ADC 2020</a>: Support of MIDI2 and MIDI-CI in <strong>VST 3</strong> instruments, Arne Scheffler and Janne Roeper <a href="https://www.youtube.com/watch?v=zXnHaoN2Cig"><img src="https://i.ytimg.com/vi/zXnHaoN2Cig/maxresdefault.jpg" alt="getting_started_vid_1" /></a> • <a href="https://www.youtube.com/watch?v=0QBWXC8KNz0">ADC 2017</a>: VST 3 history, advantages and best practice, Yvan Grabit <a href="https://www.youtube.com/watch?v=0QBWXC8KNz0"><img src="https://i.ytimg.com/vi/0QBWXC8KNz0/maxresdefault.jpg" alt="getting_started_vid_2" /></a> • <a href="https://www.youtube.com/watch?v=SJXGSJ6Zoro">ADC 2016</a>: The Golden Rules of Audio Programming, Pete Goodliffe<br> • <a href="https://www.youtube.com/watch?v=004zcWwgi1A">How to setup the VST 3 SDK's Sample Plug-in Projects</a></td></tr>
 <tr><td style="text-align: left"><strong>Forums / Mailing List</strong></td><td style="text-align: left">• <a href="https://www.kvraudio.com/forum/viewforum.php?f=33">KVRAudio Forum</a>: DSP and Plug-in Development<br> • music-dsp mailing list at <a href="https://www.columbia.edu/">columbia.edu</a><br> • <a href="https://www.musicdsp.org/en/latest/">music-dsp</a> Web<br> • <a href="https://mail.music.vt.edu/mailman/listinfo/sursound">Sursound</a> mailing list at Virginia Tech<br> • <a href="https://dsp.stackexchange.com/">DSP Stack Overflow</a>: DSP Developer community<br> • <a href="https://stackoverflow.com/">Stack Overflow</a>: Developer community</td></tr>
@@ -1909,7 +1909,7 @@ You can also use the bash file <em>&quot;setup_linux_packages_for_vst3sdk.sh&quo
 <blockquote>
 <p><em>Computer Configuration =&gt; Windows Settings =&gt; Security Settings =&gt;Local Policies =&gt; User Rights Assignment =&gt; Create symbolic links</em></p>
 </blockquote>
-<p>Here you can set which users can create symbolic links, add your user name.</p>
+<p>Here, you can set which users can create symbolic links, add your user name.</p>
 <p><img src="pages/Getting+Started/../../resources/getting_started_3.jpg" alt="getting_started_3" /></p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Tutorials/../">VST Home</a></p>
@@ -2272,12 +2272,12 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 <hr />
 <h2 id="available-smtg-cmake-options"><a class="header" href="#available-smtg-cmake-options">Available SMTG cmake options</a></h2>
 <ul>
-<li><strong>SMTG_AAX_SDK_PATH</strong>: Here you can define where the AAX SDK is located (if needed)</li>
+<li><strong>SMTG_AAX_SDK_PATH</strong>: Here, you can define where the AAX SDK is located (if needed)</li>
 <li><strong>SMTG_ENABLE_VST3_HOSTING_EXAMPLES</strong>: Enable <strong>VST 3</strong> Hosting Examples (default ON)</li>
 <li><strong>SMTG_ENABLE_VST3_PLUGIN_EXAMPLES</strong>: Enable <strong>VST 3</strong> Plug-in Examples (default ON)</li>
 <li><strong>SMTG_ENABLE_VSTGUI_SUPPORT</strong>: Enable VSTGUI Support (default ON)</li>
 <li><strong>SMTG_BUILD_UNIVERSAL_BINARY</strong>: Build universal binary (32 &amp; 64 bit) (Mac only)</li>
-<li><strong>SMTG_COREAUDIO_SDK_PATH</strong>: Here you can define where the COREAUDIO SDK is located (Mac only, if needed)</li>
+<li><strong>SMTG_COREAUDIO_SDK_PATH</strong>: Here, you can define where the COREAUDIO SDK is located (Mac only, if needed)</li>
 <li><strong>SMTG_CREATE_BUNDLE_FOR_WINDOWS</strong>: Create bundle on Windows for the <strong>VST 3</strong> plug-ins (new since 3.6.10! Windows only) (default ON)</li>
 <li><strong>SMTG_CREATE_MODULE_INFO</strong>: Create the moduleinfo.json file (default ON)</li>
 <li><strong>SMTG_CREATE_PLUGIN_LINK</strong>: Create symbolic link for each <strong>VST 3</strong> plug-in in ${VST3_FOLDER_NAME} folder (you need to have Administrator rights on Windows or change the Local Group Policy to allow the creation of symbolic links) (default ON)</li>
@@ -2289,8 +2289,8 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 <li><strong>SMTG_ENABLE_USE_OF_JACK</strong>: Allows you to create the audiohost application using Jack (default OFF)</li>
 <li><strong>SMTG_MDA_VST3_VST2_COMPATIBLE</strong>: Build the MDA examples as a replacement for their <strong>VST 2</strong> counterpart (default ON)</li>
 <li><strong>SMTG_IOS_DEVELOPMENT_TEAM</strong>: Needed for building the InterAppAudio and AUv3 examples for iOS (Mac only)</li>
-<li><strong>SMTG_MYPLUGINS_SRC_PATH</strong>: Here you can add your <strong>VST 3</strong> plug-ins folder</li>
-<li><strong>SMTG_PLUGIN_TARGET_PATH</strong>: Here you can redefine the <strong>VST 3</strong> plug-ins folder</li>
+<li><strong>SMTG_MYPLUGINS_SRC_PATH</strong>: Here, you can add your <strong>VST 3</strong> plug-ins folder</li>
+<li><strong>SMTG_PLUGIN_TARGET_PATH</strong>: Here, you can redefine the <strong>VST 3</strong> plug-ins folder</li>
 <li><strong>SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON</strong>: use FOLDERID_UserProgramFilesCommon as <strong>VST 3</strong> target path (Windows only) (default ON)</li>
 <li><strong>SMTG_RENAME_ASSERT</strong>: Rename ASSERT to SMTG_ASSERT to avoid conflicts with 3rd party libraries (default ON)</li>
 <li><strong>SMTG_RUN_VST_VALIDATOR</strong>: Run the VST validator on <strong>VST 3</strong> plug-ins each time they are built (default ON)</li>
@@ -2486,7 +2486,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&amp;data)
 if (data.numInputs == 0 || data.numSamples == 0)
     return kResultOk;
 
-//--- Here you have to implement your processing
+//--- Here, you have to implement your processing
 int32 numChannels = data.inputs[0].numChannels;
 
 //---get audio buffers using helper-functions(vstaudioprocessoralgo.h)-------------
@@ -2593,7 +2593,7 @@ tresult PLUGIN_API PlugProcessor::setState (IBStream* state)
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
 {
-	// Here you get the state of the component (Processor part)
+	// Here, you get the state of the component (Processor part)
 	if (!state)
 		return kResultFalse;
 
@@ -2638,7 +2638,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown* context)
 </code></pre>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
-In this example, we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:</p>
+In this example, we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it in the following way:</p>
 <p>addEventInput (STR16 (&quot;Event In&quot;), 4); // here 4 channels</p>
 </blockquote>
 <ol start="2">
@@ -3059,7 +3059,7 @@ struct DataBlock
 </code></pre>
 <p>So, we want to send the sample rate, size, the number of channels and the number of samples plus 
 the actual samples to the controller.</p>
-<p>To actually work with this <code>DataBlock</code> struct we introduce a little helper function we also add to
+<p>To actually work with this <code>DataBlock</code> struct, we introduce a little helper function that we also add to
 this header:</p>
 <pre><code class="language-c++">inline DataBlock* toDataBlock (const Vst::DataExchangeBlock&amp; block)
 {
@@ -3068,7 +3068,7 @@ this header:</p>
     return nullptr;
 }
 </code></pre>
-<p>One thing is left to do before we can implement the sending of the data and that is that we need a 
+<p>One thing remains to be done before we can start sending the data: We need a 
 member variable of the Vst::DataExchangeBlock struct where we store the actual block we work with
 while processing the audio. So we add this to our processor defintion:</p>
 <pre><code class="language-c++">class DataExchangeProcessor : public Vst::AudioEffect
@@ -3077,7 +3077,7 @@ private:
     Vst::DataExchangeBlock currentExchangeBlock {InvalidDataExchangeBlock};
 }
 </code></pre>
-<p>Now lets start to implement the processing:</p>
+<p>Now let's start to implement the processing:</p>
 <pre><code class="language-c++">tresult PLUGIN_API DataExchangeProcessor::process (Vst::ProcessData&amp; processData)
 {
     if (processData.numSamples &lt;= 0)
@@ -3095,7 +3095,7 @@ private:
     // ...
 }
 </code></pre>
-<p>We only want to acquire a new block if we have't already. So we check for this first and then we
+<p>We only want to acquire a new block if we have not already done so. Therefore, we need to check this before we
 call the <code>acquireNewExchangeBlock</code> method that does this:</p>
 <pre><code class="language-c++">void DataExchangeProcessor::acquireNewExchangeBlock ()
 {
@@ -3151,7 +3151,7 @@ the block is filled with 1 second of audio data:</p>
 </code></pre>
 <p>When it is filled with 1 second of audio data we send the block with <code>dataExchange-&gt;sendCurrentBlock()</code>
 and directly acquire a new block afterwards.</p>
-<p>Finally we need to copy back the input audio buffers to the output audio buffers. The whole method
+<p>Finally, we need to copy back the input audio buffers to the output audio buffers. The whole method
 looks like this then:</p>
 <pre><code class="language-c++">tresult PLUGIN_API DataExchangeProcessor::process (Vst::ProcessData&amp; processData)
 {
@@ -3230,7 +3230,7 @@ private:
 }
 </code></pre>
 <p>First, we need to forward messages to the <code>DataExchangeReceiverHandler</code> so that it can process the
-data exchange messages when the host does not support the native API:</p>
+data exchange messages in case the host does not support the native API:</p>
 <pre><code class="language-c++">tresult PLUGIN_API DataExchangeController::notify (Vst::IMessage* message)
 {
     if (dataExchange.onMessage (message))
@@ -3238,7 +3238,7 @@ data exchange messages when the host does not support the native API:</p>
     return EditControllerEx1::notify (message);
 }
 </code></pre>
-<p>And next we can implement the <code>IDataExchangeReceiver</code> methods:</p>
+<p>In the next step, we can implement the <code>IDataExchangeReceiver</code> methods:</p>
 <pre><code class="language-c++">void PLUGIN_API DataExchangeController::queueOpened (Vst::DataExchangeUserContextID userContextID,
                                                      uint32 blockSize,
                                                      bool&amp; dispatchOnBackgroundThread)
@@ -3266,7 +3266,7 @@ void PLUGIN_API DataExchangeController::onDataExchangeBlocksReceived (
     }
 }
 </code></pre>
-<p>The <code>onDataExchangeBlocksReceived()</code> method will be called whenever the processor has send a block.
+<p>The <code>onDataExchangeBlocksReceived()</code> method will be called each time the processor has sent a block.
 You can now do whatever you want with the data.</p>
 <p>If you want the data to be dispatched on a background thread you need to set the
 <code>dispatchOnBackgroundThread</code> variable to true in the <code>queueOpened</code> method. </p>
@@ -3313,7 +3313,7 @@ You can now do whatever you want with the data.</p>
     }
 }
 </code></pre>
-<p>This is straight and simple, we handle the parameter changes in the function <em>handleParameterChanges</em>, which we will see in a moment. Then we get the last gain parameter value and iterate over the input buffers and copy the samples from there to the output buffers and apply the <em>gain</em> factor.</p>
+<p>This is straightforward and simple, we handle the parameter changes in the function <em>handleParameterChanges</em>, which we will see in a moment. Then we get the last gain parameter value and iterate over the input buffers and copy the samples from there to the output buffers before applying the <em>gain</em> factor.</p>
 <p>If we look at the handleParameterChanges function:</p>
 <pre><code class="language-c++">void MyEffect::handleParameterChanges (IParameterChanges*changes)
 {
@@ -3341,8 +3341,8 @@ You can now do whatever you want with the data.</p>
 }
 </code></pre>
 <p>We see that the <em>Gain</em> parameter only uses the last point for the gain value.</p>
-<p>If we now want to use all points of the <em>Gain</em> parameter we can use two utility classes from the SDK.</p>
-<p>The first one is the <em>ProcessDataSlicer</em> which slices the audio block into smaller peaces.</p>
+<p>If we now want to use all points of the <em>Gain</em> parameter, we can use two utility classes from the SDK.</p>
+<p>The first one is the <em>ProcessDataSlicer</em> which slices the audio block into smaller pieces.</p>
 <pre><code class="language-c++">void MyEffect::process (ProcessData&amp; data)
 {
     handleParameterChanges (data.inputParameterChanges);
@@ -3369,8 +3369,8 @@ You can now do whatever you want with the data.</p>
     slicer.process&lt;SymbolicSampleSizes::kSample32&gt; (data, doProcessing);
 }
 </code></pre>
-<p>As you see we have moved the algorithm part into a lambda <em>doProcessing</em> which is passed to <em>slicer.process</em>. This lambda is now called multiple times with a maximum of 8 samples per call until the whole buffer is processed. This doesn't give us yet a better parameter resolution, but we can now use the second utility class to handle this.</p>
-<p>At first we now look at the type of the <em>gainParameter</em> variable as this is our next utility class:</p>
+<p>As you see, we have moved the algorithm part into a lambda <em>doProcessing</em> which is passed to <em>slicer.process</em>. This lambda is now called multiple times with a maximum of 8 samples per call until the whole buffer is processed. This doesn't give us yet a better parameter resolution, but we can now use the second utility class to handle this.</p>
+<p>At first, we now look at the type of the <em>gainParameter</em> variable, as this is our next utility class:</p>
 <pre><code class="language-c++">SampleAccurate::Parameter gainParameter;
 </code></pre>
 <p>We have to change the <em>handleParameterChanges</em> function to:</p>
@@ -3410,7 +3410,7 @@ You can now do whatever you want with the data.</p>
     }
 }
 </code></pre>
-<p>Finally we have to do some cleanup of the <em>gainParameter</em> at the end of the <em>process</em> function by calling <em>gainParameter.endChanges</em>.</p>
+<p>Finally, we have to do some cleanup of the <em>gainParameter</em> at the end of the <em>process</em> function by calling <em>gainParameter.endChanges</em>.</p>
 <pre><code class="language-c++">void MyEffect::process (ProcessData&amp; data)
 {
     handleParameterChanges (data.inputParameterChanges);
@@ -3439,19 +3439,19 @@ You can now do whatever you want with the data.</p>
     gainParameter.endChanges ();
 }
 </code></pre>
-<p>Now we have nearly sample-accurate parameter changes support in this example. Every 8 samples the <em>gain</em> parameter will be updated to the correct value.</p>
+<p>Now, we have nearly sample-accurate parameter changes support in this example. At intervals of eight samples, the <em>gain</em> parameter will be updated to the correct value.</p>
 <p>It's very simple to make this 100% sample-accurate, check out the <strong>AGain Sample Accurate</strong> example in the SDK.</p>
 <hr />
 <h2 id="part-2-adding-32-and-64-bit-audio-processing"><a class="header" href="#part-2-adding-32-and-64-bit-audio-processing">Part 2: Adding 32 and 64 bit audio processing</a></h2>
 <p>The example currently only supports 32 bit processing. Now we will add 64 bit processing.</p>
-<p>As you may have noticed above the <em>ProcessDataSlicer</em> uses a template parameter for its process function. This template parameter <em>SampleSize</em> defines the bit depth of the audio buffers in the <em>ProcessData</em> structure. This is currently hard-coded to be <em>SymbolicSampleSizes::kSample32</em>.</p>
+<p>As you may have noticed above, the <em>ProcessDataSlicer</em> uses a template parameter for its process function. This template parameter <em>SampleSize</em> defines the bit depth of the audio buffers in the <em>ProcessData</em> structure. This is currently hard-coded to be <em>SymbolicSampleSizes::kSample32</em>.</p>
 <p>In order to support <em>SymbolicSampleSizes::kSample64</em> we only have to make a few changes to the code. First, we adopt the algorithm part by introducing a new templated method to our effect:</p>
 <pre><code class="language-c++">template &lt;SymbolicSampleSizes SampleSize&gt;
 void MyEffect::process (ProcessData&amp; data)
 {
 }
 </code></pre>
-<p>We mostly just move the code from the original process method to this one except the code for handling parameter changes:</p>
+<p>We mostly just move the code from the original process method to this one, except the code for handling parameter changes:</p>
 <pre><code class="language-c++">template &lt;SymbolicSampleSizes SampleSize&gt;
 void MyEffect::process (ProcessData&amp; data)
 {
@@ -3477,8 +3477,8 @@ void MyEffect::process (ProcessData&amp; data)
     slicer.process&lt;SampleSize&gt; (data, doProcessing);
 }
 </code></pre>
-<p>We just change the template parameter <em>SampleSize</em> of the process method of the <em>ProcessDataSlicer</em> to use the same template parameter as of our own process function.</p>
-<p>This will not work correctly yet as we still work with the 32 bit audio buffers in our <em>doProcessing</em> lambda. In order to fix this we have to introduce two more templated functions <em>getChannelBuffers</em> that will choose the correct audio buffers depending on the <em>SampleSize</em> template parameter, which can either be <em>SymbolicSampleSizes::kSample32</em> or <em>SymbolicSampleSizes::kSample64</em>:</p>
+<p>We just change the template parameter <em>SampleSize</em> of the process method of the <em>ProcessDataSlicer</em> to use the same template parameter as in our own process function.</p>
+<p>This will not work correctly yet, as we still work with the 32 bit audio buffers in our <em>doProcessing</em> lambda. In order to fix this, we have to introduce two more templated functions <em>getChannelBuffers</em> that will choose the correct audio buffers depending on the <em>SampleSize</em> template parameter, which can either be <em>SymbolicSampleSizes::kSample32</em> or <em>SymbolicSampleSizes::kSample64</em>:</p>
 <pre><code class="language-c++">template &lt;SymbolicSampleSizes SampleSize,
         typename std::enable_if&lt;SampleSize == SymbolicSampleSizes::kSample32&gt;::type* = nullptr&gt;
 inline Sample32** getChannelBuffers (AudioBusBuffers&amp; buffer)
@@ -3521,7 +3521,7 @@ void MyEffect::process (ProcessData&amp; data)
     slicer.process&lt;SampleSize&gt; (data, doProcessing);
 }
 </code></pre>
-<p>As a final step we now need to call the templated <em>process&lt;...&gt;</em> function from the normal <em>process</em> function:</p>
+<p>As a final step, we now need to call the templated <em>process&lt;...&gt;</em> function from the normal <em>process</em> function:</p>
 <pre><code class="language-c++">void MyEffect::process (ProcessData&amp; data)
 {
     handleParameterChanges (data.inputParameterChanges);
@@ -3548,9 +3548,9 @@ void MyEffect::process (ProcessData&amp; data)
 <hr />
 <h2 id="part-3-thread-safe-state-changes"><a class="header" href="#part-3-thread-safe-state-changes">Part 3: Thread safe state changes</a></h2>
 <p>One common issue in this domain is that the plug-in state coming from a preset or a DAW project is set by the host from a non realtime thread.</p>
-<p>If we want to change our internal data model to use this state we have to transfer this state to the realtime thread. This should be done in a realtime thread safe manner otherwise the model may not reflect the correct state as parameter changes dispatched in the realtime thread and the state data set on another thread will end in an undefined state.</p>
-<p>For this case we have another utility class: <em>RTTransferT</em></p>
-<p>This class expects to have a template parameter <em>StateModel</em> describing the state data. We create a simple struct as data model:</p>
+<p>If we want to change our internal data model to use this state, we have to transfer this state to the realtime thread. This should be done in a realtime thread safe manner. Otherwise the model may not reflect the correct state, as parameter changes dispatched in the realtime thread and the state data set on another thread will end in an undefined state.</p>
+<p>For this case, we have another utility class: <em>RTTransferT</em></p>
+<p>This class expects to have a template parameter <em>StateModel</em> describing the state data. We create a simple struct as a data model:</p>
 <pre><code class="language-c++">struct StateModel
 {
     double gain;
@@ -3564,7 +3564,7 @@ using RTTransfer = RTTransferT&lt;StateModel&gt;;
     RTTransfer stateTransfer;
 };
 </code></pre>
-<p>If we now get a new <em>state</em> from the host, we create a <em>newStateModel</em> and write the <em>stateGain</em> value into <em>model-&gt;gain</em> andpass it to the utility class <em>stateTransfer</em>:</p>
+<p>If we now get a new <em>state</em> from the host, we create a <em>newStateModel</em> and write the <em>stateGain</em> value into <em>model-&gt;gain</em> and pass it to the utility class <em>stateTransfer</em>:</p>
 <pre><code class="language-c++">tresult PLUGIN_API MyEffect::setState (IBStream* state)
 {
     double stateGain = ... // read this out of the state stream
@@ -3577,7 +3577,7 @@ using RTTransfer = RTTransferT&lt;StateModel&gt;;
     return kResultTrue;
 }
 </code></pre>
-<p>To get the <em>stateModel</em> into our realtime thread we have to change the <em>process</em> function like this:</p>
+<p>To get the <em>stateModel</em> into our realtime thread, we have to change the <em>process</em> function in the following way:</p>
 <pre><code class="language-c++">void MyEffect::process (ProcessData&amp; data)
 {
     stateTransfer.accessTransferObject_rt ([this] (const auto&amp; stateModel) {
@@ -3595,8 +3595,8 @@ using RTTransfer = RTTransferT&lt;StateModel&gt;;
     return kResultTrue;
 }
 </code></pre>
-<p>The <em>accessTransferObject_rt</em> function will check if there is a new model state and will call the lambda if it is and then we can set our <em>gainParameter</em> to the value of <em>stateModel.gain</em>.</p>
-<p>To free up the memory in the <em>stateTransfer</em> object we have to call the <em>clear_ui</em> method of it. In this case where we only have one double as state model it is OK to hold onto it until the next state is set or the effect is terminated. So we just add it to the <em>terminate</em> method of the plug-in:</p>
+<p>The <em>accessTransferObject_rt</em> function will check if there is a new model state. If this is the case, it will call the lambda, and then we can set our <em>gainParameter</em> to the value of <em>stateModel.gain</em>.</p>
+<p>To free up the memory in the <em>stateTransfer</em> object, we have to call the <em>clear_ui</em> method of it. In this case, where we only have one double as state model, it is OK to hold onto it until the next state is set or the effect is terminated. So we just add it to the <em>terminate</em> method of the plug-in:</p>
 <pre><code class="language-c++">tresult PLUGIN_API MyEffect::terminate ()
 {
     stateTransfer.clear_ui ();
@@ -3780,7 +3780,7 @@ tresult PLUGIN_API AGain::process (ProcessData&amp; data)
 </ul>
 <hr />
 <h2 id="goal-8"><a class="header" href="#goal-8">Goal</a></h2>
-<p>Here you can find some informations about how to write a <strong>VST 3</strong> version of a plug-in which already exists as <strong>VST 2</strong> version.
+<p>Here, you can find some informations about how to write a <strong>VST 3</strong> version of a plug-in which already exists as <strong>VST 2</strong> version.
 How to guaranty that a Host will correctly replace the old <strong>VST 2</strong> by the new <strong>VST 3</strong> version of your plug-in.</p>
 <p>For a <strong>VST 3</strong> Host the important information is the UID of your (processor) plug-in, with this information it will find the correct <strong>VST 3</strong> version to use.</p>
 <p>2 scenarios are possible: The <strong>VST 3</strong> and the <strong>VST 2</strong> version of your plug-in have the same UID or not.</p>
@@ -4011,7 +4011,7 @@ cmake --build .
 static const FUID kHelloWorldControllerUID (0xB9DBBD64, 0xF7C40A4C, 0x9C8BFB33, 0x8761E244);
 </code></pre>
 <ol start="3">
-<li>Open the file <em><strong>version.h</strong></em> and adapt the strings like this:</li>
+<li>Open the file <em><strong>version.h</strong></em> and adapt the strings in the following way:</li>
 </ol>
 <pre><code class="language-c++">#define stringOriginalFilename &quot;MyDelay.vst3&quot;
 
@@ -4164,9 +4164,9 @@ git submodule update --init --recursive --remote vstgui4
 <h2 id="350-note-expression"><a class="header" href="#350-note-expression"><a href="pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.html">[3.5.0] Note Expression</a></a></h2>
 <p>A new way to control / modify / change a specific played note during playback.</p>
 <h2 id="350-key-switch"><a class="header" href="#350-key-switch"><a href="pages/Technical+Documentation/Change+History/3.5.0/IKeyswitchController.html">[3.5.0] Key Switch</a></a></h2>
-<p>Allows information exchange between the plug-in and host about which key switches are currently used.</p>
+<p>Allows information exchange between the plug-in and the host about which key switches are currently used.</p>
 <h2 id="350-remote-presentation-of-parameters"><a class="header" href="#350-remote-presentation-of-parameters"><a href="pages/Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.html">[3.5.0] Remote Presentation of Parameters</a></a></h2>
-<p>How to better support remote (UI and hardware) for parameters.</p>
+<p>How to better support remote devices/controllers (UI and hardware) for parameters.</p>
 <h2 id="350-context-menu"><a class="header" href="#350-context-menu"><a href="pages/Technical+Documentation/Change+History/3.5.0/IComponentHandler3.html">[3.5.0] Context Menu</a></a></h2>
 <p>A plug-in can ask the host to create a context menu for a given exported parameter ID or a generic context menu.</p>
 <h2 id="350-enhanced-linked-parameters"><a class="header" href="#350-enhanced-linked-parameters"><a href="pages/Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.html">[3.5.0] Enhanced Linked Parameters</a></a></h2>
@@ -4202,7 +4202,7 @@ git submodule update --init --recursive --remote vstgui4
 <h2 id="370-parameter-function-name"><a class="header" href="#370-parameter-function-name"><a href="pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html">[3.7.0] Parameter Function Name</a></a></h2>
 <p>This interface allows the host to get a parameter associated to a specific meaning (a functionName) for a given unit</p>
 <h2 id="370-progress-display"><a class="header" href="#370-progress-display"><a href="pages/Technical+Documentation/Change+History/3.7.0/IProgress.html">[3.7.0] Progress Display</a></a></h2>
-<p>Allows the plug-in to request the host to create a progress for some specific tasks which take some time.</p>
+<p>Allows the plug-in to ask the host to create a progress for specific tasks which take some time.</p>
 <h2 id="370-process-context-requirements"><a class="header" href="#370-process-context-requirements"><a href="pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.html">[3.7.0] Process Context Requirements</a></a></h2>
 <p>To get accurate process context information (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html">Vst::ProcessContext</a>), it is now required to implement this interface.</p>
 <h2 id="375-module-info"><a class="header" href="#375-module-info"><a href="pages/Technical+Documentation/Change+History/3.7.5/ModuleInfo.html">[3.7.5] Module Info</a></a></h2>
@@ -4210,7 +4210,7 @@ git submodule update --init --recursive --remote vstgui4
 <h2 id="379-get-current-systemtime"><a class="header" href="#379-get-current-systemtime"><a href="pages/Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.html">[3.7.9] Get Current SystemTime</a></a></h2>
 <p>Allows a plug-in to ask the host for the current system time.</p>
 <h2 id="379-data-transfert-between-processorcontroller"><a class="header" href="#379-data-transfert-between-processorcontroller"><a href="pages/Technical+Documentation/Change+History/3.7.9/IDataExchangeHandler.html">[3.7.9] Data Transfert Between Processor/Controller</a></a></h2>
-<p>These interfaces allows to send data with a direct and thread-safe connection from the realtime audio context of the audio processor to the non-realtime audio context of the edit controller.</p>
+<p>These interfaces allow you to send data with a direct and thread-safe connection from the realtime audio context of the audio processor to the non-realtime audio context of the edit controller.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/API+Documentation/../../">VST Home</a> / <a href="pages/Technical+Documentation/API+Documentation/../Index.html">Technical Documentation</a></p>
 <h1 id="vst-3-api-documentation-1"><a class="header" href="#vst-3-api-documentation-1">VST 3 API Documentation</a></h1>
@@ -4591,7 +4591,7 @@ It describes the basic layer for any plug-in category supported in <a href="http
 A component-ID or class-ID (CID) is used to identify a concrete implementation class and is usually passed to a class factory in order to create the corresponding component.<br />
 So a lot of different classes (with different class identifiers) can implement the same interfaces.</p>
 <h3 id="direction"><a class="header" href="#direction">Direction</a></h3>
-<p>An interface may have a <strong>direction</strong>, meaning that the interface is expected to be implemented either in the plug-in or in the host. The nature of an interface is documented like this:</p>
+<p>An interface may have a <strong>direction</strong>, meaning that the interface is expected to be implemented either in the plug-in or in the host. The nature of an interface is documented in the following way:</p>
 <ul>
 <li><strong>[host imp]</strong>: the host implements the interface</li>
 <li><strong>[plug imp]</strong>: the plug-in implements the interface</li>
@@ -5190,10 +5190,10 @@ If the plug-in needs to inform the host about changes containing parameter title
 <p>For example, an EQ section can be a unit.
 The purposes of units are:</p>
 <ul>
-<li>Reveal the internal logical structure of the plug-in</li>
-<li>Organize parameters by associating them with units</li>
-<li>Support program lists</li>
-<li>Support handling of <a href="pages/Technical+Documentation/VST+3+Units/../Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a>
+<li>To reveal the internal logical structure of the plug-in</li>
+<li>To organize parameters by associating them with units</li>
+<li>To Support program lists</li>
+<li>To support handling of <a href="pages/Technical+Documentation/VST+3+Units/../Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a>
 <ul>
 <li>Multiple program lists (associated with a unit)</li>
 <li>Access to program list data</li>
@@ -5302,7 +5302,7 @@ The purposes of units are:</p>
 </li>
 </ul>
 <h3 id="structure-of-program-lists"><a class="header" href="#structure-of-program-lists">Structure of Program Lists</a></h3>
-<p>All programs are always transmitted as a flat list to the host. But the plug-in can assign a number of attributes to each program of the list. This enables the host to organize and filter them in a very flexible way. Attribute values are queried via <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#ac40c799f1f52837c311ac153d7a8ead7">Steinberg::Vst::IUnitInfo::getProgramInfo</a>. The possible attribute identifiers are defined in namespace <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__presetAttributes.html">Steinberg::Vst::PresetAttributes</a>. The attribute identifier specifying a program category, for example, is <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__presetAttributes.html#ga93cb7a7100ac96cfafceb6216770c42d">Steinberg::Vst::PresetAttributes::kInstrument</a>. Although the name suggests that it should be used for instruments only, it can be used for any kind of audio plug-in. The value for an instrument category of a program is &quot;Piano&quot; for example. But it is possible to specify a subcategory like &quot;Acoustic Piano&quot; as well. In this case, the strings need to be chained like this:<br />
+<p>All programs are always transmitted as a flat list to the host. But the plug-in can assign a number of attributes to each program of the list. This enables the host to organize and filter them in a very flexible way. Attribute values are queried via <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#ac40c799f1f52837c311ac153d7a8ead7">Steinberg::Vst::IUnitInfo::getProgramInfo</a>. The possible attribute identifiers are defined in namespace <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__presetAttributes.html">Steinberg::Vst::PresetAttributes</a>. The attribute identifier specifying a program category, for example, is <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__presetAttributes.html#ga93cb7a7100ac96cfafceb6216770c42d">Steinberg::Vst::PresetAttributes::kInstrument</a>. Although the name suggests that it should be used for instruments only, it can be used for any kind of audio plug-in. The value for an instrument category of a program is &quot;Piano&quot; for example. But it is possible to specify a subcategory like &quot;Acoustic Piano&quot; as well. In this case, the strings need to be chained in the following way:<br />
 &quot;Piano|Acoustic Piano&quot;. This allows the host to organize presets in a category tree view, for example.</p>
 <h3 id="pitch-names"><a class="header" href="#pitch-names">Pitch Names</a></h3>
 <p>Pitch names are intended to be used with drum kit programs where the different drum sounds are addressed by note pitches. In order to display the name of the drum instrument assigned to a pitch in a drum editor, for example, the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a63c02601259d4e8690f26eefaad53195">Steinberg::Vst::IUnitInfo::hasProgramPitchNames</a> to determine if pitch names are supported and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a6126c4506f7981b5e800c6b4daa1e66b">Steinberg::Vst::IUnitInfo::getProgramPitchName</a> to query the pitch name of a single note.</p>
@@ -5439,22 +5439,22 @@ In general, the host needs to know about any input to output routing of the plug
 </ul>
 <hr />
 <h2 id="introduction-10"><a class="header" href="#introduction-10">Introduction</a></h2>
-<p>In a modern plug-in the UI representation and the audio processing do not share any data directly.
-This eliminates undefined behaviour as they run in different threads and any directly shared data would 
+<p>In a modern plug-in, the UI representation and the audio processing do not share any data directly.
+This eliminates undefined behavior, as they run in different threads and any directly shared data would 
 need to be protected by a mutex. But a mutex has no defined running time and may block the audio 
-thread for too long creating an audible glitch which must be prevented.</p>
+thread for too long, creating an audible glitch, which must be prevented.</p>
 <p>The other issue with sharing data between the UI and the audio processing is that the audio is 
-processed earlier than the time when the audio is streamed thru the monitor boxes or headphones.
-Without synchronization the visual representation will be shown earlier than the sound it represents.
+processed before the audio is streamed through the monitor boxes or headphones.
+Without synchronization, the visual representation is displayed earlier than the sound it represents.
 To synchronize the visual representation and the processing of the audio signal, the UI has to queue 
-the visual data until the time is reached the audio is heard.</p>
-<p>This problem is already solved for parameters which are automated by the host. The host delays 
-sending the parameter change to the edit controller so that it is in sync with the heard audio.</p>
+the visual data until the time is reached when the audio is heard.</p>
+<p>This problem has already been solved for parameters which are automated by the host. The host delays 
+sending the parameter change to the edit controller so that it is in sync with the audible audio.</p>
 <p>But parameters are limited in how much data they can transfer, this may be enough for a simple peak
-VU meter display, but presenting a FFT curve with it is a nightmare.</p>
+VU meter display, but presenting an FFT curve with it is a nightmare.</p>
 <p>Version 3.7.9 of the SDK contains the new <em>Data Exchange</em> API to send data from the realtime
 processing function to the controller in a safe and efficient way.</p>
-<p>As this API needs support from the host and not all hosts will provide this API in the beginning
+<p>As this API needs support from the host and not all hosts provide this API right from the start,
 the SDK contains a backwards compatibility layer that either uses the API directly, if available, or 
 an alternative method based on the IMessage API to emulate the API. See the 
 <a href="pages/Technical+Documentation/Data+Exchange/../../Tutorials/Data+Exchange.html">tutorial</a> on how to use it.</p>
@@ -5465,39 +5465,32 @@ host and the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/cl
 <p>The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html">IDataExchangeHandler</a> implements a direct and thread-safe connection from the realtime
 audio context of the audio processor to the non-realtime audio context of the edit controller.
 This should be used when the edit controller needs continuous data from the audio process for
-visualization or other use-cases. To circumvent the bottleneck on the main thread it is possible
-to configure the connection in a way that the calls to the edit controller will happen on a
+visualization or other &quot;use-cases&quot;. To circumvent the bottleneck on the main thread, it is possible
+to configure the connection in a way that the calls to the edit controller happen on a
 background thread, see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html">IDataExchangeReceiver</a> below.</p>
 <h4 id="opening-a-queue"><a class="header" href="#opening-a-queue">Opening a queue</a></h4>
 <p>The main operation for a plug-in is to open a queue via the handler before the plug-in is activated
 (but it must be connected to the edit controller via the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a> when the plug-in is using
 the recommended separation of edit controller and audio processor). The best place to do this is in
-the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#aefb5731b94dbc899a4a7e9cd1c96e6a2">IAudioProcessor::setupProcessing</a> method as this is also the place where the plug-in knows the
+the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#aefb5731b94dbc899a4a7e9cd1c96e6a2">IAudioProcessor::setupProcessing</a> method, as this is also the place where the plug-in identifies the
 sample rate and maximum block size which the plug-in may need to calculate the queue block size.
-When a queue is opened the edit controller gets a notification about it and the controller can
+When a queue is opened, the edit controller is notified of this, and the controller can
 decide if it wishes to receive the data on the main thread or the background thread.</p>
 <h4 id="sending-data"><a class="header" href="#sending-data">Sending data</a></h4>
-<p>In the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IAudioProcessor::process</a> call the plug-in can now lock a block from the handler, fill it and
-when done free the block via the handler which then sends the block to the edit controller. The edit
+<p>In the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IAudioProcessor::process</a> call, the plug-in can now lock a block from the handler and fill it. When done, it can free the block via the handler, which then sends the block to the edit controller. The edit
 controller then receives the block either on the main thread or on a background thread depending on
 the setup of the queue.
-The host guarantees that all blocks are send before the plug-in is deactivated.</p>
+The host guarantees that all blocks are sent before the plug-in is deactivated.</p>
 <h4 id="closing-a-queue"><a class="header" href="#closing-a-queue">Closing a queue</a></h4>
-<p>The audio processor must close an opened queue and this has to be done after the processor was
-deactivated and before it is disconnected from the edit controller (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a>).</p>
+<p>The audio processor must close an open queue. This need to be done after deactivating the processor and prior to disconnecting it from the edit controller (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a>).</p>
 <h4 id="what-to-do-when-the-queue-is-full-and-no-block-can-be-locked"><a class="header" href="#what-to-do-when-the-queue-is-full-and-no-block-can-be-locked">What to do when the queue is full and no block can be locked?</a></h4>
-<p>The plug-in needs to be prepared for this situation as constraints in the overall system may cause
-the queue to get full. If you need to get this information to the controller you can declare a
-hidden parameter which you set to a special value and send this parameter change in your audio
+<p>The plug-in needs to be prepared for this situation, as constraints in the overall system may cause the queue to fill up excessively. If you need to transfer the information to the controller, you can declare a hidden parameter, which you can set to a special value and send this parameter change in your audio
 process method.</p>
 <h3 id="idataexchangereceiver"><a class="header" href="#idataexchangereceiver">IDataExchangeReceiver</a></h3>
 <p>The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html">IDataExchangeReceiver</a> interface must be implemented by the edit controller of the plug-in.
-The host will call the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a64d0de322b49fd27b815e10947d98f65">queueOpened</a> method when an exchange queue is opened by the processor and later
-when the processor closes the queue the host will call the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a37b2181ff0ae9bdc0a6feee03b65df42">queueClosed</a> method.</p>
-<p>While the queue is open, the host will call the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#af8c495fafdf429794e5b58709a403eaf">onDataExchangeBlocksReceived</a> method whenever the 
-processor has send data.</p>
-<p>The edit controller can decide in the call to <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a64d0de322b49fd27b815e10947d98f65">queueOpened</a> if the host should deliver the data on a 
-background thread or on the UI thread.</p>
+The host will call the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a64d0de322b49fd27b815e10947d98f65">queueOpened</a> method when an exchange queue is opened by the processor. Later when the processor closes the queue, the host will call the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a37b2181ff0ae9bdc0a6feee03b65df42">queueClosed</a> method.</p>
+<p>While the queue is open, the host will call the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#af8c495fafdf429794e5b58709a403eaf">onDataExchangeBlocksReceived</a> method whenever the processor has sent data.</p>
+<p>The edit controller can decide in the call to <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html#a64d0de322b49fd27b815e10947d98f65">queueOpened</a> if the host should deliver the data on a background thread or on the UI thread.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Workflow+Diagrams/../../">VST Home</a> / <a href="pages/Technical+Documentation/Workflow+Diagrams/../Index.html">Technical Documentation</a></p>
 <h1 id="vst-3-workflow-diagrams-1"><a class="header" href="#vst-3-workflow-diagrams-1">VST 3 Workflow Diagrams</a></h1>
@@ -6101,7 +6094,7 @@ Links, Symbolic links or Shortcuts could be used from these predefined folders.<
 </ul>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
-The host should scan at first higher level of priority, first found plug-in (for a given Processor UID) has to be used.</p>
+The host should scan, at first, higher level of priority. First found plug-in (for a given Processor UID) has to be used.</p>
 </blockquote>
 <h3 id="on-macos-platform"><a class="header" href="#on-macos-platform">On macOS platform</a></h3>
 <p>On the macOS platform, the host application expects <strong>VST 3</strong> plug-ins to be located in:</p>
@@ -6349,7 +6342,7 @@ Each path defined below should be scanned in the given priority, presets extract
 <li><a href="pages/Technical+Documentation/Provide+A+Runloop+On+Linux/Index.html#query-irunloop-from-the-host-context-of-iplugfactory3">Query IRunLoop from the host context of IPlugFactory3</a></li>
 </ul>
 <hr />
-<p>On <em>Linux</em> there is no global event run loop like on <em>Windows</em> and <em>macOS</em>. For this reason the plug-in can query for an <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1Linux_1_1IRunLoop.html">Linux::IRunLoop</a> which must be provided by the host application in two different ways.</p>
+<p>On <em>Linux</em>, there is no global event run loop like on <em>Windows</em> and <em>macOS</em>. For this reason, the plug-in can query for an <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1Linux_1_1IRunLoop.html">Linux::IRunLoop</a> which must be provided by the host application in two different ways.</p>
 <h2 id="query-irunloop-from-iplugframe"><a class="header" href="#query-irunloop-from-iplugframe">Query IRunLoop from IPlugFrame</a></h2>
 <p>The host application must provide the <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1Linux_1_1IRunLoop.html">Linux::IRunLoop</a> via <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html">IPlugFrame</a> (by calling <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#ab0f059918bbf55ce110fc410240de423">IPlugView::setFrame</a>).</p>
 <pre><code class="language-cpp">// Plug-in implementation
@@ -6712,11 +6705,11 @@ tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int
 <p>Here an example of Side-Chaining for a Instrument in Cubase</p>
 <h2 id="how-can-i-implement-a-side-chain-path-into-my-plug-in"><a class="header" href="#how-can-i-implement-a-side-chain-path-into-my-plug-in">How can I implement a Side-chain path into my plug-in?</a></h2>
 <p>In AudioEffect::initialize (FUnknown* context) you must add the required bus- and speaker configuration of your plug-in.
-For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look like this:</p>
+For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look in the following way:</p>
 <pre><code class="language-c++">addAudioInput (USTRING (&quot;Stereo In&quot;), SpeakerArr::kStereo);
 addAudioOutput (USTRING (&quot;Stereo Out&quot;), SpeakerArr::kStereo);
  
-// In addition, adding a stereo side-chain bus would look like this:
+// In addition, adding a stereo side-chain bus would look in the following way:
 addAudioInput (USTRING (&quot;Aux In&quot;), SpeakerArr::kStereo, kAux, 0); // 0 here means not activated by default wanted
 </code></pre>
 <h2 id="audio-bus-channel-configuration"><a class="header" href="#audio-bus-channel-configuration">Audio bus Channel Configuration</a></h2>
@@ -6814,7 +6807,7 @@ plug-in return: kResultOk
 </code></pre>
 <p>The host will call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> (for Input and Output) in order to check the new requested arrangement and then the host will call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> (called in suspend state: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">setActive</a> (false)) to confirm the requested arrangement.</p>
 <h3 id="my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this"><a class="header" href="#my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">My plug-in has mono input and stereo output. How does VST 3 handle this?</a></h3>
-<p>There are two ways to instantiate a plug-in like this.</p>
+<p>There are two ways to instantiate a plug-in in the following way:</p>
 <ul>
 <li><strong>Way 1</strong></li>
 </ul>
@@ -7138,7 +7131,7 @@ tresult PLUGIN_API MyEditController::getMidiControllerAssignment (int32 busIndex
 <li>[optional]</li>
 </ul>
 <h2 id="dirty-state-support"><a class="header" href="#dirty-state-support">Dirty State Support</a></h2>
-<p>This allows the plug-in to tell the host that its internal state is dirty or not, if set to true it means that something besides parameters has changed since last save, then the host should apply a save before quitting.</p>
+<p>This allows the plug-in to tell the host that its internal state is dirty or not. If set to true, it means that after saving, there have been further changes, in addition to the parameter changes. In this case, the host should save before quitting.</p>
 <pre><code class="language-c++">void MyPluginController::informHostAboutMyDirtyState (bool dirty)
 {
     FUnknownPtr&lt;IComponentHandler2&gt; componentHandler2 (componentHandler);
@@ -7503,7 +7496,7 @@ tresult MyExampleProcessor::process (ProcessData&amp; data)
 </ul>
 <hr />
 <h2 id="introduction-21"><a class="header" href="#introduction-21">Introduction</a></h2>
-<p>Allows information exchange between the plug-in and host about which key switches are currently used.</p>
+<p>Allows information exchange between the plug-in and the host about which key switches are currently used.</p>
 <p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a> for key switches support: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html">Vst::IKeyswitchController</a></p>
 <ul>
 <li>[plug imp]</li>
@@ -7511,8 +7504,8 @@ tresult MyExampleProcessor::process (ProcessData&amp; data)
 <li>[released: 3.5.0]</li>
 <li>[optional]</li>
 </ul>
-<p>Some instrument plug-ins support key switching functionality, which allows the user to switch between different layered sounds while playing notes. To achieve this, the user has to press a specific key associated to the wanted layer before playing new notes.</p>
-<p>A typical example is a sample-based player plug-in with a violin sound, which can include different layers or articulations: pizzicato, legato, tremolo, etc. By pressing or by keeping pressed a specific key, for example C-1, before playing new notes, the plug-in will choose to play pizzicato, by using D-1, it will play legato, and so on.</p>
+<p>Some instrument plug-ins support key switching functionality, which allows the users to switch between different layered sounds while playing notes. To achieve this, the users have to press a specific key associated to the wanted layer before playing new notes.</p>
+<p>A typical example is a sample-based player plug-in with a violin sound, which can include different layers or articulations: pizzicato, legato, tremolo, etc. By pressing and/or holding a specific key, for example C-1, before playing new notes, the plug-in will choose to play pizzicato, by using D-1, it will play legato, and so on.</p>
 <p>With <a href="https://www.steinberg.net/de/technology/">VST Expression Map</a> (introduced by Steinberg in Cubase 5), these key switches can be used in the Score Editor, to associate a symbol (articulation) to a note. Each time this note is played, the corresponding key switch will be used (sent to the plug-in as noteOn event).</p>
 <p><a href="https://www.youtube.com/watch?v=D5dj1v6EL2M"><img src="https://i.ytimg.com/vi/D5dj1v6EL2M/maxresdefault.jpg" alt="getting_started_vid_7" /></a></p>
 <p>In order to help the creation of such a map, VST 3.5 defines a new interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html">Steinberg::Vst::IKeyswitchController</a>. If an (instrument) plug-in supports such an interface, the host can get the current set of used key switches from the plug-in (megatrigg / articulation: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1KeyswitchInfo.html">Steinberg::Vst::KeyswitchInfo</a>) for a given channel of an event bus, and then automatically use them (like in <strong>Cubase 6</strong>) to create a <a href="https://o.steinberg.net/en/support/content_and_accessories/expression_maps_for_vst_expression.html">VST Expression Map</a>.</p>
@@ -7716,8 +7709,8 @@ tresult MyExampleProcessor::process (ProcessData&amp; data)
 </ul>
 <hr />
 <h2 id="introduction-22"><a class="header" href="#introduction-22">Introduction</a></h2>
-<p>How to better support remote (UI and hardware) for parameters.</p>
-<p>Since VST 3.5, a new interface is provided: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IXmlRepresentationController.html">Vst::IXmlRepresentationController</a></p>
+<p>How to better support remote devices/controllers (UI and hardware) for parameters.</p>
+<p>Since VST 3.5, a new interface is available: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IXmlRepresentationController.html">Vst::IXmlRepresentationController</a></p>
 <p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a> for a component: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IXmlRepresentationController.html">Vst::IXmlRepresentationController</a></p>
 <ul>
 <li>[plug imp]</li>
@@ -7972,7 +7965,7 @@ void popupContextMenu (IComponentHandler* componentHandler, IPlugView* view, con
     IContextMenu* menu = handler-&gt;createContextMenu (view, paramID);
     if (menu)
     {
-        // here you can add your entries (optional)
+        // here, you can add your entries (optional)
         PluginContextMenuTarget* target = new PluginContextMenuTarget ();
          
         IContextMenu::Item item = {0};
@@ -8540,7 +8533,7 @@ The file name must start with the unique ID of the audio processor printed in th
 <li>[released: 3.6.11]</li>
 <li>[optional]</li>
 </ul>
-<p>With this plug-in interface, the host can retrieve the preferred physical mapping associated to note expression supported by the plug-in.When the mapping changes (for example, when switching presets) the plug-in needs to inform the host about it via <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">IComponentHandler::restartComponent</a> (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a17867782006f9fdb2b72c16b0420bed5aa11fe6e24349c6d2f7e0035dbc01c10b">kNoteExpressionChanged</a>).</p>
+<p>With this plug-in interface, the host can retrieve the preferred physical mapping associated to note expression supported by the plug-in. When the mapping changes (for example, when switching presets), the plug-in needs to inform the host about it via <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">IComponentHandler::restartComponent</a> (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a17867782006f9fdb2b72c16b0420bed5aa11fe6e24349c6d2f7e0035dbc01c10b">kNoteExpressionChanged</a>).</p>
 <h2 id="example-10"><a class="header" href="#example-10">Example</a></h2>
 <p><strong>In mycontroller.h</strong></p>
 <pre><code class="language-c++">//------------------------------------------------------------------------
@@ -8861,7 +8854,7 @@ if (functionName)
 <li>[released: 3.7.0]</li>
 <li>[optional]</li>
 </ul>
-<p>Allows the plug-in to request the host to create a progress for some specific tasks which take some time. The host can visualize the progress as read-only UI elements. For example, after loading a project where a plug-in needs to load extra data (e.g. samples) in a background thread, this enables the host to get and visualize the current status of the loading progress and to inform the user when the loading is finished. Note: During the progress, the host can unload the plug-in at any time. Make sure that the plug-in supports this use case.</p>
+<p>Allows the plug-in to ask the host to create a progress for specific tasks which take some time. The host can visualize the progress as read-only UI elements. For example, after loading a project where a plug-in needs to load extra data (e.g. samples) in a background thread, this enables the host to get and visualize the current status of the loading progress and to inform the user when the loading is finished. Note: During the progress, the host can unload the plug-in at any time. Make sure that the plug-in supports this use case.</p>
 <h2 id="examples-4"><a class="header" href="#examples-4">Examples</a></h2>
 <h3 id="how-to-call-it-from-the-plug-in-side"><a class="header" href="#how-to-call-it-from-the-plug-in-side">How to call it from the plug-in side</a></h3>
 <pre><code class="language-c++">//--------------------------------------
@@ -8963,7 +8956,7 @@ Plug-Ins built with an earlier SDK version (&lt; 3.7) will still get the old inf
 <h2 id="plug-ins-module-info-file-moduleinfojson"><a class="header" href="#plug-ins-module-info-file-moduleinfojson">Plug-in’s module info file: moduleinfo.json</a></h2>
 <p>Check <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> for more information about the content of this file.</p>
 <h2 id="iplugincompatibility"><a class="header" href="#iplugincompatibility">IPluginCompatibility</a></h2>
-<p>If the plug-in could not deliver the <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> because it does not support bundle, it is possible to add to the plug-in factory this new interface <em>IPluginCompatibility</em>.</p>
+<p>If the plug-in could not deliver the <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> because it does not support bundle, it is possible to add the new interface <em>IPluginCompatibility</em> to the plug-in factory.</p>
 <h3 id="example-15"><a class="header" href="#example-15">Example</a></h3>
 <p><strong>In plugentry.cpp</strong>:</p>
 <pre><code class="language-c++">//------------------------------------------------------------------------
@@ -8973,7 +8966,7 @@ class PluginCompatibility : public FObject, public IPluginCompatibility
     //...
     tresult PLUGIN_API getCompatibilityJSON (IBStream* stream) override
     {
-      /* write in the stream the JSON compatibility array
+      /* write the JSON compatibility array into the stream
       [
           {
               &quot;New&quot;: &quot;BD58B550F9E5634E9D2EFF39EA0927B1&quot;,
@@ -9024,7 +9017,7 @@ BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb, stringCompanyEmail)
 </ul>
 <hr />
 <h2 id="introduction-44"><a class="header" href="#introduction-44">Introduction</a></h2>
-<p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a> for an edit controller, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandlerSystemTime.html">IComponentHandlerSystemTime</a> allows the plug-in to ask for the current systemTime (this should be the kind of time reference than the one used in ProcessContext::systemTime).</p>
+<p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a> for an edit controller, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandlerSystemTime.html">IComponentHandlerSystemTime</a> allows the plug-in to ask for the current systemTime (this should be the same kind of time reference than the one used in ProcessContext::systemTime, this one is not compensated like the one of the ProcessContext).</p>
 <ul>
 <li>[host imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>]</li>
@@ -10081,7 +10074,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 <ul>
 <li>support of IPlugInterfaceSupport</li>
 <li>support of MPE</li>
-<li>possibility to open 2 times the same plug-in editor</li>
+<li>possibility to open the same plug-in editor twice</li>
 </ul>
 </li>
 </ul>
@@ -10218,7 +10211,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 <li>refactoring AAX/VST 2 Wrappers</li>
 <li>AAX Wrapper (<a href="pages/Versions/../What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.html">VST 3 - AAX Wrapper</a>):
 <ul>
-<li>fix Bypass behaviour</li>
+<li>fix Bypass behavior</li>
 <li>fix initial signal latency</li>
 <li>fix indexing of parameter, conflicting with VST 2</li>
 </ul>
@@ -10432,7 +10425,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </li>
 <li>new Developer Forum:
 <ul>
-<li>finally we get our VST forum at start, please check <a href="https://sdk.steinberg.net">https://sdk.steinberg.net</a> and use it as new communication platform, the VST mailing list will be kept as archive mailing list</li>
+<li>finally, we get our VST forum at start, please check <a href="https://sdk.steinberg.net">https://sdk.steinberg.net</a> and use it as new communication platform, the VST mailing list will be kept as archive mailing list</li>
 </ul>
 </li>
 </ul>
@@ -11063,7 +11056,7 @@ The offline processing mode (passed in the process call) is used when:</p>
 </ul>
 <hr />
 <h2 id="q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one"><a class="header" href="#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one">Q: How can I update my VST 2 version of my plug-in to a VST 3 version and be sure that Cubase will load it instead of my old one?</a></h2>
-<p>You have to provide a special UID for your <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivstaudioprocessor_8h.html#ae55c95a44e931e1cd78998c94bc65ee1">kVstAudioEffectClass</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivsteditcontroller_8h.html#a49d6f6f53c7630ea334474e9998c0a99">kVstComponentControllerClass</a> components, based on its <strong>VST 2</strong> UniqueID (4 characters) and its plug-in name like this:</p>
+<p>You have to provide a special UID for your <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivstaudioprocessor_8h.html#ae55c95a44e931e1cd78998c94bc65ee1">kVstAudioEffectClass</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivsteditcontroller_8h.html#a49d6f6f53c7630ea334474e9998c0a99">kVstComponentControllerClass</a> components, based on its <strong>VST 2</strong> UniqueID (4 characters) and its plug-in name in the following way:</p>
 <pre><code class="language-c++">static void convertVST2UID_To_FUID (FUID&amp; newOne, int32 myVST2UID_4Chars, const char* pluginName, bool forControllerUID = false)
 {
     char uidString[33];
@@ -11145,7 +11138,7 @@ tresult <em>PLUGIN_API Processor::setState (IBStream</em> state)* in the file <e
 <hr />
 <h2 id="q-ive-already-released-a-vst-3-plug-in-with-a-different-uid-than-its-vst-2-equivalent-how-can-i-declare-that-the-vst-3-plug-in-can-replace-its-vst-2-plug-in-counterpart"><a class="header" href="#q-ive-already-released-a-vst-3-plug-in-with-a-different-uid-than-its-vst-2-equivalent-how-can-i-declare-that-the-vst-3-plug-in-can-replace-its-vst-2-plug-in-counterpart">Q: I've already released a VST 3 plug-in with a different UID than its VST 2 equivalent. How can I declare that the VST 3 plug-in can replace its VST 2 plug-in counterpart?</a></h2>
 <p>You can use the compatibility array of the <a href="pages/FAQ/../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> file.
-There you use the UID of your <strong>VST 3</strong> audio effect class as the &quot;New&quot; UID and put the UID of your <strong>VST 2</strong> plug-in in the &quot;Old&quot; array.</p>
+There, you use the UID of your <strong>VST 3</strong> audio effect class as the &quot;New&quot; UID and put the UID of your <strong>VST 2</strong> plug-in in the &quot;Old&quot; array.</p>
 <p>If you cannot use the <a href="pages/FAQ/../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> file, you can create a class that implements the <a href="pages/FAQ/../Technical+Documentation/Change+History/3.7.5/ModuleInfo.html">IPluginCompatibility</a> interface which you must provide to the host via your plug-in factory.</p>
 <hr />
 <h2 id="q-in-vst-2-the-editor-was-able-to-access-the-processing-part-named-effect-directly-how-can-i-do-this-in-vst-3"><a class="header" href="#q-in-vst-2-the-editor-was-able-to-access-the-processing-part-named-effect-directly-how-can-i-do-this-in-vst-3">Q: In VST 2 the editor was able to access the processing part, named effect, directly. How can I do this in VST 3?</a></h2>
@@ -11241,7 +11234,7 @@ if (component-&gt;setActive (true) != kResultOK)
 <hr />
 <h2 id="q-why-do-plug-ins-need-subcategories"><a class="header" href="#q-why-do-plug-ins-need-subcategories">Q: Why do plug-ins need subcategories?</a></h2>
 <p>When you export your plug-in in the factory instance (check <em>againentry.cpp</em>: DEF_CLASS2), you have to define a subcategory string (can be a combination of more than one string: like &quot;<strong>Fx|Dynamics|EQ</strong>&quot; for example).</p>
-<p>Currently the subcategory string is used by <strong>Cubase</strong>/<strong>Nuendo</strong> to organize the plug-ins menu like this:</p>
+<p>Currently the subcategory string is used by <strong>Cubase</strong>/<strong>Nuendo</strong> to organize the plug-ins menu in the following way:</p>
 <pre><code class="language-c++">// Computation of Folder Name (SubCategories =&gt; folder in menu)
 &quot;Fx&quot;                        =&gt; &quot;Other&quot;
 &quot;Fx|Delay&quot;                  =&gt; &quot;Delay&quot;

@@ -194,7 +194,7 @@
 <li>[optional]</li>
 </ul>
 <h2 id="dirty-state-support"><a class="header" href="#dirty-state-support">Dirty State Support</a></h2>
-<p>This allows the plug-in to tell the host that its internal state is dirty or not, if set to true it means that something besides parameters has changed since last save, then the host should apply a save before quitting.</p>
+<p>This allows the plug-in to tell the host that its internal state is dirty or not. If set to true, it means that after saving, there have been further changes, in addition to the parameter changes. In this case, the host should save before quitting.</p>
 <pre><code class="language-c++">void MyPluginController::informHostAboutMyDirtyState (bool dirty)
 {
     FUnknownPtr&lt;IComponentHandler2&gt; componentHandler2 (componentHandler);

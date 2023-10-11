@@ -183,7 +183,7 @@
 </ul>
 <hr />
 <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
-<p>Allows information exchange between the plug-in and host about which key switches are currently used.</p>
+<p>Allows information exchange between the plug-in and the host about which key switches are currently used.</p>
 <p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a> for key switches support: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html">Vst::IKeyswitchController</a></p>
 <ul>
 <li>[plug imp]</li>
@@ -191,8 +191,8 @@
 <li>[released: 3.5.0]</li>
 <li>[optional]</li>
 </ul>
-<p>Some instrument plug-ins support key switching functionality, which allows the user to switch between different layered sounds while playing notes. To achieve this, the user has to press a specific key associated to the wanted layer before playing new notes.</p>
-<p>A typical example is a sample-based player plug-in with a violin sound, which can include different layers or articulations: pizzicato, legato, tremolo, etc. By pressing or by keeping pressed a specific key, for example C-1, before playing new notes, the plug-in will choose to play pizzicato, by using D-1, it will play legato, and so on.</p>
+<p>Some instrument plug-ins support key switching functionality, which allows the users to switch between different layered sounds while playing notes. To achieve this, the users have to press a specific key associated to the wanted layer before playing new notes.</p>
+<p>A typical example is a sample-based player plug-in with a violin sound, which can include different layers or articulations: pizzicato, legato, tremolo, etc. By pressing and/or holding a specific key, for example C-1, before playing new notes, the plug-in will choose to play pizzicato, by using D-1, it will play legato, and so on.</p>
 <p>With <a href="https://www.steinberg.net/de/technology/">VST Expression Map</a> (introduced by Steinberg in Cubase 5), these key switches can be used in the Score Editor, to associate a symbol (articulation) to a note. Each time this note is played, the corresponding key switch will be used (sent to the plug-in as noteOn event).</p>
 <p><a href="https://www.youtube.com/watch?v=D5dj1v6EL2M"><img src="https://i.ytimg.com/vi/D5dj1v6EL2M/maxresdefault.jpg" alt="getting_started_vid_7" /></a></p>
 <p>In order to help the creation of such a map, VST 3.5 defines a new interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IKeyswitchController.html">Steinberg::Vst::IKeyswitchController</a>. If an (instrument) plug-in supports such an interface, the host can get the current set of used key switches from the plug-in (megatrigg / articulation: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1KeyswitchInfo.html">Steinberg::Vst::KeyswitchInfo</a>) for a given channel of an event bus, and then automatically use them (like in <strong>Cubase 6</strong>) to create a <a href="https://o.steinberg.net/en/support/content_and_accessories/expression_maps_for_vst_expression.html">VST Expression Map</a>.</p>

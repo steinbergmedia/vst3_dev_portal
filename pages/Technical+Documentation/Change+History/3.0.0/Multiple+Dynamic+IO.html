@@ -315,11 +315,11 @@ tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int
 <p>Here an example of Side-Chaining for a Instrument in Cubase</p>
 <h2 id="how-can-i-implement-a-side-chain-path-into-my-plug-in"><a class="header" href="#how-can-i-implement-a-side-chain-path-into-my-plug-in">How can I implement a Side-chain path into my plug-in?</a></h2>
 <p>In AudioEffect::initialize (FUnknown* context) you must add the required bus- and speaker configuration of your plug-in.
-For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look like this:</p>
+For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look in the following way:</p>
 <pre><code class="language-c++">addAudioInput (USTRING (&quot;Stereo In&quot;), SpeakerArr::kStereo);
 addAudioOutput (USTRING (&quot;Stereo Out&quot;), SpeakerArr::kStereo);
  
-// In addition, adding a stereo side-chain bus would look like this:
+// In addition, adding a stereo side-chain bus would look in the following way:
 addAudioInput (USTRING (&quot;Aux In&quot;), SpeakerArr::kStereo, kAux, 0); // 0 here means not activated by default wanted
 </code></pre>
 <h2 id="audio-bus-channel-configuration"><a class="header" href="#audio-bus-channel-configuration">Audio bus Channel Configuration</a></h2>
@@ -417,7 +417,7 @@ plug-in return: kResultOk
 </code></pre>
 <p>The host will call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#adac76e90d4a18622d818c8204f937f94">Vst::IAudioProcessor::getBusArrangement</a> (for Input and Output) in order to check the new requested arrangement and then the host will call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#ad3bc7bac3fd3b194122669be2a1ecc42">Vst::IAudioProcessor::setBusArrangements</a> (called in suspend state: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517">setActive</a> (false)) to confirm the requested arrangement.</p>
 <h3 id="my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this"><a class="header" href="#my-plug-in-has-mono-input-and-stereo-output-how-does-vst-3-handle-this">My plug-in has mono input and stereo output. How does VST 3 handle this?</a></h3>
-<p>There are two ways to instantiate a plug-in like this.</p>
+<p>There are two ways to instantiate a plug-in in the following way:</p>
 <ul>
 <li><strong>Way 1</strong></li>
 </ul>

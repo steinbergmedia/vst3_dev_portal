@@ -287,7 +287,7 @@ struct DataBlock
 </code></pre>
 <p>So, we want to send the sample rate, size, the number of channels and the number of samples plus 
 the actual samples to the controller.</p>
-<p>To actually work with this <code>DataBlock</code> struct we introduce a little helper function we also add to
+<p>To actually work with this <code>DataBlock</code> struct, we introduce a little helper function that we also add to
 this header:</p>
 <pre><code class="language-c++">inline DataBlock* toDataBlock (const Vst::DataExchangeBlock&amp; block)
 {
@@ -296,7 +296,7 @@ this header:</p>
     return nullptr;
 }
 </code></pre>
-<p>One thing is left to do before we can implement the sending of the data and that is that we need a 
+<p>One thing remains to be done before we can start sending the data: We need a 
 member variable of the Vst::DataExchangeBlock struct where we store the actual block we work with
 while processing the audio. So we add this to our processor defintion:</p>
 <pre><code class="language-c++">class DataExchangeProcessor : public Vst::AudioEffect
@@ -305,7 +305,7 @@ private:
     Vst::DataExchangeBlock currentExchangeBlock {InvalidDataExchangeBlock};
 }
 </code></pre>
-<p>Now lets start to implement the processing:</p>
+<p>Now let's start to implement the processing:</p>
 <pre><code class="language-c++">tresult PLUGIN_API DataExchangeProcessor::process (Vst::ProcessData&amp; processData)
 {
     if (processData.numSamples &lt;= 0)
@@ -323,7 +323,7 @@ private:
     // ...
 }
 </code></pre>
-<p>We only want to acquire a new block if we have't already. So we check for this first and then we
+<p>We only want to acquire a new block if we have not already done so. Therefore, we need to check this before we
 call the <code>acquireNewExchangeBlock</code> method that does this:</p>
 <pre><code class="language-c++">void DataExchangeProcessor::acquireNewExchangeBlock ()
 {
@@ -379,7 +379,7 @@ the block is filled with 1 second of audio data:</p>
 </code></pre>
 <p>When it is filled with 1 second of audio data we send the block with <code>dataExchange-&gt;sendCurrentBlock()</code>
 and directly acquire a new block afterwards.</p>
-<p>Finally we need to copy back the input audio buffers to the output audio buffers. The whole method
+<p>Finally, we need to copy back the input audio buffers to the output audio buffers. The whole method
 looks like this then:</p>
 <pre><code class="language-c++">tresult PLUGIN_API DataExchangeProcessor::process (Vst::ProcessData&amp; processData)
 {
@@ -458,7 +458,7 @@ private:
 }
 </code></pre>
 <p>First, we need to forward messages to the <code>DataExchangeReceiverHandler</code> so that it can process the
-data exchange messages when the host does not support the native API:</p>
+data exchange messages in case the host does not support the native API:</p>
 <pre><code class="language-c++">tresult PLUGIN_API DataExchangeController::notify (Vst::IMessage* message)
 {
     if (dataExchange.onMessage (message))
@@ -466,7 +466,7 @@ data exchange messages when the host does not support the native API:</p>
     return EditControllerEx1::notify (message);
 }
 </code></pre>
-<p>And next we can implement the <code>IDataExchangeReceiver</code> methods:</p>
+<p>In the next step, we can implement the <code>IDataExchangeReceiver</code> methods:</p>
 <pre><code class="language-c++">void PLUGIN_API DataExchangeController::queueOpened (Vst::DataExchangeUserContextID userContextID,
                                                      uint32 blockSize,
                                                      bool&amp; dispatchOnBackgroundThread)
@@ -494,7 +494,7 @@ void PLUGIN_API DataExchangeController::onDataExchangeBlocksReceived (
     }
 }
 </code></pre>
-<p>The <code>onDataExchangeBlocksReceived()</code> method will be called whenever the processor has send a block.
+<p>The <code>onDataExchangeBlocksReceived()</code> method will be called each time the processor has sent a block.
 You can now do whatever you want with the data.</p>
 <p>If you want the data to be dispatched on a background thread you need to set the
 <code>dispatchOnBackgroundThread</code> variable to true in the <code>queueOpened</code> method. </p>

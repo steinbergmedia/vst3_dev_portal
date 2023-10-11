@@ -222,7 +222,7 @@ if (component-&gt;setActive (true) != kResultOK)
 <hr />
 <h2 id="q-why-do-plug-ins-need-subcategories"><a class="header" href="#q-why-do-plug-ins-need-subcategories">Q: Why do plug-ins need subcategories?</a></h2>
 <p>When you export your plug-in in the factory instance (check <em>againentry.cpp</em>: DEF_CLASS2), you have to define a subcategory string (can be a combination of more than one string: like &quot;<strong>Fx|Dynamics|EQ</strong>&quot; for example).</p>
-<p>Currently the subcategory string is used by <strong>Cubase</strong>/<strong>Nuendo</strong> to organize the plug-ins menu like this:</p>
+<p>Currently the subcategory string is used by <strong>Cubase</strong>/<strong>Nuendo</strong> to organize the plug-ins menu in the following way:</p>
 <pre><code class="language-c++">// Computation of Folder Name (SubCategories =&gt; folder in menu)
 &quot;Fx&quot;                        =&gt; &quot;Other&quot;
 &quot;Fx|Delay&quot;                  =&gt; &quot;Delay&quot;

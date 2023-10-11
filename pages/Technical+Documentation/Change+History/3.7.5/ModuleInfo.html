@@ -198,7 +198,7 @@
 <h2 id="plug-ins-module-info-file-moduleinfojson"><a class="header" href="#plug-ins-module-info-file-moduleinfojson">Plug-in’s module info file: moduleinfo.json</a></h2>
 <p>Check <a href="../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> for more information about the content of this file.</p>
 <h2 id="iplugincompatibility"><a class="header" href="#iplugincompatibility">IPluginCompatibility</a></h2>
-<p>If the plug-in could not deliver the <a href="../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> because it does not support bundle, it is possible to add to the plug-in factory this new interface <em>IPluginCompatibility</em>.</p>
+<p>If the plug-in could not deliver the <a href="../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> because it does not support bundle, it is possible to add the new interface <em>IPluginCompatibility</em> to the plug-in factory.</p>
 <h3 id="example"><a class="header" href="#example">Example</a></h3>
 <p><strong>In plugentry.cpp</strong>:</p>
 <pre><code class="language-c++">//------------------------------------------------------------------------
@@ -208,7 +208,7 @@ class PluginCompatibility : public FObject, public IPluginCompatibility
     //...
     tresult PLUGIN_API getCompatibilityJSON (IBStream* stream) override
     {
-      /* write in the stream the JSON compatibility array
+      /* write the JSON compatibility array into the stream
       [
           {
               &quot;New&quot;: &quot;BD58B550F9E5634E9D2EFF39EA0927B1&quot;,

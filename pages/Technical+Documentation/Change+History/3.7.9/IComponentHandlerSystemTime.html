@@ -179,7 +179,7 @@
 </ul>
 <hr />
 <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
-<p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a> for an edit controller, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandlerSystemTime.html">IComponentHandlerSystemTime</a> allows the plug-in to ask for the current systemTime (this should be the kind of time reference than the one used in ProcessContext::systemTime).</p>
+<p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a> for an edit controller, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandlerSystemTime.html">IComponentHandlerSystemTime</a> allows the plug-in to ask for the current systemTime (this should be the same kind of time reference than the one used in ProcessContext::systemTime, this one is not compensated like the one of the ProcessContext).</p>
 <ul>
 <li>[host imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>]</li>

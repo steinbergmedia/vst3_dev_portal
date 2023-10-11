@@ -178,7 +178,7 @@
 <li><a href="#query-irunloop-from-the-host-context-of-iplugfactory3">Query IRunLoop from the host context of IPlugFactory3</a></li>
 </ul>
 <hr />
-<p>On <em>Linux</em> there is no global event run loop like on <em>Windows</em> and <em>macOS</em>. For this reason the plug-in can query for an <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1Linux_1_1IRunLoop.html">Linux::IRunLoop</a> which must be provided by the host application in two different ways.</p>
+<p>On <em>Linux</em>, there is no global event run loop like on <em>Windows</em> and <em>macOS</em>. For this reason, the plug-in can query for an <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1Linux_1_1IRunLoop.html">Linux::IRunLoop</a> which must be provided by the host application in two different ways.</p>
 <h2 id="query-irunloop-from-iplugframe"><a class="header" href="#query-irunloop-from-iplugframe">Query IRunLoop from IPlugFrame</a></h2>
 <p>The host application must provide the <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1Linux_1_1IRunLoop.html">Linux::IRunLoop</a> via <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html">IPlugFrame</a> (by calling <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#ab0f059918bbf55ce110fc410240de423">IPlugView::setFrame</a>).</p>
 <pre><code class="language-cpp">// Plug-in implementation

@@ -260,12 +260,12 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 <hr />
 <h2 id="available-smtg-cmake-options"><a class="header" href="#available-smtg-cmake-options">Available SMTG cmake options</a></h2>
 <ul>
-<li><strong>SMTG_AAX_SDK_PATH</strong>: Here you can define where the AAX SDK is located (if needed)</li>
+<li><strong>SMTG_AAX_SDK_PATH</strong>: Here, you can define where the AAX SDK is located (if needed)</li>
 <li><strong>SMTG_ENABLE_VST3_HOSTING_EXAMPLES</strong>: Enable <strong>VST 3</strong> Hosting Examples (default ON)</li>
 <li><strong>SMTG_ENABLE_VST3_PLUGIN_EXAMPLES</strong>: Enable <strong>VST 3</strong> Plug-in Examples (default ON)</li>
 <li><strong>SMTG_ENABLE_VSTGUI_SUPPORT</strong>: Enable VSTGUI Support (default ON)</li>
 <li><strong>SMTG_BUILD_UNIVERSAL_BINARY</strong>: Build universal binary (32 &amp; 64 bit) (Mac only)</li>
-<li><strong>SMTG_COREAUDIO_SDK_PATH</strong>: Here you can define where the COREAUDIO SDK is located (Mac only, if needed)</li>
+<li><strong>SMTG_COREAUDIO_SDK_PATH</strong>: Here, you can define where the COREAUDIO SDK is located (Mac only, if needed)</li>
 <li><strong>SMTG_CREATE_BUNDLE_FOR_WINDOWS</strong>: Create bundle on Windows for the <strong>VST 3</strong> plug-ins (new since 3.6.10! Windows only) (default ON)</li>
 <li><strong>SMTG_CREATE_MODULE_INFO</strong>: Create the moduleinfo.json file (default ON)</li>
 <li><strong>SMTG_CREATE_PLUGIN_LINK</strong>: Create symbolic link for each <strong>VST 3</strong> plug-in in ${VST3_FOLDER_NAME} folder (you need to have Administrator rights on Windows or change the Local Group Policy to allow the creation of symbolic links) (default ON)</li>
@@ -277,8 +277,8 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 <li><strong>SMTG_ENABLE_USE_OF_JACK</strong>: Allows you to create the audiohost application using Jack (default OFF)</li>
 <li><strong>SMTG_MDA_VST3_VST2_COMPATIBLE</strong>: Build the MDA examples as a replacement for their <strong>VST 2</strong> counterpart (default ON)</li>
 <li><strong>SMTG_IOS_DEVELOPMENT_TEAM</strong>: Needed for building the InterAppAudio and AUv3 examples for iOS (Mac only)</li>
-<li><strong>SMTG_MYPLUGINS_SRC_PATH</strong>: Here you can add your <strong>VST 3</strong> plug-ins folder</li>
-<li><strong>SMTG_PLUGIN_TARGET_PATH</strong>: Here you can redefine the <strong>VST 3</strong> plug-ins folder</li>
+<li><strong>SMTG_MYPLUGINS_SRC_PATH</strong>: Here, you can add your <strong>VST 3</strong> plug-ins folder</li>
+<li><strong>SMTG_PLUGIN_TARGET_PATH</strong>: Here, you can redefine the <strong>VST 3</strong> plug-ins folder</li>
 <li><strong>SMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON</strong>: use FOLDERID_UserProgramFilesCommon as <strong>VST 3</strong> target path (Windows only) (default ON)</li>
 <li><strong>SMTG_RENAME_ASSERT</strong>: Rename ASSERT to SMTG_ASSERT to avoid conflicts with 3rd party libraries (default ON)</li>
 <li><strong>SMTG_RUN_VST_VALIDATOR</strong>: Run the VST validator on <strong>VST 3</strong> plug-ins each time they are built (default ON)</li>

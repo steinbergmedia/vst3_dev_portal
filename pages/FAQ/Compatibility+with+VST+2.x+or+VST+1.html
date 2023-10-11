@@ -183,7 +183,7 @@
 </ul>
 <hr />
 <h2 id="q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one"><a class="header" href="#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one">Q: How can I update my VST 2 version of my plug-in to a VST 3 version and be sure that Cubase will load it instead of my old one?</a></h2>
-<p>You have to provide a special UID for your <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivstaudioprocessor_8h.html#ae55c95a44e931e1cd78998c94bc65ee1">kVstAudioEffectClass</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivsteditcontroller_8h.html#a49d6f6f53c7630ea334474e9998c0a99">kVstComponentControllerClass</a> components, based on its <strong>VST 2</strong> UniqueID (4 characters) and its plug-in name like this:</p>
+<p>You have to provide a special UID for your <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivstaudioprocessor_8h.html#ae55c95a44e931e1cd78998c94bc65ee1">kVstAudioEffectClass</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/ivsteditcontroller_8h.html#a49d6f6f53c7630ea334474e9998c0a99">kVstComponentControllerClass</a> components, based on its <strong>VST 2</strong> UniqueID (4 characters) and its plug-in name in the following way:</p>
 <pre><code class="language-c++">static void convertVST2UID_To_FUID (FUID&amp; newOne, int32 myVST2UID_4Chars, const char* pluginName, bool forControllerUID = false)
 {
     char uidString[33];
@@ -265,7 +265,7 @@ tresult <em>PLUGIN_API Processor::setState (IBStream</em> state)* in the file <e
 <hr />
 <h2 id="q-ive-already-released-a-vst-3-plug-in-with-a-different-uid-than-its-vst-2-equivalent-how-can-i-declare-that-the-vst-3-plug-in-can-replace-its-vst-2-plug-in-counterpart"><a class="header" href="#q-ive-already-released-a-vst-3-plug-in-with-a-different-uid-than-its-vst-2-equivalent-how-can-i-declare-that-the-vst-3-plug-in-can-replace-its-vst-2-plug-in-counterpart">Q: I've already released a VST 3 plug-in with a different UID than its VST 2 equivalent. How can I declare that the VST 3 plug-in can replace its VST 2 plug-in counterpart?</a></h2>
 <p>You can use the compatibility array of the <a href="../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> file.
-There you use the UID of your <strong>VST 3</strong> audio effect class as the &quot;New&quot; UID and put the UID of your <strong>VST 2</strong> plug-in in the &quot;Old&quot; array.</p>
+There, you use the UID of your <strong>VST 3</strong> audio effect class as the &quot;New&quot; UID and put the UID of your <strong>VST 2</strong> plug-in in the &quot;Old&quot; array.</p>
 <p>If you cannot use the <a href="../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> file, you can create a class that implements the <a href="../Technical+Documentation/Change+History/3.7.5/ModuleInfo.html">IPluginCompatibility</a> interface which you must provide to the host via your plug-in factory.</p>
 <hr />
 <h2 id="q-in-vst-2-the-editor-was-able-to-access-the-processing-part-named-effect-directly-how-can-i-do-this-in-vst-3"><a class="header" href="#q-in-vst-2-the-editor-was-able-to-access-the-processing-part-named-effect-directly-how-can-i-do-this-in-vst-3">Q: In VST 2 the editor was able to access the processing part, named effect, directly. How can I do this in VST 3?</a></h2>
