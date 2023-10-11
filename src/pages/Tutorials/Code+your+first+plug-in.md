@@ -107,7 +107,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
         for (int32 index = 0; index < numParamsChanged; index++)
         {
             // for this parameter we could iterate the list of value changes (could 1 per audio block or more!)
-            // in this example we get only the last value (getPointCount - 1)
+            // in this example, we get only the last value (getPointCount - 1)
             Vst::IParamValueQueue* paramQueue = data.inputParameterChanges->getParameterData (index);
             if (paramQueue)
             {
@@ -310,7 +310,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown* context)
 ```
 
 >ⓘ **Note**\
->In this example we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:
+>In this example, we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:
 >
 >addEventInput (STR16 ("Event In"), 4); // here 4 channels
 
@@ -409,7 +409,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 
 In our example we want to modulate our main audio input with a [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) audio input.
 
-1. First add a new side-chain audio input (busType: ***kAux***) in the **initialize** call of our processor:
+1. First, add a new side-chain audio input (busType: ***kAux***) in the **initialize** call of our processor:
 
 **plugprocessor.cpp**
 

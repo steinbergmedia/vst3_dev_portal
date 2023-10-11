@@ -26,15 +26,15 @@
 
 ## Tutorial - Advanced Techniques
 
-In this tutorial you will learn:
+In this tutorial, you will learn:
 
-- How to add nearly sample accurate parameter changes to an audio effect
-- Using C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing
-- Setting the state of the audio effect in a thread safe manner
+- How to add nearly sample-accurate parameter changes to an audio effect
+- How to use C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing
+- How to set the state of the audio effect in a thread safe manner
 
 ---
 
-## Part 1: Sample accurate parameter handling
+## Part 1: Sample-accurate parameter handling
 
 We will start by looking at this process function:
 
@@ -156,7 +156,7 @@ void MyEffect::handleParameterChanges (IParameterChanges*inputParameterChanges)
 
 in order to delegate the handling of the parameter changes to the *gainParameter* object.
 
-Now we just need another small change in the process lambda to use the nearly sample accurate *gain* value. We have to call the *gainParameter* object to *advance* the parameter value:
+Now we just need another small change in the process lambda to use the nearly sample-accurate *gain* value. We have to call the *gainParameter* object to *advance* the parameter value:
 
 ``` c++
 auto doProcessing = [this] (ProcessData& data) {
@@ -209,9 +209,9 @@ void MyEffect::process (ProcessData& data)
 }
 ```
 
-Now we have nearly sample accurate parameter changes support in this example. Every 8 samples the *gain* parameter will be updated to the correct value.
+Now we have nearly sample-accurate parameter changes support in this example. Every 8 samples the *gain* parameter will be updated to the correct value.
 
-It's very simple to make this 100% sample accurate, check out the **AGain sample accurate** example in the SDK.
+It's very simple to make this 100% sample-accurate, check out the **AGain Sample Accurate** example in the SDK.
 
 ---
 
@@ -221,7 +221,7 @@ The example currently only supports 32 bit processing. Now we will add 64 bit pr
 
 As you may have noticed above the *ProcessDataSlicer* uses a template parameter for its process function. This template parameter *SampleSize* defines the bit depth of the audio buffers in the *ProcessData* structure. This is currently hard-coded to be *SymbolicSampleSizes::kSample32*.
 
-In order to support *SymbolicSampleSizes::kSample64* we only have to make a few changes to the code. First we adopt the algorithm part by introducing a new templated method to our effect:
+In order to support *SymbolicSampleSizes::kSample64* we only have to make a few changes to the code. First, we adopt the algorithm part by introducing a new templated method to our effect:
 
 ``` c++
 template <SymbolicSampleSizes SampleSize>
@@ -340,7 +340,7 @@ tresult PLUGIN_API MyEffect::canProcessSampleSize (int32symbolicSampleSize)
 }
 ```
 
-Now we have sample accurate parameter changes and 32 and 64 bit audio processing.
+Now we have sample-accurate parameter changes and 32 and 64 bit audio processing.
 
 ---
 

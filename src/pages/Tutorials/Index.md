@@ -67,11 +67,11 @@ This tutorial explains how to send data from the realtime process to the edit co
 
 [Link](Advanced+VST+3+techniques.md)
 
-In this tutorial you will learn:
+In this tutorial, you will learn:
 
-- How to add nearly sample accurate parameter changes to an audio effect
-- Using C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing
-- Setting the state of the audio effect in a thread safe manner
+- How to add nearly sample-accurate parameter changes to an audio effect
+- How to use C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing
+- How to set the state of the audio effect in a thread safe manner
 
 ## How to use the silence flags
 

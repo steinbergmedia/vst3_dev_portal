@@ -55,5 +55,5 @@
   - Add info when a unit has too many parameters
 
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.5:
-  - New Native Arm64EC version for Windows on Arm: allowing to load VST3 Plug-ins built for Arm64EC.
+  - New Native Arm64EC version for Windows on Arm: allowing to load VST 3 Plug-ins built for Arm64EC.
   - New Windows built-in ASIO Driver for x64 and Arm64EC.

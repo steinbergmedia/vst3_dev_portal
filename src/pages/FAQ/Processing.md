@@ -14,7 +14,7 @@ The implementation of the bypass feature is entirely the responsibility of the p
 
 The [IIAudioProcessor::process](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13) method will continue to be called. The plug-in must take care of artifact-free switching (ramping/fade-in/fade-out, parallel processing or algorithm changes) and must also provide a delayed action if the plug-in has a latency and be sure that the output buffers are providing a copy of the input buffers (eventually delayed). No need to copy the input buffers to the output buffers when the pointers are the same and the plug-in has no latency!
 
-This is the choice of the plug-in to handle/process the bypass (like any other parameters) sample accurate (by using the sampleOffset of the parameter change) or audio block based (not recommended when the audio block length is too large > 1024).
+This is the choice of the plug-in to handle/process the bypass (like any other parameters) sample-accurate (by using the sampleOffset of the parameter change) or audio block based (not recommended when the audio block length is too large > 1024).
 
 During bypass the process is still called, but if not, for some reason, the host may call a flush (using process call with null audio buffer).
 
