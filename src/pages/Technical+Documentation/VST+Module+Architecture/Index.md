@@ -47,7 +47,7 @@ So a lot of different classes (with different class identifiers) can implement t
 
 ### Direction
 
-An interface may have a **direction**, meaning that the interface is expected to be implemented either in the plug-in or in the host. The nature of an interface is documented like this:
+An interface may have a **direction**, meaning that the interface is expected to be implemented either in the plug-in or in the host. The nature of an interface is documented in the following way:
 
 - **\[host imp\]**: the host implements the interface
 - **\[plug imp\]**: the plug-in implements the interface

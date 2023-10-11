@@ -10,9 +10,9 @@
 
 ## Introduction
 
-How to better support remote (UI and hardware) for parameters.
+How to better support remote devices/controllers (UI and hardware) for parameters.
 
-Since VST 3.5, a new interface is provided: [Vst::IXmlRepresentationController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IXmlRepresentationController.html)
+Since VST 3.5, a new interface is available: [Vst::IXmlRepresentationController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IXmlRepresentationController.html)
 
 Extended plug-in interface [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html) for a component: [Vst::IXmlRepresentationController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IXmlRepresentationController.html)
 

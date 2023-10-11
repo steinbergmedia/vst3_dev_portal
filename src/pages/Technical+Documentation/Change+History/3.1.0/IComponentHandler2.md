@@ -21,7 +21,7 @@ Extended host callback interface [Vst::IComponentHandler2](https://steinbergmedi
 
 ## Dirty State Support
 
-This allows the plug-in to tell the host that its internal state is dirty or not, if set to true it means that something besides parameters has changed since last save, then the host should apply a save before quitting.
+This allows the plug-in to tell the host that its internal state is dirty or not. If set to true, it means that after saving, there have been further changes, in addition to the parameter changes. In this case, the host should save before quitting.
 
 ``` c++
 void MyPluginController::informHostAboutMyDirtyState (bool dirty)

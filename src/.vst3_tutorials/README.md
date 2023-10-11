@@ -1,8 +1,8 @@
 # Welcome to the VST 3 Tutorials
 
-Here you will find VST 3 tutorial projects
+Here, you will find VST 3 tutorial projects
 
-Please find the tutorials in the corresponding Readme's in the sub directories:
+You can find the tutorials in the Readme files of the following sub-directories:
 
 - [Advanced Techniques Tutorial](advanced-techniques-tutorial/)
 - [Data Exchange Tutorial](dataexchange-tutorial/)

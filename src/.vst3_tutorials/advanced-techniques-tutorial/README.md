@@ -60,7 +60,7 @@ void MyEffect::process (ProcessData& data)
 }
 ```
 
-This is straight and simple, we handle the parameter changes in the function *handleParameterChanges*, which we will see in a moment. Then we get the last gain parameter value and iterate over the input buffers and copy the samples from there to the output buffers and apply the *gain* factor.
+This is straightforward and simple, we handle the parameter changes in the function *handleParameterChanges*, which we will see in a moment. Then we get the last gain parameter value and iterate over the input buffers and copy the samples from there to the output buffers before applying the *gain* factor.
 
 If we look at the handleParameterChanges function:
 
@@ -93,9 +93,9 @@ void MyEffect::handleParameterChanges (IParameterChanges*changes)
 
 We see that the *Gain* parameter only uses the last point for the gain value.
 
-If we now want to use all points of the *Gain* parameter we can use two utility classes from the SDK.
+If we now want to use all points of the *Gain* parameter, we can use two utility classes from the SDK.
 
-The first one is the *ProcessDataSlicer* which slices the audio block into smaller peaces.
+The first one is the *ProcessDataSlicer* which slices the audio block into smaller pieces.
 
 ``` c++
 void MyEffect::process (ProcessData& data)
@@ -125,9 +125,9 @@ void MyEffect::process (ProcessData& data)
 }
 ```
 
-As you see we have moved the algorithm part into a lambda *doProcessing* which is passed to *slicer.process*. This lambda is now called multiple times with a maximum of 8 samples per call until the whole buffer is processed. This doesn't give us yet a better parameter resolution, but we can now use the second utility class to handle this.
+As you see, we have moved the algorithm part into a lambda *doProcessing* which is passed to *slicer.process*. This lambda is now called multiple times with a maximum of 8 samples per call until the whole buffer is processed. This doesn't give us yet a better parameter resolution, but we can now use the second utility class to handle this.
 
-At first we now look at the type of the *gainParameter* variable as this is our next utility class:
+At first, we now look at the type of the *gainParameter* variable, as this is our next utility class:
 
 ``` c++
 SampleAccurate::Parameter gainParameter;
@@ -177,7 +177,7 @@ auto doProcessing = [this] (ProcessData& data) {
 }
 ```
 
-Finally we have to do some cleanup of the *gainParameter* at the end of the *process* function by calling *gainParameter.endChanges*.
+Finally, we have to do some cleanup of the *gainParameter* at the end of the *process* function by calling *gainParameter.endChanges*.
 
 ``` c++
 void MyEffect::process (ProcessData& data)
@@ -209,7 +209,7 @@ void MyEffect::process (ProcessData& data)
 }
 ```
 
-Now we have nearly sample-accurate parameter changes support in this example. Every 8 samples the *gain* parameter will be updated to the correct value.
+Now, we have nearly sample-accurate parameter changes support in this example. At intervals of eight samples, the *gain* parameter will be updated to the correct value.
 
 It's very simple to make this 100% sample-accurate, check out the **AGain Sample Accurate** example in the SDK.
 
@@ -219,7 +219,7 @@ It's very simple to make this 100% sample-accurate, check out the **AGain Sample
 
 The example currently only supports 32 bit processing. Now we will add 64 bit processing.
 
-As you may have noticed above the *ProcessDataSlicer* uses a template parameter for its process function. This template parameter *SampleSize* defines the bit depth of the audio buffers in the *ProcessData* structure. This is currently hard-coded to be *SymbolicSampleSizes::kSample32*.
+As you may have noticed above, the *ProcessDataSlicer* uses a template parameter for its process function. This template parameter *SampleSize* defines the bit depth of the audio buffers in the *ProcessData* structure. This is currently hard-coded to be *SymbolicSampleSizes::kSample32*.
 
 In order to support *SymbolicSampleSizes::kSample64* we only have to make a few changes to the code. First, we adopt the algorithm part by introducing a new templated method to our effect:
 
@@ -230,7 +230,7 @@ void MyEffect::process (ProcessData& data)
 }
 ```
 
-We mostly just move the code from the original process method to this one except the code for handling parameter changes:
+We mostly just move the code from the original process method to this one, except the code for handling parameter changes:
 
 ``` c++
 template <SymbolicSampleSizes SampleSize>
@@ -259,9 +259,9 @@ void MyEffect::process (ProcessData& data)
 }
 ```
 
-We just change the template parameter *SampleSize* of the process method of the *ProcessDataSlicer* to use the same template parameter as of our own process function.
+We just change the template parameter *SampleSize* of the process method of the *ProcessDataSlicer* to use the same template parameter as in our own process function.
 
-This will not work correctly yet as we still work with the 32 bit audio buffers in our *doProcessing* lambda. In order to fix this we have to introduce two more templated functions *getChannelBuffers* that will choose the correct audio buffers depending on the *SampleSize* template parameter, which can either be *SymbolicSampleSizes::kSample32* or *SymbolicSampleSizes::kSample64*:
+This will not work correctly yet, as we still work with the 32 bit audio buffers in our *doProcessing* lambda. In order to fix this, we have to introduce two more templated functions *getChannelBuffers* that will choose the correct audio buffers depending on the *SampleSize* template parameter, which can either be *SymbolicSampleSizes::kSample32* or *SymbolicSampleSizes::kSample64*:
 
 ``` c++
 template <SymbolicSampleSizes SampleSize,
@@ -310,7 +310,7 @@ void MyEffect::process (ProcessData& data)
 }
 ```
 
-As a final step we now need to call the templated *process<...>* function from the normal *process* function:
+As a final step, we now need to call the templated *process<...>* function from the normal *process* function:
 
 ``` c++
 void MyEffect::process (ProcessData& data)
@@ -348,11 +348,11 @@ Now we have sample-accurate parameter changes and 32 and 64 bit audio processing
 
 One common issue in this domain is that the plug-in state coming from a preset or a DAW project is set by the host from a non realtime thread.
 
-If we want to change our internal data model to use this state we have to transfer this state to the realtime thread. This should be done in a realtime thread safe manner otherwise the model may not reflect the correct state as parameter changes dispatched in the realtime thread and the state data set on another thread will end in an undefined state.
+If we want to change our internal data model to use this state, we have to transfer this state to the realtime thread. This should be done in a realtime thread safe manner. Otherwise the model may not reflect the correct state, as parameter changes dispatched in the realtime thread and the state data set on another thread will end in an undefined state.
 
-For this case we have another utility class: *RTTransferT*
+For this case, we have another utility class: *RTTransferT*
 
-This class expects to have a template parameter *StateModel* describing the state data. We create a simple struct as data model:
+This class expects to have a template parameter *StateModel* describing the state data. We create a simple struct as a data model:
 
 ``` c++
 struct StateModel
@@ -372,7 +372,7 @@ class MyEffect : ....
 };
 ```
 
-If we now get a new *state* from the host, we create a *newStateModel* and write the *stateGain* value into *model->gain* andpass it to the utility class *stateTransfer*:
+If we now get a new *state* from the host, we create a *newStateModel* and write the *stateGain* value into *model->gain* and pass it to the utility class *stateTransfer*:
 
 ``` c++
 tresult PLUGIN_API MyEffect::setState (IBStream* state)
@@ -388,7 +388,7 @@ tresult PLUGIN_API MyEffect::setState (IBStream* state)
 }
 ```
 
-To get the *stateModel* into our realtime thread we have to change the *process* function like this:
+To get the *stateModel* into our realtime thread, we have to change the *process* function in the following way:
 
 ``` c++
 void MyEffect::process (ProcessData& data)
@@ -409,9 +409,9 @@ void MyEffect::process (ProcessData& data)
 }
 ```
 
-The *accessTransferObject_rt* function will check if there is a new model state and will call the lambda if it is and then we can set our *gainParameter* to the value of *stateModel.gain*.
+The *accessTransferObject_rt* function will check if there is a new model state. If this is the case, it will call the lambda, and then we can set our *gainParameter* to the value of *stateModel.gain*.
 
-To free up the memory in the *stateTransfer* object we have to call the *clear_ui* method of it. In this case where we only have one double as state model it is OK to hold onto it until the next state is set or the effect is terminated. So we just add it to the *terminate* method of the plug-in:
+To free up the memory in the *stateTransfer* object, we have to call the *clear_ui* method of it. In this case, where we only have one double as state model, it is OK to hold onto it until the next state is set or the effect is terminated. So we just add it to the *terminate* method of the plug-in:
 
 ``` c++
 tresult PLUGIN_API MyEffect::terminate ()

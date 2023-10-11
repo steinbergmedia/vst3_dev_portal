@@ -10,7 +10,7 @@
 
 ## Goal
 
-Here you can find some informations about how to write a **VST 3** version of a plug-in which already exists as **VST 2** version.
+Here, you can find some informations about how to write a **VST 3** version of a plug-in which already exists as **VST 2** version.
 How to guaranty that a Host will correctly replace the old **VST 2** by the new **VST 3** version of your plug-in.
 
 For a **VST 3** Host the important information is the UID of your (processor) plug-in, with this information it will find the correct **VST 3** version to use.
