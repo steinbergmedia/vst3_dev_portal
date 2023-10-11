@@ -174,7 +174,7 @@
 </blockquote>
 <p><strong>On this page:</strong></p>
 <ul>
-<li><a href="#part-1-sample-accurate-parameter-handling">Part 1: Sample accurate parameter handling</a></li>
+<li><a href="#part-1-sample-accurate-parameter-handling">Part 1: Sample-accurate parameter handling</a></li>
 <li><a href="#part-2-adding-32-and-64-bit-audio-processing">Part 2: Adding 32 and 64 bit audio processing</a></li>
 <li><a href="#part-3-thread-safe-state-changes">Part 3: Thread safe state changes</a></li>
 </ul>
@@ -182,14 +182,14 @@
 <blockquote>
 <p>You'll find the source for this tutorial in the <a href="https://github.com/steinbergmedia/vst3_tutorials/blob/master/advanced-techniques-tutorial">tutorial repository</a></p>
 </blockquote>
-<p>In this tutorial you will learn:</p>
+<p>In this tutorial, you will learn:</p>
 <ul>
-<li>How to add nearly sample accurate parameter changes to an audio effect</li>
-<li>Using C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing</li>
-<li>Setting the state of the audio effect in a thread safe manner</li>
+<li>How to add nearly sample-accurate parameter changes to an audio effect</li>
+<li>How to use C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing</li>
+<li>How to set the state of the audio effect in a thread safe manner</li>
 </ul>
 <hr />
-<h2 id="part-1-sample-accurate-parameter-handling"><a class="header" href="#part-1-sample-accurate-parameter-handling">Part 1: Sample accurate parameter handling</a></h2>
+<h2 id="part-1-sample-accurate-parameter-handling"><a class="header" href="#part-1-sample-accurate-parameter-handling">Part 1: Sample-accurate parameter handling</a></h2>
 <p>We will start by looking at this process function:</p>
 <pre><code class="language-c++">void MyEffect::process (ProcessData&amp; data)
 {
@@ -290,7 +290,7 @@
 }
 </code></pre>
 <p>in order to delegate the handling of the parameter changes to the <em>gainParameter</em> object.</p>
-<p>Now we just need another small change in the process lambda to use the nearly sample accurate <em>gain</em> value. We have to call the <em>gainParameter</em> object to <em>advance</em> the parameter value:</p>
+<p>Now we just need another small change in the process lambda to use the nearly sample-accurate <em>gain</em> value. We have to call the <em>gainParameter</em> object to <em>advance</em> the parameter value:</p>
 <pre><code class="language-c++">auto doProcessing = [this] (ProcessData&amp; data) {
     // get the gain value for this block
     ParamValue gain = gainParameter.advance (data.numSamples);
@@ -337,13 +337,13 @@
     gainParameter.endChanges ();
 }
 </code></pre>
-<p>Now we have nearly sample accurate parameter changes support in this example. Every 8 samples the <em>gain</em> parameter will be updated to the correct value.</p>
-<p>It's very simple to make this 100% sample accurate, check out the <strong>AGain sample accurate</strong> example in the SDK.</p>
+<p>Now we have nearly sample-accurate parameter changes support in this example. Every 8 samples the <em>gain</em> parameter will be updated to the correct value.</p>
+<p>It's very simple to make this 100% sample-accurate, check out the <strong>AGain Sample Accurate</strong> example in the SDK.</p>
 <hr />
 <h2 id="part-2-adding-32-and-64-bit-audio-processing"><a class="header" href="#part-2-adding-32-and-64-bit-audio-processing">Part 2: Adding 32 and 64 bit audio processing</a></h2>
 <p>The example currently only supports 32 bit processing. Now we will add 64 bit processing.</p>
 <p>As you may have noticed above the <em>ProcessDataSlicer</em> uses a template parameter for its process function. This template parameter <em>SampleSize</em> defines the bit depth of the audio buffers in the <em>ProcessData</em> structure. This is currently hard-coded to be <em>SymbolicSampleSizes::kSample32</em>.</p>
-<p>In order to support <em>SymbolicSampleSizes::kSample64</em> we only have to make a few changes to the code. First we adopt the algorithm part by introducing a new templated method to our effect:</p>
+<p>In order to support <em>SymbolicSampleSizes::kSample64</em> we only have to make a few changes to the code. First, we adopt the algorithm part by introducing a new templated method to our effect:</p>
 <pre><code class="language-c++">template &lt;SymbolicSampleSizes SampleSize&gt;
 void MyEffect::process (ProcessData&amp; data)
 {
@@ -442,7 +442,7 @@ void MyEffect::process (ProcessData&amp; data)
             kResultFalse;
 }
 </code></pre>
-<p>Now we have sample accurate parameter changes and 32 and 64 bit audio processing.</p>
+<p>Now we have sample-accurate parameter changes and 32 and 64 bit audio processing.</p>
 <hr />
 <h2 id="part-3-thread-safe-state-changes"><a class="header" href="#part-3-thread-safe-state-changes">Part 3: Thread safe state changes</a></h2>
 <p>One common issue in this domain is that the plug-in state coming from a preset or a DAW project is set by the host from a non realtime thread.</p>
@@ -501,7 +501,7 @@ using RTTransfer = RTTransferT&lt;StateModel&gt;;
     return AudioEffect::terminate ();
 }
 </code></pre>
-<p>If the model data uses more memory and you want to get rid of it earlier you have to use a timer or similar to call the clear_ui method a little bit after the setState method was called. But this is not the scope of this tutorial.</p>
+<p>If the model data uses more memory and you want to get rid of it in advance, use a timer or something similar to call the clear_ui method a little bit after the setState method was called. But this is not the scope of this tutorial.</p>
 <p>If you want to use the utility classes, you will find them in the sdk at:</p>
 <p><em>public.sdk/source/vst/utility/processdataslicer.h</em><br />
 <em>public.sdk/source/vst/utility/sampleaccurate.h</em><br />

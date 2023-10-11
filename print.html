@@ -597,7 +597,7 @@ In order to add your own Plug-ins check: <a href="pages/What+is+the+VST+3+SDK/..
 <li>AGainController</li>
 </ul>
 <p>AGain Sample Accurate</p>
-<p>Simple plug-in showing how to achieve sample accurate processing.</p>
+<p>Simple plug-in showing how to achieve sample-accurate processing.</p>
 <p>Based Check the folder <em>&quot;public.sdk/samples/vst/again_sampleaccurate&quot;</em> of the SDK!</p>
 <h2 id="testchannelcontext"><a class="header" href="#testchannelcontext">TestChannelContext</a></h2>
 <p>Very simple plug-in:</p>
@@ -869,7 +869,7 @@ In order to add your own Plug-ins check: <a href="pages/What+is+the+VST+3+SDK/..
 </ul>
 <p>You can run all available tests with <strong>Run All</strong>. It is possible also to disable some tests with the check box in the left view.</p>
 <p>Error reports will be displayed in the <strong>Errors view</strong>. In the <strong>Messages View</strong> some warnings (or some plug-in limitations), test results and progress are displayed.</p>
-<p>In this version of this Plug-in Test Host, the tests are limited to the main <strong>VST 3</strong> features, in future version the test coverage will be extended.</p>
+<p>In this version of this <strong>Plug-in Test Host</strong>, the tests are limited to the main <strong>VST 3</strong> features, in future version the test coverage will be extended.</p>
 <h2 id="preset-editor"><a class="header" href="#preset-editor">Preset Editor</a></h2>
 <p><img src="pages/What+is+the+VST+3+SDK/../../resources/what_is_23.jpg" alt="what_if_23" /></p>
 <p>With this editor you can load and modify <strong>VST 3</strong> presets created with the <strong>Store</strong> button of the VST Rack by adding some meta-attributes.</p>
@@ -1979,11 +1979,11 @@ This section is under construction and will be extended inthe future with new tu
 <p>This tutorial explains how to send data from the realtime process to the edit controller.</p>
 <h2 id="advanced-vst-3-techniques"><a class="header" href="#advanced-vst-3-techniques">Advanced VST 3 techniques</a></h2>
 <p><a href="pages/Tutorials/Advanced+VST+3+techniques.html">Link</a></p>
-<p>In this tutorial you will learn:</p>
+<p>In this tutorial, you will learn:</p>
 <ul>
-<li>How to add nearly sample accurate parameter changes to an audio effect</li>
-<li>Using C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing</li>
-<li>Setting the state of the audio effect in a thread safe manner</li>
+<li>How to add nearly sample-accurate parameter changes to an audio effect</li>
+<li>How to use C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing</li>
+<li>How to set the state of the audio effect in a thread safe manner</li>
 </ul>
 <h2 id="how-to-use-the-silence-flags"><a class="header" href="#how-to-use-the-silence-flags">How to use the silence flags</a></h2>
 <p><a href="pages/Tutorials/How+to+use+the+silence+flags.html">Link</a></p>
@@ -2452,7 +2452,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&amp;data)
         for (int32 index = 0; index &lt; numParamsChanged; index++)
         {
             // for this parameter we could iterate the list of value changes (could 1 per audio block or more!)
-            // in this example we get only the last value (getPointCount - 1)
+            // in this example, we get only the last value (getPointCount - 1)
             Vst::IParamValueQueue* paramQueue = data.inputParameterChanges-&gt;getParameterData (index);
             if (paramQueue)
             {
@@ -2638,7 +2638,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown* context)
 </code></pre>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
-In this example we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:</p>
+In this example, we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it like this:</p>
 <p>addEventInput (STR16 (&quot;Event In&quot;), 4); // here 4 channels</p>
 </blockquote>
 <ol start="2">
@@ -2729,7 +2729,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&amp;data)
 <h3 id="add-a-mono-audio-side-chain"><a class="header" href="#add-a-mono-audio-side-chain">Add a mono audio <a href="pages/Tutorials/../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain">Side-chain</a></a></h3>
 <p>In our example we want to modulate our main audio input with a <a href="pages/Tutorials/../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain">Side-chain</a> audio input.</p>
 <ol>
-<li>First add a new side-chain audio input (busType: <em><strong>kAux</strong></em>) in the <strong>initialize</strong> call of our processor:</li>
+<li>First, add a new side-chain audio input (busType: <em><strong>kAux</strong></em>) in the <strong>initialize</strong> call of our processor:</li>
 </ol>
 <p><strong>plugprocessor.cpp</strong></p>
 <pre><code class="language-c++">//-----------------------------------------------------------------------
@@ -2962,15 +2962,15 @@ IPlugView* PLUGIN_API MyEditController::createView (FIDStringname)
 <p>You'll find the source for this tutorial in the <a href="https://github.com/steinbergmedia/vst3_tutorials/blob/master/dataexchange-tutorial">tutorial repository</a></p>
 </blockquote>
 <h2 id="tutorial---how-to-use-the-data-exchange-api"><a class="header" href="#tutorial---how-to-use-the-data-exchange-api">Tutorial - How to use the Data Exchange API</a></h2>
-<p>In this tutorial you learn how to use the Data Exchange API to send data from the realtime audio
+<p>In this tutorial, you learn how to use the Data Exchange API to send data from the realtime audio
 process method to the edit controller of your plug-in.</p>
 <h3 id="sending-data-from-the-audio-processor"><a class="header" href="#sending-data-from-the-audio-processor">Sending data from the audio processor</a></h3>
 <p>Let's send data from the processor to the controller.</p>
-<p>First we need to add the required include so that we can use the wrapper class. Add the following
+<p>First, we need to add the required include so that we can use the wrapper class. Add the following
 include before you define your audio processor:</p>
 <pre><code class="language-c++">#include &quot;public.sdk/source/vst/utility/dataexchange.h&quot;
 </code></pre>
-<p>To prepare the AudioEffect class you need to overwrite the following methods:</p>
+<p>To prepare the AudioEffect class, you need to overwrite the following methods:</p>
 <pre><code class="language-c++">tresult PLUGIN_API initialize (FUnknown* context) override;
 tresult PLUGIN_API connect (Vst::IConnectionPoint* other) override;
 tresult PLUGIN_API disconnect (Vst::IConnectionPoint* other) override;
@@ -3007,10 +3007,10 @@ tresult PLUGIN_API process (Vst::ProcessData&amp; data) override;
     return result;
 }
 </code></pre>
-<p>The configration is done via the <code>configCallback</code>. In this example we configure the queue to have
+<p>The configration is done via the <code>configCallback</code>. In this example, we configure the queue to have
 a block size to store exactly 1 second of audio data of all the channels of the configured speaker 
-arrangement of the input bus. We choose two for <code>numBlocks</code> because we send one block per second
-and in this case two blocks should be enough. If the frequency you need to send the block is higher
+arrangement of the input bus. We choose two for <code>numBlocks</code> because we send one block per second,
+and in this case, two blocks should be enough. If the frequency you need to send the block is higher,
 you need to increase this value to prevent data drop outs.
 The <code>configCallback</code> is called when the audio processor is activated.</p>
 <p>The next thing we have to do is to call the dataExchange object when the edit controller is disconnected
@@ -3035,8 +3035,8 @@ and release the memory:</p>
     return AudioEffect::setActive (state);
 }
 </code></pre>
-<p>Now we prepare the data that we want to send to the controller. To make this a little bit easier we
-define a struct how this data should look like and move this into its own header &quot;dataexchange.h&quot;:</p>
+<p>Now we prepare the data that we want to send to the controller. To make this a little bit easier, we
+define a struct that specifies what should look like and move this into its own header &quot;dataexchange.h&quot;:</p>
 <pre><code class="language-c++">// dataexchange.h
 
 #pragma once
@@ -3229,7 +3229,7 @@ private:
     Vst::DataExchangeReceiverHandler dataExchange {this};
 }
 </code></pre>
-<p>First we need to forward messages to the <code>DataExchangeReceiverHandler</code> so that it can process the
+<p>First, we need to forward messages to the <code>DataExchangeReceiverHandler</code> so that it can process the
 data exchange messages when the host does not support the native API:</p>
 <pre><code class="language-c++">tresult PLUGIN_API DataExchangeController::notify (Vst::IMessage* message)
 {
@@ -3276,7 +3276,7 @@ You can now do whatever you want with the data.</p>
 </blockquote>
 <p><strong>On this page:</strong></p>
 <ul>
-<li><a href="pages/Tutorials/Advanced+VST+3+techniques.html#part-1-sample-accurate-parameter-handling">Part 1: Sample accurate parameter handling</a></li>
+<li><a href="pages/Tutorials/Advanced+VST+3+techniques.html#part-1-sample-accurate-parameter-handling">Part 1: Sample-accurate parameter handling</a></li>
 <li><a href="pages/Tutorials/Advanced+VST+3+techniques.html#part-2-adding-32-and-64-bit-audio-processing">Part 2: Adding 32 and 64 bit audio processing</a></li>
 <li><a href="pages/Tutorials/Advanced+VST+3+techniques.html#part-3-thread-safe-state-changes">Part 3: Thread safe state changes</a></li>
 </ul>
@@ -3284,14 +3284,14 @@ You can now do whatever you want with the data.</p>
 <blockquote>
 <p>You'll find the source for this tutorial in the <a href="https://github.com/steinbergmedia/vst3_tutorials/blob/master/advanced-techniques-tutorial">tutorial repository</a></p>
 </blockquote>
-<p>In this tutorial you will learn:</p>
+<p>In this tutorial, you will learn:</p>
 <ul>
-<li>How to add nearly sample accurate parameter changes to an audio effect</li>
-<li>Using C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing</li>
-<li>Setting the state of the audio effect in a thread safe manner</li>
+<li>How to add nearly sample-accurate parameter changes to an audio effect</li>
+<li>How to use C++ templates to write one algorithm supporting 32 bit and 64 bit audio processing</li>
+<li>How to set the state of the audio effect in a thread safe manner</li>
 </ul>
 <hr />
-<h2 id="part-1-sample-accurate-parameter-handling"><a class="header" href="#part-1-sample-accurate-parameter-handling">Part 1: Sample accurate parameter handling</a></h2>
+<h2 id="part-1-sample-accurate-parameter-handling"><a class="header" href="#part-1-sample-accurate-parameter-handling">Part 1: Sample-accurate parameter handling</a></h2>
 <p>We will start by looking at this process function:</p>
 <pre><code class="language-c++">void MyEffect::process (ProcessData&amp; data)
 {
@@ -3392,7 +3392,7 @@ You can now do whatever you want with the data.</p>
 }
 </code></pre>
 <p>in order to delegate the handling of the parameter changes to the <em>gainParameter</em> object.</p>
-<p>Now we just need another small change in the process lambda to use the nearly sample accurate <em>gain</em> value. We have to call the <em>gainParameter</em> object to <em>advance</em> the parameter value:</p>
+<p>Now we just need another small change in the process lambda to use the nearly sample-accurate <em>gain</em> value. We have to call the <em>gainParameter</em> object to <em>advance</em> the parameter value:</p>
 <pre><code class="language-c++">auto doProcessing = [this] (ProcessData&amp; data) {
     // get the gain value for this block
     ParamValue gain = gainParameter.advance (data.numSamples);
@@ -3439,13 +3439,13 @@ You can now do whatever you want with the data.</p>
     gainParameter.endChanges ();
 }
 </code></pre>
-<p>Now we have nearly sample accurate parameter changes support in this example. Every 8 samples the <em>gain</em> parameter will be updated to the correct value.</p>
-<p>It's very simple to make this 100% sample accurate, check out the <strong>AGain sample accurate</strong> example in the SDK.</p>
+<p>Now we have nearly sample-accurate parameter changes support in this example. Every 8 samples the <em>gain</em> parameter will be updated to the correct value.</p>
+<p>It's very simple to make this 100% sample-accurate, check out the <strong>AGain Sample Accurate</strong> example in the SDK.</p>
 <hr />
 <h2 id="part-2-adding-32-and-64-bit-audio-processing"><a class="header" href="#part-2-adding-32-and-64-bit-audio-processing">Part 2: Adding 32 and 64 bit audio processing</a></h2>
 <p>The example currently only supports 32 bit processing. Now we will add 64 bit processing.</p>
 <p>As you may have noticed above the <em>ProcessDataSlicer</em> uses a template parameter for its process function. This template parameter <em>SampleSize</em> defines the bit depth of the audio buffers in the <em>ProcessData</em> structure. This is currently hard-coded to be <em>SymbolicSampleSizes::kSample32</em>.</p>
-<p>In order to support <em>SymbolicSampleSizes::kSample64</em> we only have to make a few changes to the code. First we adopt the algorithm part by introducing a new templated method to our effect:</p>
+<p>In order to support <em>SymbolicSampleSizes::kSample64</em> we only have to make a few changes to the code. First, we adopt the algorithm part by introducing a new templated method to our effect:</p>
 <pre><code class="language-c++">template &lt;SymbolicSampleSizes SampleSize&gt;
 void MyEffect::process (ProcessData&amp; data)
 {
@@ -3544,7 +3544,7 @@ void MyEffect::process (ProcessData&amp; data)
             kResultFalse;
 }
 </code></pre>
-<p>Now we have sample accurate parameter changes and 32 and 64 bit audio processing.</p>
+<p>Now we have sample-accurate parameter changes and 32 and 64 bit audio processing.</p>
 <hr />
 <h2 id="part-3-thread-safe-state-changes"><a class="header" href="#part-3-thread-safe-state-changes">Part 3: Thread safe state changes</a></h2>
 <p>One common issue in this domain is that the plug-in state coming from a preset or a DAW project is set by the host from a non realtime thread.</p>
@@ -3603,7 +3603,7 @@ using RTTransfer = RTTransferT&lt;StateModel&gt;;
     return AudioEffect::terminate ();
 }
 </code></pre>
-<p>If the model data uses more memory and you want to get rid of it earlier you have to use a timer or similar to call the clear_ui method a little bit after the setState method was called. But this is not the scope of this tutorial.</p>
+<p>If the model data uses more memory and you want to get rid of it in advance, use a timer or something similar to call the clear_ui method a little bit after the setState method was called. But this is not the scope of this tutorial.</p>
 <p>If you want to use the utility classes, you will find them in the sdk at:</p>
 <p><em>public.sdk/source/vst/utility/processdataslicer.h</em><br />
 <em>public.sdk/source/vst/utility/sampleaccurate.h</em><br />
@@ -5137,7 +5137,7 @@ To address the most common cases:</p>
 <p>For reporting the results of a text input value change for a continuous or a discrete parameter, always call beginEdit, performEdit and endEdit in a row.</p>
 <h3 id="automation-playback"><a class="header" href="#automation-playback">Automation Playback</a></h3>
 <p>In <strong>VST 3</strong>, automation playback is the task of the plug-in and it is the host's task to provide the automation data. The only way for a parameter change to arrive in the processor is the processing call. Receiving parameter changes from the edit controller and playing back automation data is one and the same thing.</p>
-<p>The need to perform all transformations, from the normalized GUI representation to the DSP representation, produces some overhead. Performing sample accurate automation requires even more overhead, because the DSP value must be calculated for each single sample. While this cannot be avoided entirely, it is the choice of the plug-in implementation how much processing time to spend on automation accuracy. The host always transmits value changes in a way that allows a sample accurate reconstruction of the underlying automation curve. The plug-in is responsible for the realization.</p>
+<p>The need to perform all transformations, from the normalized GUI representation to the DSP representation, produces some overhead. Performing sample-accurate automation requires even more overhead, because the DSP value must be calculated for each single sample. While this cannot be avoided entirely, it is the choice of the plug-in implementation how much processing time to spend on automation accuracy. The host always transmits value changes in a way that allows a sample-accurate reconstruction of the underlying automation curve. The plug-in is responsible for the realization.</p>
 <p><img src="pages/Technical+Documentation/Parameters+Automation/../../../resources/tech_doc_12.jpg" alt="Tech_doc_12" /></p>
 <p>The processor gets the automation data in the processing call by using queue of parameter changes for each parameter having automation data:</p>
 <p>A <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a> has some <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueues</a> (for a specific parameter ID) which has some Automation Points.</p>
@@ -5455,8 +5455,8 @@ VU meter display, but presenting a FFT curve with it is a nightmare.</p>
 <p>Version 3.7.9 of the SDK contains the new <em>Data Exchange</em> API to send data from the realtime
 processing function to the controller in a safe and efficient way.</p>
 <p>As this API needs support from the host and not all hosts will provide this API in the beginning
-the SDK contains a backwards compatibility layer that either uses the API directly if available or 
-uses an alternative method based on the IMessage API to emulate the API. See the 
+the SDK contains a backwards compatibility layer that either uses the API directly, if available, or 
+an alternative method based on the IMessage API to emulate the API. See the 
 <a href="pages/Technical+Documentation/Data+Exchange/../../Tutorials/Data+Exchange.html">tutorial</a> on how to use it.</p>
 <h2 id="the-data-exchange-api"><a class="header" href="#the-data-exchange-api">The Data Exchange API</a></h2>
 <p>The API consists of two interfaces, the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html">IDataExchangeHandler</a> which needs to be implemented by the 
@@ -9299,7 +9299,7 @@ if (handlerSystemTime)
 <li>
 <p><a href="pages/Versions/../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST3PluginTestHost</a> v3.5:</p>
 <ul>
-<li>New Native Arm64EC version for Windows on Arm: allowing to load VST3 Plug-ins built for Arm64EC.</li>
+<li>New Native Arm64EC version for Windows on Arm: allowing to load VST 3 Plug-ins built for Arm64EC.</li>
 <li>New Windows built-in ASIO Driver for x64 and Arm64EC.</li>
 </ul>
 </li>
@@ -9704,7 +9704,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 <li>Add support of ivstparameterfunctionname in Panner sample</li>
 <li>New VST 3 plug-ins example:
 <ul>
-<li>New &quot;AGain Sample Accurate&quot; showing sample accurate parameter changes processing</li>
+<li>New &quot;AGain Sample Accurate&quot; showing sample-accurate parameter changes processing</li>
 </ul>
 </li>
 <li>Fix editorHost when launch without arguments</li>
@@ -10897,7 +10897,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
     //...
 }
 </code></pre>
-<p>Automation data is transmitted as a list of parameter changes. This list always contains enough information to transmit the original automation curve from the host in a sample accurate way. Check the <a href="pages/FAQ/../What+is+the+VST+3+SDK/Plug-in+Examples.html#again">AGain</a> example to see how it can be implemented.</p>
+<p>Automation data is transmitted as a list of parameter changes. This list always contains enough information to transmit the original automation curve from the host in a sample-accurate way. Check the <a href="pages/FAQ/../What+is+the+VST+3+SDK/Plug-in+Examples.html#again">AGain</a> example to see how it can be implemented.</p>
 <p>See also <a href="pages/FAQ/../Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></p>
 <hr />
 <h2 id="q-how-report-to-the-host-that-the-plug-in-has-new-parameter-titles"><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-has-new-parameter-titles">Q: How report to the host that the plug-in has new parameter titles?</a></h2>
@@ -10950,7 +10950,7 @@ If the mapping has changed, the plug-in should call <a href="https://steinbergme
 <p>In order to implement audio process bypassing, the plug-in can export a parameter which is additionally and exclusively flagged as having the attribute kIsBypass. When the user activates the plug-in bypass in the host, like all parameter changes, this is sent as part of the parameter data passed to the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IAudioProcessor::process</a> method.</p>
 <p>The implementation of the bypass feature is entirely the responsibility of the plug-in:</p>
 <p>The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">IIAudioProcessor::process</a> method will continue to be called. The plug-in must take care of artifact-free switching (ramping/fade-in/fade-out, parallel processing or algorithm changes) and must also provide a delayed action if the plug-in has a latency and be sure that the output buffers are providing a copy of the input buffers (eventually delayed). No need to copy the input buffers to the output buffers when the pointers are the same and the plug-in has no latency!</p>
-<p>This is the choice of the plug-in to handle/process the bypass (like any other parameters) sample accurate (by using the sampleOffset of the parameter change) or audio block based (not recommended when the audio block length is too large &gt; 1024).</p>
+<p>This is the choice of the plug-in to handle/process the bypass (like any other parameters) sample-accurate (by using the sampleOffset of the parameter change) or audio block based (not recommended when the audio block length is too large &gt; 1024).</p>
 <p>During bypass the process is still called, but if not, for some reason, the host may call a flush (using process call with null audio buffer).</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />

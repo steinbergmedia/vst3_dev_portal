@@ -190,15 +190,15 @@
 <p>You'll find the source for this tutorial in the <a href="https://github.com/steinbergmedia/vst3_tutorials/blob/master/dataexchange-tutorial">tutorial repository</a></p>
 </blockquote>
 <h2 id="tutorial---how-to-use-the-data-exchange-api"><a class="header" href="#tutorial---how-to-use-the-data-exchange-api">Tutorial - How to use the Data Exchange API</a></h2>
-<p>In this tutorial you learn how to use the Data Exchange API to send data from the realtime audio
+<p>In this tutorial, you learn how to use the Data Exchange API to send data from the realtime audio
 process method to the edit controller of your plug-in.</p>
 <h3 id="sending-data-from-the-audio-processor"><a class="header" href="#sending-data-from-the-audio-processor">Sending data from the audio processor</a></h3>
 <p>Let's send data from the processor to the controller.</p>
-<p>First we need to add the required include so that we can use the wrapper class. Add the following
+<p>First, we need to add the required include so that we can use the wrapper class. Add the following
 include before you define your audio processor:</p>
 <pre><code class="language-c++">#include &quot;public.sdk/source/vst/utility/dataexchange.h&quot;
 </code></pre>
-<p>To prepare the AudioEffect class you need to overwrite the following methods:</p>
+<p>To prepare the AudioEffect class, you need to overwrite the following methods:</p>
 <pre><code class="language-c++">tresult PLUGIN_API initialize (FUnknown* context) override;
 tresult PLUGIN_API connect (Vst::IConnectionPoint* other) override;
 tresult PLUGIN_API disconnect (Vst::IConnectionPoint* other) override;
@@ -235,10 +235,10 @@ tresult PLUGIN_API process (Vst::ProcessData&amp; data) override;
     return result;
 }
 </code></pre>
-<p>The configration is done via the <code>configCallback</code>. In this example we configure the queue to have
+<p>The configration is done via the <code>configCallback</code>. In this example, we configure the queue to have
 a block size to store exactly 1 second of audio data of all the channels of the configured speaker 
-arrangement of the input bus. We choose two for <code>numBlocks</code> because we send one block per second
-and in this case two blocks should be enough. If the frequency you need to send the block is higher
+arrangement of the input bus. We choose two for <code>numBlocks</code> because we send one block per second,
+and in this case, two blocks should be enough. If the frequency you need to send the block is higher,
 you need to increase this value to prevent data drop outs.
 The <code>configCallback</code> is called when the audio processor is activated.</p>
 <p>The next thing we have to do is to call the dataExchange object when the edit controller is disconnected
@@ -263,8 +263,8 @@ and release the memory:</p>
     return AudioEffect::setActive (state);
 }
 </code></pre>
-<p>Now we prepare the data that we want to send to the controller. To make this a little bit easier we
-define a struct how this data should look like and move this into its own header &quot;dataexchange.h&quot;:</p>
+<p>Now we prepare the data that we want to send to the controller. To make this a little bit easier, we
+define a struct that specifies what should look like and move this into its own header &quot;dataexchange.h&quot;:</p>
 <pre><code class="language-c++">// dataexchange.h
 
 #pragma once
@@ -457,7 +457,7 @@ private:
     Vst::DataExchangeReceiverHandler dataExchange {this};
 }
 </code></pre>
-<p>First we need to forward messages to the <code>DataExchangeReceiverHandler</code> so that it can process the
+<p>First, we need to forward messages to the <code>DataExchangeReceiverHandler</code> so that it can process the
 data exchange messages when the host does not support the native API:</p>
 <pre><code class="language-c++">tresult PLUGIN_API DataExchangeController::notify (Vst::IMessage* message)
 {

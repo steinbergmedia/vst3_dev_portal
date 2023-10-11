@@ -211,8 +211,8 @@ VU meter display, but presenting a FFT curve with it is a nightmare.</p>
 <p>Version 3.7.9 of the SDK contains the new <em>Data Exchange</em> API to send data from the realtime
 processing function to the controller in a safe and efficient way.</p>
 <p>As this API needs support from the host and not all hosts will provide this API in the beginning
-the SDK contains a backwards compatibility layer that either uses the API directly if available or 
-uses an alternative method based on the IMessage API to emulate the API. See the 
+the SDK contains a backwards compatibility layer that either uses the API directly, if available, or 
+an alternative method based on the IMessage API to emulate the API. See the 
 <a href="../../Tutorials/Data+Exchange.html">tutorial</a> on how to use it.</p>
 <h2 id="the-data-exchange-api"><a class="header" href="#the-data-exchange-api">The Data Exchange API</a></h2>
 <p>The API consists of two interfaces, the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html">IDataExchangeHandler</a> which needs to be implemented by the 

@@ -11,9 +11,9 @@
 
 #define stringOriginalFilename	"advanced-techniques-tutorial.vst3"
 #if SMTG_PLATFORM_64
-#define stringFileDescription	"advanced-techniques-tutorial VST3 (64Bit)"
+#define stringFileDescription	"advanced-techniques-tutorial VST 3 (64Bit)"
 #else
-#define stringFileDescription	"advanced-techniques-tutorial VST3"
+#define stringFileDescription	"advanced-techniques-tutorial VST 3"
 #endif
 #define stringCompanyName		"Steinberg Media Technologies\0"
 #define stringLegalCopyright	"Copyright(c) 2023 Steinberg Media Technologies."
