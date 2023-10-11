@@ -421,7 +421,7 @@ tresult PLUGIN_API MyEffect::terminate ()
 }
 ```
 
-If the model data uses more memory and you want to get rid of it earlier you have to use a timer or similar to call the clear_ui method a little bit after the setState method was called. But this is not the scope of this tutorial.
+If the model data uses more memory and you want to get rid of it in advance, use a timer or something similar to call the clear_ui method a little bit after the setState method was called. But this is not the scope of this tutorial.
 
 If you want to use the utility classes, you will find them in the sdk at:
 
