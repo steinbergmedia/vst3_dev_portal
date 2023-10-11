@@ -1,8 +1,8 @@
 #  Data Exchange Tutorial Plug-in
 
-This tutorial shows how to use the Data Exchange API via the backwards compatible wrapper class which either uses the API directly if available or uses an alternative IMessage based method to provide the same functionality for hosts not implementing the API.
+This tutorial explains how to use the Data Exchange API via the backwards-compatible wrapper class, which either uses the API directly, if available, or an alternative IMessage based method to provide the same functionality for hosts not implementing the API.
 
-In this example the audio processor sends the samples it processes to the controller in 1 second big chunks.
+In this example, the audio processor sends the samples it processes to the controller in chunks, each with a duration of one second.
 
 ---
 
@@ -30,21 +30,21 @@ In this example the audio processor sends the samples it processes to the contro
 
 ## Tutorial - How to use the Data Exchange API
 
-In this tutorial you learn how to use the Data Exchange API to send data from the realtime audio
+In this tutorial, you learn how to use the Data Exchange API to send data from the realtime audio
 process method to the edit controller of your plug-in.
 
 ### Sending data from the audio processor
 
 Let's send data from the processor to the controller.
 
-First we need to add the required include so that we can use the wrapper class. Add the following
+First, we need to add the required include so that we can use the wrapper class. Add the following
 include before you define your audio processor:
 
 ```c++
 #include "public.sdk/source/vst/utility/dataexchange.h"
 ```
 
-To prepare the AudioEffect class you need to overwrite the following methods:
+To prepare the AudioEffect class, you need to overwrite the following methods:
 
 ```c++
 tresult PLUGIN_API initialize (FUnknown* context) override;
@@ -90,10 +90,10 @@ tresult PLUGIN_API DataExchangeProcessor::connect (Vst::IConnectionPoint* other)
 }
 ```
 
-The configration is done via the `configCallback`. In this example we configure the queue to have
+The configration is done via the `configCallback`. In this example, we configure the queue to have
 a block size to store exactly 1 second of audio data of all the channels of the configured speaker 
-arrangement of the input bus. We choose two for `numBlocks` because we send one block per second
-and in this case two blocks should be enough. If the frequency you need to send the block is higher
+arrangement of the input bus. We choose two for `numBlocks` because we send one block per second,
+and in this case, two blocks should be enough. If the frequency you need to send the block is higher,
 you need to increase this value to prevent data drop outs.
 The `configCallback` is called when the audio processor is activated.
 
@@ -125,8 +125,8 @@ tresult PLUGIN_API DataExchangeProcessor::setActive (TBool state)
 }
 ```
 
-Now we prepare the data that we want to send to the controller. To make this a little bit easier we
-define a struct how this data should look like and move this into its own header "dataexchange.h":
+Now we prepare the data that we want to send to the controller. To make this a little bit easier, we
+define a struct that specifies what should look like and move this into its own header "dataexchange.h":
 
 ```c++
 // dataexchange.h
@@ -352,7 +352,7 @@ private:
 }
 ```
 
-First we need to forward messages to the `DataExchangeReceiverHandler` so that it can process the
+First, we need to forward messages to the `DataExchangeReceiverHandler` so that it can process the
 data exchange messages when the host does not support the native API:
 
 ```c++

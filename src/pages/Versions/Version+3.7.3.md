@@ -37,7 +37,7 @@
     - Add restartComponent (kKeyswitchChanged) / restartComponent (kNoteExpressionChanged) / restartComponent (kParamValuesChanged)
   - Add support of ivstparameterfunctionname in Panner sample
   - New VST 3 plug-ins example:
-    - New "AGain Sample Accurate" showing sample accurate parameter changes processing
+    - New "AGain Sample Accurate" showing sample-accurate parameter changes processing
   - Fix editorHost when launch without arguments
   - Fix crash in VST3Inspector when no VST 3 plug-ins available
   - Fix warnings for mda plug-ins

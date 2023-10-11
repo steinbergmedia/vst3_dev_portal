@@ -34,7 +34,7 @@ public:
 	                                              bool onBackgroundThread) override;
 	//---Interface---------
 	DEFINE_INTERFACES
-		// Here you can add more supported VST3 interfaces
+		// Here you can add more supported VST 3 interfaces
 		DEF_INTERFACE (Vst::IDataExchangeReceiver)
 	END_DEFINE_INTERFACES (EditController)
 	DELEGATE_REFCOUNT (EditController)

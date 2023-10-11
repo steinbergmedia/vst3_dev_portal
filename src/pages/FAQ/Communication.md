@@ -36,7 +36,7 @@ IAudioProcessor::process (processData)
 }
 ```
 
-Automation data is transmitted as a list of parameter changes. This list always contains enough information to transmit the original automation curve from the host in a sample accurate way. Check the [AGain](../What+is+the+VST+3+SDK/Plug-in+Examples.md#again) example to see how it can be implemented.
+Automation data is transmitted as a list of parameter changes. This list always contains enough information to transmit the original automation curve from the host in a sample-accurate way. Check the [AGain](../What+is+the+VST+3+SDK/Plug-in+Examples.md#again) example to see how it can be implemented.
 
 See also [Parameters and Automation](../Technical+Documentation/Parameters+Automation/Index.md)
 
