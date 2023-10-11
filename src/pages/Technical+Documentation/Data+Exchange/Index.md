@@ -35,8 +35,8 @@ Version 3.7.9 of the SDK contains the new *Data Exchange* API to send data from 
 processing function to the controller in a safe and efficient way.
 
 As this API needs support from the host and not all hosts will provide this API in the beginning
-the SDK contains a backwards compatibility layer that either uses the API directly if available or 
-uses an alternative method based on the IMessage API to emulate the API. See the 
+the SDK contains a backwards compatibility layer that either uses the API directly, if available, or 
+an alternative method based on the IMessage API to emulate the API. See the 
 [tutorial](../../Tutorials/Data+Exchange.md) on how to use it.
 
 ## The Data Exchange API

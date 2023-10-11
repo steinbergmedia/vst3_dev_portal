@@ -127,7 +127,7 @@ You can run all available tests with **Run All**. It is possible also to disable
 
 Error reports will be displayed in the **Errors view**. In the **Messages View** some warnings (or some plug-in limitations), test results and progress are displayed.
 
-In this version of this Plug-in Test Host, the tests are limited to the main **VST 3** features, in future version the test coverage will be extended.
+In this version of this **Plug-in Test Host**, the tests are limited to the main **VST 3** features, in future version the test coverage will be extended.
 
 ## Preset Editor
 

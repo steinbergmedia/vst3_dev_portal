@@ -72,7 +72,7 @@ Classes:
 
 AGain Sample Accurate
 
-Simple plug-in showing how to achieve sample accurate processing.
+Simple plug-in showing how to achieve sample-accurate processing.
 
 Based Check the folder *"public.sdk/samples/vst/again_sampleaccurate"* of the SDK!
 

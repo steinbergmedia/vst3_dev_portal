@@ -153,7 +153,7 @@ For reporting the results of a text input value change for a continuous or a dis
 
 In **VST 3**, automation playback is the task of the plug-in and it is the host's task to provide the automation data. The only way for a parameter change to arrive in the processor is the processing call. Receiving parameter changes from the edit controller and playing back automation data is one and the same thing.
 
-The need to perform all transformations, from the normalized GUI representation to the DSP representation, produces some overhead. Performing sample accurate automation requires even more overhead, because the DSP value must be calculated for each single sample. While this cannot be avoided entirely, it is the choice of the plug-in implementation how much processing time to spend on automation accuracy. The host always transmits value changes in a way that allows a sample accurate reconstruction of the underlying automation curve. The plug-in is responsible for the realization.
+The need to perform all transformations, from the normalized GUI representation to the DSP representation, produces some overhead. Performing sample-accurate automation requires even more overhead, because the DSP value must be calculated for each single sample. While this cannot be avoided entirely, it is the choice of the plug-in implementation how much processing time to spend on automation accuracy. The host always transmits value changes in a way that allows a sample-accurate reconstruction of the underlying automation curve. The plug-in is responsible for the realization.
 
 ![Tech_doc_12](../../../resources/tech_doc_12.jpg)
 
