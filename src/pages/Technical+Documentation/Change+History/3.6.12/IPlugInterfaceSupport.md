@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Host callback interface for an edit controller: [Vst::IPlugInterfaceSupport](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IPlugInterfaceSupport.html)
+Host callback interface for an edit controller: [Vst::IPlugInterfaceSupport](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IPlugInterfaceSupport.html).
 
 - \[host imp\]
 - \[released: 3.6.12\]
@@ -35,4 +35,4 @@ tresult PLUGIN_API MyPluginController::initialize (FUnknown* context)
 }
 ```
 
-See also [IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html)
+See also [IPluginBase](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html).

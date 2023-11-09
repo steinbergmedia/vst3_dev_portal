@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Edit controller component interface extension: [Vst::IParameterFunctionName](https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IParameterFunctionName.html)
+Edit controller component interface extension: [Vst::IParameterFunctionName](https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IParameterFunctionName.html).
 
 - \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]

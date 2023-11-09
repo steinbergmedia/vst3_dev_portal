@@ -227,7 +227,7 @@ The threading model used by **VST 3** is quite simple and requires that:
   - IAudioProcessor→setProcessing: which could be called in a Audio Thread (realtime thread), avoid any memory allocation!
 - All function exported by the host are called by the plug-in in the UI Thread
 
-Check the [Audio Processor Call Sequence](../Workflow+Diagrams/Audio+Processor+Call+Sequence.md) and the [Edit Controller Call Sequence](../Workflow+Diagrams/Edit+Controller+Call+Sequence.md)
+Check the [Audio Processor Call Sequence](../Workflow+Diagrams/Audio+Processor+Call+Sequence.md) and the [Edit Controller Call Sequence](../Workflow+Diagrams/Edit+Controller+Call+Sequence.md).
 
 ## Communication between the components
 

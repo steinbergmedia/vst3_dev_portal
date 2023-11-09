@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Legacy MIDI CC Out event specific data: [midiCCOut](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Event.html#a3f45fbed968cf574aa1f9b859f0a0972)
+Legacy MIDI CC Out event specific data: [midiCCOut](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Event.html#a3f45fbed968cf574aa1f9b859f0a0972).
 
 Used in Event (union)
 

@@ -14,7 +14,7 @@
 
 ## Introduction
 
-MIDI Learn Interface: [Vst::IMidiLearn](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiLearn.html)
+MIDI Learn Interface: [Vst::IMidiLearn](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiLearn.html).
 
 - \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]

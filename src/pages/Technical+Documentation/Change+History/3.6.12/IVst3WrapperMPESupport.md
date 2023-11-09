@@ -16,7 +16,7 @@
 
 ## Introduction
 
-Wrapper **MPE** Support interface: [Vst::IVst3WrapperMPESupport](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IVst3WrapperMPESupport.html)
+Wrapper **MPE** Support interface: [Vst::IVst3WrapperMPESupport](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IVst3WrapperMPESupport.html).
 
 - \[host imp\]
 - [passed as 'context' to [IPluginBase::initialize()](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html#a3c81be4ff2e7bbb541d3527264f26eed)]

@@ -14,7 +14,7 @@
 
 ## Introduction
 
-Plug-in view content scale support: [Vst::IPlugViewContentScaleSupport](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html)
+Plug-in view content scale support: [Vst::IPlugViewContentScaleSupport](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html).
 
 - \[plug impl\]
 - [extends [IPlugView](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html)]
