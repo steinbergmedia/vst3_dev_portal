@@ -27,7 +27,7 @@ The plug-in can use the context menu in two ways:
 >ⓘ **Note**\
 >It is recommended to use this context menu interface, even if you do not add your own items to the menu as this is considered to be a big user value.
 
-See also [IContextMenu](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html), [IContextMenuTarget](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenuTarget.html)
+See also [IContextMenu](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html), [IContextMenuTarget](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenuTarget.html).
 
 ## Examples
 

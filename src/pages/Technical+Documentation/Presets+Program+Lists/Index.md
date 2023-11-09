@@ -13,7 +13,7 @@
 
 ---
 
-How presets and program lists are handled in **VST 3**
+How presets and program lists are handled in **VST 3**.
 
 See [VST 3 Locations / Format](../Locations+Format/Index.md#preset-format) for preset format definition.
 

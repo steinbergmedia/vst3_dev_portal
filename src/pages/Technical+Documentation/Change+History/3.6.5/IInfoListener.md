@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Channel context interface: [Vst::IInfoListener](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html)
+Channel context interface: [Vst::IInfoListener](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html).
 
 - \[plug imp\]
 - [extends [IEditController](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html)]
@@ -18,7 +18,7 @@ Channel context interface: [Vst::IInfoListener](https://steinbergmedia.github.io
 - \[optional\]
 
 Allows the host to inform the plug-in about the context in which the plug-in is instantiated, mainly channel based info (color, name, index, ...). Index can be defined inside a namespace (for example, index start from 1 to N for Type Input/Output Channel (Index namespace) and index start from 1 to M for Type Audio Channel).
-As soon as the plug-in provides this [Vst::IInfoListener](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html) interface, the host will call setChannelContextInfos for each change occurring to this channel (new name, new color, new indexation, ...)
+As soon as the plug-in provides this [Vst::IInfoListener](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html) interface, the host will call setChannelContextInfos for each change occurring to this channel (new name, new color, new indexation, ...).
 
 ## Example
 

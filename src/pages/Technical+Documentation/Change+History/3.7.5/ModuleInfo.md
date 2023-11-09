@@ -78,7 +78,7 @@ BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb, stringCompanyEmail)
 
 ### Example of host implementation
 
-Check function **void Validator::testModule** in public.sdk/samples/vst-hosting/validator/source/validator.cpp
+Check function **void Validator::testModule** in public.sdk/samples/vst-hosting/validator/source/validator.cpp.
 
 ``` c++
 plugCompatibility = factory.createInstance<IPluginCompatibility> (classInfo.ID ());
