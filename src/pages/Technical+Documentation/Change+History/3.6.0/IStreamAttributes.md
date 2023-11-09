@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Meta attributes of a stream: [Vst::IStreamAttributes](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IStreamAttributes.html)
+Meta attributes of a stream: [Vst::IStreamAttributes](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IStreamAttributes.html).
 
 - \[host imp\]
 - [extends [IBStream](https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IBStream.html)]
