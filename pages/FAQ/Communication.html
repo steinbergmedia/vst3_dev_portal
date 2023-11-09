@@ -199,7 +199,7 @@
 }
 </code></pre>
 <p>Automation data is transmitted as a list of parameter changes. This list always contains enough information to transmit the original automation curve from the host in a sample-accurate way. Check the <a href="../What+is+the+VST+3+SDK/Plug-in+Examples.html#again">AGain</a> example to see how it can be implemented.</p>
-<p>See also <a href="../Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></p>
+<p>See also <a href="../Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a>.</p>
 <hr />
 <h2 id="q-how-report-to-the-host-that-the-plug-in-has-new-parameter-titles"><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-has-new-parameter-titles">Q: How report to the host that the plug-in has new parameter titles?</a></h2>
 <p>Due to preset loading or user interaction the plug-in may change its parameters names (title) (but not the number of them or their IDs). To inform the host about this change, the plug-in should call from the editController its component handler function <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">restartComponent</a> with flag <strong>kParamTitlesChanged</strong>:</p>

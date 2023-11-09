@@ -202,7 +202,7 @@
 <li>[mandatory]</li>
 </ul>
 <p>This is the basic interface for a VST component and must always be supported. It contains the common parts of any kind of processing class. The parts that are specific to a media type are defined in a separate interface. An implementation component must provide both the specific interface and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">IComponent</a>.</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html">IPluginBase</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html">IPluginBase</a>.</p>
 <h2 id="iaudioprocessor"><a class="header" href="#iaudioprocessor"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">IAudioProcessor</a></a></h2>
 <p>Audio processing interface.</p>
 <ul>
@@ -220,7 +220,7 @@
 <li>[mandatory]</li>
 </ul>
 <p>The controller part of an effect or instrument with parameter handling (export, definition, conversion...).</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a8aa65685068ad033af57b1497926b689">IComponent::getControllerClassId</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiMapping.html">IMidiMapping</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a8aa65685068ad033af57b1497926b689">IComponent::getControllerClassId</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiMapping.html">IMidiMapping</a>.</p>
 <h2 id="iconnectionpoint"><a class="header" href="#iconnectionpoint"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a></a></h2>
 <p>Connect a component with another one.</p>
 <ul>
@@ -230,7 +230,7 @@
 <li>[mandatory]</li>
 </ul>
 <p>This interface is used for the communication of separate components. Note that some hosts will place a proxy object between the components so that they are not directly connected.</p>
-<p>See also <a href="../../API+Documentation/Index.html#communication-between-the-components">Communication between the components</a></p>
+<p>See also <a href="../../API+Documentation/Index.html#communication-between-the-components">Communication between the components</a>.</p>
 <h2 id="iunitinfo"><a class="header" href="#iunitinfo"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a></a></h2>
 <p>Edit controller extension to describe the plug-in structure.</p>
 <ul>
@@ -246,7 +246,7 @@
 <li>Each unit can reference one program list - this reference must not change.</li>
 <li>Each unit that uses a program list references one program of the list.</li>
 </ul>
-<p>See also <a href="../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a></p>
+<p>See also <a href="../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a>.</p>
 <h2 id="iprogramlistdata"><a class="header" href="#iprogramlistdata"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html">IProgramListData</a></a></h2>
 <p>Component extension to access program list data.</p>
 <ul>
@@ -256,7 +256,7 @@
 <li>[optional]</li>
 </ul>
 <p>A component can support program list data via this interface or/and unit preset data (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">IUnitData</a>).</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">IUnitData</a>, <a href="../../Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">IUnitData</a>, <a href="../../Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a>.</p>
 <h2 id="iunitdata"><a class="header" href="#iunitdata"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">IUnitData</a></a></h2>
 <p>Component extension to access unit data.</p>
 <ul>
@@ -266,7 +266,7 @@
 <li>[optional]</li>
 </ul>
 <p>A component can support unit preset data via this interface or program list data (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html">IProgramListData</a>).</p>
-<p>See also <a href="../../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a></p>
+<p>See also <a href="../../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a>.</p>
 <h2 id="iplugview"><a class="header" href="#iplugview"><a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">IPlugView</a></a></h2>
 <p>Plug-in definition of a view.</p>
 <ul>
@@ -302,7 +302,7 @@ Please only resize the platform representation of the view when <a href="https:/
 </blockquote>
 <h3 id="keyboard-handling"><a class="header" href="#keyboard-handling">Keyboard handling</a></h3>
 <p>The plug-in view receives keyboard events from the host. A view implementation must not handle keyboard events by the means of platform callbacks, but let the host pass them to the view. The host depends on a proper return value when <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#a759b576f046e699c84dc07d579600b1b">IPlugView::onKeyDown</a> is called, otherwise the plug-in view may cause a malfunction of the host's key command handling.</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html">IPlugFrame</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__platformUIType.html">Platform UI Types</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html">IPlugFrame</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__platformUIType.html">Platform UI Types</a>.</p>
 
                     </main>
 

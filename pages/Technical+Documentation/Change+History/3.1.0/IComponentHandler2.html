@@ -212,7 +212,13 @@
 }
 </code></pre>
 <h2 id="ui-group-editing"><a class="header" href="#ui-group-editing">UI Group Editing</a></h2>
-<p>This part handles parameter group editing from the plug-in UI. It wraps a set of IComponentHandler::beginEdit / Steinberg::Vst::IComponentHandler::performEdit / Steinberg::Vst::IComponentHandler::endEdit functions (see IComponentHandler) which should use the same timestamp in the host when writing automation. This allows for better synchronizing of multiple parameter changes at once.</p>
+<p>This part handles parameter group editing from the plug-in UI. It wraps a set of:</p>
+<ul>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223">Steinberg::Vst::IComponentHandler::beginEdit</a></li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93">Steinberg::Vst::IComponentHandler::performEdit</a></li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#ae380206486b11f000cad7c0d9b6e877c">Steinberg::Vst::IComponentHandler::endEdit</a></li>
+</ul>
+<p>functions (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>) which should use the same timestamp in the host when writing automation. This allows for better synchronizing of multiple parameter changes at once.</p>
 <h3 id="examples-of-different-use-cases"><a class="header" href="#examples-of-different-use-cases">Examples of different use cases</a></h3>
 <pre><code class="language-c++">//--------------------------------------
 // we are in the editcontroller...
@@ -250,7 +256,7 @@ hostHandler-&gt;endEdit (1);
 hostHandler-&gt;endEdit (3);
 hostHandler2-&gt;finishGroupEdit ();
 </code></pre>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>.</p>
 
                     </main>
 

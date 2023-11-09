@@ -194,7 +194,7 @@
 <hr />
 <h2 id="q-whats-the-difference-between-ieditcontrollersetcomponentstate-and-ieditcontrollersetstate"><a class="header" href="#q-whats-the-difference-between-ieditcontrollersetcomponentstate-and-ieditcontrollersetstate">Q: What's the difference between IEditController::setComponentState and IEditController::setState?</a></h2>
 <p>After a preset is loaded, the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f">Vst::IEditController::setComponentState</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805">Vst::IComponent::setState</a>. Both delivering the same information. <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a77ac39bcc5c4b15818b1a87de2573805">Vst::IEditController::setState</a> is called by the host so that the plug-in is able to update its controller dependent parameters, e.g. position of scroll bars. Prior to this, there should have been a call by the host to <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a10db03106be8ba89d23859fa6be5d9f6">Vst::IEditController::getState</a>, where the plug-in writes these various parameters into the stream.</p>
-<p>See also <a href="#q-how-does-persistence-work">Q: How does persistence work?</a></p>
+<p>See also <a href="#q-how-does-persistence-work">Q: How does persistence work?</a>.</p>
 
                     </main>
 

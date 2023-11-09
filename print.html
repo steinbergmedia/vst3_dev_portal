@@ -4468,7 +4468,7 @@ More details can be found on the page about <a href="pages/Technical+Documentati
 </li>
 <li>All function exported by the host are called by the plug-in in the UI Thread</li>
 </ul>
-<p>Check the <a href="pages/Technical+Documentation/API+Documentation/../Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a> and the <a href="pages/Technical+Documentation/API+Documentation/../Workflow+Diagrams/Edit+Controller+Call+Sequence.html">Edit Controller Call Sequence</a></p>
+<p>Check the <a href="pages/Technical+Documentation/API+Documentation/../Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a> and the <a href="pages/Technical+Documentation/API+Documentation/../Workflow+Diagrams/Edit+Controller+Call+Sequence.html">Edit Controller Call Sequence</a>.</p>
 <h2 id="communication-between-the-components"><a class="header" href="#communication-between-the-components">Communication between the components</a></h2>
 <p>The two <strong>VST 3</strong> components (processor and controller) need a way to communicate. It is the task of the host to handle this.</p>
 <h3 id="standard-communication"><a class="header" href="#standard-communication">Standard communication</a></h3>
@@ -5150,7 +5150,7 @@ To address the most common cases:</p>
 </blockquote>
 <h3 id="gui-playback"><a class="header" href="#gui-playback">GUI playback</a></h3>
 <p>The host is responsible for updating the plug-in GUI when automation data is transmitted to the processor. This is realized by frequent calls of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#aded549c5b0f342a23dee18cc41ece6b8">Steinberg::Vst::IEditController::setParamNormalized</a> in the <strong>UI Thread</strong>.</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">Steinberg::Vst::IParameterChanges</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">Steinberg::Vst::IParamValueQueue</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">Steinberg::Vst::IParameterChanges</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">Steinberg::Vst::IParamValueQueue</a>.</p>
 <h2 id="informing-the-host-about-changes"><a class="header" href="#informing-the-host-about-changes">Informing the host about changes</a></h2>
 <h3 id="parameter-titles-default-values-or-flags-have-changed"><a class="header" href="#parameter-titles-default-values-or-flags-have-changed">Parameter titles, default values or flags have changed</a></h3>
 <p>If something happens, user interaction for example, which change the parameter styles (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645">ParameterFlags</a>) or title or default value of one or multiple parameters, the plug-in must call</p>
@@ -5228,7 +5228,7 @@ The purposes of units are:</p>
 </ul>
 <p><img src="pages/Technical+Documentation/VST+3+Units/../../../resources/tech_doc_13.png" alt="Tech_doc_13" /></p>
 <p>Most things of interest in regard to units are GUI related, so the access interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">Steinberg::Vst::IUnitInfo</a> needs to be implemented as extension of the edit controller.</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">Steinberg::Vst::IUnitInfo</a>, <a href="pages/Technical+Documentation/VST+3+Units/../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">Steinberg::Vst::IUnitInfo</a>, <a href="pages/Technical+Documentation/VST+3+Units/../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a>.</p>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <ul>
 <li>
@@ -5264,7 +5264,7 @@ The purposes of units are:</p>
 <li><a href="pages/Technical+Documentation/Presets+Program+Lists/../Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></li>
 </ul>
 <hr />
-<p>How presets and program lists are handled in <strong>VST 3</strong></p>
+<p>How presets and program lists are handled in <strong>VST 3</strong>.</p>
 <p>See <a href="pages/Technical+Documentation/Presets+Program+Lists/../Locations+Format/Index.html#preset-format">VST 3 Locations / Format</a> for preset format definition.</p>
 <h2 id="simple-plug-ins"><a class="header" href="#simple-plug-ins">Simple Plug-ins</a></h2>
 <p><img src="pages/Technical+Documentation/Presets+Program+Lists/../../../resources/tech_doc_17.png" alt="Tech_doc_17" /></p>
@@ -5386,7 +5386,7 @@ The purposes of units are:</p>
 </ul>
 <p>A plug-in can support unit presets and program list presets.</p>
 <p><img src="pages/Technical+Documentation/Complex+Structures/../../../resources/tech_doc_19.jpg" alt="Tech_doc_19" /></p>
-<p>See also <a href="pages/Technical+Documentation/Complex+Structures/../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IProgramListData</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IUnitData</a></p>
+<p>See also <a href="pages/Technical+Documentation/Complex+Structures/../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IProgramListData</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IUnitData</a>.</p>
 <h2 id="units-and-tracks"><a class="header" href="#units-and-tracks">Units and Tracks</a></h2>
 <p>A unit can be associated with busses (or channels of busses). In particular, a unit can have a fixed and unique connection to an input MIDI channel. For a host, it might be useful to know about this connection and which unit can be associated with a specific MIDI track as a result of this. Often, the GUI of a multi-timbral plug-in does not show the settings of all similar units at the same time. Instead, there is some kind of unit selection. The idea is to be able to synchronize the selection of units in a plug-in to the selection of tracks in the host (in both ways).</p>
 <p>When a plug-in GUI is organized in the described way, it should support the described behavior by implementing</p>
@@ -6457,7 +6457,7 @@ tresult PLUGIN_API MyPlugFactory::setHostContext (FUnknown* context)
 <li>[mandatory]</li>
 </ul>
 <p>This is the basic interface for a VST component and must always be supported. It contains the common parts of any kind of processing class. The parts that are specific to a media type are defined in a separate interface. An implementation component must provide both the specific interface and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">IComponent</a>.</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html">IPluginBase</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html">IPluginBase</a>.</p>
 <h2 id="iaudioprocessor-1"><a class="header" href="#iaudioprocessor-1"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">IAudioProcessor</a></a></h2>
 <p>Audio processing interface.</p>
 <ul>
@@ -6475,7 +6475,7 @@ tresult PLUGIN_API MyPlugFactory::setHostContext (FUnknown* context)
 <li>[mandatory]</li>
 </ul>
 <p>The controller part of an effect or instrument with parameter handling (export, definition, conversion...).</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a8aa65685068ad033af57b1497926b689">IComponent::getControllerClassId</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiMapping.html">IMidiMapping</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a8aa65685068ad033af57b1497926b689">IComponent::getControllerClassId</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiMapping.html">IMidiMapping</a>.</p>
 <h2 id="iconnectionpoint"><a class="header" href="#iconnectionpoint"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a></a></h2>
 <p>Connect a component with another one.</p>
 <ul>
@@ -6485,7 +6485,7 @@ tresult PLUGIN_API MyPlugFactory::setHostContext (FUnknown* context)
 <li>[mandatory]</li>
 </ul>
 <p>This interface is used for the communication of separate components. Note that some hosts will place a proxy object between the components so that they are not directly connected.</p>
-<p>See also <a href="pages/Technical+Documentation/Change+History/3.0.0/../../API+Documentation/Index.html#communication-between-the-components">Communication between the components</a></p>
+<p>See also <a href="pages/Technical+Documentation/Change+History/3.0.0/../../API+Documentation/Index.html#communication-between-the-components">Communication between the components</a>.</p>
 <h2 id="iunitinfo"><a class="header" href="#iunitinfo"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a></a></h2>
 <p>Edit controller extension to describe the plug-in structure.</p>
 <ul>
@@ -6501,7 +6501,7 @@ tresult PLUGIN_API MyPlugFactory::setHostContext (FUnknown* context)
 <li>Each unit can reference one program list - this reference must not change.</li>
 <li>Each unit that uses a program list references one program of the list.</li>
 </ul>
-<p>See also <a href="pages/Technical+Documentation/Change+History/3.0.0/../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a></p>
+<p>See also <a href="pages/Technical+Documentation/Change+History/3.0.0/../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a>.</p>
 <h2 id="iprogramlistdata"><a class="header" href="#iprogramlistdata"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html">IProgramListData</a></a></h2>
 <p>Component extension to access program list data.</p>
 <ul>
@@ -6511,7 +6511,7 @@ tresult PLUGIN_API MyPlugFactory::setHostContext (FUnknown* context)
 <li>[optional]</li>
 </ul>
 <p>A component can support program list data via this interface or/and unit preset data (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">IUnitData</a>).</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">IUnitData</a>, <a href="pages/Technical+Documentation/Change+History/3.0.0/../../Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">IUnitData</a>, <a href="pages/Technical+Documentation/Change+History/3.0.0/../../Complex+Structures/Index.html">Complex Plug-in Structures / Multi-timbral Instruments</a>.</p>
 <h2 id="iunitdata"><a class="header" href="#iunitdata"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">IUnitData</a></a></h2>
 <p>Component extension to access unit data.</p>
 <ul>
@@ -6521,7 +6521,7 @@ tresult PLUGIN_API MyPlugFactory::setHostContext (FUnknown* context)
 <li>[optional]</li>
 </ul>
 <p>A component can support unit preset data via this interface or program list data (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html">IProgramListData</a>).</p>
-<p>See also <a href="pages/Technical+Documentation/Change+History/3.0.0/../../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a></p>
+<p>See also <a href="pages/Technical+Documentation/Change+History/3.0.0/../../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a>.</p>
 <h2 id="iplugview"><a class="header" href="#iplugview"><a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">IPlugView</a></a></h2>
 <p>Plug-in definition of a view.</p>
 <ul>
@@ -6557,7 +6557,7 @@ Please only resize the platform representation of the view when <a href="https:/
 </blockquote>
 <h3 id="keyboard-handling"><a class="header" href="#keyboard-handling">Keyboard handling</a></h3>
 <p>The plug-in view receives keyboard events from the host. A view implementation must not handle keyboard events by the means of platform callbacks, but let the host pass them to the view. The host depends on a proper return value when <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#a759b576f046e699c84dc07d579600b1b">IPlugView::onKeyDown</a> is called, otherwise the plug-in view may cause a malfunction of the host's key command handling.</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html">IPlugFrame</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__platformUIType.html">Platform UI Types</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html">IPlugFrame</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__platformUIType.html">Platform UI Types</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.0.0/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.0.0/../../Index.html">Technical Documentation</a></p>
 <h1 id="300-multiple-dynamic-io-support"><a class="header" href="#300-multiple-dynamic-io-support">[3.0.0] Multiple Dynamic I/O Support</a></h1>
@@ -6914,7 +6914,7 @@ The host has the responsibility to clear the input buffers (set to something nea
 <li>[mandatory]</li>
 </ul>
 <p>Allow transfer of parameter editing to component (processor) via host and support automation. Cause the host to react on configuration changes (restartComponent).</p>
-<p>See also <em><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a></em></p>
+<p>See also <em><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a></em>.</p>
 <h2 id="ieventlist"><a class="header" href="#ieventlist"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEventList.html">IEventList</a></a></h2>
 <p>List of events to process.</p>
 <ul>
@@ -6922,7 +6922,7 @@ The host has the responsibility to clear the input buffers (set to something nea
 <li>[released: 3.0.0]</li>
 <li>[mandatory]</li>
 </ul>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a>, Event</p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a>, Event.</p>
 <h2 id="iunithandler"><a class="header" href="#iunithandler"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a></a></h2>
 <p>Host callback for unit support.</p>
 <ul>
@@ -6932,7 +6932,7 @@ The host has the responsibility to clear the input buffers (set to something nea
 <li>[optional]</li>
 </ul>
 <p>Host callback interface, used with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a>. Retrieve via queryInterface from <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>.</p>
-<p>See also <a href="pages/Technical+Documentation/Change+History/3.0.0/../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a></p>
+<p>See also <a href="pages/Technical+Documentation/Change+History/3.0.0/../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a>.</p>
 <h2 id="ihostapplication"><a class="header" href="#ihostapplication"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html">IHostApplication</a></a></h2>
 <p>Basic host callback interface.</p>
 <ul>
@@ -6951,7 +6951,7 @@ The host has the responsibility to clear the input buffers (set to something nea
 <li>[mandatory]</li>
 </ul>
 <p>Messages are sent from the processor component to then controller component and vice versa.</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html">IAttributeList</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a>, <a href="pages/Technical+Documentation/Change+History/3.0.0/../../API+Documentation/Index.html#communication-between-the-components">Communication between the components</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAttributeList.html">IAttributeList</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">IConnectionPoint</a>, <a href="pages/Technical+Documentation/Change+History/3.0.0/../../API+Documentation/Index.html#communication-between-the-components">Communication between the components</a>.</p>
 <h2 id="iparamvaluequeue"><a class="header" href="#iparamvaluequeue"><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueue</a></a></h2>
 <p>Queue of changes for a specific parameter.</p>
 <ul>
@@ -6997,7 +6997,7 @@ A jump in the automation curve has to be transmitted as two points: one with the
 <li>[mandatory]</li>
 </ul>
 <p>This interface is used to transmit any changes to be applied to parameters in the current processing block. A change can be caused by GUI interaction as well as automation. Changes are transmitted as a list of queues (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueue</a>) containing only queues for parameters that actually did change.</p>
-<p>See <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueue</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a></p>
+<p>See <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueue</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html">ProcessData</a>.</p>
 <h2 id="iplugframe"><a class="header" href="#iplugframe"><a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html">IPlugFrame</a></a></h2>
 <p>Callback interface passed to <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">IPlugView</a>.</p>
 <ul>
@@ -7072,7 +7072,7 @@ tresult PLUGIN_API MyEditController::getMidiControllerAssignment (int32 busIndex
 </ul>
 <hr />
 <h2 id="introduction-16"><a class="header" href="#introduction-16">Introduction</a></h2>
-<p>How the host can retrieve the parameter where the mouse cursor is located.Extension for <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">IPlugView</a> to find view parameters (lookup value under mouse support): <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterFinder.html">Vst::IParameterFinder</a></p>
+<p>How the host can retrieve the parameter where the mouse cursor is located.Extension for <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">IPlugView</a> to find view parameters (lookup value under mouse support): <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterFinder.html">Vst::IParameterFinder</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">IPlugView</a>]</li>
@@ -7149,7 +7149,13 @@ tresult PLUGIN_API MyEditController::getMidiControllerAssignment (int32 busIndex
 }
 </code></pre>
 <h2 id="ui-group-editing"><a class="header" href="#ui-group-editing">UI Group Editing</a></h2>
-<p>This part handles parameter group editing from the plug-in UI. It wraps a set of IComponentHandler::beginEdit / Steinberg::Vst::IComponentHandler::performEdit / Steinberg::Vst::IComponentHandler::endEdit functions (see IComponentHandler) which should use the same timestamp in the host when writing automation. This allows for better synchronizing of multiple parameter changes at once.</p>
+<p>This part handles parameter group editing from the plug-in UI. It wraps a set of:</p>
+<ul>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223">Steinberg::Vst::IComponentHandler::beginEdit</a></li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93">Steinberg::Vst::IComponentHandler::performEdit</a></li>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#ae380206486b11f000cad7c0d9b6e877c">Steinberg::Vst::IComponentHandler::endEdit</a></li>
+</ul>
+<p>functions (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>) which should use the same timestamp in the host when writing automation. This allows for better synchronizing of multiple parameter changes at once.</p>
 <h3 id="examples-of-different-use-cases"><a class="header" href="#examples-of-different-use-cases">Examples of different use cases</a></h3>
 <pre><code class="language-c++">//--------------------------------------
 // we are in the editcontroller...
@@ -7187,7 +7193,7 @@ hostHandler-&gt;endEdit (1);
 hostHandler-&gt;endEdit (3);
 hostHandler2-&gt;finishGroupEdit ();
 </code></pre>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.1.0/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.1.0/../../Index.html">Technical Documentation</a></p>
 <h1 id="310-knobmode-open-help--open-aboutbox"><a class="header" href="#310-knobmode-open-help--open-aboutbox">[3.1.0] KnobMode, Open Help &amp; Open Aboutbox</a></h1>
@@ -7199,7 +7205,7 @@ hostHandler2-&gt;finishGroupEdit ();
 </ul>
 <hr />
 <h2 id="introduction-19"><a class="header" href="#introduction-19">Introduction</a></h2>
-<p>Edit controller component interface extension: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController2.html">Vst::IEditController2</a></p>
+<p>Edit controller component interface extension: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController2.html">Vst::IEditController2</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>]</li>
@@ -7240,7 +7246,7 @@ public:
     return kResultTrue;
 }
 </code></pre>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1EditController.html">EditController</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1EditController.html">EditController</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.5.0/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.5.0/../../Index.html">Technical Documentation</a></p>
 <h1 id="350-note-expression-1"><a class="header" href="#350-note-expression-1">[3.5.0] Note Expression</a></h1>
@@ -7915,7 +7921,7 @@ The plug-in can use the context menu in two ways:</p>
 <p>ⓘ <strong>Note</strong><br />
 It is recommended to use this context menu interface, even if you do not add your own items to the menu as this is considered to be a big user value.</p>
 </blockquote>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html">IContextMenu</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenuTarget.html">IContextMenuTarget</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html">IContextMenu</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenuTarget.html">IContextMenuTarget</a>.</p>
 <h2 id="examples-2"><a class="header" href="#examples-2">Examples</a></h2>
 <h3 id="from-the-host-perspective"><a class="header" href="#from-the-host-perspective">From the host perspective</a></h3>
 <p>For example, <strong>Cubase</strong> adds its owned entries in the context menu opened with right-click on an exported parameter when the plug-in uses <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler3.html#a0c91e0b43003a34a7f43d0c4b33aa604">createContextMenu</a>. The plug-in itself, in this example, only adds the &quot;Open UIDescription Editor&quot; entry.</p>
@@ -7996,7 +8002,7 @@ void popupContextMenu (IComponentHandler* componentHandler, IPlugView* view, con
 </ul>
 <hr />
 <h2 id="introduction-24"><a class="header" href="#introduction-24">Introduction</a></h2>
-<p>Parameter editing from host: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditControllerHostEditing.html">Vst::IEditControllerHostEditing</a></p>
+<p>Parameter editing from host: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditControllerHostEditing.html">Vst::IEditControllerHostEditing</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>]</li>
@@ -8012,7 +8018,7 @@ plugEditController-&gt;setParamNormalized (id, value + 0.1);
 // ...
 plugEditController-&gt;endEditFromHost (id);
 </code></pre>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.6.0/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.6.0/../../Index.html">Technical Documentation</a></p>
 <h1 id="360-ios-inter-app-audio-1"><a class="header" href="#360-ios-inter-app-audio-1">[3.6.0] iOS Inter-App Audio</a></h1>
@@ -8040,7 +8046,7 @@ plugEditController-&gt;endEditFromHost (id);
 </ul>
 <hr />
 <h2 id="introduction-25"><a class="header" href="#introduction-25">Introduction</a></h2>
-<p>iOS InterApp-Audio application out of your <strong>VST 3</strong> plug-in</p>
+<p>iOS InterApp-Audio application out of your <strong>VST 3</strong> plug-in.</p>
 <p>The <strong>VST 3 SDK</strong> provides an easy way to create an iOS InterApp-Audio application out of your <strong>VST 3</strong> plug-in.</p>
 <p>The SDK comes with an iOS <strong>VST 3</strong> host application that can run standalone or as an Inter-App Audio slave. If your plug-in does not use any specific Windows or macOS X API's, it should be reasonably easy to get your plug-in running on iOS.</p>
 <p>If you use <a href="pages/Technical+Documentation/Change+History/3.6.0/../../../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI4</strong></a> with the VST3Editor class as your UI, you mainly only have to create a new UI description for the different device sizes.</p>
@@ -8128,7 +8134,7 @@ IPlugView* PLUGIN_API MyEditController::createView (FIDString _name)
 </ul>
 <hr />
 <h2 id="introduction-26"><a class="header" href="#introduction-26">Introduction</a></h2>
-<p>Meta attributes of a stream: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IStreamAttributes.html">Vst::IStreamAttributes</a></p>
+<p>Meta attributes of a stream: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IStreamAttributes.html">Vst::IStreamAttributes</a>.</p>
 <ul>
 <li>[host imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IBStream.html">IBStream</a>]</li>
@@ -8185,7 +8191,7 @@ tresult PLUGIN_API MyPluginProcessor::setState (IBStream* state)
 </ul>
 <hr />
 <h2 id="introduction-27"><a class="header" href="#introduction-27">Introduction</a></h2>
-<p>Channel context interface: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html">Vst::IInfoListener</a></p>
+<p>Channel context interface: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html">Vst::IInfoListener</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>]</li>
@@ -8193,7 +8199,7 @@ tresult PLUGIN_API MyPluginProcessor::setState (IBStream* state)
 <li>[optional]</li>
 </ul>
 <p>Allows the host to inform the plug-in about the context in which the plug-in is instantiated, mainly channel based info (color, name, index, ...). Index can be defined inside a namespace (for example, index start from 1 to N for Type Input/Output Channel (Index namespace) and index start from 1 to M for Type Audio Channel).
-As soon as the plug-in provides this <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html">Vst::IInfoListener</a> interface, the host will call setChannelContextInfos for each change occurring to this channel (new name, new color, new indexation, ...)</p>
+As soon as the plug-in provides this <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ChannelContext_1_1IInfoListener.html">Vst::IInfoListener</a> interface, the host will call setChannelContextInfos for each change occurring to this channel (new name, new color, new indexation, ...).</p>
 <h2 id="example-6"><a class="header" href="#example-6">Example</a></h2>
 <pre><code class="language-c++">//------------------------------------------------------------------------
 tresult PLUGIN_API MyPlugin::setChannelContextInfos (IAttributeList* list)
@@ -8296,7 +8302,7 @@ tresult PLUGIN_API MyPlugin::setChannelContextInfos (IAttributeList* list)
 </ul>
 <hr />
 <h2 id="introduction-28"><a class="header" href="#introduction-28">Introduction</a></h2>
-<p>Host callback for extended unit support: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler2.html">Vst::IUnitHandler2</a></p>
+<p>Host callback for extended unit support: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler2.html">Vst::IUnitHandler2</a>.</p>
 <ul>
 <li>[host imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a>]</li>
@@ -8304,7 +8310,7 @@ tresult PLUGIN_API MyPlugin::setChannelContextInfos (IAttributeList* list)
 <li>[optional]</li>
 </ul>
 <p>Host callback interface, used with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a>. Retrieve via queryInterface from <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>. The plug-in has the possibility to inform the host with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler2.html#ad1f48213839cc5b28a612a2baaba6584">notifyUnitByBusChange</a> that something has changed in the bus - unit assignment,the host then has to recall <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html#a718fa905d04d7d559bc89c7ca761413b">IUnitInfo::getUnitByBus</a> in order to get the new relations between busses and unit.</p>
-<p>See also <a href="pages/Technical+Documentation/Change+History/3.6.5/../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a></p>
+<p>See also <a href="pages/Technical+Documentation/Change+History/3.6.5/../../VST+3+Units/Index.html">VST 3 Units</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitHandler.html">IUnitHandler</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">IUnitInfo</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.6.5/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.6.5/../../Index.html">Technical Documentation</a></p>
 <h1 id="365-prefetchable-1"><a class="header" href="#365-prefetchable-1">[3.6.5] Prefetchable</a></h1>
@@ -8316,14 +8322,14 @@ tresult PLUGIN_API MyPlugin::setChannelContextInfos (IAttributeList* list)
 </ul>
 <hr />
 <h2 id="introduction-29"><a class="header" href="#introduction-29">Introduction</a></h2>
-<p>Indicates if the plug-in supports prefetch (dynamically): <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IPrefetchableSupport.html">Vst::IPrefetchableSupport</a></p>
+<p>Indicates if the plug-in supports prefetch (dynamically): <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IPrefetchableSupport.html">Vst::IPrefetchableSupport</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">IComponent</a>]</li>
 <li>[released: 3.6.5]</li>
 <li>[optional]</li>
 </ul>
-<p>The plug-in should implement this interface if it needs to dynamically change between prefetchable or not. By default (without implementing this interface), the host decides in which mode the plug-in is processed. For more info about the prefetch processing mode check the P<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#ae514554bd822c5370bf9496c70302e31a3b1caa5d658939c027cbb7759358a88a">rocessModes::kPrefetch</a> documentation</p>
+<p>The plug-in should implement this interface if it needs to dynamically change between prefetchable or not. By default (without implementing this interface), the host decides in which mode the plug-in is processed. For more info about the prefetch processing mode check the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#ae514554bd822c5370bf9496c70302e31a3b1caa5d658939c027cbb7759358a88a">ProcessModes::kPrefetch</a> documentation</p>
 <h2 id="example-7"><a class="header" href="#example-7">Example</a></h2>
 <pre><code class="language-c++">//------------------------------------------------------------------------
 tresult PLUGIN_API myPlug::getPrefetchableSupport (PrefetchableSupport&amp; prefetchable)
@@ -8350,7 +8356,7 @@ tresult PLUGIN_API myPlug::getPrefetchableSupport (PrefetchableSupport&amp; pref
 </ul>
 <hr />
 <h2 id="introduction-30"><a class="header" href="#introduction-30">Introduction</a></h2>
-<p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAutomationState.html">Vst::IAutomationState</a></p>
+<p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAutomationState.html">Vst::IAutomationState</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>]</li>
@@ -8406,7 +8412,7 @@ tresult PLUGIN_API MyController::setAutomationState (int32 state)
 <p><a href="pages/Technical+Documentation/Change+History/3.6.6/../../Workflow+Diagrams/Resize+View+Call+Sequence.html">Resize View Call Sequence</a></p>
 <hr />
 <h2 id="introduction-31"><a class="header" href="#introduction-31">Introduction</a></h2>
-<p>Plug-in view content scale support: <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html">Vst::IPlugViewContentScaleSupport</a></p>
+<p>Plug-in view content scale support: <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html">Vst::IPlugViewContentScaleSupport</a>.</p>
 <ul>
 <li>[plug impl]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">IPlugView</a>]</li>
@@ -8438,7 +8444,7 @@ Note that the host is allowed to call <a href="https://steinbergmedia.github.io/
 </ul>
 <hr />
 <h2 id="introduction-32"><a class="header" href="#introduction-32">Introduction</a></h2>
-<p>Extended host callback interface for an edit controller: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandlerBusActivation.html">Vst::IComponentHandlerBusActivation</a></p>
+<p>Extended host callback interface for an edit controller: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandlerBusActivation.html">Vst::IComponentHandlerBusActivation</a>.</p>
 <ul>
 <li>[host imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>]</li>
@@ -8446,7 +8452,7 @@ Note that the host is allowed to call <a href="https://steinbergmedia.github.io/
 <li>[optional]</li>
 </ul>
 <p>Allows the plug-in to request the host to activate or deactivate a specific bus. If the host accepts this request, it will call later on <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a3ab7d06aaefe03da1fcd1819f1261050">IComponent::activateBus</a>. This is particularly useful for instruments with more than 1 outputs, where the user could request from the plug-in UI a given output bus activation.</p>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>.</p>
 <h2 id="example-9"><a class="header" href="#example-9">Example</a></h2>
 <pre><code class="language-c++">// somewhere in your code when you need to inform the host to enable a specific Bus.
 FUnknownPtr&lt;IComponentHandlerBusActivation&gt; busActivation (componentHandler);
@@ -8526,7 +8532,7 @@ The file name must start with the unique ID of the audio processor printed in th
 </ul>
 <hr />
 <h2 id="introduction-34"><a class="header" href="#introduction-34">Introduction</a></h2>
-<p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a> for note expression event support: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionPhysicalUIMapping.html">Vst::INoteExpressionPhysicalUIMapping</a></p>
+<p>Extended plug-in interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a> for note expression event support: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionPhysicalUIMapping.html">Vst::INoteExpressionPhysicalUIMapping</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>]</li>
@@ -8594,7 +8600,7 @@ tresult PLUGIN_API MyController::getPhysicalUIMapping (int32 busIndex, int16 cha
 </ul>
 <hr />
 <h2 id="introduction-35"><a class="header" href="#introduction-35">Introduction</a></h2>
-<p>Legacy MIDI CC Out event specific data: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Event.html#a3f45fbed968cf574aa1f9b859f0a0972">midiCCOut</a></p>
+<p>Legacy MIDI CC Out event specific data: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Event.html#a3f45fbed968cf574aa1f9b859f0a0972">midiCCOut</a>.</p>
 <p>Used in Event (union)</p>
 <ul>
 <li>[released: 3.6.12]</li>
@@ -8631,7 +8637,7 @@ tresult PLUGIN_API MyProcessor::process (ProcessData&amp; data)
 </ul>
 <hr />
 <h2 id="introduction-36"><a class="header" href="#introduction-36">Introduction</a></h2>
-<p>MIDI Learn Interface: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiLearn.html">Vst::IMidiLearn</a></p>
+<p>MIDI Learn Interface: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiLearn.html">Vst::IMidiLearn</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>]</li>
@@ -8700,7 +8706,7 @@ tresult PLUGIN_API MyController::onLiveMIDIControllerInput (int32 busIndex, int1
 </ul>
 <hr />
 <h2 id="introduction-37"><a class="header" href="#introduction-37">Introduction</a></h2>
-<p>Host callback interface for an edit controller: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IPlugInterfaceSupport.html">Vst::IPlugInterfaceSupport</a></p>
+<p>Host callback interface for an edit controller: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IPlugInterfaceSupport.html">Vst::IPlugInterfaceSupport</a>.</p>
 <ul>
 <li>[host imp]</li>
 <li>[released: 3.6.12]</li>
@@ -8721,7 +8727,7 @@ tresult PLUGIN_API MyPluginController::initialize (FUnknown* context)
     // ...
 }
 </code></pre>
-<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html">IPluginBase</a></p>
+<p>See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html">IPluginBase</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.6.12/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.6.12/../../Index.html">Technical Documentation</a></p>
 <h1 id="3612-mpe-support-for-wrappers-1"><a class="header" href="#3612-mpe-support-for-wrappers-1">[3.6.12] MPE support for Wrappers</a></h1>
@@ -8738,7 +8744,7 @@ tresult PLUGIN_API MyPluginController::initialize (FUnknown* context)
 </ul>
 <hr />
 <h2 id="introduction-38"><a class="header" href="#introduction-38">Introduction</a></h2>
-<p>Wrapper <strong>MPE</strong> Support interface: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IVst3WrapperMPESupport.html">Vst::IVst3WrapperMPESupport</a></p>
+<p>Wrapper <strong>MPE</strong> Support interface: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IVst3WrapperMPESupport.html">Vst::IVst3WrapperMPESupport</a>.</p>
 <ul>
 <li>[host imp]</li>
 <li>[passed as 'context' to <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html#a3c81be4ff2e7bbb541d3527264f26eed">IPluginBase::initialize()</a>]</li>
@@ -8765,7 +8771,7 @@ As <strong>MPE</strong> is a subset of the VST 3 <a href="pages/Technical+Docume
 </ul>
 <hr />
 <h2 id="introduction-39"><a class="header" href="#introduction-39">Introduction</a></h2>
-<p>Edit controller component interface extension: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IParameterFunctionName.html">Vst::IParameterFunctionName</a></p>
+<p>Edit controller component interface extension: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IParameterFunctionName.html">Vst::IParameterFunctionName</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">IEditController</a>]</li>
@@ -8847,7 +8853,7 @@ if (functionName)
 </ul>
 <hr />
 <h2 id="introduction-40"><a class="header" href="#introduction-40">Introduction</a></h2>
-<p>Extended host callback interface for an edit controller: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IProgress.html">Vst::IProgress</a></p>
+<p>Extended host callback interface for an edit controller: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IProgress.html">Vst::IProgress</a>.</p>
 <ul>
 <li>[host imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">IComponentHandler</a>]</li>
@@ -8876,7 +8882,7 @@ FUnknownPtr&lt;IProgress&gt; progress (componentHandler);
 if (progress)
     progress-&gt;finish (mProgressID);
 </code></pre>
-<p><a href="pages/Technical+Documentation/Change+History/3.7.0/../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a> integration of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IProgress.html">Vst::IProgress</a></p>
+<p><a href="pages/Technical+Documentation/Change+History/3.7.0/../../../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 Plug-in Test Host</a> integration of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IProgress.html">Vst::IProgress</a>:</p>
 <p><img src="pages/Technical+Documentation/Change+History/3.7.0/../../../../resources/tech_doc_35.png" alt="Tech_doc_35" /></p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.7.0/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.7.0/../../Index.html">Technical Documentation</a></p>
@@ -8888,7 +8894,7 @@ if (progress)
 </ul>
 <hr />
 <h2 id="introduction-41"><a class="header" href="#introduction-41">Introduction</a></h2>
-<p>Extended <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">IAudioProcessor</a> interface for a component: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IProcessContextRequirements.html">Vst::IProcessContextRequirements</a></p>
+<p>Extended <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">IAudioProcessor</a> interface for a component: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IProcessContextRequirements.html">Vst::IProcessContextRequirements</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html">IAudioProcessor</a>]</li>
@@ -8916,7 +8922,7 @@ Plug-Ins built with an earlier SDK version (&lt; 3.7) will still get the old inf
 </ul>
 <hr />
 <h2 id="introduction-42"><a class="header" href="#introduction-42">Introduction</a></h2>
-<p>Extended struct BusInfo flags for a component: <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1Component.html#acf3030d7cf275010945d97a071abd2d8">Vst::IComponent::getBusInfo</a></p>
+<p>Extended struct BusInfo flags for a component: <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1Component.html#acf3030d7cf275010945d97a071abd2d8">Vst::IComponent::getBusInfo</a>.</p>
 <ul>
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html">IComponent</a>]</li>
@@ -9003,7 +9009,7 @@ BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb, stringCompanyEmail)
 				createCompatibilityInstance)
 </code></pre>
 <h3 id="example-of-host-implementation"><a class="header" href="#example-of-host-implementation">Example of host implementation</a></h3>
-<p>Check function <strong>void Validator::testModule</strong> in public.sdk/samples/vst-hosting/validator/source/validator.cpp</p>
+<p>Check function <strong>void Validator::testModule</strong> in public.sdk/samples/vst-hosting/validator/source/validator.cpp.</p>
 <pre><code class="language-c++">plugCompatibility = factory.createInstance&lt;IPluginCompatibility&gt; (classInfo.ID ());
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
@@ -9050,7 +9056,7 @@ if (handlerSystemTime)
 </ul>
 <hr />
 <h2 id="introduction-45"><a class="header" href="#introduction-45">Introduction</a></h2>
-<p>Host Data Exchange handler interface: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html">IDataExchangeHandler</a></p>
+<p>Host Data Exchange handler interface: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html">IDataExchangeHandler</a>.</p>
 <ul>
 <li>[host imp]</li>
 <li>[context interface]</li>
@@ -10891,7 +10897,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 }
 </code></pre>
 <p>Automation data is transmitted as a list of parameter changes. This list always contains enough information to transmit the original automation curve from the host in a sample-accurate way. Check the <a href="pages/FAQ/../What+is+the+VST+3+SDK/Plug-in+Examples.html#again">AGain</a> example to see how it can be implemented.</p>
-<p>See also <a href="pages/FAQ/../Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></p>
+<p>See also <a href="pages/FAQ/../Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a>.</p>
 <hr />
 <h2 id="q-how-report-to-the-host-that-the-plug-in-has-new-parameter-titles"><a class="header" href="#q-how-report-to-the-host-that-the-plug-in-has-new-parameter-titles">Q: How report to the host that the plug-in has new parameter titles?</a></h2>
 <p>Due to preset loading or user interaction the plug-in may change its parameters names (title) (but not the number of them or their IDs). To inform the host about this change, the plug-in should call from the editController its component handler function <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">restartComponent</a> with flag <strong>kParamTitlesChanged</strong>:</p>
@@ -11179,7 +11185,7 @@ See <a href="pages/FAQ/Compatibility+with+VST+2.x+or+VST+1.html#q-how-should-i-c
 <hr />
 <h2 id="q-whats-the-difference-between-ieditcontrollersetcomponentstate-and-ieditcontrollersetstate"><a class="header" href="#q-whats-the-difference-between-ieditcontrollersetcomponentstate-and-ieditcontrollersetstate">Q: What's the difference between IEditController::setComponentState and IEditController::setState?</a></h2>
 <p>After a preset is loaded, the host calls <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a4c2e1cafd88143fda2767a9c7ba5d48f">Vst::IEditController::setComponentState</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a77ac39bcc5c4b15818b1a87de2573805">Vst::IComponent::setState</a>. Both delivering the same information. <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a77ac39bcc5c4b15818b1a87de2573805">Vst::IEditController::setState</a> is called by the host so that the plug-in is able to update its controller dependent parameters, e.g. position of scroll bars. Prior to this, there should have been a call by the host to <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a10db03106be8ba89d23859fa6be5d9f6">Vst::IEditController::getState</a>, where the plug-in writes these various parameters into the stream.</p>
-<p>See also <a href="pages/FAQ/Persistence.html#q-how-does-persistence-work">Q: How does persistence work?</a></p>
+<p>See also <a href="pages/FAQ/Persistence.html#q-how-does-persistence-work">Q: How does persistence work?</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/FAQ/../">VST Home</a> / <a href="pages/FAQ/Index.html">Frequently Asked Questions</a></p>
 <h1 id="miscellaneous-1"><a class="header" href="#miscellaneous-1">Miscellaneous</a></h1>

@@ -247,7 +247,7 @@
 </ul>
 <p>A plug-in can support unit presets and program list presets.</p>
 <p><img src="../../../resources/tech_doc_19.jpg" alt="Tech_doc_19" /></p>
-<p>See also <a href="../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IProgramListData</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IUnitData</a></p>
+<p>See also <a href="../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IProgramListData</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Steinberg::Vst::IUnitData</a>.</p>
 <h2 id="units-and-tracks"><a class="header" href="#units-and-tracks">Units and Tracks</a></h2>
 <p>A unit can be associated with busses (or channels of busses). In particular, a unit can have a fixed and unique connection to an input MIDI channel. For a host, it might be useful to know about this connection and which unit can be associated with a specific MIDI track as a result of this. Often, the GUI of a multi-timbral plug-in does not show the settings of all similar units at the same time. Instead, there is some kind of unit selection. The idea is to be able to synchronize the selection of units in a plug-in to the selection of tracks in the host (in both ways).</p>
 <p>When a plug-in GUI is organized in the described way, it should support the described behavior by implementing</p>
