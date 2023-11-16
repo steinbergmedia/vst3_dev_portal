@@ -1,0 +1,35 @@
+>/ [VST Home](../) / [Change History](./Index.md)
+>
+># Version 3.8.0 (2024/01/??)
+
+## Version 3.8.0 (2024/01/??)
+
+- Interface changes:
+  - Minimum requirement is now c++ 17.
+  - New subCategories for PlugType:
+    - kFxBass / kFxChannelStrip / kFxDrums / kFxGuitar / kFxMicrophone
+
+- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.13.0](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_13_0)
+
+- Documentation
+  -
+
+- cmake
+  - Fix *smtg_target_make_plugin_package* can create invalid vst3 plugins ([Forum](https://forums.steinberg.net/t/weird-cmake-error/862347)).
+  
+  
+- [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
+  
+- [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+  - Fix EditorHost issue when moving windows between different DPI screens ([Forum](https://forums.steinberg.net/t/vst3-sdk-editorhost-displays-only-25-of-juce-gui-on-4k-monitor/873310/2) / [Juce Fourm](https://forum.juce.com/t/steinberg-editorhost-on-4k-monitor-is-not-good/58366/7)).
+
+
+  
+- Helpers classes:
+  -
+
+- [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
+  
+- [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2023.09:
+  - Fix: ProjetGenerator should not allow new project inside the SDK folder.
+  
