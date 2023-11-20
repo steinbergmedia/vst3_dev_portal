@@ -104,11 +104,11 @@ In addition to the **GetPluginFactory** function the plug-in may has to export a
 >As *Windows* already has this feature (see [DllMain](https://docs.microsoft.com/en-us/cpp/build/run-time-library-behavior?view=msvc-170) in Microsofts documentation) the above functions are optional.
 
 >**On macOS**\
->On *macOS* the entry/exit functions are named **BundleEntry** / **BundleExit** and are ***required!***
+>On *macOS* the entry/exit functions are named **bundleEntry** / **bundleExit** and are ***required!***
 >
->A plug-in must export these functions and a host has to call the **BundleEntry** function directly after loading the plug-in via *CFBundleLoadExecutable* and before calling **GetPluginFactory**.
+>A plug-in must export these functions and a host has to call the **bundleEntry** function directly after loading the plug-in via *CFBundleLoadExecutable* and before calling **GetPluginFactory**.
 >
->The **BundleExit** function must be called before the plug-in is unloaded or on program termination.
+>The **bundleExit** function must be called before the plug-in is unloaded or on program termination.
 >
 >As *macOS* does not have a standard entry function when loading a bundle the above functions are required and a host has to reject plug-ins not exporting these functions.
 
