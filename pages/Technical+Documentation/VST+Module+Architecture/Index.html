@@ -278,9 +278,9 @@ On <em>Windows</em> the entry/exit functions are named <strong>InitDll</strong> 
 </blockquote>
 <blockquote>
 <p><strong>On macOS</strong><br />
-On <em>macOS</em> the entry/exit functions are named <strong>BundleEntry</strong> / <strong>BundleExit</strong> and are <em><strong>required!</strong></em></p>
-<p>A plug-in must export these functions and a host has to call the <strong>BundleEntry</strong> function directly after loading the plug-in via <em>CFBundleLoadExecutable</em> and before calling <strong>GetPluginFactory</strong>.</p>
-<p>The <strong>BundleExit</strong> function must be called before the plug-in is unloaded or on program termination.</p>
+On <em>macOS</em> the entry/exit functions are named <strong>bundleEntry</strong> / <strong>bundleExit</strong> and are <em><strong>required!</strong></em></p>
+<p>A plug-in must export these functions and a host has to call the <strong>bundleEntry</strong> function directly after loading the plug-in via <em>CFBundleLoadExecutable</em> and before calling <strong>GetPluginFactory</strong>.</p>
+<p>The <strong>bundleExit</strong> function must be called before the plug-in is unloaded or on program termination.</p>
 <p>As <em>macOS</em> does not have a standard entry function when loading a bundle the above functions are required and a host has to reject plug-ins not exporting these functions.</p>
 </blockquote>
 <blockquote>
