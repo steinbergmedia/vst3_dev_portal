@@ -5,7 +5,7 @@
 ## Version 3.8.0 (2024/01/??)
 
 - Interface changes:
-  - Minimum requirement is now c++ 17.
+  - Minimum requirement is now c++17.
   - New subCategories for PlugType:
     - kFxBass / kFxChannelStrip / kFxDrums / kFxGuitar / kFxMicrophone
 
@@ -21,6 +21,8 @@
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
   
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
+  - New VST 3 plug-ins example:
+    - New *Utf16Name* showing use of UTF16 characters in plug-in and company name.
   - Fix EditorHost issue when moving windows between different DPI screens ([Forum](https://forums.steinberg.net/t/vst3-sdk-editorhost-displays-only-25-of-juce-gui-on-4k-monitor/873310/2) / [Juce Fourm](https://forum.juce.com/t/steinberg-editorhost-on-4k-monitor-is-not-good/58366/7)).
 
 

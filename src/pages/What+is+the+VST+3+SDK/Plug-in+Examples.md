@@ -70,7 +70,7 @@ Classes:
 - AGainWithSideChain (used for side-chain version)
 - AGainController
 
-AGain Sample Accurate
+## AGain Sample Accurate
 
 Simple plug-in showing how to achieve sample-accurate processing.
 
@@ -87,9 +87,20 @@ Very simple plug-in:
 
 Check the folder *"public.sdk/samples/vst/channelcontext"* of the SDK!
 
+## DataExchange
+
+Very simple plug-in:
+
+- showing how to exchange data (waveform) between processor (in the realtime thread) and controller using the VST Data Exchange API: [Vst::IDataExchangeHandler](../Technical+Documentation/Data+Exchange/Index.md)
+- It shows how easy it is to use [**VSTGUI**](VSTGUI.md)
+
+![what_if_38](../../resources/what_is_38.jpg)
+
+Check the folder *"public.sdk/samples/vst/dataexchange"* of the SDK!
+
 ## HostChecker
 
-- Instrument, Panner and Fx plug-in checking the **VST 3** support of a host.
+- Instrument, Panner and Fx plug-in checking the **VST 3** support of a host
 - It uses [**VSTGUI**](VSTGUI.md)
 - an **AAX** version is available
 
@@ -245,3 +256,11 @@ Very simple delay plug-in:
 - showing how to support [IProcessContextRequirements](../Technical+Documentation/Change+History/3.7.0/IProgress.md)
 
 Check the folder *"public.sdk/samples/vst/syncdelay"* of the SDK!
+
+## UTF16Name
+
+Very simple plug-in:
+
+- with UTF16 characters in plug-in and company name
+
+Check the folder *"public.sdk/samples/vst/utf16name"* of the SDK!
