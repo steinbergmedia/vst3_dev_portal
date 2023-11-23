@@ -32,7 +32,7 @@ If the plug-in could not deliver the [moduleinfo.json](../../../Technical+Docume
 If the compatibility feature is required, it is recommended to use either *moduleinfo.json* or *IPluginCompatibility*.
 
 >ⓘ **Note**\
-It is not recommended to implement *IPluginCompatibility* if it is not used, and if *getCompatibilityJSON* always returns *kResultFalse* / *kNotImplemented*.
+It is not recommended to implement *IPluginCompatibility* if you do not provide compatibility with any previous plug-in version. If you expose this object, the host expects you to provide compatibility information with it; otherwise, it is useless.
 
 ### Example
 
