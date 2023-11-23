@@ -4129,7 +4129,7 @@ git submodule update --init --recursive --remote vstgui4
 <h2 id="vst-module-architecture"><a class="header" href="#vst-module-architecture"><a href="pages/Technical+Documentation/VST+Module+Architecture/Index.html">VST Module Architecture</a></a></h2>
 <p><strong>VST-MA</strong> is a component model system which is used in all <a href="https://www.steinberg.net/">Steinberg</a> host applications as the basic layer for plug-in support.</p>
 <h2 id="parameters-and-automation"><a class="header" href="#parameters-and-automation"><a href="pages/Technical+Documentation/Parameters+Automation/Index.html">Parameters and Automation</a></a></h2>
-<p>Description of how parameters are defined and used in <strong>VST 3</strong></p>
+<p>Description of how parameters are defined and used in <strong>VST 3</strong>.</p>
 <h2 id="vst-3-units"><a class="header" href="#vst-3-units"><a href="pages/Technical+Documentation/VST+3+Units/Index.html">VST 3 Units</a></a></h2>
 <p>A unit is a logical section of the plug-in.</p>
 <h2 id="presets--program-lists"><a class="header" href="#presets--program-lists"><a href="pages/Technical+Documentation/Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a></a></h2>
@@ -4148,9 +4148,9 @@ git submodule update --init --recursive --remote vstgui4
 <p>Minimum Host requirements for <strong>VST 3</strong> support.</p>
 <hr />
 <h2 id="300-interfaces-supported-by-the-plug-in"><a class="header" href="#300-interfaces-supported-by-the-plug-in"><a href="pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.html">[3.0.0] Interfaces supported by the plug-in</a></a></h2>
-<p>List of interfaces supported/implemented by the plug-in in <strong>VST 3.0.0</strong></p>
+<p>List of interfaces supported/implemented by the plug-in in <strong>VST 3.0.0</strong>.</p>
 <h2 id="300-interfaces-supported-by-the-host"><a class="header" href="#300-interfaces-supported-by-the-host"><a href="pages/Technical+Documentation/Change+History/3.0.0/Host+Interfaces.html">[3.0.0] Interfaces supported by the host</a></a></h2>
-<p>List of interfaces supported/implemented by the host in <strong>VST 3.0.0</strong></p>
+<p>List of interfaces supported/implemented by the host in <strong>VST 3.0.0</strong>.</p>
 <h2 id="301-parameter-midi-mapping"><a class="header" href="#301-parameter-midi-mapping"><a href="pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping</a></a></h2>
 <p>How the mapping works between MIDI CCs and parameters.</p>
 <h2 id="302-parameter-finder"><a class="header" href="#302-parameter-finder"><a href="pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html">[3.0.2] Parameter Finder</a></a></h2>
@@ -4200,13 +4200,13 @@ git submodule update --init --recursive --remote vstgui4
 <h2 id="3612-mpe-support-for-wrappers"><a class="header" href="#3612-mpe-support-for-wrappers"><a href="pages/Technical+Documentation/Change+History/3.6.12/IVst3WrapperMPESupport.html">[3.6.12] MPE support for Wrappers</a></a></h2>
 <p>Implemented on wrappers that support <strong>MPE</strong> (<a href="https://www.midi.org/midi-articles/midi-polyphonic-expression-mpe">MIDI Polyphonic Expression</a>) to <a href="pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.html">Note Expression</a> translation.</p>
 <h2 id="370-parameter-function-name"><a class="header" href="#370-parameter-function-name"><a href="pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html">[3.7.0] Parameter Function Name</a></a></h2>
-<p>This interface allows the host to get a parameter associated to a specific meaning (a functionName) for a given unit</p>
+<p>This interface allows the host to get a parameter associated to a specific meaning (a functionName) for a given unit.</p>
 <h2 id="370-progress-display"><a class="header" href="#370-progress-display"><a href="pages/Technical+Documentation/Change+History/3.7.0/IProgress.html">[3.7.0] Progress Display</a></a></h2>
 <p>Allows the plug-in to ask the host to create a progress for specific tasks which take some time.</p>
 <h2 id="370-process-context-requirements"><a class="header" href="#370-process-context-requirements"><a href="pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.html">[3.7.0] Process Context Requirements</a></a></h2>
 <p>To get accurate process context information (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessContext.html">Vst::ProcessContext</a>), it is now required to implement this interface.</p>
 <h2 id="375-module-info"><a class="header" href="#375-module-info"><a href="pages/Technical+Documentation/Change+History/3.7.5/ModuleInfo.html">[3.7.5] Module Info</a></a></h2>
-<p>The <a href="pages/Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> describes the contents of the plug-in in a JSON5 compatible format.</p>
+<p>The <a href="pages/Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> describes the contents of the plug-in in a <a href="http://json5.org">JSON5</a> compatible format.</p>
 <h2 id="379-get-current-systemtime"><a class="header" href="#379-get-current-systemtime"><a href="pages/Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.html">[3.7.9] Get Current SystemTime</a></a></h2>
 <p>Allows a plug-in to ask the host for the current system time.</p>
 <h2 id="379-data-transfert-between-processorcontroller"><a class="header" href="#379-data-transfert-between-processorcontroller"><a href="pages/Technical+Documentation/Change+History/3.7.9/IDataExchangeHandler.html">[3.7.9] Data Transfert Between Processor/Controller</a></a></h2>
@@ -4893,7 +4893,7 @@ public:
 </blockquote>
 <p>An optional <em>moduleinfo.json</em> file can be part of the <a href="pages/Technical+Documentation/VST+Module+Architecture/../Locations+Format/Plugin+Format.html">module file package</a>, located in the <em>Resources</em> folder.</p>
 <p>The file contains the same information as the <a href="pages/Technical+Documentation/VST+Module+Architecture/Index.html#module-factory">Module Factory</a>, plus an optional list of compatible classes.
-The file is encoded in <a href="http://json5.org">json5</a> format.</p>
+The file is encoded in <a href="http://json5.org">JSON5</a> format.</p>
 <p>The Compatibility json array is used to declare a class to be treated as a replacement for another class or classes.</p>
 <p>When used this way, the host does not need to load the component to know which classes the module provides.</p>
 <p>This optional <em>moduleinfo.json</em> file was added in the <strong>VST 3 SDK</strong> version 3.7.5 and was located in the <strong>Contents</strong> folder of the bundle. In order to be compliant with code signing on macOS, this file is now (since version 3.7.8) located in the <strong>Contents/Resources</strong> folder.</p>
@@ -8954,7 +8954,7 @@ Plug-Ins built with an earlier SDK version (&lt; 3.7) will still get the old inf
 </ul>
 <hr />
 <h2 id="introduction-43"><a class="header" href="#introduction-43">Introduction</a></h2>
-<p>A new <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> file added to the plug-in bundle (in the <em>Resources</em> folder) describes the contents of the plug-in in a JSON5 compatible format. This includes a compatibility list which allows, for example, a <strong>VST 3</strong> plug-in to replace a given <strong>VST 2</strong> plug-in (check <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.html">here</a>, to learn how to create UID for old <strong>VST 2</strong> plug-ins).</p>
+<p>A new <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> file added to the plug-in bundle (in the <em>Resources</em> folder) describes the contents of the plug-in in a <a href="http://json5.org">JSON5</a> compatible format. This includes a compatibility list which allows, for example, a <strong>VST 3</strong> plug-in to replace a given <strong>VST 2</strong> plug-in (check <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.html">here</a>, to learn how to create UID for old <strong>VST 1</strong>/<strong>VST 2</strong> plug-ins).</p>
 <ul>
 <li>[plug imp]</li>
 <li>[released: 3.7.5]</li>
@@ -8962,7 +8962,15 @@ Plug-Ins built with an earlier SDK version (&lt; 3.7) will still get the old inf
 <h2 id="plug-ins-module-info-file-moduleinfojson"><a class="header" href="#plug-ins-module-info-file-moduleinfojson">Plug-in’s module info file: moduleinfo.json</a></h2>
 <p>Check <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> for more information about the content of this file.</p>
 <h2 id="iplugincompatibility"><a class="header" href="#iplugincompatibility">IPluginCompatibility</a></h2>
-<p>If the plug-in could not deliver the <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> because it does not support bundle, it is possible to add the new interface <em>IPluginCompatibility</em> to the plug-in factory.</p>
+<p>If the plug-in could not deliver the <a href="pages/Technical+Documentation/Change+History/3.7.5/../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> because it is not organized as a bundle-like package, it is possible to add the new interface <em>IPluginCompatibility</em> to the plug-in factory.</p>
+<blockquote>
+<p>ⓘ <strong>Note</strong><br />
+If the compatibility feature is required, it is recommended to use either <em>moduleinfo.json</em> or <em>IPluginCompatibility</em>.</p>
+</blockquote>
+<blockquote>
+<p>ⓘ <strong>Note</strong><br />
+It is not recommended to implement <em>IPluginCompatibility</em> if you do not provide compatibility with any previous plug-in version. If you expose this object, the host expects you to provide compatibility information with it; otherwise, it is useless.</p>
+</blockquote>
 <h3 id="example-15"><a class="header" href="#example-15">Example</a></h3>
 <p><strong>In plugentry.cpp</strong>:</p>
 <pre><code class="language-c++">//------------------------------------------------------------------------
@@ -8972,6 +8980,9 @@ class PluginCompatibility : public FObject, public IPluginCompatibility
     //...
     tresult PLUGIN_API getCompatibilityJSON (IBStream* stream) override
     {
+        // here plug-in with UID BD58B550F9E5634E9D2EFF39EA0927B1 could replace 
+        // plug-in with UID AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA and
+        // plug-in with UID BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
       /* write the JSON compatibility array into the stream
       [
           {

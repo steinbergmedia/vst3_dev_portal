@@ -190,7 +190,7 @@
 </ul>
 <hr />
 <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
-<p>A new <a href="../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> file added to the plug-in bundle (in the <em>Resources</em> folder) describes the contents of the plug-in in a JSON5 compatible format. This includes a compatibility list which allows, for example, a <strong>VST 3</strong> plug-in to replace a given <strong>VST 2</strong> plug-in (check <a href="../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.html">here</a>, to learn how to create UID for old <strong>VST 2</strong> plug-ins).</p>
+<p>A new <a href="../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> file added to the plug-in bundle (in the <em>Resources</em> folder) describes the contents of the plug-in in a <a href="http://json5.org">JSON5</a> compatible format. This includes a compatibility list which allows, for example, a <strong>VST 3</strong> plug-in to replace a given <strong>VST 2</strong> plug-in (check <a href="../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.html">here</a>, to learn how to create UID for old <strong>VST 1</strong>/<strong>VST 2</strong> plug-ins).</p>
 <ul>
 <li>[plug imp]</li>
 <li>[released: 3.7.5]</li>
@@ -198,7 +198,15 @@
 <h2 id="plug-ins-module-info-file-moduleinfojson"><a class="header" href="#plug-ins-module-info-file-moduleinfojson">Plug-in’s module info file: moduleinfo.json</a></h2>
 <p>Check <a href="../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> for more information about the content of this file.</p>
 <h2 id="iplugincompatibility"><a class="header" href="#iplugincompatibility">IPluginCompatibility</a></h2>
-<p>If the plug-in could not deliver the <a href="../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> because it does not support bundle, it is possible to add the new interface <em>IPluginCompatibility</em> to the plug-in factory.</p>
+<p>If the plug-in could not deliver the <a href="../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> because it is not organized as a bundle-like package, it is possible to add the new interface <em>IPluginCompatibility</em> to the plug-in factory.</p>
+<blockquote>
+<p>ⓘ <strong>Note</strong><br />
+If the compatibility feature is required, it is recommended to use either <em>moduleinfo.json</em> or <em>IPluginCompatibility</em>.</p>
+</blockquote>
+<blockquote>
+<p>ⓘ <strong>Note</strong><br />
+It is not recommended to implement <em>IPluginCompatibility</em> if you do not provide compatibility with any previous plug-in version. If you expose this object, the host expects you to provide compatibility information with it; otherwise, it is useless.</p>
+</blockquote>
 <h3 id="example"><a class="header" href="#example">Example</a></h3>
 <p><strong>In plugentry.cpp</strong>:</p>
 <pre><code class="language-c++">//------------------------------------------------------------------------
@@ -208,6 +216,9 @@ class PluginCompatibility : public FObject, public IPluginCompatibility
     //...
     tresult PLUGIN_API getCompatibilityJSON (IBStream* stream) override
     {
+        // here plug-in with UID BD58B550F9E5634E9D2EFF39EA0927B1 could replace 
+        // plug-in with UID AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA and
+        // plug-in with UID BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
       /* write the JSON compatibility array into the stream
       [
           {
