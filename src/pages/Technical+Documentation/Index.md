@@ -69,7 +69,7 @@ The **VST 3 API** is an interface collection designed for realtime audio process
 
 ## [Parameters and Automation](Parameters+Automation/Index.md)
 
-Description of how parameters are defined and used in **VST 3**
+Description of how parameters are defined and used in **VST 3**.
 
 ## [VST 3 Units](VST+3+Units/Index.md)
 
@@ -107,11 +107,11 @@ Minimum Host requirements for **VST 3** support.
 
 ## [\[3.0.0\] Interfaces supported by the plug-in](Change+History/3.0.0/Plug+in+Interfaces.md)
 
-List of interfaces supported/implemented by the plug-in in **VST 3.0.0**
+List of interfaces supported/implemented by the plug-in in **VST 3.0.0**.
 
 ## [\[3.0.0\] Interfaces supported by the host](Change+History/3.0.0/Host+Interfaces.md)
 
-List of interfaces supported/implemented by the host in **VST 3.0.0**
+List of interfaces supported/implemented by the host in **VST 3.0.0**.
 
 ## [\[3.0.1\] Parameter MIDI Mapping](Change+History/3.0.1/IMidiMapping.md)
 
@@ -211,7 +211,7 @@ Implemented on wrappers that support **MPE** ([MIDI Polyphonic Expression](https
 
 ## [\[3.7.0\] Parameter Function Name](Change+History/3.7.0/IParameterFunctionName.md)
 
-This interface allows the host to get a parameter associated to a specific meaning (a functionName) for a given unit
+This interface allows the host to get a parameter associated to a specific meaning (a functionName) for a given unit.
 
 ## [\[3.7.0\] Progress Display](Change+History/3.7.0/IProgress.md)
 
@@ -223,7 +223,7 @@ To get accurate process context information ([Vst::ProcessContext](https://stein
 
 ## [\[3.7.5\] Module Info](Change+History/3.7.5/ModuleInfo.md)
 
-The [moduleinfo.json](VST+Module+Architecture/ModuleInfo-JSON.md) describes the contents of the plug-in in a JSON5 compatible format.
+The [moduleinfo.json](VST+Module+Architecture/ModuleInfo-JSON.md) describes the contents of the plug-in in a [JSON5](http://json5.org) compatible format.
 
 ## [\[3.7.9\] Get Current SystemTime](Change+History/3.7.9/IComponentHandlerSystemTime.md)
 
