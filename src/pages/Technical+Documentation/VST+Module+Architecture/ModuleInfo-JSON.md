@@ -5,7 +5,7 @@
 An optional *moduleinfo.json* file can be part of the [module file package](../Locations+Format/Plugin+Format.md), located in the *Resources* folder.
 
 The file contains the same information as the [Module Factory](Index.md#module-factory), plus an optional list of compatible classes.
-The file is encoded in [json5](http://json5.org) format.
+The file is encoded in [JSON5](http://json5.org) format.
 
 The Compatibility json array is used to declare a class to be treated as a replacement for another class or classes.
 
