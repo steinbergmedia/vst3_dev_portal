@@ -15,7 +15,7 @@
 
 ## Introduction
 
-A new [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file added to the plug-in bundle (in the *Resources* folder) describes the contents of the plug-in in a JSON5 compatible format. This includes a compatibility list which allows, for example, a **VST 3** plug-in to replace a given **VST 2** plug-in (check [here](../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.md), to learn how to create UID for old **VST 2** plug-ins).
+A new [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file added to the plug-in bundle (in the *Resources* folder) describes the contents of the plug-in in a [JSON5](http://json5.org) compatible format. This includes a compatibility list which allows, for example, a **VST 3** plug-in to replace a given **VST 2** plug-in (check [here](../../../FAQ/Compatibility+with+VST+2.x+or+VST+1.md), to learn how to create UID for old **VST 1**/**VST 2** plug-ins).
 
 - \[plug imp\]
 - \[released: 3.7.5\]
@@ -26,7 +26,14 @@ Check [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture
 
 ## IPluginCompatibility
 
-If the plug-in could not deliver the [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) because it does not support bundle, it is possible to add the new interface *IPluginCompatibility* to the plug-in factory.
+If the plug-in could not deliver the [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) because it is not organized as a bundle-like package, it is possible to add the new interface *IPluginCompatibility* to the plug-in factory.
+
+>ⓘ **Note**\
+If the compatibility feature is required, it is recommended to use either *moduleinfo.json* or *IPluginCompatibility*.
+
+>ⓘ **Note**\
+It is not recommended to implement *IPluginCompatibility* if you do not provide compatibility with any previous plug-in version. If you expose this object, the host expects you to provide compatibility information with it; otherwise, it is useless.
+
 ### Example
 
 **In plugentry.cpp**:
@@ -39,6 +46,9 @@ class PluginCompatibility : public FObject, public IPluginCompatibility
     //...
     tresult PLUGIN_API getCompatibilityJSON (IBStream* stream) override
     {
+        // here plug-in with UID BD58B550F9E5634E9D2EFF39EA0927B1 could replace 
+        // plug-in with UID AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA and
+        // plug-in with UID BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
       /* write the JSON compatibility array into the stream
       [
           {
