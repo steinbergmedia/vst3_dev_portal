@@ -27,6 +27,13 @@ Check [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture
 ## IPluginCompatibility
 
 If the plug-in could not deliver the [moduleinfo.json](../../../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) because it does not support bundle, it is possible to add the new interface *IPluginCompatibility* to the plug-in factory.
+
+>ⓘ **Note**\
+If the compatibility feature is required, it is recommended to use either *moduleinfo.json* or *IPluginCompatibility*.
+
+>ⓘ **Note**\
+It is not recommended to implement *IPluginCompatibility* if it is not used, and if *getCompatibilityJSON* always returns *kResultFalse* / *kNotImplemented*.
+
 ### Example
 
 **In plugentry.cpp**:
