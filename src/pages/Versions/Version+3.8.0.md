@@ -31,7 +31,9 @@
   -
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
-  
+  - Add test checking that IPluginBase is provided by the controller and the processor.
+  - Add support on Windows for UTF8 path.
+
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2023.09:
   - Fix: ProjetGenerator should not allow new project inside the SDK folder.
   
