@@ -47,7 +47,8 @@ By using **VST 3 SDK** directly:
 | ----------------------- | --------------------------------- | --------------------------------------------- |
 | ACID Pro                | MAGIX Software GmbH               | <https://www.magix.com>                       |
 | Acoustica	              | Acon Digital                      | <https://acondigital.com>                     |
-| Audacity                | Audacity Team                     | <https://www.audacityteam.org>                 |
+| Ardour                  | Ardour Team                       | <https://ardour.org>                          |
+| Audacity                | Audacity Team                     | <https://www.audacityteam.org>                |
 | Audition                | Adobe                        	    | <https://www.adobe.com>                       |
 | Bidule                  | Plogue Art et Technologie, Inc.   | <https://www.plogue.com>                      |
 | Bitwig                  | Bitwig GmbH                       | <https://www.bitwig.com>                      |
@@ -73,6 +74,7 @@ By using **VST 3 SDK** directly:
 | Maschine                | Native Instruments                | <https://www.native-instruments.com>          |
 | Max                     | Cycling 74                        | <https://cycling74.com>                       |
 | Metro                   | Sagan Technology                  | <https://sagantech.com>                       |
+| Mixbus                  | Harrison Audio                    | <https://harrisonaudio.com/daw-home-page>     |
 | Mixcraft                | Acoustica                         | <https://acoustica.com>                       |
 | MultitrackStudio        | Bremmers Audio Design             | <https://www.multitrackstudio.com>            |
 | Music Maker Plus        | MAGIX Software GmbH               | <https://www.magix.com>                       |
@@ -102,4 +104,3 @@ By using **VST 3 SDK** directly:
 | Waveform                | Tracktion Software Corporation    | <https://www.tracktion.com>                   |
 | Wavelab                 | Steinberg Media Technologies GmbH | <https://new.steinberg.net/wavelab>           |
 | Zrythm DAW              | Zrythm                            | <https://www.zrythm.org>                      |
-
