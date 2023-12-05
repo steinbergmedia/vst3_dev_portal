@@ -47,7 +47,7 @@ By using **VST 3 SDK** directly:
 | ----------------------- | --------------------------------- | --------------------------------------------- |
 | ACID Pro                | MAGIX Software GmbH               | <https://www.magix.com>                       |
 | Acoustica	              | Acon Digital                      | <https://acondigital.com>                     |
-| Ardour                  | Ardour Team                       | <https://www.ardour.org>                      |
+| Ardour                  | Ardour Team                       | <https://ardour.org>                          |
 | Audacity                | Audacity Team                     | <https://www.audacityteam.org>                 |
 | Audition                | Adobe                        	    | <https://www.adobe.com>                       |
 | Bidule                  | Plogue Art et Technologie, Inc.   | <https://www.plogue.com>                      |
