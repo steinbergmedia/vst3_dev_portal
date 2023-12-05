@@ -47,6 +47,7 @@ By using **VST 3 SDK** directly:
 | ----------------------- | --------------------------------- | --------------------------------------------- |
 | ACID Pro                | MAGIX Software GmbH               | <https://www.magix.com>                       |
 | Acoustica	              | Acon Digital                      | <https://acondigital.com>                     |
+| Ardour                  | Ardour Team                       | <https://www.ardour.org>                      |
 | Audacity                | Audacity Team                     | <https://www.audacityteam.org>                 |
 | Audition                | Adobe                        	    | <https://www.adobe.com>                       |
 | Bidule                  | Plogue Art et Technologie, Inc.   | <https://www.plogue.com>                      |
@@ -65,6 +66,7 @@ By using **VST 3 SDK** directly:
 | Maschine                | Native Instruments                | <https://www.native-instruments.com>          |
 | Max                     | Cycling 74                        | <https://cycling74.com>                       |
 | Mixcraft                | Acoustica                         | <https://acoustica.com>                       |
+| Mixbus                  | Harrison Audio                    | <https://harrisonaudio.com/daw-home-page>     |
 | Modula                  | Quantica Audio                    | <https://quanticaaudio.com>                   |
 | Music Maker Plus        | MAGIX Software GmbH               | <https://www.magix.com>                       |
 | Nuendo                  | Steinberg Media Technologies GmbH	| <https://new.steinberg.net/nuendo>            |
