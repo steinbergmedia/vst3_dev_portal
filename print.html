@@ -5018,7 +5018,9 @@ See <strong>public.sdk/source/vst/moduleinfo</strong></p>
 The plug-in must assign a unique 32-bit identifier (ID) to each exported parameter.</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
-Up to 2^31 parameters can be exported with ID range <strong>[0, 2.147.483.648]</strong> (the range [2.147.483.649, 4.294.967.296] is reserved for host application).</p>
+Up to 2^31 parameters can be exported with ID range <strong>[0, 2.147.483.647]</strong>, in hexadecimal <strong>[0x0, 0x7FFFFFFF]</strong>.</p>
+<p>The range <strong>[2.147.483.648, 4.294.967.295]</strong>, in hexadecimal <strong>[0x80000000, 0xFFFFFFFF]</strong>, is reserved for host application.</p>
+<p>The value <strong>kNoParamId</strong> (<strong>0xFFFFFFFF</strong>) is the default value for uninitialized parameter ID.</p>
 </blockquote>
 <p>Please note that it is not allowed to change this assignment at any time. In particular, a plug-in must not perform any reconfigurations that lead to a different set of automatable parameters. The only allowed variation is the adding or removing of parameters in a future plug-in version. However, keep in mind that automation data can get lost when parameters are removed.</p>
 <p>Usually, the host is unaware of a parameter's semantics. However, there are a few important exceptions that the controller must announce using the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#a8ffba1d4311e48ae488bc118f20d7edb">Steinberg::Vst::ParameterInfo::flags</a>:</p>
