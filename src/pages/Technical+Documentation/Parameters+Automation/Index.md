@@ -22,7 +22,11 @@ A plug-in requires parameters in order to control its DSP algorithm, for example
 The plug-in must assign a unique 32-bit identifier (ID) to each exported parameter.
 
 >ⓘ **Note**\
->Up to 2^31 parameters can be exported with ID range **\[0, 2.147.483.648\]** (the range \[2.147.483.649, 4.294.967.296\] is reserved for host application).
+>Up to 2^31 parameters can be exported with ID range **\[0, 2.147.483.647\]**, in hexadecimal **\[0x0, 0x7FFFFFFF\]**.
+>
+>The range **\[2.147.483.648, 4.294.967.295\]**, in hexadecimal **\[0x80000000, 0xFFFFFFFF\]**, is reserved for host application.
+>
+> The value **kNoParamId** (**0xFFFFFFFF**) is the default value for uninitialized parameter ID.
 
 Please note that it is not allowed to change this assignment at any time. In particular, a plug-in must not perform any reconfigurations that lead to a different set of automatable parameters. The only allowed variation is the adding or removing of parameters in a future plug-in version. However, keep in mind that automation data can get lost when parameters are removed.
 
