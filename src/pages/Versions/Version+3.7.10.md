@@ -1,8 +1,8 @@
 >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.8.0 (2024/01/??)
+># Version 3.7.10 (2024/01/??)
 
-## Version 3.8.0 (2024/01/??)
+## Version 3.7.10 (2024/01/??)
 
 - Interface changes:
   - Minimum requirement is now c++17.
