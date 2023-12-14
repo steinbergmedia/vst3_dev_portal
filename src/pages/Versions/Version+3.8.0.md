@@ -15,7 +15,8 @@
   -
 
 - cmake
-  - Fix *smtg_target_make_plugin_package* can create invalid vst3 plugins ([Forum](https://forums.steinberg.net/t/weird-cmake-error/862347)).
+  - Fix *smtg_target_make_plugin_package* can create invalid VST 3 plug-ins ([Forum](https://forums.steinberg.net/t/weird-cmake-error/862347)).
+  - Fix regression for non-bundle Windows plug-ins (non-bundle VST 3 on Windows will be declared deprecated in a future update of VST 3 SDK).
   
   
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
@@ -36,4 +37,5 @@
 
 - [VST3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2023.09:
   - Fix: ProjetGenerator should not allow new project inside the SDK folder.
+  - Adapt template project: remove audio input for Instrument and add a default processing implementation as example.
   
