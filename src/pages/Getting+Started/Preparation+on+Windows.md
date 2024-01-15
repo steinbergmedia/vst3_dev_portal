@@ -2,7 +2,7 @@
 >
 ># Preparation on Windows
 
-Generated **VST 3** Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST 3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md) (**C:\Program Files\Common Files\VST3**). In this folder it is not directly possible to write these symbolic links if you are allowed to do this (not Administrator for example), to solve this problem you have 3 solutions:
+Generated **VST 3** Microsoft Visual Studio Projects using the [cmake](https://cmake.org/) included in the SDK will create by default symbolic links for each built plug-in in the [official VST 3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md) (**C:\Program Files\Common Files\VST3**). In this folder it is not directly possible to write these symbolic links if you are allowed to do this (not Administrator for example), to solve this problem you have 4 solutions:
 
 ## Solution 1
 
@@ -21,6 +21,12 @@ You could choose (which is the default) the [new user location](../Technical+Doc
 ```
 
 ## Solution 3
+
+In order to allow create these symbolic links on Windows you could edit the "**Settings > System > For developers**" by enabling the **Developer Mode**:
+
+![getting_started_4](../../resources/getting_started_4.jpg)
+
+## Solution 4
 
 In order to allow create these symbolic links on Windows you have to adapt the [Group Policy of Windows](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings) which is only available by default in **Windows Pro** but not in **Windows Home**. In **Windows Home** you have to install it before changing the right access to this folder (**C:\Program Files\Common Files\VST3**). For this there are some internet webpages showing you how to do this, for example this one: <https://www.itechtics.com/enable-gpedit-msc-windows-11>.
 
