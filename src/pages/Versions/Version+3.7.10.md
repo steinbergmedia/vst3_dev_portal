@@ -9,7 +9,7 @@
   - New subCategories for PlugType:
     - **kFxBass** / **kFxChannelStrip** / **kFxDrums** / **kFxGuitar** / **kFxMicrophone**
 
-- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.13.2](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_13_2)
+- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.13.3](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_13_3)
 
 - Documentation
   - Clarify range of [param ID](../Technical+Documentation/Parameters+Automation/Index.md#parameters).
