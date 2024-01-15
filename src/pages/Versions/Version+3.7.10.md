@@ -5,31 +5,23 @@
 ## Version 3.7.10 (2024/01/18)
 
 - Interface changes:
-  - Minimum requirement is now c++17.
+  - Minimum requirement is now **C++17**.
   - New subCategories for PlugType:
-    - kFxBass / kFxChannelStrip / kFxDrums / kFxGuitar / kFxMicrophone
+    - **kFxBass** / **kFxChannelStrip** / **kFxDrums** / **kFxGuitar** / **kFxMicrophone**
 
-- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.13.0](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_13_0)
+- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.13.2](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_13_2)
 
 - Documentation
-  -
+  - Clarify range of [param ID](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Parameters+Automation/Index.html).
 
 - cmake
   - Fix *smtg_target_make_plugin_package* can create invalid VST 3 plug-ins ([Forum](https://forums.steinberg.net/t/weird-cmake-error/862347)).
   - Fix regression for non-bundle Windows plug-ins (non-bundle VST 3 on Windows will be declared deprecated in a future update of VST 3 SDK).
-  
-  
-- [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):
-  
+
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 plug-ins example:
     - New *Utf16Name* showing use of UTF16 characters in plug-in and company name.
   - Fix EditorHost issue when moving windows between different DPI screens ([Forum](https://forums.steinberg.net/t/vst3-sdk-editorhost-displays-only-25-of-juce-gui-on-4k-monitor/873310/2) / [Juce Fourm](https://forum.juce.com/t/steinberg-editorhost-on-4k-monitor-is-not-good/58366/7)).
-
-
-  
-- Helpers classes:
-  -
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add test checking that IPluginBase is provided by the controller and the processor.
