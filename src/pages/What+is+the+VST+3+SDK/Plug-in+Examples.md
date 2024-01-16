@@ -89,10 +89,10 @@ Check the folder *"public.sdk/samples/vst/channelcontext"* of the SDK!
 
 ## DataExchange
 
-Very simple plug-in:
+This plug-in:
 
-- showing how to exchange data (waveform) between processor (in the realtime thread) and controller using the VST Data Exchange API: [Vst::IDataExchangeHandler](../Technical+Documentation/Data+Exchange/Index.md)
-- It shows how easy it is to use [**VSTGUI**](VSTGUI.md)
+- shows how to exchange data (waveform) between processor (in the realtime thread) and controller using the VST Data Exchange API: [Vst::IDataExchangeHandler](../Technical+Documentation/Data+Exchange/Index.md)
+- shows how easy it is to use [**VSTGUI**](VSTGUI.md)
 
 ![what_if_38](../../resources/what_is_38.jpg)
 
