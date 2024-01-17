@@ -19,6 +19,9 @@
   - Fix *smtg_target_make_plugin_package* can create invalid VST 3 plug-ins ([Forum](https://forums.steinberg.net/t/weird-cmake-error/862347)).
   - Fix regression for non-bundle Windows plug-ins (non-bundle VST 3 on Windows will be declared deprecated in a future update of VST 3 SDK).
 
+- Tools:
+  - 2 new scripts for macOS (**vst3sdk/tools/setup_macos_packages_for_vst3sdk.sh**) and Windows (**vst3sdk/tools/setup_win_for_vst3sdk.bat**) which check if all necessary tools are correctly installed for developing VST 3 plug-ins.
+
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 plug-ins example:
     - New [Utf16Name](../What+is+the+VST+3+SDK/Plug-in+Examples.md#utf16name) showing use of UTF16 characters in plug-in and company name.
