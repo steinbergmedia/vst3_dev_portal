@@ -39,12 +39,13 @@ External Glossary: [AES - PAR - Pro Audio Reference:](https://www.aes.org/par/) 
 | **DAW**       | Digital Audio Workstation     | <https://en.wikipedia.org/wiki/Digital_audio_workstation> |
 | **DLL**       | Dynamic-Link Library          | <https://en.wikipedia.org/wiki/Dynamic-link_library> |
 | **DSP**       | Digital Signal Processing     | <https://en.wikipedia.org/wiki/Digital_signal_processing> |
-| **e.g.**      | exempli gratia | for example  |
+| **e.g.**      | exempli gratia                | for example  |
 | **FAQ**       | Frequently Asked Questions    | VST 3 [Frequently Asked Questions](../FAQ/Index.md) |
 | **FFT**       | Fast Fourier Transformation   | <https://en.wikipedia.org/wiki/Fast_Fourier_transform> |
 | **GPL**       | General Public License        | <https://www.gnu.org/licenses/gpl-3.0.en.html> |
 | **ICASSP**    | International Conference on Acoustics, Speech and Signal Processing | <https://en.wikipedia.org/wiki/International_Conference_on_Acoustics,_Speech,_and_Signal_Processing> |
 | **ISMIR**     | International Society for Music Information Retrieval | <https://ismir.net> |
+| **JSON5**     | JavaScript Object Notation    | <https://www.json.org> |
 | **LFE**       | Low Frequency Effects         | <https://en.wikipedia.org/wiki/Low-frequency_effects> |
 | **MIDI**      | Musical Instrument Digital Interface | <https://www.midi.org> |
 | **MPE**       | MIDI Polyphonic Expression    | <https://www.midi.org> |
