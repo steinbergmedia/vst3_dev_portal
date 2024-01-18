@@ -25,7 +25,7 @@
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 plug-ins example:
     - New [Utf16Name](../What+is+the+VST+3+SDK/Plug-in+Examples.md#utf16name) showing use of UTF16 characters in plug-in and company name.
-  - Fix EditorHost issue when moving windows between different DPI screens ([Forum](https://forums.steinberg.net/t/vst3-sdk-editorhost-displays-only-25-of-juce-gui-on-4k-monitor/873310/2) / [Juce Fourm](https://forum.juce.com/t/steinberg-editorhost-on-4k-monitor-is-not-good/58366/7)).
+  - Fix EditorHost issue when moving windows between different DPI screens ([Forum](https://forums.steinberg.net/t/vst3-sdk-editorhost-displays-only-25-of-juce-gui-on-4k-monitor/873310/2) / [Juce Forum](https://forum.juce.com/t/steinberg-editorhost-on-4k-monitor-is-not-good/58366/7)).
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add test checking that IPluginBase is provided by the controller and the processor.
