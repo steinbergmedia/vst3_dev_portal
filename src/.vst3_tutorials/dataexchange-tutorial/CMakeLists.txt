@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14.0)
 set(CMAKE_OSX_DEPLOYMENT_TARGET 10.13 CACHE STRING "")
 
 if(NOT vst3sdk_SOURCE_DIR)
-    message(FATAL_ERROR "Path to VST3 SDK is empty! Please specify the vst3sdk_SOURCE_DIR cmake cache entry")
+    message(FATAL_ERROR "Path to VST 3 SDK is empty! Please specify the vst3sdk_SOURCE_DIR cmake cache entry")
 endif()
 
 project(dataexchange_tutorial

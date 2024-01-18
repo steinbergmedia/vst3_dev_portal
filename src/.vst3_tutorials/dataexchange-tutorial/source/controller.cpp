@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------
-// Copyright(c) 2023 Steinberg Media Technologies.
+// Copyright(c) 2024 Steinberg Media Technologies.
 //------------------------------------------------------------------------
 
 #include "cids.h"

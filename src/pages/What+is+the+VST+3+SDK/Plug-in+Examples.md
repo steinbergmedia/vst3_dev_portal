@@ -70,7 +70,7 @@ Classes:
 - AGainWithSideChain (used for side-chain version)
 - AGainController
 
-AGain Sample Accurate
+## AGain Sample Accurate
 
 Simple plug-in showing how to achieve sample-accurate processing.
 
@@ -87,9 +87,20 @@ Very simple plug-in:
 
 Check the folder *"public.sdk/samples/vst/channelcontext"* of the SDK!
 
+## DataExchange
+
+This plug-in:
+
+- shows how to exchange data (waveform) between processor (in the realtime thread) and controller using the VST Data Exchange API: [Vst::IDataExchangeHandler](../Technical+Documentation/Data+Exchange/Index.md)
+- shows how easy it is to use [**VSTGUI**](VSTGUI.md)
+
+![what_if_38](../../resources/what_is_38.jpg)
+
+Check the folder *"public.sdk/samples/vst/dataexchange"* of the SDK!
+
 ## HostChecker
 
-- Instrument, Panner and Fx plug-in checking the **VST 3** support of a host.
+- Instrument, Panner and Fx plug-in checking the **VST 3** support of a host
 - It uses [**VSTGUI**](VSTGUI.md)
 - an **AAX** version is available
 
@@ -115,43 +126,43 @@ Classes:
 ## mda plug-ins
 
 - Effects (stereo to stereo plug-ins):
-  - Ambience: Reverb
-  - Bandisto: Multi-band Distortion
-  - BeatBox: Drum Replacer
-  - Combo: Amp and Speaker Simulator
-  - DeEsser: High frequency Dynamics Processor
-  - Degrade: Sample quality reduction
-  - Delay: Simple stereo delay with feedback tone control
-  - Detune: Simple up/down pitch shifting thickener
-  - Dither: Range of dither types including noise shaping
-  - DubDelay: Delay with feedback saturation and time/pitch modulation
-  - Dynamics: Compressor / Limiter / Gate
-  - Image: Stereo image adjustment and M-S matrix
-  - Leslie: Rotary speaker simulator
-  - Limiter: Opto-electronic style limiter
-  - Loudness: Equal loudness contours for bass EQ and mix correction
-  - MultiBand: Multi-band compressor with M-S processing modes
-  - Overdrive: Soft distortion
-  - RePsycho!: Drum loop pitch changer
-  - RezFilter: Resonant filter with LFO and envelope follower
-  - RingMod: Simple Ring Modulator
-  - Round Panner: 3D panner
-  - Shepard: Continuously rising/falling tone generator
-  - SpecMeter: Stereo 13 Bands spectral Meter
-  - Splitter: Frequency / level crossover for setting up dynamic processing
-  - Stereo Simulator: Haas delay and comb filtering
-  - Sub-Bass Synthesizer: Several low frequency enhancement methods
-  - TalkBox: High resolution vocoder
-  - TestTone: Signal generator with pink and white noise, impulses and sweeps
-  - Thru-Zero Flanger: Classic tape-flanging simulation
-  - Tracker: Pitch tracking oscillator, or pitch tracking EQ
+  - **Ambience**: Reverb.
+  - **Bandisto**: Multi-band Distortion.
+  - **BeatBox**: Drum Replacer.
+  - **Combo**: Amp and Speaker Simulator.
+  - **DeEsser**: High frequency Dynamics Processor.
+  - **Degrade**: Sample quality reduction.
+  - **Delay**: Simple stereo delay with feedback tone control.
+  - **Detune**: Simple up/down pitch shifting thickener.
+  - **Dither**: Range of dither types including noise shaping.
+  - **DubDelay**: Delay with feedback saturation and time/pitch modulation.
+  - **Dynamics**: Compressor / Limiter / Gate.
+  - **Image**: Stereo image adjustment and M-S matrix.
+  - **Leslie**: Rotary speaker simulator.
+  - **Limiter**: Opto-electronic style limiter.
+  - **Loudness**: Equal loudness contours for bass EQ and mix correction.
+  - **MultiBand**: Multi-band compressor with M-S processing modes.
+  - **Overdrive**: Soft distortion.
+  - **RePsycho!**: Drum loop pitch changer.
+  - **RezFilter**: Resonant filter with LFO and envelope follower.
+  - **RingMod**: Simple Ring Modulator.
+  - **Round Panner**: 3D panner.
+  - **Shepard**: Continuously rising/falling tone generator.
+  - **SpecMeter**: Stereo 13 Bands spectral Meter.
+  - **Splitter**: Frequency / level crossover for setting up dynamic processing.
+  - **Stereo Simulator**: Haas delay and comb filtering.
+  - **Sub-Bass Synthesizer**: Several low frequency enhancement methods.
+  - **TalkBox**: High resolution vocoder.
+  - **TestTone**: Signal generator with pink and white noise, impulses and sweeps.
+  - **Thru-Zero Flanger**: Classic tape-flanging simulation.
+  - **Tracker**: Pitch tracking oscillator, or pitch tracking EQ
 - Instruments (1 Event input, 1 stereo Audio output):
-  - DX10: Sounds similar to the later Yamaha DX synths including the heavy bass but with a warmer, cleaner tone.
-  - EPiano: Simple EPiano
-  - JX10: The plug-in is designed for high quality (lower aliasing than most soft synths) and low processor usage
-  - Piano: Not designed to be the best sounding piano in the world, but boasts extremely low CPU and memory usage.
+  - **DX10**: Sounds similar to the later Yamaha DX synths including the heavy bass but with a warmer, cleaner tone.
+  - **EPiano**: Simple EPiano.
+  - **JX10**: The plug-in is designed for high quality (lower aliasing than most soft synths) and low processor usage.
+  - **Piano**: Not designed to be the best sounding piano in the world, but boasts extremely low CPU and memory usage.
 
-Based on the OpenSource mda plug-ins (<http://mda.smartelectronix.com/>), this set of plug-ins demonstrates how wrap DS- code in a **VST 3** plug-in.
+Based on the OpenSource *mda plug-ins* (<http://mda.smartelectronix.com/>), this set of plug-ins demonstrates how wrap DS- code in a **VST 3** plug-in.
 
 Check the folder *"public.sdk/samples/vst/mda-vst3"* of the SDK!
 
@@ -242,6 +253,15 @@ Very simple plug-in:
 ## Sync Delay
 
 Very simple delay plug-in:
+
 - showing how to support [IProcessContextRequirements](../Technical+Documentation/Change+History/3.7.0/IProgress.md)
 
 Check the folder *"public.sdk/samples/vst/syncdelay"* of the SDK!
+
+## UTF16Name
+
+Very simple plug-in:
+
+- with UTF16 characters in plug-in and company name
+
+Check the folder *"public.sdk/samples/vst/utf16name"* of the SDK!

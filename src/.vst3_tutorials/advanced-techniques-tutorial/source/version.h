@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------
-// Copyright(c) 2023 Steinberg Media Technologies.
+// Copyright(c) 2024 Steinberg Media Technologies.
 //------------------------------------------------------------------------
 
 #pragma once
@@ -16,5 +16,5 @@
 #define stringFileDescription	"advanced-techniques-tutorial VST 3"
 #endif
 #define stringCompanyName		"Steinberg Media Technologies\0"
-#define stringLegalCopyright	"Copyright(c) 2023 Steinberg Media Technologies."
+#define stringLegalCopyright	"Copyright(c) 2024 Steinberg Media Technologies."
 #define stringLegalTrademarks	"VST is a trademark of Steinberg Media Technologies GmbH"
