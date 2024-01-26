@@ -85,7 +85,7 @@ No, this is not the typical use case. However, it could be used by plug-ins chan
 
 ---
 
-## Q: In what ways (if any) can units change, in terms of the number or names of units, the allocation of parameter buses to units, etc.?
+## Q: In what ways (if any) can units change, in terms of the number or names of units, the allocation of parameter busses to units, etc.?
 
 Plug-in Unit names can change when restartComponent is called with *kParamTitlesChanged*.
 When restartComponent is called with *kReloadComponent* then the whole structure should be regenerated.

@@ -50,7 +50,7 @@ sequenceDiagram
     P-->>-H:    return
 
     H->>+P:     setBusArrangements (req. Ins, req. Outs)
-    P-->>P:     Adapt its buses according to the requested ones if possible
+    P-->>P:     Adapt its busses according to the requested ones if possible
     P-->>P:     return kResultFalse if not match.
 
     P-->>-H:    return kResultFalse
