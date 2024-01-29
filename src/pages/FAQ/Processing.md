@@ -25,7 +25,21 @@ Q: Must the host deliver valid initialized Audio buffers if the associated bus i
 
 In a correctly implemented host, if an input or output bus exists in the host, and it has become disconnected from the plug-in, the plug-in will receive disconnection information (bus activation).
 
-Additionally, a plug-in with a disconnected input bus will continue to receive default silence buffers, just as a plug-in with a disconnected output bus will continue to receive default nirvana buffers. When these deactivated busses are the last busses (for input or output), the host could not provide associated [AudioBusBuffers](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html), in this case the plug-in should check [numInputs](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a852a74fc4e461ef086bac048313d2de9) and [numOutputs](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a1338255f88bad5cf4fb714c71f92b61a) and doesn't process these busses.
+Additionally, a plug-in with a disconnected input bus will continue to receive default silence buffers, just as a plug-in with a disconnected output bus will continue to receive default nirvana buffers if there are activated busses placed after them. When these deactivated busses are the last busses (for input or output), the host do not need to provide associated [AudioBusBuffers](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html), in this case the plug-in should check [numInputs](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a852a74fc4e461ef086bac048313d2de9) and [numOutputs](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a1338255f88bad5cf4fb714c71f92b61a) and doesn't process these busses.
+
+The following tables show availability of buffer depending on which busses are activated:
+
+|Input/Output Bus|  Index 0 (kMain) | Index 1 (kAux) | Index 2 (kAux) |
+| :-| :- | :- |:- |
+| Bus activated| Yes | No | Yes |
+| Buffer| available | available |  available |
+|  |  |  | |
+
+|Input/Output Bus|  Index 0 (kMain) | Index 1 (kAux) | Index 2 (kAux) |
+| :-| :- | :- |:- |
+| Bus activated| Yes | Yes | No |
+| Buffer| available | available |  optional |
+|  |  |  | |
 
 ---
 
