@@ -81,14 +81,14 @@ A host is permitted to return *kNotImplemented* if it does not support it! The p
 
 ## Q: Is it common for big / important plug-ins to rely on *kReloadComponent* for normal usage?
 
-No, this is not the typical use case. However, it could be used by plug-ins changing its internal-external representation (change of parameter´s count, number of IO...). For an initial host implementation, you can postpone it until a future version is released.
+No, this is not the typical use case. However, it could be used by plug-ins changing their internal-external representation (change of parameter count, number of IO...). For an initial host implementation, you can postpone it until a future version is released.
 
 ---
 
 ## Q: In what ways (if any) can units change, in terms of the number or names of units, the allocation of parameter busses to units, etc.?
 
 Plug-in Unit names can change when restartComponent is called with *kParamTitlesChanged*.
-When restartComponent is called with *kReloadComponent* then the whole structure should be regenerated.
+When restartComponent is called with *kReloadComponent*, the whole structure should be regenerated.
 
 ---
 
