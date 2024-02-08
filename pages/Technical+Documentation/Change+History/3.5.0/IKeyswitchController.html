@@ -210,10 +210,10 @@ tresult PLUGIN_API MyExampleProcessor::initialize (FUnknown* context)
     if (result == kResultTrue)
     {
         // we want a Stereo Output
-        addAudioOutput (STR16 (&quot;Stereo Output&quot;), SpeakerArr::kStereo);
+        addAudioOutput (STR16 ("Stereo Output"), SpeakerArr::kStereo);
 
         // create Event In bus (1 bus with only 1 channel)
-        addEventInput (STR16 (&quot;Event Input&quot;), 1);
+        addEventInput (STR16 ("Event Input"), 1);
     }
     return result;
 }
@@ -271,8 +271,8 @@ tresult PLUGIN_API MyExampleController::getKeyswitchInfo (int32 busIndex, int16 
 
         if (keySwitchIndex == 0)
         {
-            USTRING (&quot;Accentuation&quot;).copyTo (info.title, 128);
-            USTRING (&quot;Acc&quot;).copyTo (info.shortTitle, 128);
+            USTRING ("Accentuation").copyTo (info.title, 128);
+            USTRING ("Acc").copyTo (info.shortTitle, 128);
 
             // if the user keeps pressed C-1 or C#-1 or C-0 then the Accentuation sound should be played
             info.keyswitchMin = 12; // C-1
@@ -281,8 +281,8 @@ tresult PLUGIN_API MyExampleController::getKeyswitchInfo (int32 busIndex, int16 
         }
         else
         {
-            USTRING (&quot;Softly&quot;).copyTo (info.title, 128);
-            USTRING (&quot;Soft&quot;).copyTo (info.shortTitle, 128);
+            USTRING ("Softly").copyTo (info.title, 128);
+            USTRING ("Soft").copyTo (info.shortTitle, 128);
 
             // if the user keeps pressed D-1 or D#-1 or D-0 then the Softly sound should be played
             info.keyswitchMin = 14; // D-1

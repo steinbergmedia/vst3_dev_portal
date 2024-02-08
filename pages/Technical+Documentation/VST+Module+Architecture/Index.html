@@ -261,7 +261,7 @@ A new version inherits the old version(s) of the interface, so the old and the n
 <li><a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUID.html">Steinberg::FUID</a></li>
 <li><a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1FUnknownPtr.html">Steinberg::FUnknownPtr</a></li>
 </ul>
-<p>See also &quot;<a href="Derive+From+Interface.html">How to derive a class from an interface</a>&quot;.</p>
+<p>See also "<a href="Derive+From+Interface.html">How to derive a class from an interface</a>".</p>
 <h2 id="plug-ins"><a class="header" href="#plug-ins">Plug-ins</a></h2>
 <h3 id="module-factory"><a class="header" href="#module-factory">Module Factory</a></h3>
 <p>A module (Windows: Dynamic Link Library, macOS: Mach-O Bundle, Linux: package) contains the implementation of one or more components (e.g. VST 3 effects). A <strong>VST-MA</strong> module must contain a class factory where meta-data and create-methods for the components are registered.<br />
@@ -307,11 +307,11 @@ _bundleExit
 <h3 id="locations"><a class="header" href="#locations">Locations</a></h3>
 <p>Component modules do not require registration like <strong>DirectX</strong>. The host application expects component modules to be located in predefined folders of the file system. These folders and their subfolders are scanned for <strong>VST-MA</strong> modules during application startup. Each folder serves a special purpose:</p>
 <ul>
-<li>The application's <em>Components</em> subfolder (e.g. <em>&quot;C:\Program Files\Steinberg\Cubase 12\Components&quot;</em>) is used for components tightly bound to the application. No other application should use it.</li>
+<li>The application's <em>Components</em> subfolder (e.g. <em>"C:\Program Files\Steinberg\Cubase 12\Components"</em>) is used for components tightly bound to the application. No other application should use it.</li>
 <li>Components that are shared between all <a href="https://www.steinberg.net/">Steinberg</a> hosts are located at:
 <ul>
-<li>Win: <em>&quot;/Program Files/Common Files/Steinberg/Shared Components&quot;</em></li>
-<li>Mac: <em>&quot;/Library/Application Support/Steinberg/Components/&quot;</em></li>
+<li>Win: <em>"/Program Files/Common Files/Steinberg/Shared Components"</em></li>
+<li>Mac: <em>"/Library/Application Support/Steinberg/Components/"</em></li>
 </ul>
 </li>
 <li>For special purpose plug-in types, additional locations are defined. Please refer to the corresponding documentation to find out if additional folders are used and where to find them. For <strong>VST 3</strong>, see <a href="../Locations+Format/Index.html">VST 3 Locations/Format</a>.</li>
@@ -320,8 +320,8 @@ _bundleExit
 <p>Any class that the factory can create is assigned to a category. It is this category that tells the host the purpose of the class (and gives a hint of which interfaces it might implement).<br />
 A class is also described with a name and it has a unique id.</p>
 <ul>
-<li>For example, the category for import/export filters is &quot;<strong>Project Filter</strong>&quot; and for <strong>VST 3</strong> audio plug-ins it is &quot;<strong>Audio Module Class</strong>&quot;.</li>
-<li>&quot;Service&quot; is a special category. The purpose of a class of this category is completely unknown to the host. It is loaded automatically during program start (provided that the user did not deactivate it).</li>
+<li>For example, the category for import/export filters is "<strong>Project Filter</strong>" and for <strong>VST 3</strong> audio plug-ins it is "<strong>Audio Module Class</strong>".</li>
+<li>"Service" is a special category. The purpose of a class of this category is completely unknown to the host. It is loaded automatically during program start (provided that the user did not deactivate it).</li>
 <li>Since the factory can create any number of classes, one component library can contain multiple components of any type.</li>
 </ul>
 <h3 id="ipluginbase"><a class="header" href="#ipluginbase">IPluginBase</a></h3>
@@ -344,7 +344,7 @@ Accordingly, also the implementation of a plug-in needs to be adapted to deal co
 Changing a function from using 8 bit to 16 bit character pointers may seem as only a minor modification, but in interface design this is a major intrusion, because an interface is a contract to the outside world that is never to be changed. Therefore, classes that are changed to use Unicode strings are distinguished and also receive a new unique class ID.</p>
 </blockquote>
 <h2 id="sdk-backward-compatibility"><a class="header" href="#sdk-backward-compatibility">SDK backward compatibility</a></h2>
-<p>Even with the current SDK it is still possible to develop non-Unicode plug-ins. In the file <em>pluginterfaces/base/ftypes.h</em>, the line <em>&quot;#define UNICODE_OFF&quot;</em> is commented out, but by uncommenting it you can revert all interfaces to using single byte ASCII strings. Alternatively, you can also specify UNICODE_OFF as a preprocessor definition in your project file.<br />
+<p>Even with the current SDK it is still possible to develop non-Unicode plug-ins. In the file <em>pluginterfaces/base/ftypes.h</em>, the line <em>"#define UNICODE_OFF"</em> is commented out, but by uncommenting it you can revert all interfaces to using single byte ASCII strings. Alternatively, you can also specify UNICODE_OFF as a preprocessor definition in your project file.<br />
 Also, the plug-in's factory info now does not define the Unicode flag anymore, so a Unicode host sees the compiled plug-in as non-Unicode. Also, when reverting to single byte strings the plug-in's implementation also has to be changed to behave correctly.</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />

@@ -184,7 +184,7 @@
 <p>Here some code examples:</p>
 <hr />
 <h2 id="convert-a-string128-string-to-an-utf-8-string"><a class="header" href="#convert-a-string128-string-to-an-utf-8-string">Convert a String128 string to an UTF-8 string</a></h2>
-<pre><code class="language-c++">#include &quot;public.sdk/source/vst/utility/stringconvert.h&quot;
+<pre><code class="language-c++">#include "public.sdk/source/vst/utility/stringconvert.h"
 
 //...
 FUnknownPtr&lt;IHostApplication&gt; hostApp (hostContext);
@@ -201,10 +201,10 @@ if (hostApp)
 </code></pre>
 <hr />
 <h2 id="convert-an-utf-8-string-to-a-string128-string"><a class="header" href="#convert-an-utf-8-string-to-a-string128-string">Convert an UTF-8 string to a String128 string</a></h2>
-<pre><code class="language-c++">#include &quot;public.sdk/source/vst/utility/stringconvert.h&quot;
+<pre><code class="language-c++">#include "public.sdk/source/vst/utility/stringconvert.h"
 
 //...
-std::string str (&quot;My Title&quot;);
+std::string str ("My Title");
 Vst::String128 vstStr;
 VST3::StringConvert::convert (str, vstStr);
 </code></pre>

@@ -198,7 +198,7 @@
 <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
 <p>This open source application (Win/macOS) allows you to generate easily a new <strong>VST 3</strong> plug-in project by just entering in a GUI some parameters.</p>
 <p><img src="../../resources/what_is_24.jpg" alt="what_if_24" /></p>
-<p>Check the folder <em>&quot;VST3_Project_Generator&quot;</em> of the SDK!</p>
+<p>Check the folder <em>"VST3_Project_Generator"</em> of the SDK!</p>
 <p>The source code is available at <a href="https://github.com/steinbergmedia/vst3projectgenerator">GitHub - steinbergmedia/vst3projectgenerator: VST 3 Project Generator</a>.</p>
 <h2 id="start-the-vst-3-project-generator-application"><a class="header" href="#start-the-vst-3-project-generator-application">Start the VST 3 Project Generator Application</a></h2>
 <p><img src="../../resources/what_is_25.png" alt="what_if_25" /></p>
@@ -228,10 +228,10 @@
 <p>Company Information</p>
 <p>The information included in this subsection will be used for generating Factory information associated to all plug-ins you will generate. This will be read by the host application loading your plug-ins and the host may display it to an user.</p>
 <ul>
-<li><strong>Vendor</strong>: this is your Company name: e.g. <em>&quot;Steinberg Media Technologies GmbH&quot;</em></li>
-<li><strong>E-Mail</strong>: your email, which could be used by the host to redirect an user to your support for example: e.g. <em>&quot;<a href="mailto:support@steinberg.net">mailto:support@steinberg.net</a>&quot;</em></li>
-<li><strong>URL</strong>: the URL of your Company: e.g. <em>&quot;<a href="https://www.steinberg.net">https://www.steinberg.net</a>&quot;</em></li>
-<li><strong>C++ Namespace</strong>: this allows you to predefine a namespace which will be used to surround your plug-in source code: e.g. <em>&quot;MyWantedNamespace&quot;</em>:</li>
+<li><strong>Vendor</strong>: this is your Company name: e.g. <em>"Steinberg Media Technologies GmbH"</em></li>
+<li><strong>E-Mail</strong>: your email, which could be used by the host to redirect an user to your support for example: e.g. <em>"<a href="mailto:support@steinberg.net">mailto:support@steinberg.net</a>"</em></li>
+<li><strong>URL</strong>: the URL of your Company: e.g. <em>"<a href="https://www.steinberg.net">https://www.steinberg.net</a>"</em></li>
+<li><strong>C++ Namespace</strong>: this allows you to predefine a namespace which will be used to surround your plug-in source code: e.g. <em>"MyWantedNamespace"</em>:</li>
 </ul>
 <pre><code class="language-c++">//...
 namespace MyWantedNamespace {
@@ -255,7 +255,7 @@ namespace MyWantedNamespace {
 <p>In this tab you are defining some information for the creation of a new plug-in:</p>
 <p><img src="../../resources/what_is_31.png" alt="what_if_31" /></p>
 <ul>
-<li><strong>Name</strong>: the name of the plug-in which is displayed in a host: e.g. <em>&quot;AGain&quot;</em></li>
+<li><strong>Name</strong>: the name of the plug-in which is displayed in a host: e.g. <em>"AGain"</em></li>
 <li><strong>Type</strong>: this specifies the main <strong>VST 3</strong> Sub-Category (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html">PlugType</a>) of your plug-in:
 <ul>
 <li><strong>Audio Effect</strong>: (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#ga0411b97bcc13d604e738a28aee43bb61">kFx</a>) a simple audio effect Stereo→Stereo</li>
@@ -264,7 +264,7 @@ namespace MyWantedNamespace {
 </li>
 <li><strong>Use VSTGUI</strong>: check this if you want to use <a href="VSTGUI.html"><strong>VSTGUI</strong></a> as UI framework</li>
 <li><strong>macOS Deployment Target</strong>: enter here the minimum requested macOS version targeted</li>
-<li><strong>C++ Class Name</strong>: this specifies the basename of your plug-in classes: e.g. <em>&quot;AGain&quot;</em></li>
+<li><strong>C++ Class Name</strong>: this specifies the basename of your plug-in classes: e.g. <em>"AGain"</em></li>
 </ul>
 <pre><code class="language-c++">class AGainProcessor : public AudioEffect
 {
@@ -277,8 +277,8 @@ class AGainController : public EditControllerEx1
 };
 </code></pre>
 <ul>
-<li><strong>Bundle ID</strong>: this is the ID needed for example for the Info.plist of macOS: e.g. <em>&quot;com.steinberg.again&quot;</em></li>
-<li><strong>Filename Prefix</strong>: (optional) this will be added as file prefix to the created files: e.g. <em>&quot;AGain&quot;</em> =&gt; AGainProcessor.cpp / AGainController.h / ...</li>
+<li><strong>Bundle ID</strong>: this is the ID needed for example for the Info.plist of macOS: e.g. <em>"com.steinberg.again"</em></li>
+<li><strong>Filename Prefix</strong>: (optional) this will be added as file prefix to the created files: e.g. <em>"AGain"</em> =&gt; AGainProcessor.cpp / AGainController.h / ...</li>
 <li><strong>Output Directory</strong>: you define here in which folder your project will be created</li>
 <li><strong>CMake Generator</strong>: CMake tool required to define a generator in order to create configuration files for a specific build system: there are 2 kinds of generators: Command-Line and IDE. Choose the one you need for example:
 <ul>
@@ -292,15 +292,15 @@ class AGainController : public EditControllerEx1
 <p><strong>Example of script Output</strong></p>
 <pre><code class="language-text">C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\
 Windows_x64\Resources\GenerateVST3Plugin.cmake 
--DSMTG_VST3_SDK_SOURCE_DIR_CLI=&quot;C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk&quot; 
--DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI=&quot;C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7&quot;
--DSMTG_PLUGIN_NAME_CLI=&quot;AGain&quot; -DSMTG_PLUGIN_CATEGORY_CLI=&quot;Fx&quot; -DSMTG_CMAKE_PROJECT_NAME_CLI=&quot;AGain&quot;
--DSMTG_PLUGIN_BUNDLE_NAME_CLI=&quot;AGain&quot; -DSMTG_PLUGIN_IDENTIFIER_CLI=&quot;com.steinberg.again&quot;
--DSMTG_MACOS_DEPLOYMENT_TARGET_CLI=&quot;10.13&quot; -DSMTG_VENDOR_NAME_CLI=&quot;Steinberg&quot; 
--DSMTG_VENDOR_HOMEPAGE_CLI=&quot;www.steinberg.net&quot; -DSMTG_VENDOR_EMAIL_CLI=&quot;info@steinberg.net&quot; 
--DSMTG_PREFIX_FOR_FILENAMES_CLI=&quot;&quot; -DSMTG_PLUGIN_CLASS_NAME_CLI=&quot;AGain&quot; -DSMTG_ENABLE_VSTGUI_SUPPORT_CLI=ON 
- -P &quot;C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\
- Windows_x64\Resources\GenerateVST3Plugin.cmake&quot;
+-DSMTG_VST3_SDK_SOURCE_DIR_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk" 
+-DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7"
+-DSMTG_PLUGIN_NAME_CLI="AGain" -DSMTG_PLUGIN_CATEGORY_CLI="Fx" -DSMTG_CMAKE_PROJECT_NAME_CLI="AGain"
+-DSMTG_PLUGIN_BUNDLE_NAME_CLI="AGain" -DSMTG_PLUGIN_IDENTIFIER_CLI="com.steinberg.again"
+-DSMTG_MACOS_DEPLOYMENT_TARGET_CLI="10.13" -DSMTG_VENDOR_NAME_CLI="Steinberg" 
+-DSMTG_VENDOR_HOMEPAGE_CLI="www.steinberg.net" -DSMTG_VENDOR_EMAIL_CLI="info@steinberg.net" 
+-DSMTG_PREFIX_FOR_FILENAMES_CLI="" -DSMTG_PLUGIN_CLASS_NAME_CLI="AGain" -DSMTG_ENABLE_VSTGUI_SUPPORT_CLI=ON 
+ -P "C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\
+ Windows_x64\Resources\GenerateVST3Plugin.cmake"
 ==================================================
 
  Steinberg Media Technologies GmbH
@@ -308,7 +308,7 @@ Windows_x64\Resources\GenerateVST3Plugin.cmake
 
 ==================================================
 
--- Found Git: C:/Program Files/Git/cmd/git.exe (found version &quot;2.38.1.windows.1&quot;) 
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.38.1.windows.1") 
 -- SMTG_CMAKE_SCRIPT_DIR           : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/VST_SDK/VST3_Project_Generator/Windows_x64/Resources
 -- SMTG_ENABLE_VSTGUI_SUPPORT      : ON
 -- SMTG_GENERATOR_OUTPUT_DIRECTORY : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7
@@ -346,7 +346,7 @@ Windows_x64\Resources\GenerateVST3Plugin.cmake
 -- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/mypluginprocessor.cpp
 -- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/mypluginprocessor.h
 
-C:\Program Files\CMake\bin\CMake.exe -G &quot;Visual Studio 17 2022&quot; -A x64 -S &quot;C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7\AGain&quot; -B &quot;C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7\AGain\build&quot; -DSMTG_ADD_VSTGUI=ON 
+C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 17 2022" -A x64 -S "C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7\AGain" -B "C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7\AGain\build" -DSMTG_ADD_VSTGUI=ON 
 -- Selecting Windows SDK version 10.0.22000.0 to target Windows 10.0.19045.
 -- The C compiler identification is MSVC 19.34.31935.0
 -- The CXX compiler identification is MSVC 19.34.31935.0
@@ -396,7 +396,7 @@ and/or other materials provided with the distribution.
 contributors may be used to endorse or promote productsderived from this
 software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ANDCONTRIBUTORS &quot;AS IS&quot; AND
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ANDCONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO, THE IMPLIED
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULARPURPOSE ARE DISCLAIMED.
 IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BELIABLE FOR ANY DIRECT,

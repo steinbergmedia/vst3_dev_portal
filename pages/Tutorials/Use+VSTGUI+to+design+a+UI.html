@@ -186,7 +186,7 @@
 <p>This tutorial explains how to use <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a>. <a href="../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> comes with a <em>WYSIWYG</em> editor that allows you to create stunning user interfaces for your plug-in.</p>
 <hr />
 <h2 id="part-1-preparation"><a class="header" href="#part-1-preparation">Part 1: Preparation</a></h2>
-<p>If you have created your project with the <a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a> and check the &quot;<strong>Use VSTGUI</strong>&quot; you can directly jump to <a href="#part-2-open-the-vstguiwyswyg-editor">Part 2</a> of this tutorial.</p>
+<p>If you have created your project with the <a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a> and check the "<strong>Use VSTGUI</strong>" you can directly jump to <a href="#part-2-open-the-vstguiwyswyg-editor">Part 2</a> of this tutorial.</p>
 <p>Before using the inline UI editor, you must make sure that you use the <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1EditController.html">Steinberg::Vst::EditController</a> class as a base of your own edit controller and that you have used the <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1Parameter.html">Steinberg::Vst::Parameter</a> class or any subclass of it for your parameters.
 Otherwise the inline UI editor won't work properly.</p>
 <p>Next you have to add vstgui to your project. For <em>cmake</em> users, you can just add the vstgui_support library to your target:</p>
@@ -206,13 +206,13 @@ Otherwise the inline UI editor won't work properly.</p>
 <pre><code class="language-c++">target_compile_definitions(${target} PUBLIC$&lt;$&lt;CONFIG:Debug&gt;:VSTGUI_LIVE_EDITING=1&gt;)
 </code></pre>
 <p>Finally, you have to modify your edit controller class to overwrite the <strong>createView()</strong> method:</p>
-<pre><code class="language-c++">#include &quot;vstgui/plugin-bindings/vst3editor.h&quot;
+<pre><code class="language-c++">#include "vstgui/plugin-bindings/vst3editor.h"
 
 IPlugView* PLUGIN_API MyEditController::createView (FIDStringname)
 {
     if (strcmp (name, ViewType::kEditor) == 0)
     {
-        return new VSTGUI::VST3Editor (this, &quot;view&quot;, &quot;myEditor.uidesc&quot;);
+        return new VSTGUI::VST3Editor (this, "view", "myEditor.uidesc");
     }
     return 0;
 }
@@ -221,7 +221,7 @@ IPlugView* PLUGIN_API MyEditController::createView (FIDStringname)
 <p>Now you can build your plug-in and start your preferred <strong>VST 3</strong> host to start designing your user interface.</p>
 <hr />
 <h2 id="part-2-open-the-vstguiwyswyg-editor"><a class="header" href="#part-2-open-the-vstguiwyswyg-editor">Part 2: Open the VSTGUI/WYSWYG editor</a></h2>
-<p>If you now open your plug-in UI in your host, you will see a blank editor. To enter the UI editor, right-click on it and choose &quot;<strong>Open UIDescription Editor</strong>&quot;.</p>
+<p>If you now open your plug-in UI in your host, you will see a blank editor. To enter the UI editor, right-click on it and choose "<strong>Open UIDescription Editor</strong>".</p>
 <p>After your first edits, you have to add the <em>uidesc</em> file you have saved to your project (already done if you have used <a href="../What+is+the+VST+3+SDK/Project+Generator.html">VST 3 Project Generator</a>). You also have to make sure to always build your project after changes to the <em>uidesc</em> file.</p>
 <hr />
 <h2 id="part-3-parameter-binding"><a class="header" href="#part-3-parameter-binding">Part 3: Parameter Binding</a></h2>

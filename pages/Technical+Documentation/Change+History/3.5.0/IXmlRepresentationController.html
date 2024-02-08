@@ -215,20 +215,20 @@ It allows to describe each parameter more precisely (what is the best matching t
 <p>This representation is implemented as XML text following the Document Type Definition (DTD): http://dtd.steinberg.net/VST-Remote-1.1.dtd</p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <p><strong>Here an example of what should be passed in the stream of getXmlRepresentationStream:</strong></p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;!DOCTYPE vstXML PUBLIC &quot;-//Steinberg//DTD VST Remote 1.1//EN&quot; &quot;http://dtd.steinberg.net/VST-Remote-1.1.dtd&quot;&gt;
-&lt;vstXML version=&quot;1.0&quot;&gt;
-    &lt;plugin classID=&quot;341FC5898AAA46A7A506BC0799E882AE&quot; name=&quot;Chorus&quot; vendor=&quot;Steinberg Media Technologies&quot; /&gt;
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE vstXML PUBLIC "-//Steinberg//DTD VST Remote 1.1//EN" "http://dtd.steinberg.net/VST-Remote-1.1.dtd"&gt;
+&lt;vstXML version="1.0"&gt;
+    &lt;plugin classID="341FC5898AAA46A7A506BC0799E882AE" name="Chorus" vendor="Steinberg Media Technologies" /&gt;
     &lt;originator&gt;My name&lt;/originator&gt;
     &lt;date&gt;2010-12-31&lt;/date&gt;
     &lt;comment&gt;This is an example for 4 Cells per Page for the Remote named ProductRemote
              from company HardwareCompany.&lt;/comment&gt;
  
      &lt;!-- ===================================== --&gt;
-    &lt;representation name=&quot;ProductRemote&quot; vendor=&quot;HardwareCompany&quot; version=&quot;1.0&quot;&gt;
-        &lt;page name=&quot;Root&quot;&gt;
+    &lt;representation name="ProductRemote" vendor="HardwareCompany" version="1.0"&gt;
+        &lt;page name="Root"&gt;
             &lt;cell&gt;
-                &lt;layer type=&quot;knob&quot; parameterID=&quot;0&quot;&gt;
+                &lt;layer type="knob" parameterID="0"&gt;
                     &lt;titleDisplay&gt;
                         &lt;name&gt;Mix dry/wet&lt;/name&gt;
                         &lt;name&gt;Mix&lt;/name&gt;
@@ -236,10 +236,10 @@ It allows to describe each parameter more precisely (what is the best matching t
                 &lt;/layer&gt;
             &lt;/cell&gt;
             &lt;cell&gt;
-                &lt;layer type=&quot;display&quot;&gt;&lt;/layer&gt;
+                &lt;layer type="display"&gt;&lt;/layer&gt;
             &lt;/cell&gt;
             &lt;cell&gt;
-                &lt;layer type=&quot;knob&quot; parameterID=&quot;3&quot;&gt;
+                &lt;layer type="knob" parameterID="3"&gt;
                     &lt;titleDisplay&gt;
                         &lt;name&gt;Delay&lt;/name&gt;
                         &lt;name&gt;Dly&lt;/name&gt;
@@ -247,7 +247,7 @@ It allows to describe each parameter more precisely (what is the best matching t
                 &lt;/layer&gt;
             &lt;/cell&gt;
             &lt;cell&gt;
-                &lt;layer type=&quot;knob&quot; parameterID=&quot;15&quot;&gt;
+                &lt;layer type="knob" parameterID="15"&gt;
                     &lt;titleDisplay&gt;
                         &lt;name&gt;Spatial&lt;/name&gt;
                         &lt;name&gt;Spat&lt;/name&gt;
@@ -255,32 +255,32 @@ It allows to describe each parameter more precisely (what is the best matching t
                 &lt;/layer&gt;
             &lt;/cell&gt;
         &lt;/page&gt;
-        &lt;page name=&quot;Page 2&quot;&gt;
+        &lt;page name="Page 2"&gt;
             &lt;cell&gt;
-                &lt;layer type=&quot;LED&quot; ledStyle=&quot;spread&quot; parameterID=&quot;2&quot;&gt;
+                &lt;layer type="LED" ledStyle="spread" parameterID="2"&gt;
                     &lt;titleDisplay&gt;
                         &lt;name&gt;Width +&lt;/name&gt;
                         &lt;name&gt;Widt&lt;/name&gt;
                     &lt;/titleDisplay&gt;
                 &lt;/layer&gt;
                 &lt;!--this is the switch for shape A/B--&gt;
-                &lt;layer type=&quot;switch&quot; switchStyle=&quot;pushIncLooped&quot; parameterID=&quot;4&quot;&gt;&lt;/layer&gt;
+                &lt;layer type="switch" switchStyle="pushIncLooped" parameterID="4"&gt;&lt;/layer&gt;
             &lt;/cell&gt;
             &lt;cell&gt;
-                &lt;layer type=&quot;display&quot;&gt;&lt;/layer&gt;
+                &lt;layer type="display"&gt;&lt;/layer&gt;
             &lt;/cell&gt;
             &lt;cell&gt;
-                &lt;layer type=&quot;LED&quot; ledStyle=&quot;singleDot&quot; parameterID=&quot;17&quot;&gt;
+                &lt;layer type="LED" ledStyle="singleDot" parameterID="17"&gt;
                     &lt;titleDisplay&gt;
                         &lt;name&gt;Sync Note +&lt;/name&gt;
                         &lt;name&gt;Note&lt;/name&gt;
                     &lt;/titleDisplay&gt;
                 &lt;/layer&gt;
                 &lt;!--this is the switch for sync to tempo on /off--&gt;
-                &lt;layer type=&quot;switch&quot; switchStyle=&quot;pushIncLooped&quot; parameterID=&quot;16&quot;&gt;&lt;/layer&gt;
+                &lt;layer type="switch" switchStyle="pushIncLooped" parameterID="16"&gt;&lt;/layer&gt;
             &lt;/cell&gt;
             &lt;cell&gt;
-                &lt;layer type=&quot;knob&quot; parameterID=&quot;1&quot;&gt;
+                &lt;layer type="knob" parameterID="1"&gt;
                     &lt;titleDisplay&gt;
                         &lt;name&gt;Rate&lt;/name&gt;
                     &lt;/titleDisplay&gt;
@@ -312,12 +312,12 @@ It allows to describe each parameter more precisely (what is the best matching t
 </li>
 <li>$COMPANY and $PLUGIN-NAME folder names contain only allowed characters for file naming
 <ul>
-<li>replace characters &quot;\*?/:.&lt;&gt;|\&quot;\t\n\r&quot; by &quot;_&quot;</li>
+<li>replace characters "\*?/:.&lt;&gt;|\"\t\n\r" by "_"</li>
 </ul>
 </li>
 <li>$UID is the Unique ID of the processor in its string representation
 <ul>
-<li>for example: &quot;57F704D1FA974D668083E4B9AF581D23&quot; len=32)</li>
+<li>for example: "57F704D1FA974D668083E4B9AF581D23" len=32)</li>
 </ul>
 </li>
 </ul>

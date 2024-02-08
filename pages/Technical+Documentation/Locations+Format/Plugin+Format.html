@@ -190,7 +190,7 @@
 </ul>
 <hr />
 <h2 id="for-the-macos-platform"><a class="header" href="#for-the-macos-platform">For the macOS platform</a></h2>
-<p>On the macOS platform, <strong>VST 3</strong> plug-in is a standard macOS bundle, its file extension is &quot;<strong>.vst3</strong>&quot; and has the following folder structure:</p>
+<p>On the macOS platform, <strong>VST 3</strong> plug-in is a standard macOS bundle, its file extension is "<strong>.vst3</strong>" and has the following folder structure:</p>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">Folder</th><th style="text-align: left">Description</th></tr></thead><tbody>
 <tr><td style="text-align: left">MyPlugin.vst3/Contents/Resources/</td><td style="text-align: left">folder contains all additional resource files useful for the plug-in</td></tr>
 <tr><td style="text-align: left">MyPlugin.vst3/Contents/Resources/moduleinfo.json</td><td style="text-align: left">the plug-in’s module info</td></tr>
@@ -200,7 +200,7 @@
 </tbody></table>
 </div>
 <h2 id="for-the-windows-platform"><a class="header" href="#for-the-windows-platform">For the Windows platform</a></h2>
-<p>On the Windows platform, a <strong>VST 3</strong> plug-in is organized as a bundle-like package (simple folder), its file extension is &quot;<strong>.vst3</strong>&quot; and has the following folder structure:</p>
+<p>On the Windows platform, a <strong>VST 3</strong> plug-in is organized as a bundle-like package (simple folder), its file extension is "<strong>.vst3</strong>" and has the following folder structure:</p>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">Folder</th><th style="text-align: left">Description</th></tr></thead><tbody>
 <tr><td style="text-align: left">MyPlugin.vst3/Contents/Resources/</td><td style="text-align: left">folder contains all additional resource files useful for the plug-in</td></tr>
 <tr><td style="text-align: left">MyPlugin.vst3/Contents/Resources/moduleinfo.json</td><td style="text-align: left">the plug-in’s module info</td></tr>
@@ -239,7 +239,7 @@ attrib +r +h Plugin.ico
 </tbody></table>
 </div>
 <blockquote>
-<p>&quot;TLDR: Please offer both Arm64EC and x64 versions of your DAWs and plug-ins, and please stay up to date with the latest developer tooling and SDKs.&quot; (<a href="https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/">Pete Brown - Microsoft</a>)</p>
+<p>"TLDR: Please offer both Arm64EC and x64 versions of your DAWs and plug-ins, and please stay up to date with the latest developer tooling and SDKs." (<a href="https://devblogs.microsoft.com/windows-music-dev/load-x64-plug-ins-like-vsts-from-your-arm-code-using-arm64ec/">Pete Brown - Microsoft</a>)</p>
 </blockquote>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
@@ -250,13 +250,13 @@ With out-of-process/inter-process communication a host can overriden these limit
 To learn more about Arm64X (new type of binary that can contain both the classic <em>Arm64</em> code and <em>Arm64EC</em> code together), click <a href="https://learn.microsoft.com/en-us/windows/arm/arm64x-pe">here</a>.</p>
 </blockquote>
 <h2 id="for-the-linux-platform"><a class="header" href="#for-the-linux-platform">For the Linux platform</a></h2>
-<p>On Linux, a <strong>VST 3</strong> plug-in is organized as a bundle-like package, its file extension is &quot;<strong>.vst3</strong>&quot;, and it has the following folder structure:</p>
+<p>On Linux, a <strong>VST 3</strong> plug-in is organized as a bundle-like package, its file extension is "<strong>.vst3</strong>", and it has the following folder structure:</p>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">Folder</th><th style="text-align: left">Description</th></tr></thead><tbody>
 <tr><td style="text-align: left">MyPlugin.vst3/Contents/Resources/</td><td style="text-align: left">folder contains all additional resource files useful for the plug-in</td></tr>
 <tr><td style="text-align: left">MyPlugin.vst3/Contents/Resources/moduleinfo.json</td><td style="text-align: left">the plug-in’s module info</td></tr>
 <tr><td style="text-align: left">MyPlugin.vst3/Contents/i386-linux</td><td style="text-align: left">folder contains the plug-in binary (32 bit shared library .so for Kernel Architecture i386)</td></tr>
 <tr><td style="text-align: left">MyPlugin.vst3/Contents/x86_64-linux</td><td style="text-align: left">folder contains the plug-in binary (64 bit shared library .so for Kernel Architecture x86_64)</td></tr>
-<tr><td style="text-align: left">MyPlugin.vst3/Contents/XXX-linux</td><td style="text-align: left">with XXX the architecture name based on the output of command-line &quot;uname -m&quot; (machine hardware) + &quot;-linux&quot; for example: • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux</td></tr>
+<tr><td style="text-align: left">MyPlugin.vst3/Contents/XXX-linux</td><td style="text-align: left">with XXX the architecture name based on the output of command-line "uname -m" (machine hardware) + "-linux" for example: • armv3l-linux<br> • armv4b-linux<br> • armv4l-linux<br> • armv5tel-linux<br> • armv5tejl-linux<br> • armv6l-linux<br> • armv7l-linux<br> • armv8l-linux</td></tr>
 </tbody></table>
 </div>
 <h2 id="merged-bundle"><a class="header" href="#merged-bundle">Merged Bundle</a></h2>

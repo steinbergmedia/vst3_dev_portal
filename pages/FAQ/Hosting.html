@@ -234,11 +234,11 @@ The information automatable (<em>kCanAutomate</em>) is only there to allow the h
 <p>A host is permitted to return <em>kNotImplemented</em> if it does not support it! The plug-in then has to react accordingly.</p>
 <hr />
 <h2 id="q-is-it-common-for-big--important-plug-ins-to-rely-on-kreloadcomponent-for-normal-usage"><a class="header" href="#q-is-it-common-for-big--important-plug-ins-to-rely-on-kreloadcomponent-for-normal-usage">Q: Is it common for big / important plug-ins to rely on <em>kReloadComponent</em> for normal usage?</a></h2>
-<p>No, this is not the typical use case. However, it could be used by plug-ins changing its internal-external representation (change of parameter´s count, number of IO...). For an initial host implementation, you can postpone it until a future version is released.</p>
+<p>No, this is not the typical use case. However, it could be used by plug-ins changing their internal-external representation (change of parameter count, number of IO...). For an initial host implementation, you can postpone it until a future version is released.</p>
 <hr />
 <h2 id="q-in-what-ways-if-any-can-units-change-in-terms-of-the-number-or-names-of-units-the-allocation-of-parameter-busses-to-units-etc"><a class="header" href="#q-in-what-ways-if-any-can-units-change-in-terms-of-the-number-or-names-of-units-the-allocation-of-parameter-busses-to-units-etc">Q: In what ways (if any) can units change, in terms of the number or names of units, the allocation of parameter busses to units, etc.?</a></h2>
 <p>Plug-in Unit names can change when restartComponent is called with <em>kParamTitlesChanged</em>.
-When restartComponent is called with <em>kReloadComponent</em> then the whole structure should be regenerated.</p>
+When restartComponent is called with <em>kReloadComponent</em>, the whole structure should be regenerated.</p>
 <hr />
 <h2 id="q-iplugviewcontentscalesupport---could--should-this-be-used-to-set-individual-zoom-levels-for-the-gui-of-specific-plug-ins--instances-or-should-it-only-be-used-to-convey-os-scaling-level-like-in-the-editorhost-example"><a class="header" href="#q-iplugviewcontentscalesupport---could--should-this-be-used-to-set-individual-zoom-levels-for-the-gui-of-specific-plug-ins--instances-or-should-it-only-be-used-to-convey-os-scaling-level-like-in-the-editorhost-example">Q: IPlugViewContentScaleSupport - could / should this be used to set individual zoom levels for the GUI of specific plug-ins / instances, or should it only be used to convey OS scaling level (like in the editorhost example)?</a></h2>
 <p>Theoretically it is possible to use this for individual zoom levels, but most plug-ins won't work like this and on macOS many plug-ins don't implement this interface at all (or ignore it).</p>

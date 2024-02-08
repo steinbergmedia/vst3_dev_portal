@@ -205,7 +205,7 @@
 <hr />
 <p>The <strong>VST 3 API</strong> is an interface collection designed for realtime audio processing components. Such a component can be an audio effect or an audio instrument.
 <strong>VST 3</strong> is based on a technology called <a href="../VST+Module+Architecture/Index.html">VST Module Architecture</a> (<strong>VST-MA</strong>). Please read the <a href="../VST+Module+Architecture/Index.html">VST-MA documentation</a> to find out more about how the plug-in system works in general.
-The API files belonging to <strong>VST 3</strong> are located in the folder <em>&quot;pluginterfaces/vst&quot;</em>.</p>
+The API files belonging to <strong>VST 3</strong> are located in the folder <em>"pluginterfaces/vst"</em>.</p>
 <blockquote>
 <p>ⓘ <strong>If you are looking for the C API of VST 3</strong><br />
 see <a href="https://github.com/steinbergmedia/vst3_c_api">https://github.com/steinbergmedia/vst3_c_api</a>.</p>
@@ -400,7 +400,7 @@ After restoring a state, the host rescans the parameters (asking the controller)
 <p>The edit controller is responsible for the GUI aspects ofthe plug-in. Its standard interface is <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Steinberg::Vst::IEditController</a>. The host has to provide acallback interface for the edit controller named <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">Steinberg::Vst::IComponentHandler</a>. The handler is essentialfor the communication with both the host and the processor.</p>
 <ul>
 <li>
-<p><strong>GUI</strong>: Optionally, the controller can define an editor view. The method <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a1fa4ed10cc0979e5559045104c998b1a">Steinberg::Vst::IEditController::createView</a> allows the host to specify the type of the view by passing an id-string. Currently the only type defined is &quot;editor&quot; (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst_1_1ViewType.html#aaa62c4c32f0270a908eb20c7c7124dfc">Steinberg::Vst::ViewType::kEditor</a>), but there might be variations in future versions (e.g. &quot;setup&quot;).
+<p><strong>GUI</strong>: Optionally, the controller can define an editor view. The method <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a1fa4ed10cc0979e5559045104c998b1a">Steinberg::Vst::IEditController::createView</a> allows the host to specify the type of the view by passing an id-string. Currently the only type defined is "editor" (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst_1_1ViewType.html#aaa62c4c32f0270a908eb20c7c7124dfc">Steinberg::Vst::ViewType::kEditor</a>), but there might be variations in future versions (e.g. "setup").
 See also <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html">Steinberg::IPlugView</a>.</p>
 </li>
 <li>
@@ -471,7 +471,7 @@ if (editController)
     }
 
     // synchronize controller to component by using setComponentState
-    MemoryStream stream; // defined in &quot;public.sdk/source/common/memorystream.h&quot;
+    MemoryStream stream; // defined in "public.sdk/source/common/memorystream.h"
     stream.setByteOrder (kLittleEndian);
     if (processorComponent-&gt;getState (&amp;stream) == kResultTrue)
     {

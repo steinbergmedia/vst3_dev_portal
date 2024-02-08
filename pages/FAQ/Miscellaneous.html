@@ -221,24 +221,24 @@ if (component-&gt;setActive (true) != kResultOK)
 </ul>
 <hr />
 <h2 id="q-why-do-plug-ins-need-subcategories"><a class="header" href="#q-why-do-plug-ins-need-subcategories">Q: Why do plug-ins need subcategories?</a></h2>
-<p>When you export your plug-in in the factory instance (check <em>againentry.cpp</em>: DEF_CLASS2), you have to define a subcategory string (can be a combination of more than one string: like &quot;<strong>Fx|Dynamics|EQ</strong>&quot; for example).</p>
+<p>When you export your plug-in in the factory instance (check <em>againentry.cpp</em>: DEF_CLASS2), you have to define a subcategory string (can be a combination of more than one string: like "<strong>Fx|Dynamics|EQ</strong>" for example).</p>
 <p>Currently the subcategory string is used by <strong>Cubase</strong>/<strong>Nuendo</strong> to organize the plug-ins menu in the following way:</p>
 <pre><code class="language-c++">// Computation of Folder Name (SubCategories =&gt; folder in menu)
-&quot;Fx&quot;                        =&gt; &quot;Other&quot;
-&quot;Fx|Delay&quot;                  =&gt; &quot;Delay&quot;
-&quot;Fx|Mastering|Delay&quot;        =&gt; &quot;Mastering&quot;
-&quot;Spatial|Fx&quot;                =&gt; &quot;Spatial&quot;
-&quot;Fx|Spatial&quot;                =&gt; &quot;Spatial&quot;
-&quot;Instrument|Fx&quot;             =&gt; if used as VSTi &quot;&quot; else if used as Insert &quot;Other&quot;
-&quot;Instrument|Sampler&quot;        =&gt; &quot;Sampler&quot;
-&quot;Fx|Mastering|Surround&quot;     =&gt; &quot;Mastering\Surround&quot;
-&quot;Fx|Mastering|Delay|Stereo&quot; =&gt; &quot;Mastering\Stereo&quot;
-&quot;Fx|Mastering|Mono&quot;         =&gt; &quot;Mastering\Mono&quot;
+"Fx"                        =&gt; "Other"
+"Fx|Delay"                  =&gt; "Delay"
+"Fx|Mastering|Delay"        =&gt; "Mastering"
+"Spatial|Fx"                =&gt; "Spatial"
+"Fx|Spatial"                =&gt; "Spatial"
+"Instrument|Fx"             =&gt; if used as VSTi "" else if used as Insert "Other"
+"Instrument|Sampler"        =&gt; "Sampler"
+"Fx|Mastering|Surround"     =&gt; "Mastering\Surround"
+"Fx|Mastering|Delay|Stereo" =&gt; "Mastering\Stereo"
+"Fx|Mastering|Mono"         =&gt; "Mastering\Mono"
 </code></pre>
 <p>This string should only be a hint what type of plug-in it is. It's not possible to define all types. If you have wishes for new categories, please discuss them in the VST <a href="../Forum/Index.html">Developer Forum</a> (<a href="https://sdk.steinberg.net">https://sdk.steinberg.net</a>) and we can add them to future versions of the SDK.</p>
 <hr />
 <h2 id="q-is-it-possible-to-define-a-plug-in-as-fx-and-instrument"><a class="header" href="#q-is-it-possible-to-define-a-plug-in-as-fx-and-instrument">Q: Is it possible to define a plug-in as Fx and Instrument?</a></h2>
-<p>Yes it is possible, you can use the CString <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#gabe030351fd22d14dad35c817e1849f59">kFxInstrument</a> (&quot;Fx|Instrument&quot;) as subcategories (check DEF_CLASS2). In this case Steinberg Sequencers will allow the user to load it as an effect and as an instrument. The plug-in as instrument (in case of current Steinberg Sequencers &lt;= 5.5) will not enable the Audio Input busses.</p>
+<p>Yes it is possible, you can use the CString <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/group__plugType.html#gabe030351fd22d14dad35c817e1849f59">kFxInstrument</a> ("Fx|Instrument") as subcategories (check DEF_CLASS2). In this case Steinberg Sequencers will allow the user to load it as an effect and as an instrument. The plug-in as instrument (in case of current Steinberg Sequencers &lt;= 5.5) will not enable the Audio Input busses.</p>
 <hr />
 <h2 id="q-is-it-possible-to-ask-a-plug-in-about-which-speaker-arrangements-are-supported"><a class="header" href="#q-is-it-possible-to-ask-a-plug-in-about-which-speaker-arrangements-are-supported">Q: Is it possible to ask a plug-in about which speaker arrangements are supported?</a></h2>
 <p>No, not before the plug-in is instantiated, there is no way to ask the factory about which arrangements are supported for a given plug-in. The host can instantiate the plug-in and before start processing then set some different speaker Arrangements and check if the plug-in supports them.</p>
@@ -267,7 +267,7 @@ HISize originalSize = { static_cast&lt;CGFloat&gt;(mBottomRight.h),
             kVstVersionString,
             Steinberg::Vst::SPannerProcessor::createInstance)
 </code></pre>
-<p>Be sure that you overwrite the function &quot;tresult PLUGIN_API setBusArrangements ...&quot; which allows you to get the current bus arrangements.</p>
+<p>Be sure that you overwrite the function "tresult PLUGIN_API setBusArrangements ..." which allows you to get the current bus arrangements.</p>
 <hr />
 <h2 id="q-how-can-i-validate-my-plug-in"><a class="header" href="#q-how-can-i-validate-my-plug-in">Q: How can I validate my plug-in?</a></h2>
 <p>You have the Validator command line which can be automatically called after you compile your plug-in (when you use the cmake defined by the SDK). This will apply some standard validations. The 2cd validation tool is the <a href="../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST 3 plug-in Test Host</a>: check its menu entry: View =&gt; Open plug-in Unit Tests Window</p>

@@ -345,7 +345,7 @@ To address the most common cases:</p>
 <p>The processor gets the automation data in the processing call by using queue of parameter changes for each parameter having automation data:</p>
 <p>A <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a> has some <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueues</a> (for a specific parameter ID) which has some Automation Points.</p>
 <blockquote>
-<p>⚠️ <strong>Warning</strong></p>
+<p>⚠️ <strong>Warning</strong>\</p>
 <ul>
 <li>A parameter (ID) is present only one time in the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">IParameterChanges</a> list!</li>
 <li>Automation Points inside a <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">IParamValueQueues</a> are sorted per offset (position inside the audio block)!</li>

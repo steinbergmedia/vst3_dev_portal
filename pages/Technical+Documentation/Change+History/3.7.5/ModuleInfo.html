@@ -222,10 +222,10 @@ class PluginCompatibility : public FObject, public IPluginCompatibility
       /* write the JSON compatibility array into the stream
       [
           {
-              &quot;New&quot;: &quot;BD58B550F9E5634E9D2EFF39EA0927B1&quot;,
-              &quot;Old&quot;: [
-                  &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;,
-                  &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;,
+              "New": "BD58B550F9E5634E9D2EFF39EA0927B1",
+              "Old": [
+                  "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
               ],
           }
       ]
@@ -250,7 +250,7 @@ BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb, stringCompanyEmail)
 				kPluginCompatibilityClass,
 				stringPluginName,
 				Vst::kDistributable,
-				&quot;&quot;,
+				"",
 				FULL_VERSION_STR,
 				kVstVersionString,
 				createCompatibilityInstance)

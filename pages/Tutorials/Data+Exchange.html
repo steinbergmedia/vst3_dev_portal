@@ -196,7 +196,7 @@ process method to the edit controller of your plug-in.</p>
 <p>Let's send data from the processor to the controller.</p>
 <p>First, we need to add the required include so that we can use the wrapper class. Add the following
 include before you define your audio processor:</p>
-<pre><code class="language-c++">#include &quot;public.sdk/source/vst/utility/dataexchange.h&quot;
+<pre><code class="language-c++">#include "public.sdk/source/vst/utility/dataexchange.h"
 </code></pre>
 <p>To prepare the AudioEffect class, you need to overwrite the following methods:</p>
 <pre><code class="language-c++">tresult PLUGIN_API initialize (FUnknown* context) override;
@@ -236,7 +236,7 @@ tresult PLUGIN_API process (Vst::ProcessData&amp; data) override;
 }
 </code></pre>
 <p>The configration is done via the <code>configCallback</code>. In this example, we configure the queue to have
-a block size to store exactly 1 second of audio data of all the channels of the configured speaker 
+a block size to store exactly 1 second of audio data of all the channels of the configured speaker
 arrangement of the input bus. We choose two for <code>numBlocks</code> because we send one block per second,
 and in this case, two blocks should be enough. If the frequency you need to send the block is higher,
 you need to increase this value to prevent data drop outs.
@@ -264,12 +264,12 @@ and release the memory:</p>
 }
 </code></pre>
 <p>Now we prepare the data that we want to send to the controller. To make this a little bit easier, we
-define a struct that specifies what should look like and move this into its own header &quot;dataexchange.h&quot;:</p>
+define a struct that specifies what should look like and move this into its own header "dataexchange.h":</p>
 <pre><code class="language-c++">// dataexchange.h
 
 #pragma once
 
-#include &quot;public.sdk/source/vst/utility/dataexchange.h&quot;
+#include "public.sdk/source/vst/utility/dataexchange.h"
 #include &lt;cstdint&gt;
 
 namespace Steinberg::Tutorial {
@@ -285,7 +285,7 @@ struct DataBlock
 
 } // Steinberg::Tutorial
 </code></pre>
-<p>So, we want to send the sample rate, size, the number of channels and the number of samples plus 
+<p>So, we want to send the sample rate, size, the number of channels and the number of samples plus
 the actual samples to the controller.</p>
 <p>To actually work with this <code>DataBlock</code> struct, we introduce a little helper function that we also add to
 this header:</p>
@@ -296,7 +296,7 @@ this header:</p>
     return nullptr;
 }
 </code></pre>
-<p>One thing remains to be done before we can start sending the data: We need a 
+<p>One thing remains to be done before we can start sending the data: We need a
 member variable of the Vst::DataExchangeBlock struct where we store the actual block we work with
 while processing the audio. So we add this to our processor defintion:</p>
 <pre><code class="language-c++">class DataExchangeProcessor : public Vst::AudioEffect
@@ -337,8 +337,8 @@ call the <code>acquireNewExchangeBlock</code> method that does this:</p>
     }
 }
 </code></pre>
-<p>We ask the <code>dataExchange</code> object for a new block with <code>getCurrentOrNewBlock ()</code>, check if it is valid 
-with a call to the previously defined function <code>toDataBlock</code> and fill it with the sample rate, the 
+<p>We ask the <code>dataExchange</code> object for a new block with <code>getCurrentOrNewBlock ()</code>, check if it is valid
+with a call to the previously defined function <code>toDataBlock</code> and fill it with the sample rate, the
 sample size and the number of channels.</p>
 <p>Now back to our process function. We now write the samples from the input buffer into our block until
 the block is filled with 1 second of audio data:</p>
@@ -471,12 +471,12 @@ data exchange messages in case the host does not support the native API:</p>
                                                      uint32 blockSize,
                                                      bool&amp; dispatchOnBackgroundThread)
 {
-    FDebugPrint (&quot;Data Exchange Queue opened.\n&quot;);
+    FDebugPrint ("Data Exchange Queue opened.\n");
 }
 
 void PLUGIN_API DataExchangeController::queueClosed (Vst::DataExchangeUserContextID userContextID)
 {
-    FDebugPrint (&quot;Data Exchange Queue closed.\n&quot;);
+    FDebugPrint ("Data Exchange Queue closed.\n");
 }
 
 void PLUGIN_API DataExchangeController::onDataExchangeBlocksReceived (
@@ -487,7 +487,7 @@ void PLUGIN_API DataExchangeController::onDataExchangeBlocksReceived (
     {
         auto dataBlock = toDataBlock (blocks[index]);
         FDebugPrint (
-            &quot;Received Data Block: SampleRate: %d, SampleSize: %d, NumChannels: %d, NumSamples: %d\n&quot;,
+            "Received Data Block: SampleRate: %d, SampleSize: %d, NumChannels: %d, NumSamples: %d\n",
             dataBlock-&gt;sampleRate, static_cast&lt;uint32_t&gt; (dataBlock-&gt;sampleSize),
             static_cast&lt;uint32_t&gt; (dataBlock-&gt;numChannels),
             static_cast&lt;uint32_t&gt; (dataBlock-&gt;numSamples));
@@ -497,7 +497,7 @@ void PLUGIN_API DataExchangeController::onDataExchangeBlocksReceived (
 <p>The <code>onDataExchangeBlocksReceived()</code> method will be called each time the processor has sent a block.
 You can now do whatever you want with the data.</p>
 <p>If you want the data to be dispatched on a background thread you need to set the
-<code>dispatchOnBackgroundThread</code> variable to true in the <code>queueOpened</code> method. </p>
+<code>dispatchOnBackgroundThread</code> variable to true in the <code>queueOpened</code> method.</p>
 
                     </main>
 

@@ -188,7 +188,7 @@
 <li>[optional]</li>
 </ul>
 <p>This interface communicates the content scale factor from the host to the plug-in view on systems where plug-ins cannot get this information directly like Microsoft Windows.</p>
-<p>The host calls <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html#af5b0fea85beba3cdcfeb8de66779f478">setContentScaleFactor</a> 
+<p>The host calls <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html#af5b0fea85beba3cdcfeb8de66779f478">setContentScaleFactor</a>
 directly before or after the plug-in view is attached and when the scale factor changes while the view is attached (system change or window moved to another screen with different scaling settings).</p>
 <p>The host may call <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugViewContentScaleSupport.html#af5b0fea85beba3cdcfeb8de66779f478">setContentScaleFactor</a> in a different context, for example: scaling the plug-in editor for better readability.</p>
 <p>When a plug-in handles this (by returning kResultTrue), it needs to scale the width and height of its view by the scale factor and inform the host via a <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugFrame.html#a94f218315acd695606fff41166294d56">IPlugFrame::resizeView()</a>, the host will then call <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPlugView.html#a3e741e55c2c047a4cc10f102661f5654">IPlugView::onSize()</a>.

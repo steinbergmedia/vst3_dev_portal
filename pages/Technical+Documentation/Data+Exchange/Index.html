@@ -196,32 +196,32 @@
 <hr />
 <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
 <p>In a modern plug-in, the UI representation and the audio processing do not share any data directly.
-This eliminates undefined behavior, as they run in different threads and any directly shared data would 
-need to be protected by a mutex. But a mutex has no defined running time and may block the audio 
+This eliminates undefined behavior, as they run in different threads and any directly shared data would
+need to be protected by a mutex. But a mutex has no defined running time and may block the audio
 thread for too long, creating an audible glitch, which must be prevented.</p>
-<p>The other issue with sharing data between the UI and the audio processing is that the audio is 
+<p>The other issue with sharing data between the UI and the audio processing is that the audio is
 processed before the audio is streamed through the monitor boxes or headphones.
 Without synchronization, the visual representation is displayed earlier than the sound it represents.
-To synchronize the visual representation and the processing of the audio signal, the UI has to queue 
+To synchronize the visual representation and the processing of the audio signal, the UI has to queue
 the visual data until the time is reached when the audio is heard.</p>
-<p>This problem has already been solved for parameters which are automated by the host. The host delays 
+<p>This problem has already been solved for parameters which are automated by the host. The host delays
 sending the parameter change to the edit controller so that it is in sync with the audible audio.</p>
 <p>But parameters are limited in how much data they can transfer, this may be enough for a simple peak
 VU meter display, but presenting an FFT curve with it is a nightmare.</p>
 <p>Version 3.7.9 of the SDK contains the new <em>Data Exchange</em> API to send data from the realtime
 processing function to the controller in a safe and efficient way.</p>
 <p>As this API needs support from the host and not all hosts provide this API right from the start,
-the SDK contains a backwards compatibility layer that either uses the API directly, if available, or 
-an alternative method based on the IMessage API to emulate the API. See the 
+the SDK contains a backwards compatibility layer that either uses the API directly, if available, or
+an alternative method based on the IMessage API to emulate the API. See the
 <a href="../../Tutorials/Data+Exchange.html">tutorial</a> on how to use it.</p>
 <h2 id="the-data-exchange-api"><a class="header" href="#the-data-exchange-api">The Data Exchange API</a></h2>
-<p>The API consists of two interfaces, the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html">IDataExchangeHandler</a> which needs to be implemented by the 
+<p>The API consists of two interfaces, the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html">IDataExchangeHandler</a> which needs to be implemented by the
 host and the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html">IDataExchangeReceiver</a> which needs to be implemented by the plug-in.</p>
 <h3 id="idataexchangehandler"><a class="header" href="#idataexchangehandler">IDataExchangeHandler</a></h3>
 <p>The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeHandler.html">IDataExchangeHandler</a> implements a direct and thread-safe connection from the realtime
 audio context of the audio processor to the non-realtime audio context of the edit controller.
 This should be used when the edit controller needs continuous data from the audio process for
-visualization or other &quot;use-cases&quot;. To circumvent the bottleneck on the main thread, it is possible
+visualization or other "use-cases". To circumvent the bottleneck on the main thread, it is possible
 to configure the connection in a way that the calls to the edit controller happen on a
 background thread, see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IDataExchangeReceiver.html">IDataExchangeReceiver</a> below.</p>
 <h4 id="opening-a-queue"><a class="header" href="#opening-a-queue">Opening a queue</a></h4>

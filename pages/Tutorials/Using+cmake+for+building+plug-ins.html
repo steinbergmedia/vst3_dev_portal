@@ -206,12 +206,12 @@
 <pre><code class="language-c++">// go in to the folder where you extracted the VST 3 SDK
 mkdir build
 cd build
-cmake.exe -G &quot;Visual Studio 17 2022&quot; -A x64 &quot;..\vst3sdk&quot;
+cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk"
 // or without symbolic links
-cmake.exe -G &quot;Visual Studio 17 2022&quot; -A x64 &quot;..\vst3sdk&quot; -DSMTG_CREATE_PLUGIN_LINK=0
+cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_CREATE_PLUGIN_LINK=0
 
 // or with symbolic links but using the user location (enable by default), it does not request admin right
-cmake.exe -G &quot;Visual Studio 17 2022&quot; -A x64 &quot;..\vst3sdk&quot; -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
+cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
 
 // note: you can find the string definition for different Visual Studio Generators in the cmake online documentation
 </code></pre>
@@ -221,7 +221,7 @@ cmake.exe -G &quot;Visual Studio 17 2022&quot; -A x64 &quot;..\vst3sdk&quot; -DS
 <pre><code class="language-c++">// go in to the folder where you extracted the VST 3 SDK
 mkdir build
 cd build
-/Applications/CMake.app/Content/bin/cmake -G&quot;Xcode&quot; &quot;../vst3sdk&quot;
+/Applications/CMake.app/Content/bin/cmake -G"Xcode" "../vst3sdk"
 </code></pre>
 <hr />
 <h2 id="on-linux-with-qtcreator"><a class="header" href="#on-linux-with-qtcreator">On Linux with QtCreator</a></h2>
@@ -287,8 +287,8 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 <hr />
 <h2 id="using-your-ide-for-compiling-the-examples"><a class="header" href="#using-your-ide-for-compiling-the-examples">Using your IDE for compiling the examples</a></h2>
 <ul>
-<li>Solution/project (vstsdk.sln/vstsdk.xcodeproj) is generated in the <em>&quot;build&quot;</em> folder.</li>
-<li>The created plug-ins are located in the <em>&quot;build&quot;</em> folder, in sub-folders <em><strong>/VST3/Release</strong></em> or <em><strong>/VST3/Debug</strong></em>.</li>
+<li>Solution/project (vstsdk.sln/vstsdk.xcodeproj) is generated in the <em>"build"</em> folder.</li>
+<li>The created plug-ins are located in the <em>"build"</em> folder, in sub-folders <em><strong>/VST3/Release</strong></em> or <em><strong>/VST3/Debug</strong></em>.</li>
 <li>In order to allow a DAW to find these plug-ins you have to create links from the official <a href="../Technical+Documentation/Locations+Format/Index.html">VST 3 Locations</a> to them.</li>
 </ul>
 

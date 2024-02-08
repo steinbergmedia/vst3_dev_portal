@@ -192,7 +192,7 @@
 <li>[optional]</li>
 </ul>
 <p>A plug-in can ask the host to create a context menu for a given exported parameter ID or a generic context menu.
-The host may pre-fill this context menu with specific items regarding the parameter ID like &quot;Show automation for parameter&quot;, &quot;MIDI learn&quot; etc...
+The host may pre-fill this context menu with specific items regarding the parameter ID like "Show automation for parameter", "MIDI learn" etc...
 The plug-in can use the context menu in two ways:</p>
 <ul>
 <li>add its own items to the menu via the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html">IContextMenu</a> interface and call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html#a8d6e113be32dfccabcacca0c81ee6f10">IContextMenu::popup(...)</a> to create the pop-up. See below for an example of how to use it.</li>
@@ -205,7 +205,7 @@ It is recommended to use this context menu interface, even if you do not add you
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html">IContextMenu</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenuTarget.html">IContextMenuTarget</a>.</p>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <h3 id="from-the-host-perspective"><a class="header" href="#from-the-host-perspective">From the host perspective</a></h3>
-<p>For example, <strong>Cubase</strong> adds its owned entries in the context menu opened with right-click on an exported parameter when the plug-in uses <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler3.html#a0c91e0b43003a34a7f43d0c4b33aa604">createContextMenu</a>. The plug-in itself, in this example, only adds the &quot;Open UIDescription Editor&quot; entry.</p>
+<p>For example, <strong>Cubase</strong> adds its owned entries in the context menu opened with right-click on an exported parameter when the plug-in uses <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler3.html#a0c91e0b43003a34a7f43d0c4b33aa604">createContextMenu</a>. The plug-in itself, in this example, only adds the "Open UIDescription Editor" entry.</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
 Plug-ins using VSTGUI automatically have this context menu feature.</p>
@@ -256,11 +256,11 @@ void popupContextMenu (IComponentHandler* componentHandler, IPlugView* view, con
         PluginContextMenuTarget* target = new PluginContextMenuTarget ();
          
         IContextMenu::Item item = {0};
-        UString128 (&quot;My Item 1&quot;).copyTo (item.name, 128);
+        UString128 ("My Item 1").copyTo (item.name, 128);
         item.tag = 1;
         menu-&gt;addItem (item, target);
   
-        UString128 (&quot;My Item 2&quot;).copyTo (item.name, 128);
+        UString128 ("My Item 2").copyTo (item.name, 128);
         item.tag = 2;
         menu-&gt;addItem (item, target);
         target-&gt;release ();

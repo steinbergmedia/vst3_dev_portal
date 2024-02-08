@@ -202,17 +202,17 @@
 <h2 id="how-does-it-work"><a class="header" href="#how-does-it-work">How does it work?</a></h2>
 <h3 id="create-and-setup-the-xcode-project"><a class="header" href="#create-and-setup-the-xcode-project">Create and Setup the Xcode Project</a></h3>
 <ul>
-<li>Create a new iOS Application in Xcode. Use the &quot;Empty Application&quot; template.</li>
-<li>Use &quot;C++11&quot; as &quot;C++ Language Dialect&quot;.</li>
-<li>Activate &quot;Objective-C Automatic Reference Counting&quot;.</li>
+<li>Create a new iOS Application in Xcode. Use the "Empty Application" template.</li>
+<li>Use "C++11" as "C++ Language Dialect".</li>
+<li>Activate "Objective-C Automatic Reference Counting".</li>
 <li>Change the Bundle Identifier according to your registered AppID at Apple (see the Apple Documentation).</li>
-<li>Activate the &quot;Inter-App Audio&quot; capability for the project.</li>
-<li>Activate the &quot;Background Modes&quot; capability for the project and check the &quot;Audio and Airplay&quot; mode.</li>
-<li>Change the &quot;Header Search Path&quot; configuration to add a path to the root of the VST 3 SDK.</li>
+<li>Activate the "Inter-App Audio" capability for the project.</li>
+<li>Activate the "Background Modes" capability for the project and check the "Audio and Airplay" mode.</li>
+<li>Change the "Header Search Path" configuration to add a path to the root of the VST 3 SDK.</li>
 </ul>
 <h3 id="add-your-audio-component-description-to-the-infoplist"><a class="header" href="#add-your-audio-component-description-to-the-infoplist">Add your Audio Component description to the Info.plist</a></h3>
 <ul>
-<li>Add a new Array with the name &quot;AudioComponents&quot;.</li>
+<li>Add a new Array with the name "AudioComponents".</li>
 <li>Add a new Dictionary to the array.</li>
 <li>Add the following keys to the dictionary: manufacturer, name, type, subtype, version.</li>
 <li>Set the values of these keys:</li>
@@ -268,9 +268,9 @@ IPlugView* PLUGIN_API MyEditController::createView (FIDString _name)
 <h3 id="using-vstgui"><a class="header" href="#using-vstgui">Using <a href="../../../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a></a></h3>
 <p><a href="../../../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> 4.3 or higher includes support for iOS. You can use it the same like you use it for Windows or macOS X. See the <a href="../../../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> documentation for some limitations.</p>
 <h3 id="using-a-native-uiview"><a class="header" href="#using-a-native-uiview">Using a native UIView</a></h3>
-<p>If you want to create a native UIView as your plug-in editor, you have to create your own IPlugView derivate and attach the UIView in the IPlugView::attached method. An example of this can be seen in <em>&quot;public.sdk/samples/vst/adelay/interappaudio/iosEditor.mm&quot;</em></p>
+<p>If you want to create a native UIView as your plug-in editor, you have to create your own IPlugView derivate and attach the UIView in the IPlugView::attached method. An example of this can be seen in <em>"public.sdk/samples/vst/adelay/interappaudio/iosEditor.mm"</em></p>
 <h3 id="host-ui-integration"><a class="header" href="#host-ui-integration">Host UI Integration</a></h3>
-<p>The example project in <em>&quot;public.sdk/samples/vst/InterAppAudio&quot;</em> uses a custom solution to show the UI for controlling and switching to the host application. You should take this as an example if you want to add it this way. You can also use the UI Apple provides with its example source for Inter-App Audio.</p>
+<p>The example project in <em>"public.sdk/samples/vst/InterAppAudio"</em> uses a custom solution to show the UI for controlling and switching to the host application. You should take this as an example if you want to add it this way. You can also use the UI Apple provides with its example source for Inter-App Audio.</p>
 <p>But you can also implement the host UI integration into your plug-in view. Your edit controller will get an interface to <strong>IInterAppAudioHost</strong> via its initialize method which you can use to get the host icon and send commands or switch to the host. If you use this method to show the host controls you should implement the <strong>IInterAppAudioConnectionNotification</strong> interface in your edit controller to conditionally show or hide the controls depending on the connection state.</p>
 
                     </main>

@@ -196,7 +196,7 @@
 <p>Name the project <code>MyPlugin</code>, add a <code>VERSION</code> and an optional <code>DESCRIPTION</code>.</p>
 <pre><code class="language-cmake">project(MyPlugin
     VERSION 1.0.0
-    DESCRIPTION &quot;MyPlugin Effect&quot;
+    DESCRIPTION "MyPlugin Effect"
 )
 </code></pre>
 <blockquote>
@@ -228,7 +228,7 @@ smtg_enable_vst3_sdk()
 <p>Configure the plug-in version by calling <code>smtg_target_configure_version_file</code>. This generates a temporary <code>projectversion.h</code> header, which is automatically included in your project.</p>
 <pre><code class="language-cmake">smtg_target_configure_version_file(MyPlugin)
 </code></pre>
-<p>Define platform-specific settings. </p>
+<p>Define platform-specific settings.</p>
 <p>For macOS, this includes</p>
 <ul>
 <li>setting the <code>BUNDLE_IDENTIFIER</code> to <code>org.mycompany.myplugin</code>,</li>
@@ -247,8 +247,8 @@ smtg_enable_vst3_sdk()
         COMPANY_NAME My Company
     )
     smtg_target_set_debug_executable(MyPlugin
-        &quot;/Applications/VST3PluginTestHost.app&quot;
-        &quot;--pluginfolder;$(BUILT_PRODUCTS_DIR)&quot;
+        "/Applications/VST3PluginTestHost.app"
+        "--pluginfolder;$(BUILT_PRODUCTS_DIR)"
     )
 elseif(SMTG_WIN)
     target_sources(MyPlugin
@@ -259,8 +259,8 @@ elseif(SMTG_WIN)
         set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT MyPlugin)
 
         smtg_target_set_debug_executable(MyPlugin
-            &quot;$(ProgramW6432)/Steinberg/VST3PluginTestHost/VST3PluginTestHost.exe&quot;
-            &quot;--pluginfolder \&quot;$(OutDir)/\&quot;&quot;
+            "$(ProgramW6432)/Steinberg/VST3PluginTestHost/VST3PluginTestHost.exe"
+            "--pluginfolder \"$(OutDir)/\""
         )
     endif()
 endif()
@@ -276,7 +276,7 @@ endif()
 <p>Add a <code>myplugin_editor.uisdesc</code> file as a resource. This file needs to be created manually.</p>
 <pre><code class="language-cmake">    smtg_target_add_plugin_resources(MyPlugin
         RESOURCES
-            &quot;resource/myplugin_editor.uidesc&quot;
+            "resource/myplugin_editor.uidesc"
     )
 </code></pre>
 <blockquote>

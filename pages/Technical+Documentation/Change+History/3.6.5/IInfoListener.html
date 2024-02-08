@@ -227,7 +227,7 @@ tresult PLUGIN_API MyPlugin::setChannelContextInfos (IAttributeList* list)
         {
             uint32 channelColor = (uint32)color;
             String str;
-            str.printf (&quot;%x%x%x%x&quot;, ChannelContext::GetAlpha (channelColor),
+            str.printf ("%x%x%x%x", ChannelContext::GetAlpha (channelColor),
             ChannelContext::GetRed (channelColor),
             ChannelContext::GetGreen (channelColor),
             ChannelContext::GetBlue (channelColor));
@@ -263,15 +263,15 @@ tresult PLUGIN_API MyPlugin::setChannelContextInfos (IAttributeList* list)
             switch (location)
             {
                 case ChannelContext::kPreVolumeFader:
-                    Steinberg::UString (string128, 128).fromAscii (&quot;PreVolFader&quot;);
+                    Steinberg::UString (string128, 128).fromAscii ("PreVolFader");
                 break;
                 case ChannelContext::kPostVolumeFader:
-                    Steinberg::UString (string128, 128).fromAscii (&quot;PostVolFader&quot;);
+                    Steinberg::UString (string128, 128).fromAscii ("PostVolFader");
                 break;
                 case ChannelContext::kUsedAsPanner:
-                    Steinberg::UString (string128, 128).fromAscii (&quot;UsedAsPanner&quot;);
+                    Steinberg::UString (string128, 128).fromAscii ("UsedAsPanner");
                 break;
-                default: Steinberg::UString (string128, 128).fromAscii (&quot;unknown!&quot;);
+                default: Steinberg::UString (string128, 128).fromAscii ("unknown!");
                 break;
             }
         }

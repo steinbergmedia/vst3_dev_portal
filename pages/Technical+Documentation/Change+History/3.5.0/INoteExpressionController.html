@@ -199,7 +199,7 @@
 <p>With <strong>VST 3</strong> Note Expression, the plug-in is able to break free from the limitations of MIDI controller events by providing access to new <strong>VST 3</strong> controller events that provide articulation information for each individual note (event) in a polyphonic arrangement according to its noteId.</p>
 <p>A major limitation of <strong>MIDI</strong> is the nature of controller information; controllers are only channel messages (Pitchbend, Modulation, ...) and cannot be assigned to a specific playing note, with the exception of poly pressure (polyphonic aftertouch), which allows change only for a given pitch (not a given note!).</p>
 <p>Articulating each note in a chord individually creates a much more natural feel, just like multiple players playing the same instrument at the same time but each adding their own personality to the notes played.</p>
-<p>For example <strong>Cubase 6</strong> introduces the first <strong>VST 3 Note Expression</strong> compatible virtual instrument: <strong>HALion Sonic SE</strong>. <strong>HALion Sonic SE</strong> not only supports &quot;standard&quot; note expression control for Tuning (Pitch), Volume and Pan, it also offers additional custom pre-assigned note expression types of event (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a7d66c573aff27d890ec154f45b61f310a1c30475ef992f89f37c2fe0aafcc6283">kCustomStart</a> in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a7d66c573aff27d890ec154f45b61f310">Steinberg::Vst::NoteExpressionTypeIDs</a>).</p>
+<p>For example <strong>Cubase 6</strong> introduces the first <strong>VST 3 Note Expression</strong> compatible virtual instrument: <strong>HALion Sonic SE</strong>. <strong>HALion Sonic SE</strong> not only supports "standard" note expression control for Tuning (Pitch), Volume and Pan, it also offers additional custom pre-assigned note expression types of event (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a7d66c573aff27d890ec154f45b61f310a1c30475ef992f89f37c2fe0aafcc6283">kCustomStart</a> in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a7d66c573aff27d890ec154f45b61f310">Steinberg::Vst::NoteExpressionTypeIDs</a>).</p>
 <h2 id="how-does-it-work"><a class="header" href="#how-does-it-work">How does it work?</a></h2>
 <p>The best way to understand how to support note expression from the plug-in side is to check out the step by step implementation example below. For more details, check out the <em>Note Expression Synth</em> example included in the SDK.</p>
 <p>Step by Step:
@@ -215,10 +215,10 @@ tresult PLUGIN_API MyExampleProcessor::initialize (FUnknown* context)
     if (result == kResultTrue)
     {
         // we want a Stereo Output
-        addAudioOutput (STR16 (&quot;Stereo Output&quot;), SpeakerArr::kStereo);
+        addAudioOutput (STR16 ("Stereo Output"), SpeakerArr::kStereo);
 
         // create Event In bus (1 bus with only 1 channel)
-        addEventInput (STR16 (&quot;Event Input&quot;), 1);
+        addEventInput (STR16 ("Event Input"), 1);
     }
     return result;
 }
@@ -275,9 +275,9 @@ tresult PLUGIN_API MyExampleController::getNoteExpressionInfo (int32 busIndex, i
         info.typeId = kTuningTypeID;
 
         // set some strings
-        USTRING (&quot;Tuning&quot;).copyTo (info.title, 128);
-        USTRING (&quot;Tun&quot;).copyTo (info.shortTitle, 128);
-        USTRING (&quot;Half Tone&quot;).copyTo (info.units, 128);
+        USTRING ("Tuning").copyTo (info.title, 128);
+        USTRING ("Tun").copyTo (info.shortTitle, 128);
+        USTRING ("Half Tone").copyTo (info.units, 128);
 
         info.unitID = -1; // no unit wanted
         info.associatedParameterID = -1; // no associated parameter wanted

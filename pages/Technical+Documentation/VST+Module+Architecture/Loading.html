@@ -184,10 +184,10 @@ and</li>
 <li><em>for each platform public.sdk/source/vst/hosting/module_win32.cpp, ...</em></li>
 </ul>
 <p>Here below you could found a basic implementation on Windows showing how to load the library and get pointer to the wanted exported functions:</p>
-<pre><code class="language-c++">HMODULE hModule = LoadLibrary (&quot;SomePlugin.dll&quot;);
+<pre><code class="language-c++">HMODULE hModule = LoadLibrary ("SomePlugin.dll");
 if (hModule)
 {
-    InitModuleProc initProc = (InitModuleProc)GetProcAddress (hModule, &quot;InitDll&quot;);
+    InitModuleProc initProc = (InitModuleProc)GetProcAddress (hModule, "InitDll");
     if (initProc) // this entry function is optional on Windows, not on MacOS and Linux!
     {
         if (initProc () == false)
@@ -197,7 +197,7 @@ if (hModule)
         }
     }
 
-    GetFactoryProc proc = (GetFactoryProc)GetProcAddress (hModule, &quot;GetPluginFactory&quot;);
+    GetFactoryProc proc = (GetFactoryProc)GetProcAddress (hModule, "GetPluginFactory");
 
     IPluginFactory* factory = proc ? proc () : nullptr;
     if (factory)
@@ -216,7 +216,7 @@ if (hModule)
         factory-&gt;release ();
     }
 
-    ExitModuleProc exitProc = (ExitModuleProc)GetProcAddress (hModule, &quot;ExitDll&quot;);
+    ExitModuleProc exitProc = (ExitModuleProc)GetProcAddress (hModule, "ExitDll");
     if (exitProc) // This exit function is optional on Windows, not on MacOS and Linux!
         exitProc ();
 

@@ -204,7 +204,7 @@
 <li>Open the file <em>plugids.h</em> and enter a new id <strong>kParamGainId</strong>. In this example, assign the unique number <strong>102</strong> for example.</li>
 </ol>
 <p><strong>plugids.h</strong></p>
-<pre><code class="language-c++">#include &quot;pluginterfaces/vst/vsttypes.h&quot;
+<pre><code class="language-c++">#include "pluginterfaces/vst/vsttypes.h"
 
 enum GainParams : Steinberg::Vst::ParamID
 {
@@ -216,7 +216,7 @@ enum GainParams : Steinberg::Vst::ParamID
 </ol>
 <p><strong>plugcontroller.cpp</strong></p>
 <pre><code class="language-c++">// Include the file where some ids are defined
-#include &quot;plugids.h&quot;
+#include "plugids.h"
 
 //----------------------------------------------------------------------------
 tresult PLUGIN_API PlugController::initialize (FUnknown*context)
@@ -228,13 +228,13 @@ tresult PLUGIN_API PlugController::initialize (FUnknown*context)
     }
 
     //---Create Parameters------------
-    parameters.addParameter (STR16 (&quot;Gain&quot;), STR16 (&quot;dB&quot;), 0, .5, Vst::ParameterInfo::kCanAutomate, GainParams::kParamGainId, 0);
+    parameters.addParameter (STR16 ("Gain"), STR16 ("dB"), 0, .5, Vst::ParameterInfo::kCanAutomate, GainParams::kParamGainId, 0);
 
     return kResultTrue;
 }
 </code></pre>
 <blockquote>
-<p>ⓘ <strong>Note</strong></p>
+<p>ⓘ <strong>Note</strong>\</p>
 <ul>
 <li>We add the flag <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645af38562ef6dde00a339d67f9be4ec3a31"><em>kCanAutomate</em></a> which informs the DAW/host that this parameter can be automated.</li>
 <li>A <strong>VST 3</strong> parameter is always normalized (its value is a floating point value between <strong>[0.0, 1.0]</strong>), here its default value is set to <strong>0.5</strong>.</li>
@@ -256,12 +256,12 @@ protected:
 <h3 id="add-the-process-applying-the-gain"><a class="header" href="#add-the-process-applying-the-gain">Add the process applying the gain</a></h3>
 <ol>
 <li>We need to set our internal <strong>mGain</strong> with its required value from the host. This is the first step of the process method. Parse the parameter change coming from the host in the structure <em>data.inputParameterChanges</em> for the current audio block to process.<br />
-ⓘ Be sure to add <strong>#include &quot;public.sdk/source/vst/vstaudioprocessoralgo.h</strong> at top of the file <em>plugprocessor.cpp</em>!<br />
+ⓘ Be sure to add <strong>#include "public.sdk/source/vst/vstaudioprocessoralgo.h</strong> at top of the file <em>plugprocessor.cpp</em>!<br />
 This includes some helpers to access audio buffer.</li>
 </ol>
 <p><strong>plugprocessor.cpp</strong></p>
-<pre><code class="language-c++">#include &quot;pluginterfaces/vst/ivstparameterchanges.h&quot;
-#include &quot;public.sdk/source/vst/vstaudioprocessoralgo.h&quot;
+<pre><code class="language-c++">#include "pluginterfaces/vst/ivstparameterchanges.h"
+#include "public.sdk/source/vst/vstaudioprocessoralgo.h"
 
 //----------------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&amp;data)
@@ -373,7 +373,7 @@ The helper class <strong>IBStreamer</strong> could be used for handling the <str
 </ol>
 <p><strong>plugprocessor.cpp</strong></p>
 <pre><code class="language-c++">// add this include at the top of the file
-#include &quot;base/source/fstreamer.h&quot;
+#include "base/source/fstreamer.h"
 
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugProcessor::getState (IBStream* state)
@@ -410,7 +410,7 @@ tresult PLUGIN_API PlugProcessor::setState (IBStream* state)
 </ol>
 <p><strong>plugcontroller.cpp</strong></p>
 <pre><code class="language-c++">// add this include at the top of the file
-#include &quot;base/source/fstreamer.h&quot;
+#include "base/source/fstreamer.h"
 
 //-----------------------------------------------------------------------
 tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
@@ -434,7 +434,7 @@ tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
 <hr />
 <h2 id="part-2-advanced-steps"><a class="header" href="#part-2-advanced-steps">Part 2: Advanced Steps</a></h2>
 <h3 id="add-an-event-input"><a class="header" href="#add-an-event-input">Add an Event Input</a></h3>
-<p>In our example we want to modify our current Gain factor with the velocity of a played &quot;MIDI&quot; event (noteOn).</p>
+<p>In our example we want to modify our current Gain factor with the velocity of a played "MIDI" event (noteOn).</p>
 <ol>
 <li>If you need in your plug-in to receive not only audio but events (like MIDI), you have to add an Event input. For this you just have to add the Event input with <a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/classSteinberg_1_1Vst_1_1AudioEffect.html#a98a16757564b1a077d82e2b2decc2ad8">addEventInput</a> in the <strong>initialize</strong> method of the processor:</li>
 </ol>
@@ -453,7 +453,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown* context)
     //....
 
     //---create Event In/Out busses (1 bus with only 1 channel)------
-    addEventInput (STR16 (&quot;Event In&quot;), 1);
+    addEventInput (STR16 ("Event In"), 1);
 
     return kResultOk;
 }
@@ -461,7 +461,7 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown* context)
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
 In this example, we add 1 input event bus, receiving only on 1 channel. If you need to receive differentiated events, for example, from different channels, just change it in the following way:</p>
-<p>addEventInput (STR16 (&quot;Event In&quot;), 4); // here 4 channels</p>
+<p>addEventInput (STR16 ("Event In"), 4); // here 4 channels</p>
 </blockquote>
 <ol start="2">
 <li>We create a new internal value <strong>mGainReduction</strong> (not exported to the host) which is changed by the velocity of a played <em>noteOn</em>, so that the harder you hit the note, the higher is the gain reduction (this is what we want here in this plug-in):</li>
@@ -568,10 +568,10 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown*context)
     //....
 
     //---create Event In/Out busses (1 bus with only 1 channel)------
-    addEventInput (STR16 (&quot;Event In&quot;), 1);
+    addEventInput (STR16 ("Event In"), 1);
 
     // create a Mono SideChain input bus
-    addAudioInput (STR16 (&quot;Mono Aux In&quot;), Steinberg::Vst::SpeakerArr::kMono, Steinberg::Vst::kAux, 0);
+    addAudioInput (STR16 ("Mono Aux In"), Steinberg::Vst::SpeakerArr::kMono, Steinberg::Vst::kAux, 0);
 
     return kResultOk;
 }
