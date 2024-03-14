@@ -254,7 +254,7 @@ Very simple plug-in:
 
 Very simple delay plug-in:
 
-- showing how to support [IProcessContextRequirements](../Technical+Documentation/Change+History/3.7.0/IProgress.md)
+- showing how to support [IProcessContextRequirements](../Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.md)
 
 Check the folder *"public.sdk/samples/vst/syncdelay"* of the SDK!
 
