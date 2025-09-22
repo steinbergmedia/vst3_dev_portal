@@ -21,7 +21,7 @@
 
 - Developers can adopt the [MIT license](https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide) for full open-source integration.
 
-- No fees, memberships are required.
+- Neither fees nor memberships are required.
 
 - The license never expires.
 

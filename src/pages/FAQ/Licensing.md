@@ -16,7 +16,10 @@
 
 ## Q: Do I have to disclose my source code under the MIT license? 
 
-- No. The [MIT License](https://www.tldrlegal.com/license/mit-license) does not require you to disclose your source code. 
+- No. The [MIT License](https://www.tldrlegal.com/license/mit-license) does not require you to disclose your source code.
+- The only obligations are: You must include the original copyright notice and the **MIT license** text in all copies or substantial portions of the code.
+- In other words: you can license your project under **MIT license** without making the source code public. You only need to provide the license and copyright notice when you share or distribute the software.
+
 
 ## Q: I would like to share the source code of my VST 3 plug-in/host on GitHub or a similar platform.
 
