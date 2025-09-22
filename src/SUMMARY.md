@@ -22,11 +22,10 @@
   - [iOS Inter-App Audio Support](pages/What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.md)
   - [VSTGUI](pages/What+is+the+VST+3+SDK/VSTGUI.md)
 - [VST 3 Licensing](pages/VST+3+Licensing/Index.md)
+  - [VST 3 License](pages/VST+3+Licensing/VST3+License.md)
   - [Steinberg VST usage guidelines](pages/VST+3+Licensing/Usage+guidelines.md)
-  - [What are the licensing options](pages/VST+3+Licensing/What+are+the+licensing+options.md)
   - [Which files fall under which license?](pages/VST+3+Licensing/Which+files+fall+under+which+license.md)
-  - [Developer use cases (FAQs)](pages/VST+3+Licensing/Developer+use+cases.md)
-
+  
 # Getting Started with VST
 
 - [Getting Started](pages/Getting+Started/Index.md)
@@ -119,6 +118,7 @@
 # Additional Resources
 
 - [Change History](pages/Versions/Index.md)
+  - [Version 3.8.0 (2025/10/15)](pages/Versions/Version+3.8.0.md)
   - [Version 3.7.14 (2025/06/23)](pages/Versions/Version+3.7.14.md)
   - [Version 3.7.13 (2025/02/28)](pages/Versions/Version+3.7.13.md)
   - [Version 3.7.12 (2024/07/23)](pages/Versions/Version+3.7.12.md)

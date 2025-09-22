@@ -22,10 +22,10 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 
 ## [VST 3 licensing](VST+3+Licensing/Index.md)
 
+- [VST 3 License](VST+3+Licensing/VST3+License.md)
 - [Steinberg VST usage guidelines](VST+3+Licensing/Usage+guidelines.md)
-- [What are the licensing options](VST+3+Licensing/What+are+the+licensing+options.md)
 - [Which files fall under which license?](VST+3+Licensing/Which+files+fall+under+which+license.md)
-- [Developer use cases (FAQs)](VST+3+Licensing/Developer+use+cases.md)
+- [Frequently Asked Questions: Licensing](FAQ/Licensing.md)
 
 ## [Getting Started](Getting+Started/Index.md)
 

@@ -9,20 +9,24 @@
 **Related pages:**
 
 - [VST 3 Licensing](Index.md)
-- [What are the licensing options for VST 3?](What+are+the+licensing+options.md)
-- [Developer use cases (FAQs)](Developer+use+cases.md)
+- [What are the licensing options for VST 3?](VST3+License.md)
+- [Frequently Asked Questions: Licensing](../FAQ/Licensing.md)
 
 ---
 
-Whenever **VST**® is used or the SDK has been used to create a product or the SDK is included (Open-source [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) case), it is required to add the reference to [Steinberg](https://www.steinberg.net/) by using the **VST compatible logo** as supplied by [Steinberg](https://www.steinberg.net/). Included in the **VST 3 SDK**, the **VST compatible logo** can be found in the folder *VST_SDK/VST3_SDK/vst3_doc/artwork*.
+Trademark usage (e.g. "VST" name or logo) is optional under [MIT license](https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide), but if used, must comply with Steinberg's official trademark rules. 
+
+Included in the **VST 3 SDK**, the **VST compatible logo** can be found in the folder *VST_SDK/VST3_SDK/vst3_doc/artwork*.
 
 This logo exists in different forms: with and without the trademark text, black on white and white on black. If you choose the logo without the trademark text, you have to include the following statement somewhere:
 
 >**"VST is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries."**
 
+TODO sync text with pdf
+
 ## 1. Required use of VST Compatible logo
 
-Whenever “**VST**” is used, or the SDK is used to create a product, or when the SDK is included, it is required to add the reference to Steinberg by using the “**VST Compatible logo**” as supplied by Steinberg on each of the following:
+If you choose to display the **VST Compatible Logo** or refer to the **VST trademark**, it is required to add the reference to Steinberg by using the “**VST Compatible logo**” as supplied by Steinberg on each of the following:
 
 1. on package
 

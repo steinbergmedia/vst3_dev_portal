@@ -52,8 +52,8 @@ If you do not have previously installed the **VST 3 SDK**, you could download it
 
 You have 2 possibilities to download the **VST 3 SDK**:
 
-- **Commercial**: by clicking on it you will be redirected to the latest available SDK version to download, including all tools (check [What is the VST 3 SDK?](Index.md)), with this variant of the SDK you are able to create and commercialize your plug-ins (See [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)).
-- **Open Source**: by clicking on it you will be redirected to Steinberg **Github** where you will be able to clone the **VST 3 SDK**, this variant does not include all available tools (See [What are the licensing options for VST 3?](../VST+3+Licensing/What+are+the+licensing+options.md)).
+- **Commercial**: by clicking on it you will be redirected to the latest available SDK version to download, including all tools (check [What is the VST 3 SDK?](Index.md)), with this variant of the SDK you are able to create and commercialize your plug-ins (See [What are the licensing options for VST 3?](../VST+3+Licensing/VST3+License.md)).
+- **Open Source**: by clicking on it you will be redirected to Steinberg **Github** where you will be able to clone the **VST 3 SDK**, this variant does not include all available tools (See [What are the licensing options for VST 3?](../VST+3+Licensing/VST3+License.md)).
 
 ### VST SDK and cmake successfully located
 
