@@ -114,6 +114,8 @@
   - [\[3.7.9\] Get Current SystemTime](pages/Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md)
   - [\[3.7.9\] Data Transfert Between Processor/Controller](pages/Technical+Documentation/Change+History/3.7.9/IDataExchangeHandler.md)
   - [\[3.7.11\] Remap Parameter ID](pages/Technical+Documentation/Change+History/3.7.11/IRemapParamID.md)
+  - [\[3.8.0\] MIDI Learn 2](pages/Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md)
+  - [\[3.8.0\] MIDI Mapping 2](pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md)
 
 # Additional Resources
 
