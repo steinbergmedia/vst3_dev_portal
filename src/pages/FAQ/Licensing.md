@@ -24,12 +24,12 @@
 ## Q: I would like to share the source code of my VST 3 plug-in/host on GitHub or a similar platform.
 
 - Yes. Since the **VST 3 SDK** is under the **MIT License**, you are free to share your plug-in or host source code, including or referencing the VST 3 SDK, on platforms like GitHub. You may also distribute your plug-in/host in binary form.
->ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/VST3+License.md) is considered best practice, but it is optional.
+>ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md) is considered best practice, but it is optional.
 
 ## Q: I would like to distribute my VST 3 plug-in/host as freeware/shareware or sell it in binary form only.
 
 - Yes. The **MIT License** allows you to distribute or sell your plug-in/host in binary form as freeware, shareware, or a paid version.
->ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/VST3+License.md) is considered best practice, but it is optional.
+>ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md) is considered best practice, but it is optional.
 
 ## Q: I would like to adapt the VST 3 SDK's source code to my VST 3 plug-in/host's needs.
 
@@ -42,14 +42,15 @@
 ## Q: I would like to sell my VST 3 plug-in/host in binary form, based on a third-party SDK like JUCE.
 
 - Yes. You may distribute or sell your plug-in/host in binary form, even if it is based on a third-party SDK.
->ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/VST3+License.md) is considered best practice, but it is optional.
+>ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md) is considered best practice, but it is optional.
 
 ## Q: I would like to distribute my VST 3 plug-in/host in binary form, based on a third-party SDK like JUCE that used the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
 
 - Yes, **MIT license** is compatible with [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
->ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/VST3+License.md) is considered best practice, but it is optional.
+>ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md) is considered best practice, but it is optional.
 
 ---
+## Specific VST 2
 
 ## Q: I would like to share the source code of my VST 2 plug-in/host on GitHub or other web-based exchange platform.
 

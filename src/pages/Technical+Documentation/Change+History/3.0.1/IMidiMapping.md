@@ -10,6 +10,8 @@
 
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
 - [\[3.6.12\] MIDI Learn](../../Change+History/3.6.12/IMidiLearn.md)
+- [\[3.8.0\] MIDI Learn 2](../../Change+History/3.8.0/IMidiLearn2.md)
+- [\[3.8.0\] MIDI Mapping 2](../../Change+History/3.8.0/IMidiMapping2.md)
 
 ---
 
