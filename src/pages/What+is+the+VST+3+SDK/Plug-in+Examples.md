@@ -174,9 +174,13 @@ Classes:
 
 ## Note Expression Synth
 
-- Instrument plug-in supporting [note expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) events
+- Instrument plug-in supporting:
+  - [note expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) events
+  - [MIDI Mapping](../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md)
+  - [MIDI Learn](../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md)
+
 - It shows how easy it is to use [**VSTGUI**](VSTGUI.md)
-- a **AUv3** version is available
+- A **AUv3** version is available
 
 ![what_if_4](../../resources/what_is_4.jpg)
 
