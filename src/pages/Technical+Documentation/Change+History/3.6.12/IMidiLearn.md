@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># \[3.6.12\] MIDI Learn
+># \[3.6.12\] MIDI Learn (MIDI 1.0 support)
 
 **On this page:**
 
@@ -8,8 +8,9 @@
 
 **Related pages:**
 
-- [\[3.0.1\] Parameter MIDI Mapping](../../Change+History/3.0.1/IMidiMapping.md)
-
+- [\[3.0.1\] Parameter MIDI Mapping (MIDI 1.0 support)](../../Change+History/3.0.1/IMidiMapping.md)
+- [\[3.8.0\] Parameter MIDI Mapping 2 (MIDI 2.0 support)](../../Change+History/3.8.0/IMidiMapping2.md)
+- [\[3.8.0\] MIDI Learn 2 (MIDI 2.0 support)](../../Change+History/3.8.0/IMidiLearn2.md)
 ---
 
 ## Introduction

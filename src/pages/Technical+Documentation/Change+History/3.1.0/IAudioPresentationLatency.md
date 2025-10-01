@@ -1,6 +1,6 @@
 >/ [VST Home](../../../) / [Technical Documentation](../../Index.md)
 >
-># \[3.0.1\] Parameter MIDI Mapping
+># \[3.0.1\] Parameter MIDI Mapping (MIDI 1.0 support)
 
 **On this page:**
 
@@ -14,7 +14,7 @@ Extended [Vst:: IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstin
 
 - \[plug imp\]
 - [extends [Vst:: IAudioProcessor](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html)]
-- \[released: 3.1.0\]
+- \[released: 3.0.1\]
 - \[optional\]
 
 Inform the plug-in about how long from the moment of generation/acquiring (from file or from Input) it will take for its input to arrive, and how long it will take for its output to be presented (to output or to speaker).Note for Input Presentation Latency: when reading from file, the first plug-in will have an input presentation latency set to zero. When monitoring audio input from an audio device, the initial input latency is the input latency of the audio device itself.

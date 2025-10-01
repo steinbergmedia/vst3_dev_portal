@@ -82,7 +82,7 @@
   - [\[3.0.0\] Multiple Dynamic I/O Support](pages/Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
   - [\[3.0.0\] Silence flags](pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.md)
   - [\[3.0.0\] Interfaces supported by the host](pages/Technical+Documentation/Change+History/3.0.0/Host+Interfaces.md)
-  - [\[3.0.1\] Parameter MIDI Mapping](pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.md)
+  - [\[3.0.1\] Parameter MIDI Mapping (MIDI 1.0 support)](pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.md)
   - [\[3.0.2\] Parameter Finder](pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.md)
   - [\[3.1.0\] Audio Presentation Latency](pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.md)
   - [\[3.1.0\] Dirty State, Open Editor Request and UI Group Editing Support](pages/Technical+Documentation/Change+History/3.1.0/IComponentHandler2.md)
@@ -103,7 +103,7 @@
   - [\[3.6.10\] UI Snapshots](pages/Technical+Documentation/Change+History/3.6.10/UI+Snapshots.md)
   - [\[3.6.11\] NoteExpression Physical UI Mapping](pages/Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md)
   - [\[3.6.12\] Legacy MIDI CC Out Event](pages/Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.md)
-  - [\[3.6.12\] MIDI Learn](pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.md)
+  - [\[3.6.12\] MIDI Learn (MIDI 1.0 support)](pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.md)
   - [\[3.6.12\] Host Query Interface support](pages/Technical+Documentation/Change+History/3.6.12/IPlugInterfaceSupport.md)
   - [\[3.6.12\] MPE support for Wrappers](pages/Technical+Documentation/Change+History/3.6.12/IVst3WrapperMPESupport.md)
   - [\[3.7.0\] Parameter Function Name](pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.md)
@@ -114,8 +114,8 @@
   - [\[3.7.9\] Get Current SystemTime](pages/Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md)
   - [\[3.7.9\] Data Transfert Between Processor/Controller](pages/Technical+Documentation/Change+History/3.7.9/IDataExchangeHandler.md)
   - [\[3.7.11\] Remap Parameter ID](pages/Technical+Documentation/Change+History/3.7.11/IRemapParamID.md)
-  - [\[3.8.0\] MIDI Learn 2](pages/Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md)
-  - [\[3.8.0\] MIDI Mapping 2](pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md)
+  - [\[3.8.0\] MIDI Learn 2 (MIDI 2.0 support)](pages/Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md)
+  - [\[3.8.0\] Parameter MIDI Mapping 2 (MIDI 2.0 support)](pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md)
 
 # Additional Resources
 
