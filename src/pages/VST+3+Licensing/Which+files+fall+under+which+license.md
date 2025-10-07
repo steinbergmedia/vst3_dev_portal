@@ -12,7 +12,7 @@
 
 ---
 
-## Which files of the VST 3 SDK fall under which license?
+## Which files of the VST SDK fall under which license?
 
 All files describing the **VST 3** interface, located in the folder *"pluginterfaces"* of the SDK, and all **Helper files** (included in base and public.sdk folders)  fall under the [MIT license](https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide) described previously.
 
@@ -28,7 +28,7 @@ Each of these files includes this text:
 //----------------------------------------------------------------------------
 ```
 
-- for all other files of the **VST 3 SDK**, the respective embedded license text is applicable, for example:
+- for all other files of the **VST SDK**, the respective embedded license text is applicable, for example:
   - all **VSTGUI** files fall under a **BSD style** license
   - all **mda-vst3 examples** (*public.sdk/samples/mda-vst3 folder*) fall under a **BSD style** license: Copyright (c) 2008 Paul Kellett
 

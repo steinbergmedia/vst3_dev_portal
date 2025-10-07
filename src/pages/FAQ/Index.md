@@ -2,7 +2,7 @@
 >
 ># Frequently Asked Questions
 
-The FAQ provides answers to some common questions. Kindly note that we do not provide individual SDK support. If you have any questions the FAQ below cannot answer, please refer to the [VST 3 SDK Forum](../Forum/Index.md).
+The FAQ provides answers to some common questions. Kindly note that we do not provide individual SDK support. If you have any questions the FAQ below cannot answer, please refer to the [VST SDK Forum](../Forum/Index.md).
 
 ---
 

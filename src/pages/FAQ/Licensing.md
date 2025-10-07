@@ -12,7 +12,7 @@
 
 ## Q: Can I switch to the MIT license?
 
-- Yes. Simply use the **VST 3 SDK** version that is licensed under the **MIT License** and follow its terms.
+- Yes. Simply use the **VST SDK** version that is licensed under the **MIT License** and follow its terms.
 
 ## Q: Do I have to disclose my source code under the MIT license? 
 
@@ -23,7 +23,7 @@
 
 ## Q: I would like to share the source code of my VST 3 plug-in/host on GitHub or a similar platform.
 
-- Yes. Since the **VST 3 SDK** is under the **MIT License**, you are free to share your plug-in or host source code, including or referencing the VST 3 SDK, on platforms like GitHub. You may also distribute your plug-in/host in binary form.
+- Yes. Since the **VST SDK** is under the **MIT License**, you are free to share your plug-in or host source code, including or referencing the VST SDK, on platforms like GitHub. You may also distribute your plug-in/host in binary form.
 >ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md) is considered best practice, but it is optional.
 
 ## Q: I would like to distribute my VST 3 plug-in/host as freeware/shareware or sell it in binary form only.
@@ -31,12 +31,12 @@
 - Yes. The **MIT License** allows you to distribute or sell your plug-in/host in binary form as freeware, shareware, or a paid version.
 >ⓘ **Note**: Following the [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md) is considered best practice, but it is optional.
 
-## Q: I would like to adapt the VST 3 SDK's source code to my VST 3 plug-in/host's needs.
+## Q: I would like to adapt the VST SDK's source code to my VST 3 plug-in/host's needs.
 
-- Yes. Under the **MIT License**, you may freely adapt and modify the VST 3 SDK source code to meet your specific requirements.
+- Yes. Under the **MIT License**, you may freely adapt and modify the VST SDK source code to meet your specific requirements.
 - If you believe your changes should be included in the SDK, please contact us (use the [sdk.steinberg.net](https://forums.steinberg.net/c/developer/103/none)).
 
-## Q: Can I reuse a modified version of the VST 3 SDK that was distributed by someone else?
+## Q: Can I reuse a modified version of the VST SDK that was distributed by someone else?
 - Yes. The **MIT License** permits reuse of modified versions of the SDK.
 
 ## Q: I would like to sell my VST 3 plug-in/host in binary form, based on a third-party SDK like JUCE.

@@ -1,4 +1,4 @@
->/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
+>/ [VST Home](../) / [What is the VST SDK?](Index.md)
 >
 ># VST 3 Project Generator
 
@@ -42,18 +42,18 @@ If you do not have previously installed the **CMake** tool, you could download i
 
 ### Locate VST SDK
 
-If you have already downloaded the **VST 3 SDK**, you just have to indicate the *Project Generator* where it is located, for this click on ***Locate VST SDK*** and choose with the folder selector the *VST3_SDK* folder:
+If you have already downloaded the **VST SDK**, you just have to indicate the *Project Generator* where it is located, for this click on ***Locate VST SDK*** and choose with the folder selector the *VST3_SDK* folder:
 
 ![what_if_28](../../resources/what_is_28.png)
 
-If you do not have previously installed the **VST 3 SDK**, you could download it, just click on ***Download VST SDK***, a dialog appears:
+If you do not have previously installed the **VST SDK**, you could download it, just click on ***Download VST SDK***, a dialog appears:
 
 ![what_if_29](../../resources/what_is_29.png)
 
-You have 2 possibilities to download the **VST 3 SDK**:
+You have 2 possibilities to download the **VST SDK**:
 
-- **Commercial**: by clicking on it you will be redirected to the latest available SDK version to download, including all tools (check [What is the VST 3 SDK?](Index.md)), with this variant of the SDK you are able to create and commercialize your plug-ins (See [What are the licensing options for VST 3?](../VST+3+Licensing/VST3+License.md)).
-- **Open Source**: by clicking on it you will be redirected to Steinberg **Github** where you will be able to clone the **VST 3 SDK**, this variant does not include all available tools (See [What are the licensing options for VST 3?](../VST+3+Licensing/VST3+License.md)).
+- **Commercial**: by clicking on it you will be redirected to the latest available SDK version to download, including all tools (check [What is the VST SDK?](Index.md)), with this variant of the SDK you are able to create and commercialize your plug-ins (See [What are the licensing options for VST 3?](../VST+3+Licensing/VST3+License.md)).
+- **Open Source**: by clicking on it you will be redirected to Steinberg **Github** where you will be able to clone the **VST SDK**, this variant does not include all available tools (See [What are the licensing options for VST 3?](../VST+3+Licensing/VST3+License.md)).
 
 ### VST SDK and cmake successfully located
 
@@ -94,7 +94,7 @@ namespace MyWantedNamespace {
 
 Like mentioned above in the subsection Path Preferences you could change several locations:
 
-- **VST 3 SDK Path**: the current used **VST 3 SDK** you have previously downloaded.
+- **VST SDK Path**: the current used **VST SDK** you have previously downloaded.
 - **CMake Executable Path**: the current used **CMake** tool
 
 ## Setting and creating a plug-in project

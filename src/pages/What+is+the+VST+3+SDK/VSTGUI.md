@@ -1,4 +1,4 @@
->/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
+>/ [VST Home](../) / [What is the VST SDK?](Index.md)
 >
 ># VSTGUI
 
@@ -18,7 +18,7 @@ This is a user interface toolkit mainly for audio plug-ins (VST, AudioUnit, etc)
 
 First developed in-house by Steinberg Media Technologies (around 1998) for their first VST plug-ins. Later added as binary libraries to the official **VST SDK**. Since May 2003, **VSTGUI** is open source, and is hosted now at GitHub <https://github.com/steinbergmedia/vstgui>.
 
-The last official release version of **VSTGUI** is always included in the **VST 3 SDK**.
+The last official release version of **VSTGUI** is always included in the **VST SDK**.
 
 ![what_if_35](../../resources/what_is_35.png)
 

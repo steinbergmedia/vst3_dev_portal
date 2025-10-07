@@ -1,6 +1,6 @@
 >/ [VST Home](../) / [Tutorials](Index.md)
 >
-># Creating a plug-in with VST 3 SDK as an external project
+># Creating a plug-in with VST SDK as an external project
 
 **On this page:**
 
@@ -14,7 +14,7 @@
 
 ## Goal
 
-This is a simple Hello World VST 3 FX plug-in to demonstrate how to use the VST 3 SDK as an external project.
+This is a simple Hello World **VST 3** FX plug-in to demonstrate how to use the **VST SDK** as an external project.
 
 This plug-in was generated with the VST 3 Project Generator and it is available here [https://github.com/steinbergmedia/vst3_example_plugin_hello_world](https://github.com/steinbergmedia/vst3_example_plugin_hello_world)
 
@@ -35,7 +35,7 @@ cmake --build .
 
 ## Part 2: Adapting the **helloworld** example
 
-- This example is there mainly to demonstrate how to use **VST 3 SDK** as an external project, we highly recommand to use the [Project Generator](Generate+new+plug-in+with+Project+Generator.md) to start from scratch.
+- This example is there mainly to demonstrate how to use **VST SDK** as an external project, we highly recommand to use the [Project Generator](Generate+new+plug-in+with+Project+Generator.md) to start from scratch.
 
 - In the following explaination we try to show you how to modify the source code to build your plug-in on the helloworld example.
 

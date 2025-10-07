@@ -12,7 +12,7 @@
 
 iOS InterApp-Audio application out of your **VST 3** plug-in.
 
-The **VST 3 SDK** provides an easy way to create an iOS InterApp-Audio application out of your **VST 3** plug-in.
+The **VST SDK** provides an easy way to create an iOS InterApp-Audio application out of your **VST 3** plug-in.
 
 The SDK comes with an iOS **VST 3** host application that can run standalone or as an Inter-App Audio slave. If your plug-in does not use any specific Windows or macOS X API's, it should be reasonably easy to get your plug-in running on iOS.
 
@@ -28,7 +28,7 @@ If you use [**VSTGUI4**](../../../What+is+the+VST+3+SDK/VSTGUI.md) with the VST3
 - Change the Bundle Identifier according to your registered AppID at Apple (see the Apple Documentation).
 - Activate the "Inter-App Audio" capability for the project.
 - Activate the "Background Modes" capability for the project and check the "Audio and Airplay" mode.
-- Change the "Header Search Path" configuration to add a path to the root of the VST 3 SDK.
+- Change the "Header Search Path" configuration to add a path to the root of the VST SDK.
 
 ### Add your Audio Component description to the Info.plist
 

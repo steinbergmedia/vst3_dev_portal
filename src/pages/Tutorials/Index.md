@@ -19,31 +19,31 @@ The tutorials explain common techniques and best practices for building your plu
 
 [Link](Building+the+examples/Building+the+examples+included+in+the+SDK+Windows.md)
 
-This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
+This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST SDK**.
 
 ### Building the examples included in the SDK on macOS
 
 [Link](Building+the+examples/Building+the+examples+included+in+the+SDK+macOS.md)
 
-This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
+This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST SDK**.
 
 ### Building the examples included in the SDK on Linux
 
 [Link](Building+the+examples/Building+the+examples+included+in+the+SDK+Linux.md)
 
-This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST 3 SDK**.
+This tutorial explains how to set up your computer and create an environment for compiling the **VST 3** audio plug-in examples provided with the **VST SDK**.
 
 ## Using cmake for building VST 3 plug-ins
 
 [Link](Using+cmake+for+building+plug-ins.md)
 
-This tutorial explains how to use *cmake* with **VST 3 SDK**.
+This tutorial explains how to use *cmake* with **VST SDK**.
 
 ## Generate a new plug-in with the Project Generator App
 
 [Link](Generate+new+plug-in+with+Project+Generator.md)
 
-This tutorial explains how to create a new audio plug-in by using the [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) included in the **VST 3 SDK**.
+This tutorial explains how to create a new audio plug-in by using the [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) included in the **VST SDK**.
 
 ## Code your first plug-in
 
@@ -97,11 +97,11 @@ The SDK provides some helpers functions to convert from UTF16 (use in **VST 3** 
 
 This tutorial provides a step-by-step guide for building a **VST 3** plug-in's ```CMakeLists.txt``` from scratch.
 
-## Creating a plug-in with VST 3 SDK as an external project
+## Creating a plug-in with VST SDK as an external project
 
 [Link](Creating+a+plug-in+with+VST+3+SDK+as+an+external+project.md)
 
-This is a simple Hello World **VST 3 SDK** plug-in to demonstrate how to use the VST 3 SDK as an external project.
+This is a simple Hello World **VST SDK** plug-in to demonstrate how to use the **VST SDK** as an external project.
 
 ## Switching to another VSTGUI submodule or branch
 
@@ -116,11 +116,11 @@ Sometimes it is necessary to switch to another **VSTGUI** submodule or branch fo
 
 ## Tutorials on Youtube from 3rd Party developers
 
-### How to setup the VST 3 SDK's Sample Plugin Projects
+### How to setup the VST SDK's Sample Plug-in Projects
 
 [https://www.youtube.com/watch?v=004zcWwgi1A](https://www.youtube.com/watch?v=004zcWwgi1A)
 
-### VST 3 SDK Tutorial: Create your own VST 3 Synth plug-in
+### VST SDK Tutorial: Create your own VST 3 Synth Plug-in
 
 [https://www.youtube.com/watch?v=zdgytoRLKj0](https://www.youtube.com/watch?v=zdgytoRLKj0)
 

@@ -53,9 +53,10 @@ Additional relationships of concepts introduced in MIDI 2.0 (<https://www.midi.o
 | System Exclusive 8-Bit            | indirect support              | The host can translate to 7-Bit, [Vst::DataEvent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1DataEvent.html) of Type [Vst::DataEvent::kMidiSysEx](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1DataEvent.html#afb6eb4f28419b652027fad41104a6d22ab06d86440be6a85eccce4df100ce8e79) |
 | Registered Controller             |  [Parameter](../Parameters+Automation/Index.md), [Vst:: IMidiMapping2](../Change+History/3.8.0/IMidiMapping2.md)     | The host can do detailed tuning via [NoteExpression](../Change+History/3.5.0/INoteExpressionController.md) |
 | Assignable Controller             | [Parameter](../Parameters+Automation/Index.md), [Vst:: IMidiMapping2](../Change+History/3.8.0/IMidiMapping2.md)     | The host should offer mapping to parameters |
-| Relative Registered Controller    |  [Parameter](../Parameters+Automation/Index.md), [Vst:: IMidiMapping2](../Change+History/3.8.0/IMidiMapping2.md)     | The host is free to translate this to parameters |
-| Relative Assignable Controller    | [Parameter](../Parameters+Automation/Index.md), [Vst:: IMidiMapping2](../Change+History/3.8.0/IMidiMapping2.md)     | The host is free to translate this to parameters |
+| Relative Registered Controller    | not supported                 | The host is free to translate this to parameters |
+| Relative Assignable Controller    | not supported                 | The host is free to translate this to parameters |
 | Per-Note Pitch Bend               | not supported                 | The host can do detailed tuning via [NoteExpression](../Change+History/3.5.0/INoteExpressionController.md) |
+| UMP Stream Message                | not supported                 | not supported |
 | Mixed Data Set                    | not supported                 | not supported |
 
 ## MIDI 2.0 Per-Note Controllers

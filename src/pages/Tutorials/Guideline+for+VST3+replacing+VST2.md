@@ -24,15 +24,15 @@ Two scenarios are possible: the **VST 3** and **VST 2** version of your plug-in 
 
 ---
 
-## VST 2 and VST 3 version of your Plug-in have the same UID
+## VST 2 and VST 3 version of your plug-in have the same UID
 
 It is possible to reuse the same generated UID of a **VST 2** version for a **VST 3** plug-in (based on 4 characters + its name), this should work with most **VST 3** Hosts. Check the function which generates a **VST 3** UID from a **VST 2** UID [here](../FAQ/Compatibility+with+VST+2.x+or+VST+1.md#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one) and reuse this value as UID for the **VST 3** plug-in (processor component UID).
 
 ---
 
-## VST 2 and VST 3 version of your Plug-in have not the same UID
+## VST 2 and VST 3 version of your plug-in have not the same UID
 
-For this use case, since **VST 3 SDK** version 3.7.5 we have two possibilities for a **VST 3** plug-in to inform the host about which **VST 2** plug-in it could replace:
+For this use case, since **VST SDK** version 3.7.5 we have two possibilities for a **VST 3** plug-in to inform the host about which **VST 2** plug-in it could replace:
 
 ### Using the [moduleinfo.json](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) file
 

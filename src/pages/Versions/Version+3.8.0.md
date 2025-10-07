@@ -24,9 +24,9 @@
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Add support of new ControllerNumbers enums in *legacymidiccout* Plug-in.
   - Add support of the new interfaces [IMidiLearn2](../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md) and [IMidiMapping2](../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md) in *Note Expression Synth* Plug-in.
+  - EditorHost Wayland support TODO
 
 - Helper Classes:
-  - Wayland support TODO
   - Fix: Validator ScanParametersTest::run() - Doesn't Print Parameter Type Correctly [Issue#142](https://github.com/steinbergmedia/vst3sdk/issues/142).
   - Fix: validator.exe and moduleinfotool.exe Debug Version Throws Abort When Checking for Symlink ([Issue#145](https://github.com/steinbergmedia/vst3sdk/issues/145)).
   - Fix: Undefined Behavior (UB) in Validation Test Suite causes test case to fail ([Issue#77](https://github.com/steinbergmedia/vst3sdk/issues/77)).

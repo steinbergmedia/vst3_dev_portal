@@ -1,4 +1,4 @@
->/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
+>/ [VST Home](../) / [What is the VST SDK?](Index.md)
 >
 ># VST 3 Plug-in Examples
 
@@ -17,7 +17,7 @@
 
 ## Introduction
 
-The SDK includes some Plug-ins implementation examples. The Legendary **AGain** and **ADelay**, thanks Paul Kellet the Open-source **mda** Plug-ins, a basic **Note Expression Synth** supporting "**Note Expression Event**", an example of **PitchNames** support Plug-in, a **VST 3 Host Checker** which checks if a host is **VST 3** compliant and more...
+The SDK includes some plug-ins implementation examples. The Legendary **AGain** and **ADelay**, thanks Paul Kellet the Open-source **mda** plug-ins, a basic **Note Expression Synth** supporting "**Note Expression Event**", an example of **PitchNames** support plug-in, a **VST 3 Host Checker** which checks if a host is **VST 3** compliant and more...
 
 >![what_if_2](../../resources/what_is_2.jpg)
 >
@@ -31,7 +31,7 @@ Check the folder *"public.sdk/samples/vst"* of the SDK!
 
 >ⓘ **Note**\
 >They use cmake as project generator: [Using cmake for building VST 3 plug-ins](../Tutorials/Using+cmake+for+building+plug-ins.md)\
->In order to add your own Plug-ins check: [Generate a new plug-in with the Project Generator App](../Tutorials/Generate+new+plug-in+with+Project+Generator.md)
+>In order to add your own plug-ins check: [Generate a new plug-in with the Project Generator App](../Tutorials/Generate+new+plug-in+with+Project+Generator.md)
 
 ## ADelay
 
@@ -259,7 +259,7 @@ Very simple plug-in:
 
 Very simple plug-in:
 
-- demonstrating how a **VST 3** Plug-in could replace another one and remap parameters ID.
+- demonstrating how a **VST 3** plug-in could replace another one and remap parameters ID.
 - it could replace the [AGain](../What+is+the+VST+3+SDK/Plug-in+Examples.md?#again) plug-in when it is not available.
 - it illustrates the use of the interface [Vst:: IRemapParamID](../Technical+Documentation/Change+History/3.7.11/IRemapParamID.md) (for mapping [Test Remap ParamID](../What+is+the+VST+3+SDK/Plug-in+Examples.md?#test-remap-paramid) parameters to AGain plug-in parameters) and the [module info](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) with its compatibility field.
 

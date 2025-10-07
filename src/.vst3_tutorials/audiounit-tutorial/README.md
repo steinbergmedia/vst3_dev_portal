@@ -12,7 +12,7 @@ The *AudioUnit Version 2* target needs the official *AudioUnit SDK* from Apple.
 As of this writing you can find it on GitHub: [https://github.com/apple/AudioUnitSDK](https://github.com/apple/AudioUnitSDK)
 
 How you obtain and store the SDK is up to you, for the reproducibility of this tutorial, we will download it via *CMake* when generating the project.
-So we add the following text to the *CMakeLists.txt* directly before we include the **VST 3 SDK**.
+So we add the following text to the *CMakeLists.txt* directly before we include the **VST SDK**.
 
 ```
 include(FetchContent)
@@ -28,7 +28,7 @@ FetchContent_GetProperties(
 )
 ```
 
-It is important to set the `SMTG_AUDIOUNIT_SDK_PATH` variable to tell the **VST 3 SDK** where to find the AudioUnit SDK.
+It is important to set the `SMTG_AUDIOUNIT_SDK_PATH` variable to tell the **VST SDK** where to find the AudioUnit SDK.
 
 ## Creating the property list
 

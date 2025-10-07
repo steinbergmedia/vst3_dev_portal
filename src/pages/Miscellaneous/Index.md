@@ -8,7 +8,7 @@
 
 ---
 
-## Some Copyrights/Trademarks referred to in the VST 3 SDK
+## Some Copyrights/Trademarks referred to in the VST SDK
 
 - **AAX** by Avid Technology, Inc.
 - **Apple** and **macOS** are either registered trademarks or trademarks of Apple Computer, Inc. registered in the U.S. and other countries.

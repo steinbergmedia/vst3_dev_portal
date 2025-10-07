@@ -12,7 +12,7 @@
 
 Helper Class wrapping a **VST 3** plug-in to an **AAX** plug-in.
 
-The **VST 3 SDK** comes with a helper class which wraps one **VST 3** audio processor and edit controller to an **AAX** plug-in.
+The **VST SDK** includes a helper class that wraps a **VST 3** audio processor and edit controller into an **AAX** plug-in.
 
 ## How does it work?
 
@@ -25,6 +25,6 @@ The **VST 3 SDK** comes with a helper class which wraps one **VST 3** audio proc
   - On Windows, copy built linker output again_aax.aaxplugin to "*C:\Program Files\Common Files\Avid\Audio\Plug-Ins\again_aax.aaxplugin\Contents\x64*" (the debug build does this automatically, but needs appropriate access rights (Administrator rights of your visual)).
   - On OSX, copy built bundle *build/Debug/again.aaxplugin* to "*/Library/Application Support/Avid/Audio/Plug-Ins*".
 
-- AAX plug-ins must be digitally signed with PACE Anti-Piracy's signing tools before they can be used in a commercial version of Pro Tools.
+- AAX plug-ins must be digitally signed with [PACE Anti-Piracy](https://paceap.com/code-signing-platform/)'s signing tools before they can be used in a commercial version of Pro Tools.
 - To test the plug-in without signing it, you can use a special version of Pro Tools: **Pro Tools Developer**, which could requested here: https://developer.avid.com/aax.
 - A [iLok](https://www.ilok.com) as an [Avid](https://my.avid.com) account is required for running Pro Tools and have access to the AAX SDK.
