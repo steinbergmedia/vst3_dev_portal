@@ -116,6 +116,7 @@
   - [\[3.7.11\] Remap Parameter ID](pages/Technical+Documentation/Change+History/3.7.11/IRemapParamID.md)
   - [\[3.8.0\] MIDI Learn 2 (MIDI 2.0 support)](pages/Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md)
   - [\[3.8.0\] Parameter MIDI Mapping 2 (MIDI 2.0 support)](pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md)
+  - [\[3.8.0\] Wayland Support (Linux)](pages/Technical+Documentation/Change+History/3.8.0/IWaylandHost.md)
 
 # Additional Resources
 

@@ -143,6 +143,10 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 - `SMTG_XCODE_MANUAL_CODE_SIGN_STYLE`: Manual Xcode sign style (default OFF)
 - `SMTG_XCODE_OTHER_CODE_SIGNING_FLAGS`: Other code signing flags \[Xcode\] (default --timestamp)
 
+### Specific Linux
+
+- `SMTG_ENABLE_WAYLAND_SUPPORT`: Enable [Wayland](https://wayland.freedesktop.org/) Support (default OFF)
+
 ---
 
 ## Using your IDE for compiling the examples
