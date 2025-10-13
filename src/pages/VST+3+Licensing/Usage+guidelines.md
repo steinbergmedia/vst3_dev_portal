@@ -134,7 +134,7 @@ These dimensions must be respected in all digital and printed uses.
 The first use of “**VST**” in any product-related material must include the ® symbol.
 Additionally, the following attribution must appear in all product credits and documentation: 
 
->"**VST is a trademark of Steinberg Media Technologies GmbH, registered in Europe and other countries.**"
+>"**VST is a registered trademark of Steinberg Media Technologies GmbH.**"
 
 ## 16. Questions and Contact
 For further clarification or to submit suggestions, please contact:\

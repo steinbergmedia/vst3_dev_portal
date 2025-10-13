@@ -11,7 +11,8 @@
 - [Steinberg:: IPlugFrame](../../../Technical+Documentation/Change+History/3.0.0/Host+Interfaces.md#steinberg-iplugframe)
 - [Steinberg:: IPlugView](../../../Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.md#steinberg-iplugview)
 - External links:
-    - [Wayland](https://wayland.freedesktop.org/)
+    - [About Wayland](https://wayland.freedesktop.org/)
+    - [Wayland on gitlab](https://gitlab.freedesktop.org/wayland)
 ---
 
 ## Introduction
