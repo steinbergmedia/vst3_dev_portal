@@ -43,7 +43,7 @@ If you use [**VSTGUI4**](../../../What+is+the+VST+3+SDK/VSTGUI.md) with the VST3
 ### Add files to the project
 
 - all the sources from your **VST 3** plug-in project
-- all files from *public.sdk/source/vst/interappaudio/*
+- all files from *public.sdk/source/vst/interappaudio*
 - all files from *public.sdk/source/vst/hosting*
 - all files from *base/source/* (if not already done previously)
 - *public.sdk/source/vst/auwrapper/NSDataIBStream.mm* (if not already done previously)
@@ -100,7 +100,7 @@ IPlugView* PLUGIN_API MyEditController::createView (FIDString _name)
 
 ### Using a native UIView
 
-If you want to create a native UIView as your plug-in editor, you have to create your own IPlugView derivate and attach the UIView in the IPlugView::attached method. An example of this can be seen in *"public.sdk/samples/vst/adelay/interappaudio/iosEditor.mm"*
+If you want to create a native UIView as your plug-in editor, you have to create your own IPlugView derivate and attach the UIView in the *IPlugView::attached* method. An example of this can be seen in *"public.sdk/samples/vst/adelay/interappaudio/iosEditor.mm"*
 
 ### Host UI Integration
 
