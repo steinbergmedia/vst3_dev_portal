@@ -51,14 +51,6 @@ Although optional, we encourage developers using VST under [MIT license](https:/
 
 ```
 //-----------------------------------------------------------------------------
-// LICENSE
-// (c) 2025, Steinberg Media Technologies GmbH, All Rights Reserved
-//-----------------------------------------------------------------------------
-This license applies only to files referencing this license,
-for other files of the Software Development Kit the respective embedded license text
-is applicable. The license can be found at: www.steinberg.net/sdklicenses_vst3
-
-//-----------------------------------------------------------------------------
 MIT License
 
 Copyright (c) 2025, Steinberg Media Technologies GmbH, All rights reserved.

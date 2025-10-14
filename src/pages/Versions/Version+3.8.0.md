@@ -1,8 +1,8 @@
   >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.8.0 (2025/10/15)
+># Version 3.8.0 (2025/10/16)
 
-## Version 3.8.0 (2025/10/15)
+## Version 3.8.0 (2025/10/16)
 
 - [New licensing model for VST 3](../VST+3+Licensing/Index.md): 
   - VST 3 is now open source, released under the [MIT license](https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide).
@@ -20,14 +20,13 @@
   - new **UIScripting**: Implement optional scripting support for uidescription.
   - new **View Layouter** architecture, enabling flexible and extensible layout management for view containers.
 
-
 - Documentation
   - Adapt document to [new licensing model](../VST+3+Licensing/Index.md).
   - Update [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md) document.
 
 - cmake
   - Fix *SMTG_AddSMTGLibrary.cmake* (macOS/Linux): Remove old symlink before creating a new one.
-  - Fix *SMTG_PlatformToolset.cmake*: __cplusplus was not assigned to correct version [pull#13](https://github.com/steinbergmedia/vst3_cmake/pull/13).
+  - Fix *SMTG_PlatformToolset.cmake*: __cplusplus was not assigned to correct version ([pull#13](https://github.com/steinbergmedia/vst3_cmake/pull/13)).
   
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Add support of new ControllerNumbers enums in *legacymidiccout* Plug-in.
@@ -35,7 +34,7 @@
   - EditorHost [Wayland](https://wayland.freedesktop.org/) support.
 
 - Helper Classes:
-  - Fix: Validator ScanParametersTest::run() - Doesn't Print Parameter Type Correctly [Issue#142](https://github.com/steinbergmedia/vst3sdk/issues/142).
+  - Fix: Validator ScanParametersTest::run() - Doesn't Print Parameter Type Correctly ([Issue#142](https://github.com/steinbergmedia/vst3sdk/issues/142)).
   - Fix: validator.exe and moduleinfotool.exe Debug Version Throws Abort When Checking for Symlink ([Issue#145](https://github.com/steinbergmedia/vst3sdk/issues/145)).
   - Fix: Undefined Behavior (UB) in Validation Test Suite causes test case to fail ([Issue#77](https://github.com/steinbergmedia/vst3sdk/issues/77)).
 
