@@ -14,11 +14,11 @@
 
 ## Introduction
 
-This is a user interface toolkit mainly for audio plug-ins (VST, AudioUnit, etc). Based on the XML definition of the plug-in UI, **VSTGUI** includes an embedded editor (UIDescription Editor) which allows the developer to create a plug-in UI just by drag & drop of the UI element.
+This is a user interface toolkit primarily designed for audio plug-ins (VST®, AudioUnit®, AAX®, etc.). Based on the XML definition of the plug-in UI, **VSTGUI** includes an embedded editor (UIDescription Editor) that allows developers to create plug-in UI interface through drag-and-drop of UI element.
 
-First developed in-house by Steinberg Media Technologies (around 1998) for their first VST plug-ins. Later added as binary libraries to the official **VST SDK**. Since May 2003, **VSTGUI** is open source, and is hosted now at GitHub <https://github.com/steinbergmedia/vstgui>.
+Originally developed in-house by Steinberg Media Technologies around 1998 for their first VST plug-ins, **VSTGUI** was later included as binary libraries to the official **VST SDK**. Since May 2003, **VSTGUI** has been open source and is now hosted on GitHub <https://github.com/steinbergmedia/vstgui>.
 
-The last official release version of **VSTGUI** is always included in the **VST SDK**.
+The last official release of **VSTGUI** is always included in the **VST SDK**.
 
 ![what_if_35](../../resources/what_is_35.png)
 

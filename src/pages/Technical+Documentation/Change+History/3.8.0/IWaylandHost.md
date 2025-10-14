@@ -13,16 +13,17 @@
 - External links:
     - [About Wayland](https://wayland.freedesktop.org/)
     - [Wayland on gitlab](https://gitlab.freedesktop.org/wayland)
+    - [VSTGUI Wayland Support](https://github.com/steinbergmedia/vstgui/tree/master/vstgui/lib/platform/linux)
 ---
 
 ## Introduction
 
-The following interfaces allow to query information about the host plug-in frame when running in a Wayland session.
- 
- A native Wayland host application is both a Wayland client and a Wayland compositor. 
- The host application connects to the system compositor and creates application windows etc. using this compositor connection.
- 
- A plug-in does not connect to the system compositor, but connects to the host application by calling [IWaylandHost::openWaylandConnection()](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1IWaylandHost.html#aac1c5eb544d1edda1f83947f67f05648).
+The following interfaces allow querying information about the host plug-in frame when running in a Wayland session.
+
+A native Wayland host application acts as both a Wayland client and a Wayland compositor. 
+The host application connects to the system compositor and creates application windows etc. using this compositor connection.
+
+A plug-in does not connect to the system compositor, but connects to the host application by calling [IWaylandHost::openWaylandConnection()](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1IWaylandHost.html#aac1c5eb544d1edda1f83947f67f05648).
  
  The [IWaylandHost](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1IWaylandHost.html) interface can be created via [Vst:: IHostApplication::createInstance](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html#a931e5a2ff8867bd8dfdbae1e42b78106).
  
