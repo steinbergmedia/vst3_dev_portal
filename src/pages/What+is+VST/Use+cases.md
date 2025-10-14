@@ -54,7 +54,7 @@ By using **VST SDK** directly:
 | Audition                | Adobe                             | <https://www.adobe.com>                       |
 | Band-in-a-Box (BIAB)    | PG Music                          | <https://www.pgmusic.com>                     |
 | Bidule                  | Plogue Art et Technologie, Inc.   | <https://www.plogue.com>                      |
-| Bitwig                  | Bitwig GmbH                       | <https://www.bitwig.com>                      |
+| Bitwig Studio           | Bitwig GmbH                       | <https://www.bitwig.com>                      |
 | Camelot                 | Audio Modeling                    | <https://audiomodeling.com>                   |
 | Cantabile               | Topten Software                   | <https://www.cantabilesoftware.com>           |
 | Catalyst                | Toneworks                         | <https://toneworks.io/>                       |
