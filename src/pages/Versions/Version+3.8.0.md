@@ -10,14 +10,14 @@
 - Interface changes:
   - Support for **MIDI 2.0**: new interfaces [IMidiLearn2](../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md) and [IMidiMapping2](../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md). These new interfaces replace the previous interfaces *IMidiLearn* and *IMidiMapping*.
   - Add missing ControllerNumbers enum for **MIDI 1.0** System messages.
-  - Preview [Wayland](https://wayland.freedesktop.org/) support on Linux (originally written and contributed to VST SDK by PreSonus Software Ltd.):
+  - Preview [Wayland](https://wayland.freedesktop.org/) support on Linux (originally written and contributed to VST SDK by PreSonus Software Ltd. and integrated in *Studio One Pro 7.2* and higher on Linux):
     - new interfaces [IWaylandHost, IWaylandFrame](../Technical+Documentation/Change+History/3.8.0/IWaylandHost.md).
     - new Platform UI Type: *kPlatformTypeWaylandSurfaceID*.
 
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.15.0](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_15_0)
   - Preview [Wayland](https://wayland.freedesktop.org/) support on Linux.
   - new **Task Concurrency API**: It facilitates scheduling tasks for execution on background threads, either concurrently or sequentially. This API also enables the scheduling of tasks on the main thread from any other thread.
-  - new *UIScripting*: Implement optional scripting support for uidescription.
+  - new **UIScripting**: Implement optional scripting support for uidescription.
   - new **View Layouter** architecture, enabling flexible and extensible layout management for view containers.
 
 
