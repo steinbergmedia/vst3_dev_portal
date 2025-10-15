@@ -26,7 +26,7 @@
 
 - cmake
   - Fix *SMTG_AddSMTGLibrary.cmake* (macOS/Linux): Remove old symlink before creating a new one.
-  - Fix *SMTG_PlatformToolset.cmake*: __cplusplus was not assigned to correct version ([pull#13](https://github.com/steinbergmedia/vst3_cmake/pull/13)).
+  - Fix *SMTG_PlatformToolset.cmake* for Visual Studio Compiler: __cplusplus was not assigned to correct version ([pull#13](https://github.com/steinbergmedia/vst3_cmake/pull/13)).
   
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Add support of new ControllerNumbers enums in *legacymidiccout* Plug-in.
