@@ -1,8 +1,8 @@
   >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.8.0 (2025/10/16)
+># Version 3.8.0 (2025/10/20)
 
-## Version 3.8.0 (2025/10/16)
+## Version 3.8.0 (2025/10/20)
 
 - [New licensing model for VST 3](../VST+3+Licensing/Index.md): 
   - VST 3 is now open source, released under the [MIT license](https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide).
