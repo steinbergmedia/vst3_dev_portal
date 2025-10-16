@@ -16,7 +16,7 @@ Sometimes it is necessary to switch to another **[VSTGUI](../What+is+the+VST+3+S
 
 ## Switching to another submodule
 
-Navigate to your local **VST 3 SDK** checkout, and execute the following command on the command line to switch the submodule:
+Navigate to your local **VST SDK** checkout, and execute the following command on the command line to switch the submodule:
 
 ```shell
 git submodule set-url vstgui4 /path/to/vstgui/

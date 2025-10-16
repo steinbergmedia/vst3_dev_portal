@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+- [What is the VST SDK?](../What+is+the+VST+3+SDK/Index.md)
 
 ---
 
@@ -75,7 +75,7 @@ While designing **VST 3**, we performed a careful analysis of the existing funct
 - UTF16 for localized parameter naming
 - Advanced preset system
 - Multiple plug-ins per library
-- [VST 3 SDK package](../What+is+the+VST+3+SDK/Index.md):
+- [VST SDK package](../What+is+the+VST+3+SDK/Index.md):
   - [Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) included
   - Automated testing environment
   - Validator (small command line Test Host)

@@ -44,7 +44,7 @@ Context menu with **Cubase**
 
 ![Tech_doc_34](../../../../resources/tech_doc_34.png)
 
-Here an example of what **Bitwig** is doing with context menus.
+Here an example of what **Bitwig Studio** is doing with context menus.
 
 ### From the plug-in perspective
 

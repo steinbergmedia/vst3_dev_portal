@@ -1,4 +1,4 @@
->/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
+>/ [VST Home](../) / [What is the VST SDK?](Index.md)
 >
 ># VST 3 Inspector Application
 

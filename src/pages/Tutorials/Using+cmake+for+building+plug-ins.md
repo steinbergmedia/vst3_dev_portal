@@ -17,7 +17,7 @@
 
 ## Goal
 
-This tutorial explains how to use *cmake* with **VST 3 SDK**.
+This tutorial explains how to use *cmake* with **VST SDK**.
 
 ---
 
@@ -35,7 +35,7 @@ The SDK provides a set of cmake files allowing you to compile the included sampl
 Example for building **Microsoft Studio 17 2022** solution:
 
 ``` c++
-// go in to the folder where you extracted the VST 3 SDK
+// go in to the folder where you extracted the VST SDK
 mkdir build
 cd build
 cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk"
@@ -55,7 +55,7 @@ cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_US
  Example for building **Xcode** project:
 
 ``` c++
-// go in to the folder where you extracted the VST 3 SDK
+// go in to the folder where you extracted the VST SDK
 mkdir build
 cd build
 /Applications/CMake.app/Content/bin/cmake -G"Xcode" "../vst3sdk"
@@ -142,6 +142,10 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 - `SMTG_VSTSDK_GENERATE_MACOS_IOS_COLLECTION_TARGETS`: Create macOS and iOS collection targets (default OFF)
 - `SMTG_XCODE_MANUAL_CODE_SIGN_STYLE`: Manual Xcode sign style (default OFF)
 - `SMTG_XCODE_OTHER_CODE_SIGNING_FLAGS`: Other code signing flags \[Xcode\] (default --timestamp)
+
+### Specific Linux
+
+- `SMTG_ENABLE_WAYLAND_SUPPORT`: Enable [Wayland](https://wayland.freedesktop.org/) Support (default OFF)
 
 ---
 

@@ -12,9 +12,9 @@
 
 ---
 
-## Why use VST 3 SDK?
+## Why use VST SDK?
 
-There are different use cases you can realize by using the **VST 3 SDK**:
+There are different use cases you can realize by using the **VST SDK**:
 
 1. You are a ***plug-in developer*** and you want to create audio FX or instrument plug-ins which can be included and used in a **VST 3** host application.
 
@@ -26,9 +26,9 @@ There are different use cases you can realize by using the **VST 3 SDK**:
     - audio FX and/or
     - instruments plug-ins.
 
-## Advantages of using VST 3 SDK
+## Advantages of using VST SDK
 
-By using **VST 3 SDK** directly:
+By using **VST SDK** directly:
 
 - you are sure to be compliant with the **VST 3** format.
 - developing your plug-in based on the **VST 3** format allows you to support easily new **VST 3** features that improve the integration of these plug-ins inside a DAW. Some 3rd party SDKs use only a common layer between all plug-in formats, limiting in this way the possibility for a better integration, for example, exclusive **VST 3** features:
@@ -41,7 +41,7 @@ By using **VST 3 SDK** directly:
 - it includes the major plug-in format wrappers: **AAX**, **AUv3**, **AU**.
 - the included [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line) allows you to check your plug-in's conformity to the **VST 3** standard.
 
-## Examples of VST 3 host applications (19/07/2024)
+## Examples of VST 3 host applications (07/10/2025)
 
 | **Name**                | **Companies**                     | **Link**                                      |
 | ----------------------- | --------------------------------- | --------------------------------------------- |
@@ -50,13 +50,16 @@ By using **VST 3 SDK** directly:
 | Ardour                  | Ardour Team                       | <https://ardour.org>                          |
 | ASAP                    | Ircam                             | <https://www.ircam.fr>                        |
 | Audacity                | Audacity Team                     | <https://www.audacityteam.org>                |
+| AudioLava               | Acon Digital                      | <https://acondigital.com>                     |
 | Audition                | Adobe                             | <https://www.adobe.com>                       |
+| Band-in-a-Box (BIAB)    | PG Music                          | <https://www.pgmusic.com>                     |
 | Bidule                  | Plogue Art et Technologie, Inc.   | <https://www.plogue.com>                      |
-| Bitwig                  | Bitwig GmbH                       | <https://www.bitwig.com>                      |
+| Bitwig Studio           | Bitwig GmbH                       | <https://www.bitwig.com>                      |
 | Camelot                 | Audio Modeling                    | <https://audiomodeling.com>                   |
 | Cantabile               | Topten Software                   | <https://www.cantabilesoftware.com>           |
 | Catalyst                | Toneworks                         | <https://toneworks.io/>                       |
 | Cross DJ                | MixVibes                          | <https://www.mixvibes.com>                    |
+| CMixer                  | Digital Brain Instruments         | <https://www.digitalbrain-instruments.com>    |
 | Cubase                  | Steinberg Media Technologies GmbH | <https://new.steinberg.net/cubase>            |
 | DaVinci Resolve         | Blackmagic Design                 | <https://www.blackmagicdesign.com/products/davinciresolve>|
 | Decibel                 | Process Audio                     | <https://process.audio>                       |
@@ -79,6 +82,7 @@ By using **VST 3 SDK** directly:
 | Metro                   | Sagan Technology                  | <https://sagantech.com>                       |
 | Mixbus                  | Harrison Audio                    | <https://harrisonaudio.com/daw-home-page>     |
 | Mixcraft                | Acoustica                         | <https://acoustica.com>                       |
+| MuLab App               | MuTools                           | <https://www.MuTools.com>                     |
 | MultitrackStudio        | Bremmers Audio Design             | <https://www.multitrackstudio.com>            |
 | Music Maker Plus        | MAGIX Software GmbH               | <https://www.magix.com>                       |
 | n-Track Studio          | n-Track Software                  | <https://www.ntrack.com>                      |
@@ -88,8 +92,10 @@ By using **VST 3 SDK** directly:
 | Orb Composer Pro        | Hexachords                        | <https://hexachords.com>                      |
 | Overture                | Sonic Scores                      | <https://sonicscores.com>                     |
 | OwlPlug                 | OwlPlug                           | <https://owlplug.com>                         |
+| PatchWork               | Blue Cat Audio                    | <https://www.bluecataudio.com>                |
 | Podcaster               | Digital Brain Instruments         | <https://www.digitalbrain-instruments.com/>   |
 | Qtractor                | rncbc                             | <https://qtractor.org>                        |
+| Radium                  | Radium Audio                      | <https://users.notam02.no>                    |
 | RapidComposer           | MusicDevelopments                 | <https://www.musicdevelopments.com>           |
 | Re:Cycle                | Digital Brain Instruments         | <https://www.digitalbrain-instruments.com>    |
 | Reaper                  | Reaper                            | <https://www.reaper.fm>                       |
@@ -97,6 +103,7 @@ By using **VST 3 SDK** directly:
 | RipX DeepAudio          | Hit’n’Mix Ltd                     | <https://hitnmix.com>                         |
 | Samplab                 | Samplab                           | <https://samplab.com>                         |
 | Samplitude              | MAGIX Software GmbH               | <https://www.magix.com>                       |
+| Sequoia                 | MAGIX Software GmbH               | <https://www.magix.com>                       |
 | Serato Studio 2         | Serato                            | <https://serato.com>                          |
 | Sonar                   | Bandlab/Cakewalk                  | <https://www.bandlab.com/products/cakewalk>   |
 | Sound Forge Audio Studio| MAGIX Software GmbH               | <https://www.magix.com>                       |
@@ -109,6 +116,7 @@ By using **VST 3 SDK** directly:
 | Superplugin             | DDMF                              | <https://ddmf.eu>                             |
 | TS2                     | Ircam Lab                         | <https://www.ircamlab.com>                    |
 | Unify                   | PlugInGuru                        | <https://www.pluginguru.com>                  |
+| Vegas Pro               | MAGIX Software GmbH               | <https://www.magix.com>                       |
 | Vienna MIR PRO 3D       | Vienna Symphonic Library GmbH     | <https://www.vsl.co.at>                       |
 | VoxPat Pro              | Digital Brain Instruments         | <https://www.digitalbrain-instruments.com>    |
 | vPlayer                 | Digital Brain Instruments         | <https://www.digitalbrain-instruments.com>    |
