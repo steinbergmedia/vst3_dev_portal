@@ -11,15 +11,15 @@
 ## Some Copyrights/Trademarks referred to in the VST SDK
 
 - **AAX** by Avid Technology, Inc.
-- **Apple** and **macOS** are either registered trademarks or trademarks of Apple Computer, Inc. registered in the U.S. and other countries.
-- **ASIO** is a trademark and software of [Steinberg Media Technologies GmbH](https://www.steinberg.net/de/).
+- **Apple**, **macOS** and **iOS** are either registered trademarks or trademarks of Apple Computer, Inc. registered in the U.S. and other countries.
+- **ASIO** is a trademark and software of [Steinberg Media Technologies GmbH](https://www.steinberg.net).
 - **AU** and **AUv3** by Apple Inc.
 - **Dolby™** is a registered trademark of Dolby Laboratories, Inc.
 - **GITHUB** is exclusive trademark registered in the United States by GitHub, Inc.
-- **JUCE library** - Copyright (c) 2022 - ROLI Ltd.
+- **JUCE library** - Copyright (c) - Raw Material Software Limited.
 - **Microsoft**, **Windows** are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 - **Pro Tools** is a trademark or registered trademark of Avid Technology, Inc. or its subsidiaries in the United States and/or other countries.
-- **VST**, **Dorico**, **Cubase**, **Nuendo**, **VST Live** and **WaveLab** are trademarks of [Steinberg Media Technologies GmbH](https://www.steinberg.net/de/), registered in Europe and other countries.
+- **VST**, **Dorico**, **Cubase**, **Nuendo**, **VST Live** and **WaveLab** are trademarks of [Steinberg Media Technologies GmbH](https://www.steinberg.net), registered in Europe and other countries.
 - Other company names, product names and logos are the trademarks or registered trademarks of their respective owners.
 
 ## Glossary
