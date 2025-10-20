@@ -30,7 +30,7 @@
       - fix crash for empty parameter groups ([PR#44](https://github.com/steinbergmedia/vst3_public_sdk/pull/44)).
 
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.4:
-  - **MIDI 2** support on macOS with higher resolution for *Velocity On/Off*, *Aftertouch*, *Polypressure*, *ControlChange* and *PitchBend*.
+  - **MIDI 2.0** support on macOS with higher resolution for *Velocity On/Off*, *Aftertouch*, *Polypressure*, *ControlChange* and *PitchBend*.
 
 - [VST 3 Project Generator](../What+is+the+VST+3+SDK/Project+Generator.md) v2022.11:
   - Support of multiple namespaces for generated plug-in source code (XX::YY::ZZ), request **C++17** minimum.

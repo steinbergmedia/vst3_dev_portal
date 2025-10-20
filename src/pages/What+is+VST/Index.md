@@ -10,15 +10,15 @@
 
 - [Use cases](../What+is+VST/Use+cases.md)
 - [Main benefits of VST 3](../Main+benefits+of+VST+3/Index.md)
-- [What is the VST 3 SDK?](../What+is+the+VST+3+SDK/Index.md)
+- [What is the VST SDK?](../What+is+the+VST+3+SDK/Index.md)
 
 ---
 
-## VST 3: New Standard for Virtual Studio Technology
+## VST 3: Standard for Virtual Studio Technology
 
 With **VST** (Virtual Studio
 Technology), [Steinberg](https://www.steinberg.net/) established the world’s leading and most widely supported standard for plug-ins and virtual instruments in 1996. With **VST 3** [Steinberg](https://www.steinberg.net/) releases the next major revision of [Steinberg](https://www.steinberg.net/)’s Virtual Studio Technology to the audio industry. **VST 3** marks an important milestone in audio technology with a completely rewritten code base providing not only many new features but also the most stable and reliable VST platform ever.
-This combination of the latest technology and new features is the result of [Steinberg](https://www.steinberg.net/)’s twelve years of development experience as the leading plug-in interface provider. **VST 3** has been designed to provide a technological and creative basis for many innovative and exciting new products for the audio industry, offering a new world of creative possibilities for instrument and effect plug-in users. The **VST 3 SDK** is available as a free technology, open in use for any developer.
+This combination of the latest technology and new features is the result of [Steinberg](https://www.steinberg.net/)’s twelve years of development experience as the leading plug-in interface provider. **VST 3** has been designed to provide a technological and creative basis for many innovative and exciting new products for the audio industry, offering a new world of creative possibilities for instrument and effect plug-in users. The **VST SDK** is available as a free technology, open in use for any developer.
 
 ## About the VST standard
 

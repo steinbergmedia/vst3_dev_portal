@@ -1,6 +1,6 @@
 >/ [VST Home](../)
 >
-># What is the VST 3 SDK?
+># What is the VST SDK?
 
 **On this page:**
 
@@ -8,13 +8,13 @@
 
 ---
 
-## VST 3 SDK explained
+## VST SDK explained
 
-The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a collection of software development tools included in one package. This allows plug-in developers to create plug-ins in **VST 3** format and host developers to load **VST 3** plug-ins into a DAW or audio editor.
+The **VST SDK** (Virtual Studio Technology Software Development Kit) is a collection of software development tools included in one package. This allows plug-in developers to create plug-ins in **VST 3** format and host developers to load **VST 3** plug-ins into a DAW or audio editor.
 
 ## What is included
 
-The **VST 3 SDK** package contains:
+The **VST SDK** package contains:
 
 ### The VST 3 API
 
@@ -90,4 +90,4 @@ Important links you will need for working with **VST 3**
 
 ## [Change history](../Versions/Index.md)
 
-All released versions of the **VST 3 SDK** with changes and dates.
+All released versions of the **VST SDK** with changes and dates.

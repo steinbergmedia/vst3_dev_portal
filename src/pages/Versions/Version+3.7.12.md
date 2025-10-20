@@ -24,7 +24,7 @@
     - **AU/AUv3 Wrappers**:
       - Add support for the old CoreAudio and new official AudioUnitSDK (version 1.1.0).
     - **AU Wrapper**:
-      - Add support of MIDI2 (higher-resolution for velocity and CC) using a helper for decoding UMP message (*public.sdk/source/vst/utility/ump.h*).
+      - Add support of MIDI 2.0 (higher-resolution for velocity and CC) using a helper for decoding UMP message (*public.sdk/source/vst/utility/ump.h*).
       - Add support of MIDI Learn interface [Vst:: IMidiLearn](../Technical+Documentation/Change+History/3.6.12/IMidiLearn.md).
       - Add cache program list infos so that the edit controller is not called in the process thread.
       - Add MIDI mapping cache instead of calling the IMidiMapping interface in the audio process thread.

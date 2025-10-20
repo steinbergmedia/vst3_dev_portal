@@ -1,4 +1,4 @@
->/ [VST Home](../) / [What is the VST 3 SDK?](Index.md)
+>/ [VST Home](../) / [What is the VST SDK?](Index.md)
 >
 ># VST 3 Plug-in Test Host
 
@@ -46,34 +46,34 @@ You could start **VST3PluginTestHost** with some options in the command line:
 
 ![what_if_39](../../resources/what_is_39.png)
 
-- **File => Load Preset...**: Load a VST 3 Preset for the first loaded plug-in (first slot).
-- **File => Save Preset...**: Save a VST 3 Preset for the first loaded plug-in.
+- **File => Load Preset...**: Loads a VST 3 Preset for the first loaded plug-in (first slot).
+- **File => Save Preset...**: Saves a VST 3 Preset for the first loaded plug-in.
 ---
-- **File => Load MIDI File...**: Load a MIDI file which could be played by using the transport section, all loaded plug-ins will received the MIDI events. It also sends MIDI program change messages when a MIDI file is loaded.
-- **File => Unload MIDI File**: Unload the previously loaded MIDI file.
+- **File => Load MIDI File...**: Loads a MIDI file which could be played by using the transport section. All loaded plug-ins will receive the MIDI events. MIDI program change messages are also sent when a file is loaded.
+- **File => Unload MIDI File**: Unloads the currently loaded MIDI file.
 ---
-- **File => Export Audio...**: this allows to choose a folder with MIDI files, loaded each of them and export the audio renderings of the first loaded plug-in.
-- **File => Export Audio for current loaded MIDI...**: this allows to use the current loaded MIDI file for exporting the audio renderings of the first loaded plug-in.
+- **File => Export Audio...**: Allows you to select a folder containing MIDI files, loads each file, and exports the audio renderings of the first loaded plug-in.
+- **File => Export Audio for current loaded MIDI...**: Uses the currently loaded MIDI file to export the audio renderings of the first loaded plug-in.
 ---
-- **File => Convert VST 3 Presets to VST 2 Presets**: this allows to convert **VST 3** Presets to compatible **VST 2** Presets (fxp or fxb).
-- **File => Overwrite Plug-in Name in VST 3 Presets...**: this allows to rename the plug-in name in a set of **VST 3** Presets.
+- **File => Convert VST 3 Presets to VST 2 Presets**: Converts **VST 3** Presets to compatible **VST 2** Presets (fxp or fxb).
+- **File => Overwrite Plug-in Name in VST 3 Presets...**: Renames the plug-in name in a set of **VST 3** Presets.
 ---
-- **File => Rescan blocklisted VST 3 Plug-in**: this allows to force a rescan of plug-ins which were put in the blocklist.
+- **File => Rescan blocklisted VST 3 Plug-in**: Forces a rescan of plug-ins that were previously blocklisted.
 
 #### Edit
 
 ![what_if_40](../../resources/what_is_40.png)
 
-- **Edit => Key Commands...**: opens the key commands windows.
-- **Edit => Global Preferences...**: opens the global preferences windows where you could change the ASIO driver, for example.
-- **Edit => Plug-In Preferences...**: opens the plug-in preferences windows where you could change Inputs/Outputs routing, for example.
+- **Edit => Key Commands...**: Opens the Key Commands window.
+- **Edit => Global Preferences...**: Opens the Global Preferences window, where you can change settings such as the ASIO driver.
+- **Edit => Plug-In Preferences...**: Opens the Plug-In Preferences window, where you can configure Inputs/Outputs routing, for example.
 
 #### View
 
 ![what_if_41](../../resources/what_is_41.png)
-- **View => Open Plug-in Information Window**: opens a window showing all registered component and controller **VST 3** plug-ins.
-- **View => Open Plug-in Unit Tests Window**: opens a window where you can test your plug-in with a series of unit tests.
-- **View => Open Preset Editor**: allows you to open, check and modify **VST 3** presets (adding meta attributes like in Instrument/- Style/Character)
+- **View => Open Plug-in Information Window**: Opens a window displaying all registered **VST 3** plug-in components and controllers.
+- **View => Open Plug-in Unit Tests Window**: Opens a window where you can run a series of unit tests on your plug-in.
+- **View => Open Preset Editor**: Opens the **VST 3** preset editor, allowing you to view, inspect, and modify presets, including adding metadata attributes such as *Instrument*, *Style*, or *Character*.
 
 #### Transport
 
@@ -85,7 +85,7 @@ You could start **VST3PluginTestHost** with some options in the command line:
 
 ![what_if_43](../../resources/what_is_43.png)
 
-- Some useful links for developing VST 3 Plug-ins.
+- Some useful links for developing **VST 3** Plug-ins.
 
 ---
 
@@ -93,7 +93,7 @@ You could start **VST3PluginTestHost** with some options in the command line:
 
 ![what_if_16](../../resources/what_is_16.png)
 
- - Selectable in the **Edit => Global Preferences** Windows.
+ - Selectable in the **Edit => Global Preferences...** window.
 
 ## VST Player Window
 

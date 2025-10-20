@@ -19,7 +19,7 @@ In order to build **VST 3** plug-ins, you need the source code of the **VST 3** 
 
 ### From the downloaded *vstsdk.zip* file
 
-Download the **VST 3 SDK**: check [VST 3 SDK Download](Links.md).
+Download the **VST SDK**: check [VST SDK Download](Links.md).
 
 Unpack the zip file to a development folder on your computer.
 
@@ -79,7 +79,7 @@ sudo apt-get install qtcreator
 
 ## Get cmake
 
-In order to control the compilation process and create an IDE project, **VST 3 SDK** uses the open-source and cross-platform tool [cmake](https://cmake.org/).
+In order to control the compilation process and create an IDE project, **VST SDK** uses the open-source and cross-platform tool [cmake](https://cmake.org/).
 
 You can download cmake here: <https://cmake.org/download/> or use a package manager for your OS (Linux).
 
@@ -94,4 +94,4 @@ You can use it as a command line tool or use the cmake executable with GUI. cmak
 
 ## Get a VST 3 host application
 
-You can use your favorite **VST 3** host application, see [here](../What+is+VST/Use+cases.md) for some examples, or you can use the [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) application included in the **VST 3 SDK**.
+You can use your favorite **VST 3** host application, see [here](../What+is+VST/Use+cases.md) for some examples, or you can use the [VST 3 Plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) application included in the **VST SDK**.

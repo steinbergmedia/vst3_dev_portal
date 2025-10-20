@@ -16,7 +16,7 @@
 
 Helper Class wrapping a **VST 3** plug-in to an **Audio Unit v2** plug-in.
 
-The **VST 3 SDK** comes with an AudioUnit wrapper, which can wrap one **VST 3** audio processor and edit controller as an AudioUnit effect/instrument.
+The **VST SDK** includes an AudioUnit wrapper that can encapsulate a **VST 3** audio processor and edit controller as an AudioUnit effect or instrument.
 
 The wrapper is a small dynamic library which loads the **VST 3** plug-in. As AudioUnits store important information in their resource fork, this library must be compiled for every **VST 3** plug-in.
 

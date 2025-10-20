@@ -8,7 +8,7 @@ This part of the [Steinberg Developer Resource](https://www.steinberg.net/develo
 
 ## [What is VST?](What+is+VST/Index.md)
 
-Virtual Studio Technology (**VST**) is an audio plug-in software interface that facilitates the integration of software synthesizers and effects in digital audio workstations (DAW).
+Virtual Studio Technology (**VST®**) is an audio plug-in software interface that facilitates the integration of software synthesizers and effects in digital audio workstations (DAW).
 
 - [Use cases](What+is+VST/Use+cases.md)
 
@@ -16,16 +16,16 @@ Virtual Studio Technology (**VST**) is an audio plug-in software interface that 
 
 Here, you can find a non-exhaustive list of **VST 3** benefits.
 
-## [What is the VST 3 SDK?](What+is+the+VST+3+SDK/Index.md)
+## [What is the VST SDK?](What+is+the+VST+3+SDK/Index.md)
 
-The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a collection of software development tools included in one package. This allows plug-in developers to create plug-ins in **VST 3** format and host developers to load **VST 3** plug-ins into a DAW or audio editor.
+The **VST SDK** (Virtual Studio Technology Software Development Kit) is a collection of software development tools included in one package. This allows plug-in developers to create plug-ins in **VST 3** format and host developers to load **VST 3** plug-ins into a DAW or audio editor.
 
 ## [VST 3 licensing](VST+3+Licensing/Index.md)
 
+- [VST 3 License](VST+3+Licensing/VST3+License.md)
 - [Steinberg VST usage guidelines](VST+3+Licensing/Usage+guidelines.md)
-- [What are the licensing options](VST+3+Licensing/What+are+the+licensing+options.md)
 - [Which files fall under which license?](VST+3+Licensing/Which+files+fall+under+which+license.md)
-- [Developer use cases (FAQs)](VST+3+Licensing/Developer+use+cases.md)
+- [Frequently Asked Questions: Licensing](FAQ/Licensing.md)
 
 ## [Getting Started](Getting+Started/Index.md)
 
@@ -48,7 +48,7 @@ The **VST 3 SDK** (Virtual Studio Technology Software Development Kit) is a coll
 - [Guideline for replacing a VST 2 plug-in by a VST 3 plug-in](Tutorials/Guideline+for+VST3+replacing+VST2.md)
 - [Strings Conversion Helper](Tutorials/Strings+Conversion+Helper.md)
 - [Creating a cmake plug-in project from scratch](Tutorials/Creating+a+plug-in+from+scratch.md)
-- [Creating a plug-in with VST 3 SDK as an external project](Tutorials/Creating+a+plug-in+with+VST+3+SDK+as+an+external+project.md)
+- [Creating a plug-in with VST SDK as an external project](Tutorials/Creating+a+plug-in+with+VST+3+SDK+as+an+external+project.md)
 - [Switching to another VSTGUI submodule or branch](Tutorials/Switching+to+another-VSTGUI+submodule+or+branch.md)
 - [How to add AUv2 support to your VST 3 plug-in](Tutorials/Audio+Unit.md)
 
@@ -58,7 +58,7 @@ Visit Steinberg's **VST Developer Forum** in order to get help with development,
 
 ## [Technical Documentation](Technical+Documentation/Index.md)
 
-Browse the **VST 3 SDK**'s technical documentation. The full **VST 3 API** reference is only available in the [VST 3 Package](Getting+Started/Links.md) that you can download or find online here.
+Browse the **VST SDK**'s technical documentation. The full **VST 3 API** reference is only available in the [VST 3 Package](Getting+Started/Links.md) that you can download or find online here.
 
 ## [Miscellaneous](Miscellaneous/Index.md)
 

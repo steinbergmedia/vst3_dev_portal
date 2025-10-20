@@ -18,7 +18,6 @@ State3: Connected
 
 State2: ---[UI Thread]---------------------------------------
 State2: IEditController->setComponentHandler
-
 State3: ---[UI Thread]---------------------------------------
 State3: IConnectionPoint->notify
 State3: ------------------------------------------

@@ -7,7 +7,7 @@
 - [What is VST?](pages/What+is+VST/Index.md)
   - [Use cases](pages/What+is+VST/Use+cases.md)
 - [Main benefits of VST 3](pages/Main+benefits+of+VST+3/Index.md)
-- [What is the VST 3 SDK?](pages/What+is+the+VST+3+SDK/Index.md)
+- [What is the VST SDK?](pages/What+is+the+VST+3+SDK/Index.md)
   - [VST 3 Plug-in Examples](pages/What+is+the+VST+3+SDK/Plug-in+Examples.md)
   - [VST 3 Plug-in Test Host](pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.md)
   - [VST 3 Project Generator](pages/What+is+the+VST+3+SDK/Project+Generator.md)
@@ -22,11 +22,10 @@
   - [iOS Inter-App Audio Support](pages/What+is+the+VST+3+SDK/iOS+Inter-App+Audio+support.md)
   - [VSTGUI](pages/What+is+the+VST+3+SDK/VSTGUI.md)
 - [VST 3 Licensing](pages/VST+3+Licensing/Index.md)
+  - [VST 3 License](pages/VST+3+Licensing/VST3+License.md)
   - [Steinberg VST usage guidelines](pages/VST+3+Licensing/Usage+guidelines.md)
-  - [What are the licensing options](pages/VST+3+Licensing/What+are+the+licensing+options.md)
   - [Which files fall under which license?](pages/VST+3+Licensing/Which+files+fall+under+which+license.md)
-  - [Developer use cases (FAQs)](pages/VST+3+Licensing/Developer+use+cases.md)
-
+  
 # Getting Started with VST
 
 - [Getting Started](pages/Getting+Started/Index.md)
@@ -48,7 +47,7 @@
   - [Guideline for replacing a VST 2 plug-in by a VST 3 plug-in](pages/Tutorials/Guideline+for+VST3+replacing+VST2.md)
   - [Strings Conversion Helper](pages/Tutorials/Strings+Conversion+Helper.md)
   - [Creating a cmake plug-in project from scratch](pages/Tutorials/Creating+a+plug-in+from+scratch.md)
-  - [Creating a plug-in with VST 3 SDK as an external project](pages/Tutorials/Creating+a+plug-in+with+VST+3+SDK+as+an+external+project.md)
+  - [Creating a plug-in with VST SDK as an external project](pages/Tutorials/Creating+a+plug-in+with+VST+3+SDK+as+an+external+project.md)
   - [Switching to another VSTGUI submodule or branch](pages/Tutorials/Switching+to+another-VSTGUI+submodule+or+branch.md)
   - [How to add AUv2 support to your VST 3 plug-in](pages/Tutorials/Audio+Unit.md)
 - [Technical Documentation](pages/Technical+Documentation/Index.md)
@@ -83,7 +82,7 @@
   - [\[3.0.0\] Multiple Dynamic I/O Support](pages/Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
   - [\[3.0.0\] Silence flags](pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.md)
   - [\[3.0.0\] Interfaces supported by the host](pages/Technical+Documentation/Change+History/3.0.0/Host+Interfaces.md)
-  - [\[3.0.1\] Parameter MIDI Mapping](pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.md)
+  - [\[3.0.1\] Parameter MIDI Mapping (MIDI 1.0 support)](pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.md)
   - [\[3.0.2\] Parameter Finder](pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.md)
   - [\[3.1.0\] Audio Presentation Latency](pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.md)
   - [\[3.1.0\] Dirty State, Open Editor Request and UI Group Editing Support](pages/Technical+Documentation/Change+History/3.1.0/IComponentHandler2.md)
@@ -104,7 +103,7 @@
   - [\[3.6.10\] UI Snapshots](pages/Technical+Documentation/Change+History/3.6.10/UI+Snapshots.md)
   - [\[3.6.11\] NoteExpression Physical UI Mapping](pages/Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md)
   - [\[3.6.12\] Legacy MIDI CC Out Event](pages/Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.md)
-  - [\[3.6.12\] MIDI Learn](pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.md)
+  - [\[3.6.12\] MIDI Learn (MIDI 1.0 support)](pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.md)
   - [\[3.6.12\] Host Query Interface support](pages/Technical+Documentation/Change+History/3.6.12/IPlugInterfaceSupport.md)
   - [\[3.6.12\] MPE support for Wrappers](pages/Technical+Documentation/Change+History/3.6.12/IVst3WrapperMPESupport.md)
   - [\[3.7.0\] Parameter Function Name](pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.md)
@@ -115,10 +114,14 @@
   - [\[3.7.9\] Get Current SystemTime](pages/Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.md)
   - [\[3.7.9\] Data Transfert Between Processor/Controller](pages/Technical+Documentation/Change+History/3.7.9/IDataExchangeHandler.md)
   - [\[3.7.11\] Remap Parameter ID](pages/Technical+Documentation/Change+History/3.7.11/IRemapParamID.md)
+  - [\[3.8.0\] MIDI Learn 2 (MIDI 2.0 support)](pages/Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md)
+  - [\[3.8.0\] Parameter MIDI Mapping 2 (MIDI 2.0 support)](pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md)
+  - [\[3.8.0\] Wayland Support (Linux)](pages/Technical+Documentation/Change+History/3.8.0/IWaylandHost.md)
 
 # Additional Resources
 
 - [Change History](pages/Versions/Index.md)
+  - [Version 3.8.0 (2025/10/20)](pages/Versions/Version+3.8.0.md)
   - [Version 3.7.14 (2025/06/23)](pages/Versions/Version+3.7.14.md)
   - [Version 3.7.13 (2025/02/28)](pages/Versions/Version+3.7.13.md)
   - [Version 3.7.12 (2024/07/23)](pages/Versions/Version+3.7.12.md)
