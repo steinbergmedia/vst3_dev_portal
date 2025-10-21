@@ -190,7 +190,7 @@
 <blockquote>
 <p>See also: https://cmake.org/cmake/help/latest/command/project.html</p>
 </blockquote>
-<p>Set the variable <code>vst3sdk_SOURCE_DIR</code> to the VST 3 SDK's directory. The directory <em><strong>must</strong></em> contain the root <code>CMakeLists.txt</code> of the SDK.  Add the SDK as a subdirectory, and call <code>smtg_enable_vst3_sdk</code> right after this.</p>
+<p>Set the variable <code>vst3sdk_SOURCE_DIR</code> to the VST SDK's directory. The directory <em><strong>must</strong></em> contain the root <code>CMakeLists.txt</code> of the SDK.  Add the SDK as a subdirectory, and call <code>smtg_enable_vst3_sdk</code> right after this.</p>
 <pre><code class="language-cmake">set(vst3sdk_SOURCE_DIR /path/to/vst3sdk)
 
 add_subdirectory(${vst3sdk_SOURCE_DIR} ${PROJECT_BINARY_DIR}/vst3sdk)
@@ -207,7 +207,7 @@ smtg_enable_vst3_sdk()
     source/myplugin_entry.cpp
 )
 </code></pre>
-<p>Link the VST 3 SDK <code>sdk</code> to the plug-in library.</p>
+<p>Link the VST SDK <code>sdk</code> to the plug-in library.</p>
 <pre><code class="language-cmake">target_link_libraries(MyPlugin
     PRIVATE
         sdk

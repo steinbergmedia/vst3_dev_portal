@@ -163,8 +163,8 @@
 <p><strong>On this page:</strong></p>
 <ul>
 <li><a href="#goal">Goal</a></li>
-<li><a href="#vst-2-and-vst-3-version-of-your-plug-in-have-the-same-uid">VST 2 and VST 3 version of your Plug-in have the same UID</a></li>
-<li><a href="#vst-2-and-vst-3-version-of-your-plug-in-have-not-the-same-uid">VST 2 and VST 3 version of your Plug-in have not the same UID</a>
+<li><a href="#vst-2-and-vst-3-version-of-your-plug-in-have-the-same-uid">VST 2 and VST 3 version of your plug-in have the same UID</a></li>
+<li><a href="#vst-2-and-vst-3-version-of-your-plug-in-have-not-the-same-uid">VST 2 and VST 3 version of your plug-in have not the same UID</a>
 <ul>
 <li><a href="#using-the-moduleinfojson-file">Using the moduleinfo.json file</a></li>
 <li><a href="#using-the-iplugincompatibility-interface">Using the IPluginCompatibility interface</a></li>
@@ -185,11 +185,11 @@ This guide will help ensure that a host correctly replaces the old <strong>VST 2
 <p>For a <strong>VST 3</strong> Host, the important information is the UID of your (processor) plug-in. With this information, it will find the correct <strong>VST 3</strong> version to use.</p>
 <p>Two scenarios are possible: the <strong>VST 3</strong> and <strong>VST 2</strong> version of your plug-in have the same UID, or they do not.</p>
 <hr />
-<h2 id="vst-2-and-vst-3-version-of-your-plug-in-have-the-same-uid"><a class="header" href="#vst-2-and-vst-3-version-of-your-plug-in-have-the-same-uid">VST 2 and VST 3 version of your Plug-in have the same UID</a></h2>
+<h2 id="vst-2-and-vst-3-version-of-your-plug-in-have-the-same-uid"><a class="header" href="#vst-2-and-vst-3-version-of-your-plug-in-have-the-same-uid">VST 2 and VST 3 version of your plug-in have the same UID</a></h2>
 <p>It is possible to reuse the same generated UID of a <strong>VST 2</strong> version for a <strong>VST 3</strong> plug-in (based on 4 characters + its name), this should work with most <strong>VST 3</strong> Hosts. Check the function which generates a <strong>VST 3</strong> UID from a <strong>VST 2</strong> UID <a href="../FAQ/Compatibility+with+VST+2.x+or+VST+1.html#q-how-can-i-update-my-vst-2-version-of-my-plug-in-to-a-vst-3-version-and-be-sure-that-cubase-will-load-it-instead-of-my-old-one">here</a> and reuse this value as UID for the <strong>VST 3</strong> plug-in (processor component UID).</p>
 <hr />
-<h2 id="vst-2-and-vst-3-version-of-your-plug-in-have-not-the-same-uid"><a class="header" href="#vst-2-and-vst-3-version-of-your-plug-in-have-not-the-same-uid">VST 2 and VST 3 version of your Plug-in have not the same UID</a></h2>
-<p>For this use case, since <strong>VST 3 SDK</strong> version 3.7.5 we have two possibilities for a <strong>VST 3</strong> plug-in to inform the host about which <strong>VST 2</strong> plug-in it could replace:</p>
+<h2 id="vst-2-and-vst-3-version-of-your-plug-in-have-not-the-same-uid"><a class="header" href="#vst-2-and-vst-3-version-of-your-plug-in-have-not-the-same-uid">VST 2 and VST 3 version of your plug-in have not the same UID</a></h2>
+<p>For this use case, since <strong>VST SDK</strong> version 3.7.5 we have two possibilities for a <strong>VST 3</strong> plug-in to inform the host about which <strong>VST 2</strong> plug-in it could replace:</p>
 <h3 id="using-the-moduleinfojson-file"><a class="header" href="#using-the-moduleinfojson-file">Using the <a href="../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> file</a></h3>
 <p>The <strong>Compatibility</strong> json array in the <a href="../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">moduleinfo.json</a> allows listing the UIDs that could be replaced by the <strong>VST 3</strong> plug-in.</p>
 <h3 id="using-the-iplugincompatibility-interface"><a class="header" href="#using-the-iplugincompatibility-interface">Using the <em>IPluginCompatibility</em> interface</a></h3>

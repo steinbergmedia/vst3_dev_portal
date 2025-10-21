@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>What are the licensing options - VST 3 Developer Portal</title>
+        <title>Version 3.8.0 (2025/10/20) - VST 3 Developer Portal</title>
 
 
         <!-- Custom HTML head -->
@@ -157,94 +157,86 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../">VST Home</a> / <a href="Index.html">VST 3 Licensing</a></p>
-<h1 id="what-are-the-licensing-options"><a class="header" href="#what-are-the-licensing-options">What are the licensing options</a></h1>
+<p>/ <a href="../">VST Home</a> / <a href="./Index.html">Change History</a></p>
+<h1 id="version-380-20251020"><a class="header" href="#version-380-20251020">Version 3.8.0 (2025/10/20)</a></h1>
 </blockquote>
-<p><strong>On this page:</strong></p>
+<h2 id="version-380-20251020-1"><a class="header" href="#version-380-20251020-1">Version 3.8.0 (2025/10/20)</a></h2>
 <ul>
-<li><a href="#proprietary-steinberg-vst-3-license">Proprietary Steinberg VST 3 license</a></li>
-<li><a href="#open-source-gplv3-license">Open-source GPLv3 license</a></li>
-<li><a href="#steinberg-dual-license-file">Steinberg Dual-License file</a></li>
-</ul>
-<p><strong>Related pages:</strong></p>
+<li>
+<p><a href="../VST+3+Licensing/Index.html">New licensing model for VST 3</a>:</p>
 <ul>
-<li><a href="Index.html">VST 3 Licensing</a></li>
-<li><a href="Developer+use+cases.html">Developer use cases (FAQs)</a></li>
-<li><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License GPLv3</a></li>
+<li>VST 3 is now open source, released under the <a href="https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide">MIT license</a>.</li>
 </ul>
-<hr />
-<p>You can choose between the <a href="#proprietary-steinberg-vst-3-license">Proprietary Steinberg VST 3</a> or the <a href="#open-source-gplv3-license">Open-source GPLv3</a> license (<a href="#steinberg-dual-license-file">dual-license</a>) depending on how you want to distribute your <strong>VST 3</strong> plug-in/host. <strong>The License Agreement could be found here and in the VST 3 SDK package</strong>.</p>
-<h2 id="proprietary-steinberg-vst-3-license"><a class="header" href="#proprietary-steinberg-vst-3-license">Proprietary Steinberg VST 3 license</a></h2>
-<p>The "<strong>Proprietary Steinberg VST 3</strong>" license allows you to distribute your <strong>VST 3</strong> plug-in/host in a binary form. However, please note the following requirements:</p>
+</li>
+<li>
+<p>Interface changes:</p>
 <ul>
-<li>You need written permission from <strong>Steinberg Media Technologies GmbH</strong> in order to distribute your <strong>VST 3</strong> plug-in/host (Steinberg will send you the countersigned License agreement included in the SDK that you signed and sent to us).</li>
-<li>You need to mention <strong>Steinberg Media Technologies GmbH</strong> in the about box and/or documentation of your <strong>VST 3</strong> plug-in/host and follow the <a href="Usage+guidelines.html">Steinberg VST usage guidelines</a>.</li>
+<li>Support for <strong>MIDI 2.0</strong>: new interfaces <a href="../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.html">IMidiLearn2</a> and <a href="../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.html">IMidiMapping2</a>. These new interfaces replace the previous interfaces <em>IMidiLearn</em> and <em>IMidiMapping</em>.</li>
+<li>Add missing ControllerNumbers enum for <strong>MIDI 1.0</strong> System messages.</li>
+<li>Preview <a href="https://wayland.freedesktop.org/">Wayland</a> support on Linux (originally written and contributed to VST SDK by PreSonus Software Ltd. and integrated in <em>Studio One Pro 7.2</em> and higher on Linux):
+<ul>
+<li>new interfaces <a href="../Technical+Documentation/Change+History/3.8.0/IWaylandHost.html">IWaylandHost, IWaylandFrame</a>.</li>
+<li>new Platform UI Type: <em>kPlatformTypeWaylandSurfaceID</em>.</li>
 </ul>
-<p>For more details please read the "<strong>Proprietary Steinberg VST 3</strong>" license agreement. If you accept it, please enter all required information, sign it and send it back to us, either via land mail (to the <a href="https://o.steinberg.net/en/extras/about.html">Steinberg address</a> mentioned in the license), or via e-mail to <a href="mailto:reception@steinberg.de">reception@steinberg.de</a> or via fax (+49 (0)40 210 35-300). We will countersign the license agreement and send it back to you.</p>
-<blockquote>
-<p>ⓘ <strong>As PDF</strong><br />
-<a href="../../resources/VST3_License_Agreement.pdf">The License agreement</a> is part of the VST SDK package, too.</p>
-</blockquote>
-<h2 id="open-source-gplv3-license"><a class="header" href="#open-source-gplv3-license">Open-source GPLv3 license</a></h2>
-<p>The open-source license lets you share the source code of your <strong>VST 3</strong> plug-in/host <em><strong>including the VST 3 SDK's sources which are subject to the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>.</strong></em></p>
-<blockquote>
-<p>ⓘ <strong>Note</strong><br />
-Note that VST 2 sources are NOT part of the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>!</p>
-</blockquote>
-<p>For more information about <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> check <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">this link</a>. It also permits you to change and modify the <strong>VST 3 SDK</strong>'s sources as long as you share your changes and make them available for everyone (e.g. on an Internet hosting service like GitHub). Note that you have to follow the <a href="Usage+guidelines.html">Steinberg VST usage guidelines</a>.</p>
-<h2 id="steinberg-dual-license-file"><a class="header" href="#steinberg-dual-license-file">Steinberg Dual-License file</a></h2>
-<pre><code>//----------------------------------------------------------------------------
-// LICENSE
-// (c) 2024, Steinberg Media Technologies GmbH, All Rights Reserved
-//----------------------------------------------------------------------------
-This license applies only to files referencing this license,
-for other files of the Software Development Kit therespective embedded license text
-is applicable. The license can be found at: &lt;http://www.steinberg.net/sdklicenses_vst3&gt;
-
-This Software Development Kit is licensed under the terms ofthe Steinberg VST 3 License,
-or alternatively under the terms of the General PublicLicense (GPL) Version 3.
-You may use the Software Development Kit according to eitherof these licenses as it is
-most appropriate for your project on a case-by-case basis(commercial or not).
-
-a) Proprietary Steinberg VST 3 License
-The Software Development Kit may not be distributed in partsor its entirety
-without prior written agreement by Steinberg MediaTechnologies GmbH.
-The SDK must not be used to re-engineer or manipulate anytechnology used
-in any Steinberg or Third-party application or softwaremodule,
-unless permitted by law.
-Neither the name of the Steinberg Media Technologies GmbH northe names of its
-contributors may be used to endorse or promote productsderived from this
-software without specific prior written permission.
-Before publishing a software under the proprietary license, you need to obtain a copy
-of the License Agreement signed by Steinberg MediaTechnologies GmbH.
-The Steinberg VST SDK License Agreement can be found at:
-&lt;http://www.steinberg.net/en/company/developers.html&gt;
-
-THE SDK IS PROVIDED BY STEINBERG MEDIA TECHNOLOGIES GMBH "ASIS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITEDTO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULARPURPOSE ARE DISCLAIMED.
-IN NO EVENT SHALL STEINBERG MEDIA TECHNOLOGIES GMBH BE LIABLEFOR ANY DIRECT,
-INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIALDAMAGES (INCLUDING,
-BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS ORSERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSEDAND ON ANY THEORY OF
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT(INCLUDING NEGLIGENCE
-OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THISSOFTWARE, EVEN IF ADVISED
-OF THE POSSIBILITY OF SUCH DAMAGE.
-
-b) General Public License (GPL) Version 3
-Details of these licenses can be found at: &lt;http://www.gnu.orglicenses/gpl-3.0.html&gt;
-//---------------------------------------------------------------------------------
-</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="../What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a> update <a href="https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_15_0">4.15.0</a></p>
+<ul>
+<li>Preview <a href="https://wayland.freedesktop.org/">Wayland</a> support on Linux.</li>
+<li>new <strong>Task Concurrency API</strong>: It facilitates scheduling tasks for execution on background threads, either concurrently or sequentially. This API also enables the scheduling of tasks on the main thread from any other thread.</li>
+<li>new <strong>UIScripting</strong>: Implement optional scripting support for uidescription.</li>
+<li>new <strong>View Layouter</strong> architecture, enabling flexible and extensible layout management for view containers.</li>
+</ul>
+</li>
+<li>
+<p>Documentation</p>
+<ul>
+<li>Adapt document to <a href="../VST+3+Licensing/Index.html">new licensing model</a>.</li>
+<li>Update <a href="../VST+3+Licensing/Usage+guidelines.html">Steinberg VST usage guidelines</a> document.</li>
+</ul>
+</li>
+<li>
+<p>cmake</p>
+<ul>
+<li>Fix <em>SMTG_AddSMTGLibrary.cmake</em> (macOS/Linux): Remove old symlink before creating a new one.</li>
+<li>Fix <em>SMTG_PlatformToolset.cmake</em> for Visual Studio Compiler: __cplusplus was not assigned to correct version (<a href="https://github.com/steinbergmedia/vst3_cmake/pull/13">pull#13</a>).</li>
+</ul>
+</li>
+<li>
+<p><a href="../What+is+the+VST+3+SDK/Plug-in+Examples.html">Examples</a>:</p>
+<ul>
+<li>Add support of new ControllerNumbers enums in <em>legacymidiccout</em> Plug-in.</li>
+<li>Add support of the new interfaces <a href="../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.html">IMidiLearn2</a> and <a href="../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.html">IMidiMapping2</a> in <em>Note Expression Synth</em> Plug-in.</li>
+<li>EditorHost <a href="https://wayland.freedesktop.org/">Wayland</a> support.</li>
+</ul>
+</li>
+<li>
+<p>Helper Classes:</p>
+<ul>
+<li>Fix: Validator ScanParametersTest::run() - Doesn't Print Parameter Type Correctly (<a href="https://github.com/steinbergmedia/vst3sdk/issues/142">Issue#142</a>).</li>
+<li>Fix: validator.exe and moduleinfotool.exe Debug Version Throws Abort When Checking for Symlink (<a href="https://github.com/steinbergmedia/vst3sdk/issues/145">Issue#145</a>).</li>
+<li>Fix: Undefined Behavior (UB) in Validation Test Suite causes test case to fail (<a href="https://github.com/steinbergmedia/vst3sdk/issues/77">Issue#77</a>).</li>
+</ul>
+</li>
+<li>
+<p><a href="../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST3PluginTestHost</a> v3.10.10:</p>
+<ul>
+<li>Fix: potential crash at start on Windows platform (<a href="https://forums.steinberg.net/t/win10-64bit-vst3plugintesthost-quits-silenty-on-start/1007817/5">Forum</a>).</li>
+</ul>
+</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../pages/VST+3+Licensing/Usage+guidelines.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../pages/Versions/Index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../pages/VST+3+Licensing/Which+files+fall+under+which+license.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../pages/Versions/Version+3.7.14.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -255,11 +247,11 @@ Details of these licenses can be found at: &lt;http://www.gnu.orglicenses/gpl-3.
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../pages/VST+3+Licensing/Usage+guidelines.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../pages/Versions/Index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../pages/VST+3+Licensing/Which+files+fall+under+which+license.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../pages/Versions/Version+3.7.14.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

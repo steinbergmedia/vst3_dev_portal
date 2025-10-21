@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Developer use cases (FAQs) - VST 3 Developer Portal</title>
+        <title>[3.8.0] MIDI Learn 2 (MIDI 2.0 support) - VST 3 Developer Portal</title>
 
 
         <!-- Custom HTML head -->
@@ -12,36 +12,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="shortcut icon" href="../../resources/favicon/favicon-16x16.png" type="image/png">
-        <link rel="shortcut icon" href="../../resources/favicon/favicon-32x32.png" type="image/png">
-        <link rel="shortcut icon" href="../../resources/favicon/favicon-192x192.png" type="image/png">
-        <link rel="shortcut icon" href="../../resources/favicon/favicon-256x256.png" type="image/png">
+        <link rel="shortcut icon" href="../../../../favicon.png">
+        <link rel="shortcut icon" href="../../../../resources/favicon/favicon-16x16.png" type="image/png">
+        <link rel="shortcut icon" href="../../../../resources/favicon/favicon-32x32.png" type="image/png">
+        <link rel="shortcut icon" href="../../../../resources/favicon/favicon-192x192.png" type="image/png">
+        <link rel="shortcut icon" href="../../../../resources/favicon/favicon-256x256.png" type="image/png">
 
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="stylesheet" href="../../../../css/variables.css">
+        <link rel="stylesheet" href="../../../../css/general.css">
+        <link rel="stylesheet" href="../../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../../highlight.css">
-        <link rel="stylesheet" href="../../tomorrow-night.css">
-        <link rel="stylesheet" href="../../ayu-highlight.css">
+        <link rel="stylesheet" href="../../../../highlight.css">
+        <link rel="stylesheet" href="../../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "../../";
+            var path_to_root = "../../../../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "steinberg-dark" : "steinberg-light";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../../../toc.js"></script>
     </head>
     <body>
     <div id="body-container">
@@ -93,7 +93,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../../../../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -124,7 +124,7 @@
                     <h1 class="menu-title">VST 3 Developer Portal</h1>
 
                     <div class="right-buttons">
-                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../../../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         <a href="https://github.com/steinbergmedia/vst3_dev_portal/tree/deploy" title="Git repository" aria-label="Git repository">
@@ -157,26 +157,117 @@
                 <div id="content" class="content">
                     <main>
                         <blockquote>
-<p>/ <a href="../">VST Home</a> / <a href="Index.html">VST 3 Licensing</a></p>
-<h1 id="developer-use-cases-faqs"><a class="header" href="#developer-use-cases-faqs">Developer use cases (FAQs)</a></h1>
+<p>/ <a href="../../../">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
+<h1 id="380-midi-learn-2-midi-20-support"><a class="header" href="#380-midi-learn-2-midi-20-support">[3.8.0] MIDI Learn 2 (MIDI 2.0 support)</a></h1>
 </blockquote>
+<p><strong>On this page:</strong></p>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#example">Example</a></li>
+</ul>
 <p><strong>Related pages:</strong></p>
 <ul>
-<li><a href="Usage+guidelines.html">Steinberg VST usage guidelines</a></li>
-<li><a href="What+are+the+licensing+options.html">What are the licensing options for VST 3?</a></li>
+<li><a href="../../Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping (MIDI 1.0 support)</a></li>
+<li><a href="../../Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn (MIDI 1.0 support)</a></li>
+<li><a href="../../Change+History/3.8.0/IMidiMapping2.html">[3.8.0] Parameter MIDI Mapping 2 (MIDI 2.0 support)</a></li>
 </ul>
 <hr />
-<p>See <strong><a href="../FAQ/Licensing.html">Frequently Asked Questions: Licensing</a></strong></p>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>MIDI Learn Interface: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IMidiLearn2.html">Vst:: IMidiLearn2</a>.</p>
+<ul>
+<li>[plug imp]</li>
+<li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Vst:: IEditController</a>]</li>
+<li>[released: 3.8.0]</li>
+<li>[optional]</li>
+<li>[replaces Vst::IMidiLearn]</li>
+</ul>
+<p>If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI-CC input for the plug-in. This way, the plug-in can change its MIDI-CC parameter mapping and notify the host using the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">Vst:: IComponentHandler::restartComponent</a> with the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a17867782006f9fdb2b72c16b0420bed5ae2e3ed4527f88e577a2aeb595bd853fd">kMidiCCAssignmentChanged</a> flag.</p>
+<p>Use this if you want to implement custom MIDI-Learn functionality in your plug-in.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p><strong>In mycontroller.h</strong></p>
+<pre><code class="language-c++">//------------------------------------------------------------------------
+// here an example of how a VST 3 plug-in could support this IMidiLearn2 interface.
+// we need to define somewhere the iids:
+  
+//in MyController class declaration
+class MyController : public Vst::EditController, public Vst::IMidiLearn2
+{
+    // ...
+    //--- IMidiLearn2 ---------------------------------
+    tresult PLUGIN_API onLiveMidi2ControllerInput (BusIndex index, MidiChannel channel,
+                                                   Midi2Controller midiCC) SMTG_OVERRIDE;
+    
+	tresult PLUGIN_API onLiveMidi1ControllerInput (BusIndex index, MidiChannel channel,
+	                                               CtrlNumber midiCC) SMTG_OVERRIDE;
+    // ...
+  
+    OBJ_METHODS (MyController, Vst::EditController)
+    DEFINE_INTERFACES
+        // ...
+        DEF_INTERFACE (Vst::IMidiLearn2)
+    END_DEFINE_INTERFACES (Vst::EditController)
+    //...
+}
+</code></pre>
+<p><strong>In mycontroller.cpp</strong></p>
+<pre><code class="language-c++">#include "pluginterfaces/vst/ivstmidimapping2.h
+ 
+namespace Steinberg {
+    namespace Vst {
+        DEF_CLASS_IID (IMidiLearn2)
+    }
+}
+  
+//------------------------------------------------------------------------
+tresult PLUGIN_API  MyController::onLiveMidi2ControllerInput (BusIndex index, MidiChannel channel, Midi2Controller midiCC)
+{
+    // if we are not in doMIDILearn (triggered by a UI button for example) or wrong channel then return
+    if (!doMIDILearn || index != 0 || channel != 0 || midiLearnParamID == InvalidParamID)
+        return kResultFalse;
+ 
+    auto currentMapping = midiCCMapping.find ({CCType::CC, midiCC});
+    if (currentMapping == midiCCMapping.end () || currentMapping-&gt;second != midiLearnParamID)
+    {
+        removeCurrentMidiLearnParamAssignment ();
+        midiCCMapping[{CCType::CC, midiCC}] = midiLearnParamID;
+        
+        if (auto _componentHandler = getComponentHandler ())
+            _componentHandler-&gt;restartComponent (kMidiCCAssignmentChanged);
+    }
+    return kResultTrue;
+}
+
+//------------------------------------------------------------------------
+tresult PLUGIN_API  MyController::onLiveMidi1ControllerInput (BusIndex index, MidiChannel channel, CtrlNumber midiCC)
+{
+    // if we are not in doMIDILearn (triggered by a UI button for example) or wrong channel then return
+    if (!doMIDILearn || index != 0 || channel != 0 || midiLearnParamID == InvalidParamID)
+        return kResultFalse;
+ 
+    CCKey key { midiCC.registered ? CCType::RPN : CCType::NRPN, (midiCC.bank &lt;&lt; 7) | midiCC.index };
+    auto currentMapping = midiCCMapping.find (key);
+    if (currentMapping == midiCCMapping.end () || currentMapping-&gt;second != midiLearnParamID)
+    {
+        removeCurrentMidiLearnParamAssignment ();
+        midiCCMapping[key] = midiLearnParamID;
+
+        if (auto _componentHandler = getComponentHandler ())
+            _componentHandler-&gt;restartComponent (kMidiCCAssignmentChanged);
+    }
+    return kResultTrue;
+}
+
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../pages/VST+3+Licensing/Which+files+fall+under+which+license.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../../pages/Technical+Documentation/Change+History/3.7.11/IRemapParamID.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../pages/Getting+Started/Index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../../pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -187,11 +278,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../pages/VST+3+Licensing/Which+files+fall+under+which+license.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../../pages/Technical+Documentation/Change+History/3.7.11/IRemapParamID.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../pages/Getting+Started/Index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../../pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -213,17 +304,17 @@
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../../../elasticlunr.min.js"></script>
+        <script src="../../../../mark.min.js"></script>
+        <script src="../../../../searcher.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../../../clipboard.min.js"></script>
+        <script src="../../../../highlight.js"></script>
+        <script src="../../../../book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="../../mermaid.min.js"></script>
-        <script src="../../mermaid-init.js"></script>
+        <script src="../../../../mermaid.min.js"></script>
+        <script src="../../../../mermaid-init.js"></script>
 
 
     </div>

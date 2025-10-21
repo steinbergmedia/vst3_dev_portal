@@ -184,7 +184,7 @@
 <hr />
 <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
 <p>iOS InterApp-Audio application out of your <strong>VST 3</strong> plug-in.</p>
-<p>The <strong>VST 3 SDK</strong> provides an easy way to create an iOS InterApp-Audio application out of your <strong>VST 3</strong> plug-in.</p>
+<p>The <strong>VST SDK</strong> provides an easy way to create an iOS InterApp-Audio application out of your <strong>VST 3</strong> plug-in.</p>
 <p>The SDK comes with an iOS <strong>VST 3</strong> host application that can run standalone or as an Inter-App Audio slave. If your plug-in does not use any specific Windows or macOS X API's, it should be reasonably easy to get your plug-in running on iOS.</p>
 <p>If you use <a href="../../../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI4</strong></a> with the VST3Editor class as your UI, you mainly only have to create a new UI description for the different device sizes.</p>
 <h2 id="how-does-it-work"><a class="header" href="#how-does-it-work">How does it work?</a></h2>
@@ -196,7 +196,7 @@
 <li>Change the Bundle Identifier according to your registered AppID at Apple (see the Apple Documentation).</li>
 <li>Activate the "Inter-App Audio" capability for the project.</li>
 <li>Activate the "Background Modes" capability for the project and check the "Audio and Airplay" mode.</li>
-<li>Change the "Header Search Path" configuration to add a path to the root of the VST 3 SDK.</li>
+<li>Change the "Header Search Path" configuration to add a path to the root of the VST SDK.</li>
 </ul>
 <h3 id="add-your-audio-component-description-to-the-infoplist"><a class="header" href="#add-your-audio-component-description-to-the-infoplist">Add your Audio Component description to the Info.plist</a></h3>
 <ul>
@@ -211,7 +211,7 @@
 <h3 id="add-files-to-the-project"><a class="header" href="#add-files-to-the-project">Add files to the project</a></h3>
 <ul>
 <li>all the sources from your <strong>VST 3</strong> plug-in project</li>
-<li>all files from <em>public.sdk/source/vst/interappaudio/</em></li>
+<li>all files from <em>public.sdk/source/vst/interappaudio</em></li>
 <li>all files from <em>public.sdk/source/vst/hosting</em></li>
 <li>all files from <em>base/source/</em> (if not already done previously)</li>
 <li><em>public.sdk/source/vst/auwrapper/NSDataIBStream.mm</em> (if not already done previously)</li>
@@ -255,7 +255,7 @@ IPlugView* PLUGIN_API MyEditController::createView (FIDString _name)
 <h3 id="using-vstgui"><a class="header" href="#using-vstgui">Using <a href="../../../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a></a></h3>
 <p><a href="../../../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> 4.3 or higher includes support for iOS. You can use it the same like you use it for Windows or macOS X. See the <a href="../../../What+is+the+VST+3+SDK/VSTGUI.html"><strong>VSTGUI</strong></a> documentation for some limitations.</p>
 <h3 id="using-a-native-uiview"><a class="header" href="#using-a-native-uiview">Using a native UIView</a></h3>
-<p>If you want to create a native UIView as your plug-in editor, you have to create your own IPlugView derivate and attach the UIView in the IPlugView::attached method. An example of this can be seen in <em>"public.sdk/samples/vst/adelay/interappaudio/iosEditor.mm"</em></p>
+<p>If you want to create a native UIView as your plug-in editor, you have to create your own IPlugView derivate and attach the UIView in the <em>IPlugView::attached</em> method. An example of this can be seen in <em>"public.sdk/samples/vst/adelay/interappaudio/iosEditor.mm"</em></p>
 <h3 id="host-ui-integration"><a class="header" href="#host-ui-integration">Host UI Integration</a></h3>
 <p>The example project in <em>"public.sdk/samples/vst/InterAppAudio"</em> uses a custom solution to show the UI for controlling and switching to the host application. You should take this as an example if you want to add it this way. You can also use the UI Apple provides with its example source for Inter-App Audio.</p>
 <p>But you can also implement the host UI integration into your plug-in view. Your edit controller will get an interface to <strong>IInterAppAudioHost</strong> via its initialize method which you can use to get the host icon and send commands or switch to the host. If you use this method to show the host controls you should implement the <strong>IInterAppAudioConnectionNotification</strong> interface in your edit controller to conditionally show or hide the controls depending on the connection state.</p>

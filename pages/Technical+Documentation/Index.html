@@ -160,7 +160,7 @@
 <p>/ <a href="../">VST Home</a></p>
 <h1 id="technical-documentation"><a class="header" href="#technical-documentation">Technical Documentation</a></h1>
 </blockquote>
-<p>Browse the <strong>VST 3 SDK</strong>'s technical documentation. The full <strong>VST 3 API</strong> reference is only available in the <a href="../Getting+Started/Links.html#getting-vst-3-sdk">VST 3 Package</a> that you can download or find online here:</p>
+<p>Browse the <strong>VST SDK</strong>'s technical documentation. The full <strong>VST 3 API</strong> reference is only available in the <a href="../Getting+Started/Links.html#getting-vst-3-sdk">VST 3 Package</a> that you can download or find online here:</p>
 <blockquote>
 <p><a href="https://steinbergmedia.github.io/vst3_doc"><img src="../../resources/steinberg_media_git_screenshot.png" alt="getting_started_vid_2" /></a></p>
 <p><strong><a href="https://steinbergmedia.github.io/vst3_doc">https://steinbergmedia.github.io/vst3_doc</a></strong></p>
@@ -184,7 +184,7 @@
 <li><a href="Change+History/3.0.0/Multiple+Dynamic+IO.html">[3.0.0] Multiple Dynamic I/O Support</a></li>
 <li><a href="Change+History/3.0.0/Silence+flags.html">[3.0.0] Silence flags</a></li>
 <li><a href="Change+History/3.0.0/Host+Interfaces.html">[3.0.0] Interfaces supported by the host</a></li>
-<li><a href="Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping</a></li>
+<li><a href="Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping (MIDI 1.0 support)</a></li>
 <li><a href="Change+History/3.0.2/IParameterFinder.html">[3.0.2] Parameter Finder</a></li>
 <li><a href="Change+History/3.1.0/IAudioPresentationLatency.html">[3.1.0] Audio Presentation Latency</a></li>
 <li><a href="Change+History/3.1.0/IComponentHandler2.html">[3.1.0] UI Group Editing, Dirty State &amp; Open Editor Request</a></li>
@@ -205,7 +205,7 @@
 <li><a href="Change+History/3.6.10/UI+Snapshots.html">[3.6.10] UI Snapshots</a></li>
 <li><a href="Change+History/3.6.11/INoteExpressionPhysicalUIMapping.html">[3.6.11] NoteExpression Physical UI Mapping</a></li>
 <li><a href="Change+History/3.6.12/LegacyMIDICCOutEvent.html">[3.6.12] Legacy MIDI CC Out Event</a></li>
-<li><a href="Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn</a></li>
+<li><a href="Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn (MIDI 1.0 support)</a></li>
 <li><a href="Change+History/3.6.12/IPlugInterfaceSupport.html">[3.6.12] Host Query Interface Support</a></li>
 <li><a href="Change+History/3.6.12/IVst3WrapperMPESupport.html">[3.6.12] MPE support for Wrappers</a></li>
 <li><a href="Change+History/3.7.0/IParameterFunctionName.html">[3.7.0] Parameter Function Name</a></li>
@@ -216,6 +216,8 @@
 <li><a href="Change+History/3.7.9/IComponentHandlerSystemTime.html">[3.7.9] Get Current SystemTime</a></li>
 <li><a href="Change+History/3.7.9/IDataExchangeHandler.html">[3.7.9] Data Transfert Between Processor/Controller</a></li>
 <li><a href="Change+History/3.7.11/IRemapParamID.html">[3.7.11] Remap Parameter ID</a></li>
+<li><a href="Change+History/3.8.0/IMidiLearn2.html">[3.8.0] MIDI Learn 2 (MIDI 2.0 support)</a></li>
+<li><a href="Change+History/3.8.0/IMidiMapping2.html">[3.8.0] Parameter MIDI Mapping 2 (MIDI 2.0 support)</a></li>
 </ul>
 <hr />
 <h2 id="vst-3-api-documentation"><a class="header" href="#vst-3-api-documentation"><a href="API+Documentation/Index.html">VST 3 API Documentation</a></a></h2>
@@ -245,8 +247,8 @@
 <p>List of interfaces supported/implemented by the plug-in in <strong>VST 3.0.0</strong>.</p>
 <h2 id="300-interfaces-supported-by-the-host"><a class="header" href="#300-interfaces-supported-by-the-host"><a href="Change+History/3.0.0/Host+Interfaces.html">[3.0.0] Interfaces supported by the host</a></a></h2>
 <p>List of interfaces supported/implemented by the host in <strong>VST 3.0.0</strong>.</p>
-<h2 id="301-parameter-midi-mapping"><a class="header" href="#301-parameter-midi-mapping"><a href="Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping</a></a></h2>
-<p>How the mapping works between MIDI CCs and parameters.</p>
+<h2 id="301-parameter-midi-mapping-midi-10-support"><a class="header" href="#301-parameter-midi-mapping-midi-10-support"><a href="Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping (MIDI 1.0 support)</a></a></h2>
+<p>How the mapping works between MIDI 1.0 CCs and parameters.</p>
 <h2 id="302-parameter-finder"><a class="header" href="#302-parameter-finder"><a href="Change+History/3.0.2/IParameterFinder.html">[3.0.2] Parameter Finder</a></a></h2>
 <p>How the host can retrieve the parameter where the mouse cursor is located.</p>
 <h2 id="310-audio-presentation-latency"><a class="header" href="#310-audio-presentation-latency"><a href="Change+History/3.1.0/IAudioPresentationLatency.html">[3.1.0] Audio Presentation Latency</a></a></h2>
@@ -287,8 +289,8 @@
 <p>With this plug-in interface, the host can retrieve the preferred physical mapping associated to note expression supported by the plug-in.</p>
 <h2 id="3612-legacy-midi-cc-out-event"><a class="header" href="#3612-legacy-midi-cc-out-event"><a href="Change+History/3.6.12/LegacyMIDICCOutEvent.html">[3.6.12] Legacy MIDI CC Out Event</a></a></h2>
 <p>This kind of event is reserved for generating MIDI CC as output event for kEvent Bus during the process call.</p>
-<h2 id="3612-midi-learn"><a class="header" href="#3612-midi-learn"><a href="Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn</a></a></h2>
-<p>If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI-CC input for the plug-in.</p>
+<h2 id="3612-midi-learn-midi-10-support"><a class="header" href="#3612-midi-learn-midi-10-support"><a href="Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn (MIDI 1.0 support)</a></a></h2>
+<p>If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI 1.0-CC input for the plug-in.</p>
 <h2 id="3612-host-query-interface-support"><a class="header" href="#3612-host-query-interface-support"><a href="Change+History/3.6.12/IPlugInterfaceSupport.html">[3.6.12] Host Query Interface Support</a></a></h2>
 <p>Allows a plug-in to ask the host if a given plug-in interface is supported/used by the host.</p>
 <h2 id="3612-mpe-support-for-wrappers"><a class="header" href="#3612-mpe-support-for-wrappers"><a href="Change+History/3.6.12/IVst3WrapperMPESupport.html">[3.6.12] MPE support for Wrappers</a></a></h2>
@@ -307,6 +309,10 @@
 <p>These interfaces allow you to send data with a direct and thread-safe connection from the realtime audio context of the audio processor to the non-realtime audio context of the edit controller.</p>
 <h2 id="3711-remap-parameter-id"><a class="header" href="#3711-remap-parameter-id"><a href="Change+History/3.7.11/IRemapParamID.html">[3.7.11] Remap Parameter ID</a></a></h2>
 <p>This interface allows the plug-in to ask the host to remap some parameter ID if needed.</p>
+<h2 id="380-parameter-midi-mapping-2-midi-20-support"><a class="header" href="#380-parameter-midi-mapping-2-midi-20-support"><a href="Change+History/3.8.0/IMidiMapping2.html">[3.8.0] Parameter MIDI Mapping 2 (MIDI 2.0 support)</a></a></h2>
+<p>How the mapping works between MIDI 2.0 CCs and parameters (replace <a href="Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping (MIDI 1.0 support)</a>).</p>
+<h2 id="380-midi-learn-2-midi-20-support"><a class="header" href="#380-midi-learn-2-midi-20-support"><a href="Change+History/3.8.0/IMidiLearn2.html">[3.8.0] MIDI Learn 2 (MIDI 2.0 support)</a></a></h2>
+<p>If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI 2.0-CC input for the plug-in (replace <a href="Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn (MIDI 1.0 support)</a>).</p>
 
                     </main>
 

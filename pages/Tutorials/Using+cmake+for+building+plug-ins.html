@@ -172,6 +172,7 @@
 <ul>
 <li><a href="#specific-windows">Specific Windows</a></li>
 <li><a href="#specific-macosios">Specific macOS/iOS</a></li>
+<li><a href="#specific-linux">Specific Linux</a></li>
 </ul>
 </li>
 <li><a href="#using-your-ide-for-compiling-the-examples">Using your IDE for compiling the examples</a></li>
@@ -185,7 +186,7 @@
 </ul>
 <hr />
 <h2 id="goal"><a class="header" href="#goal">Goal</a></h2>
-<p>This tutorial explains how to use <em>cmake</em> with <strong>VST 3 SDK</strong>.</p>
+<p>This tutorial explains how to use <em>cmake</em> with <strong>VST SDK</strong>.</p>
 <hr />
 <h2 id="cmake-for-building-vst-3-plug-ins"><a class="header" href="#cmake-for-building-vst-3-plug-ins">CMake for building VST 3 plug-ins</a></h2>
 <p>The SDK provides a set of cmake files allowing you to compile the included samples and to develop new plug-ins.</p>
@@ -196,7 +197,7 @@
 <hr />
 <h2 id="command-line-for-windows"><a class="header" href="#command-line-for-windows">Command line for Windows</a></h2>
 <p>Example for building <strong>Microsoft Studio 17 2022</strong> solution:</p>
-<pre><code class="language-c++">// go in to the folder where you extracted the VST 3 SDK
+<pre><code class="language-c++">// go in to the folder where you extracted the VST SDK
 mkdir build
 cd build
 cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk"
@@ -211,7 +212,7 @@ cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_US
 <hr />
 <h2 id="command-line-for-macos"><a class="header" href="#command-line-for-macos">Command line for macOS</a></h2>
 <p>Example for building <strong>Xcode</strong> project:</p>
-<pre><code class="language-c++">// go in to the folder where you extracted the VST 3 SDK
+<pre><code class="language-c++">// go in to the folder where you extracted the VST SDK
 mkdir build
 cd build
 /Applications/CMake.app/Content/bin/cmake -G"Xcode" "../vst3sdk"
@@ -289,6 +290,10 @@ cmake -DCMAKE_C_COMPILER=/usr/bin/gcc-DCMAKE_CXX_COMPILER=/usr/bin/g++
 <li><code>SMTG_VSTSDK_GENERATE_MACOS_IOS_COLLECTION_TARGETS</code>: Create macOS and iOS collection targets (default OFF)</li>
 <li><code>SMTG_XCODE_MANUAL_CODE_SIGN_STYLE</code>: Manual Xcode sign style (default OFF)</li>
 <li><code>SMTG_XCODE_OTHER_CODE_SIGNING_FLAGS</code>: Other code signing flags [Xcode] (default --timestamp)</li>
+</ul>
+<h3 id="specific-linux"><a class="header" href="#specific-linux">Specific Linux</a></h3>
+<ul>
+<li><code>SMTG_ENABLE_WAYLAND_SUPPORT</code>: Enable <a href="https://wayland.freedesktop.org/">Wayland</a> Support (default OFF)</li>
 </ul>
 <hr />
 <h2 id="using-your-ide-for-compiling-the-examples"><a class="header" href="#using-your-ide-for-compiling-the-examples">Using your IDE for compiling the examples</a></h2>

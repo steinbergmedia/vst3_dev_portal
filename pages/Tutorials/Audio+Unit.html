@@ -185,7 +185,7 @@
 <p>The <em>AudioUnit Version 2</em> target needs the official <em>AudioUnit SDK</em> from Apple.
 As of this writing you can find it on GitHub: <a href="https://github.com/apple/AudioUnitSDK">https://github.com/apple/AudioUnitSDK</a></p>
 <p>How you obtain and store the SDK is up to you, for the reproducibility of this tutorial, we will download it via <em>CMake</em> when generating the project.
-So we add the following text to the <em>CMakeLists.txt</em> directly before we include the <strong>VST 3 SDK</strong>.</p>
+So we add the following text to the <em>CMakeLists.txt</em> directly before we include the <strong>VST SDK</strong>.</p>
 <pre><code>include(FetchContent)
 FetchContent_Declare(
 	AudioUnitSDK
@@ -198,7 +198,7 @@ FetchContent_GetProperties(
 	SOURCE_DIR SMTG_AUDIOUNIT_SDK_PATH
 )
 </code></pre>
-<p>It is important to set the <code>SMTG_AUDIOUNIT_SDK_PATH</code> variable to tell the <strong>VST 3 SDK</strong> where to find the AudioUnit SDK.</p>
+<p>It is important to set the <code>SMTG_AUDIOUNIT_SDK_PATH</code> variable to tell the <strong>VST SDK</strong> where to find the AudioUnit SDK.</p>
 <h2 id="creating-the-property-list"><a class="header" href="#creating-the-property-list">Creating the property list</a></h2>
 <p>For <em>AudioUnit Version 2</em> you need a manufacturer OSType registered with Apple.
 How to do this is out of the scope for this tutorial, please search the web on how this is done.</p>

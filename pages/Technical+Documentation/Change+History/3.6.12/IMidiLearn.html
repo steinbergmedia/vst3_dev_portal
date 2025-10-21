@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>[3.6.12] MIDI Learn - VST 3 Developer Portal</title>
+        <title>[3.6.12] MIDI Learn (MIDI 1.0 support) - VST 3 Developer Portal</title>
 
 
         <!-- Custom HTML head -->
@@ -158,7 +158,7 @@
                     <main>
                         <blockquote>
 <p>/ <a href="../../../">VST Home</a> / <a href="../../Index.html">Technical Documentation</a></p>
-<h1 id="3612-midi-learn"><a class="header" href="#3612-midi-learn">[3.6.12] MIDI Learn</a></h1>
+<h1 id="3612-midi-learn-midi-10-support"><a class="header" href="#3612-midi-learn-midi-10-support">[3.6.12] MIDI Learn (MIDI 1.0 support)</a></h1>
 </blockquote>
 <p><strong>On this page:</strong></p>
 <ul>
@@ -167,7 +167,9 @@
 </ul>
 <p><strong>Related pages:</strong></p>
 <ul>
-<li><a href="../../Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping</a></li>
+<li><a href="../../Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping (MIDI 1.0 support)</a></li>
+<li><a href="../../Change+History/3.8.0/IMidiMapping2.html">[3.8.0] Parameter MIDI Mapping 2 (MIDI 2.0 support)</a></li>
+<li><a href="../../Change+History/3.8.0/IMidiLearn2.html">[3.8.0] MIDI Learn 2 (MIDI 2.0 support)</a></li>
 </ul>
 <hr />
 <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
@@ -176,9 +178,10 @@
 <li>[plug imp]</li>
 <li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Vst:: IEditController</a>]</li>
 <li>[released: 3.6.12]</li>
-<li>[mandatory]</li>
+<li>[optional]</li>
 </ul>
-<p>If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI-CC input for the plug-in. This way, the plug-in can change its MIDI-CC parameter mapping and inform the host via the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">Vst:: IComponentHandler::restartComponent</a> with the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a17867782006f9fdb2b72c16b0420bed5ae2e3ed4527f88e577a2aeb595bd853fd">kMidiCCAssignmentChanged</a> flag. Use this if you want to implement custom MIDI-Learn functionality in your plug-in.</p>
+<p>If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI-CC input for the plug-in. This way, the plug-in can change its MIDI-CC parameter mapping and notify the host using the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a1f283573728cf0807224c5ebdf3ec3a6">Vst:: IComponentHandler::restartComponent</a> with the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a17867782006f9fdb2b72c16b0420bed5ae2e3ed4527f88e577a2aeb595bd853fd">kMidiCCAssignmentChanged</a> flag.</p>
+<p>Use this if you want to implement custom MIDI-Learn functionality in your plug-in.</p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <p><strong>In mycontroller.h</strong></p>
 <pre><code class="language-c++">//------------------------------------------------------------------------

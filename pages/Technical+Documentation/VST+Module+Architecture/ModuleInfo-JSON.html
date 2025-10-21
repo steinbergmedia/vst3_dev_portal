@@ -165,13 +165,13 @@
 The file is encoded in <a href="http://json5.org">JSON5</a> format.</p>
 <p>The Compatibility json array is used to declare a class to be treated as a replacement for another class or classes.</p>
 <p>When used this way, the host does not need to load the component to know which classes the module provides.</p>
-<p>This optional <em>moduleinfo.json</em> file was added in the <strong>VST 3 SDK</strong> version 3.7.5 and was located in the <strong>Contents</strong> folder of the bundle. In order to be compliant with code signing on macOS, this file is now (since version 3.7.8) located in the <strong>Contents/Resources</strong> folder.</p>
+<p>This optional <em>moduleinfo.json</em> file was added in the <strong>VST SDK</strong> version 3.7.5 and was located in the <strong>Contents</strong> folder of the bundle. In order to be compliant with code signing on macOS, this file is now (since version 3.7.8) located in the <strong>Contents/Resources</strong> folder.</p>
 <h2 id="sdk"><a class="header" href="#sdk">SDK</a></h2>
-<p>The <strong>VST 3 SDK</strong> contains a command-line utility called <em>moduleinfotool</em> that is used to create and validate the <em>moduleinfo.json</em> file from a VST plug-in.
+<p>The <strong>VST SDK</strong> contains a command-line utility called <em>moduleinfotool</em> that is used to create and validate the <em>moduleinfo.json</em> file from a VST plug-in.
 See <strong>public.sdk/vst-utilities/moduleinfotool</strong>.</p>
 <p>The <em>moduleinfotool</em> uses the ModuleInfoLib which can be used by hosts to read and parse the <em>moduleinfo.json</em> file.
 See <strong>public.sdk/source/vst/moduleinfo</strong></p>
-<p>For plug-ins built with the <strong>VST 3 SDK</strong>, the <em>moduleinfo.json</em> file will be automatically created during the build process.</p>
+<p>For plug-ins built with the <strong>VST SDK</strong>, the <em>moduleinfo.json</em> file will be automatically created during the build process.</p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <p>An example <em>moduleinfo.json</em> looks like this:</p>
 <pre><code class="language-json">{
