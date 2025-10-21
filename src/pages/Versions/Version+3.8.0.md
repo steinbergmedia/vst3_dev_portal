@@ -15,10 +15,13 @@
     - new Platform UI Type: *kPlatformTypeWaylandSurfaceID*.
 
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.15.0](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_15_0)
-  - Preview [Wayland](https://wayland.freedesktop.org/) support on Linux.
   - new **Task Concurrency API**: It facilitates scheduling tasks for execution on background threads, either concurrently or sequentially. This API also enables the scheduling of tasks on the main thread from any other thread.
-  - new **UIScripting**: Implement optional scripting support for uidescription.
-  - new **View Layouter** architecture, enabling flexible and extensible layout management for view containers.
+  - add support for custom view layouts (see **IViewLayouter** and **CViewContainer::setViewLayouter**).
+  - add a grid view layouter that is similar to CSS Grid (see **GridLayouter**).
+  - add Scripting for UIDescription (see **uidescription-scripting/uiscripting.md**)
+  - add new text editor view (see **lib/ctexteditor.h**)
+  - a scroll view can now have a top and a left edge view (see **CScrollView::setEdgeView**)
+  - preliminary [Wayland](https://wayland.freedesktop.org/) support on Linux.
 
 - Documentation
   - Adapt document to [new licensing model](../VST+3+Licensing/Index.md).
