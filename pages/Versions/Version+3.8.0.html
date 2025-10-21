@@ -184,10 +184,13 @@
 <li>
 <p><a href="../What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a> update <a href="https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_15_0">4.15.0</a></p>
 <ul>
-<li>Preview <a href="https://wayland.freedesktop.org/">Wayland</a> support on Linux.</li>
 <li>new <strong>Task Concurrency API</strong>: It facilitates scheduling tasks for execution on background threads, either concurrently or sequentially. This API also enables the scheduling of tasks on the main thread from any other thread.</li>
-<li>new <strong>UIScripting</strong>: Implement optional scripting support for uidescription.</li>
-<li>new <strong>View Layouter</strong> architecture, enabling flexible and extensible layout management for view containers.</li>
+<li>add support for custom view layouts (see <strong>IViewLayouter</strong> and <strong>CViewContainer::setViewLayouter</strong>).</li>
+<li>add a grid view layouter that is similar to CSS Grid (see <strong>GridLayouter</strong>).</li>
+<li>add Scripting for UIDescription (see <strong>uidescription-scripting/uiscripting.md</strong>)</li>
+<li>add new text editor view (see <strong>lib/ctexteditor.h</strong>)</li>
+<li>a scroll view can now have a top and a left edge view (see <strong>CScrollView::setEdgeView</strong>)</li>
+<li>preliminary <a href="https://wayland.freedesktop.org/">Wayland</a> support on Linux.</li>
 </ul>
 </li>
 <li>
