@@ -23,7 +23,9 @@
 
 - Neither fees nor memberships are required.
 
-- The license never expires.
+- No need to sign any documents.
+
+- The license is perpetual and does not expire.
 
 - Code licensed under [MIT license](https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide) can be used, modified, and redistributed freely — including in commercial products — provided [MIT license](https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide) terms are followed.
 
@@ -50,10 +52,9 @@ Although optional, we encourage developers using VST under [MIT license](https:/
 ## Steinberg VST 3 MIT License file
 
 ```
-//-----------------------------------------------------------------------------
 MIT License
 
-Copyright (c) 2025, Steinberg Media Technologies GmbH, All rights reserved.
+Copyright (c) 2025, Steinberg Media Technologies GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -72,8 +73,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-//---------------------------------------------------------------------------------
 ```
 
 >ⓘ **Note**\
