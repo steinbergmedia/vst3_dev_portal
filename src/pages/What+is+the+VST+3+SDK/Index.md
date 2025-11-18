@@ -72,7 +72,7 @@ iOS InterApp-Audio application out of your **VST 3** plug-in
 
 ## [VST 3 Licensing](../VST+3+Licensing/Index.md)
 
-Please sign this **Steinberg VST 3 Plug-in SDK Licensing Agreement** if you want to develop, release or host **VST 3** plug-Ins.
+VST 3 SDK is under **MIT license**.
 
 ## System requirements
 

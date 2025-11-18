@@ -46,9 +46,6 @@ Clone the **VST SDK** repository from **GitHub** for easy integration into your 
 
 >**<https://github.com/steinbergmedia/vst3sdk>**
 
->ⓘ **Note**\
->Independently of the download source of the **VST SDK** be sure that you follow the license agreement (check [What are the licensing options for VST 3?](../VST+3+Licensing/VST3+License.md))
-
 ## Online Documentation
 
 Browse the **VST SDK**'s online documentation including **API** reference and sample code:
