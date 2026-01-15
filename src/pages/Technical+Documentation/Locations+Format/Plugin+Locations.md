@@ -67,9 +67,11 @@ On the Linux platform, the host application expects **VST 3** plug-ins to be loc
 | Prio  | Location      | Path                  |
 | :-    | :-            | :-                    |
 | 1     | User          | $HOME/.vst3/          |
-| 2     | Global        | /usr/lib/vst3/        |
-| 3     | Global        | /usr/local/lib/vst3/  |
-| 4     | Application   | $APPFOLDER/vst3/      |
+| 2     | Global        | /usr/lib64/vst3/      | defined in Fedora distribution
+| 3     | Global        | /usr/lib/vst3/        |
+| 4     | Global        | /usr/local/lib64/vst3/|
+| 5     | Global        | /usr/local/lib/vst3/  |
+| 6     | Application   | $APPFOLDER/vst3/      |
 
 >ⓘ **Note**\
 >The host recursively scans these folders at startup in this order (User/Global/Application).
