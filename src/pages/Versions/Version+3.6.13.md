@@ -10,7 +10,7 @@
 - Interfaces changes:
   - new PluginType kInstrumentPiano (instrument for piano sounds).
 
-- cmake:
+- CMake:
   - minor refactoring.
   - add Visual Studio 2020 support.
 

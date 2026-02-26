@@ -25,7 +25,7 @@ There are simple casting functions in *pluginterfaces/base/fstrdefs.h* (see **ws
 - Documentation
   - New tutorial: [Guideline for replacing a VST 2 plug-in by a VST 3 plug-in](../Tutorials/Guideline+for+VST3+replacing+VST2.md).
 
-- cmake
+- CMake
   - New file *SMTG_AddVST3AuV2.cmake*:
     - Add AUv2 target for a **VST 3** plug-in
     - Reworked AU Objective-C Namespace handling

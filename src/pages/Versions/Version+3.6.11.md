@@ -19,7 +19,7 @@
   - VST 2 interface not available anymore!
   - New [Vst:: INoteExpressionPhysicalUIMapping](../Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping.md) (plug-in): allowing the host to retrieve the preferred physical mapping associated to note expression supported by the plug-in.
 
-- cmake:
+- CMake:
   - further improvement for users projects
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):

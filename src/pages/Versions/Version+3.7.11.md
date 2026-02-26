@@ -13,7 +13,7 @@
 - Documentation
   - new doc for [Vst:: IRemapParamID](../Technical+Documentation/Change+History/3.7.11/IRemapParamID.md).
 
-- cmake
+- CMake
   - references to **VST 2** are removed from the SDK.
  
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):

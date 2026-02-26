@@ -24,17 +24,17 @@
   - preliminary [Wayland](https://wayland.freedesktop.org/) support on Linux.
 
 - Documentation
-  - Adapt document to [new licensing model](../VST+3+Licensing/Index.md).
+  - Update documentation for the [new licensing model](../VST+3+Licensing/Index.md).
   - Update [Steinberg VST usage guidelines](../VST+3+Licensing/Usage+guidelines.md) document.
 
-- cmake
+- CMake
   - Fix *SMTG_AddSMTGLibrary.cmake* (macOS/Linux): Remove old symlink before creating a new one.
   - Fix *SMTG_PlatformToolset.cmake* for Visual Studio Compiler: __cplusplus was not assigned to correct version ([PR#13](https://github.com/steinbergmedia/vst3_cmake/pull/13)).
   
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
-  - Add support of new ControllerNumbers enums in *legacymidiccout* Plug-in.
-  - Add support of the new interfaces [IMidiLearn2](../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md) and [IMidiMapping2](../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md) in *Note Expression Synth* Plug-in.
-  - EditorHost [Wayland](https://wayland.freedesktop.org/) support.
+  - Add support for new ControllerNumbers enums in *legacymidiccout* Plug-in.
+  - Add support for the new interfaces [IMidiLearn2](../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md) and [IMidiMapping2](../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md) in *Note Expression Synth* Plug-in.
+  - Add EditorHost [Wayland](https://wayland.freedesktop.org/) support.
 
 - Helper Classes:
   - Fix: Validator ScanParametersTest::run() - Doesn't Print Parameter Type Correctly ([Issue#142](https://github.com/steinbergmedia/vst3sdk/issues/142)).

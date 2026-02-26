@@ -15,7 +15,7 @@
 
 - Licensing has changed to version 2.2.2! Please read the new license agreement [VST 3 Licensing Issues](../VST+3+Licensing/Index.md). (if you have already signed the version 2.0 of the license agreement you do not have to sign it again).
 
-- cmake:
+- CMake:
   - **Refactoring**: rename function/macro by adding target when target is used: i.e. smtg_run_vst_validator => smtg_target_run_vst_validator.
   - **Breaking Change**: change smtg_add_vst3_resource to smtg_target_add_plugin_resources allowing to add multiple resources in a call.
   - **Breaking Change**: change smtg_add_vst3_snapshot to smtg_target_add_plugin_snapshots allowing to add multiple resources in a call.

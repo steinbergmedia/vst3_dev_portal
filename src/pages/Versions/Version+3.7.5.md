@@ -30,7 +30,7 @@
   - New tutorial explaining [How to use the silence flags](../Tutorials/how+to+use+the+silence+flags.md).
   - Move VST 3 documentation to md files.
 
-- cmake
+- CMake
   - Minimum cmake version is now 3.19.
   - New function *smtg_target_setup_as_vst3_example*.
   - Change *smtg_target_set_bundle* for mac.

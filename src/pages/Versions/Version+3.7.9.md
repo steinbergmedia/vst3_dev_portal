@@ -22,7 +22,7 @@
   - New tutorial: [Data Exchange Tutorial - How to send data from the realtime process to the edit controller](../Tutorials/Data+Exchange.md).
   - New doc page about [Provide a RunLoop on Linux](../Technical+Documentation/Provide+A+Runloop+On+Linux/Index.md).
 
-- cmake
+- CMake
   - Change minimal cmake version to 3.5.0.
   - Partially fix for Windows, create destination installation folders if they don't exist [(Issue#8)](https://github.com/steinbergmedia/vst3_cmake/issues/8).
 

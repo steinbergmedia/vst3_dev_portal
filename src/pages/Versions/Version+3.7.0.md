@@ -25,7 +25,7 @@
     - [MIDI 2.0 Increased Resolution, compared to MIDI 1.0](../Technical+Documentation/About+MIDI/Index.md).
     - [MIDI 2.0 Per-Note Controllers](../Technical+Documentation/About+MIDI/Index.md).
 
-- cmake:
+- CMake:
   - New cmake files.
   - Fix on Windows creation of VST 3 folder using powershell with admin rights.
 
