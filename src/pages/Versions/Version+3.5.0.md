@@ -20,8 +20,8 @@
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - New VST 3 instrument examples:
-    - Instrument "Note Expression Synth" supporting Note Expression Events.
-    - Effect showing support of pitchnames (ProgramPitchNames).
+    - Instrument [Note Expression Synth](../What+is+the+VST+3+SDK/Plug-in+Examples.md#note-expression-synth) Plug-in supporting Note Expression Events.
+    - Effect showing support of ProgramPitchNames [PitchNames](../What+is+the+VST+3+SDK/Plug-in+Examples.md#pitchnames).
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - More command line options.
