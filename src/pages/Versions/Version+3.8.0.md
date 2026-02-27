@@ -33,7 +33,7 @@
   
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):
   - Add support for new ControllerNumbers enums in *legacymidiccout* Plug-in.
-  - Add support for the new interfaces [IMidiLearn2](../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md) and [IMidiMapping2](../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md) in *Note Expression Synth* Plug-in.
+  - Add support for the new interfaces [IMidiLearn2](../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md) and [IMidiMapping2](../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md) in  [Note Expression Synth](../What+is+the+VST+3+SDK/Plug-in+Examples.md#note-expression-synth) Plug-in.
   - Add EditorHost [Wayland](https://wayland.freedesktop.org/) support.
 
 - Helper Classes:
