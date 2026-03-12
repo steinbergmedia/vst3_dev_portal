@@ -28,6 +28,11 @@ If this interface is implemented by the edit controller, the host will call this
 
 Use this if you want to implement custom MIDI-Learn functionality in your plug-in.
 
+**Note**:
+The struct [Midi2Controller](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Midi2Controller.html) refers to MIDI 2 Registered and Assignable Controllers. These UMP MIDI 2 message types are specified by the MIDI Association to map and translate directly to MIDI 1 RPN and NRPN. In that regard, they are both MIDI 1 and MIDI 2.
+
+Generally, plug-ins should avoid allowing n-to-m mappings of controllers and parameters, as this could lead to inconsistent states in how controllers and parameters are represented within the host, which could confuse users. Nevertheless, there may be special situations where such mappings are intended, e.g., when layering sounds within a multitimbral plug-in. Therefore, such mappings are allowed.
+
 ## Example
 
 **In mycontroller.h**
