@@ -291,7 +291,6 @@ if (editController)
 
     // synchronize controller to component by using setComponentState
     MemoryStream stream; // defined in "public.sdk/source/common/memorystream.h"
-    stream.setByteOrder (kLittleEndian);
     if (processorComponent->getState (&stream) == kResultTrue)
     {
         stream.rewind ();
