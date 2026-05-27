@@ -292,7 +292,8 @@ if (editController)
     MemoryStream stream; // defined in "public.sdk/source/common/memorystream.h"
     if (processorComponent->getState (&stream) == kResultTrue)
     {
-        stream.rewind ();
+        // rewind to start of the stream
+        stream.seek (0, IBStream::IStreamSeekMode::kIBSeekSet, nullptr);
         editController->setComponentState (&stream);
     }
 
