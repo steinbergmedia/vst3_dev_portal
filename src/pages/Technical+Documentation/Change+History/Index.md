@@ -39,3 +39,4 @@
 - [\[3.8.0\] MIDI Learn 2 (MIDI 2.0 support)](../Change+History/3.8.0/IMidiLearn2.md)
 - [\[3.8.0\] Parameter MIDI Mapping 2 (MIDI 2.0 support)](../Change+History/3.8.0/IMidiMapping2.md)
 - [\[3.8.0\] Wayland Support (Linux)](../Change+History/3.8.0/IWaylandHost.md)
+- [\[3.8.1\] Transport Control](../Change+History/3.8.1/ITransportControl.md)

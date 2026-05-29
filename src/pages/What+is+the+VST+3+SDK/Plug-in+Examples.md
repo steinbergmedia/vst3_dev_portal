@@ -271,6 +271,14 @@ Very simple delay plug-in:
 
 Check the folder *"public.sdk/samples/vst/syncdelay"* of the SDK!
 
+## Transport Control
+
+Simple plug-in:
+
+- showing how to support [Vst:: ITransportControl](../Technical+Documentation/Change+History/3.8.1/ITransportControl.md)
+
+![what_if_47](../../resources/what_is_47.png)
+
 ## UTF16 Name
 
 Very simple plug-in:
