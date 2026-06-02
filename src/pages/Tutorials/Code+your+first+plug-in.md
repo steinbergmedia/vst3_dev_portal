@@ -405,9 +405,9 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData&data)
 }
 ```
 
-### Add a mono audio [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain)
+### Add a mono audio [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md#what-is-a-side-chain)
 
-In our example we want to modulate our main audio input with a [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) audio input.
+In our example we want to modulate our main audio input with a [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md#what-is-a-side-chain) audio input.
 
 1. First, add a new side-chain audio input (busType: ***kAux***) in the **initialize** call of our processor:
 

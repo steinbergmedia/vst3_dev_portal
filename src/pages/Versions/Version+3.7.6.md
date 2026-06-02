@@ -12,7 +12,7 @@ But implementations may have to be adopted especially on Windows where the tchar
 There are simple casting functions in *pluginterfaces/base/fstrdefs.h* (see **wscast**) for easy adoption.
 
 - Interface changes:
-  - New [architecture folder for Windows Arm64EC and Arm64 Classic](../Technical+Documentation/Locations+Format/Plugin+Format.html#for-the-windows-platform)
+  - New [architecture folder for Windows Arm64EC and Arm64 Classic](../Technical+Documentation/Locations+Format/Plugin+Format.md#for-the-windows-platform)
   - New macro `SMTG_HIDDEN_SYMBOL` in *pluginterfaces/base/fplatform.h*
   
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) Bugfix update [4.11.1](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_11_1)

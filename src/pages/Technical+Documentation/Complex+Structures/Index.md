@@ -58,13 +58,13 @@ Similar to the simple case, the host may want to save and load preset files. The
   - To support this, the plug-in must implement the [Vst:: IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html) interface in its component part.
 
 - The contents of an item in the program list
-  - To support this, the plug-in must implement the [Vst:: IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html) interface in its component part.
+  - To support this, the plug-in must implement the [Vst:: IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html) interface in its component part.
 
 A plug-in can support unit presets and program list presets.
 
 ![Tech_doc_19](../../../resources/tech_doc_19.jpg)
 
-See also [Presets & Program Lists](../Presets+Program+Lists/Index.md), [Vst:: IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html), [Vst:: IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html).
+See also [Presets & Program Lists](../Presets+Program+Lists/Index.md), [Vst:: IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html), [Vst:: IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html).
 
 ## Units and Tracks
 

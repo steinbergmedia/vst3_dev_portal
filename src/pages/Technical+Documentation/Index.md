@@ -248,3 +248,7 @@ How the mapping works between MIDI 2.0 CCs and parameters (replace [\[3.0.1\] Pa
 ## [\[3.8.0\] MIDI Learn 2 (MIDI 2.0 support)](Change+History/3.8.0/IMidiLearn2.md)
 
 If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI 2.0-CC input for the plug-in (replace [\[3.6.12\] MIDI Learn (MIDI 1.0 support)](Change+History/3.6.12/IMidiLearn.md)).
+
+## [\[3.8.1\] Transport Control](Change+History/3.8.1/ITransportControl.md)
+
+This interface allows a plug-in to request transport-related actions from the host.

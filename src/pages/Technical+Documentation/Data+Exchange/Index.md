@@ -72,7 +72,7 @@ The host guarantees that all blocks are sent before the plug-in is deactivated.
 
 #### Closing a queue
 
-The audio processor must close an open queue. This need to be done after deactivating the processor and prior to disconnecting it from the edit controller (see [Vst:: IConnectionPoint](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html)).
+The audio processor must close an open queue. This needs to be done after deactivating the processor and prior to disconnecting it from the edit controller (see [Vst:: IConnectionPoint](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html)).
 
 #### What to do when the queue is full and no block can be locked?
 The plug-in needs to be prepared for this situation, as constraints in the overall system may cause the queue to fill up excessively. If you need to transfer the information to the controller, you can declare a hidden parameter, which you can set to a special value and send this parameter change in your audio process method.
