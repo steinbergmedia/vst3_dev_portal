@@ -174,7 +174,7 @@ The [Vst:: IComponent](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/c
 
 3. The host can ask for routing information ([Vst::RoutingInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1RoutingInfo.html)).
 
-4. The host can activate or deactivate a specific bus like [side-chain](../Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain). A deactivated bus should be not processed by the plug-in. See [Vst:: IComponent::activateBus](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a3ab7d06aaefe03da1fcd1819f1261050)
+4. The host can activate or deactivate a specific bus like [side-chain](../Change+History/3.0.0/Multiple+Dynamic+IO.md#what-is-a-side-chain). A deactivated bus should be not processed by the plug-in. See [Vst:: IComponent::activateBus](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a3ab7d06aaefe03da1fcd1819f1261050)
 
 5. The host can activate or deactivate the plug-in (On/Off button). See [Vst:: IComponent::setActive](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a0a840e8077eb74ec429b8007c7b83517)
 

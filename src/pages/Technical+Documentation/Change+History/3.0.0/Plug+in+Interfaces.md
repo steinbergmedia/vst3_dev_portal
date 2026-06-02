@@ -60,7 +60,7 @@ Connect a component with another one.
 
 This interface is used for the communication of separate components. Note that some hosts will place a proxy object between the components so that they are not directly connected.
 
-See also [Communication between the components](../../API+Documentation/Index.html#communication-between-the-components).
+See also [Communication between the components](../../API+Documentation/Index.md#communication-between-the-components).
 
 ## [Vst:: IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html)
 

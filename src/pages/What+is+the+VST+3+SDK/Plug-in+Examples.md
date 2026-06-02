@@ -260,8 +260,8 @@ Very simple plug-in:
 Very simple plug-in:
 
 - demonstrating how a **VST 3** plug-in could replace another one and remap parameters ID.
-- it could replace the [AGain](../What+is+the+VST+3+SDK/Plug-in+Examples.md?#again) plug-in when it is not available.
-- it illustrates the use of the interface [Vst:: IRemapParamID](../Technical+Documentation/Change+History/3.7.11/IRemapParamID.md) (for mapping [Test Remap ParamID](../What+is+the+VST+3+SDK/Plug-in+Examples.md?#test-remap-paramid) parameters to AGain plug-in parameters) and the [module info](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) with its compatibility field.
+- it could replace the [AGain](#again) plug-in when it is not available.
+- it illustrates the use of the interface [Vst:: IRemapParamID](../Technical+Documentation/Change+History/3.7.11/IRemapParamID.md) (for mapping [Test Remap ParamID](#test-remap-paramid) parameters to AGain plug-in parameters) and the [module info](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) with its compatibility field.
 
 ## Sync Delay
 
