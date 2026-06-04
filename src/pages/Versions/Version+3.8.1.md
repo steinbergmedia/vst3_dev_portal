@@ -6,8 +6,8 @@
 
 - Interface changes:
   - New interface [ITransportControl](../Technical+Documentation/Change+History/3.8.1/ITransportControl.md) allowing a plug-in to request transport-related actions from the host.
+  - Publication of text-based XML definition: [Clipboard VST-XML](../Technical+Documentation/Clipboard+VST-XML/Index.md) for drag-and-drop and copy-paste exchange of audio and musical elements (for example, audio files, chords, scales, and clips) with contextual metadata such as project time and color between Plug-ins and/or Applications .
 
-- [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.15.0](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_15_0)
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.15.1](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_15_1)
   
 - CMake

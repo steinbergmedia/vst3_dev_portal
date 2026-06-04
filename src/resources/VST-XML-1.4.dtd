@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- VST XML File DTD: VST XML
+	Use for Copy-Paste between DAW - Plugins (Dorico/Padshop/HALion/Wavelab/Cubase/StudioOne/...)
+	Version 1.4 - 17/04/2024
+	Author: Yvan Grabit
+	
+	Copyright (c) 2026 Steinberg Media Technologies.
+	http://www.steinberg.net/
+-->
+
+<!ENTITY % DomainType "quarterNotes|seconds">
+<!ENTITY % LoopType "release">
+<!ENTITY % RegionType "join|silence">
+
+<!ELEMENT vst-xml ((sourceApp|region|chord|scale|signature)+)>
+<!ATTLIST vst-xml
+  xmlns CDATA #FIXED ''
+  version CDATA #REQUIRED>
+
+<!ELEMENT sourceApp (#PCDATA)>
+<!ATTLIST sourceApp
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT region (name|segment|filename|start|end|tempo|rootkey|signature|projectTime|color|loop)*>
+<!ATTLIST region
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED
+  type (%RegionType;) #IMPLIED
+  channelID CDATA #IMPLIED>
+
+<!ELEMENT tempo (#PCDATA)>
+<!ATTLIST tempo
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT rootkey (#PCDATA)>
+<!ATTLIST rootkey
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT signature (numerator|denominator|projectTime)*>
+<!ATTLIST signature
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT chord (name|projectTime|pitches|keyNote|bassNote|mask|color)*>
+<!ATTLIST chord
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+
+<!ELEMENT loop (start|end)*>
+<!ATTLIST loop
+  xmlns CDATA #FIXED ''
+  type (%LoopType;) #IMPLIED>
+
+<!ELEMENT segment (filename|start|length|fileOffset)*>
+<!ATTLIST segment
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT scale (name|mask|keyNote|projectTime|displayName|color)*>
+<!ATTLIST scale
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+
+<!ELEMENT numerator (#PCDATA)>
+<!ATTLIST numerator
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT denominator (#PCDATA)>
+<!ATTLIST denominator
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT pitches (#PCDATA)>
+<!ATTLIST pitches
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT keyNote (#PCDATA)>
+<!ATTLIST keyNote
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT bassNote (#PCDATA)>
+<!ATTLIST bassNote
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT mask (#PCDATA)>
+<!ATTLIST mask
+  xmlns CDATA #FIXED ''>
+  
+<!ELEMENT length (#PCDATA)>
+<!ATTLIST length
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT filename (#PCDATA)>
+<!ATTLIST filename
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT start (#PCDATA)>
+<!ATTLIST start
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT end (#PCDATA)>
+<!ATTLIST end
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT displayName (#PCDATA)>
+<!ATTLIST displayName
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT fileOffset (#PCDATA)>
+<!ATTLIST fileOffset
+  xmlns CDATA #FIXED ''>
+  
+<!ELEMENT projectTime (#PCDATA)>
+<!ATTLIST projectTime
+  xmlns CDATA #FIXED ''
+  domain (%DomainType;) #REQUIRED>
+
+<!ELEMENT color (#PCDATA)>
+<!ATTLIST color
+  xmlns CDATA #FIXED ''>

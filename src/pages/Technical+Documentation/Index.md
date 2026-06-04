@@ -20,7 +20,7 @@ Browse the **VST SDK**'s technical documentation. The full **VST 3 API** referen
 - [VST 3 Locations / Format](Locations+Format/Index.md)
 - [About MIDI in VST 3](About+MIDI/Index.md)
 - [Provide A Runloop On Linux](Provide+A+Runloop+On+Linux/Index.md)
-
+- [Clipboard VST-XML](Clipboard+VST-XML/Index.md)
 ---
 
 - [\[3.0.0\] Interfaces supported by the plug-in](Change+History/3.0.0/Plug+in+Interfaces.md)
@@ -108,6 +108,11 @@ Unlike in **VST 2**, **MIDI** is not included in **VST 3**.
 ## [Host Requirements for VST 3 Support](Host+Requirements/Index.md)
 
 Minimum Host requirements for **VST 3** support.
+
+## [Clipboard VST-XML](Clipboard+VST-XML/Index.md)
+
+Text-based XML clipboard format used for drag-and-drop and copy-paste exchange of audio and musical elements (for example, audio files, chords, scales, and clips) with contextual metadata such as project time and color.
+
 
 ---
 
