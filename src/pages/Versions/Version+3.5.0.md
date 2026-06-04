@@ -6,7 +6,7 @@
 
 - Interface Changes:
   - Vst::INoteExpressionController: [\[3.5.0\] Note Expression](../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.md) Support.
-  - Vst::IKeyswitchController: [\[3.5.0\] Key Switch Support](../Technical+Documentation/Change+History/3.5.0/IKeyswitchController.md) (used for building VST Expression Map in Cubase 6 for example).
+  - Vst::IKeyswitchController: [\[3.5.0\] Key Switch Support](../Technical+Documentation/Change+History/3.5.0/IKeyswitchController.md) (used for building VST Expression Map in **Cubase 6** for example).
   - Vst::IXmlRepresentationController: [\[3.5.0\] Remote Representation](../Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.md) of Parameters Support (allows to define different parameter mappings for different remotes device).
   - Vst::IEditControllerHostEditing: Parameter editing from host/remote control (better support of linked parameters when editing from remote control)
   - Vst::IComponentHandler3 / Vst::IContextMenu / Vst::IContextMenuTarget: [\[3.5.0\] Context Menu Support](../Technical+Documentation/Change+History/3.5.0/IComponentHandler3.md) (allows the plug-in to create a context menu for a given parameter, partially filled by the host).

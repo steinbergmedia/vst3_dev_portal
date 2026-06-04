@@ -161,7 +161,7 @@ Yes, setState and getState are called normally from the **UI Thread** when the p
 
 ## Q: How can a plug-in be informed that it is currently processed in offline processing?
 
-When a plug-in is used in an offline processing context (which is the case with Cubase 9.5/Nuendo 8 feature: Direct Offline Processing), its component will be initialized with [Vst:: IComponent::setIoMode](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137) (Vst::kOfflineProcessing) (see The Simple Mode).
+When a plug-in is used in an offline processing context (which is the case with **Cubase 9.5**/**Nuendo 8** feature: Direct Offline Processing), its component will be initialized with [Vst:: IComponent::setIoMode](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137) (Vst::kOfflineProcessing) (see The Simple Mode).
 The offline processing mode (passed in the process call) is used when:
 
 - the user exports audio (downmix)
@@ -171,7 +171,7 @@ With [Vst:: IComponent::setIoMode](https://steinbergmedia.github.io/vst3_doc/vst
 
 [![getting_started_vid_1](https://i.ytimg.com/vi/62yMkHRfd2I/maxresdefault.jpg)](https://www.youtube.com/watch?v=62yMkHRfd2I)
 
-Direct Offline Processing since Cubase 9.5
+Direct Offline Processing since **Cubase 9.5**
 
 ---
 
