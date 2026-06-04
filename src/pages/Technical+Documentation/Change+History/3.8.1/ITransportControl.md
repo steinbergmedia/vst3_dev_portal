@@ -22,8 +22,7 @@ Typical use cases include:
 - Adjusting loop/cycle regions
 - Enabling or disabling cycle playback
 
-All calls must be made from the **UI thread**. Hosts may accept or deny requests depending on their internal policies or the
-current editing mode (e.g., offline rendering, write-protected state, etc.).
+All calls must be made from the **UI thread**. Hosts may accept or deny requests depending on their internal policies or the current editing mode (e.g., offline rendering, write-protected state, etc.).
 
 - \[host imp\]
 - [extends [Vst:: IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html)]
@@ -37,7 +36,7 @@ current editing mode (e.g., offline rendering, write-protected state, etc.).
 ``` c++
 bool mycontroller::startPlayback ()
 {
-    // the hostContext was given in the function  ComponentBase::initialize (FUnknown* context)
+    // the hostContext was given in the function ComponentBase::initialize (FUnknown* context)
     if (!hostContext)
         return false;
 
