@@ -75,7 +75,7 @@ namespace Steinberg {
 }
   
 //------------------------------------------------------------------------
-tresult PLUGIN_API  MyController::onLiveMidi2ControllerInput (BusIndex index, MidiChannel channel, Midi2Controller midiCC)
+tresult PLUGIN_API MyController::onLiveMidi1ControllerInput (BusIndex index, MidiChannel channel, CtrlNumber midiCC)
 {
     // if we are not in doMIDILearn (triggered by a UI button for example) or wrong channel then return
     if (!doMIDILearn || index != 0 || channel != 0 || midiLearnParamID == InvalidParamID)
@@ -94,13 +94,14 @@ tresult PLUGIN_API  MyController::onLiveMidi2ControllerInput (BusIndex index, Mi
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API  MyController::onLiveMidi1ControllerInput (BusIndex index, MidiChannel channel, CtrlNumber midiCC)
+tresult PLUGIN_API MyController::onLiveMidi2ControllerInput (BusIndex index, MidiChannel channel, Midi2Controller midiCC)
 {
     // if we are not in doMIDILearn (triggered by a UI button for example) or wrong channel then return
     if (!doMIDILearn || index != 0 || channel != 0 || midiLearnParamID == InvalidParamID)
         return kResultFalse;
- 
-    CCKey key { midiCC.registered ? CCType::RPN : CCType::NRPN, (midiCC.bank << 7) | midiCC.index };
+
+    CCKey key { Midi2Controller::isRegisteredController (midiCC) ? CCType::RPN : CCType::NRPN, 
+                (Midi2Controller::bank (midiCC) << 7) | Midi2Controller::index (midiCC) };
     auto currentMapping = midiCCMapping.find (key);
     if (currentMapping == midiCCMapping.end () || currentMapping->second != midiLearnParamID)
     {
@@ -112,5 +113,4 @@ tresult PLUGIN_API  MyController::onLiveMidi1ControllerInput (BusIndex index, Mi
     }
     return kResultTrue;
 }
-
 ```

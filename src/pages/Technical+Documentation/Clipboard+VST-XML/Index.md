@@ -8,7 +8,7 @@
 
 ---
 
-The **Clipboard VST-XML** format is a simple text-based XML definition used to exchange media-related data through drag and drop or copy and paste.
+The **Clipboard VST-XML** format is a simple text-based XML definition used to exchange media-related data through drag and drop (text-based) or copy and paste (using the operating system clipboard).
 
 It was originally designed to support audio file exchange between **Cubase** and **HALion**. Over time, the same mechanism was extended to transfer additional musical elements and their context.
 
@@ -52,7 +52,7 @@ This makes drag-and-drop and copy-paste workflows more useful than simple file t
 
 ## Format Description
 
-This section describes the Clipboard VST-XML structure according to its current DTD ([VST-XML-1.4.dtd](../../../resources/VST-XML-1.4.dtd)).
+This section describes the Clipboard VST-XML structure according to its current Document Type Definition ([VST-XML-1.4.dtd](../../../resources/VST-XML-1.4.dtd)).
 
 ### Root node: `vst-xml`
 
