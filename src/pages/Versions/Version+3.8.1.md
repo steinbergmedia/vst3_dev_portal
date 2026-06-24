@@ -1,8 +1,8 @@
   >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.8.1 (2026/??/??)
+># Version 3.8.1 (2026/08/03)
 
-## Version 3.8.1 (2026/??/??)
+## Version 3.8.1 (2026/08/03)
 
 - Interface changes:
   - New interface [ITransportControl](../Technical+Documentation/Change+History/3.8.1/ITransportControl.md) allowing a plug-in to request transport-related actions from the host.
@@ -12,8 +12,8 @@
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.15.1](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_15_1)
   
 - Documentation
-  - Fix doxy doc in ivstprocesscontext.h.
-  - Add clarification to the doc about MIDILearn2 (n to m mapping).
+  - Fix doxy doc in *ivstprocesscontext.h*.
+  - Add clarification to the doc about [MIDILearn2](../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md) (n to m mapping).
 
 - CMake
   - Remove AUWrapper target from main *CMakeLists.txt*.
@@ -32,10 +32,10 @@
   - Fix: incorrect note expression info in the example [Note Expression Synth](../What+is+the+VST+3+SDK/Plug-in+Examples.md#note-expression-synth) Plug-in ([Issue#78](https://github.com/steinbergmedia/vst3_public_sdk/issues/78)).
   - Fix: missing call to *notifyProgramListChange* after changing exported programs count in the [Test Multiple Program Changes](../What+is+the+VST+3+SDK/Plug-in+Examples.md#test-multiple-program-changes) Plug-in.
   - Update **Hostchecker** plug-in:
-    - check support of [ITransportControl](../Technical+Documentation/Change+History/3.8.1/ITransportControl.md).
+    - Check support of [ITransportControl](../Technical+Documentation/Change+History/3.8.1/ITransportControl.md).
+    - Add Randomize parameters (**Vst::FunctionNameType::kRandomize** and **Vst::FunctionNameType::kRandomizeAroundCurrent**).
 
 - Helper Classes:
-  - Fix: Validator test which does not respect the Audio Processor Call Sequence ([Issue#148](https://github.com/steinbergmedia/vst3sdk/issues/148)).
   - Fix: unused parameter in module_mac.mm ([Issue#83](https://github.com/steinbergmedia/vst3_public_sdk/issues/83)).
   - Update: linux VST3 system paths: add */usr/lib64/vst3* in *vst/source/hosting/module_linux.cpp* ([PR#82](https://github.com/steinbergmedia/vst3_public_sdk/pull/82)).
   - Fix: compilation with some compilers (e.g. Clang 17), missing include *exception.h* in *threadchecker* file ([Issue#84](https://github.com/steinbergmedia/vst3_public_sdk/issues/84)).
@@ -43,9 +43,11 @@
   - Fix VST Hosting / registerWindowClass() method: RegisterClassEx() Executed Repeatedly (Win Only) in *editorhost/source/platform/win/window.cpp* ([Issues#155](https://github.com/steinbergmedia/vst3sdk/issues/155)).
   - Fix issues and improve handling when switching between different scaling factors under [Wayland](../Technical+Documentation/Change+History/3.8.0/IWaylandHost.md).
   
- #155
+- [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
+  - Fix: Validator test which does not respect the Audio Processor Call Sequence ([Issue#148](https://github.com/steinbergmedia/vst3sdk/issues/148)).
+  - Add a new test to verify that **getParamStringByValue** and **getParamValueByString** correctly round-trip values.
 
-  
 - [VST3PluginTestHost](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) v3.11.0:
   - Add host support of [ITransportControl](../Technical+Documentation/Change+History/3.8.1/ITransportControl.md).
+  - Add support of Randomize parameters (**Vst::FunctionNameType::kRandomize** and **Vst::FunctionNameType::kRandomizeAroundCurrent**) using [Parameter Function Name](../Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.md).
   
