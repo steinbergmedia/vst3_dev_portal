@@ -42,6 +42,7 @@
   - Fix set window title on macOS: *editorhost/source/platform/mac/window.mm* ([Issues#134](https://github.com/steinbergmedia/vst3sdk/issues/134)).
   - Fix VST Hosting / registerWindowClass() method: RegisterClassEx() Executed Repeatedly (Win Only) in *editorhost/source/platform/win/window.cpp* ([Issues#155](https://github.com/steinbergmedia/vst3sdk/issues/155)).
   - Fix issues and improve handling when switching between different scaling factors under [Wayland](../Technical+Documentation/Change+History/3.8.0/IWaylandHost.md).
+  - Fix missing *return false* when controller initialization did not work in *vst/hosting/plugprovider.cpp*.
   
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Fix: Validator test which does not respect the Audio Processor Call Sequence ([Issue#148](https://github.com/steinbergmedia/vst3sdk/issues/148)).

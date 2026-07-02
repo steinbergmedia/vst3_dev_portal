@@ -19,8 +19,14 @@ How the host can retrieve the parameter where the mouse cursor is located.Extens
 
 It is highly recommended to implement this interface. A host can implement important functionality when a plug-in supports this interface.
 
-## Examples
+## Some Examples
 
 For example, all Steinberg hosts require this interface in order to support the **AI Knob**.
 
-[![Tech_doc_image_link_1](../../../../resources/tech_doc_30.jpg)](https://www.steinberg.net/de/cc121/)
+### CC121
+
+![Steinberg_CC121](../../../../resources/tech_doc_30.jpg)
+
+### CC1
+
+[![Yamaha_CC1](../../../../resources/yamaha_CC1.png)](https://www.yamaha.com/2/cc1/)

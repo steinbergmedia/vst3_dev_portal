@@ -48,7 +48,7 @@ sequenceDiagram
     Note right of H: User drags window frame
     Note right of H: in order to resize
     H->>+P:     checkSizeContraints(size)
-    P-->>-H:    return
+    P-->>-H:    return kResultTrue (always)
     H->>+H:     resize frame to [size]
     H->>+P:     onSize(size)
     P->>P:      resize view

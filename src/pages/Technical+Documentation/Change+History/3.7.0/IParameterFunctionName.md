@@ -43,8 +43,10 @@ If a parameter provided by this interface is marked with the kReadOnly flag, the
 ``` c++
 //------------------------------------------------------------------------
 // here an example of how a VST 3 plug-in could support this IParameterFunctionName interface.
-// we need to define somewhere the iids:
+// we need to define somewhere the iids (in mycontroller.cpp):
   
+#include "pluginterfaces/vst/ivstparameterfunctionname.h"
+
 //in MyController class declaration
 class MyController : public Vst::EditController, public Vst::IParameterFunctionName
 {
@@ -65,8 +67,6 @@ class MyController : public Vst::EditController, public Vst::IParameterFunctionN
 **In mycontroller.cpp**
 
 ``` c++
-#include "pluginterfaces/vst/ivstparameterfunctionname.h"
- 
 namespace Steinberg {
     namespace Vst {
         DEF_CLASS_IID (IParameterFunctionName)
