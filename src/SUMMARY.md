@@ -119,6 +119,7 @@
   - [\[3.8.0\] Parameter MIDI Mapping 2 (MIDI 2.0 support)](pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md)
   - [\[3.8.0\] Wayland Support (Linux)](pages/Technical+Documentation/Change+History/3.8.0/IWaylandHost.md)
   - [\[3.8.1\] Transport Control](pages/Technical+Documentation/Change+History/3.8.1/ITransportControl.md)
+  - [\[3.8.1\] NoteOn Orchestral Articulation Info](pages/Technical+Documentation/Change+History/3.8.1/IInfo.md)
 
 # Additional Resources
 
