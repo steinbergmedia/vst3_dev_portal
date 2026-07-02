@@ -8,7 +8,7 @@
 
 **Related pages:**
 
-- [\[3.5.0\] Note Expression](../Change+History/3.5.0/INoteExpressionController.md)
+- [\[3.5.0\] Note Expression](../3.5.0/INoteExpressionController.md)
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
 
 ---
