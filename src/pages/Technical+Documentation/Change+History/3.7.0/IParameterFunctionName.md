@@ -22,19 +22,23 @@ If a parameter provided by this interface is marked with the kReadOnly flag, the
 
 ## Current defined function names
 
-| Type | Name | Comment |
-|---|---|---|
-| Gain Reduction | kCompGainReduction | |
-|                | kCompGainReductionMax| |
-|                | kCompGainReductionPeakHold| |
-|                | kCompResetGainReductionMax| |
-| Randomize      | kRandomize |  Assigns randomized values across the full parameter range.|
-|                | kRandomizeAroundCurrent | Assigns randomized values around the current parameter values (e.g. ±5% of the current value).
-| Panner         | kPanPosCenterX | Gravity point X-axis \[0, 1\]=>\[L-R\] (for stereo: middle between left and right).|
-|                | kPanPosCenterY | Gravity point Y-axis \[0, 1\]=>\[Front-Rear\].|
-|                | kPanPosCenterZ | Gravity point Z-axis \[0, 1\]=>\[Bottom-Top\].|
-| Other          | kLowLatencyMode| Useful for live situation where low latency is required: 0 means LowLatency disable,  1 means LowLatency enable|
-|                | kDryWetMix     | Allowing to mix the original (Dry) Signal with the processed one (Wet): 0.0 means Dry Signal only, 0.5 means 50% Dry Signal + 50% Wet Signal, 1.0 means Wet Signal only |
+| Name | Comment |
+|---|---|
+| **Gain Reduction** | |
+| kCompGainReduction | |
+| kCompGainReductionMax| |
+| kCompGainReductionPeakHold| |
+| kCompResetGainReductionMax| |
+| **Randomize**      | |
+| kRandomize |  Assigns randomized values across the full parameter range.|
+| kRandomizeAroundCurrent | Assigns randomized values around the current parameter values (e.g. ±5% of the current value).
+| **Panner**         | |
+| kPanPosCenterX | Gravity point X-axis \[0, 1\]=>\[L-R\] (for stereo: middle between left and right).|
+| kPanPosCenterY | Gravity point Y-axis \[0, 1\]=>\[Front-Rear\].|
+| kPanPosCenterZ | Gravity point Z-axis \[0, 1\]=>\[Bottom-Top\].|
+| **Other**          | |
+|  kLowLatencyMode| Useful for live situation where low latency is required: 0 means LowLatency disable,  1 means LowLatency enable|
+|  kDryWetMix     | Allowing to mix the original (Dry) Signal with the processed one (Wet): 0.0 means Dry Signal only, 0.5 means 50% Dry Signal + 50% Wet Signal, 1.0 means Wet Signal only |
 
 ## Example
 

@@ -10,6 +10,9 @@
 
 - [\[3.5.0\] Note Expression](../3.5.0/INoteExpressionController.md)
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
+- [\[midi.org\] Orchestral Articulation Profile Introduction](https://midi.org/wp-content/uploads/2024/03/Orchestral-APE-Profile-Intro-Final.pdf)
+- [\[midi.org\] new profile specifications adopted](https://midi.org/6-new-profile-specifications-adopted)
+- [\[AMEI\] M2-123-UM Document](https://amei-music.github.io/midi2.0-docs/amei-pdf/M2-123-UM_v1-0_Note-On_Orchestral_Articulation_Profile.pdf)
 
 ---
 
@@ -22,15 +25,13 @@ Edit controller component interface extension: [Vst:: NoteOnOrchestralArticulati
 - \[released: 3.8.1\]
 - \[optional\]
 
-This interface allows the host to retrieve the number of variations supported by the plug-in for Note On Orchestral Articulations (called from the UI thread). The variation indices for subclasses follow the subclass index definitions specified by the MIDI-CI Profile for Orchestral Articulations (M2-123-UM standard).
+This interface allows the host to retrieve the number of variations supported by the plug-in for Note On Orchestral Articulations (called from the UI thread). The variation indices for subclasses follow the subclass index definitions specified by the MIDI-CI Profile for Note On Selection of Orchestral Articulation ([M2-123-UM](https://amei-music.github.io/midi2.0-docs/amei-pdf/M2-123-UM_v1-0_Note-On_Orchestral_Articulation_Profile.pdf)).
 
 ## Example
 
 **In mycontroller.h**
 
 ``` c++
-
-#include "pluginterfaces/vst/ivstnoteonorchestralarticulationinfo.h"
 
 //------------------------------------------------------------------------
 // here an example of how a VST 3 plug-in could support this IParameterFunctionName interface.
