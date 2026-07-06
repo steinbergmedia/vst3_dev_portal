@@ -25,7 +25,7 @@ Edit controller component interface extension: [Vst:: NoteOnOrchestralArticulati
 - \[released: 3.8.1\]
 - \[optional\]
 
-This interface allows the host to retrieve the number of variations supported by the plug-in for Note On Orchestral Articulations (called from the UI thread). The variation indices for subclasses follow the subclass index definitions specified by the MIDI-CI Profile for Note On Selection of Orchestral Articulation ([M2-123-UM](https://amei-music.github.io/midi2.0-docs/amei-pdf/M2-123-UM_v1-0_Note-On_Orchestral_Articulation_Profile.pdf)).
+This interface allows the host to retrieve, for each input event bus and channel, the number of variations supported by the plug-in for Note On Orchestral Articulations (called from the UI thread). Variation indices for subclasses follow the subclass index definitions specified by the MIDI-CI profile for Note On Selection of Orchestral Articulation ([M2-123-UM](https://amei-music.github.io/midi2.0-docs/amei-pdf/M2-123-UM_v1-0_Note-On_Orchestral_Articulation_Profile.pdf)).
 
 ## Example
 
@@ -43,7 +43,7 @@ This interface allows the host to retrieve the number of variations supported by
 class MyController : public Vst::EditController, public Vst::NoteOnOrchestralArticulation::IInfo
 {
     // ...
-    tresult PLUGIN_API getVariationsInfo (Vst::NoteOnOrchestralArticulation::ClassificationVariations& info /*out*/) override;
+    tresult PLUGIN_API getVariationsInfo (int32 busIndex /*in*/, int16 channel /*in*/,Vst::NoteOnOrchestralArticulation::ClassificationVariations& info /*out*/) override;
     // ...
   
     OBJ_METHODS (MyController, Vst::EditController)
@@ -65,7 +65,7 @@ namespace Steinberg {
 }
   
 //------------------------------------------------------------------------
-tresult PLUGIN_API MyController::getVariationsInfo  (Vst::NoteOnOrchestralArticulation::ClassificationVariations& info) 
+tresult PLUGIN_API MyController::getVariationsInfo  (int32 busIndex, int16 channel, Vst::NoteOnOrchestralArticulation::ClassificationVariations& info) 
 {
     using namespace Vst;
 
