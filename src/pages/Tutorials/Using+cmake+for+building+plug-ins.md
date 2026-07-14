@@ -38,12 +38,12 @@ Example for building **Microsoft Studio 17 2022** solution:
 // go in to the folder where you extracted the VST SDK
 mkdir build
 cd build
-cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk"
+cmake.exe -G "Visual Studio 18 2026" -A x64 "..\vst3sdk"
 // or without symbolic links
-cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_CREATE_PLUGIN_LINK=0
+cmake.exe -G "Visual Studio 18 2026" -A x64 "..\vst3sdk" -DSMTG_CREATE_PLUGIN_LINK=0
 
 // or with symbolic links but using the user location (enable by default), it does not request admin right
-cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
+cmake.exe -G "Visual Studio 18 2026" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
 
 // note: you can find the string definition for different Visual Studio Generators in the cmake online documentation
 ```

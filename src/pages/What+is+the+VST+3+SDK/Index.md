@@ -78,10 +78,10 @@ VST 3 SDK is under **MIT license**.
 
 | Operating System                  | Architecture                  | Compiler              | Notes                             |
 | :-------------------------------- | :---------------------------- | :-------------------- | :-------------------------------- |
-| Windows 11                        | x86, x86_64, arm64, arm64EC   | MSVC 2022             |                                   |
+| Windows 11                        | x86, x86_64, arm64, arm64EC   | MSVC 2022, MSVC 2026  |                                   |
 | Windows 8.1/10                    | x86, x86_64                   | MSVC 2019, MSVC 2022  |                                   |
-| macOS 10.13 - 15                  | x86, x86_64, Apple Silicon    | Xcode 10 - 16         |                                   |
-| iOS 13 - 18                       | arm64                         | Xcode 11 - 16         |                                   |
+| macOS 10.14 - 26                  | x86, x86_64, Apple Silicon    | Xcode 10 - 26.5       |                                   |
+| iOS 13 - 26                       | arm64                         | Xcode 11 - 26         |                                   |
 | Linux - Ubuntu 24.04 LTS          | x86_64                        | GCC 13.3 and higher   | Visual Studio Code, Qt Creator    |
 
 ## [Download link](../Getting+Started/Links.md)
