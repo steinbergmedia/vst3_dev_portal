@@ -10,6 +10,7 @@
   - New interface [NoteOnOrchestralArticulation::IInfo](../Technical+Documentation/Change+History/3.8.1/IInfo.md) for MIDI 2.0 support of Orchestral Articulation Profile.
   - Small change in the [Midi2Controller](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Midi2Controller.html) struct in *ivstmidimapping2.h* that guarantees full ABI compatibility across compilers. Developers using this struct need to make a small adaptation.
   - Publication of text-based XML definition: [Clipboard VST-XML](../Technical+Documentation/Clipboard+VST-XML/Index.md) for drag-and-drop and copy-paste exchange of audio and musical elements (for example, audio files, chords, scales, and clips) with contextual metadata such as project time and color between Plug-ins and/or Applications.
+  - Add for linux new VST3 system paths: [*/usr/lib64/vst3* and */usr/local/lib64/vst3*](../Technical+Documentation/Locations+Format/Plugin+Locations.md#on-linux-platform) (defined in Fedora distribution).
 
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.15.1](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_15_1)
   
