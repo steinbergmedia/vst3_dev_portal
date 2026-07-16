@@ -10,6 +10,8 @@
 
 - [\[3.5.0\] Key Switch](../3.5.0/IKeyswitchController.md)
 - [\[3.6.11\] NoteExpression Physical UI Mapping](../3.6.11/INoteExpressionPhysicalUIMapping.md)
+- [\[3.8.1\] NoteOn Orchestral Articulation Info](../3.8.1/IInfo.md)
+
 - [About MIDI in VST 3](../../About+MIDI/Index.md)
 
 ---

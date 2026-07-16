@@ -17,7 +17,7 @@
   - extract Speaker Arrangement from vsttypes.h to vstspeaker.h.
   - new kNoParamId constant for uninitialized parameter id.
 
-- cmake:
+- CMake:
   - reorganization of cmake files.
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):

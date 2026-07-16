@@ -77,6 +77,7 @@
   - [About MIDI in VST 3](pages/Technical+Documentation/About+MIDI/Index.md)
   - [Provide A Runloop On Linux](pages/Technical+Documentation/Provide+A+Runloop+On+Linux/Index.md)
   - [Host Requirements for VST 3 Support](pages/Technical+Documentation/Host+Requirements/Index.md)
+  - [Clipboard VST-XML](pages/Technical+Documentation/Clipboard+VST-XML/Index.md)
   - [<<<<<<<< Features History >>>>>>>>](pages/Technical+Documentation/Change+History/Index.md)
   - [\[3.0.0\] Interfaces supported by the plug-in](pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.md)
   - [\[3.0.0\] Multiple Dynamic I/O Support](pages/Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md)
@@ -117,10 +118,13 @@
   - [\[3.8.0\] MIDI Learn 2 (MIDI 2.0 support)](pages/Technical+Documentation/Change+History/3.8.0/IMidiLearn2.md)
   - [\[3.8.0\] Parameter MIDI Mapping 2 (MIDI 2.0 support)](pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.md)
   - [\[3.8.0\] Wayland Support (Linux)](pages/Technical+Documentation/Change+History/3.8.0/IWaylandHost.md)
+  - [\[3.8.1\] Transport Control](pages/Technical+Documentation/Change+History/3.8.1/ITransportControl.md)
+  - [\[3.8.1\] NoteOn Orchestral Articulation Info](pages/Technical+Documentation/Change+History/3.8.1/IInfo.md)
 
 # Additional Resources
 
 - [Change History](pages/Versions/Index.md)
+  - [Version 3.8.1 (2026/08/04)](pages/Versions/Version+3.8.1.md)
   - [Version 3.8.0 (2025/10/20)](pages/Versions/Version+3.8.0.md)
   - [Version 3.7.14 (2025/06/23)](pages/Versions/Version+3.7.14.md)
   - [Version 3.7.13 (2025/02/28)](pages/Versions/Version+3.7.13.md)

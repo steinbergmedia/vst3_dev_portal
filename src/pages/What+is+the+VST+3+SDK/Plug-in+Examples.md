@@ -260,8 +260,8 @@ Very simple plug-in:
 Very simple plug-in:
 
 - demonstrating how a **VST 3** plug-in could replace another one and remap parameters ID.
-- it could replace the [AGain](../What+is+the+VST+3+SDK/Plug-in+Examples.md?#again) plug-in when it is not available.
-- it illustrates the use of the interface [Vst:: IRemapParamID](../Technical+Documentation/Change+History/3.7.11/IRemapParamID.md) (for mapping [Test Remap ParamID](../What+is+the+VST+3+SDK/Plug-in+Examples.md?#test-remap-paramid) parameters to AGain plug-in parameters) and the [module info](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) with its compatibility field.
+- it could replace the [AGain](#again) plug-in when it is not available.
+- it illustrates the use of the interface [Vst:: IRemapParamID](../Technical+Documentation/Change+History/3.7.11/IRemapParamID.md) (for mapping [Test Remap ParamID](#test-remap-paramid) parameters to AGain plug-in parameters) and the [module info](../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.md) with its compatibility field.
 
 ## Sync Delay
 
@@ -270,6 +270,16 @@ Very simple delay plug-in:
 - showing how to support [Vst:: IProcessContextRequirements](../Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.md)
 
 Check the folder *"public.sdk/samples/vst/syncdelay"* of the SDK!
+
+## Transport Control
+
+Simple plug-in:
+
+- showing how to support [Vst:: ITransportControl](../Technical+Documentation/Change+History/3.8.1/ITransportControl.md)
+
+Check the folder *"public.sdk/samples/vst/transportcontrol"* of the SDK!
+
+![what_if_47](../../resources/what_is_47.png)
 
 ## UTF16 Name
 

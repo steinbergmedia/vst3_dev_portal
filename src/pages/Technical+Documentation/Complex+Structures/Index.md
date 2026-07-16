@@ -28,7 +28,7 @@ Since a VST plug-in unlike a hardware MIDI instrument is more than only a black 
 
 ## The Simple Mode
 
-The 'VST 3 simple mode' has the (selfish) background to support the so-called "simple instrument tracks" of Cubase. These tracks combine a MIDI track and VST audio channel (without the need to make any further assignments such as the choice of a MIDI output port or a MIDI channel). This mode is defined as 'only one input and only one output'. In 'simple mode', only MIDI channel 0 is used. Therefore, an instrument has to be mono-timbral.
+The 'VST 3 simple mode' has the (selfish) background to support the so-called "simple instrument tracks" of **Cubase**. These tracks combine a MIDI track and VST audio channel (without the need to make any further assignments such as the choice of a MIDI output port or a MIDI channel). This mode is defined as 'only one input and only one output'. In 'simple mode', only MIDI channel 0 is used. Therefore, an instrument has to be mono-timbral.
 
 The host will now work with multiple instances of the plug-in rather than using the same instance in a way that it contains multiple internal sections of the same kind. The **VST-MA** component model supports shared resources between multiple instances of a plug-in because usually the same module instance (dll/bundle) is used for each plug-in instance.
 
@@ -58,13 +58,13 @@ Similar to the simple case, the host may want to save and load preset files. The
   - To support this, the plug-in must implement the [Vst:: IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html) interface in its component part.
 
 - The contents of an item in the program list
-  - To support this, the plug-in must implement the [Vst:: IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html) interface in its component part.
+  - To support this, the plug-in must implement the [Vst:: IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html) interface in its component part.
 
 A plug-in can support unit presets and program list presets.
 
 ![Tech_doc_19](../../../resources/tech_doc_19.jpg)
 
-See also [Presets & Program Lists](../Presets+Program+Lists/Index.md), [Vst:: IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html), [Vst:: IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html).
+See also [Presets & Program Lists](../Presets+Program+Lists/Index.md), [Vst:: IProgramListData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html), [Vst:: IUnitData](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html).
 
 ## Units and Tracks
 

@@ -60,7 +60,7 @@ Connect a component with another one.
 
 This interface is used for the communication of separate components. Note that some hosts will place a proxy object between the components so that they are not directly connected.
 
-See also [Communication between the components](../../API+Documentation/Index.html#communication-between-the-components).
+See also [Communication between the components](../../API+Documentation/Index.md#communication-between-the-components).
 
 ## [Vst:: IUnitInfo](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html)
 
@@ -119,13 +119,13 @@ After the creation of a IPlugView, the plug-in must make sure that it returns th
 
 Usually, the size of a plug-in view is fixed. But both the host and the plug-in can cause a view to be resized:
 
-- **Host**: If IPlugView::canResize () returns **kResultTrue**, the host will set up the window so that the user can resize it. While the user resizes the window, IPlugView::checkSizeConstraint () is called, allowing the plug-in to change the size to a valid supported rectangle size. The host then resizes the window to this rect and has to call IPlugView::onSize ().
+- **Host**: If **IPlugView::canResize ()** returns **kResultTrue**, the host will set up the window so that the user can resize it. While the user resizes the window, **IPlugView::checkSizeConstraint ()** is called, allowing the plug-in to change the size to a valid supported rectangle size, it should always return **kResultTrue** if **IPlugView::canResize ()** returns **kResultTrue**. The host then resizes the window to this rect and has to call **IPlugView::onSize ()**.
 
-- **Plug-in**: The plug-in can call IPlugFrame::resizeView () and cause the host to resize the window.
-Afterwards, in the same callstack, the host has to call IPlugView::onSize () if a resize is needed (size was changed).
+- **Plug-in**: The plug-in can call **IPlugFrame::resizeView ()** and cause the host to resize the window.
+Afterwards, in the same callstack, the host has to call **IPlugView::onSize ()** if a resize is needed (size was changed).
 
 >ⓘ **Note**\
->Note that if the host calls IPlugView::getSize () before calling IPlugView::onSize () (if needed), it will get the old size, not the current one!
+>Note that if the host calls **IPlugView::getSize ()** before calling **IPlugView::onSize ()** (if needed), it will get the old size, not the current one!
 
 Here the calling sequence:
 

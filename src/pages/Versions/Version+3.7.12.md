@@ -15,7 +15,7 @@
 - Documentation
   - New tutorial: [AudioUnit Tutorial - How to add AUv2 support to your VST 3 plug-in](../Tutorials/Audio+Unit.md).
 
-- cmake
+- CMake
   - Add changes to support the [Apple AudioUnit SDK](https://github.com/apple/AudioUnitSDK) for **AU Wrapper**.
 
 - [Plug-in Wrappers](../What+is+the+VST+3+SDK/Wrappers/Index.md):

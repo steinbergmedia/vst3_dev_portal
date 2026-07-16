@@ -15,7 +15,7 @@
   - New RestartFlags flag kKeyswitchChanged: informing that Key switches has changed (info, count).
   - New FunctionNameType for Panner: like kPanPosCenterX.
 
-- cmake:
+- CMake:
   - Fix wrong link path on Windows arm 64
   - Add -Werror=return-type to get the same error on mac as on Windows or Linux
   - Fix undefined variable vst3sdk_SOURCE_DIR when using fetchcontent for the SDK
