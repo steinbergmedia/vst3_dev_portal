@@ -277,6 +277,8 @@ Simple plug-in:
 
 - showing how to support [Vst:: ITransportControl](../Technical+Documentation/Change+History/3.8.1/ITransportControl.md)
 
+Check the folder *"public.sdk/samples/vst/transportcontrol"* of the SDK!
+
 ![what_if_47](../../resources/what_is_47.png)
 
 ## UTF16 Name
