@@ -99,7 +99,7 @@ You could start **VST3PluginTestHost** with some options in the command line:
 
 ### Audio Input
 
-In this section you can select the audio source of your plug-in for the *Main Input Audio Bus* and for the *Aux Input Audio Bus* ([Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain): if available) between:
+In this section you can select the audio source of your plug-in for the *Main Input Audio Bus* and for the *Aux Input Audio Bus* ([Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md#what-is-a-side-chain): if available) between:
 
 - A sine wave
 - Noise
@@ -135,7 +135,7 @@ For each loaded plug-in in a slot you can:
 
 - Enable/disable the plug-in with the **On** button.
 - Bypass/process the plug-in with the **Byp** button (if available as parameter).
-- Enable/disable the [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain) bus with the **Aux** button (available only if the plug-in has input [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html#what-is-a-side-chain)).
+- Enable/disable the [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md#what-is-a-side-chain) bus with the **Aux** button (available only if the plug-in has input [Side-chain](../Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.md#what-is-a-side-chain)).
 - Open its editor with the **Edit** button. A second **Edit** button allows to open a second editor (useful for checking if the used GUI Framework of the plug-in allows this!).
 - Save a Preset with the **Store** button.
 - Load a Preset with the **Load** button.

@@ -20,7 +20,7 @@ Browse the **VST SDK**'s technical documentation. The full **VST 3 API** referen
 - [VST 3 Locations / Format](Locations+Format/Index.md)
 - [About MIDI in VST 3](About+MIDI/Index.md)
 - [Provide A Runloop On Linux](Provide+A+Runloop+On+Linux/Index.md)
-
+- [Clipboard VST-XML](Clipboard+VST-XML/Index.md)
 ---
 
 - [\[3.0.0\] Interfaces supported by the plug-in](Change+History/3.0.0/Plug+in+Interfaces.md)
@@ -61,6 +61,9 @@ Browse the **VST SDK**'s technical documentation. The full **VST 3 API** referen
 - [\[3.7.11\] Remap Parameter ID](Change+History/3.7.11/IRemapParamID.md)
 - [\[3.8.0\] MIDI Learn 2 (MIDI 2.0 support)](Change+History/3.8.0/IMidiLearn2.md)
 - [\[3.8.0\] Parameter MIDI Mapping 2 (MIDI 2.0 support)](Change+History/3.8.0/IMidiMapping2.md)
+- [\[3.8.1\] Transport Control](Change+History/3.8.1/ITransportControl.md)
+- [\[3.8.1\] NoteOn Orchestral Articulation Info](Change+History/3.8.1/IInfo.md)
+
 ---
 
 ## [VST 3 API Documentation](API+Documentation/Index.md)
@@ -106,6 +109,11 @@ Unlike in **VST 2**, **MIDI** is not included in **VST 3**.
 ## [Host Requirements for VST 3 Support](Host+Requirements/Index.md)
 
 Minimum Host requirements for **VST 3** support.
+
+## [Clipboard VST-XML](Clipboard+VST-XML/Index.md)
+
+Text-based XML clipboard format used for drag-and-drop and copy-paste exchange of audio and musical elements (for example, audio files, chords, scales, and clips) with contextual metadata such as project time and color.
+
 
 ---
 
@@ -248,3 +256,7 @@ How the mapping works between MIDI 2.0 CCs and parameters (replace [\[3.0.1\] Pa
 ## [\[3.8.0\] MIDI Learn 2 (MIDI 2.0 support)](Change+History/3.8.0/IMidiLearn2.md)
 
 If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI 2.0-CC input for the plug-in (replace [\[3.6.12\] MIDI Learn (MIDI 1.0 support)](Change+History/3.6.12/IMidiLearn.md)).
+
+## [\[3.8.1\] Transport Control](Change+History/3.8.1/ITransportControl.md)
+
+This interface allows a plug-in to request transport-related actions from the host.

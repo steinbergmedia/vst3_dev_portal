@@ -7,7 +7,7 @@
 - New Flags/Enums:
   - NoteIDUserRange: Reserved note identifier (noteId) range for a plug-in. Guaranteed not used by the host.
 
-- cmake:
+- CMake:
   - Rename files with SMTG_ prefix.
   - Rename functions with smtg_ prefix.
   - Reorganize files.

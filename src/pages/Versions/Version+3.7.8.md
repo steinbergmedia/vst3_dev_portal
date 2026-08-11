@@ -15,7 +15,7 @@
 
 - [VSTGUI](../What+is+the+VST+3+SDK/VSTGUI.md) update [4.12.3](https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_12_3)
 
-- cmake
+- CMake
   - Fix "When vst3sdk is a submodule, example plugins are not built - a switch to choose would be very useful" ([Issue#94](https://github.com/steinbergmedia/vst3sdk/issues/94)).
   - Fix CMake fails with bad $-escape ([Issue#100](https://github.com/steinbergmedia/vst3sdk/issues/100)).
   - **Breaking Change**: options renamed to more meaningful words:
@@ -49,7 +49,7 @@
   - Remove warnings that cannot be silenced on Linux ([PR#6](https://github.com/steinbergmedia/vst3_base/pull/6).
   - Fix language standard check in module_linux.cpp ([PR#53](https://github.com/steinbergmedia/vst3_public_sdk/pull/53)).
   - Fix Qualify std::move call in module.cpp to silence a -Wunqualified-std-cast-call warning ([PR#53](https://github.com/steinbergmedia/vst3_public_sdk/pull/53)).
-  - Fix Include <cstdint> in moduleinfo.h to ensure that sized int types are visible ([PR#53](https://github.com/steinbergmedia/vst3_public_sdk/pull/53)).
+  - Fix include ```<cstdint>``` in moduleinfo.h to ensure that sized int types are visible ([PR#53](https://github.com/steinbergmedia/vst3_public_sdk/pull/53)).
 
 - [Validator](../What+is+the+VST+3+SDK/Index.md#validator-command-line):
   - Add info when a unit has too many parameters

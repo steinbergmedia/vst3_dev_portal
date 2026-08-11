@@ -15,7 +15,7 @@
   - Clarify range of [param ID](../Technical+Documentation/Parameters+Automation/Index.md#parameters).
   - Add note for [Module Info and Plug-in Compatibility](../Technical+Documentation/Change+History/3.7.5/ModuleInfo.md#iplugincompatibility).
 
-- cmake
+- CMake
   - Fix *smtg_target_make_plugin_package* can create invalid VST 3 plug-ins ([Forum](https://forums.steinberg.net/t/weird-cmake-error/862347)).
   - Fix regression for non-bundle Windows plug-ins (non-bundle VST 3 on Windows will be declared deprecated in a future update of **VST SDK**).
 

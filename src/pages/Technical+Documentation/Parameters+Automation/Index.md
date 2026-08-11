@@ -110,7 +110,7 @@ The prime example for this is the automation of preset changes. A preset change 
 
 ### Problems
 
-A fix value range from 0.0 to 1.0 simplifies the handling of parameters in some ways, but there are problems:
+A fixed value range from 0.0 to 1.0 simplifies the handling of parameters in some ways, but there are problems:
 
 - **Non-linear scaling**\
 If the DSP representation of a value does not scale in a linear way to the exported normalized representation (which can happen when a decibel scale is used, for example), the edit controller must provide a conversion to a plain representation. This allows the host to move automation data (being in GUI representation) and keep the original value relations intact. ([Vst:: IEditController::normalizedParamToPlain](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a849747dc98909312b4cdbdeea82dbae0) / [Vst:: IEditController::plainParamToNormalized](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#ae9706616ae6d938bbf102954f8f2f110)).
@@ -122,7 +122,7 @@ Take a discrete parameter, for example, that controls an option of three choices
 
 Automation recording is performed by the host. In doing so, it is essential for the host to know the start and the end of a manipulation. Therefore, the plug-in must operate the [Vst:: IComponentHandler](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html) interface in the following way and in the **UI Thread**!:
 
-- The begin of a manipulation must be signaled via [Vst:: IComponentHandler::beginEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223)
+- The beginning of a manipulation must be signaled via [Vst:: IComponentHandler::beginEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223)
 
 - Changes of parameters are reported via [Vst:: IComponentHandler::performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93)
 
@@ -161,7 +161,7 @@ The need to perform all transformations, from the normalized GUI representation 
 
 ![Tech_doc_12](../../../resources/tech_doc_12.jpg)
 
-The processor gets the automation data in the processing call by using queue of parameter changes for each parameter having automation data:
+The processor gets the automation data in the processing call by using a queue of parameter changes for each parameter having automation data:
 
 A [Vst:: IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html) has some [Vst:: IParamValueQueues](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html) (for a specific parameter ID) which has some Automation Points.
 
@@ -179,7 +179,7 @@ See also [Vst:: IParameterChanges](https://steinbergmedia.github.io/vst3_doc/vst
 
 ### Parameter titles, default values or flags have changed
 
-If something happens, user interaction for example, which change the parameter styles ([ParameterFlags](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645)) or title or default value of one or multiple parameters, the plug-in must call
+If something happens, for example user interaction, which changes the parameter styles ([ParameterFlags](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645)) or title or default value of one or multiple parameters, the plug-in must call
 
 ``` c++
 IComponentHandler::restartComponent (kParamTitlesChanged);
@@ -189,7 +189,7 @@ to inform the host about this change (in the **UI Thread**). The host rescans th
 
 ### Multiple parameter values have changed
 
-As result of a program change for example, the plug-in must call:
+As a result of a program change, for example, the plug-in must call:
 
 ``` c++
 IComponentHandler::restartComponent (kParamValuesChanged);
@@ -197,7 +197,7 @@ IComponentHandler::restartComponent (kParamValuesChanged);
 
 to inform the host about this change (in the **UI Thread**). The host invalidates all caches of parameter values and asks the edit controller for the current values.
 
-If only some values have changed (less than 10)  the plug-in should use the [Vst:: IComponentHandler::performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93) interface (Show the right use when automation are used: [Automation Recording](../Parameters+Automation/Index.md#automation-recording))
+If only some values have changed (less than 10), the plug-in should use the [Vst:: IComponentHandler::performEdit](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93) interface (Show the right use when automation are used: [Automation Recording](#automation-recording))
 
 >ⓘ **Note**\
 >If the plug-in needs to inform the host about changes containing parameter title, default or flags and values (of multiple parameters), it could combine the restartComponent flags:

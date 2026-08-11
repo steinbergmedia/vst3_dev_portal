@@ -10,7 +10,7 @@
   - Updated Doxygen version.
   - Fix tutorial dataexchange example.
 
-- cmake
+- CMake
   - Fix createlink does not work on macOS 15.4. 
 
 - [Examples](../What+is+the+VST+3+SDK/Plug-in+Examples.md):

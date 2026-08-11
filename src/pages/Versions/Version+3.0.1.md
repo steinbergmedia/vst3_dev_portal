@@ -14,7 +14,7 @@
   - Move RestartFlags from vstTypes.h to ivsteditcontroller.h.
   - Restructured helper classes by adding new files vstbus.cpp and vstparameters.cpp.
   - Change the default refcount implementation of Steinberg::FUnknown (IMPLEMENT_REFCOUNT) to use atomic operations.
-  - Change InitModule/ExitModule to be called from host and not in DllMain (Cubase 4.2 needed).
+  - Change InitModule/ExitModule to be called from host and not in DllMain (**Cubase 4.2** needed).
   - Rename Vst::IUnitData to Vst::IProgramListData and introduce new interface Vst::IUnitData.
 
 - Helper Classes:

@@ -61,4 +61,4 @@
 
 - If you have signed the **VST 2** license agreement (before October 2018), you can.
 - If not, you are not allowed to distribute it!
-- See [here](../Main+benefits+of+VST+3/Index.html)!
+- See [here](../Main+benefits+of+VST+3/Index.md)!

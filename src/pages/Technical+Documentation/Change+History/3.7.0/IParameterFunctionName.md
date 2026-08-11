@@ -18,6 +18,27 @@ Edit controller component interface extension: [Vst:: IParameterFunctionName](ht
 - \[optional\]
 
 This interface allows the host to get a parameter associated to a specific meaning (a functionName) for a given unit. The host can use this information, for example, for drawing a Gain Reduction meter in its own UI. In order to get the plain value of this parameter, the host should use the [Vst:: IEditController::normalizedParamToPlain](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a849747dc98909312b4cdbdeea82dbae0). The host can automatically map parameters to dedicated UI controls, such as the wet-dry mix knob or the Randomize button.
+If a parameter provided by this interface is marked with the kReadOnly flag, the host should ignore this parameter.
+
+## Current defined function names
+
+| Name | Comment |
+|---|---|
+| **Gain Reduction** | |
+| kCompGainReduction | |
+| kCompGainReductionMax| |
+| kCompGainReductionPeakHold| |
+| kCompResetGainReductionMax| |
+| **Randomize**      | |
+| kRandomize |  Assigns randomized values across the full parameter range.|
+| kRandomizeAroundCurrent | Assigns randomized values around the current parameter values (e.g. ±5% of the current value).
+| **Panner**         | |
+| kPanPosCenterX | Gravity point X-axis \[0, 1\]=>\[L-R\] (for stereo: middle between left and right).|
+| kPanPosCenterY | Gravity point Y-axis \[0, 1\]=>\[Front-Rear\].|
+| kPanPosCenterZ | Gravity point Z-axis \[0, 1\]=>\[Bottom-Top\].|
+| **Other**          | |
+|  kLowLatencyMode| Useful for live situation where low latency is required: 0 means LowLatency disable,  1 means LowLatency enable|
+|  kDryWetMix     | Allowing to mix the original (Dry) Signal with the processed one (Wet): 0.0 means Dry Signal only, 0.5 means 50% Dry Signal + 50% Wet Signal, 1.0 means Wet Signal only |
 
 ## Example
 
@@ -26,8 +47,10 @@ This interface allows the host to get a parameter associated to a specific meani
 ``` c++
 //------------------------------------------------------------------------
 // here an example of how a VST 3 plug-in could support this IParameterFunctionName interface.
-// we need to define somewhere the iids:
+// we need to define somewhere the iids (in mycontroller.cpp):
   
+#include "pluginterfaces/vst/ivstparameterfunctionname.h"
+
 //in MyController class declaration
 class MyController : public Vst::EditController, public Vst::IParameterFunctionName
 {
@@ -48,8 +71,6 @@ class MyController : public Vst::EditController, public Vst::IParameterFunctionN
 **In mycontroller.cpp**
 
 ``` c++
-#include "pluginterfaces/vst/ivstparameterfunctionname.h"
- 
 namespace Steinberg {
     namespace Vst {
         DEF_CLASS_IID (IParameterFunctionName)

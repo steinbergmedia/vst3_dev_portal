@@ -68,7 +68,7 @@ Currently the subcategory string is used by **Cubase**/**Nuendo** to organize th
 "Fx|Mastering|Mono"         => "Mastering\Mono"
 ```
 
-This string should only be a hint what type of plug-in it is. It's not possible to define all types. If you have wishes for new categories, please discuss them in the VST [Developer Forum](../Forum/Index.html) (<https://sdk.steinberg.net>) and we can add them to future versions of the SDK.
+This string should only be a hint what type of plug-in it is. It's not possible to define all types. If you have wishes for new categories, please discuss them in the VST [Developer Forum](../Forum/Index.md) (<https://sdk.steinberg.net>) and we can add them to future versions of the SDK.
 
 ---
 
@@ -141,14 +141,14 @@ You have to adapt your Windows right access to allow creation of symbolic links 
 If your plug-in is visible in the [VST 3 plug-in Test Host](../What+is+the+VST+3+SDK/Plug-in+Test+Host.md) but not in your DAW, this is maybe due to the fact:
 
 - this host is not supporting **VST 3**! Check the vendor ([known list of VST 3 host](../What+is+VST/Use+cases.md#examples-of-vst-3-host-applications))
-- this host does not scan on Windows the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.html).
-You can try to use the main [VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.html) by setting the cmake variable when you generate the project:
+- this host does not scan on Windows the [new user location](../Technical+Documentation/Locations+Format/Plugin+Locations.md).
+You can try to use the main [VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md) by setting the cmake variable when you generate the project:
 
 ```c++
 -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=0
 ```
 
-- this host could not resolve symbolic link! You could try to copy your plug-in directly in the main [VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.html) (C:\Program Files\Common Files\VST3)
+- this host could not resolve symbolic link! You could try to copy your plug-in directly in the main [VST3 folder](../Technical+Documentation/Locations+Format/Plugin+Locations.md) (C:\Program Files\Common Files\VST3)
 
 ---
 

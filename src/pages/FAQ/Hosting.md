@@ -20,7 +20,7 @@ By default the host could return *kNotImplemented* if it does not implement a sp
 ## Q: Can the host expect ClassID to be globally unique or should it expect different modules to reuse class IDs?
 
 You must treat the Class ID as globally unique.
-If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by Cubase for example). It should be only one **VST 3** plug-in registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.
+If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by **Cubase** for example). It should be only one **VST 3** plug-in registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.
 
 ---
 
@@ -102,7 +102,7 @@ Theoretically it is possible to use this for individual zoom levels, but most pl
 
 The design of this interface was done before it was possible on Windows for a plug-in to access the OS-scale.
 
-But this interface could be used by the host to try to rescale a given plug-in or all plug-ins. This is what is used in Cubase by changing the overall App scaling in the preference up to 50% to the system scale.
+But this interface could be used by the host to try to rescale a given plug-in or all plug-ins. This is what is used in **Cubase** by changing the overall App scaling in the preference up to 50% to the system scale.
 
 ---
 

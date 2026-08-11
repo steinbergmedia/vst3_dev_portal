@@ -21,7 +21,7 @@
     - "7.1 Cine (SDDS)"=>"7.1 SDDS".
     - "7.0 Cine (SDDS)"=>"7.0 SDDS".
 
-- cmake:
+- CMake:
   - Code styling changed.
   - Each library defined which is the minimal requirementfor C++ version (11 for pluginterfaces) by usingtarget_compile_features.
   - New flag: `SMTG_CXX_STANDARD` in order to overwrite thedefault used version of C++ (11).

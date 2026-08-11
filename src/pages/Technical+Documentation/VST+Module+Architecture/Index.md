@@ -173,9 +173,9 @@ Each plug-in category (VST 3 Effects, Project import/export Filters, Audio Codec
 
 ### Unicode
 
-Beginning with version 5 of Cubase and Nuendo, the internal structure of the host was modified for better support of internationalization. Therefore, string handling was changed to utilize [Unicode](https://en.wikipedia.org/wiki/Unicode) strings whenever strings are passed around. As a consequence, all the interfaces to plug-ins have changed from using ASCI to Unicode strings for call and return parameters. So in turn, all plug-ins must be adapted to support Unicode. This has major consequences in that:
+Beginning with version 5 of **Cubase** and **Nuendo**, the internal structure of the host was modified for better support of internationalization. Therefore, string handling was changed to utilize [Unicode](https://en.wikipedia.org/wiki/Unicode) strings whenever strings are passed around. As a consequence, all the interfaces to plug-ins have changed from using ASCI to Unicode strings for call and return parameters. So in turn, all plug-ins must be adapted to support Unicode. This has major consequences in that:
 
-- Unicode hosts (Cubase 5 or later) will only work with Unicode plug-ins. When loading a plug-in, a Unicode host checks the plug-in's type and will not load any non-Unicode plug-ins.
+- Unicode hosts (**Cubase 5** or later) will only work with Unicode plug-ins. When loading a plug-in, a Unicode host checks the plug-in's type and will not load any non-Unicode plug-ins.
 - Unicode plug-ins will **not** load in non-Unicode hosts. When loading, a Unicode plug-in requests information from the host and will not load if no Unicode host is detected. Therefore, if a plug-in is supposed to work with both older and newer hosts, it is best to provide two versions of the plug-in.
 
 #### Plug-ins for Unicode hosts
@@ -184,7 +184,7 @@ Writing plug-ins that are supposed to work only with Unicode hosts is easy. Use 
 
 #### Migrating from non-Unicode to Unicode
 
-In [Steinberg](https://www.steinberg.net/) SDKs released before Cubase 5, the interface functions were using pointers of type *char* for passing strings to and from the host. These have been changed now to using Steinberg's defined type *tchar* which is equivalent to *char16*, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard [Unicode](https://en.wikipedia.org/wiki/Unicode), so strings are expected to be encoded in [UTF-16](https://en.wikipedia.org/wiki/UTF-16).\
+In [Steinberg](https://www.steinberg.net/) SDKs released before **Cubase 5**, the interface functions were using pointers of type *char* for passing strings to and from the host. These have been changed now to using Steinberg's defined type *tchar* which is equivalent to *char16*, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard [Unicode](https://en.wikipedia.org/wiki/Unicode), so strings are expected to be encoded in [UTF-16](https://en.wikipedia.org/wiki/UTF-16).\
 Accordingly, also the implementation of a plug-in needs to be adapted to deal correctly with Unicode-encoded strings, as well as only ever passing Unicode strings to the host.
 
 >ⓘ **Note**\

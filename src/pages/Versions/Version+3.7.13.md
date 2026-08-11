@@ -15,7 +15,7 @@
   - Update doc about *pluginterfaces/gui/iplugview.h*. See [VST3 forum](https://forums.steinberg.net/t/iplugview-contentscalesupport-and-macos/930318).
   - Add more information for each **VST 3** API function about threading and state context.
 
-- cmake
+- CMake
   - Update cmake_minimum_required to *3.25.0*
   - Fix linker warning on Mac ([PR#11](https://github.com/steinbergmedia/vst3_cmake/pull/11)).
   - *smtg_target_add_plugin_resource* groups and structures the resources files into the IDE.

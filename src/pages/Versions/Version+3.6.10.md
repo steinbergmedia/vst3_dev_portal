@@ -8,7 +8,7 @@
 
 - Support of Snapshots inside the VST 3 Bundle.
 
-- cmake:
+- CMake:
   - adapt cmake files for better integration of users projects.
   - fix support Universal Binary for AudioUnit.
 

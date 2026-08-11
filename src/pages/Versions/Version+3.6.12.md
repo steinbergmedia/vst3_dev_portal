@@ -19,7 +19,7 @@
   - New *IPlugInterfaceSupport* (host): allow a plug-in to ask the host if a given plug-in interface is supported/used by the host.
   - New *IVst3WrapperMPESupport* (wrapper): allow a plug-in to set up MPE support in wrappers.
 
-- cmake:
+- CMake:
   - minor refactoring (like renaming WIN to SMTG_WIN).
   - fix *WIN_ARCHITECTURE_NAME* for Windows 32bits.
   - fix `SMTG_PACKAGE_ICON_PATH` selection.

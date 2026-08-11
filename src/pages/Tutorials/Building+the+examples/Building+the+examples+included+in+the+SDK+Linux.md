@@ -26,7 +26,7 @@ Download cmake from: <https://cmake.org/download/> or use a package manager for 
 
 ## Part 2: Building the examples on Linux
 
-- Install the required packages: [Required packages](../../Getting+Started/How+to+setup+my+system.html#package-requirements)
+- Install the required packages: [Required packages](../../Getting+Started/How+to+setup+my+system.md#package-requirements)
 - Create a folder for the build and move to this folder (using cd):
 
 ``` c++

@@ -147,11 +147,11 @@ The host (if supported) will provide to the user a way to route some signal path
 
 [![getting_started_vid_3](https://i.ytimg.com/vi/6AvqoFSk2S8/maxresdefault.jpg)](https://www.youtube.com/watch?v=6AvqoFSk2S8)
 
-What is Side-Chaining and How to Use It | Music Production For Beginners
+What is Side-Chaining and How to Use It | Music Production For Beginners.
 
 [![getting_started_vid_4](https://i.ytimg.com/vi/PBQr-PnI6Yw/maxresdefault.jpg)](https://www.youtube.com/watch?v=PBQr-PnI6Yw)
 
-Here an example of Side-Chaining for a Instrument in Cubase
+Here an example of Side-Chaining for a Instrument in **Cubase**.
 
 ## How can I implement a Side-chain path into my plug-in?
 

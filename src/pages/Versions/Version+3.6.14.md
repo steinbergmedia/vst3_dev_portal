@@ -8,7 +8,7 @@
   - new control: VSTGUI::CListControl in play with VSTGUI::CStringList
   - custom font support: VSTGUI now supports using fonts embedded in its Bundle/Package at Resources/Fonts. Note that this works on Windows only when building with the Windows 10 SDK and it does also only work on Windows 10. There is no such restriction on macOS or Linux.
 
-- cmake:
+- CMake:
   - minor refactoring.
   - add file SMTG_VST3_SDK.cmake.
   - better FindJack support.
