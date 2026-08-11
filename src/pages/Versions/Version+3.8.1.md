@@ -1,8 +1,8 @@
   >/ [VST Home](../) / [Change History](./Index.md)
 >
-># Version 3.8.1 (2026/08/04)
+># Version 3.8.1 (2026/08/11)
 
-## Version 3.8.1 (2026/08/04)
+## Version 3.8.1 (2026/08/11)
 
 - Interface changes:
   - New interface [ITransportControl](../Technical+Documentation/Change+History/3.8.1/ITransportControl.md) allowing a plug-in to request transport-related actions from the host.
