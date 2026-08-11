@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -226,7 +226,7 @@ controller then receives the block either on the main thread or on a background 
 the setup of the queue.
 The host guarantees that all blocks are sent before the plug-in is deactivated.</p>
 <h4 id="closing-a-queue"><a class="header" href="#closing-a-queue">Closing a queue</a></h4>
-<p>The audio processor must close an open queue. This need to be done after deactivating the processor and prior to disconnecting it from the edit controller (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">Vst:: IConnectionPoint</a>).</p>
+<p>The audio processor must close an open queue. This needs to be done after deactivating the processor and prior to disconnecting it from the edit controller (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">Vst:: IConnectionPoint</a>).</p>
 <h4 id="what-to-do-when-the-queue-is-full-and-no-block-can-be-locked"><a class="header" href="#what-to-do-when-the-queue-is-full-and-no-block-can-be-locked">What to do when the queue is full and no block can be locked?</a></h4>
 <p>The plug-in needs to be prepared for this situation, as constraints in the overall system may cause the queue to fill up excessively. If you need to transfer the information to the controller, you can declare a hidden parameter, which you can set to a special value and send this parameter change in your audio process method.</p>
 <h3 id="idataexchangereceiver"><a class="header" href="#idataexchangereceiver">IDataExchangeReceiver</a></h3>

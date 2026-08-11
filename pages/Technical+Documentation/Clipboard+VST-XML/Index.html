@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html lang="en" class="steinberg-light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Clipboard VST-XML - VST 3 Developer Portal</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="shortcut icon" href="../../../resources/favicon/favicon-16x16.png" type="image/png">
+        <link rel="shortcut icon" href="../../../resources/favicon/favicon-32x32.png" type="image/png">
+        <link rel="shortcut icon" href="../../../resources/favicon/favicon-192x192.png" type="image/png">
+        <link rel="shortcut icon" href="../../../resources/favicon/favicon-256x256.png" type="image/png">
+
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "steinberg-dark" : "steinberg-light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('steinberg-light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="steinberg-dark">Dark</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">VST 3 Developer Portal</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/steinbergmedia/vst3_dev_portal/tree/deploy" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <blockquote>
+<p>/ <a href="../../">VST Home</a> / <a href="../Index.html">Technical Documentation</a></p>
+<h1 id="clipboard-vst-xml"><a class="header" href="#clipboard-vst-xml">Clipboard VST-XML</a></h1>
+</blockquote>
+<p><strong>On this page:</strong></p>
+<ul>
+<li><a href="#what-it-enables">What It Enables</a></li>
+<li><a href="#additional-context-data">Additional Context Data</a></li>
+<li><a href="#typical-workflow">Typical Workflow</a></li>
+<li><a href="#known-applications-and-plug-ins-supporting-clipboard-vst-xml">Known applications and plug-ins supporting Clipboard VST-XML</a></li>
+<li><a href="#format-description">Format Description</a>
+<ul>
+<li><a href="#root-node-vst-xml">Root node: <code>vst-xml</code></a></li>
+<li><a href="#node-sourceapp">Node: <code>sourceApp</code></a></li>
+<li><a href="#node-region">Node: <code>region</code></a></li>
+<li><a href="#node-segment">Node: <code>segment</code></a></li>
+<li><a href="#node-loop">Node: <code>loop</code></a></li>
+<li><a href="#node-chord">Node: <code>chord</code></a></li>
+<li><a href="#node-scale">Node: <code>scale</code></a></li>
+<li><a href="#node-signature">Node: <code>signature</code></a></li>
+<li><a href="#leaf-tag-meanings">Leaf tag meanings</a></li>
+<li><a href="#attribute-reference">Attribute reference</a></li>
+</ul>
+</li>
+<li><a href="#examples-of-clipboard-vst-xml">Examples of Clipboard VST-XML</a>
+<ul>
+<li><a href="#insert-one-audio-file-at-position-beat-16">Insert one audio file at position beat 16</a></li>
+<li><a href="#insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-two-different-tracks">Insert one audio file at 4s and one audio file at beat 8 on two different tracks</a></li>
+<li><a href="#insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-one-track">Insert one audio file at 4s and one audio file at beat 8 on one track</a></li>
+<li><a href="#4-chords">4 Chords</a></li>
+<li><a href="#2-scales">2 Scales</a></li>
+<li><a href="#signature">Signature</a></li>
+<li><a href="#join-of-segments-and-loops">Join of segments and loops</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>The <strong>Clipboard VST-XML</strong> format is a simple text-based XML definition used to exchange media-related data through drag and drop (text-based) or copy and paste (using the operating system clipboard).</p>
+<p>It was originally designed to support audio file exchange between <strong>Cubase</strong> and <strong>HALion</strong>. Over time, the same mechanism was extended to transfer additional musical elements and their context.</p>
+<h2 id="what-it-enables"><a class="header" href="#what-it-enables">What It Enables</a></h2>
+<p>Clipboard VST-XML allows applications to transfer more than a plain file reference.</p>
+<p>Typical transferred elements include:</p>
+<ul>
+<li>Audio files/clips (since version 1.0)</li>
+<li>Tempo (since version 1.1)</li>
+<li>Chords (since version 1.2)</li>
+<li>Scales (since version 1.3)</li>
+</ul>
+<h2 id="additional-context-data"><a class="header" href="#additional-context-data">Additional Context Data</a></h2>
+<p>The XML payload can include extra information that helps preserve editing context across applications and plug-ins, for example:</p>
+<ul>
+<li>Color</li>
+<li>Project time position</li>
+<li>Other element-specific metadata</li>
+</ul>
+<p>This makes drag-and-drop and copy-paste workflows more useful than simple file transfer, because the receiving application and plug-ins can reconstruct musical and visual context.</p>
+<h2 id="typical-workflow"><a class="header" href="#typical-workflow">Typical Workflow</a></h2>
+<ol>
+<li>A source plug-in like <strong>HALion</strong> serializes the selected element as Clipboard VST-XML text.</li>
+<li>The user performs drag and drop or copy and paste.</li>
+<li>The target application like <strong>Cubase</strong> parses the XML and imports the element with its metadata.</li>
+</ol>
+<h2 id="known-applications-and-plug-ins-supporting-clipboard-vst-xml"><a class="header" href="#known-applications-and-plug-ins-supporting-clipboard-vst-xml">Known applications and plug-ins supporting Clipboard VST-XML</a></h2>
+<ul>
+<li>Cubase</li>
+<li>Dorico</li>
+<li>Nuendo</li>
+<li>HALion</li>
+<li>Padshop</li>
+<li>Studio One</li>
+<li>Soundly</li>
+<li>Wavelab</li>
+</ul>
+<h2 id="format-description"><a class="header" href="#format-description">Format Description</a></h2>
+<p>This section describes the Clipboard VST-XML structure according to its current Document Type Definition (<a href="../../../resources/VST-XML-1.4.dtd">VST-XML-1.4.dtd</a>).</p>
+<h3 id="root-node-vst-xml"><a class="header" href="#root-node-vst-xml">Root node: <code>vst-xml</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>version</code> (required)</td></tr>
+<tr><td>Required children</td><td><code>sourceApp</code></td></tr>
+<tr><td>Optional children</td><td><code>region</code>, <code>chord</code>, <code>scale</code>, <code>signature</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-sourceapp"><a class="header" href="#node-sourceapp">Node: <code>sourceApp</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Content</td><td>Text value with sender application name</td></tr>
+</tbody></table>
+</div>
+<h3 id="node-region"><a class="header" href="#node-region">Node: <code>region</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>id</code> (required), <code>type</code> (optional: <code>join</code> or <code>silence</code>), <code>channelID</code> (optional)</td></tr>
+<tr><td>Required children</td><td><code>filename</code>, <code>start</code>, <code>end</code></td></tr>
+<tr><td>Optional children</td><td><code>name</code>, <code>tempo</code>, <code>rootkey</code>,  <code>projectTime</code>, <code>color</code>, <code>loop</code>, <code>segment</code>, <code>signature</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-segment"><a class="header" href="#node-segment">Node: <code>segment</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Required children</td><td><code>filename</code>, <code>start</code>, <code>length</code></td></tr>
+<tr><td>Optional children</td><td><code>fileOffset</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-loop"><a class="header" href="#node-loop">Node: <code>loop</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>type</code> (optional: <code>release</code>)</td></tr>
+<tr><td>Required children</td><td><code>start</code>, <code>end</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-chord"><a class="header" href="#node-chord">Node: <code>chord</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>id</code> (required)</td></tr>
+<tr><td>Required children</td><td><code>keyNote</code>, <code>pitches</code>, <code>mask</code></td></tr>
+<tr><td>Optional children</td><td><code>name</code>, <code>projectTime</code>, <code>bassNote</code>, <code>color</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-scale"><a class="header" href="#node-scale">Node: <code>scale</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>id</code> (required)</td></tr>
+<tr><td>Required children</td><td><code>mask</code>, <code>keyNote</code></td></tr>
+<tr><td>Optional children</td><td><code>name</code>, <code>projectTime</code>, <code>displayName</code>, <code>color</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-signature"><a class="header" href="#node-signature">Node: <code>signature</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Required children</td><td><code>numerator</code>, <code>denominator</code></td></tr>
+<tr><td>Optional children</td><td><code>projectTime</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="leaf-tag-meanings"><a class="header" href="#leaf-tag-meanings">Leaf tag meanings</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Tag</th><th>Meaning</th></tr></thead><tbody>
+<tr><td><code>name</code></td><td>Human-readable label</td></tr>
+<tr><td><code>displayName</code></td><td>Alternate/display label for scale</td></tr>
+<tr><td><code>filename</code></td><td>Audio file path</td></tr>
+<tr><td><code>start</code></td><td>Start position or offset (context dependent)</td></tr>
+<tr><td><code>end</code></td><td>End position (context dependent)</td></tr>
+<tr><td><code>length</code></td><td>Segment length</td></tr>
+<tr><td><code>fileOffset</code></td><td>File offset used by segment-based payloads</td></tr>
+<tr><td><code>projectTime</code></td><td>Timeline position; requires <code>domain</code> attribute</td></tr>
+<tr><td><code>tempo</code></td><td>Tempo value</td></tr>
+<tr><td><code>rootkey</code></td><td>Root key value</td></tr>
+<tr><td><code>pitches</code></td><td>Chord pitch set as text</td></tr>
+<tr><td><code>keyNote</code></td><td>Chord/scale key note value</td></tr>
+<tr><td><code>bassNote</code></td><td>Chord bass note value</td></tr>
+<tr><td><code>mask</code></td><td>Bitmask-like harmonic/scale encoding</td></tr>
+<tr><td><code>color</code></td><td>Color value (for UI/context)</td></tr>
+<tr><td><code>numerator</code></td><td>Time signature numerator</td></tr>
+<tr><td><code>denominator</code></td><td>Time signature denominator</td></tr>
+</tbody></table>
+</div>
+<h3 id="attribute-reference"><a class="header" href="#attribute-reference">Attribute reference</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Attribute</th><th>Used on</th><th>Values</th></tr></thead><tbody>
+<tr><td><code>id</code></td><td><code>region</code>, <code>chord</code>, <code>scale</code></td><td>Any text (like integer counter), required</td></tr>
+<tr><td><code>type</code></td><td><code>region</code></td><td><code>join</code>, <code>silence</code></td></tr>
+<tr><td><code>type</code></td><td><code>loop</code></td><td><code>release</code></td></tr>
+<tr><td><code>channelID</code></td><td><code>region</code></td><td>Any text (typically GUID)</td></tr>
+<tr><td><code>domain</code></td><td><code>projectTime</code></td><td><code>quarterNotes</code> or <code>seconds</code> (required)</td></tr>
+</tbody></table>
+</div>
+<h2 id="examples-of-clipboard-vst-xml"><a class="header" href="#examples-of-clipboard-vst-xml">Examples of Clipboard VST-XML</a></h2>
+<h3 id="insert-one-audio-file-at-position-beat-16"><a class="header" href="#insert-one-audio-file-at-position-beat-16">Insert one audio file at position beat 16</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;MyApp&lt;/sourceApp&gt;
+    &lt;region id="1" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 1&lt;/name&gt;
+        &lt;filename&gt;c:\toto.wav&lt;/filename&gt;
+        &lt;start&gt;100&lt;/start&gt;
+        &lt;end&gt;44200&lt;/end&gt;
+        &lt;projectTime domain="quarterNotes"&gt;16&lt;/projectTime&gt;
+    &lt;/region&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-two-different-tracks"><a class="header" href="#insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-two-different-tracks">Insert one audio file at 4s and one audio file at beat 8 on two different tracks</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;MyApp&lt;/sourceApp&gt;
+    &lt;region id="1" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 1&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum1.wav&lt;/filename&gt;
+        &lt;start&gt;100&lt;/start&gt;
+        &lt;end&gt;44200&lt;/end&gt;
+        &lt;projectTime domain="seconds"&gt;4.0&lt;/projectTime&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+    &lt;/region&gt;
+    &lt;region id="2" channelID="{09FCC4AB-1752-4A8B-A039-380B6EE74256}"&gt;
+        &lt;name&gt;Region 2&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum2.wav&lt;/filename&gt;
+        &lt;start&gt;0&lt;/start&gt;
+        &lt;end&gt;44100&lt;/end&gt;
+        &lt;projectTime domain="quarterNotes"&gt;8&lt;/projectTime&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+    &lt;/region&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-one-track"><a class="header" href="#insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-one-track">Insert one audio file at 4s and one audio file at beat 8 on one track</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;MyApp&lt;/sourceApp&gt;
+    &lt;region id="1" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 1&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum1.wav&lt;/filename&gt;
+        &lt;start&gt;100&lt;/start&gt;
+        &lt;end&gt;44200&lt;/end&gt;
+        &lt;projectTime domain="seconds"&gt;4.0&lt;/projectTime&gt;
+    &lt;/region&gt;
+    &lt;region id="2" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 2&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum2.wav&lt;/filename&gt;
+        &lt;start&gt;0&lt;/start&gt;
+        &lt;end&gt;44100&lt;/end&gt;
+        &lt;projectTime domain="quarterNotes"&gt;8&lt;/projectTime&gt;
+    &lt;/region&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="4-chords"><a class="header" href="#4-chords">4 Chords</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;chord id="818292160"&gt;
+        &lt;name&gt;C7&lt;/name&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;0&lt;/projectTime&gt;
+        &lt;pitches&gt;C1;E2;G2;A#2;&lt;/pitches&gt;
+        &lt;keyNote&gt;60&lt;/keyNote&gt;
+        &lt;bassNote&gt;24&lt;/bassNote&gt;
+        &lt;mask&gt;0x248&lt;/mask&gt;
+    &lt;/chord&gt;
+    &lt;chord id="1485759856"&gt;
+        &lt;name&gt;Fmin7&lt;/name&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;32&lt;/projectTime&gt;
+        &lt;pitches&gt;F1;G#2;C3;D#3;&lt;/pitches&gt;
+        &lt;keyNote&gt;65&lt;/keyNote&gt;
+        &lt;bassNote&gt;29&lt;/bassNote&gt;
+        &lt;mask&gt;0x244&lt;/mask&gt;
+    &lt;/chord&gt;
+    &lt;chord id="1485760336"&gt;
+        &lt;name&gt;Esus4&lt;/name&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;56&lt;/projectTime&gt;
+        &lt;pitches&gt;E1;A2;B2;E3;&lt;/pitches&gt;
+        &lt;keyNote&gt;64&lt;/keyNote&gt;
+        &lt;bassNote&gt;28&lt;/bassNote&gt;
+        &lt;mask&gt;0x50&lt;/mask&gt;
+    &lt;/chord&gt;
+    &lt;chord id="1485759376"&gt;
+        &lt;name&gt;Gsus2&lt;/name&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;72&lt;/projectTime&gt;
+        &lt;pitches&gt;G1;G2;A2;D3;&lt;/pitches&gt;
+        &lt;keyNote&gt;67&lt;/keyNote&gt;
+        &lt;bassNote&gt;31&lt;/bassNote&gt;
+        &lt;mask&gt;0x42&lt;/mask&gt;
+    &lt;/chord&gt;
+    &lt;sourceApp&gt;Nuendo&lt;/sourceApp&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="2-scales"><a class="header" href="#2-scales">2 Scales</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;scale id="492403952"&gt;
+        &lt;name&gt;Blues 1&lt;/name&gt;
+        &lt;displayName&gt;A# Blues 1&lt;/displayName&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;0&lt;/projectTime&gt;
+        &lt;keyNote&gt;10&lt;/keyNote&gt;
+        &lt;mask&gt;0x6ed&lt;/mask&gt;
+    &lt;/scale&gt;
+    &lt;scale id="492405312"&gt;
+        &lt;name&gt;Major&lt;/name&gt;
+        &lt;displayName&gt;G Major&lt;/displayName&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;56&lt;/projectTime&gt;
+        &lt;keyNote&gt;7&lt;/keyNote&gt;
+        &lt;mask&gt;0xab5&lt;/mask&gt;
+    &lt;/scale&gt;
+    &lt;sourceApp&gt;Nuendo&lt;/sourceApp&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="signature"><a class="header" href="#signature">Signature</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;MyApp&lt;/sourceApp&gt;
+    &lt;signature&gt;
+        &lt;numerator&gt;3&lt;/numerator&gt;
+        &lt;denominator&gt;4&lt;/denominator&gt;
+        &lt;projectTime domain="quarterNotes"&gt;0&lt;/projectTime&gt;
+    &lt;/signature&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="join-of-segments-and-loops"><a class="header" href="#join-of-segments-and-loops">Join of segments and loops</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;WaveLab&lt;/sourceApp&gt;
+    &lt;region type="join" id="4" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;my Region&lt;/name&gt;
+        &lt;projectTime domain="seconds"&gt;33.5&lt;/projectTime&gt;
+        &lt;segment&gt;
+            &lt;filename&gt;E:\Temp\Audio\Drum2.wav&lt;/filename&gt;
+            &lt;start&gt;0&lt;/start&gt;
+            &lt;length&gt;1234&lt;/length&gt;
+        &lt;/segment&gt;
+        &lt;segment&gt;
+            &lt;filename&gt;c:\toto.wav&lt;/filename&gt;
+            &lt;start&gt;1227&lt;/start&gt;
+            &lt;length&gt;44&lt;/length&gt;
+        &lt;/segment&gt;
+        &lt;color&gt;#12345678&lt;/color&gt;
+    &lt;/region&gt;
+    &lt;region id="1234" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 1&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum2.wav&lt;/filename&gt;
+        &lt;start&gt;0&lt;/start&gt;
+        &lt;end&gt;1234&lt;/end&gt;
+        &lt;projectTime domain="quarterNotes"&gt;16&lt;/projectTime&gt;
+        &lt;loop&gt;
+            &lt;start&gt;0&lt;/start&gt;
+            &lt;end&gt;1002&lt;/end&gt;
+        &lt;/loop&gt;
+        &lt;loop type="release"&gt;
+            &lt;start&gt;0&lt;/start&gt;
+            &lt;end&gt;1002&lt;/end&gt;
+        &lt;/loop&gt;
+        &lt;tempo&gt;120.0&lt;/tempo&gt;
+        &lt;rootkey&gt;36&lt;/rootkey&gt;
+        &lt;signature&gt;
+            &lt;numerator&gt;3&lt;/numerator&gt;
+            &lt;denominator&gt;4&lt;/denominator&gt;
+        &lt;/signature&gt;
+    &lt;/region&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../pages/Technical+Documentation/Host+Requirements/Index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../../pages/Technical+Documentation/Change+History/Index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../pages/Technical+Documentation/Host+Requirements/Index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../../pages/Technical+Documentation/Change+History/Index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+            
+            <div id="footer" class="footer">
+                <!-- Here comes the footer when available -->
+                © 2026 <a href="https://www.steinberg.net" target="_blank">Steinberg Media Technologies GmbH</a>.&nbsp; All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://o.steinberg.net/en/extras/about.html" target="_blank">About</a> |
+                <a href="https://o.steinberg.net/en/extras/privacy_policy.html" target="_blank">Privacy Policy</a> |
+                <a href="https://o.steinberg.net/en/extras/terms_conditions.html" target="_blank">Legal Terms</a> 
+            </div>
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js"></script>
+        <script src="../../../mark.min.js"></script>
+        <script src="../../../searcher.js"></script>
+
+        <script src="../../../clipboard.min.js"></script>
+        <script src="../../../highlight.js"></script>
+        <script src="../../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../../mermaid.min.js"></script>
+        <script src="../../../mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

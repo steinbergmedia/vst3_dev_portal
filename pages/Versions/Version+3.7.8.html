@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -184,7 +184,7 @@
 <p><a href="../What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a> update <a href="https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_12_3">4.12.3</a></p>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Fix "When vst3sdk is a submodule, example plugins are not built - a switch to choose would be very useful" (<a href="https://github.com/steinbergmedia/vst3sdk/issues/94">Issue#94</a>).</li>
 <li>Fix CMake fails with bad $-escape (<a href="https://github.com/steinbergmedia/vst3sdk/issues/100">Issue#100</a>).</li>
@@ -240,7 +240,7 @@
 <li>Remove warnings that cannot be silenced on Linux (<a href="https://github.com/steinbergmedia/vst3_base/pull/6">PR#6</a>.</li>
 <li>Fix language standard check in module_linux.cpp (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/53">PR#53</a>).</li>
 <li>Fix Qualify std::move call in module.cpp to silence a -Wunqualified-std-cast-call warning (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/53">PR#53</a>).</li>
-<li>Fix Include <cstdint> in moduleinfo.h to ensure that sized int types are visible (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/53">PR#53</a>).</li>
+<li>Fix include <code>&lt;cstdint&gt;</code> in moduleinfo.h to ensure that sized int types are visible (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/53">PR#53</a>).</li>
 </ul>
 </li>
 <li>

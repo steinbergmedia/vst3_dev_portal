@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -177,6 +177,7 @@
 <li><a href="Locations+Format/Index.html">VST 3 Locations / Format</a></li>
 <li><a href="About+MIDI/Index.html">About MIDI in VST 3</a></li>
 <li><a href="Provide+A+Runloop+On+Linux/Index.html">Provide A Runloop On Linux</a></li>
+<li><a href="Clipboard+VST-XML/Index.html">Clipboard VST-XML</a></li>
 </ul>
 <hr />
 <ul>
@@ -218,6 +219,8 @@
 <li><a href="Change+History/3.7.11/IRemapParamID.html">[3.7.11] Remap Parameter ID</a></li>
 <li><a href="Change+History/3.8.0/IMidiLearn2.html">[3.8.0] MIDI Learn 2 (MIDI 2.0 support)</a></li>
 <li><a href="Change+History/3.8.0/IMidiMapping2.html">[3.8.0] Parameter MIDI Mapping 2 (MIDI 2.0 support)</a></li>
+<li><a href="Change+History/3.8.1/ITransportControl.html">[3.8.1] Transport Control</a></li>
+<li><a href="Change+History/3.8.1/IInfo.html">[3.8.1] NoteOn Orchestral Articulation Info</a></li>
 </ul>
 <hr />
 <h2 id="vst-3-api-documentation"><a class="header" href="#vst-3-api-documentation"><a href="API+Documentation/Index.html">VST 3 API Documentation</a></a></h2>
@@ -242,6 +245,8 @@
 <p>Unlike in <strong>VST 2</strong>, <strong>MIDI</strong> is not included in <strong>VST 3</strong>.</p>
 <h2 id="host-requirements-for-vst-3-support"><a class="header" href="#host-requirements-for-vst-3-support"><a href="Host+Requirements/Index.html">Host Requirements for VST 3 Support</a></a></h2>
 <p>Minimum Host requirements for <strong>VST 3</strong> support.</p>
+<h2 id="clipboard-vst-xml"><a class="header" href="#clipboard-vst-xml"><a href="Clipboard+VST-XML/Index.html">Clipboard VST-XML</a></a></h2>
+<p>Text-based XML clipboard format used for drag-and-drop and copy-paste exchange of audio and musical elements (for example, audio files, chords, scales, and clips) with contextual metadata such as project time and color.</p>
 <hr />
 <h2 id="300-interfaces-supported-by-the-plug-in"><a class="header" href="#300-interfaces-supported-by-the-plug-in"><a href="Change+History/3.0.0/Plug+in+Interfaces.html">[3.0.0] Interfaces supported by the plug-in</a></a></h2>
 <p>List of interfaces supported/implemented by the plug-in in <strong>VST 3.0.0</strong>.</p>
@@ -313,6 +318,8 @@
 <p>How the mapping works between MIDI 2.0 CCs and parameters (replace <a href="Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping (MIDI 1.0 support)</a>).</p>
 <h2 id="380-midi-learn-2-midi-20-support"><a class="header" href="#380-midi-learn-2-midi-20-support"><a href="Change+History/3.8.0/IMidiLearn2.html">[3.8.0] MIDI Learn 2 (MIDI 2.0 support)</a></a></h2>
 <p>If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI 2.0-CC input for the plug-in (replace <a href="Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn (MIDI 1.0 support)</a>).</p>
+<h2 id="381-transport-control"><a class="header" href="#381-transport-control"><a href="Change+History/3.8.1/ITransportControl.html">[3.8.1] Transport Control</a></a></h2>
+<p>This interface allows a plug-in to request transport-related actions from the host.</p>
 
                     </main>
 

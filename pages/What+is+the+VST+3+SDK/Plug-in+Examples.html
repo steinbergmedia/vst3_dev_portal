@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -180,6 +180,7 @@
 <li><a href="#test-multiple-program-changes">Test Multiple Program Changes</a></li>
 <li><a href="#test-remap-paramid">Test Remap ParamID</a></li>
 <li><a href="#sync-delay">Sync Delay</a></li>
+<li><a href="#transport-control">Transport Control</a></li>
 <li><a href="#utf16-name">UTF16 Name</a></li>
 </ul>
 <p><strong>Related pages:</strong></p>
@@ -410,8 +411,8 @@ In order to add your own plug-ins check: <a href="../Tutorials/Generate+new+plug
 <p>Very simple plug-in:</p>
 <ul>
 <li>demonstrating how a <strong>VST 3</strong> plug-in could replace another one and remap parameters ID.</li>
-<li>it could replace the <a href="../What+is+the+VST+3+SDK/Plug-in+Examples.html">AGain</a> plug-in when it is not available.</li>
-<li>it illustrates the use of the interface <a href="../Technical+Documentation/Change+History/3.7.11/IRemapParamID.html">Vst:: IRemapParamID</a> (for mapping <a href="../What+is+the+VST+3+SDK/Plug-in+Examples.html">Test Remap ParamID</a> parameters to AGain plug-in parameters) and the <a href="../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">module info</a> with its compatibility field.</li>
+<li>it could replace the <a href="#again">AGain</a> plug-in when it is not available.</li>
+<li>it illustrates the use of the interface <a href="../Technical+Documentation/Change+History/3.7.11/IRemapParamID.html">Vst:: IRemapParamID</a> (for mapping <a href="#test-remap-paramid">Test Remap ParamID</a> parameters to AGain plug-in parameters) and the <a href="../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">module info</a> with its compatibility field.</li>
 </ul>
 <h2 id="sync-delay"><a class="header" href="#sync-delay">Sync Delay</a></h2>
 <p>Very simple delay plug-in:</p>
@@ -419,6 +420,13 @@ In order to add your own plug-ins check: <a href="../Tutorials/Generate+new+plug
 <li>showing how to support <a href="../Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.html">Vst:: IProcessContextRequirements</a></li>
 </ul>
 <p>Check the folder <em>"public.sdk/samples/vst/syncdelay"</em> of the SDK!</p>
+<h2 id="transport-control"><a class="header" href="#transport-control">Transport Control</a></h2>
+<p>Simple plug-in:</p>
+<ul>
+<li>showing how to support <a href="../Technical+Documentation/Change+History/3.8.1/ITransportControl.html">Vst:: ITransportControl</a></li>
+</ul>
+<p>Check the folder <em>"public.sdk/samples/vst/transportcontrol"</em> of the SDK!</p>
+<p><img src="../../resources/what_is_47.png" alt="what_if_47" /></p>
 <h2 id="utf16-name"><a class="header" href="#utf16-name">UTF16 Name</a></h2>
 <p>Very simple plug-in:</p>
 <ul>

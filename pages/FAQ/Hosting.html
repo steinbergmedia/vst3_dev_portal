@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -191,7 +191,7 @@
 <hr />
 <h2 id="q-can-the-host-expect-classid-to-be-globally-unique-or-should-it-expect-different-modules-to-reuse-class-ids"><a class="header" href="#q-can-the-host-expect-classid-to-be-globally-unique-or-should-it-expect-different-modules-to-reuse-class-ids">Q: Can the host expect ClassID to be globally unique or should it expect different modules to reuse class IDs?</a></h2>
 <p>You must treat the Class ID as globally unique.
-If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by Cubase for example). It should be only one <strong>VST 3</strong> plug-in registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.</p>
+If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by <strong>Cubase</strong> for example). It should be only one <strong>VST 3</strong> plug-in registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.</p>
 <hr />
 <h2 id="q-do-all-version-updates-for-a-certain-plug-in-require-a-new-classid"><a class="header" href="#q-do-all-version-updates-for-a-certain-plug-in-require-a-new-classid">Q: Do all version updates for a certain plug-in require a new classID?</a></h2>
 <p>No, normally a new version should and could replace directly an older version by using the same classID, see previous question. This is the correct way to do it.</p>
@@ -233,7 +233,7 @@ When <strong>restartComponent</strong> is called with <em>kReloadComponent</em>,
 <hr />
 <h2 id="q-if-its-only-intended-to-convey-os-scale-factor-then-why-an-extra-interface-when-the-plug-in-can-get-the-scale-factor-from-the-os"><a class="header" href="#q-if-its-only-intended-to-convey-os-scale-factor-then-why-an-extra-interface-when-the-plug-in-can-get-the-scale-factor-from-the-os">Q: If it's only intended to convey OS-scale factor, then why an extra interface when the plug-in can get the scale factor from the OS?</a></h2>
 <p>The design of this interface was done before it was possible on Windows for a plug-in to access the OS-scale.</p>
-<p>But this interface could be used by the host to try to rescale a given plug-in or all plug-ins. This is what is used in Cubase by changing the overall App scaling in the preference up to 50% to the system scale.</p>
+<p>But this interface could be used by the host to try to rescale a given plug-in or all plug-ins. This is what is used in <strong>Cubase</strong> by changing the overall App scaling in the preference up to 50% to the system scale.</p>
 <hr />
 <h2 id="q-in-the-examples-that-implement-host-specific-interfaces-funknownaddref-and-funknownrelease-tend-to-be-implemented-as-a-no-op-eg-return-1000---this-appears-to-be-safer-as-the-plug-in-cannot-delete-or-leak-objects-that-live-in-the-host-is-there-any-case-when-the-host-needs-to-implement-true-addref-and-release-which-actually-control-the-lifetime-of-the-object"><a class="header" href="#q-in-the-examples-that-implement-host-specific-interfaces-funknownaddref-and-funknownrelease-tend-to-be-implemented-as-a-no-op-eg-return-1000---this-appears-to-be-safer-as-the-plug-in-cannot-delete-or-leak-objects-that-live-in-the-host-is-there-any-case-when-the-host-needs-to-implement-true-addref-and-release-which-actually-control-the-lifetime-of-the-object">Q: In the examples that implement host-specific interfaces, <em>FUnknown::addRef()</em> and <em>FUnknown::release()</em> tend to be implemented as a no-op, <em>e.g. {return 1000;}</em> - this appears to be safer as the plug-in cannot delete or leak objects that live in the host. Is there any case when the host needs to implement true <em>addRef()</em> and <em>release()</em>, which actually control the lifetime of the object?</a></h2>
 <p>You can only use these reference count no-ops for objects that are alive during the entire lifetime of the host and that will outlive the plug-ins.</p>

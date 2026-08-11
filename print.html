@@ -9,7 +9,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -519,10 +519,10 @@ This combination of the latest technology and new features is the result of <a h
 <p>VST 3 SDK is under <strong>MIT license</strong>.</p>
 <h2 id="system-requirements"><a class="header" href="#system-requirements">System requirements</a></h2>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">Operating System</th><th style="text-align: left">Architecture</th><th style="text-align: left">Compiler</th><th style="text-align: left">Notes</th></tr></thead><tbody>
-<tr><td style="text-align: left">Windows 11</td><td style="text-align: left">x86, x86_64, arm64, arm64EC</td><td style="text-align: left">MSVC 2022</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">Windows 11</td><td style="text-align: left">x86, x86_64, arm64, arm64EC</td><td style="text-align: left">MSVC 2022, MSVC 2026</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">Windows 8.1/10</td><td style="text-align: left">x86, x86_64</td><td style="text-align: left">MSVC 2019, MSVC 2022</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left">macOS 10.13 - 15</td><td style="text-align: left">x86, x86_64, Apple Silicon</td><td style="text-align: left">Xcode 10 - 16</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left">iOS 13 - 18</td><td style="text-align: left">arm64</td><td style="text-align: left">Xcode 11 - 16</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">macOS 10.14 - 26</td><td style="text-align: left">x86, x86_64, Apple Silicon</td><td style="text-align: left">Xcode 10 - 26.5</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">iOS 13 - 26</td><td style="text-align: left">arm64</td><td style="text-align: left">Xcode 11 - 26</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">Linux - Ubuntu 24.04 LTS</td><td style="text-align: left">x86_64</td><td style="text-align: left">GCC 13.3 and higher</td><td style="text-align: left">Visual Studio Code, Qt Creator</td></tr>
 </tbody></table>
 </div>
@@ -554,6 +554,7 @@ This combination of the latest technology and new features is the result of <a h
 <li><a href="pages/What+is+the+VST+3+SDK/Plug-in+Examples.html#test-multiple-program-changes">Test Multiple Program Changes</a></li>
 <li><a href="pages/What+is+the+VST+3+SDK/Plug-in+Examples.html#test-remap-paramid">Test Remap ParamID</a></li>
 <li><a href="pages/What+is+the+VST+3+SDK/Plug-in+Examples.html#sync-delay">Sync Delay</a></li>
+<li><a href="pages/What+is+the+VST+3+SDK/Plug-in+Examples.html#transport-control">Transport Control</a></li>
 <li><a href="pages/What+is+the+VST+3+SDK/Plug-in+Examples.html#utf16-name">UTF16 Name</a></li>
 </ul>
 <p><strong>Related pages:</strong></p>
@@ -784,8 +785,8 @@ In order to add your own plug-ins check: <a href="pages/What+is+the+VST+3+SDK/..
 <p>Very simple plug-in:</p>
 <ul>
 <li>demonstrating how a <strong>VST 3</strong> plug-in could replace another one and remap parameters ID.</li>
-<li>it could replace the <a href="pages/What+is+the+VST+3+SDK/../What+is+the+VST+3+SDK/Plug-in+Examples.html">AGain</a> plug-in when it is not available.</li>
-<li>it illustrates the use of the interface <a href="pages/What+is+the+VST+3+SDK/../Technical+Documentation/Change+History/3.7.11/IRemapParamID.html">Vst:: IRemapParamID</a> (for mapping <a href="pages/What+is+the+VST+3+SDK/../What+is+the+VST+3+SDK/Plug-in+Examples.html">Test Remap ParamID</a> parameters to AGain plug-in parameters) and the <a href="pages/What+is+the+VST+3+SDK/../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">module info</a> with its compatibility field.</li>
+<li>it could replace the <a href="pages/What+is+the+VST+3+SDK/Plug-in+Examples.html#again">AGain</a> plug-in when it is not available.</li>
+<li>it illustrates the use of the interface <a href="pages/What+is+the+VST+3+SDK/../Technical+Documentation/Change+History/3.7.11/IRemapParamID.html">Vst:: IRemapParamID</a> (for mapping <a href="pages/What+is+the+VST+3+SDK/Plug-in+Examples.html#test-remap-paramid">Test Remap ParamID</a> parameters to AGain plug-in parameters) and the <a href="pages/What+is+the+VST+3+SDK/../Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html">module info</a> with its compatibility field.</li>
 </ul>
 <h2 id="sync-delay"><a class="header" href="#sync-delay">Sync Delay</a></h2>
 <p>Very simple delay plug-in:</p>
@@ -793,6 +794,13 @@ In order to add your own plug-ins check: <a href="pages/What+is+the+VST+3+SDK/..
 <li>showing how to support <a href="pages/What+is+the+VST+3+SDK/../Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.html">Vst:: IProcessContextRequirements</a></li>
 </ul>
 <p>Check the folder <em>"public.sdk/samples/vst/syncdelay"</em> of the SDK!</p>
+<h2 id="transport-control"><a class="header" href="#transport-control">Transport Control</a></h2>
+<p>Simple plug-in:</p>
+<ul>
+<li>showing how to support <a href="pages/What+is+the+VST+3+SDK/../Technical+Documentation/Change+History/3.8.1/ITransportControl.html">Vst:: ITransportControl</a></li>
+</ul>
+<p>Check the folder <em>"public.sdk/samples/vst/transportcontrol"</em> of the SDK!</p>
+<p><img src="pages/What+is+the+VST+3+SDK/../../resources/what_is_47.png" alt="what_if_47" /></p>
 <h2 id="utf16-name"><a class="header" href="#utf16-name">UTF16 Name</a></h2>
 <p>Very simple plug-in:</p>
 <ul>
@@ -1157,7 +1165,7 @@ class AGainController : public EditControllerEx1
 <li><strong>Output Directory</strong>: you define here in which folder your project will be created</li>
 <li><strong>CMake Generator</strong>: CMake tool required to define a generator in order to create configuration files for a specific build system: there are 2 kinds of generators: Command-Line and IDE. Choose the one you need for example:
 <ul>
-<li>on Windows: <strong>Visual Studio 17 2022</strong></li>
+<li>on Windows: <strong>Visual Studio 18 2026</strong></li>
 <li>on macOS: <strong>Xcode</strong></li>
 </ul>
 </li>
@@ -1165,16 +1173,16 @@ class AGainController : public EditControllerEx1
 </ul>
 <p>Once all information is set up, you could click on <strong>Create</strong>, a script will create and <strong>CMake</strong> will be used and the chosen IDE will be opened. In the bottom area the script output is displayed, you have the possibility to copy it by using the dedicated button: <strong>Copy Script Output To Clipboard</strong>.</p>
 <p><strong>Example of script Output</strong></p>
-<pre><code class="language-text">C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\
+<pre><code class="language-text">C:\Program Files\CMake\bin\CMake.exe C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.8.1\VST_SDK\VST3_Project_Generator\
 Windows_x64\Resources\GenerateVST3Plugin.cmake 
--DSMTG_VST3_SDK_SOURCE_DIR_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk" 
--DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7"
+-DSMTG_VST3_SDK_SOURCE_DIR_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/VST_SDK/vst3sdk" 
+-DSMTG_GENERATOR_OUTPUT_DIRECTORY_CLI="C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1"
 -DSMTG_PLUGIN_NAME_CLI="AGain" -DSMTG_PLUGIN_CATEGORY_CLI="Fx" -DSMTG_CMAKE_PROJECT_NAME_CLI="AGain"
 -DSMTG_PLUGIN_BUNDLE_NAME_CLI="AGain" -DSMTG_PLUGIN_IDENTIFIER_CLI="com.steinberg.again"
 -DSMTG_MACOS_DEPLOYMENT_TARGET_CLI="10.13" -DSMTG_VENDOR_NAME_CLI="Steinberg" 
 -DSMTG_VENDOR_HOMEPAGE_CLI="www.steinberg.net" -DSMTG_VENDOR_EMAIL_CLI="info@steinberg.net" 
 -DSMTG_PREFIX_FOR_FILENAMES_CLI="" -DSMTG_PLUGIN_CLASS_NAME_CLI="AGain" -DSMTG_ENABLE_VSTGUI_SUPPORT_CLI=ON 
- -P "C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.7.7\VST_SDK\VST3_Project_Generator\
+ -P "C:\Users\YGrabit\Desktop\SDKs\VST3_SDKs\3.8.1\VST_SDK\VST3_Project_Generator\
  Windows_x64\Resources\GenerateVST3Plugin.cmake"
 ==================================================
 
@@ -1184,16 +1192,16 @@ Windows_x64\Resources\GenerateVST3Plugin.cmake
 ==================================================
 
 -- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.38.1.windows.1") 
--- SMTG_CMAKE_SCRIPT_DIR           : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/VST_SDK/VST3_Project_Generator/Windows_x64/Resources
+-- SMTG_CMAKE_SCRIPT_DIR           : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/VST_SDK/VST3_Project_Generator/Windows_x64/Resources
 -- SMTG_ENABLE_VSTGUI_SUPPORT      : ON
--- SMTG_GENERATOR_OUTPUT_DIRECTORY : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7
--- SMTG_TEMPLATE_FILES_PATH        : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/VST_SDK/VST3_Project_Generator/Windows_x64/Resources/cmake/templates
--- SMTG_VST3_SDK_SOURCE_DIR        : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk
+-- SMTG_GENERATOR_OUTPUT_DIRECTORY : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1
+-- SMTG_TEMPLATE_FILES_PATH        : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/VST_SDK/VST3_Project_Generator/Windows_x64/Resources/cmake/templates
+-- SMTG_VST3_SDK_SOURCE_DIR        : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/VST_SDK/vst3sdk
 
 -- SMTG_VENDOR_NAME            : Steinberg
 -- SMTG_VENDOR_HOMEPAGE        : www.steinberg.net
 -- SMTG_VENDOR_EMAIL           : info@steinberg.net
--- SMTG_SOURCE_COPYRIGHT_HEADER: Copyright(c) 2022 Steinberg.
+-- SMTG_SOURCE_COPYRIGHT_HEADER: Copyright(c) 2026 Steinberg.
 -- SMTG_PLUGIN_NAME            : AGain
 -- SMTG_PREFIX_FOR_FILENAMES   : e.g. myplugincontroller.h
 -- SMTG_PLUGIN_IDENTIFIER      : com.steinberg.again, used e.g. in Info.plist
@@ -1208,20 +1216,20 @@ Windows_x64\Resources\GenerateVST3Plugin.cmake
 -- SMTG_Processor_UUID         : 0x310DE7F8, 0x10DA54D2, 0x98DE9223, 0xA9933093
 -- SMTG_Controller_UUID        : 0x80068D40, 0xBA125C34, 0x9B1E857C, 0xC17CD5F3
 
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/CMakeLists.txt
--- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/resource/310DE7F810DA54D298DE9223A9933093_snapshot.png
--- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/resource/310DE7F810DA54D298DE9223A9933093_snapshot_2.0x.png
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/resource/myplugineditor.uidesc
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/resource/win32resource.rc
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/version.h
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/myplugincids.h
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/myplugincontroller.cpp
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/myplugincontroller.h
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/mypluginentry.cpp
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/mypluginprocessor.cpp
--- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/source/mypluginprocessor.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/CMakeLists.txt
+-- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/resource/310DE7F810DA54D298DE9223A9933093_snapshot.png
+-- Copied    : C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/resource/310DE7F810DA54D298DE9223A9933093_snapshot_2.0x.png
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/resource/myplugineditor.uidesc
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/resource/win32resource.rc
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/source/version.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/source/myplugincids.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/source/myplugincontroller.cpp
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/source/myplugincontroller.h
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/source/mypluginentry.cpp
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/source/mypluginprocessor.cpp
+-- Configured: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/source/mypluginprocessor.h
 
-C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 17 2022" -A x64 -S "C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7\AGain" -B "C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7\AGain\build" -DSMTG_ADD_VSTGUI=ON 
+C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 17 2022" -A x64 -S "C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain" -B "C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7\AGain\build" -DSMTG_ADD_VSTGUI=ON 
 -- Selecting Windows SDK version 10.0.22000.0 to target Windows 10.0.19045.
 -- The C compiler identification is MSVC 19.34.31935.0
 -- The CXX compiler identification is MSVC 19.34.31935.0
@@ -1235,10 +1243,10 @@ C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 17 2022" -A x64 -S "C:/Us
 -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- [SMTG] CMAKE_SOURCE_DIR is set to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain
--- [SMTG] CMAKE_CURRENT_LIST_DIR is set to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk
+-- [SMTG] CMAKE_SOURCE_DIR is set to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain
+-- [SMTG] CMAKE_CURRENT_LIST_DIR is set to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/VST_SDK/vst3sdk
 -- [SMTG] Disable all VST3 samples
--- [SMTG] SMTG_VSTGUI_SOURCE_DIR is set to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.6/VST_SDK/vst3sdk/vstgui4
+-- [SMTG] SMTG_VSTGUI_SOURCE_DIR is set to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/VST_SDK/vst3sdk/vstgui4
 -- Could NOT find EXPAT (missing: EXPAT_LIBRARY EXPAT_INCLUDE_DIR) 
 -- VSTGUI will use the embedded Expat package!
 -- [SMTG] SMTG_AAX_SDK_PATH is not set. If you need it, please download the AAX SDK!
@@ -1249,7 +1257,7 @@ C:\Program Files\CMake\bin\CMake.exe -G "Visual Studio 17 2022" -A x64 -S "C:/Us
 -- [SMTG] SMTG_PLUGIN_TARGET_PATH is set to: C:\Users\YGrabit\AppData\Local\Programs\Common\VST3
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.7.7/AGain/build
+-- Build files have been written to: C:/Users/YGrabit/Desktop/SDKs/VST3_SDKs/3.8.1/AGain/build
 </code></pre>
 <p>That´s it!</p>
 <p>You can contribute to this project on <a href="https://github.com/steinbergmedia/vst3projectgenerator">https://github.com/steinbergmedia/vst3projectgenerator</a>!</p>
@@ -2250,7 +2258,7 @@ This section is under construction and will be extended inthe future with new tu
 <hr />
 <h2 id="goal"><a class="header" href="#goal">Goal</a></h2>
 <p>This tutorial explains how to set up your computer and create an environment for compiling the <strong>VST 3</strong> audio plug-in examples provided with the <strong>VST SDK</strong>. These include plug-ins like simple DSP effects (Gain, compressor, delay, ...), synths instruments and some plug-ins showing how to handle some specific <strong>VST 3</strong> features (Note Expression, Program Change, channel info context, ...).</p>
-<p>They can be loaded into <strong>VST 3</strong> hosts like Cubase, WaveLab, ...</p>
+<p>They can be loaded into <strong>VST 3</strong> hosts like <strong>Cubase</strong>, <strong>WaveLab</strong>, ...</p>
 <hr />
 <h2 id="part-1-getting-and-installing-the-vst-sdk"><a class="header" href="#part-1-getting-and-installing-the-vst-sdk">Part 1: Getting and installing the VST SDK</a></h2>
 <p>For downloading the SDK, see this section "<a href="pages/Tutorials/Building+the+examples/../../Getting+Started/How+to+setup+my+system.html">How to set up my system for VST 3</a>".</p>
@@ -2312,7 +2320,7 @@ cmake --build . --config Release
 <hr />
 <h2 id="goal-1"><a class="header" href="#goal-1">Goal</a></h2>
 <p>This tutorial explains how to set up your computer and create an environment for compiling the <strong>VST 3</strong> audio plug-in examples provided with the <strong>VST SDK</strong>. These include plug-ins like simple DSP effects (Gain, compressor, delay, ...), synths instruments and some plug-ins showing how to handle some specific <strong>VST 3</strong> features (Note Expression, Program Change, channel info context, ...).</p>
-<p>They can be loaded into <strong>VST 3</strong> hosts like Cubase, WaveLab, ...</p>
+<p>They can be loaded into <strong>VST 3</strong> hosts like <strong>Cubase</strong>, <strong>WaveLab</strong>, ...</p>
 <hr />
 <h2 id="part-1-getting-and-installing-the-vst-sdk-1"><a class="header" href="#part-1-getting-and-installing-the-vst-sdk-1">Part 1: Getting and installing the VST SDK</a></h2>
 <p>For downloading the SDK, see this section "<a href="pages/Tutorials/Building+the+examples/../../Getting+Started/How+to+setup+my+system.html">How to set up my system for VST 3</a>".</p>
@@ -2426,12 +2434,12 @@ cmake --build . --config Release
 <pre><code class="language-c++">// go in to the folder where you extracted the VST SDK
 mkdir build
 cd build
-cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk"
+cmake.exe -G "Visual Studio 18 2026" -A x64 "..\vst3sdk"
 // or without symbolic links
-cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_CREATE_PLUGIN_LINK=0
+cmake.exe -G "Visual Studio 18 2026" -A x64 "..\vst3sdk" -DSMTG_CREATE_PLUGIN_LINK=0
 
 // or with symbolic links but using the user location (enable by default), it does not request admin right
-cmake.exe -G "Visual Studio 17 2022" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
+cmake.exe -G "Visual Studio 18 2026" -A x64 "..\vst3sdk" -DSMTG_PLUGIN_TARGET_USER_PROGRAM_FILES_COMMON=1
 
 // note: you can find the string definition for different Visual Studio Generators in the cmake online documentation
 </code></pre>
@@ -4454,6 +4462,7 @@ endif(SMTG_MAC AND XCODE AND SMTG_COREAUDIO_SDK_PATH)
 <li><a href="pages/Technical+Documentation/Locations+Format/Index.html">VST 3 Locations / Format</a></li>
 <li><a href="pages/Technical+Documentation/About+MIDI/Index.html">About MIDI in VST 3</a></li>
 <li><a href="pages/Technical+Documentation/Provide+A+Runloop+On+Linux/Index.html">Provide A Runloop On Linux</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html">Clipboard VST-XML</a></li>
 </ul>
 <hr />
 <ul>
@@ -4495,6 +4504,8 @@ endif(SMTG_MAC AND XCODE AND SMTG_COREAUDIO_SDK_PATH)
 <li><a href="pages/Technical+Documentation/Change+History/3.7.11/IRemapParamID.html">[3.7.11] Remap Parameter ID</a></li>
 <li><a href="pages/Technical+Documentation/Change+History/3.8.0/IMidiLearn2.html">[3.8.0] MIDI Learn 2 (MIDI 2.0 support)</a></li>
 <li><a href="pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.html">[3.8.0] Parameter MIDI Mapping 2 (MIDI 2.0 support)</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/3.8.1/ITransportControl.html">[3.8.1] Transport Control</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/3.8.1/IInfo.html">[3.8.1] NoteOn Orchestral Articulation Info</a></li>
 </ul>
 <hr />
 <h2 id="vst-3-api-documentation"><a class="header" href="#vst-3-api-documentation"><a href="pages/Technical+Documentation/API+Documentation/Index.html">VST 3 API Documentation</a></a></h2>
@@ -4519,6 +4530,8 @@ endif(SMTG_MAC AND XCODE AND SMTG_COREAUDIO_SDK_PATH)
 <p>Unlike in <strong>VST 2</strong>, <strong>MIDI</strong> is not included in <strong>VST 3</strong>.</p>
 <h2 id="host-requirements-for-vst-3-support"><a class="header" href="#host-requirements-for-vst-3-support"><a href="pages/Technical+Documentation/Host+Requirements/Index.html">Host Requirements for VST 3 Support</a></a></h2>
 <p>Minimum Host requirements for <strong>VST 3</strong> support.</p>
+<h2 id="clipboard-vst-xml"><a class="header" href="#clipboard-vst-xml"><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html">Clipboard VST-XML</a></a></h2>
+<p>Text-based XML clipboard format used for drag-and-drop and copy-paste exchange of audio and musical elements (for example, audio files, chords, scales, and clips) with contextual metadata such as project time and color.</p>
 <hr />
 <h2 id="300-interfaces-supported-by-the-plug-in"><a class="header" href="#300-interfaces-supported-by-the-plug-in"><a href="pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.html">[3.0.0] Interfaces supported by the plug-in</a></a></h2>
 <p>List of interfaces supported/implemented by the plug-in in <strong>VST 3.0.0</strong>.</p>
@@ -4590,6 +4603,8 @@ endif(SMTG_MAC AND XCODE AND SMTG_COREAUDIO_SDK_PATH)
 <p>How the mapping works between MIDI 2.0 CCs and parameters (replace <a href="pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.html">[3.0.1] Parameter MIDI Mapping (MIDI 1.0 support)</a>).</p>
 <h2 id="380-midi-learn-2-midi-20-support"><a class="header" href="#380-midi-learn-2-midi-20-support"><a href="pages/Technical+Documentation/Change+History/3.8.0/IMidiLearn2.html">[3.8.0] MIDI Learn 2 (MIDI 2.0 support)</a></a></h2>
 <p>If this interface is implemented by the edit controller, the host will call this method whenever there is live MIDI 2.0-CC input for the plug-in (replace <a href="pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.html">[3.6.12] MIDI Learn (MIDI 1.0 support)</a>).</p>
+<h2 id="381-transport-control"><a class="header" href="#381-transport-control"><a href="pages/Technical+Documentation/Change+History/3.8.1/ITransportControl.html">[3.8.1] Transport Control</a></a></h2>
+<p>This interface allows a plug-in to request transport-related actions from the host.</p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/API+Documentation/../../">VST Home</a> / <a href="pages/Technical+Documentation/API+Documentation/../Index.html">Technical Documentation</a></p>
 <h1 id="vst-3-api-documentation-1"><a class="header" href="#vst-3-api-documentation-1">VST 3 API Documentation</a></h1>
@@ -4655,9 +4670,9 @@ A host does not need to instantiate the controller part of a plug-in for process
 <p>The context parameter passed to <a href="https://steinbergmedia.github.io/vst3_doc/base/classSteinberg_1_1IPluginBase.html#a3c81be4ff2e7bbb541d3527264f26eed">Steinberg:: IPluginBase::initialize</a> should implement the interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IHostApplication.html">Vst:: IHostApplication</a>. Hosts should not call other functions before initialize is called, with the sole exception of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Vst:: IComponent::setIoMode</a> which must be called before initialize. <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a8aa65685068ad033af57b1497926b689">Vst:: IComponent::getControllerClassId</a> can also be called before (<a href="pages/Technical+Documentation/API+Documentation/../Workflow+Diagrams/Index.html">See VST 3 Workflow Diagrams</a>).</p>
 <p><strong>How can the plug-in access IHostApplication?</strong></p>
 <pre><code class="language-c++">//-----------------------------------------------------------------------
-tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown*context)
+tresult PLUGIN_API MyPluginProcessor::initialize (FUnknown* context)
 {
-    if (auto hostApp = Steinberg::U::cast&lt;IHostApplication&gt; (hostContext))
+    if (auto hostApp = Steinberg::U::cast&lt;IHostApplication&gt; (context))
     {
         String128 name;
         if (hostApp-&gt;getName (name) == kResultTrue)
@@ -4805,10 +4820,9 @@ After restoring a state, the host rescans the parameters (asking the controller)
 <p><strong>Block Size</strong>: Processing is done in blocks. The maximum number of samples to be processed in one block is set in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#aefb5731b94dbc899a4a7e9cd1c96e6a2">Vst:: IAudioProcessor::setupProcessing</a>. The actual number of samples in a processing block is transmitted in the process call and can be different from call to call, but it must be a value between 1 and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessSetup.html#a41cd06a0c942a1b3f283092b893d0de3">maxSamplesPerBlock</a>.</p>
 </li>
 <li>
-<p><strong>Audio Buffers</strong>: For any audio bus defined by the plug-in, the host must provide buffer data - even for inactive busses. Busses are addressed by index, so leaving out inactive busses will mix up these indices. The actual data buffer can be null though (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">Vst::AudioBusBuffers</a>).</br></br>
-<strong>Note</strong>: The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#abac2239417d88a091cad5b4f917dc49a">channelBuffers32</a> (or <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#a0bbcd9a3e75d01b547097c91f9f659cf">channelBuffers64</a>) buffer pointers can be the same or different for input and output: this has to be taken into account in the process function (for example, not resetting the output before processing if input and output buffers are the same!). It can be the same for multiple inputs or multiple outputs (in the case of instrument plug-ins) all outputs (or inputs) can share the same buffer!
-</br></br>
-<strong>Important</strong>: The host can call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">Vst:: IAudioProcessor::process</a> without buffers (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a852a74fc4e461ef086bac048313d2de9">numInputs</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a1338255f88bad5cf4fb714c71f92b61a">numOutputs</a> of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">Vst::AudioBusBuffers</a> are zeroed, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#aeb42971a4bd34d7baa27cff8d7e3cf26">numSamples</a> too), in order to flush parameters (from host to plug-in). Parameters can only be flushed when the host needs to send parameter changes and no processing is called.</p>
+<p><strong>Audio Buffers</strong>: For any audio bus defined by the plug-in, the host must provide buffer data - even for inactive busses. Busses are addressed by index, so leaving out inactive busses will mix up these indices. The actual data buffer can point to a null pointer though (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">Vst::AudioBusBuffers</a>).</p>
+<p><strong>Note</strong>: The <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#abac2239417d88a091cad5b4f917dc49a">channelBuffers32</a> (or <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html#a0bbcd9a3e75d01b547097c91f9f659cf">channelBuffers64</a>) buffer pointers can be the same or different for input and output: this has to be taken into account in the process function (for example, not resetting the output before processing if input and output buffers are the same!). It can be the same for multiple inputs or multiple outputs (in the case of instrument plug-ins) all outputs (or inputs) can share the same buffer!</p>
+<p><strong>Important</strong>: The host can call <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IAudioProcessor.html#a6b98eb31cf38ba96a28b303c13c64e13">Vst:: IAudioProcessor::process</a> without buffers (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a852a74fc4e461ef086bac048313d2de9">numInputs</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#a1338255f88bad5cf4fb714c71f92b61a">numOutputs</a> of <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1AudioBusBuffers.html">Vst::AudioBusBuffers</a> are zeroed, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ProcessData.html#aeb42971a4bd34d7baa27cff8d7e3cf26">numSamples</a> too), in order to flush parameters (from host to plug-in). Parameters can only be flushed when the host needs to send parameter changes and no processing is called.</p>
 </li>
 <li>
 <p><strong>Parameters &amp; Automation</strong>: Any parameter changes are transmitted in the process call through the interfaces <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">Vst:: IParameterChanges</a> and <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">Vst:: IParamValueQueue</a>. Simple parameter changes as a result of GUI interaction are transmitted exactly in the same way as automation. (see <a href="pages/Technical+Documentation/API+Documentation/../Parameters+Automation/Index.html">Parameters and Automation</a>).</p>
@@ -4825,7 +4839,7 @@ After restoring a state, the host rescans the parameters (asking the controller)
 <p><img src="pages/Technical+Documentation/API+Documentation/../../../resources/tech_doc_6.png" alt="Tech_doc_6" /></p>
 <h2 id="the-editing-part"><a class="header" href="#the-editing-part">The Editing Part</a></h2>
 <p><img src="pages/Technical+Documentation/API+Documentation/../../../resources/tech_doc_7.jpg" alt="Tech_doc_7" /></p>
-<p>The edit controller is responsible for the GUI aspects ofthe plug-in. Its standard interface is <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Vst:: IEditController</a>. The host has to provide acallback interface for the edit controller named <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">Vst:: IComponentHandler</a>. The handler is essentialfor the communication with both the host and the processor.</p>
+<p>The edit controller is responsible for the GUI aspects of the plug-in. Its standard interface is <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Vst:: IEditController</a>. The host has to provide a callback interface for the edit controller named <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">Vst:: IComponentHandler</a>. The handler is essential for the communication with both the host and the processor.</p>
 <ul>
 <li>
 <p><strong>GUI</strong>: Optionally, the controller can define an editor view. The method <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a1fa4ed10cc0979e5559045104c998b1a">Vst:: IEditController::createView</a> allows the host to specify the type of the view by passing an id-string. Currently the only type defined is "editor" (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst_1_1ViewType.html#aaa62c4c32f0270a908eb20c7c7124dfc">Vst::ViewType::kEditor</a>), but there might be variations in future versions (e.g. "setup").
@@ -4877,7 +4891,7 @@ More details can be found on the page about <a href="pages/Technical+Documentati
 <h3 id="initialization-of-communication-from-host-point-of-view"><a class="header" href="#initialization-of-communication-from-host-point-of-view">Initialization of communication from Host point of view</a></h3>
 <p>Here an example of host implementation where the component and controller parts are connected and synchronized:</p>
 <pre><code class="language-c++">//-----------------------------------------------------------------------
-// the component and the controller parts are previously becreated and initialized (see above)
+// the component and the controller parts are previously created and initialized (see above)
 // ...
 if (editController)
 {
@@ -5075,15 +5089,15 @@ A class is also described with a name and it has a unique id.</p>
 <h3 id="purpose-specific-interfaces"><a class="header" href="#purpose-specific-interfaces">Purpose-specific interfaces</a></h3>
 <p>Each plug-in category (VST 3 Effects, Project import/export Filters, Audio Codecs, etc...) defines its own set of purpose-specific interfaces. These are not part of the basic <strong>VST-MA</strong> layer.</p>
 <h3 id="unicode"><a class="header" href="#unicode">Unicode</a></h3>
-<p>Beginning with version 5 of Cubase and Nuendo, the internal structure of the host was modified for better support of internationalization. Therefore, string handling was changed to utilize <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> strings whenever strings are passed around. As a consequence, all the interfaces to plug-ins have changed from using ASCI to Unicode strings for call and return parameters. So in turn, all plug-ins must be adapted to support Unicode. This has major consequences in that:</p>
+<p>Beginning with version 5 of <strong>Cubase</strong> and <strong>Nuendo</strong>, the internal structure of the host was modified for better support of internationalization. Therefore, string handling was changed to utilize <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> strings whenever strings are passed around. As a consequence, all the interfaces to plug-ins have changed from using ASCI to Unicode strings for call and return parameters. So in turn, all plug-ins must be adapted to support Unicode. This has major consequences in that:</p>
 <ul>
-<li>Unicode hosts (Cubase 5 or later) will only work with Unicode plug-ins. When loading a plug-in, a Unicode host checks the plug-in's type and will not load any non-Unicode plug-ins.</li>
+<li>Unicode hosts (<strong>Cubase 5</strong> or later) will only work with Unicode plug-ins. When loading a plug-in, a Unicode host checks the plug-in's type and will not load any non-Unicode plug-ins.</li>
 <li>Unicode plug-ins will <strong>not</strong> load in non-Unicode hosts. When loading, a Unicode plug-in requests information from the host and will not load if no Unicode host is detected. Therefore, if a plug-in is supposed to work with both older and newer hosts, it is best to provide two versions of the plug-in.</li>
 </ul>
 <h4 id="plug-ins-for-unicode-hosts"><a class="header" href="#plug-ins-for-unicode-hosts">Plug-ins for Unicode hosts</a></h4>
 <p>Writing plug-ins that are supposed to work only with Unicode hosts is easy. Use a current version of this SDK and develop a plug-in as usual. Make sure that you only ever pass Unicode <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a> strings to interfaces that have strings as call parameters and also be prepared that strings returned by these interfaces are always <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>. Therefore, to make things easier, it is recommended that Unicode strings are used throughout the plug-in's implementation, in order to avoid back and forth conversions. Also, use the Steinberg::String and Steinberg::ConstString classes from the Base module, as they have been designed to work universally on both Mac and Win.</p>
 <h4 id="migrating-from-non-unicode-to-unicode"><a class="header" href="#migrating-from-non-unicode-to-unicode">Migrating from non-Unicode to Unicode</a></h4>
-<p>In <a href="https://www.steinberg.net/">Steinberg</a> SDKs released before Cubase 5, the interface functions were using pointers of type <em>char</em> for passing strings to and from the host. These have been changed now to using Steinberg's defined type <em>tchar</em> which is equivalent to <em>char16</em>, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>, so strings are expected to be encoded in <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>.<br />
+<p>In <a href="https://www.steinberg.net/">Steinberg</a> SDKs released before <strong>Cubase 5</strong>, the interface functions were using pointers of type <em>char</em> for passing strings to and from the host. These have been changed now to using Steinberg's defined type <em>tchar</em> which is equivalent to <em>char16</em>, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>, so strings are expected to be encoded in <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>.<br />
 Accordingly, also the implementation of a plug-in needs to be adapted to deal correctly with Unicode-encoded strings, as well as only ever passing Unicode strings to the host.</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
@@ -5479,7 +5493,7 @@ The <strong>VST 3</strong> interfaces suggest a normalized value representation 
 <p>No automated parameter must influence another automated parameter!</p>
 <p>The prime example for this is the automation of preset changes. A preset change can lead to the change of all 'normal' parameters. So if automation data already has been recorded for these parameters and the preset change is recorded as well: who wins? This question cannot be answered and the problem can only be resolved by avoiding it. This is why automation of preset changes is not allowed by default.</p>
 <h3 id="problems"><a class="header" href="#problems">Problems</a></h3>
-<p>A fix value range from 0.0 to 1.0 simplifies the handling of parameters in some ways, but there are problems:</p>
+<p>A fixed value range from 0.0 to 1.0 simplifies the handling of parameters in some ways, but there are problems:</p>
 <ul>
 <li>
 <p><strong>Non-linear scaling</strong><br />
@@ -5494,7 +5508,7 @@ Take a discrete parameter, for example, that controls an option of three choices
 <p>Automation recording is performed by the host. In doing so, it is essential for the host to know the start and the end of a manipulation. Therefore, the plug-in must operate the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">Vst:: IComponentHandler</a> interface in the following way and in the <strong>UI Thread</strong>!:</p>
 <ul>
 <li>
-<p>The begin of a manipulation must be signaled via <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223">Vst:: IComponentHandler::beginEdit</a></p>
+<p>The beginning of a manipulation must be signaled via <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a8456ad739430267a12dda11a53fe9223">Vst:: IComponentHandler::beginEdit</a></p>
 </li>
 <li>
 <p>Changes of parameters are reported via <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93">Vst:: IComponentHandler::performEdit</a></p>
@@ -5526,7 +5540,7 @@ To address the most common cases:</p>
 <p>In <strong>VST 3</strong>, automation playback is the task of the plug-in and it is the host's task to provide the automation data. The only way for a parameter change to arrive in the processor is the processing call. Receiving parameter changes from the edit controller and playing back automation data is one and the same thing.</p>
 <p>The need to perform all transformations, from the normalized GUI representation to the DSP representation, produces some overhead. Performing sample-accurate automation requires even more overhead, because the DSP value must be calculated for each single sample. While this cannot be avoided entirely, it is the choice of the plug-in implementation how much processing time to spend on automation accuracy. The host always transmits value changes in a way that allows a sample-accurate reconstruction of the underlying automation curve. The plug-in is responsible for the realization.</p>
 <p><img src="pages/Technical+Documentation/Parameters+Automation/../../../resources/tech_doc_12.jpg" alt="Tech_doc_12" /></p>
-<p>The processor gets the automation data in the processing call by using queue of parameter changes for each parameter having automation data:</p>
+<p>The processor gets the automation data in the processing call by using a queue of parameter changes for each parameter having automation data:</p>
 <p>A <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">Vst:: IParameterChanges</a> has some <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">Vst:: IParamValueQueues</a> (for a specific parameter ID) which has some Automation Points.</p>
 <blockquote>
 <p>⚠️ <strong>Warning</strong>\</p>
@@ -5540,16 +5554,16 @@ To address the most common cases:</p>
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParameterChanges.html">Vst:: IParameterChanges</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IParamValueQueue.html">Vst:: IParamValueQueue</a>.</p>
 <h2 id="informing-the-host-about-changes"><a class="header" href="#informing-the-host-about-changes">Informing the host about changes</a></h2>
 <h3 id="parameter-titles-default-values-or-flags-have-changed"><a class="header" href="#parameter-titles-default-values-or-flags-have-changed">Parameter titles, default values or flags have changed</a></h3>
-<p>If something happens, user interaction for example, which change the parameter styles (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645">ParameterFlags</a>) or title or default value of one or multiple parameters, the plug-in must call</p>
+<p>If something happens, for example user interaction, which changes the parameter styles (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html#ae3a5143ca8d0e271dbc259645a4ae645">ParameterFlags</a>) or title or default value of one or multiple parameters, the plug-in must call</p>
 <pre><code class="language-c++">IComponentHandler::restartComponent (kParamTitlesChanged);
 </code></pre>
 <p>to inform the host about this change (in the <strong>UI Thread</strong>). The host rescans the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1ParameterInfo.html">ParameterInfos</a> with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a0ba78602ecf2f5e8d747d8b01d4cfb6c">getParameterInfo</a>.</p>
 <h3 id="multiple-parameter-values-have-changed"><a class="header" href="#multiple-parameter-values-have-changed">Multiple parameter values have changed</a></h3>
-<p>As result of a program change for example, the plug-in must call:</p>
+<p>As a result of a program change, for example, the plug-in must call:</p>
 <pre><code class="language-c++">IComponentHandler::restartComponent (kParamValuesChanged);
 </code></pre>
 <p>to inform the host about this change (in the <strong>UI Thread</strong>). The host invalidates all caches of parameter values and asks the edit controller for the current values.</p>
-<p>If only some values have changed (less than 10)  the plug-in should use the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93">Vst:: IComponentHandler::performEdit</a> interface (Show the right use when automation are used: <a href="pages/Technical+Documentation/Parameters+Automation/../Parameters+Automation/Index.html#automation-recording">Automation Recording</a>)</p>
+<p>If only some values have changed (less than 10), the plug-in should use the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html#a135d4e76355ef0ba0a4162a0546d5f93">Vst:: IComponentHandler::performEdit</a> interface (Show the right use when automation are used: <a href="pages/Technical+Documentation/Parameters+Automation/Index.html#automation-recording">Automation Recording</a>)</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
 If the plug-in needs to inform the host about changes containing parameter title, default or flags and values (of multiple parameters), it could combine the restartComponent flags:</p>
@@ -5673,7 +5687,7 @@ The purposes of units are:</p>
 <p>If a plug-in uses a large pool of programs that require some kind of caching or that need to be preloaded, using preset files may not be a sufficient choice. In this case, the plug-in can define a program list. For this purpose, the edit controller has to be extended by the interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitInfo.html">Vst:: IUnitInfo</a>.</p>
 <ul>
 <li>
-<p>If the plug-in defines a program list to be used as pool of factory presets, it must not allow the user to change these presets by the means of parameter editing. Instead, it should load the corresponding data into a kind of working memory and store possible modifications as component state. In addition, the user can be allowed to store the modifications as preset file.</p>
+<p>If the plug-in defines a program list to be used as a pool of factory presets, it must not allow the user to change these presets by the means of parameter editing. Instead, it should load the corresponding data into a kind of working memory and store possible modifications as component state. In addition, the user can be allowed to store the modifications as preset file.</p>
 </li>
 <li>
 <p>If the plug-in defines a program list to be used as a pool of user presets that are initially in an 'empty' state, modifications can be applied to the list items directly. This way of using program lists should only be chosen if programs do require a lot of resources that need to be cached in order to achieve fast program changes (good examples for this are sample-based plug-ins).</p>
@@ -5730,7 +5744,7 @@ The purposes of units are:</p>
 </ul>
 <p>Since a VST plug-in unlike a hardware MIDI instrument is more than only a black box, a complex plug-in should help its host to provide a more convenient GUI integration than it is possible with hardware instruments. <strong>VST 3</strong> uses the concept of units to describe the internal structure of the plug-in (see <a href="pages/Technical+Documentation/Complex+Structures/../VST+3+Units/Index.html">VST 3 Units</a>) and a multi-timbral instrument is supposed to support the respective interfaces. But the preferred solution in <strong>VST 3</strong> is a reduction of this complexity with the 'simple mode'.</p>
 <h2 id="the-simple-mode"><a class="header" href="#the-simple-mode">The Simple Mode</a></h2>
-<p>The 'VST 3 simple mode' has the (selfish) background to support the so-called "simple instrument tracks" of Cubase. These tracks combine a MIDI track and VST audio channel (without the need to make any further assignments such as the choice of a MIDI output port or a MIDI channel). This mode is defined as 'only one input and only one output'. In 'simple mode', only MIDI channel 0 is used. Therefore, an instrument has to be mono-timbral.</p>
+<p>The 'VST 3 simple mode' has the (selfish) background to support the so-called "simple instrument tracks" of <strong>Cubase</strong>. These tracks combine a MIDI track and VST audio channel (without the need to make any further assignments such as the choice of a MIDI output port or a MIDI channel). This mode is defined as 'only one input and only one output'. In 'simple mode', only MIDI channel 0 is used. Therefore, an instrument has to be mono-timbral.</p>
 <p>The host will now work with multiple instances of the plug-in rather than using the same instance in a way that it contains multiple internal sections of the same kind. The <strong>VST-MA</strong> component model supports shared resources between multiple instances of a plug-in because usually the same module instance (dll/bundle) is used for each plug-in instance.</p>
 <p>Yet, a plug-in has the option to support both the simple and the advanced mode with the same implementation. The host tests the general ability to support the 'simple mode' by checking the processor's class flags (<a href="https://steinbergmedia.github.io/vst3_doc/base/structSteinberg_1_1PClassInfo2.html#ab5ab9135185421caad5ad8ae1d758409">Steinberg::PClassInfo2::classFlags</a>) for the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a626a070dcd2e025250f41b9c3f9817cdabc2edc9bb281cebe9cc6dc00a7cac0ea">Vst::kSimpleModeSupported</a> flag. If the plug-in is to be used in an instrument track (or whenever a host regards it more suitable) the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Vst:: IComponent::setIoMode</a> method is called (before any other call!) to configure the plug-in. A mono-timbral plug-in should set this flag as well and does not need to take into account the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">setIoMode</a> call.</p>
 <h2 id="multi-timbral-program-lists"><a class="header" href="#multi-timbral-program-lists">Multi-timbral Program Lists</a></h2>
@@ -5767,13 +5781,13 @@ The purposes of units are:</p>
 <li>
 <p>The contents of an item in the program list</p>
 <ul>
-<li>To support this, the plug-in must implement the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Vst:: IProgramListData</a> interface in its component part.</li>
+<li>To support this, the plug-in must implement the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html">Vst:: IProgramListData</a> interface in its component part.</li>
 </ul>
 </li>
 </ul>
 <p>A plug-in can support unit presets and program list presets.</p>
 <p><img src="pages/Technical+Documentation/Complex+Structures/../../../resources/tech_doc_19.jpg" alt="Tech_doc_19" /></p>
-<p>See also <a href="pages/Technical+Documentation/Complex+Structures/../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Vst:: IProgramListData</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Vst:: IUnitData</a>.</p>
+<p>See also <a href="pages/Technical+Documentation/Complex+Structures/../Presets+Program+Lists/Index.html">Presets &amp; Program Lists</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IProgramListData.html">Vst:: IProgramListData</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IUnitData.html">Vst:: IUnitData</a>.</p>
 <h2 id="units-and-tracks"><a class="header" href="#units-and-tracks">Units and Tracks</a></h2>
 <p>A unit can be associated with busses (or channels of busses). In particular, a unit can have a fixed and unique connection to an input MIDI channel. For a host, it might be useful to know about this connection and which unit can be associated with a specific MIDI track as a result of this. Often, the GUI of a multi-timbral plug-in does not show the settings of all similar units at the same time. Instead, there is some kind of unit selection. The idea is to be able to synchronize the selection of units in a plug-in to the selection of tracks in the host (in both ways).</p>
 <p>When a plug-in GUI is organized in the described way, it should support the described behavior by implementing</p>
@@ -5869,7 +5883,7 @@ controller then receives the block either on the main thread or on a background 
 the setup of the queue.
 The host guarantees that all blocks are sent before the plug-in is deactivated.</p>
 <h4 id="closing-a-queue"><a class="header" href="#closing-a-queue">Closing a queue</a></h4>
-<p>The audio processor must close an open queue. This need to be done after deactivating the processor and prior to disconnecting it from the edit controller (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">Vst:: IConnectionPoint</a>).</p>
+<p>The audio processor must close an open queue. This needs to be done after deactivating the processor and prior to disconnecting it from the edit controller (see <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IConnectionPoint.html">Vst:: IConnectionPoint</a>).</p>
 <h4 id="what-to-do-when-the-queue-is-full-and-no-block-can-be-locked"><a class="header" href="#what-to-do-when-the-queue-is-full-and-no-block-can-be-locked">What to do when the queue is full and no block can be locked?</a></h4>
 <p>The plug-in needs to be prepared for this situation, as constraints in the overall system may cause the queue to fill up excessively. If you need to transfer the information to the controller, you can declare a hidden parameter, which you can set to a special value and send this parameter change in your audio process method.</p>
 <h3 id="idataexchangereceiver"><a class="header" href="#idataexchangereceiver">IDataExchangeReceiver</a></h3>
@@ -6210,7 +6224,7 @@ AP--&gt;&gt;-H:    return
     Note right of H: User drags window frame
     Note right of H: in order to resize
     H-&gt;&gt;+P:     checkSizeContraints(size)
-    P--&gt;&gt;-H:    return
+    P--&gt;&gt;-H:    return kResultTrue (always)
     H-&gt;&gt;+H:     resize frame to [size]
     H-&gt;&gt;+P:     onSize(size)
     P-&gt;&gt;P:      resize view
@@ -6534,11 +6548,13 @@ The host recursively scans these folders at startup in this order (Global/Applic
 </blockquote>
 <h3 id="on-linux-platform"><a class="header" href="#on-linux-platform">On Linux platform</a></h3>
 <p>On the Linux platform, the host application expects <strong>VST 3</strong> plug-ins to be located in:</p>
-<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Prio</th><th style="text-align: left">Location</th><th style="text-align: left">Path</th></tr></thead><tbody>
-<tr><td style="text-align: left">1</td><td style="text-align: left">User</td><td style="text-align: left">$HOME/.vst3/</td></tr>
-<tr><td style="text-align: left">2</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/lib/vst3/</td></tr>
-<tr><td style="text-align: left">3</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/local/lib/vst3/</td></tr>
-<tr><td style="text-align: left">4</td><td style="text-align: left">Application</td><td style="text-align: left">$APPFOLDER/vst3/</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Prio</th><th style="text-align: left">Location</th><th style="text-align: left">Path</th><th style="text-align: left">Comment</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left">User</td><td style="text-align: left">$HOME/.vst3/</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/lib64/vst3/</td><td style="text-align: left">defined in Fedora distribution</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/lib/vst3/</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/local/lib64/vst3/</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/local/lib/vst3/</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left">Application</td><td style="text-align: left">$APPFOLDER/vst3/</td><td style="text-align: left"></td></tr>
 </tbody></table>
 </div>
 <blockquote>
@@ -6801,6 +6817,335 @@ tresult PLUGIN_API MyPlugFactory::setHostContext (FUnknown* context)
 <li><a href="pages/Technical+Documentation/Host+Requirements/../Change+History/3.6.12/IPlugInterfaceSupport.html">[3.6.12] Host Query Interface support</a>.</li>
 <li>If a plug-in implements <em>IPluginViewContentScaleSupport</em>, the host should follow the <a href="pages/Technical+Documentation/Host+Requirements/../Change+History/3.6.6/IPlugViewContentScaleSupport.html">[3.6.6] PlugView Content Scaling</a> requirements.</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><blockquote>
+<p>/ <a href="pages/Technical+Documentation/Clipboard+VST-XML/../../">VST Home</a> / <a href="pages/Technical+Documentation/Clipboard+VST-XML/../Index.html">Technical Documentation</a></p>
+<h1 id="clipboard-vst-xml-1"><a class="header" href="#clipboard-vst-xml-1">Clipboard VST-XML</a></h1>
+</blockquote>
+<p><strong>On this page:</strong></p>
+<ul>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#what-it-enables">What It Enables</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#additional-context-data">Additional Context Data</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#typical-workflow">Typical Workflow</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#known-applications-and-plug-ins-supporting-clipboard-vst-xml">Known applications and plug-ins supporting Clipboard VST-XML</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#format-description">Format Description</a>
+<ul>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#root-node-vst-xml">Root node: <code>vst-xml</code></a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#node-sourceapp">Node: <code>sourceApp</code></a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#node-region">Node: <code>region</code></a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#node-segment">Node: <code>segment</code></a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#node-loop">Node: <code>loop</code></a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#node-chord">Node: <code>chord</code></a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#node-scale">Node: <code>scale</code></a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#node-signature">Node: <code>signature</code></a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#leaf-tag-meanings">Leaf tag meanings</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#attribute-reference">Attribute reference</a></li>
+</ul>
+</li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#examples-of-clipboard-vst-xml">Examples of Clipboard VST-XML</a>
+<ul>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#insert-one-audio-file-at-position-beat-16">Insert one audio file at position beat 16</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-two-different-tracks">Insert one audio file at 4s and one audio file at beat 8 on two different tracks</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-one-track">Insert one audio file at 4s and one audio file at beat 8 on one track</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#4-chords">4 Chords</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#2-scales">2 Scales</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#signature">Signature</a></li>
+<li><a href="pages/Technical+Documentation/Clipboard+VST-XML/Index.html#join-of-segments-and-loops">Join of segments and loops</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>The <strong>Clipboard VST-XML</strong> format is a simple text-based XML definition used to exchange media-related data through drag and drop (text-based) or copy and paste (using the operating system clipboard).</p>
+<p>It was originally designed to support audio file exchange between <strong>Cubase</strong> and <strong>HALion</strong>. Over time, the same mechanism was extended to transfer additional musical elements and their context.</p>
+<h2 id="what-it-enables"><a class="header" href="#what-it-enables">What It Enables</a></h2>
+<p>Clipboard VST-XML allows applications to transfer more than a plain file reference.</p>
+<p>Typical transferred elements include:</p>
+<ul>
+<li>Audio files/clips (since version 1.0)</li>
+<li>Tempo (since version 1.1)</li>
+<li>Chords (since version 1.2)</li>
+<li>Scales (since version 1.3)</li>
+</ul>
+<h2 id="additional-context-data"><a class="header" href="#additional-context-data">Additional Context Data</a></h2>
+<p>The XML payload can include extra information that helps preserve editing context across applications and plug-ins, for example:</p>
+<ul>
+<li>Color</li>
+<li>Project time position</li>
+<li>Other element-specific metadata</li>
+</ul>
+<p>This makes drag-and-drop and copy-paste workflows more useful than simple file transfer, because the receiving application and plug-ins can reconstruct musical and visual context.</p>
+<h2 id="typical-workflow"><a class="header" href="#typical-workflow">Typical Workflow</a></h2>
+<ol>
+<li>A source plug-in like <strong>HALion</strong> serializes the selected element as Clipboard VST-XML text.</li>
+<li>The user performs drag and drop or copy and paste.</li>
+<li>The target application like <strong>Cubase</strong> parses the XML and imports the element with its metadata.</li>
+</ol>
+<h2 id="known-applications-and-plug-ins-supporting-clipboard-vst-xml"><a class="header" href="#known-applications-and-plug-ins-supporting-clipboard-vst-xml">Known applications and plug-ins supporting Clipboard VST-XML</a></h2>
+<ul>
+<li>Cubase</li>
+<li>Dorico</li>
+<li>Nuendo</li>
+<li>HALion</li>
+<li>Padshop</li>
+<li>Studio One</li>
+<li>Soundly</li>
+<li>Wavelab</li>
+</ul>
+<h2 id="format-description"><a class="header" href="#format-description">Format Description</a></h2>
+<p>This section describes the Clipboard VST-XML structure according to its current Document Type Definition (<a href="pages/Technical+Documentation/Clipboard+VST-XML/../../../resources/VST-XML-1.4.dtd">VST-XML-1.4.dtd</a>).</p>
+<h3 id="root-node-vst-xml"><a class="header" href="#root-node-vst-xml">Root node: <code>vst-xml</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>version</code> (required)</td></tr>
+<tr><td>Required children</td><td><code>sourceApp</code></td></tr>
+<tr><td>Optional children</td><td><code>region</code>, <code>chord</code>, <code>scale</code>, <code>signature</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-sourceapp"><a class="header" href="#node-sourceapp">Node: <code>sourceApp</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Content</td><td>Text value with sender application name</td></tr>
+</tbody></table>
+</div>
+<h3 id="node-region"><a class="header" href="#node-region">Node: <code>region</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>id</code> (required), <code>type</code> (optional: <code>join</code> or <code>silence</code>), <code>channelID</code> (optional)</td></tr>
+<tr><td>Required children</td><td><code>filename</code>, <code>start</code>, <code>end</code></td></tr>
+<tr><td>Optional children</td><td><code>name</code>, <code>tempo</code>, <code>rootkey</code>,  <code>projectTime</code>, <code>color</code>, <code>loop</code>, <code>segment</code>, <code>signature</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-segment"><a class="header" href="#node-segment">Node: <code>segment</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Required children</td><td><code>filename</code>, <code>start</code>, <code>length</code></td></tr>
+<tr><td>Optional children</td><td><code>fileOffset</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-loop"><a class="header" href="#node-loop">Node: <code>loop</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>type</code> (optional: <code>release</code>)</td></tr>
+<tr><td>Required children</td><td><code>start</code>, <code>end</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-chord"><a class="header" href="#node-chord">Node: <code>chord</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>id</code> (required)</td></tr>
+<tr><td>Required children</td><td><code>keyNote</code>, <code>pitches</code>, <code>mask</code></td></tr>
+<tr><td>Optional children</td><td><code>name</code>, <code>projectTime</code>, <code>bassNote</code>, <code>color</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-scale"><a class="header" href="#node-scale">Node: <code>scale</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Attributes</td><td><code>id</code> (required)</td></tr>
+<tr><td>Required children</td><td><code>mask</code>, <code>keyNote</code></td></tr>
+<tr><td>Optional children</td><td><code>name</code>, <code>projectTime</code>, <code>displayName</code>, <code>color</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="node-signature"><a class="header" href="#node-signature">Node: <code>signature</code></a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Item</th><th>Definition</th></tr></thead><tbody>
+<tr><td>Required children</td><td><code>numerator</code>, <code>denominator</code></td></tr>
+<tr><td>Optional children</td><td><code>projectTime</code></td></tr>
+</tbody></table>
+</div>
+<h3 id="leaf-tag-meanings"><a class="header" href="#leaf-tag-meanings">Leaf tag meanings</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Tag</th><th>Meaning</th></tr></thead><tbody>
+<tr><td><code>name</code></td><td>Human-readable label</td></tr>
+<tr><td><code>displayName</code></td><td>Alternate/display label for scale</td></tr>
+<tr><td><code>filename</code></td><td>Audio file path</td></tr>
+<tr><td><code>start</code></td><td>Start position or offset (context dependent)</td></tr>
+<tr><td><code>end</code></td><td>End position (context dependent)</td></tr>
+<tr><td><code>length</code></td><td>Segment length</td></tr>
+<tr><td><code>fileOffset</code></td><td>File offset used by segment-based payloads</td></tr>
+<tr><td><code>projectTime</code></td><td>Timeline position; requires <code>domain</code> attribute</td></tr>
+<tr><td><code>tempo</code></td><td>Tempo value</td></tr>
+<tr><td><code>rootkey</code></td><td>Root key value</td></tr>
+<tr><td><code>pitches</code></td><td>Chord pitch set as text</td></tr>
+<tr><td><code>keyNote</code></td><td>Chord/scale key note value</td></tr>
+<tr><td><code>bassNote</code></td><td>Chord bass note value</td></tr>
+<tr><td><code>mask</code></td><td>Bitmask-like harmonic/scale encoding</td></tr>
+<tr><td><code>color</code></td><td>Color value (for UI/context)</td></tr>
+<tr><td><code>numerator</code></td><td>Time signature numerator</td></tr>
+<tr><td><code>denominator</code></td><td>Time signature denominator</td></tr>
+</tbody></table>
+</div>
+<h3 id="attribute-reference"><a class="header" href="#attribute-reference">Attribute reference</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Attribute</th><th>Used on</th><th>Values</th></tr></thead><tbody>
+<tr><td><code>id</code></td><td><code>region</code>, <code>chord</code>, <code>scale</code></td><td>Any text (like integer counter), required</td></tr>
+<tr><td><code>type</code></td><td><code>region</code></td><td><code>join</code>, <code>silence</code></td></tr>
+<tr><td><code>type</code></td><td><code>loop</code></td><td><code>release</code></td></tr>
+<tr><td><code>channelID</code></td><td><code>region</code></td><td>Any text (typically GUID)</td></tr>
+<tr><td><code>domain</code></td><td><code>projectTime</code></td><td><code>quarterNotes</code> or <code>seconds</code> (required)</td></tr>
+</tbody></table>
+</div>
+<h2 id="examples-of-clipboard-vst-xml"><a class="header" href="#examples-of-clipboard-vst-xml">Examples of Clipboard VST-XML</a></h2>
+<h3 id="insert-one-audio-file-at-position-beat-16"><a class="header" href="#insert-one-audio-file-at-position-beat-16">Insert one audio file at position beat 16</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;MyApp&lt;/sourceApp&gt;
+    &lt;region id="1" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 1&lt;/name&gt;
+        &lt;filename&gt;c:\toto.wav&lt;/filename&gt;
+        &lt;start&gt;100&lt;/start&gt;
+        &lt;end&gt;44200&lt;/end&gt;
+        &lt;projectTime domain="quarterNotes"&gt;16&lt;/projectTime&gt;
+    &lt;/region&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-two-different-tracks"><a class="header" href="#insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-two-different-tracks">Insert one audio file at 4s and one audio file at beat 8 on two different tracks</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;MyApp&lt;/sourceApp&gt;
+    &lt;region id="1" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 1&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum1.wav&lt;/filename&gt;
+        &lt;start&gt;100&lt;/start&gt;
+        &lt;end&gt;44200&lt;/end&gt;
+        &lt;projectTime domain="seconds"&gt;4.0&lt;/projectTime&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+    &lt;/region&gt;
+    &lt;region id="2" channelID="{09FCC4AB-1752-4A8B-A039-380B6EE74256}"&gt;
+        &lt;name&gt;Region 2&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum2.wav&lt;/filename&gt;
+        &lt;start&gt;0&lt;/start&gt;
+        &lt;end&gt;44100&lt;/end&gt;
+        &lt;projectTime domain="quarterNotes"&gt;8&lt;/projectTime&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+    &lt;/region&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-one-track"><a class="header" href="#insert-one-audio-file-at-4s-and-one-audio-file-at-beat-8-on-one-track">Insert one audio file at 4s and one audio file at beat 8 on one track</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;MyApp&lt;/sourceApp&gt;
+    &lt;region id="1" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 1&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum1.wav&lt;/filename&gt;
+        &lt;start&gt;100&lt;/start&gt;
+        &lt;end&gt;44200&lt;/end&gt;
+        &lt;projectTime domain="seconds"&gt;4.0&lt;/projectTime&gt;
+    &lt;/region&gt;
+    &lt;region id="2" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 2&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum2.wav&lt;/filename&gt;
+        &lt;start&gt;0&lt;/start&gt;
+        &lt;end&gt;44100&lt;/end&gt;
+        &lt;projectTime domain="quarterNotes"&gt;8&lt;/projectTime&gt;
+    &lt;/region&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="4-chords"><a class="header" href="#4-chords">4 Chords</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;chord id="818292160"&gt;
+        &lt;name&gt;C7&lt;/name&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;0&lt;/projectTime&gt;
+        &lt;pitches&gt;C1;E2;G2;A#2;&lt;/pitches&gt;
+        &lt;keyNote&gt;60&lt;/keyNote&gt;
+        &lt;bassNote&gt;24&lt;/bassNote&gt;
+        &lt;mask&gt;0x248&lt;/mask&gt;
+    &lt;/chord&gt;
+    &lt;chord id="1485759856"&gt;
+        &lt;name&gt;Fmin7&lt;/name&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;32&lt;/projectTime&gt;
+        &lt;pitches&gt;F1;G#2;C3;D#3;&lt;/pitches&gt;
+        &lt;keyNote&gt;65&lt;/keyNote&gt;
+        &lt;bassNote&gt;29&lt;/bassNote&gt;
+        &lt;mask&gt;0x244&lt;/mask&gt;
+    &lt;/chord&gt;
+    &lt;chord id="1485760336"&gt;
+        &lt;name&gt;Esus4&lt;/name&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;56&lt;/projectTime&gt;
+        &lt;pitches&gt;E1;A2;B2;E3;&lt;/pitches&gt;
+        &lt;keyNote&gt;64&lt;/keyNote&gt;
+        &lt;bassNote&gt;28&lt;/bassNote&gt;
+        &lt;mask&gt;0x50&lt;/mask&gt;
+    &lt;/chord&gt;
+    &lt;chord id="1485759376"&gt;
+        &lt;name&gt;Gsus2&lt;/name&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;72&lt;/projectTime&gt;
+        &lt;pitches&gt;G1;G2;A2;D3;&lt;/pitches&gt;
+        &lt;keyNote&gt;67&lt;/keyNote&gt;
+        &lt;bassNote&gt;31&lt;/bassNote&gt;
+        &lt;mask&gt;0x42&lt;/mask&gt;
+    &lt;/chord&gt;
+    &lt;sourceApp&gt;Nuendo&lt;/sourceApp&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="2-scales"><a class="header" href="#2-scales">2 Scales</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;scale id="492403952"&gt;
+        &lt;name&gt;Blues 1&lt;/name&gt;
+        &lt;displayName&gt;A# Blues 1&lt;/displayName&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;0&lt;/projectTime&gt;
+        &lt;keyNote&gt;10&lt;/keyNote&gt;
+        &lt;mask&gt;0x6ed&lt;/mask&gt;
+    &lt;/scale&gt;
+    &lt;scale id="492405312"&gt;
+        &lt;name&gt;Major&lt;/name&gt;
+        &lt;displayName&gt;G Major&lt;/displayName&gt;
+        &lt;color&gt;#91959bff&lt;/color&gt;
+        &lt;projectTime domain="quarterNotes"&gt;56&lt;/projectTime&gt;
+        &lt;keyNote&gt;7&lt;/keyNote&gt;
+        &lt;mask&gt;0xab5&lt;/mask&gt;
+    &lt;/scale&gt;
+    &lt;sourceApp&gt;Nuendo&lt;/sourceApp&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="signature"><a class="header" href="#signature">Signature</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;MyApp&lt;/sourceApp&gt;
+    &lt;signature&gt;
+        &lt;numerator&gt;3&lt;/numerator&gt;
+        &lt;denominator&gt;4&lt;/denominator&gt;
+        &lt;projectTime domain="quarterNotes"&gt;0&lt;/projectTime&gt;
+    &lt;/signature&gt;
+&lt;/vst-xml&gt;
+</code></pre>
+<h3 id="join-of-segments-and-loops"><a class="header" href="#join-of-segments-and-loops">Join of segments and loops</a></h3>
+<pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;vst-xml version="1.3"&gt;
+    &lt;sourceApp&gt;WaveLab&lt;/sourceApp&gt;
+    &lt;region type="join" id="4" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;my Region&lt;/name&gt;
+        &lt;projectTime domain="seconds"&gt;33.5&lt;/projectTime&gt;
+        &lt;segment&gt;
+            &lt;filename&gt;E:\Temp\Audio\Drum2.wav&lt;/filename&gt;
+            &lt;start&gt;0&lt;/start&gt;
+            &lt;length&gt;1234&lt;/length&gt;
+        &lt;/segment&gt;
+        &lt;segment&gt;
+            &lt;filename&gt;c:\toto.wav&lt;/filename&gt;
+            &lt;start&gt;1227&lt;/start&gt;
+            &lt;length&gt;44&lt;/length&gt;
+        &lt;/segment&gt;
+        &lt;color&gt;#12345678&lt;/color&gt;
+    &lt;/region&gt;
+    &lt;region id="1234" channelID="{B48CE04A-8FE5-4192-BBEE-D178F7B55C26}"&gt;
+        &lt;name&gt;Region 1&lt;/name&gt;
+        &lt;filename&gt;E:\Temp\Audio\Drum2.wav&lt;/filename&gt;
+        &lt;start&gt;0&lt;/start&gt;
+        &lt;end&gt;1234&lt;/end&gt;
+        &lt;projectTime domain="quarterNotes"&gt;16&lt;/projectTime&gt;
+        &lt;loop&gt;
+            &lt;start&gt;0&lt;/start&gt;
+            &lt;end&gt;1002&lt;/end&gt;
+        &lt;/loop&gt;
+        &lt;loop type="release"&gt;
+            &lt;start&gt;0&lt;/start&gt;
+            &lt;end&gt;1002&lt;/end&gt;
+        &lt;/loop&gt;
+        &lt;tempo&gt;120.0&lt;/tempo&gt;
+        &lt;rootkey&gt;36&lt;/rootkey&gt;
+        &lt;signature&gt;
+            &lt;numerator&gt;3&lt;/numerator&gt;
+            &lt;denominator&gt;4&lt;/denominator&gt;
+        &lt;/signature&gt;
+    &lt;/region&gt;
+&lt;/vst-xml&gt;
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="features-history"><a class="header" href="#features-history">Features History</a></h1>
 <ul>
 <li><a href="pages/Technical+Documentation/Change+History/../Change+History/3.0.0/Plug+in+Interfaces.html">[3.0.0] Interfaces supported by the plug-in</a></li>
@@ -6842,6 +7187,8 @@ tresult PLUGIN_API MyPlugFactory::setHostContext (FUnknown* context)
 <li><a href="pages/Technical+Documentation/Change+History/../Change+History/3.8.0/IMidiLearn2.html">[3.8.0] MIDI Learn 2 (MIDI 2.0 support)</a></li>
 <li><a href="pages/Technical+Documentation/Change+History/../Change+History/3.8.0/IMidiMapping2.html">[3.8.0] Parameter MIDI Mapping 2 (MIDI 2.0 support)</a></li>
 <li><a href="pages/Technical+Documentation/Change+History/../Change+History/3.8.0/IWaylandHost.html">[3.8.0] Wayland Support (Linux)</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/../Change+History/3.8.1/ITransportControl.html">[3.8.1] Transport Control</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/../Change+History/3.8.1/IInfo.html">[3.8.1] NoteOn Orchestral Articulation Info</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.0.0/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.0.0/../../Index.html">Technical Documentation</a></p>
@@ -6953,16 +7300,16 @@ tresult PLUGIN_API MyPlugFactory::setHostContext (FUnknown* context)
 <p>Usually, the size of a plug-in view is fixed. But both the host and the plug-in can cause a view to be resized:</p>
 <ul>
 <li>
-<p><strong>Host</strong>: If IPlugView::canResize () returns <strong>kResultTrue</strong>, the host will set up the window so that the user can resize it. While the user resizes the window, IPlugView::checkSizeConstraint () is called, allowing the plug-in to change the size to a valid supported rectangle size. The host then resizes the window to this rect and has to call IPlugView::onSize ().</p>
+<p><strong>Host</strong>: If <strong>IPlugView::canResize ()</strong> returns <strong>kResultTrue</strong>, the host will set up the window so that the user can resize it. While the user resizes the window, <strong>IPlugView::checkSizeConstraint ()</strong> is called, allowing the plug-in to change the size to a valid supported rectangle size, it should always return <strong>kResultTrue</strong> if <strong>IPlugView::canResize ()</strong> returns <strong>kResultTrue</strong>. The host then resizes the window to this rect and has to call <strong>IPlugView::onSize ()</strong>.</p>
 </li>
 <li>
-<p><strong>Plug-in</strong>: The plug-in can call IPlugFrame::resizeView () and cause the host to resize the window.
-Afterwards, in the same callstack, the host has to call IPlugView::onSize () if a resize is needed (size was changed).</p>
+<p><strong>Plug-in</strong>: The plug-in can call <strong>IPlugFrame::resizeView ()</strong> and cause the host to resize the window.
+Afterwards, in the same callstack, the host has to call <strong>IPlugView::onSize ()</strong> if a resize is needed (size was changed).</p>
 </li>
 </ul>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
-Note that if the host calls IPlugView::getSize () before calling IPlugView::onSize () (if needed), it will get the old size, not the current one!</p>
+Note that if the host calls <strong>IPlugView::getSize ()</strong> before calling <strong>IPlugView::onSize ()</strong> (if needed), it will get the old size, not the current one!</p>
 </blockquote>
 <p>Here the calling sequence:</p>
 <ul>
@@ -7120,9 +7467,9 @@ tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int
 <p>The side-chain can be used as an additional modulation source instead of cyclic forms of modulation. From the plug-in's perspective, side-chain inputs and/or outputs are additional inputs and outputs which can be enabled or disabled by the host.</p>
 <p>The host (if supported) will provide to the user a way to route some signal paths to these side-chain inputs or from side-chain outputs to others signal inputs.</p>
 <p><a href="https://www.youtube.com/watch?v=6AvqoFSk2S8"><img src="https://i.ytimg.com/vi/6AvqoFSk2S8/maxresdefault.jpg" alt="getting_started_vid_3" /></a></p>
-<p>What is Side-Chaining and How to Use It | Music Production For Beginners</p>
+<p>What is Side-Chaining and How to Use It | Music Production For Beginners.</p>
 <p><a href="https://www.youtube.com/watch?v=PBQr-PnI6Yw"><img src="https://i.ytimg.com/vi/PBQr-PnI6Yw/maxresdefault.jpg" alt="getting_started_vid_4" /></a></p>
-<p>Here an example of Side-Chaining for a Instrument in Cubase</p>
+<p>Here an example of Side-Chaining for a Instrument in <strong>Cubase</strong>.</p>
 <h2 id="how-can-i-implement-a-side-chain-path-into-my-plug-in"><a class="header" href="#how-can-i-implement-a-side-chain-path-into-my-plug-in">How can I implement a Side-chain path into my plug-in?</a></h2>
 <p>In AudioEffect::initialize (FUnknown* context) you must add the required bus- and speaker configuration of your plug-in.
 For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look in the following way:</p>
@@ -7490,7 +7837,12 @@ tresult PLUGIN_API MyEditController::getMidiControllerAssignment (int32 busIndex
 <p><strong>On this page:</strong></p>
 <ul>
 <li><a href="pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html#introduction">Introduction</a></li>
-<li><a href="pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html#examples">Examples</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html#some-examples">Some Examples</a>
+<ul>
+<li><a href="pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html#cc121">CC121</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html#cc1">CC1</a></li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="introduction-15"><a class="header" href="#introduction-15">Introduction</a></h2>
@@ -7502,9 +7854,12 @@ tresult PLUGIN_API MyEditController::getMidiControllerAssignment (int32 busIndex
 <li>[optional]</li>
 </ul>
 <p>It is highly recommended to implement this interface. A host can implement important functionality when a plug-in supports this interface.</p>
-<h2 id="examples-1"><a class="header" href="#examples-1">Examples</a></h2>
+<h2 id="some-examples"><a class="header" href="#some-examples">Some Examples</a></h2>
 <p>For example, all Steinberg hosts require this interface in order to support the <strong>AI Knob</strong>.</p>
-<p><a href="https://www.steinberg.net/de/cc121/"><img src="pages/Technical+Documentation/Change+History/3.0.2/../../../../resources/tech_doc_30.jpg" alt="Tech_doc_image_link_1" /></a></p>
+<h3 id="cc121"><a class="header" href="#cc121">CC121</a></h3>
+<p><img src="pages/Technical+Documentation/Change+History/3.0.2/../../../../resources/tech_doc_30.jpg" alt="Steinberg_CC121" /></p>
+<h3 id="cc1"><a class="header" href="#cc1">CC1</a></h3>
+<p><a href="https://www.yamaha.com/2/cc1/"><img src="pages/Technical+Documentation/Change+History/3.0.2/../../../../resources/yamaha_CC1.png" alt="Yamaha_CC1" /></a></p>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.1.0/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.1.0/../../Index.html">Technical Documentation</a></p>
 <h1 id="301-parameter-midi-mapping-midi-10-support-2"><a class="header" href="#301-parameter-midi-mapping-midi-10-support-2">[3.0.1] Parameter MIDI Mapping (MIDI 1.0 support)</a></h1>
@@ -7678,9 +8033,18 @@ public:
 </ul>
 <p><strong>Related pages:</strong></p>
 <ul>
-<li><a href="pages/Technical+Documentation/Change+History/3.5.0/../3.5.0/IKeyswitchController.html">[3.5.0] Key Switch</a></li>
-<li><a href="pages/Technical+Documentation/Change+History/3.5.0/../3.6.11/INoteExpressionPhysicalUIMapping.html">[3.6.11] NoteExpression Physical UI Mapping</a></li>
-<li><a href="pages/Technical+Documentation/Change+History/3.5.0/../../About+MIDI/Index.html">About MIDI in VST 3</a></li>
+<li>
+<p><a href="pages/Technical+Documentation/Change+History/3.5.0/../3.5.0/IKeyswitchController.html">[3.5.0] Key Switch</a></p>
+</li>
+<li>
+<p><a href="pages/Technical+Documentation/Change+History/3.5.0/../3.6.11/INoteExpressionPhysicalUIMapping.html">[3.6.11] NoteExpression Physical UI Mapping</a></p>
+</li>
+<li>
+<p><a href="pages/Technical+Documentation/Change+History/3.5.0/../3.8.1/IInfo.html">[3.8.1] NoteOn Orchestral Articulation Info</a></p>
+</li>
+<li>
+<p><a href="pages/Technical+Documentation/Change+History/3.5.0/../../About+MIDI/Index.html">About MIDI in VST 3</a></p>
+</li>
 </ul>
 <hr />
 <h2 id="introduction-19"><a class="header" href="#introduction-19">Introduction</a></h2>
@@ -8342,7 +8706,7 @@ The plug-in can use the context menu in two ways:</p>
 It is recommended to use this context menu interface, even if you do not add your own items to the menu as this is considered to be a big user value.</p>
 </blockquote>
 <p>See also <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenu.html">Vst:: IContextMenu</a>, <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IContextMenuTarget.html">Vst:: IContextMenuTarget</a>.</p>
-<h2 id="examples-2"><a class="header" href="#examples-2">Examples</a></h2>
+<h2 id="examples-1"><a class="header" href="#examples-1">Examples</a></h2>
 <h3 id="from-the-host-perspective"><a class="header" href="#from-the-host-perspective">From the host perspective</a></h3>
 <p>For example, <strong>Cubase</strong> adds its owned entries in the context menu opened with right-click on an exported parameter when the plug-in uses <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler3.html#a0c91e0b43003a34a7f43d0c4b33aa604">createContextMenu</a>. The plug-in itself, in this example, only adds the "Open UIDescription Editor" entry.</p>
 <blockquote>
@@ -8902,9 +9266,9 @@ if (auto busActivation = Steinberg::U::cast&lt;IComponentHandlerBusActivation&gt
 <p>Since VST 3.6.10, a <strong>VST 3</strong> bundle can contain pre-rendered snapshot images for a <strong>VST 3</strong> host as a visual representation of the plug-in UI.</p>
 <ul>
 <li>This snapshot must have a predefined format and file name so that a host can recognize it.</li>
-<li>The image format must be PNG</li>
-<li>The image needs to be located inside the bundle directory in the folder <strong>Resources/Snapshots/</strong>
-The file name must start with the unique ID of the audio processor printed in the form <strong>84E8DE5F92554F5396FAE4133C935A18</strong> followed by the string <strong>_snapshot</strong> and optionally followed by the HiDPI scale factor <strong>_2.0x</strong> and ending with the file extension <strong>.png</strong>.</li>
+<li>The image format must be <em>PNG</em>.</li>
+<li>The image needs to be located inside the bundle directory in the folder <strong>Resources/Snapshots/</strong>.</li>
+<li>The file name must start with the <em>unique ID</em> of the audio processor printed in the form <strong>84E8DE5F92554F5396FAE4133C935A18</strong> followed by the string <strong>_snapshot</strong> and optionally followed by the HiDPI scale factor <strong>_2.0x</strong> and ending with the file extension <strong>.png</strong>.</li>
 <li>For example, again's snapshot must be named:
 <ul>
 <li><strong>84E8DE5F92554F5396FAE4133C935A18_snapshot.png</strong></li>
@@ -8913,7 +9277,7 @@ The file name must start with the unique ID of the audio processor printed in th
 </li>
 <li>If the HiDPI scale factor is omitted, a scale factor of 1 is used.</li>
 </ul>
-<h2 id="examples-3"><a class="header" href="#examples-3">Examples</a></h2>
+<h2 id="examples-2"><a class="header" href="#examples-2">Examples</a></h2>
 <h3 id="again-1"><a class="header" href="#again-1">AGain</a></h3>
 <blockquote>
 <p><img src="pages/Technical+Documentation/Change+History/3.6.10/../../../../resources/tech_doc_22.png" alt="Tech_doc_22" /><br />
@@ -9185,6 +9549,7 @@ As <strong>MPE</strong> is a subset of the VST 3 <a href="pages/Technical+Docume
 <p><strong>On this page:</strong></p>
 <ul>
 <li><a href="pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html#introduction">Introduction</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html#current-defined-function-names">Current defined function names</a></li>
 <li><a href="pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html#example">Example</a></li>
 </ul>
 <hr />
@@ -9196,13 +9561,35 @@ As <strong>MPE</strong> is a subset of the VST 3 <a href="pages/Technical+Docume
 <li>[released: 3.7.0]</li>
 <li>[optional]</li>
 </ul>
-<p>This interface allows the host to get a parameter associated to a specific meaning (a functionName) for a given unit. The host can use this information, for example, for drawing a Gain Reduction meter in its own UI. In order to get the plain value of this parameter, the host should use the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a849747dc98909312b4cdbdeea82dbae0">Vst:: IEditController::normalizedParamToPlain</a>. The host can automatically map parameters to dedicated UI controls, such as the wet-dry mix knob or the Randomize button.</p>
+<p>This interface allows the host to get a parameter associated to a specific meaning (a functionName) for a given unit. The host can use this information, for example, for drawing a Gain Reduction meter in its own UI. In order to get the plain value of this parameter, the host should use the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html#a849747dc98909312b4cdbdeea82dbae0">Vst:: IEditController::normalizedParamToPlain</a>. The host can automatically map parameters to dedicated UI controls, such as the wet-dry mix knob or the Randomize button.
+If a parameter provided by this interface is marked with the kReadOnly flag, the host should ignore this parameter.</p>
+<h2 id="current-defined-function-names"><a class="header" href="#current-defined-function-names">Current defined function names</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Comment</th></tr></thead><tbody>
+<tr><td><strong>Gain Reduction</strong></td><td></td></tr>
+<tr><td>kCompGainReduction</td><td></td></tr>
+<tr><td>kCompGainReductionMax</td><td></td></tr>
+<tr><td>kCompGainReductionPeakHold</td><td></td></tr>
+<tr><td>kCompResetGainReductionMax</td><td></td></tr>
+<tr><td><strong>Randomize</strong></td><td></td></tr>
+<tr><td>kRandomize</td><td>Assigns randomized values across the full parameter range.</td></tr>
+<tr><td>kRandomizeAroundCurrent</td><td>Assigns randomized values around the current parameter values (e.g. ±5% of the current value).</td></tr>
+<tr><td><strong>Panner</strong></td><td></td></tr>
+<tr><td>kPanPosCenterX</td><td>Gravity point X-axis [0, 1]=&gt;[L-R] (for stereo: middle between left and right).</td></tr>
+<tr><td>kPanPosCenterY</td><td>Gravity point Y-axis [0, 1]=&gt;[Front-Rear].</td></tr>
+<tr><td>kPanPosCenterZ</td><td>Gravity point Z-axis [0, 1]=&gt;[Bottom-Top].</td></tr>
+<tr><td><strong>Other</strong></td><td></td></tr>
+<tr><td>kLowLatencyMode</td><td>Useful for live situation where low latency is required: 0 means LowLatency disable,  1 means LowLatency enable</td></tr>
+<tr><td>kDryWetMix</td><td>Allowing to mix the original (Dry) Signal with the processed one (Wet): 0.0 means Dry Signal only, 0.5 means 50% Dry Signal + 50% Wet Signal, 1.0 means Wet Signal only</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-14"><a class="header" href="#example-14">Example</a></h2>
 <p><strong>In mycontroller.h</strong></p>
 <pre><code class="language-c++">//------------------------------------------------------------------------
 // here an example of how a VST 3 plug-in could support this IParameterFunctionName interface.
-// we need to define somewhere the iids:
+// we need to define somewhere the iids (in mycontroller.cpp):
   
+#include "pluginterfaces/vst/ivstparameterfunctionname.h"
+
 //in MyController class declaration
 class MyController : public Vst::EditController, public Vst::IParameterFunctionName
 {
@@ -9220,9 +9607,7 @@ class MyController : public Vst::EditController, public Vst::IParameterFunctionN
 }
 </code></pre>
 <p><strong>In mycontroller.cpp</strong></p>
-<pre><code class="language-c++">#include "pluginterfaces/vst/ivstparameterfunctionname.h"
- 
-namespace Steinberg {
+<pre><code class="language-c++">namespace Steinberg {
     namespace Vst {
         DEF_CLASS_IID (IParameterFunctionName)
     }
@@ -9278,7 +9663,7 @@ tresult PLUGIN_API MyController::getParameterIDFromFunctionName (UnitID unitID, 
 <li>[optional]</li>
 </ul>
 <p>Allows the plug-in to ask the host to create a progress for specific tasks which take some time. The host can visualize the progress as read-only UI elements. For example, after loading a project where a plug-in needs to load extra data (e.g. samples) in a background thread, this enables the host to get and visualize the current status of the loading progress and to inform the user when the loading is finished. Note: During the progress, the host can unload the plug-in at any time. Make sure that the plug-in supports this use case.</p>
-<h2 id="examples-4"><a class="header" href="#examples-4">Examples</a></h2>
+<h2 id="examples-3"><a class="header" href="#examples-3">Examples</a></h2>
 <h3 id="how-to-call-it-from-the-plug-in-side"><a class="header" href="#how-to-call-it-from-the-plug-in-side">How to call it from the plug-in side</a></h3>
 <pre><code class="language-c++">//--------------------------------------
 // we are in the editcontroller:
@@ -9672,7 +10057,7 @@ namespace Steinberg {
 }
   
 //------------------------------------------------------------------------
-tresult PLUGIN_API  MyController::onLiveMidi2ControllerInput (BusIndex index, MidiChannel channel, Midi2Controller midiCC)
+tresult PLUGIN_API MyController::onLiveMidi1ControllerInput (BusIndex index, MidiChannel channel, CtrlNumber midiCC)
 {
     // if we are not in doMIDILearn (triggered by a UI button for example) or wrong channel then return
     if (!doMIDILearn || index != 0 || channel != 0 || midiLearnParamID == InvalidParamID)
@@ -9691,13 +10076,14 @@ tresult PLUGIN_API  MyController::onLiveMidi2ControllerInput (BusIndex index, Mi
 }
 
 //------------------------------------------------------------------------
-tresult PLUGIN_API  MyController::onLiveMidi1ControllerInput (BusIndex index, MidiChannel channel, CtrlNumber midiCC)
+tresult PLUGIN_API MyController::onLiveMidi2ControllerInput (BusIndex index, MidiChannel channel, Midi2Controller midiCC)
 {
     // if we are not in doMIDILearn (triggered by a UI button for example) or wrong channel then return
     if (!doMIDILearn || index != 0 || channel != 0 || midiLearnParamID == InvalidParamID)
         return kResultFalse;
- 
-    CCKey key { midiCC.registered ? CCType::RPN : CCType::NRPN, (midiCC.bank &lt;&lt; 7) | midiCC.index };
+
+    CCKey key { Midi2Controller::isRegisteredController (midiCC) ? CCType::RPN : CCType::NRPN, 
+                (Midi2Controller::bank (midiCC) &lt;&lt; 7) | Midi2Controller::index (midiCC) };
     auto currentMapping = midiCCMapping.find (key);
     if (currentMapping == midiCCMapping.end () || currentMapping-&gt;second != midiLearnParamID)
     {
@@ -9709,7 +10095,6 @@ tresult PLUGIN_API  MyController::onLiveMidi1ControllerInput (BusIndex index, Mi
     }
     return kResultTrue;
 }
-
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Technical+Documentation/Change+History/3.8.0/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.8.0/../../Index.html">Technical Documentation</a></p>
@@ -9880,12 +10265,135 @@ The host application connects to the system compositor and creates application w
 <li>[optional]</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
+<p>/ <a href="pages/Technical+Documentation/Change+History/3.8.1/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.8.1/../../Index.html">Technical Documentation</a></p>
+<h1 id="381-transport-control-1"><a class="header" href="#381-transport-control-1">[3.8.1] Transport Control</a></h1>
+</blockquote>
+<p><strong>On this page:</strong></p>
+<ul>
+<li><a href="pages/Technical+Documentation/Change+History/3.8.1/ITransportControl.html#introduction">Introduction</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/3.8.1/ITransportControl.html#example">Example</a></li>
+</ul>
+<p><strong>Related pages:</strong></p>
+<ul>
+<li><a href="pages/Technical+Documentation/Change+History/3.8.1/../../../What+is+the+VST+3+SDK/Plug-in+Examples.html#transport-control">Example plug-in: Transport Control</a></li>
+</ul>
+<hr />
+<h2 id="introduction-49"><a class="header" href="#introduction-49">Introduction</a></h2>
+<p>This interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ITransportControl.html">Vst:: ITransportControl</a> allows a plug-in to request transport-related actions from the host.</p>
+<p>Typical use cases include:</p>
+<ul>
+<li>Jumping (locating) to a position</li>
+<li>Starting or stopping playback or recording</li>
+<li>Adjusting loop/cycle regions</li>
+<li>Enabling or disabling cycle playback</li>
+</ul>
+<p>All calls must be made from the <strong>UI thread</strong>. Hosts may accept or deny requests depending on their internal policies or the current editing mode (e.g., offline rendering, write-protected state, etc.).</p>
+<ul>
+<li>[host imp]</li>
+<li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">Vst:: IComponentHandler</a>]</li>
+<li>[released: 3.8.1]</li>
+<li>[optional]</li>
+</ul>
+<h2 id="example-20"><a class="header" href="#example-20">Example</a></h2>
+<p><strong>In mycontroller.cpp</strong></p>
+<pre><code class="language-c++">bool mycontroller::startPlayback ()
+{
+    // the hostContext was given in the function ComponentBase::initialize (FUnknown* context)
+    if (!hostContext)
+        return false;
+
+    Vst::ITransportControl* transportControl = nullptr;
+    hostContext-&gt;queryInterface (Vst::ITransportControl::iid, (void**)&amp;transportControl);
+
+	if (transportControl &amp;&amp; transportControl-&gt;isActionSupported (Vst::ITransportControl::PlaybackStart) == kResultTrue)
+	{
+        transportControl-&gt;requestAction (Vst::ITransportControl::PlaybackStart);
+        return true;
+    }
+    return false;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><blockquote>
+<p>/ <a href="pages/Technical+Documentation/Change+History/3.8.1/../../../">VST Home</a> / <a href="pages/Technical+Documentation/Change+History/3.8.1/../../Index.html">Technical Documentation</a></p>
+<h1 id="381-noteon-orchestral-articulation-info"><a class="header" href="#381-noteon-orchestral-articulation-info">[3.8.1] NoteOn Orchestral Articulation Info</a></h1>
+</blockquote>
+<p><strong>On this page:</strong></p>
+<ul>
+<li><a href="pages/Technical+Documentation/Change+History/3.8.1/IInfo.html#introduction">Introduction</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/3.8.1/IInfo.html#example">Example</a></li>
+</ul>
+<p><strong>Related pages:</strong></p>
+<ul>
+<li><a href="pages/Technical+Documentation/Change+History/3.8.1/../3.5.0/INoteExpressionController.html">[3.5.0] Note Expression</a></li>
+<li><a href="pages/Technical+Documentation/Change+History/3.8.1/../../About+MIDI/Index.html">About MIDI in VST 3</a></li>
+<li><a href="https://midi.org/wp-content/uploads/2024/03/Orchestral-APE-Profile-Intro-Final.pdf">[midi.org] Orchestral Articulation Profile Introduction</a></li>
+<li><a href="https://midi.org/6-new-profile-specifications-adopted">[midi.org] new profile specifications adopted</a></li>
+<li><a href="https://amei-music.github.io/midi2.0-docs/amei-pdf/M2-123-UM_v1-0_Note-On_Orchestral_Articulation_Profile.pdf">[AMEI] M2-123-UM Document</a></li>
+</ul>
+<hr />
+<h2 id="introduction-50"><a class="header" href="#introduction-50">Introduction</a></h2>
+<p>Edit controller component interface extension: <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces//classSteinberg_1_1Vst_1_1IInfo.html">Vst:: NoteOnOrchestralArticulation:: IInfo</a>.</p>
+<ul>
+<li>[plug imp]</li>
+<li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IEditController.html">Vst:: IEditController</a>]</li>
+<li>[released: 3.8.1]</li>
+<li>[optional]</li>
+</ul>
+<p>This interface allows the host to retrieve, for each input event bus and channel, the number of variations supported by the plug-in for Note On Orchestral Articulations (called from the UI thread). Variation indices for subclasses follow the subclass index definitions specified by the MIDI-CI profile for Note On Selection of Orchestral Articulation (<a href="https://amei-music.github.io/midi2.0-docs/amei-pdf/M2-123-UM_v1-0_Note-On_Orchestral_Articulation_Profile.pdf">M2-123-UM</a>).</p>
+<h2 id="example-21"><a class="header" href="#example-21">Example</a></h2>
+<p><strong>In mycontroller.h</strong></p>
+<pre><code class="language-c++">
+//------------------------------------------------------------------------
+// here an example of how a VST 3 plug-in could support this IParameterFunctionName interface.
+// we need to define somewhere the iids (in mycontroller.cpp):
+
+#include "pluginterfaces/vst/ivstnoteonorchestralarticulationinfo.h"
+
+//in MyController class declaration
+class MyController : public Vst::EditController, public Vst::NoteOnOrchestralArticulation::IInfo
+{
+    // ...
+    tresult PLUGIN_API getVariationsInfo (int32 busIndex /*in*/, int16 channel /*in*/,Vst::NoteOnOrchestralArticulation::ClassificationVariations&amp; info /*out*/) override;
+    // ...
+  
+    OBJ_METHODS (MyController, Vst::EditController)
+    DEFINE_INTERFACES
+        // ...
+        DEF_INTERFACE (Vst::NoteOnOrchestralArticulation::IInfo)
+    END_DEFINE_INTERFACES (Vst::EditController)
+    //...
+}
+</code></pre>
+<p><strong>In mycontroller.cpp</strong></p>
+<pre><code class="language-c++">namespace Steinberg {
+    namespace Vst {
+        DEF_CLASS_IID (NoteOnOrchestralArticulation::IInfo)
+    }
+}
+  
+//------------------------------------------------------------------------
+tresult PLUGIN_API MyController::getVariationsInfo  (int32 busIndex, int16 channel, Vst::NoteOnOrchestralArticulation::ClassificationVariations&amp; info) 
+{
+    using namespace Vst;
+
+    // subclass: Normal Sustains &amp; Strikes (Part 1) (index 0)
+    info.classification[kCoreSoundSustainAndStrikes].variation[0] = 2;
+
+    // subclass: Legato and Legato Slurred (index 2)
+    info.classification[kCoreSoundSustainAndStrikes].variation[2] = 3;
+
+    // subclass: Pizzicato (index 10 (0xA))
+    info.classification[kStaccatosAndShorts].variation[10] = 3;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Versions/../">VST Home</a></p>
 <h1 id="change-history-1"><a class="header" href="#change-history-1">Change History</a></h1>
 </blockquote>
 <h2 id="versions"><a class="header" href="#versions">Versions</a></h2>
 <p>All released versions of the <strong>VST SDK</strong> with changes and dates:</p>
 <ul>
+<li><a href="pages/Versions/Version+3.8.1.html">Version 3.8.1 (2026/08/04)</a></li>
 <li><a href="pages/Versions/Version+3.8.0.html">Version 3.8.0 (2025/10/20)</a></li>
 <li><a href="pages/Versions/Version+3.7.14.html">Version 3.7.14 (2025/06/23)</a></li>
 <li><a href="pages/Versions/Version+3.7.13.html">Version 3.7.13 (2025/02/28)</a></li>
@@ -9920,6 +10428,101 @@ The host application connects to the system compositor and creates application w
 <li><a href="pages/Versions/Version+3.0.2.html">Version 3.0.2 (2009/01/15)</a></li>
 <li><a href="pages/Versions/Version+3.0.1.html">Version 3.0.1 (2008/03/19)</a></li>
 <li><a href="pages/Versions/Version+3.0.0.html">Version 3.0.0 (2008/01/17)</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><blockquote>
+<p>/ <a href="pages/Versions/../">VST Home</a> / <a href="pages/Versions/./Index.html">Change History</a></p>
+<h1 id="version-381-20260804"><a class="header" href="#version-381-20260804">Version 3.8.1 (2026/08/04)</a></h1>
+</blockquote>
+<h2 id="version-381-20260804-1"><a class="header" href="#version-381-20260804-1">Version 3.8.1 (2026/08/04)</a></h2>
+<ul>
+<li>
+<p>Interface changes:</p>
+<ul>
+<li>New interface <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.1/ITransportControl.html">ITransportControl</a> allowing a plug-in to request transport-related actions from the host.</li>
+<li>New Note Expression Type IDs (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a7d66c573aff27d890ec154f45b61f310">Vst::NoteExpressionTypeIDs</a>) dedicated to MIDI 2.0 Per Note Controller and Attributes (<strong>kMidi2AssignablePerNoteControllerStart</strong>, ...).</li>
+<li>New interface <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.1/IInfo.html">NoteOnOrchestralArticulation::IInfo</a> for MIDI 2.0 support of Orchestral Articulation Profile.</li>
+<li>Small change in the <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/structSteinberg_1_1Vst_1_1Midi2Controller.html">Midi2Controller</a> struct in <em>ivstmidimapping2.h</em> that guarantees full ABI compatibility across compilers. Developers using this struct need to make a small adaptation.</li>
+<li>Publication of text-based XML definition: <a href="pages/Versions/../Technical+Documentation/Clipboard+VST-XML/Index.html">Clipboard VST-XML</a> for drag-and-drop and copy-paste exchange of audio and musical elements (for example, audio files, chords, scales, and clips) with contextual metadata such as project time and color between Plug-ins and/or Applications.</li>
+<li>Add for linux new VST3 system paths: <a href="pages/Versions/../Technical+Documentation/Locations+Format/Plugin+Locations.html#on-linux-platform"><em>/usr/lib64/vst3</em> and <em>/usr/local/lib64/vst3</em></a> (defined in Fedora distribution).</li>
+</ul>
+</li>
+<li>
+<p><a href="pages/Versions/../What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a> update <a href="https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_15_1">4.15.1</a></p>
+</li>
+<li>
+<p>Documentation</p>
+<ul>
+<li>Fix doxy doc in <em>ivstprocesscontext.h</em>.</li>
+<li>Add clarification to the doc about <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.html">MIDILearn2</a> (n to m mapping).</li>
+</ul>
+</li>
+<li>
+<p>CMake</p>
+<ul>
+<li>Remove AUWrapper target from main <em>CMakeLists.txt</em>.</li>
+<li>Better detection of Windows 32-bit build for non-Visual Studio generators (<a href="https://github.com/steinbergmedia/vst3_cmake/pull/14">PR#14</a>).</li>
+</ul>
+</li>
+<li>
+<p><a href="pages/Versions/../What+is+the+VST+3+SDK/Wrappers/Index.html">Plug-in Wrappers</a>:</p>
+<ul>
+<li>Audio Unit:
+<ul>
+<li><strong>AUv2Wrapper</strong>:
+<ul>
+<li>Improve MIDI value conversion.</li>
+<li>Fix auwrapper.mm:
+<ul>
+<li>building AUWrapper with the new AUSDK.</li>
+<li>wrong arguments to CFStringGetCharacters (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/80">PR#80</a>).</li>
+<li>AUWrapper::restartComponent kLatencyChanged handling (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/79">PR#79</a>).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="pages/Versions/../What+is+the+VST+3+SDK/Plug-in+Examples.html">Examples</a>:</p>
+<ul>
+<li>Fix: incorrect note expression info in the example <a href="pages/Versions/../What+is+the+VST+3+SDK/Plug-in+Examples.html#note-expression-synth">Note Expression Synth</a> Plug-in (<a href="https://github.com/steinbergmedia/vst3_public_sdk/issues/78">Issue#78</a>).</li>
+<li>Fix: missing call to <em>notifyProgramListChange</em> after changing exported programs count in the <a href="pages/Versions/../What+is+the+VST+3+SDK/Plug-in+Examples.html#test-multiple-program-changes">Test Multiple Program Changes</a> Plug-in.</li>
+<li>Update <strong>Hostchecker</strong> plug-in:
+<ul>
+<li>Check support of <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.1/ITransportControl.html">ITransportControl</a>.</li>
+<li>Add Randomize parameters (<strong>Vst::FunctionNameType::kRandomize</strong> and <strong>Vst::FunctionNameType::kRandomizeAroundCurrent</strong>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Helper Classes:</p>
+<ul>
+<li>Fix: unused parameter in module_mac.mm (<a href="https://github.com/steinbergmedia/vst3_public_sdk/issues/83">Issue#83</a>).</li>
+<li>Update: linux VST3 system paths: add <em>/usr/lib64/vst3</em> in <em>vst/source/hosting/module_linux.cpp</em> (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/82">PR#82</a>).</li>
+<li>Fix: compilation with some compilers (e.g. Clang 17), missing include <em>exception.h</em> in <em>threadchecker</em> file (<a href="https://github.com/steinbergmedia/vst3_public_sdk/issues/84">Issue#84</a>).</li>
+<li>Fix set window title on macOS: <em>editorhost/source/platform/mac/window.mm</em> (<a href="https://github.com/steinbergmedia/vst3sdk/issues/134">Issues#134</a>).</li>
+<li>Fix VST Hosting / registerWindowClass() method: RegisterClassEx() Executed Repeatedly (Win Only) in <em>editorhost/source/platform/win/window.cpp</em> (<a href="https://github.com/steinbergmedia/vst3sdk/issues/155">Issues#155</a>).</li>
+<li>Fix issues and improve handling when switching between different scaling factors under <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.0/IWaylandHost.html">Wayland</a>.</li>
+<li>Fix missing <em>return false</em> when controller initialization did not work in <em>vst/hosting/plugprovider.cpp</em>.</li>
+</ul>
+</li>
+<li>
+<p><a href="pages/Versions/../What+is+the+VST+3+SDK/Index.html#validator-command-line">Validator</a>:</p>
+<ul>
+<li>Fix: Validator test which does not respect the Audio Processor Call Sequence (<a href="https://github.com/steinbergmedia/vst3sdk/issues/148">Issue#148</a>).</li>
+<li>Add a new test to verify that <strong>getParamStringByValue</strong> and <strong>getParamValueByString</strong> correctly round-trip values.</li>
+</ul>
+</li>
+<li>
+<p><a href="pages/Versions/../What+is+the+VST+3+SDK/Plug-in+Test+Host.html">VST3PluginTestHost</a> v3.11.0:</p>
+<ul>
+<li>Add host support of <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.1/ITransportControl.html">ITransportControl</a>.</li>
+<li>Add support of Randomize parameters (<strong>Vst::FunctionNameType::kRandomize</strong> and <strong>Vst::FunctionNameType::kRandomizeAroundCurrent</strong>) using <a href="pages/Versions/../Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html">Parameter Function Name</a>.</li>
+</ul>
+</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>/ <a href="pages/Versions/../">VST Home</a> / <a href="pages/Versions/./Index.html">Change History</a></p>
@@ -9961,23 +10564,23 @@ The host application connects to the system compositor and creates application w
 <li>
 <p>Documentation</p>
 <ul>
-<li>Adapt document to <a href="pages/Versions/../VST+3+Licensing/Index.html">new licensing model</a>.</li>
+<li>Update documentation for the <a href="pages/Versions/../VST+3+Licensing/Index.html">new licensing model</a>.</li>
 <li>Update <a href="pages/Versions/../VST+3+Licensing/Usage+guidelines.html">Steinberg VST usage guidelines</a> document.</li>
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Fix <em>SMTG_AddSMTGLibrary.cmake</em> (macOS/Linux): Remove old symlink before creating a new one.</li>
-<li>Fix <em>SMTG_PlatformToolset.cmake</em> for Visual Studio Compiler: __cplusplus was not assigned to correct version (<a href="https://github.com/steinbergmedia/vst3_cmake/pull/13">pull#13</a>).</li>
+<li>Fix <em>SMTG_PlatformToolset.cmake</em> for Visual Studio Compiler: __cplusplus was not assigned to correct version (<a href="https://github.com/steinbergmedia/vst3_cmake/pull/13">PR#13</a>).</li>
 </ul>
 </li>
 <li>
 <p><a href="pages/Versions/../What+is+the+VST+3+SDK/Plug-in+Examples.html">Examples</a>:</p>
 <ul>
-<li>Add support of new ControllerNumbers enums in <em>legacymidiccout</em> Plug-in.</li>
-<li>Add support of the new interfaces <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.html">IMidiLearn2</a> and <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.html">IMidiMapping2</a> in <em>Note Expression Synth</em> Plug-in.</li>
-<li>EditorHost <a href="https://wayland.freedesktop.org/">Wayland</a> support.</li>
+<li>Add support for new ControllerNumbers enums in <em>legacymidiccout</em> Plug-in.</li>
+<li>Add support for the new interfaces <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.0/IMidiLearn2.html">IMidiLearn2</a> and <a href="pages/Versions/../Technical+Documentation/Change+History/3.8.0/IMidiMapping2.html">IMidiMapping2</a> in  <a href="pages/Versions/../What+is+the+VST+3+SDK/Plug-in+Examples.html#note-expression-synth">Note Expression Synth</a> Plug-in.</li>
+<li>Add EditorHost <a href="https://wayland.freedesktop.org/">Wayland</a> support.</li>
 </ul>
 </li>
 <li>
@@ -10012,7 +10615,7 @@ The host application connects to the system compositor and creates application w
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Fix createlink does not work on macOS 15.4.</li>
 </ul>
@@ -10063,7 +10666,7 @@ The host application connects to the system compositor and creates application w
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Update cmake_minimum_required to <em>3.25.0</em></li>
 <li>Fix linker warning on Mac (<a href="https://github.com/steinbergmedia/vst3_cmake/pull/11">PR#11</a>).</li>
@@ -10161,7 +10764,7 @@ The host application connects to the system compositor and creates application w
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Add changes to support the <a href="https://github.com/apple/AudioUnitSDK">Apple AudioUnit SDK</a> for <strong>AU Wrapper</strong>.</li>
 </ul>
@@ -10270,7 +10873,7 @@ The host application connects to the system compositor and creates application w
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>references to <strong>VST 2</strong> are removed from the SDK.</li>
 </ul>
@@ -10320,7 +10923,7 @@ The host application connects to the system compositor and creates application w
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Fix <em>smtg_target_make_plugin_package</em> can create invalid VST 3 plug-ins (<a href="https://forums.steinberg.net/t/weird-cmake-error/862347">Forum</a>).</li>
 <li>Fix regression for non-bundle Windows plug-ins (non-bundle VST 3 on Windows will be declared deprecated in a future update of <strong>VST SDK</strong>).</li>
@@ -10403,7 +11006,7 @@ The host application connects to the system compositor and creates application w
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Change minimal cmake version to 3.5.0.</li>
 <li>Partially fix for Windows, create destination installation folders if they don't exist <a href="https://github.com/steinbergmedia/vst3_cmake/issues/8">(Issue#8)</a>.</li>
@@ -10489,7 +11092,7 @@ The host application connects to the system compositor and creates application w
 <p><a href="pages/Versions/../What+is+the+VST+3+SDK/VSTGUI.html">VSTGUI</a> update <a href="https://github.com/steinbergmedia/vstgui/releases/tag/vstgui4_12_3">4.12.3</a></p>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Fix "When vst3sdk is a submodule, example plugins are not built - a switch to choose would be very useful" (<a href="https://github.com/steinbergmedia/vst3sdk/issues/94">Issue#94</a>).</li>
 <li>Fix CMake fails with bad $-escape (<a href="https://github.com/steinbergmedia/vst3sdk/issues/100">Issue#100</a>).</li>
@@ -10545,7 +11148,7 @@ The host application connects to the system compositor and creates application w
 <li>Remove warnings that cannot be silenced on Linux (<a href="https://github.com/steinbergmedia/vst3_base/pull/6">PR#6</a>.</li>
 <li>Fix language standard check in module_linux.cpp (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/53">PR#53</a>).</li>
 <li>Fix Qualify std::move call in module.cpp to silence a -Wunqualified-std-cast-call warning (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/53">PR#53</a>).</li>
-<li>Fix Include <cstdint> in moduleinfo.h to ensure that sized int types are visible (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/53">PR#53</a>).</li>
+<li>Fix include <code>&lt;cstdint&gt;</code> in moduleinfo.h to ensure that sized int types are visible (<a href="https://github.com/steinbergmedia/vst3_public_sdk/pull/53">PR#53</a>).</li>
 </ul>
 </li>
 <li>
@@ -10586,7 +11189,7 @@ The host application connects to the system compositor and creates application w
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Adapting cmake for making possible to extract an example from the SDK.</li>
 <li>Fix folder name for Windows <em>Arm64EC</em>.</li>
@@ -10665,7 +11268,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>New file <em>SMTG_AddVST3AuV2.cmake</em>:
 <ul>
@@ -10778,7 +11381,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake</p>
+<p>CMake</p>
 <ul>
 <li>Minimum cmake version is now 3.19.</li>
 <li>New function <em>smtg_target_setup_as_vst3_example</em>.</li>
@@ -10863,7 +11466,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 <p>Licensing has changed to version 2.2.2! Please read the new license agreement <a href="pages/Versions/../VST+3+Licensing/Index.html">VST 3 Licensing Issues</a>. (if you have already signed the version 2.0 of the license agreement you do not have to sign it again).</p>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li><strong>Refactoring</strong>: rename function/macro by adding target when target is used: i.e. smtg_run_vst_validator =&gt; smtg_target_run_vst_validator.</li>
 <li><strong>Breaking Change</strong>: change smtg_add_vst3_resource to smtg_target_add_plugin_resources allowing to add multiple resources in a call.</li>
@@ -10948,7 +11551,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>Fix wrong link path on Windows arm 64</li>
 <li>Add -Werror=return-type to get the same error on mac as on Windows or Linux</li>
@@ -11060,7 +11663,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>Code styling changed.</li>
 <li>Each library defined which is the minimal requirementfor C++ version (11 for pluginterfaces) by usingtarget_compile_features.</li>
@@ -11142,7 +11745,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>Rename files with SMTG_ prefix.</li>
 <li>Rename functions with smtg_ prefix.</li>
@@ -11246,7 +11849,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>New cmake files.</li>
 <li>Fix on Windows creation of VST 3 folder using powershell with admin rights.</li>
@@ -11320,7 +11923,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>minor refactoring.</li>
 <li>add file SMTG_VST3_SDK.cmake.</li>
@@ -11386,7 +11989,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>minor refactoring.</li>
 <li>add Visual Studio 2020 support.</li>
@@ -11446,7 +12049,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>minor refactoring (like renaming WIN to SMTG_WIN).</li>
 <li>fix <em>WIN_ARCHITECTURE_NAME</em> for Windows 32bits.</li>
@@ -11520,7 +12123,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>further improvement for users projects</li>
 </ul>
@@ -11561,7 +12164,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 <p>Support of Snapshots inside the VST 3 Bundle.</p>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>adapt cmake files for better integration of users projects.</li>
 <li>fix support Universal Binary for AudioUnit.</li>
@@ -11617,7 +12220,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 </ul>
 </li>
 <li>
-<p>cmake:</p>
+<p>CMake:</p>
 <ul>
 <li>reorganization of cmake files.</li>
 </ul>
@@ -12094,7 +12697,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 <p>Interface Changes:</p>
 <ul>
 <li>Vst::INoteExpressionController: <a href="pages/Versions/../Technical+Documentation/Change+History/3.5.0/INoteExpressionController.html">[3.5.0] Note Expression</a> Support.</li>
-<li>Vst::IKeyswitchController: <a href="pages/Versions/../Technical+Documentation/Change+History/3.5.0/IKeyswitchController.html">[3.5.0] Key Switch Support</a> (used for building VST Expression Map in Cubase 6 for example).</li>
+<li>Vst::IKeyswitchController: <a href="pages/Versions/../Technical+Documentation/Change+History/3.5.0/IKeyswitchController.html">[3.5.0] Key Switch Support</a> (used for building VST Expression Map in <strong>Cubase 6</strong> for example).</li>
 <li>Vst::IXmlRepresentationController: <a href="pages/Versions/../Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.html">[3.5.0] Remote Representation</a> of Parameters Support (allows to define different parameter mappings for different remotes device).</li>
 <li>Vst::IEditControllerHostEditing: Parameter editing from host/remote control (better support of linked parameters when editing from remote control)</li>
 <li>Vst::IComponentHandler3 / Vst::IContextMenu / Vst::IContextMenuTarget: <a href="pages/Versions/../Technical+Documentation/Change+History/3.5.0/IComponentHandler3.html">[3.5.0] Context Menu Support</a> (allows the plug-in to create a context menu for a given parameter, partially filled by the host).</li>
@@ -12118,8 +12721,8 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 <ul>
 <li>New VST 3 instrument examples:
 <ul>
-<li>Instrument "Note Expression Synth" supporting Note Expression Events.</li>
-<li>Effect showing support of pitchnames (ProgramPitchNames).</li>
+<li>Instrument <a href="pages/Versions/../What+is+the+VST+3+SDK/Plug-in+Examples.html#note-expression-synth">Note Expression Synth</a> Plug-in supporting Note Expression Events.</li>
+<li>Effect showing support of ProgramPitchNames <a href="pages/Versions/../What+is+the+VST+3+SDK/Plug-in+Examples.html#pitchnames">PitchNames</a>.</li>
 </ul>
 </li>
 </ul>
@@ -12260,7 +12863,7 @@ There are simple casting functions in <em>pluginterfaces/base/fstrdefs.h</em> (s
 <li>Move RestartFlags from vstTypes.h to ivsteditcontroller.h.</li>
 <li>Restructured helper classes by adding new files vstbus.cpp and vstparameters.cpp.</li>
 <li>Change the default refcount implementation of Steinberg::FUnknown (IMPLEMENT_REFCOUNT) to use atomic operations.</li>
-<li>Change InitModule/ExitModule to be called from host and not in DllMain (Cubase 4.2 needed).</li>
+<li>Change InitModule/ExitModule to be called from host and not in DllMain (<strong>Cubase 4.2</strong> needed).</li>
 <li>Rename Vst::IUnitData to Vst::IProgramListData and introduce new interface Vst::IUnitData.</li>
 </ul>
 </li>
@@ -12497,7 +13100,7 @@ Vst::IAudioProcessor::process (...);
 <p>Yes, setState and getState are called normally from the <strong>UI Thread</strong> when the plug-in is used in a realtime context, in an offline context set/getState can be called in the same thread as the process call. Check the workflow diagram Audio Processor Call Sequence for more info about in which state which interfaces are called.</p>
 <hr />
 <h2 id="q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing"><a class="header" href="#q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing">Q: How can a plug-in be informed that it is currently processed in offline processing?</a></h2>
-<p>When a plug-in is used in an offline processing context (which is the case with Cubase 9.5/Nuendo 8 feature: Direct Offline Processing), its component will be initialized with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Vst:: IComponent::setIoMode</a> (Vst::kOfflineProcessing) (see The Simple Mode).
+<p>When a plug-in is used in an offline processing context (which is the case with <strong>Cubase 9.5</strong>/<strong>Nuendo 8</strong> feature: Direct Offline Processing), its component will be initialized with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Vst:: IComponent::setIoMode</a> (Vst::kOfflineProcessing) (see The Simple Mode).
 The offline processing mode (passed in the process call) is used when:</p>
 <ul>
 <li>the user exports audio (downmix)</li>
@@ -12505,7 +13108,7 @@ The offline processing mode (passed in the process call) is used when:</p>
 </ul>
 <p>With <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Vst:: IComponent::setIoMode</a> (Vst::kOfflineProcessing) you are able to differentiate between export and DOP (Direct Offline Processing).</p>
 <p><a href="https://www.youtube.com/watch?v=62yMkHRfd2I"><img src="https://i.ytimg.com/vi/62yMkHRfd2I/maxresdefault.jpg" alt="getting_started_vid_1" /></a></p>
-<p>Direct Offline Processing since Cubase 9.5</p>
+<p>Direct Offline Processing since <strong>Cubase 9.5</strong></p>
 <hr />
 <h2 id="q-what-should-i-not-call-in-the-realtime-process-function"><a class="header" href="#q-what-should-i-not-call-in-the-realtime-process-function">Q: What should I NOT call in the realtime process function?</a></h2>
 <p>A good practice is to avoid any library calls from this critical realtime process. If you have to use them, check if they are designed for realtime operation and do not contain any locking mechanism. Avoid any filesystem access, networks and UI calls, memory allocation and deallocation, be careful when using STL containers which can allocate memory behind the scene, prefer patterns like non-blocking memory pools, and delegate tasks to UI/Timer thread for doing memory/file-network access jobs. Check <a href="pages/FAQ/../Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a> too.</p>
@@ -12917,7 +13520,7 @@ BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb, stringCompanyEmail)
 <hr />
 <h2 id="q-can-the-host-expect-classid-to-be-globally-unique-or-should-it-expect-different-modules-to-reuse-class-ids"><a class="header" href="#q-can-the-host-expect-classid-to-be-globally-unique-or-should-it-expect-different-modules-to-reuse-class-ids">Q: Can the host expect ClassID to be globally unique or should it expect different modules to reuse class IDs?</a></h2>
 <p>You must treat the Class ID as globally unique.
-If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by Cubase for example). It should be only one <strong>VST 3</strong> plug-in registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.</p>
+If it happens that the same classID is already registered by the host then the host could ignore it or try to compare the version (string based) and keep the newest version (done by <strong>Cubase</strong> for example). It should be only one <strong>VST 3</strong> plug-in registered in the host at a time. The host could decide to show the duplicate classID to the user if wanted.</p>
 <hr />
 <h2 id="q-do-all-version-updates-for-a-certain-plug-in-require-a-new-classid"><a class="header" href="#q-do-all-version-updates-for-a-certain-plug-in-require-a-new-classid">Q: Do all version updates for a certain plug-in require a new classID?</a></h2>
 <p>No, normally a new version should and could replace directly an older version by using the same classID, see previous question. This is the correct way to do it.</p>
@@ -12959,7 +13562,7 @@ When <strong>restartComponent</strong> is called with <em>kReloadComponent</em>,
 <hr />
 <h2 id="q-if-its-only-intended-to-convey-os-scale-factor-then-why-an-extra-interface-when-the-plug-in-can-get-the-scale-factor-from-the-os"><a class="header" href="#q-if-its-only-intended-to-convey-os-scale-factor-then-why-an-extra-interface-when-the-plug-in-can-get-the-scale-factor-from-the-os">Q: If it's only intended to convey OS-scale factor, then why an extra interface when the plug-in can get the scale factor from the OS?</a></h2>
 <p>The design of this interface was done before it was possible on Windows for a plug-in to access the OS-scale.</p>
-<p>But this interface could be used by the host to try to rescale a given plug-in or all plug-ins. This is what is used in Cubase by changing the overall App scaling in the preference up to 50% to the system scale.</p>
+<p>But this interface could be used by the host to try to rescale a given plug-in or all plug-ins. This is what is used in <strong>Cubase</strong> by changing the overall App scaling in the preference up to 50% to the system scale.</p>
 <hr />
 <h2 id="q-in-the-examples-that-implement-host-specific-interfaces-funknownaddref-and-funknownrelease-tend-to-be-implemented-as-a-no-op-eg-return-1000---this-appears-to-be-safer-as-the-plug-in-cannot-delete-or-leak-objects-that-live-in-the-host-is-there-any-case-when-the-host-needs-to-implement-true-addref-and-release-which-actually-control-the-lifetime-of-the-object"><a class="header" href="#q-in-the-examples-that-implement-host-specific-interfaces-funknownaddref-and-funknownrelease-tend-to-be-implemented-as-a-no-op-eg-return-1000---this-appears-to-be-safer-as-the-plug-in-cannot-delete-or-leak-objects-that-live-in-the-host-is-there-any-case-when-the-host-needs-to-implement-true-addref-and-release-which-actually-control-the-lifetime-of-the-object">Q: In the examples that implement host-specific interfaces, <em>FUnknown::addRef()</em> and <em>FUnknown::release()</em> tend to be implemented as a no-op, <em>e.g. {return 1000;}</em> - this appears to be safer as the plug-in cannot delete or leak objects that live in the host. Is there any case when the host needs to implement true <em>addRef()</em> and <em>release()</em>, which actually control the lifetime of the object?</a></h2>
 <p>You can only use these reference count no-ops for objects that are alive during the entire lifetime of the host and that will outlive the plug-ins.</p>

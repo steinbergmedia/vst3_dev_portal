@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -266,16 +266,16 @@
 <p>Usually, the size of a plug-in view is fixed. But both the host and the plug-in can cause a view to be resized:</p>
 <ul>
 <li>
-<p><strong>Host</strong>: If IPlugView::canResize () returns <strong>kResultTrue</strong>, the host will set up the window so that the user can resize it. While the user resizes the window, IPlugView::checkSizeConstraint () is called, allowing the plug-in to change the size to a valid supported rectangle size. The host then resizes the window to this rect and has to call IPlugView::onSize ().</p>
+<p><strong>Host</strong>: If <strong>IPlugView::canResize ()</strong> returns <strong>kResultTrue</strong>, the host will set up the window so that the user can resize it. While the user resizes the window, <strong>IPlugView::checkSizeConstraint ()</strong> is called, allowing the plug-in to change the size to a valid supported rectangle size, it should always return <strong>kResultTrue</strong> if <strong>IPlugView::canResize ()</strong> returns <strong>kResultTrue</strong>. The host then resizes the window to this rect and has to call <strong>IPlugView::onSize ()</strong>.</p>
 </li>
 <li>
-<p><strong>Plug-in</strong>: The plug-in can call IPlugFrame::resizeView () and cause the host to resize the window.
-Afterwards, in the same callstack, the host has to call IPlugView::onSize () if a resize is needed (size was changed).</p>
+<p><strong>Plug-in</strong>: The plug-in can call <strong>IPlugFrame::resizeView ()</strong> and cause the host to resize the window.
+Afterwards, in the same callstack, the host has to call <strong>IPlugView::onSize ()</strong> if a resize is needed (size was changed).</p>
 </li>
 </ul>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />
-Note that if the host calls IPlugView::getSize () before calling IPlugView::onSize () (if needed), it will get the old size, not the current one!</p>
+Note that if the host calls <strong>IPlugView::getSize ()</strong> before calling <strong>IPlugView::onSize ()</strong> (if needed), it will get the old size, not the current one!</p>
 </blockquote>
 <p>Here the calling sequence:</p>
 <ul>

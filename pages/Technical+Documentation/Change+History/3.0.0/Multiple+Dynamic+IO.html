@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -298,9 +298,9 @@ tresult PLUGIN_API Component::activateBus (MediaType type, BusDirection dir, int
 <p>The side-chain can be used as an additional modulation source instead of cyclic forms of modulation. From the plug-in's perspective, side-chain inputs and/or outputs are additional inputs and outputs which can be enabled or disabled by the host.</p>
 <p>The host (if supported) will provide to the user a way to route some signal paths to these side-chain inputs or from side-chain outputs to others signal inputs.</p>
 <p><a href="https://www.youtube.com/watch?v=6AvqoFSk2S8"><img src="https://i.ytimg.com/vi/6AvqoFSk2S8/maxresdefault.jpg" alt="getting_started_vid_3" /></a></p>
-<p>What is Side-Chaining and How to Use It | Music Production For Beginners</p>
+<p>What is Side-Chaining and How to Use It | Music Production For Beginners.</p>
 <p><a href="https://www.youtube.com/watch?v=PBQr-PnI6Yw"><img src="https://i.ytimg.com/vi/PBQr-PnI6Yw/maxresdefault.jpg" alt="getting_started_vid_4" /></a></p>
-<p>Here an example of Side-Chaining for a Instrument in Cubase</p>
+<p>Here an example of Side-Chaining for a Instrument in <strong>Cubase</strong>.</p>
 <h2 id="how-can-i-implement-a-side-chain-path-into-my-plug-in"><a class="header" href="#how-can-i-implement-a-side-chain-path-into-my-plug-in">How can I implement a Side-chain path into my plug-in?</a></h2>
 <p>In AudioEffect::initialize (FUnknown* context) you must add the required bus- and speaker configuration of your plug-in.
 For example, if your plug-in works on one input and one output bus, both stereo, the appropriate code snippet would look in the following way:</p>

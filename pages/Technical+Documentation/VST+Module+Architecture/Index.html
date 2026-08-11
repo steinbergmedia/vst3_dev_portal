@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -317,15 +317,15 @@ A class is also described with a name and it has a unique id.</p>
 <h3 id="purpose-specific-interfaces"><a class="header" href="#purpose-specific-interfaces">Purpose-specific interfaces</a></h3>
 <p>Each plug-in category (VST 3 Effects, Project import/export Filters, Audio Codecs, etc...) defines its own set of purpose-specific interfaces. These are not part of the basic <strong>VST-MA</strong> layer.</p>
 <h3 id="unicode"><a class="header" href="#unicode">Unicode</a></h3>
-<p>Beginning with version 5 of Cubase and Nuendo, the internal structure of the host was modified for better support of internationalization. Therefore, string handling was changed to utilize <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> strings whenever strings are passed around. As a consequence, all the interfaces to plug-ins have changed from using ASCI to Unicode strings for call and return parameters. So in turn, all plug-ins must be adapted to support Unicode. This has major consequences in that:</p>
+<p>Beginning with version 5 of <strong>Cubase</strong> and <strong>Nuendo</strong>, the internal structure of the host was modified for better support of internationalization. Therefore, string handling was changed to utilize <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> strings whenever strings are passed around. As a consequence, all the interfaces to plug-ins have changed from using ASCI to Unicode strings for call and return parameters. So in turn, all plug-ins must be adapted to support Unicode. This has major consequences in that:</p>
 <ul>
-<li>Unicode hosts (Cubase 5 or later) will only work with Unicode plug-ins. When loading a plug-in, a Unicode host checks the plug-in's type and will not load any non-Unicode plug-ins.</li>
+<li>Unicode hosts (<strong>Cubase 5</strong> or later) will only work with Unicode plug-ins. When loading a plug-in, a Unicode host checks the plug-in's type and will not load any non-Unicode plug-ins.</li>
 <li>Unicode plug-ins will <strong>not</strong> load in non-Unicode hosts. When loading, a Unicode plug-in requests information from the host and will not load if no Unicode host is detected. Therefore, if a plug-in is supposed to work with both older and newer hosts, it is best to provide two versions of the plug-in.</li>
 </ul>
 <h4 id="plug-ins-for-unicode-hosts"><a class="header" href="#plug-ins-for-unicode-hosts">Plug-ins for Unicode hosts</a></h4>
 <p>Writing plug-ins that are supposed to work only with Unicode hosts is easy. Use a current version of this SDK and develop a plug-in as usual. Make sure that you only ever pass Unicode <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a> strings to interfaces that have strings as call parameters and also be prepared that strings returned by these interfaces are always <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>. Therefore, to make things easier, it is recommended that Unicode strings are used throughout the plug-in's implementation, in order to avoid back and forth conversions. Also, use the Steinberg::String and Steinberg::ConstString classes from the Base module, as they have been designed to work universally on both Mac and Win.</p>
 <h4 id="migrating-from-non-unicode-to-unicode"><a class="header" href="#migrating-from-non-unicode-to-unicode">Migrating from non-Unicode to Unicode</a></h4>
-<p>In <a href="https://www.steinberg.net/">Steinberg</a> SDKs released before Cubase 5, the interface functions were using pointers of type <em>char</em> for passing strings to and from the host. These have been changed now to using Steinberg's defined type <em>tchar</em> which is equivalent to <em>char16</em>, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>, so strings are expected to be encoded in <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>.<br />
+<p>In <a href="https://www.steinberg.net/">Steinberg</a> SDKs released before <strong>Cubase 5</strong>, the interface functions were using pointers of type <em>char</em> for passing strings to and from the host. These have been changed now to using Steinberg's defined type <em>tchar</em> which is equivalent to <em>char16</em>, i.e. 16 bit character. In theory, there are many ways for representing 16 bit characters, but we chose to use the industry standard <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>, so strings are expected to be encoded in <a href="https://en.wikipedia.org/wiki/UTF-16">UTF-16</a>.<br />
 Accordingly, also the implementation of a plug-in needs to be adapted to deal correctly with Unicode-encoded strings, as well as only ever passing Unicode strings to the host.</p>
 <blockquote>
 <p>ⓘ <strong>Note</strong><br />

@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -272,7 +272,7 @@ Vst::IAudioProcessor::process (...);
 <p>Yes, setState and getState are called normally from the <strong>UI Thread</strong> when the plug-in is used in a realtime context, in an offline context set/getState can be called in the same thread as the process call. Check the workflow diagram Audio Processor Call Sequence for more info about in which state which interfaces are called.</p>
 <hr />
 <h2 id="q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing"><a class="header" href="#q-how-can-a-plug-in-be-informed-that-it-is-currently-processed-in-offline-processing">Q: How can a plug-in be informed that it is currently processed in offline processing?</a></h2>
-<p>When a plug-in is used in an offline processing context (which is the case with Cubase 9.5/Nuendo 8 feature: Direct Offline Processing), its component will be initialized with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Vst:: IComponent::setIoMode</a> (Vst::kOfflineProcessing) (see The Simple Mode).
+<p>When a plug-in is used in an offline processing context (which is the case with <strong>Cubase 9.5</strong>/<strong>Nuendo 8</strong> feature: Direct Offline Processing), its component will be initialized with <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Vst:: IComponent::setIoMode</a> (Vst::kOfflineProcessing) (see The Simple Mode).
 The offline processing mode (passed in the process call) is used when:</p>
 <ul>
 <li>the user exports audio (downmix)</li>
@@ -280,7 +280,7 @@ The offline processing mode (passed in the process call) is used when:</p>
 </ul>
 <p>With <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponent.html#a4618e7358890d549f990010bea4a4137">Vst:: IComponent::setIoMode</a> (Vst::kOfflineProcessing) you are able to differentiate between export and DOP (Direct Offline Processing).</p>
 <p><a href="https://www.youtube.com/watch?v=62yMkHRfd2I"><img src="https://i.ytimg.com/vi/62yMkHRfd2I/maxresdefault.jpg" alt="getting_started_vid_1" /></a></p>
-<p>Direct Offline Processing since Cubase 9.5</p>
+<p>Direct Offline Processing since <strong>Cubase 9.5</strong></p>
 <hr />
 <h2 id="q-what-should-i-not-call-in-the-realtime-process-function"><a class="header" href="#q-what-should-i-not-call-in-the-realtime-process-function">Q: What should I NOT call in the realtime process function?</a></h2>
 <p>A good practice is to avoid any library calls from this critical realtime process. If you have to use them, check if they are designed for realtime operation and do not contain any locking mechanism. Avoid any filesystem access, networks and UI calls, memory allocation and deallocation, be careful when using STL containers which can allocate memory behind the scene, prefer patterns like non-blocking memory pools, and delegate tasks to UI/Timer thread for doing memory/file-network access jobs. Check <a href="../Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html">Audio Processor Call Sequence</a> too.</p>

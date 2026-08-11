@@ -8,7 +8,7 @@
 
         <!-- Custom HTML head -->
 
-        <meta name="description" content="">
+        <meta name="description" content="Create VST 3 SDK Documentation from markdown files">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
@@ -224,11 +224,13 @@ The host recursively scans these folders at startup in this order (Global/Applic
 </blockquote>
 <h3 id="on-linux-platform"><a class="header" href="#on-linux-platform">On Linux platform</a></h3>
 <p>On the Linux platform, the host application expects <strong>VST 3</strong> plug-ins to be located in:</p>
-<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Prio</th><th style="text-align: left">Location</th><th style="text-align: left">Path</th></tr></thead><tbody>
-<tr><td style="text-align: left">1</td><td style="text-align: left">User</td><td style="text-align: left">$HOME/.vst3/</td></tr>
-<tr><td style="text-align: left">2</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/lib/vst3/</td></tr>
-<tr><td style="text-align: left">3</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/local/lib/vst3/</td></tr>
-<tr><td style="text-align: left">4</td><td style="text-align: left">Application</td><td style="text-align: left">$APPFOLDER/vst3/</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Prio</th><th style="text-align: left">Location</th><th style="text-align: left">Path</th><th style="text-align: left">Comment</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left">User</td><td style="text-align: left">$HOME/.vst3/</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/lib64/vst3/</td><td style="text-align: left">defined in Fedora distribution</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/lib/vst3/</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/local/lib64/vst3/</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left">Global</td><td style="text-align: left">/usr/local/lib/vst3/</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left">Application</td><td style="text-align: left">$APPFOLDER/vst3/</td><td style="text-align: left"></td></tr>
 </tbody></table>
 </div>
 <blockquote>
