@@ -172,6 +172,12 @@
 <hr />
 <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
 <p>This interface <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1ITransportControl.html">Vst:: ITransportControl</a> allows a plug-in to request transport-related actions from the host.</p>
+<ul>
+<li>[host imp]</li>
+<li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">Vst:: IComponentHandler</a>]</li>
+<li>[released: 3.8.1]</li>
+<li>[optional]</li>
+</ul>
 <p>Typical use cases include:</p>
 <ul>
 <li>Jumping (locating) to a position</li>
@@ -180,12 +186,23 @@
 <li>Enabling or disabling cycle playback</li>
 </ul>
 <p>All calls must be made from the <strong>UI thread</strong>. Hosts may accept or deny requests depending on their internal policies or the current editing mode (e.g., offline rendering, write-protected state, etc.).</p>
-<ul>
-<li>[host imp]</li>
-<li>[extends <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1IComponentHandler.html">Vst:: IComponentHandler</a>]</li>
-<li>[released: 3.8.1]</li>
-<li>[optional]</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Enumerator</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left">Locate</td><td style="text-align: left">Locate transport to a new position. Requires a valid <code>TransportPosition</code>.</td></tr>
+<tr><td style="text-align: left">PlaybackStart</td><td style="text-align: left">Start playback at the current position.</td></tr>
+<tr><td style="text-align: left">PlaybackStop</td><td style="text-align: left">Stop playback and keep the current position.</td></tr>
+<tr><td style="text-align: left">LocateAndPlaybackStart</td><td style="text-align: left">Locate to the specified position and start playback (position required).</td></tr>
+<tr><td style="text-align: left">PlaybackStopAndLocate</td><td style="text-align: left">Stop playback and locate to the specified position (position required).</td></tr>
+<tr><td style="text-align: left">RecordOnPlaybackStart</td><td style="text-align: left">Start recording and playback at the current position.</td></tr>
+<tr><td style="text-align: left">LocateAndRecordOnPlaybackStart</td><td style="text-align: left">Locate to the specified position and start recording and playback (position required).</td></tr>
+<tr><td style="text-align: left">RecordOff</td><td style="text-align: left">Stop recording and continue playback.</td></tr>
+<tr><td style="text-align: left">RecordOffPlaybackStop</td><td style="text-align: left">Stop recording and playback and keep the current position.</td></tr>
+<tr><td style="text-align: left">RecordOffPlaybackStopAndLocate</td><td style="text-align: left">Stop recording and playback, then locate to the specified position (position required).</td></tr>
+<tr><td style="text-align: left">SetCycleStart</td><td style="text-align: left">Sets the first sample included in the cycle region (position required).</td></tr>
+<tr><td style="text-align: left">SetCycleEnd</td><td style="text-align: left">Sets the sample position immediately after the end of the cycle region (exclusive end position, position required). The cycle length in samples is <code>end - start</code>. For example, <code>SetCycleStart(100)</code> and <code>SetCycleEnd(200)</code> define a cycle of 100 samples. Sample positions included in the cycle are <code>{100 ... 199}</code>, while sample position <code>200</code> is outside the cycle.</td></tr>
+<tr><td style="text-align: left">CycleOn</td><td style="text-align: left">Enable looping/cycle mode.</td></tr>
+<tr><td style="text-align: left">CycleOff</td><td style="text-align: left">Disable looping/cycle mode.</td></tr>
+</tbody></table>
+</div>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <p><strong>In mycontroller.cpp</strong></p>
 <pre><code class="language-c++">bool mycontroller::startPlayback ()
