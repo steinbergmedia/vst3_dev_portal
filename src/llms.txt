@@ -1,0 +1,185 @@
+# VST 3 Developer Portal
+
+> Official developer documentation by Steinberg for VST 3, the audio plug-in interface used by digital audio workstations (DAWs) to host audio effects and instruments. It covers the VST 3 SDK (C++ interfaces, helper classes, examples, tools), tutorials for building plug-ins with CMake, the architecture and threading model, parameters and automation, presets, MIDI handling, file formats and install locations, every interface extension by SDK version, and the MIT licensing model. Current SDK version: 3.8.1 (2026/08/11).
+
+Key facts that are easy to get wrong:
+
+- A VST 3 plug-in is split into two components: the audio processor (`IComponent` + `IAudioProcessor`) and the edit controller (`IEditController`). They must not share data directly; they communicate through parameter changes and messages (`IConnectionPoint`), and a host may run them in different contexts.
+- Threading: all initialization, state, and controller calls happen on the UI (main) thread. Only `IAudioProcessor::process` runs on the audio (realtime) thread. Do not allocate memory or block there.
+- Parameter values are always transmitted as normalized 64-bit doubles in the range [0.0, 1.0]. Parameter changes arrive sample-accurately in `ProcessData::inputParameterChanges`.
+- VST 3 has no raw MIDI. Notes arrive as `Event`s; MIDI controllers are mapped to parameters through `IMidiMapping` / `IMidiMapping2` (MIDI 2.0, since 3.8.0).
+- Interfaces never change after release. New features are added as new interfaces and queried with `queryInterface` (a COM-like model called VST-MA, based on `FUnknown`).
+- `tresult` success is `kResultOk` / `kResultTrue`, which have the integer value 0. Never test a `tresult` as a boolean.
+- Since SDK 3.8, VST 3 is licensed under the MIT license (VSTGUI and the mda examples use a BSD-like license). Using the "VST" trademark or logo is optional, but if used it must follow Steinberg's usage guidelines. New VST 2 plug-ins or hosts may not be distributed without a license agreement signed before October 2018.
+
+The links below point to the rendered HTML pages. The Markdown source of every page is also available: replace `https://steinbergmedia.github.io/vst3_dev_portal/pages/<path>.html` with `https://raw.githubusercontent.com/steinbergmedia/vst3_dev_portal/deploy/src/pages/<path>.md` (the portal home page is `README.md`). The class-level API reference (Doxygen) is a separate site: https://steinbergmedia.github.io/vst3_doc/
+
+## Start here
+
+- [VST 3 Developer Portal home](https://steinbergmedia.github.io/vst3_dev_portal/pages/index.html): Entry page with an overview of all sections.
+- [What is VST?](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+VST/Index.html): History of the VST standard and a technical overview of VST 3.
+- [Use cases](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+VST/Use+cases.html): Why to use the VST SDK as a plug-in or host developer, with a list of VST 3 host applications.
+- [Main benefits of VST 3](https://steinbergmedia.github.io/vst3_dev_portal/pages/Main+benefits+of+VST+3/Index.html): Features VST 3 adds over VST 2: silence flags, dynamic I/O, sample-accurate automation, units, note expression, and more.
+- [What is the VST SDK?](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/Index.html): Contents of the SDK: the VST 3 API, helper classes, examples, test host, validator, wrappers, and VSTGUI.
+- [VST 3 Links](https://steinbergmedia.github.io/vst3_dev_portal/pages/Getting+Started/Links.html): Where to download the SDK (zip or GitHub), online documentation, and external DSP and C++ resources.
+- [How to set up my system for VST 3](https://steinbergmedia.github.io/vst3_dev_portal/pages/Getting+Started/How+to+setup+my+system.html): Required tools per platform: SDK source, IDE/compiler (Visual Studio, Xcode, GCC/Clang), CMake, Linux packages, and a test host.
+
+## SDK tools and components
+
+- [VST 3 Plug-in Examples](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/Plug-in+Examples.html): The example plug-ins in `public.sdk/samples/vst` (AGain, ADelay, Note Expression Synth, Host Checker, mda plug-ins, and more) and which feature each one shows.
+- [VST 3 Plug-in Test Host](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/Plug-in+Test+Host.html): The VST3PluginTestHost application (Windows/macOS): loading plug-ins, simulated input, conformity tests, preset editor.
+- [VST 3 Project Generator](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/Project+Generator.html): GUI application that creates a new CMake-based plug-in project.
+- [Validator command line](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/Validator.html): Command-line host that checks a plug-in for VST 3 conformity; suitable for build servers.
+- [AudioHost](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/AudioHost.html): Minimal host example that runs a plug-in with the JACK audio server.
+- [EditorHost](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/EditorHost.html): Minimal host example that opens a plug-in editor (Windows/macOS/Linux).
+- [VST 3 Inspector](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/VST3Inspector.html): Host example that scans installed plug-ins and shows their factory information.
+- [AAX, AUv3 and AU Wrappers](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/Wrappers/Index.html): Overview of wrappers that build other plug-in formats from a VST 3 plug-in.
+- [AAX Wrapper](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/Wrappers/AAX+Wrapper.html): Wrapping a VST 3 plug-in as an AAX plug-in for Pro Tools (requires the AAX SDK).
+- [AudioUnit v3 Wrapper](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/Wrappers/AUv3+Wrapper.html): Wrapping a VST 3 plug-in as an AUv3, including MPE support.
+- [AudioUnit v2 Wrapper](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/Wrappers/AUv2+Wrapper.html): Wrapping a VST 3 plug-in as an AUv2 effect or instrument on macOS.
+- [VSTGUI](https://steinbergmedia.github.io/vst3_dev_portal/pages/What+is+the+VST+3+SDK/VSTGUI.html): Steinberg's cross-platform UI toolkit for plug-ins, with an XML-based WYSIWYG editor.
+
+## Tutorials
+
+- [Tutorials overview](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Index.html): List of all tutorials with short descriptions.
+- [Building the examples on Windows](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Building+the+examples/Building+the+examples+included+in+the+SDK+Windows.html): Get the SDK and build the example plug-ins with CMake and Visual Studio.
+- [Building the examples on macOS](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Building+the+examples/Building+the+examples+included+in+the+SDK+macOS.html): Build the example plug-ins with CMake and Xcode.
+- [Building the examples on Linux](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Building+the+examples/Building+the+examples+included+in+the+SDK+Linux.html): Build the example plug-ins on Linux.
+- [Using cmake for building VST 3 plug-ins](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Using+cmake+for+building+plug-ins.html): CMake command lines per platform and all `SMTG_` CMake options.
+- [Generate a new plug-in with the Project Generator](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Generate+new+plug-in+with+Project+Generator.html): Create a new gain plug-in project with the Project Generator.
+- [Code your first plug-in](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Code+your+first+plug-in.html): Add a gain parameter, the processing code, state save/restore, an event input, and a side-chain bus.
+- [Use VSTGUI to design a User Interface](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Use+VSTGUI+to+design+a+UI.html): Open the VSTGUI editor, bind controls to parameters, and create custom views.
+- [Data Exchange tutorial](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Data+Exchange.html): Send large data blocks (for example, audio for a UI display) from the processor to the controller with the Data Exchange API.
+- [Advanced VST 3 techniques](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Advanced+VST+3+techniques.html): Sample-accurate parameter handling, 32- and 64-bit processing, and thread-safe state changes.
+- [How to use the silence flags](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/How+to+use+the+silence+flags.html): Reading and setting silence flags for silent input, silent output, and bypass.
+- [Guideline for replacing a VST 2 plug-in by a VST 3 plug-in](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Guideline+for+VST3+replacing+VST2.html): UID handling, `moduleinfo.json` compatibility, presets, and parameter compatibility so a host replaces the VST 2 version.
+- [Strings Conversion Helper](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Strings+Conversion+Helper.html): Converting between `Vst::String128` (UTF-16) and UTF-8 `std::string`.
+- [Creating a cmake plug-in project from scratch](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Creating+a+plug-in+from+scratch.html): Writing a plug-in `CMakeLists.txt` by hand, including a VSTGUI editor.
+- [Creating a plug-in with the VST SDK as an external project](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Creating+a+plug-in+with+VST+3+SDK+as+an+external+project.html): Hello World plug-in that uses the SDK as an external CMake dependency.
+- [Switching to another VSTGUI submodule or branch](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Switching+to+another-VSTGUI+submodule+or+branch.html): Git commands to use a different VSTGUI checkout in the SDK.
+- [How to add AUv2 support to your VST 3 plug-in](https://steinbergmedia.github.io/vst3_dev_portal/pages/Tutorials/Audio+Unit.html): Adding an AudioUnit v2 target with the AU SDK.
+
+## Core concepts
+
+- [Technical Documentation overview](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Index.html): Entry page for all technical topics.
+- [VST 3 API Documentation](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/API+Documentation/Index.html): The central architecture page: processor and controller components, initialization, persistence, processing, editing, threading model, and communication between components.
+- [VST Module Architecture](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/VST+Module+Architecture/Index.html): The COM-like component model: `FUnknown`, IIDs/CIDs, versioning, module factory, categories, `IPluginBase`.
+- [How the host loads a VST-MA plug-in](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/VST+Module+Architecture/Loading.html): Loading the module and calling its exported entry functions.
+- [How to derive a class from an interface](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/VST+Module+Architecture/Derive+From+Interface.html): Implementing `FUnknown` and interfaces with the SDK helper macros.
+- [Interface Versions and Inheritance](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/VST+Module+Architecture/Interface+Versions+and+Inheritance.html): Why interfaces use inheritance only for versioning.
+- [Moduleinfo](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/VST+Module+Architecture/ModuleInfo-JSON.html): The optional `moduleinfo.json` (JSON5) in the bundle's Resources folder: factory info and class compatibility list.
+- [Parameters and Automation](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Parameters+Automation/Index.html): Normalized parameter values, conversion, automation recording and playback, and telling the host about parameter changes (`restartComponent`).
+- [VST 3 Units](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/VST+3+Units/Index.html): Units as logical sections of a plug-in that group parameters and program lists.
+- [Presets & Program Lists](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Presets+Program+Lists/Index.html): Host-managed presets for simple plug-ins, program lists, and pitch names.
+- [Complex Plug-in Structures / Multi-timbral Instruments](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Complex+Structures/Index.html): Multi-timbral program lists, units and tracks, and routing.
+- [Data Exchange](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Data+Exchange/Index.html): Realtime-safe transfer of data from the audio processor to the controller with `IDataExchangeHandler` / `IDataExchangeReceiver`.
+- [About MIDI in VST 3](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/About+MIDI/Index.html): How MIDI 1.0 and MIDI 2.0 concepts map to VST 3 events, parameters, and note expressions.
+- [Provide a Runloop on Linux](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Provide+A+Runloop+On+Linux/Index.html): How a Linux host provides `IRunLoop` to plug-ins, via `IPlugFrame` or the host context.
+- [Host Requirements for VST 3 Support](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Host+Requirements/Index.html): Interfaces a host is expected to implement.
+- [Clipboard VST-XML](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Clipboard+VST-XML/Index.html): XML format for drag-and-drop and copy-paste of audio, chords, scales, and clips with context between plug-ins and applications.
+
+## Workflow diagrams
+
+- [VST 3 Workflow Diagrams](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Workflow+Diagrams/Index.html): Call sequences a compliant host should follow.
+- [Audio Processor Call Sequence](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Workflow+Diagrams/Audio+Processor+Call+Sequence.html): Processor states (created, initialized, setup done, activated, processing) and the calls allowed in each, per thread.
+- [Edit Controller Call Sequence](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Workflow+Diagrams/Edit+Controller+Call+Sequence.html): Controller states and the calls allowed in each.
+- [Get Latency Call Sequence](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Workflow+Diagrams/Get+Latency+Call+Sequence.html): How a latency change is reported and applied.
+- [Resize View Call Sequence](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Workflow+Diagrams/Resize+View+Call+Sequence.html): Editor resizing initiated by the plug-in or by the host.
+- [Bus Arrangement Setting Sequence](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Workflow+Diagrams/Bus+Arrangement+Setting+Sequence.html): Negotiating speaker arrangements when the plug-in accepts or rejects the host's request.
+
+## Formats and locations
+
+- [VST 3 Locations / Format](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Locations+Format/Index.html): Overview of plug-in and preset formats and locations.
+- [Plug-in Format Structure](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Locations+Format/Plugin+Format.html): Folder structure of the `.vst3` bundle on macOS, Windows, and Linux, and merged bundles.
+- [Plug-in Locations](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Locations+Format/Plugin+Locations.html): Where plug-ins must be installed (user, global, application) per platform.
+- [Preset Format](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Locations+Format/Preset+Format.html): Binary layout of the `.vstpreset` file.
+- [Preset Locations](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Locations+Format/Preset+Locations.html): Where presets are stored per platform, scope, and preset type.
+
+## Interface reference by SDK version
+
+Each page describes one interface or feature, tells whether the plug-in or the host implements it, and gives example code. `[plug-in]` = implemented by the plug-in, `[host]` = implemented by the host.
+
+- [Features History overview](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/Index.html): Table of all interfaces by SDK version.
+- [[3.0.0] Interfaces supported by the plug-in](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.0.0/Plug+in+Interfaces.html): [plug-in] The base interfaces: `IComponent`, `IAudioProcessor`, `IEditController`, `IConnectionPoint`, `IUnitInfo`, `IPlugView` (view sizing, keyboard handling), and more.
+- [[3.0.0] Interfaces supported by the host](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.0.0/Host+Interfaces.html): [host] `IComponentHandler`, `IHostApplication`, `IMessage`, `IAttributeList`, `IEventList`, `IParameterChanges`, `IParamValueQueue`, `IPlugFrame`, and more.
+- [[3.0.0] Multiple Dynamic I/O Support](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.0.0/Multiple+Dynamic+IO.html): Busses, bus activation, side-chains, and speaker arrangements.
+- [[3.0.0] Silence flags](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.0.0/Silence+flags.html): Marking silent audio buffers to save CPU.
+- [[3.0.1] Parameter MIDI Mapping](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.0.1/IMidiMapping.html): [plug-in] `IMidiMapping`: map MIDI 1.0 controllers to parameters.
+- [[3.0.2] Parameter Finder](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.0.2/IParameterFinder.html): [plug-in] `IParameterFinder`: tell the host which parameter is under the mouse.
+- [[3.1.0] Audio Presentation Latency](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.1.0/IAudioPresentationLatency.html): [plug-in] `IAudioPresentationLatency`: the host reports how long it takes until input reaches the plug-in.
+- [[3.1.0] Dirty State, Open Editor Request and UI Group Editing](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.1.0/IComponentHandler2.html): [host] `IComponentHandler2`.
+- [[3.1.0] KnobMode, Open Help & Open Aboutbox](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.1.0/IEditController2.html): [plug-in] `IEditController2`.
+- [[3.5.0] Note Expression](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.5.0/INoteExpressionController.html): [plug-in] `INoteExpressionController`: per-note control of played notes.
+- [[3.5.0] Key Switch](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.5.0/IKeyswitchController.html): [plug-in] `IKeyswitchController`: tell the host which key switches are used.
+- [[3.5.0] Remote Presentation of Parameters](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.5.0/IXmlRepresentationController.html): [plug-in] `IXmlRepresentationController`: parameter layouts for remote controllers, and their file locations.
+- [[3.5.0] Context Menu](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.5.0/IComponentHandler3.html): [host] `IComponentHandler3`: host-provided context menus for parameters.
+- [[3.5.0] Enhanced Linked Parameters](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.5.0/IEditControllerHostEditing.html): [plug-in] `IEditControllerHostEditing`: host-started edits that change linked parameters.
+- [[3.6.0] iOS Inter-App Audio](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.0/IAA.html): Building an iOS Inter-App Audio app from a VST 3 plug-in.
+- [[3.6.0] Preset Meta-Information](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.0/IStreamAttributes.html): [host] `IStreamAttributes`: context and meta data of a state stream.
+- [[3.6.5] Channel Context Info](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.5/IInfoListener.html): [plug-in] `ChannelContext::IInfoListener`: the host reports channel name, color, and index.
+- [[3.6.5] Unit-Bus Assignment Change](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.5/IUnitHandler2.html): [host] `IUnitHandler2`.
+- [[3.6.5] Prefetchable](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.5/IPrefetchableSupport.html): [plug-in] `IPrefetchableSupport`: whether the plug-in can be processed in prefetch mode.
+- [[3.6.5] Automation State](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.5/IAutomationState.html): [plug-in] `IAutomationState`: the host reports read/write automation state.
+- [[3.6.6] PlugView Content Scaling](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.6/IPlugViewContentScaleSupport.html): [plug-in] `IPlugViewContentScaleSupport`: the host passes the UI scale factor (HiDPI on Windows).
+- [[3.6.8] Request Bus Activation](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.8/IComponentHandlerBusActivation.html): [host] `IComponentHandlerBusActivation`.
+- [[3.6.10] UI Snapshots](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.10/UI+Snapshots.html): Pre-rendered PNG images of the plug-in UI inside the bundle.
+- [[3.6.11] NoteExpression Physical UI Mapping](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.11/INoteExpressionPhysicalUIMapping.html): [plug-in] `INoteExpressionPhysicalUIMapping`: map note expressions to physical controls (used for MPE).
+- [[3.6.12] Legacy MIDI CC Out Event](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.12/LegacyMIDICCOutEvent.html): Sending MIDI CC as output events.
+- [[3.6.12] MIDI Learn](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.12/IMidiLearn.html): [plug-in] `IMidiLearn` (MIDI 1.0), replaced by `IMidiLearn2`.
+- [[3.6.12] Host Query Interface support](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.12/IPlugInterfaceSupport.html): [host] `IPlugInterfaceSupport`: the plug-in asks which interfaces the host supports.
+- [[3.6.12] MPE support for Wrappers](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.6.12/IVst3WrapperMPESupport.html): [host/wrapper] `IVst3WrapperMPESupport`.
+- [[3.7.0] Parameter Function Name](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.7.0/IParameterFunctionName.html): [plug-in] `IParameterFunctionName`: find parameters by meaning (for example, gain reduction, randomize).
+- [[3.7.0] Progress display](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.7.0/IProgress.html): [host] `IProgress`: show progress of long plug-in tasks in the host.
+- [[3.7.0] Process Context Requirements](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.7.0/IProcessContextRequirements.html): [plug-in] `IProcessContextRequirements`: declare which `ProcessContext` fields the plug-in needs.
+- [[3.7.0] Control Voltage Bus Flag](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.7.0/Control+Voltage.html): `kIsControlVoltage` bus flag for control data at sample rate.
+- [[3.7.5] Module Info and Plug-in Compatibility](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.7.5/ModuleInfo.html): [plug-in] `moduleinfo.json` and `IPluginCompatibility`: declare which older plug-ins this one replaces.
+- [[3.7.9] Get Current SystemTime](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.7.9/IComponentHandlerSystemTime.html): [host] `IComponentHandlerSystemTime`.
+- [[3.7.9] Data Transfer Between Processor/Controller](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.7.9/IDataExchangeHandler.html): [host] `IDataExchangeHandler`, [plug-in] `IDataExchangeReceiver`.
+- [[3.7.11] Remap Parameter ID](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.7.11/IRemapParamID.html): [plug-in] `IRemapParamID`: map parameter IDs of a replaced plug-in.
+- [[3.8.0] MIDI Learn 2](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.8.0/IMidiLearn2.html): [plug-in] `IMidiLearn2`: MIDI 1.0 and 2.0 MIDI learn; replaces `IMidiLearn`.
+- [[3.8.0] Parameter MIDI Mapping 2](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.8.0/IMidiMapping2.html): [plug-in] `IMidiMapping2`: MIDI 1.0 and 2.0 controller mapping; replaces `IMidiMapping`.
+- [[3.8.0] Wayland Support (Linux)](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.8.0/IWaylandHost.html): [host] `IWaylandHost`, `IWaylandFrame`: plug-in editors in a Wayland session (preview).
+- [[3.8.1] Transport Control](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.8.1/ITransportControl.html): [host] `ITransportControl`: the plug-in requests locate, play, stop, record, and cycle changes from the host (UI thread only).
+- [[3.8.1] NoteOn Orchestral Articulation Info](https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/Change+History/3.8.1/IInfo.html): [plug-in] `NoteOnOrchestralArticulation::IInfo`: articulation variations per bus and channel (MIDI 2.0 Orchestral Articulation Profile).
+
+## FAQ
+
+- [FAQ overview](https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/Index.html): Entry page; Steinberg does not give individual SDK support, see the forum.
+- [Communication](https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/Communication.html): Processor/UI communication, meters, automation, parameter titles, MIDI controllers.
+- [Processing](https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/Processing.html): Bypass, block size and sample rate changes, side-chains, speaker arrangements, latency changes, silence flags.
+- [GUI Editor](https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/GUI+Editor.html): Why a host does not open the plug-in UI.
+- [Compatibility with VST 2.x or VST 1](https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/Compatibility+with+VST+2.x+or+VST+1.html): Creating a VST 3 UID from a VST 2 UniqueID, loading VST 2 projects, VST 2 concepts in VST 3.
+- [Persistence](https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/Persistence.html): Component state vs. controller state, and the save/load call order.
+- [Miscellaneous](https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/Miscellaneous.html): Normalized-to-discrete conversion, `tresult`, subcategories, validation, GUIDs, plug-in not visible in host.
+- [Licensing](https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/Licensing.html): Questions about the MIT license, source disclosure, JUCE/GPL, and VST 2.
+- [Hosting](https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/Hosting.html): Questions from host developers: `restartComponent` flags, class IDs, parameter and unit changes, content scaling.
+
+## Licensing
+
+- [VST 3 Licensing](https://steinbergmedia.github.io/vst3_dev_portal/pages/VST+3+Licensing/Index.html): Summary: MIT license since 3.8; VSTGUI and mda under BSD-like license.
+- [VST 3 License](https://steinbergmedia.github.io/vst3_dev_portal/pages/VST+3+Licensing/VST3+License.html): License terms, trademark and logo use, and the license file text.
+- [Steinberg VST usage guidelines](https://steinbergmedia.github.io/vst3_dev_portal/pages/VST+3+Licensing/Usage+guidelines.html): Rules for using the VST logo and the "VST" name in products, packaging, and websites.
+- [Which files fall under which license?](https://steinbergmedia.github.io/vst3_dev_portal/pages/VST+3+Licensing/Which+files+fall+under+which+license.html): License per SDK folder, and the status of VST 2.
+
+## Source code and API reference
+
+- [VST 3 API reference (Doxygen)](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/): Class-level documentation of all interfaces.
+- [vst3sdk](https://github.com/steinbergmedia/vst3sdk): Main SDK repository with submodules.
+- [vst3_pluginterfaces](https://github.com/steinbergmedia/vst3_pluginterfaces): The VST 3 interface headers.
+- [vst3_public_sdk](https://github.com/steinbergmedia/vst3_public_sdk): Helper classes, hosting code, wrappers, and examples.
+- [vst3_base](https://github.com/steinbergmedia/vst3_base): Base library used by the SDK.
+- [vst3_cmake](https://github.com/steinbergmedia/vst3_cmake): CMake modules of the SDK.
+- [vst3_c_api](https://github.com/steinbergmedia/vst3_c_api): C API version of the VST 3 interfaces.
+- [vstgui](https://github.com/steinbergmedia/vstgui): VSTGUI repository.
+- [vst3_tutorials](https://github.com/steinbergmedia/vst3_tutorials): Source code of the tutorial plug-ins.
+- [vst3projectgenerator](https://github.com/steinbergmedia/vst3projectgenerator): Source code of the Project Generator.
+- [vst3_example_plugin_hello_world](https://github.com/steinbergmedia/vst3_example_plugin_hello_world): Example of using the SDK as an external project.
+
+## Optional
+
+- [Change History](https://steinbergmedia.github.io/vst3_dev_portal/pages/Versions/Index.html): Release notes for every SDK version since 3.0.0 (2008); one page per version under `pages/Versions/Version+<x.y.z>.html`.
+- [Version 3.8.1](https://steinbergmedia.github.io/vst3_dev_portal/pages/Versions/Version+3.8.1.html): Transport control, orchestral articulation info, MIDI 2.0 note expression IDs, Clipboard VST-XML, VSTGUI 4.15.1.
+- [Version 3.8.0](https://steinbergmedia.github.io/vst3_dev_portal/pages/Versions/Version+3.8.0.html): MIT license, MIDI 2.0 support, Wayland preview, VSTGUI 4.15.0.
+- [Preparation on Windows](https://steinbergmedia.github.io/vst3_dev_portal/pages/Getting+Started/Preparation+on+Windows.html): Fixing symbolic link permissions for the VST3 folder when building on Windows.
+- [VST 3 Forum](https://steinbergmedia.github.io/vst3_dev_portal/pages/Forum/Index.html): Link to Steinberg's VST developer forum.
+- [Miscellaneous](https://steinbergmedia.github.io/vst3_dev_portal/pages/Miscellaneous/Index.html): Trademarks and a glossary.

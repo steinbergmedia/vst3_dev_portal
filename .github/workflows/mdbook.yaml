@@ -15,6 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Check llms.txt
+        run: python3 tools/check_llms_txt.py
+
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
