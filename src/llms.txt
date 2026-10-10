@@ -4,12 +4,12 @@
 
 Key facts that are easy to get wrong:
 
-- A VST 3 plug-in is split into two components: the audio processor (`IComponent` + `IAudioProcessor`) and the edit controller (`IEditController`). They must not share data directly; they communicate through parameter changes and messages (`IConnectionPoint`), and a host may run them in different contexts.
-- Threading: all initialization, state, and controller calls happen on the UI (main) thread. Only `IAudioProcessor::process` runs on the audio (realtime) thread. Do not allocate memory or block there.
+- A VST 3 plug-in is split into two components: the audio processor (`IComponent` + `IAudioProcessor`) and the edit controller (`IEditController`). They should not share data directly; the host synchronizes them through state and parameter changes, and private data can be sent as messages (`IConnectionPoint`). The host may run them in different contexts, even on different computers, but only if the processor sets the `kDistributable` class flag.
+- Threading: the host calls all plug-in functions on the UI (main) thread, with two exceptions: `IAudioProcessor::process` and `IAudioProcessor::setProcessing` may be called on the audio (realtime) thread. Both must be lock-free and must not allocate memory. The plug-in calls all host functions on the UI thread.
 - Parameter values are always transmitted as normalized 64-bit doubles in the range [0.0, 1.0]. Parameter changes arrive sample-accurately in `ProcessData::inputParameterChanges`.
 - VST 3 has no raw MIDI. Notes arrive as `Event`s; MIDI controllers are mapped to parameters through `IMidiMapping` / `IMidiMapping2` (MIDI 2.0, since 3.8.0).
 - Interfaces never change after release. New features are added as new interfaces and queried with `queryInterface` (a COM-like model called VST-MA, based on `FUnknown`).
-- `tresult` success is `kResultOk` / `kResultTrue`, which have the integer value 0. Never test a `tresult` as a boolean.
+- On success, functions returning `tresult` return `kResultOk`, which has the integer value 0 (same values as COM). Compare with `kResultOk`; never test a `tresult` as a boolean.
 - Since SDK 3.8, VST 3 is licensed under the MIT license (VSTGUI and the mda examples use a BSD-like license). Using the "VST" trademark or logo is optional, but if used it must follow Steinberg's usage guidelines. New VST 2 plug-ins or hosts may not be distributed without a license agreement signed before October 2018.
 
 The links below point to the rendered HTML pages. The Markdown source of every page is also available: replace `https://steinbergmedia.github.io/vst3_dev_portal/pages/<path>.html` with `https://raw.githubusercontent.com/steinbergmedia/vst3_dev_portal/deploy/src/pages/<path>.md` (the portal home page is `README.md`). The class-level API reference (Doxygen) is a separate site: https://steinbergmedia.github.io/vst3_doc/
