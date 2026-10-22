@@ -8059,8 +8059,8 @@ public:
 <p>Note Expression is a new way of event controller editing in hosts supporting this VST 3.5 feature (in <strong>Cubase</strong> since version 6).</p>
 <p><a href="https://www.youtube.com/watch?v=7sX8_VDS1AU"><img src="https://i.ytimg.com/vi/7sX8_VDS1AU/maxresdefault.jpg" alt="getting_started_vid_5" /></a></p>
 <p><a href="https://www.youtube.com/watch?v=VqfYm4MzfAU"><img src="https://i.ytimg.com/vi/VqfYm4MzfAU/maxresdefault.jpg" alt="getting_started_vid_6" /></a></p>
-<p>With <strong>VST 3</strong> Note Expression, the plug-in is able to break free from the limitations of MIDI controller events by providing access to new <strong>VST 3</strong> controller events that provide articulation information for each individual note (event) in a polyphonic arrangement according to its noteId.</p>
-<p>A major limitation of <strong>MIDI</strong> is the nature of controller information; controllers are only channel messages (Pitchbend, Modulation, ...) and cannot be assigned to a specific playing note, with the exception of poly pressure (polyphonic aftertouch), which allows change only for a given pitch (not a given note!).</p>
+<p>With <strong>VST 3</strong> Note Expression, the plug-in is able to break free from the limitations of MIDI controller events by providing access to new <strong>VST 3</strong> controller events that provide articulation information for each individual note (event) in a polyphonic arrangement according to its <strong>noteId</strong>. The corresponding Note On or Note Off event is sent to the plug-in before any note expression event that refers to it by its <strong>noteId</strong>.</p>
+<p>A major limitation of <strong>MIDI 1</strong> is the nature of controller information; controllers are only channel messages (Pitchbend, Modulation, ...) and cannot be assigned to a specific playing note, with the exception of poly pressure (polyphonic aftertouch), which allows change only for a given pitch (not a given note!).</p>
 <p>Articulating each note in a chord individually creates a much more natural feel, just like multiple players playing the same instrument at the same time but each adding their own personality to the notes played.</p>
 <p>For example, <strong>Cubase 6</strong> introduces the first <strong>VST 3 Note Expression</strong> compatible virtual instrument: <strong>HALion Sonic SE</strong>. <strong>HALion Sonic SE</strong> not only supports "standard" note expression control for Tuning (Pitch), Volume and Pan, it also offers additional custom pre-assigned note expression types of event (<a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a7d66c573aff27d890ec154f45b61f310a1c30475ef992f89f37c2fe0aafcc6283">kCustomStart</a> in <a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/namespaceSteinberg_1_1Vst.html#a7d66c573aff27d890ec154f45b61f310">Vst::NoteExpressionTypeIDs</a>).</p>
 <h2 id="how-does-it-work-3"><a class="header" href="#how-does-it-work-3">How does it work?</a></h2>
@@ -8187,8 +8187,9 @@ tresult PLUGIN_API  MyExampleController::getNoteExpressionStringByValue (int32 b
     return kResultFalse;
 }
 </code></pre>
-<pre><code>- [Vst:: INoteExpressionController::getNoteExpressionValueByString](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#ab79e988315e33b4c30c8f2bd47a0cffc): string -&gt; normalized value
-</code></pre>
+<ul>
+<li><a href="https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#ab79e988315e33b4c30c8f2bd47a0cffc">Vst:: INoteExpressionController::getNoteExpressionValueByString</a>: string -&gt; normalized value</li>
+</ul>
 <pre><code class="language-c++">//------------------------------------------------------------------
 tresult PLUGIN_API  MyExampleController::getNoteExpressionValueByString (int32 busIndex, int16 channel, NoteExpressionTypeID id,
                             const TChar* string, NoteExpressionValue&amp; valueNormalized);
