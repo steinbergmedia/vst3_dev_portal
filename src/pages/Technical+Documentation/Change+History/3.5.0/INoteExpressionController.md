@@ -33,9 +33,9 @@ Note Expression is a new way of event controller editing in hosts supporting thi
 
 [![getting_started_vid_6](https://i.ytimg.com/vi/VqfYm4MzfAU/maxresdefault.jpg)](https://www.youtube.com/watch?v=VqfYm4MzfAU)
 
-With **VST 3** Note Expression, the plug-in is able to break free from the limitations of MIDI controller events by providing access to new **VST 3** controller events that provide articulation information for each individual note (event) in a polyphonic arrangement according to its noteId.
+With **VST 3** Note Expression, the plug-in is able to break free from the limitations of MIDI controller events by providing access to new **VST 3** controller events that provide articulation information for each individual note (event) in a polyphonic arrangement according to its **noteId**. The corresponding Note On or Note Off event is sent to the plug-in before any note expression event that refers to it by its **noteId**.
 
-A major limitation of **MIDI** is the nature of controller information; controllers are only channel messages (Pitchbend, Modulation, ...) and cannot be assigned to a specific playing note, with the exception of poly pressure (polyphonic aftertouch), which allows change only for a given pitch (not a given note!).
+A major limitation of **MIDI 1** is the nature of controller information; controllers are only channel messages (Pitchbend, Modulation, ...) and cannot be assigned to a specific playing note, with the exception of poly pressure (polyphonic aftertouch), which allows change only for a given pitch (not a given note!).
 
 Articulating each note in a chord individually creates a much more natural feel, just like multiple players playing the same instrument at the same time but each adding their own personality to the notes played.
 
@@ -170,7 +170,7 @@ tresult PLUGIN_API  MyExampleController::getNoteExpressionStringByValue (int32 b
 }
 ```
 
-    - [Vst:: INoteExpressionController::getNoteExpressionValueByString](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#ab79e988315e33b4c30c8f2bd47a0cffc): string -> normalized value
+- [Vst:: INoteExpressionController::getNoteExpressionValueByString](https://steinbergmedia.github.io/vst3_doc/vstinterfaces/classSteinberg_1_1Vst_1_1INoteExpressionController.html#ab79e988315e33b4c30c8f2bd47a0cffc): string -> normalized value
 
 ``` c++
 //------------------------------------------------------------------
